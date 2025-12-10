@@ -1,0 +1,6 @@
+University,Rank,Undergrads_CS,Grads_CS,PhDs_CS,B200s,H100s,A100s,Weighted_Student_Count,Weighted_H100_Count,Gpus_Per_Student,Notes
+Stanford University,1,1496,369,146,0,16,32,1062.9,39.17,0.0368,Mock analysis
+"University of California, Berkeley",2,1067,241,59,0,0,32,701.95,23.0,0.0328,Mock analysis
+Massachusetts Institute of Technology (MIT),3,1236,197,57,0,8,16,745.4,20.33,0.0273,Mock analysis
+Carnegie Mellon University (CMU),4,1961,431,148,0,8,32,1317.35,28.33,0.0215,Mock analysis
+University of Illinois Urbana-Champaign (UIUC),5,1298,306,88,0,0,4,877.5,4.33,0.0049,Mock analysis

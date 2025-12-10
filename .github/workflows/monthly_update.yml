@@ -1,0 +1,46 @@
+name: Monthly GPUsPerStudent Update
+
+on:
+  schedule:
+    # Run at 00:00 on the 1st of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Monthly Analysis
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python run_monthly_analysis.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'GPUsPerStudent Bot'
+          git config --global user.email 'bot@gpusperstudent.org'
+          git add data/master_data.csv
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update: Monthly GPU data refresh [$(date +'%Y-%m-%d')]"
+            git push
+          fi

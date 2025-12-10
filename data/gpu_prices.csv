@@ -1,0 +1,11 @@
+GPU,VRAM_GB,Price_USD,Notes
+NVIDIA H100 SXM,80,35000,Estimated market price for SXM version
+NVIDIA H100 PCIe,80,30000,Estimated market price for PCIe version
+NVIDIA H200,141,40000,Estimated, availability limited
+NVIDIA A100 80GB,80,15000,Market price varies (13k-20k)
+NVIDIA A100 40GB,40,10000,Market price varies
+NVIDIA B200,192,45000,Estimated (30k-40k base, systems higher)
+NVIDIA B100,192,35000,Estimated
+NVIDIA A40,48,4500,Server GPU
+NVIDIA RTX A6000,48,5000,Workstation GPU
+NVIDIA L40S,48,8000,Estimated

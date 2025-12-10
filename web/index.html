@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPUs Per Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">GPUsPerStudent.org</div>
+            <nav>
+                <a href="#">About Us</a>
+                <a href="#">Dispute Form</a>
+                <a href="../data/master_data.csv" target="_blank">Raw Data</a>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Top 20 Universities (GPUs/Student)</h2>
+            <div id="chart" class="chart-container">
+                <!-- Bars will be injected here -->
+                <p>Loading Data...</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Leaderboard</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>University</th>
+                        <th>Est. Weighted Students</th>
+                        <th>Weighted H100 Count</th>
+                        <th>GPUs Per Student</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Rows will be injected here -->
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>Data updated monthly by AI Agents. Last update: <span id="last-update">...</span></p>
+        </footer>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const response = await fetch('../data/master_data.csv');
+                const text = await response.text();
+                parseCSV(text);
+            } catch (error) {
+                console.error('Error loading CSV:', error);
+                document.getElementById('chart').innerHTML = '<p>Error loading data. Please check back later.</p>';
+            }
+        }
+
+        function parseCSV(text) {
+            const lines = text.trim().split('\n');
+            const headers = lines[0].split(',').map(h => h.trim());
+            
+            const data = lines.slice(1).map(line => {
+                // Simple regex to split by comma ignoring quotes
+                const regex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
+                const values = line.split(regex).map(v => v.replace(/^"|"$/g, '').trim());
+                
+                let entry = {};
+                headers.forEach((h, i) => {
+                    entry[h] = values[i];
+                });
+                return entry;
+            });
+
+            renderDashboard(data);
+        }
+
+        function renderDashboard(data) {
+            // Sort by Rank Ascending (just in case)
+            data.sort((a, b) => parseInt(a.Rank) - parseInt(b.Rank));
+
+            // Top 20 for Chart
+            const top20 = data.slice(0, 20);
+            renderChart(top20);
+
+            // Full Leaderboard
+            renderLeaderboard(data);
+        }
+
+        function renderChart(data) {
+            const container = document.getElementById('chart');
+            container.innerHTML = '';
+            
+            // Find max value for scaling
+            const maxVal = Math.max(...data.map(d => parseFloat(d.Gpus_Per_Student)));
+            
+            data.forEach(d => {
+                const val = parseFloat(d.Gpus_Per_Student);
+                const percentage = (val / maxVal) * 100;
+                
+                const group = document.createElement('div');
+                group.className = 'bar-group';
+                
+                group.innerHTML = `
+                    <div class="bar-value">${val.toFixed(2)}</div>
+                    <div class="bar" style="height: ${percentage}%;"></div>
+                    <div class="bar-label" title="${d.University}">${d.University}</div>
+                `;
+                
+                container.appendChild(group);
+            });
+        }
+
+        function renderLeaderboard(data) {
+            const tbody = document.getElementById('leaderboard-body');
+            tbody.innerHTML = '';
+            
+            data.forEach(d => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${d.Rank}</td>
+                    <td><a href="#">${d.University}</a></td>
+                    <td>${parseFloat(d.Weighted_Student_Count).toFixed(0)}</td>
+                    <td>${parseFloat(d.Weighted_H100_Count).toFixed(1)}</td>
+                    <td><strong>${parseFloat(d.Gpus_Per_Student).toFixed(4)}</strong></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
