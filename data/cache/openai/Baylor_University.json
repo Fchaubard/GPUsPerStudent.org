@@ -1,0 +1,49 @@
+{
+  "university_name": "Baylor University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://rtservices.baylor.edu/hprcs/kodiak/Kodiak_GPUs.html",
+      "data_found": "Installed GPU Hardware table lists per-node GPUs: gpu001 P100(2), gpu002 P100(2), gpu003 V100(2), gpu004 V100(2), gpu005 V100(2), gpu006 A100 40GB(2), gpu007 A100 40GB(2), gpu008 L40S(8), gpu009 L40S(2), gpu010 H100 NVL 94GB(1), gpu011 L40S(2)."
+    },
+    {
+      "url": "https://rtservices.baylor.edu/hpc/systems.html",
+      "data_found": "Kodiak system summary (central HPC) lists GPU node types (older snapshot): 2\u00d7P100 nodes (2 GPUs/node), 3\u00d7V100 nodes (2 GPUs/node), 1\u00d7A100 node (2 GPUs/node) and notes condo model. Does not reflect newer L40S/H100 nodes shown on Kodiak_GPUs."
+    },
+    {
+      "url": "https://ir.web.baylor.edu/sites/g/files/ecbvkj1621/files/2024-09/enrollment_by_program_and_major_fall_2024.pdf",
+      "data_found": "Student enrollment: 239 undergrad, 27 grad, 24 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 239,
+    "grad_cs_count": 27,
+    "phd_cs_count": 24,
+    "year": "Fall 2024",
+    "source_url": "https://ir.web.baylor.edu/sites/g/files/ecbvkj1621/files/2024-09/enrollment_by_program_and_major_fall_2024.pdf",
+    "notes": "Source is Baylor Office of Institutional Research report titled \"Enrollment by Program and Major, Fall 2024\" (IR Series Vol. 24-25, No. 004; dated September 24, 2024). Undergrad CS total (239) is the sum of Primary Program counts for: Computer Science (BSCS)=229 (Unit=Engineering & Computer Science), Computer Science Fellows (BSC)=1 (Unit=Engineering & Computer Science), and Computer Science (BA)=9 (Unit=Arts & Sciences). Graduate counts come from Primary Program (Unit=Graduate School): Computer Science (MS)=27 (masters only) and Computer Science (PHD)=24 (doctoral only)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 1,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 4,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 12,
+    "v100_count": 6,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://rtservices.baylor.edu/hprcs/kodiak/Kodiak_GPUs.html",
+    "notes": "Cluster counted: Kodiak (central HPC + condo GPU nodes as listed on Kodiak_GPUs).\nPer-node calculations:\n- P100 16GB: gpu001 (1 node\u00d72=2) + gpu002 (1\u00d72=2) => 4 total P100\n- V100: gpu003 (1\u00d72=2) + gpu004 (1\u00d72=2) + gpu005 (1\u00d72=2) => 6 total V100\n- A100 40GB: gpu006 (1\u00d72=2) + gpu007 (1\u00d72=2) => 4 total A100 40GB\n- L40S 48GB: gpu008 (1\u00d78=8) + gpu009 (1\u00d72=2) + gpu011 (1\u00d72=2) => 12 total L40S\n- H100: gpu010 lists 'H100 NVL (1) 94GB' => 1 total H100; categorized as H100 PCIe (NVL form factor, not SXM)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

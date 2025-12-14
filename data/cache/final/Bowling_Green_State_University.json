@@ -1,0 +1,58 @@
+{
+  "university_name": "Bowling Green State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.osc.edu/services/cluster_computing",
+      "data_found": "OSC cluster summary usable by Ohio institutions (incl. BGSU): Pitzer V100 counts; Ascend A100 node counts; Cardinal H100 node counts."
+    },
+    {
+      "url": "https://www.osc.edu/resources/technical_support/supercomputers/ascend",
+      "data_found": "Ascend details: original (fall 2022) uses A100 80GB; 2025 expansion adds nodes with A100 40GB. Node types include 24 nodes x4 A100 80GB, 214 nodes x2 A100 40GB, and 84 nodes x3 A100 40GB."
+    },
+    {
+      "url": "https://www.osc.edu/resources/technical_support/supercomputers/cardinal",
+      "data_found": "Cardinal details: GPU compute partition has 32 nodes each with 4 NVIDIA H100 GPUs (94GB HBM2e) with NVLink (Dell PowerEdge XE9640)."
+    },
+    {
+      "url": "https://www.osc.edu/resources/technical_support/supercomputers",
+      "data_found": "OSC technical support page repeats the GPU totals by cluster (Pitzer V100; Ascend A100; Cardinal H100)."
+    },
+    {
+      "url": "https://www.bgsu.edu/content/dam/BGSU/ir/documents/Factsheets/fall2024-enr-day15.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.bgsu.edu/content/dam/BGSU/ir/documents/Factsheets/fall2024-enr-day15.pdf",
+    "notes": "Searched for CS-specific enrollment counts explicitly labeled Fall 2024 / AY 2024-25.\n\nVerified-rejected sources:\n- CS department \u201cDegree Programs Enrollment & Graduation Data\u201d page is outdated (Updated: 10/06/2022) and only shows enrollment through 2022 \u2192 REJECTED.\n\nVerified 2024 source found but does NOT include CS breakdown:\n- BGSU Office of Institutional Research factsheet PDF \u201cFall 2024 Enrollment Report (as of the 15th day)\u201d (explicitly Fall 2024) provides university-wide undergraduate/graduate headcount totals, but does not report enrollment by major/department (no Computer Science / MS CS / PhD CS counts).\n\nAttempted (but could not extract CS counts):\n- BGSU OIR \u201cEnrollment Dashboards\u201d / \u201cProgram Enrollment Dashboard\u201d are embedded Tableau visualizations requiring JavaScript; the non-JS page view did not expose the underlying data tables or a static export link for program-level (Computer Science) headcounts.\n\nBecause no official page with explicit Fall 2024 (or AY 2024-25) Computer Science student headcounts (UG / MS / PhD separated) was located, all CS counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.osc.edu/services/cluster_computing",
+    "notes": "Interpreting 'BGSU research computing GPU clusters' as the GPU-equipped OSC statewide clusters that BGSU researchers can use. Calculations:\n- Cardinal: 32 GPU nodes \u00d7 4 H100/node = 128 H100 total. Counted as H100 SXM because Dell XE9640 is an HGX/SXM platform; OSC page does not explicitly say SXM vs PCIe.\n- Ascend: 24 nodes \u00d7 4 A100 80GB/node = 96 A100 80GB; 214 nodes \u00d7 2 A100 40GB/node = 428 A100 40GB; 84 nodes \u00d7 3 A100 40GB/node = 252 A100 40GB; A100 40GB subtotal = 428+252=680.\n- Pitzer: 32 nodes \u00d7 2 V100/node = 64 V100; 42 nodes \u00d7 2 V100/node = 84 V100; 4 nodes \u00d7 4 V100/node = 16 V100; V100 total = 64+84+16=164.\nNo H200, P100, A6000, L40S, A40, GH200, B100, or B200 were found in these OSC cluster specs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: All GPU counts set to 0 because the GPUs are part of the Ohio Supercomputer Center (OSC), a shared resource. STUDENT CHANGES: No changes made to student data."
+}

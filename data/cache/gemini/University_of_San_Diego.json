@@ -1,0 +1,49 @@
+{
+  "university_name": "University of San Diego",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-san-diego",
+      "data_found": "2021/2022 Degrees Awarded in Computer & Information Sciences: 56 Bachelor's degrees, 131 Master's degrees."
+    },
+    {
+      "url": "https://catalogs.sandiego.edu/undergraduate/engineering/computer-science/",
+      "data_found": "Confirmation of Bachelor of Arts (BA) and Bachelor of Science (BS) in Computer Science availability."
+    },
+    {
+      "url": "https://www.sandiego.edu/engineering/graduate/",
+      "data_found": "Graduate programs listed: MS in Applied Artificial Intelligence, MS in Applied Data Science, MS in Cyber Security Engineering. No PhD program in Computer Science listed."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 224,
+    "grad_cs_count": 197,
+    "phd_cs_count": 0,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/university-of-san-diego",
+    "notes": "Exact current enrollment figures are not published on the department website. Counts are estimated based on IPEDS/DataUSA degree conferral data. Undergrad CS estimated: 56 degrees awarded/year * 4 years = 224. Grad CS (includes Applied AI, Data Science, and Cyber Security MS programs) estimated: 131 degrees awarded/year * 1.5 year avg duration = 197. PhD count is 0 as the University of San Diego is a doctoral university but does not offer a PhD specifically in Computer Science."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/university-of-san-diego",
+    "notes": "The University of San Diego (USD) is a private institution distinct from UC San Diego (UCSD). Extensive searches for 'University of San Diego research computing', 'HPC', and 'GPU cluster' yield no evidence of an on-premise research computing center or GPU cluster. The Shiley-Marcos School of Engineering facilities page lists physical fabrication labs but no computing clusters. It appears the university relies on cloud resources or external partnerships (e.g., San Diego Supercomputer Center at UCSD) for research computing needs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No public data found regarding compute credit grants."
+  },
+  "analysis_notes": "USD should not be confused with UCSD (University of California San Diego), which houses the San Diego Supercomputer Center. USD appears to be a teaching-focused institution with no reportable local GPU datacenter resources."
+}

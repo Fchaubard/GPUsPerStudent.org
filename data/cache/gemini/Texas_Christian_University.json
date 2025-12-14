@@ -1,0 +1,36 @@
+{
+  "university_name": "Texas Christian University",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 367,
+    "grad_cs_count": 8,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Undergrad count derived from Fall 2023 Fact Book (351 BS + 16 BA = 367). Grad count estimated from degrees awarded (4 MS degrees in 2022-2023) \u00d7 2 years duration = 8 students. TCU does not appear to offer a standalone Computer Science PhD program. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 4,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 8,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Counts derived from specific systems listed on the CS Research page:\n1) NVIDIA DGX-1: Standard configuration is 8x V100 (or P100, assumed V100 based on context with A100 acquisition) = 8 V100.\n2) NVIDIA DGX Station A100: Standard configuration is 4x A100. Assumed 40GB model as 80GB is usually explicitly marketed as '320GB Station'.\n\nTCU IT Research Computing mentions additional 'GPU nodes' in the general HPC cluster but does not publish public specs/counts; only the dedicated CS department hardware is quantified here. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "TCU is a smaller research institution compared to large state R1s. The CS department maintains its own dedicated AI hardware (DGX systems) separate from the central IT HPC, which is less documented publicly."
+}

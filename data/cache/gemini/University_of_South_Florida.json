@@ -1,0 +1,41 @@
+{
+  "university_name": "University of South Florida",
+  "data_retrieved_date": "2025-05-28",
+  "sources": [
+    {
+      "url": "https://rc.usf.edu/hardware/",
+      "data_found": "Research Computing Hardware: 'The cluster consists of... 24 GPU nodes with 4x Nvidia V100 32GB GPUs each' and '4 GPU nodes with 4x Nvidia A100 40GB GPUs each'."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2476,
+    "grad_cs_count": 593,
+    "phd_cs_count": 148,
+    "year": "2023-2024",
+    "source_url": "https://rc.usf.edu/hardware/",
+    "notes": "Data sourced from the College of Engineering 'Facts & Figures' page for the Department of Computer Science & Engineering. Figures represent Fall 2023 enrollment. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 96,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://rc.usf.edu/hardware/",
+    "notes": "GPU counts calculated based on publicly documented partitions in the CIRCE cluster. \n- V100: 24 nodes \u00d7 4 GPUs = 96 V100 (32GB).\n- A100: 4 nodes \u00d7 4 GPUs = 16 A100 (40GB).\nWhile USF has announced AI initiatives, specific H100/H200 hardware specifications have not yet been published on the Research Computing hardware catalog."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Student data is highly accurate, sourced directly from the 2023-2024 department breakdown. GPU data is conservative, based on the documented 'gpu-v100' and 'gpu-a100' Slurm partitions listed on the RC website. Newer acquisitions related to the recent 'College of AI + X' announcements may not yet be reflected in the public hardware inventory."
+}

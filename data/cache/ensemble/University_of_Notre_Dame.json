@@ -1,0 +1,63 @@
+{
+  "university_name": "University of Notre Dame",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://disc.crc.nd.edu/resources/caml.html",
+      "data_found": "CAML GPU cluster resource description: 17 nodes each with 4\u00d7 NVIDIA Quadro RTX 6000; 2 nodes each with 4\u00d7 NVIDIA Tesla V100-PCIE-32GB."
+    },
+    {
+      "url": "https://condor.cse.nd.edu/history/1738627200",
+      "data_found": "ND Condor catalog historical snapshot (Feb 4, 2025) lists GPU-tagged hosts including qa-h100-002/003/005/006, qa-l40s-001/002/003, qa-p100-001..008, qa-v100-003..009, qa-a40-003/007/008/009/010, qa-rtx6k-*."
+    },
+    {
+      "url": "https://docs.crc.nd.edu/resources/gpu.html",
+      "data_found": "CRC GPU documentation note: CRC-owned GPU systems typically have 4 GPUs per node (used as GPUs_per_node assumption for host-based counts)."
+    },
+    {
+      "url": "https://mendozaresearch.nd.edu/resources/computing/",
+      "data_found": "Mendoza Research Team computing page: '2 Mendoza Dedicated GPU Machines' with total '8 NVIDIA H100 SXM GPU's' (640GB GPU RAM)."
+    },
+    {
+      "url": "https://cse.nd.edu/undergraduate/computer-science-accreditation/",
+      "data_found": "Student enrollment: 375 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 375,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2024-25",
+    "source_url": "https://cse.nd.edu/undergraduate/computer-science-accreditation/",
+    "notes": "From Notre Dame CSE's official ABET/Accreditation page for the Computer Science (BS) program. In the 'Program Enrollment and Degree Data' table, the row for Academic Year 2024-25 lists '2nd-4th Year' majors = 375 (this is the CS major enrollment reported for AY 2024-25). I did not find an official Notre Dame source that explicitly states AY 2024-25 or Fall 2024 headcounts for MSCSE (master's-only) or CSE PhD students; Graduate School program pages list program details and were verified/updated (9/23/25) but do not provide enrollment counts, so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 16,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 20,
+    "a6000_count": 0,
+    "l40s_count": 12,
+    "v100_count": 28,
+    "p100_count": 32,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX 6000 (24GB)",
+        "count": 104,
+        "basis": "qa-rtx6k-* nodes from ND Condor catalog snapshot; assumed 4 GPUs/node per CRC GPU doc"
+      }
+    ],
+    "source_url": "https://disc.crc.nd.edu/resources/caml.html",
+    "notes": "Per-node GPU assumption: 4 GPUs/node (CRC GPU doc). Totals computed as nodes\u00d74.\n\n1) Mendoza dedicated GPU machines: total H100 SXM = 8 (page states 8 H100 SXM GPUs; consistent with 2 machines\u00d74).\n\n2) ND Condor/CRC GPU pool (from historical snapshot):\n- H100 (assumed PCIe): 4 nodes (qa-h100-002,003,005,006) \u00d74 = 16\n- L40S: 3 nodes (qa-l40s-001..003) \u00d74 = 12\n- P100: 8 nodes (qa-p100-001..008) \u00d74 = 32\n- V100: 7 nodes (qa-v100-003..009) \u00d74 = 28\n- A40: 5 nodes (qa-a40-003,007,008,009,010) \u00d74 = 20\n- Quadro RTX 6000 (other): 26 nodes (qa-rtx6k-* listed) \u00d74 = 104\n\n3) CAML cluster: CAML page specifies 17\u00d7(4\u00d7 Quadro RTX 6000) and 2\u00d7(4\u00d7 V100-PCIE-32GB). These may overlap with the ND Condor host list (CAML is accessed via HTCondor), so CAML GPUs were NOT added again on top of the Condor-host-derived RTX 6000/V100 totals to avoid double counting."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,52 @@
+{
+  "university_name": "Arizona State University",
+  "data_retrieved_date": "2025-05-27",
+  "sources": [
+    {
+      "url": "https://researchcomputing.asu.edu/supercomputing/sol-supercomputer",
+      "data_found": "Sol Supercomputer (Phase 1): 60 GPU nodes (Dell PowerEdge XE8545), each with 4x NVIDIA A100 80GB GPUs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 6060,
+    "grad_cs_count": 1690,
+    "phd_cs_count": 308,
+    "year": "2024-2025",
+    "source_url": "https://researchcomputing.asu.edu/supercomputing/sol-supercomputer",
+    "notes": "Exact active enrollment by specific major (CS vs other computing fields) is not broken out on the ASU Engineering Fact Sheet (which lists 12,423 total students for the School of Computing). Counts here are estimated based on IPEDS 'Degrees Awarded' data from DataUSA (2022) to isolate Computer Science specifically. Undergrad estimated as 1,515 degrees \u00d7 4 years = 6,060. Masters estimated as 845 degrees \u00d7 2 years = 1,690. PhD estimated as 56 degrees \u00d7 5.5 years = 308. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 240,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA V100 (Agave Cluster)",
+        "estimated_total": null,
+        "notes": "The legacy 'Agave' cluster contains GPU nodes with V100 GPUs (Dell C4140/C4130), but the exact active node count is not publicly enumerated in current documentation."
+      },
+      {
+        "model": "NVIDIA P100 (Agave Cluster)",
+        "estimated_total": null,
+        "notes": "Legacy Agave cluster nodes."
+      }
+    ],
+    "source_url": "https://researchcomputing.asu.edu/supercomputing/sol-supercomputer",
+    "notes": "Primary count is from the 'Sol' supercomputer (Phase 1). Sol specs: 60 GPU nodes \u00d7 4 GPUs/node = 240 NVIDIA A100 80GB (SXM4). While future phases (Sol Phase 2) have been discussed in news releases potentially including H100s, no active specifications or partition lists for these were found in the public documentation as of May 2025. Legacy cluster 'Agave' exists but verifiable counts were not available."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "ASU has a very large online student population which inflates the School of Computing (SCAI) enrollment to over 12,000. The estimated CS-specific counts (approx 8,000 total) are derived from degree completion data to represent the likely on-premise/research-eligible population more accurately, though ASU Sol is accessible to researchers across the university."
+}

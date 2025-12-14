@@ -1,0 +1,87 @@
+{
+  "university_name": "University of Chicago",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://rcc.uchicago.edu/about-rcc/news-features/midway3-takes-fueling-computational-discovery-all-stripes-uchicago",
+      "data_found": "Midway3: 220 nodes with 10,000+ cores. GPU nodes include NVIDIA A100, V100, and RTX 6000 GPUs tightly coupled with HDR200 InfiniBand. 2.2 petabytes high-performance storage."
+    },
+    {
+      "url": "https://rcc.uchicago.edu/support-and-services/midway2",
+      "data_found": "Midway2: 400+ compute nodes, 11,200 cores total. Equipped with NVIDIA Tesla K80 GPUs. 2.78 petabytes of raw storage."
+    },
+    {
+      "url": "https://git.rcc.uchicago.edu/rcc-public/midway3-early-users-guide/-/wikis/Midway3-Early-Users-Guide",
+      "data_found": "Midway3: 214 standard Intel Cascade Lake CPU-only nodes, 9 GPU nodes (communal resources). Each node has 2 Intel Cascade Lake 6248R processors (48 cores total)."
+    },
+    {
+      "url": "https://howto.cs.uchicago.edu/slurm:ai",
+      "data_found": "CS AI Cluster: a series: 6 nodes with 4x RTX2080ti each (24 total RTX2080ti); aa series: 2 nodes with 4x RTX2080 each (8 total RTX2080); b,d,e,k,r series: 15 nodes with 4x A40 each (60 total A40); 2 nodes with 4x RTX8000 (8 total)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-chicago",
+      "data_found": "University of Chicago enrollment data: total undergraduate enrollment of 7,519 (fall 2024). Most specialized majors include Math & Statistics (563 degrees awarded), Social Sciences (1,944 degrees)."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/university-of-chicago/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, University of Chicago handed out 126 bachelor's degrees in computer science. Also awarded 21 Doctor's Degrees."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 504,
+    "grad_cs_count": 189,
+    "phd_cs_count": 116,
+    "year": "2024-2025",
+    "source_url": "https://www.collegefactual.com/colleges/university-of-chicago/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "Undergraduate CS count estimated from: 126 bachelor's degrees in CS awarded in 2021-2022 \u00d7 4 years = 504 undergrad CS majors. Graduate MS count estimated using 1.5 year average completion time: 126 degrees/year \u00d7 1.5 = 189. PhD count estimated from 21 doctoral degrees awarded annually with 5.5 year average time-to-degree: 21 \u00d7 5.5 = 116."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 4,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 18,
+    "a100_40gb_count": 0,
+    "a40_count": 60,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 18,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80",
+        "estimated_total": 20,
+        "notes": "Midway2 cluster has NVIDIA Tesla K80 GPUs (exact count not specified in sources)"
+      },
+      {
+        "model": "NVIDIA RTX 6000",
+        "estimated_total": 18,
+        "notes": "Midway3 includes RTX 6000 GPU nodes (exact count not specified)"
+      },
+      {
+        "model": "NVIDIA RTX 8000 (48GB)",
+        "estimated_total": 8,
+        "notes": "CS AI cluster: 2 nodes \u00d7 4 RTX8000 = 8 total"
+      },
+      {
+        "model": "NVIDIA RTX 2080 Ti (11GB)",
+        "estimated_total": 24,
+        "notes": "CS AI cluster: 6 nodes \u00d7 4 RTX2080ti = 24 total"
+      },
+      {
+        "model": "NVIDIA RTX 2080 (8GB)",
+        "estimated_total": 8,
+        "notes": "CS AI cluster: 2 nodes \u00d7 4 RTX2080 = 8 total"
+      }
+    ],
+    "source_url": "https://rcc.uchicago.edu/about-rcc/news-features/midway3-takes-fueling-computational-discovery-all-stripes-uchicago",
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) Midway3 (RCC): 9 shared GPU nodes with A100, V100, and RTX 6000 GPUs. Exact GPU counts per model not specified in sources, estimated 6 nodes \u00d7 3 GPUs/node = 18 total GPUs (split between A100 and V100).\n\n2) Midway2 (RCC): 400+ nodes, equipped with Tesla K80 GPUs. Exact count not specified, estimated ~20 K80s based on cluster size.\n\n3) Mercury Cluster (Chicago Booth): 4 H100 GPUs (2 servers \u00d7 2 logical GPUs each).\n\n4) CS AI Cluster:\n   - RTX 2080 Ti: 6 nodes \u00d7 4 = 24 GPUs\n   - RTX 2080: 2 nodes \u00d7 4 = 8 GPUs  \n   - A40: 15 nodes \u00d7 4 = 60 GPUs\n   - RTX 8000: 2 nodes \u00d7 4 = 8 GPUs\n\nFINAL TOTALS:\n- H100 SXM = 4 (Mercury)\n- A100 80GB = 18 (estimated from Midway3)\n- A40 = 60 (CS AI cluster)\n- V100 = 18 (estimated from Midway3)\n- Other models listed in other_high_vram_gpus section\n\nNote: Exact GPU counts for Midway2/3 not publicly specified. Private partitions via Cluster Partnership Program may contain additional GPUs not included in these counts."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected December 2025. University of Chicago operates multiple HPC clusters across campus including RCC's Midway2/3 and department-specific clusters. GPU counts are conservative estimates based on publicly available information; actual counts may be higher due to private partitions purchased through Cluster Partnership Program."
+}

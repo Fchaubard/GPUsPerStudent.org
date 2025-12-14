@@ -1,0 +1,47 @@
+{
+  "university_name": "University of Tulsa",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-tulsa",
+      "data_found": "2022 Degrees Awarded in Computer and Information Sciences (CIP 11): 64 Bachelor's, 16 Master's, 4 Research Doctorates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 256,
+    "grad_cs_count": 32,
+    "phd_cs_count": 20,
+    "year": "2022-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-tulsa",
+    "notes": "University of Tulsa does not publish a live real-time dashboard of enrollment by major. Counts are estimated based on 'Degrees Awarded' data from IPEDS/DataUSA (2022 most recent verified) and steady-state program duration assumptions. Undergrad: 64 CS/IT-related Bachelor's degrees/year * 4 years = 256. Grad (MS): 16 Master's/year * 2 years = 32. PhD: 4 Doctorates/year * 5 years = 20. These estimates align with the College of Engineering & Computer Science's total enrollment of ~1,000 students (CS typically being ~30%)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unknown NVIDIA GPUs (Departmental Server)",
+        "estimated_total": -1,
+        "notes": "CS 5063 Deep Learning syllabus mentions a departmental GPU server, but specs are not public."
+      }
+    ],
+    "source_url": "https://datausa.io/profile/university/university-of-tulsa",
+    "notes": "University of Tulsa is a smaller private research institution that relies heavily on the OneOklahoma Cyberinfrastructure Initiative (OneOCII) consortium. While they have access to supercomputing resources at the University of Oklahoma (OSCER) and Oklahoma State University (HPCC), there is no publicly auditable evidence of a dedicated, locally-owned research cluster with H100/A100 hardware located on the TU campus. Older legacy clusters ('Turelian') appear retired or offline (404 on former URLs). GPU counts are set to 0 to reflect the lack of *owned* infrastructure, though students have access to shared regional resources. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Extensive search for 'Turelian', 'TU HPC', and 'Rayzor Hall' computing resources yielded no current hardware specifications. TU utilizes the OneOCII consortium for high-performance computing needs. Student counts derived from degree completion rates as direct enrollment tables by major were not available."
+}

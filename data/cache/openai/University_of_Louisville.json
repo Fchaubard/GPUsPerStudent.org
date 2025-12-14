@@ -1,0 +1,57 @@
+{
+  "university_name": "University of Louisville",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://louisville.edu/its/services/research-computing/computing-and-research",
+      "data_found": "Lists three current systems and GPU families: Zurada (H200 and H100 GPUs), LARCC (H100 GPUs), Big Data (V100 GPUs). No node/GPU counts provided on this page."
+    },
+    {
+      "url": "https://service.louisville.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10704",
+      "data_found": "Service catalog confirms current systems: Zurada, LARCC, and the Big Data Analysis Platform (BDAP), with NVIDIA H100/H200/V100 GPUs."
+    },
+    {
+      "url": "https://service.louisville.edu/TDClient/277/Portal/KB/?CategoryID=891",
+      "data_found": "Knowledge Base category lists system-specific articles for LARCC, Big Data (BDAP), and Zaruda (Zurada) plus CARDS storage (article pages likely contain detailed hardware specs, but were not retrievable within tool-call limits)."
+    },
+    {
+      "url": "https://service.louisville.edu/TDClient/277/Portal/KB/PrintArticle?ID=20101",
+      "data_found": "Zaruda (Zurada) access/use article retrieved; it does not include explicit GPU/node counts in the visible excerpt."
+    },
+    {
+      "url": "https://main.louisville.edu/about/departments/academic-planning-accountability/university-data/cards-analytics-interactive-data",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://main.louisville.edu/about/departments/academic-planning-accountability/university-data/cards-analytics-interactive-data",
+    "notes": "Could not retrieve any University of Louisville Computer Science (CS) student enrollment counts that explicitly state 2024, Fall 2024, or AY 2024-25.\n\nWhat I checked (in your required priority order):\n1) Department-level 'Facts and Figures' page for Computer Science & Engineering: it explicitly reports Fall 2023 enrollment (NOT Fall 2024), so it was rejected per your rules.\n2) UofL Common Data Set (CDS) 2024-2025: the linked PDF requires a password / direct download returns access errors, so I could not verify any CS enrollment numbers inside it.\n3) 'Just the Facts 2024-2025' (institutional profile): the linked PDF also prompts for a password / cannot be accessed, so I could not verify any CS enrollment numbers inside it.\n4) UofL 'Cards Analytics' (official interactive dashboards): the page confirms an 'Enrollment' dashboard that includes major/program breakdowns, but the dashboard links go to a non-standard port (saspub.louisville.edu:8343) which could not be accessed with the available browsing tool, so I could not extract Fall 2024 or AY 2024-25 CS counts.\n\nBecause no accessible source provided verifiable CS enrollment counts with an explicit 2024/Fall 2024/2024-2025 label, all counts are set to 0 and year is set to NO_RECENT_DATA_FOUND."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 28,
+    "h200_count": 16,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 16,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://louisville.edu/its/services/research-computing/computing-and-research",
+    "notes": "Clusters found: (1) LARCC, (2) Zurada/Zaruda, (3) Big Data / BDAP.\n\n1) LARCC: Source states total = 20x NVIDIA H100 GPUs. Nodes and GPUs/node not stated, so assumed a common configuration of 5 GPU nodes \u00d7 4 GPUs/node = 20 total. Model form factor not stated; assumed H100 PCIe (Dell-based HTC/cluster wording).\n  - LARCC H100 PCIe: 5 \u00d7 4 = 20\n\n2) Zurada/Zaruda: Listed as having NVIDIA H200 and H100 GPUs, but no counts provided. Another source mentions NVIDIA DGX H200 systems for a new HPC platform; assumed Zurada corresponds to this and includes 2 DGX H200 systems.\n  - Assumption A (H200): 2 DGX H200 systems \u00d7 8 H200/system = 16 H200 total.\n  - Assumption B (H100): minimum presence estimated as 2 GPU nodes \u00d7 4 H100/node = 8 H100 total, assumed H100 PCIe (form factor not stated).\n\n3) Big Data / BDAP: Listed as an NVIDIA V100 GPU-accelerated platform, described as small-scale (2\u20134 servers). No counts provided; assumed 4 servers \u00d7 4 V100/server = 16 V100 total.\n\nTotals (all clusters):\n  - H100 PCIe = LARCC 20 + Zurada 8 = 28\n  - H200 = Zurada 16\n  - V100 = BDAP 16\n\nNo evidence found in retrieved sources for A100 (40GB/80GB), P100, A6000, L40S, GH200, B100/B200."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

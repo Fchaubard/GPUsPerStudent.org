@@ -1,0 +1,65 @@
+{
+  "university_name": "Rice University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://researchcomputing.rice.edu/high-performance-computing-resources",
+      "data_found": "NOTS expansion in 2024 provided 88 million CPU core hours and 750 thousand GPU hours annually. ARIES cluster has AMD GPUs providing 1.5 million GPU hours annually. RAPID cluster has 80 Nvidia GPUs."
+    },
+    {
+      "url": "https://wiki.rice.edu/confluence/display/CTBP/CTBP+Computing+Resources",
+      "data_found": "Aries Cluster contains 152 MI50 GPUs and 24 MI100 GPUs."
+    },
+    {
+      "url": "https://kb.rice.edu/page.php?id=147971",
+      "data_found": "NOTS consists of 159 nodes with dual-socketed, hyperthreaded CPUs. System can support GPU jobs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 736,
+    "grad_cs_count": 281,
+    "phd_cs_count": 71,
+    "year": "2023",
+    "source_url": "https://researchcomputing.rice.edu/high-performance-computing-resources",
+    "notes": "Undergraduate CS estimated from: Rice has ~18% of undergraduates majoring in CS (spring 2023, per BPC plan) and 4,789 total undergraduates (fall 2024, per US News); estimated 18% \u00d7 4,098 undergrads who have declared majors \u2248 736. Graduate MS count from DataUSA showing 281 General Computer & Information Sciences master's degrees awarded in 2023. PhD count from petersons.com showing 71 total graduate CS students with context that Rice CS offers both MS and PhD programs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 80,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "AMD MI100",
+        "estimated_total": 24,
+        "notes": "ARIES cluster (donated by AMD for health research)"
+      },
+      {
+        "model": "AMD MI50",
+        "estimated_total": 152,
+        "notes": "ARIES cluster (donated by AMD for health research)"
+      },
+      {
+        "model": "NVIDIA Tesla K80",
+        "estimated_total": 8,
+        "notes": "2 nodes \u00d7 4 GPUs each = 8 K80 total on NOTS Ivy Bridge nodes"
+      }
+    ],
+    "source_url": "https://researchcomputing.rice.edu/high-performance-computing-resources",
+    "notes": "GPU MODEL BREAKDOWN: Based on available sources, Rice has: (1) RAPID cluster with 80 Nvidia GPUs - assumed to be V100s based on typical interactive GPU cluster configurations. (2) ARIES cluster with 152 MI50 + 24 MI100 AMD GPUs for health research. (3) NOTS with 8 K80 GPUs (2 nodes \u00d7 4 each). (4) NOTS 2024 expansion provided 750K GPU hours annually but specific GPU models not detailed in available sources. Total confirmed GPUs: 80 NVIDIA (RAPID) + 176 AMD (ARIES) + 8 K80 (NOTS) = 264+ GPUs across all clusters. Note: Specific modern GPU models (H100, A100, etc.) likely exist in the NOTS 2024 expansion but were not enumerated in publicly accessible documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected from Rice CRC documentation. Student counts derived from multiple sources including Rice CS BPC plan stating 18% of undergrads major in CS, DataUSA showing CS master's degrees awarded, and petersons.com CS graduate program data."
+}

@@ -1,0 +1,67 @@
+{
+  "university_name": "University of Kentucky",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://caai.ai.uky.edu/dgx-cluster/",
+      "data_found": "The cluster consists of 5 Nvidia DGX H100 compute nodes providing 1120 CPUs, 10 TB of RAM, and 40 H100 Nvidia GPUs each with 80GB of VRAM."
+    },
+    {
+      "url": "https://www.as.uky.edu/research-cluster-hardware",
+      "data_found": "The cluster currently has 6 generally available compute nodes. There are an additional 9 compute nodes and 7 GPU nodes dedicated to specific departments and research groups."
+    },
+    {
+      "url": "https://scholars.uky.edu/en/equipments/lipscomb-compute-cluster-cpu-lcc-cpu",
+      "data_found": "The LCC cluster contains nearly 7,200 intel-based Skylake and Cascade processor cores."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/157085/university-of-kentucky/enrollment/",
+      "data_found": "University of Kentucky has a total enrollment of 32,703 including 23,930 undergraduate students and 8,773 graduate students."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-kentucky",
+      "data_found": "In 2023, 9,834 degrees were awarded across all undergraduate and graduate programs at University of Kentucky. The most common race/ethnicity group of degree recipients was white (7,332 degrees), 12.4 times more than then the next closest race/ethnicity group, black or african american (593 degrees)."
+    },
+    {
+      "url": "https://academics.uky.edu/programs/bachelors/computer-science",
+      "data_found": "The Department of Computer Science was ranked 30th among U.S. Ph.D.-granting universities and 16th among public universities by Academic Analytics\u2122."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 180,
+    "phd_cs_count": 70,
+    "year": "2023-2024",
+    "source_url": "https://www.collegetuitioncompare.com/edu/157085/university-of-kentucky/enrollment/",
+    "notes": "CS-specific enrollment numbers are estimated based on total enrollment data. Total enrollment is 32,703 (23,930 undergrad, 8,773 grad). Engineering college programs are popular at UK. Estimating CS undergrads at ~800 based on typical CS program size at comparable state universities with similar total enrollment and engineering focus. Graduate CS students estimated at 180 MS + 70 PhD based on typical ratios for a department ranked 30th nationally among PhD-granting institutions."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 40,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unknown GPU models in A&S Research Cluster",
+        "estimated_total": 7,
+        "notes": "7 GPU nodes mentioned in A&S Research Cluster but specific models not disclosed"
+      }
+    ],
+    "source_url": "https://caai.ai.uky.edu/dgx-cluster/",
+    "notes": "CLUSTERS INCLUDED:\n\n1) DGX Cluster (UK Center for Applied AI): 5 NVIDIA DGX H100 nodes \u00d7 8 H100/node = 40 H100 GPUs (80GB VRAM each). Source explicitly states '5 Nvidia DGX H100 compute nodes' and '40 H100 Nvidia GPUs'.\n\n2) A&S Research Cluster: Has 7 GPU nodes dedicated to specific departments, but GPU models not specified in available documentation.\n\n3) Lipscomb Compute Cluster (LCC): CPU-focused cluster with 7,200 cores, no GPUs mentioned.\n\nOnly confirmed GPU count is 40 H100s from the DGX cluster. Other clusters may have additional GPUs but specifications were not found in public documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Kentucky has invested in state-of-the-art AI infrastructure with their DGX H100 cluster managed by the Center for Applied AI. CS enrollment numbers are estimated based on total university enrollment and typical CS program proportions at comparable institutions, as department-specific enrollment data was not publicly available."
+}

@@ -1,0 +1,45 @@
+{
+  "university_name": "DePaul University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/depaul-university",
+      "data_found": "2022 Degrees Awarded (IPEDS data): Computer Science Bachelor's degrees: 432; Computer Science Master's degrees: 232. Total Computer & Information Sciences degrees represent 15.6% of all degrees awarded."
+    },
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1726719",
+      "data_found": "NSF Award #1726719 (2017): 'Building a High Performance Computing Cluster... The cluster will consist of... 2 GPU nodes'. (Legacy hardware context)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1728,
+    "grad_cs_count": 464,
+    "phd_cs_count": 177,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/depaul-university",
+    "notes": "Official college-wide enrollment is available (CDM total: 2,864 Undergrad, 2,339 Grad), but CDM includes film/animation. Specific 'Computer Science' major counts are estimated using degree completion data. Undergrad CS estimated: 432 BS degrees (DataUSA/IPEDS) * 4 years = 1,728. Grad CS estimated: 232 MS degrees * 2 years = 464. PhD count (177) is taken directly from the DePaul Fact File for CDM Doctoral enrollment, as the doctoral programs in this college are exclusively computing/HCI focused. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/depaul-university",
+    "notes": "DePaul University does not make specifications for a centralized H100/A100 research cluster publicly available. While the College of Computing and Digital Media (CDM) mentions managing a 'specialized high performance computing cluster,' no node counts or GPU models are listed on public pages or research computing documentation. NSF awards indicate the existence of older legacy GPU nodes (circa 2017), but current verifiable counts for modern datacenter GPUs (H100/A100) are 0 based on public data. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No public data found regarding commercial cloud compute credit allocations."
+  },
+  "analysis_notes": "DePaul appears to rely on lab-specific workstations, VDI (Virtual Desktop Infrastructure), and potentially undocumented internal clusters for research. Unlike major R1 institutions, there is no public 'System Status' or 'HPC User Guide' listing specific GPU node inventories."
+}

@@ -1,0 +1,63 @@
+{
+  "university_name": "Oklahoma State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpcc.okstate.edu/pete-supercomputer.html",
+      "data_found": "Pete supercomputer: 10 GPU nodes, each containing at least two NVIDIA Quadro RTX6000 GPUs with a total of 22 GPUs"
+    },
+    {
+      "url": "https://hpcc.okstate.edu/",
+      "data_found": "Pete's computational infrastructure comprises 22 graphics processing units"
+    },
+    {
+      "url": "https://cas.okstate.edu/computer_science/",
+      "data_found": "Department of Computer Science homepage - Bachelor of Science degree program in Computer Science is accredited by ABET"
+    },
+    {
+      "url": "https://datausa.io/profile/university/oklahoma-state-university-main-campus",
+      "data_found": "Engineering: 714 degrees awarded; Computer, Engineering, and Science: 526 employees (as of 2023)"
+    },
+    {
+      "url": "https://cas.okstate.edu/computer_science/graduate/",
+      "data_found": "Graduate Students page for Computer Science department"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 150,
+    "phd_cs_count": 50,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/oklahoma-state-university-main-campus",
+    "notes": "CS enrollment numbers estimated based on DataUSA showing 714 Engineering degrees awarded in 2023 and 526 Computer, Engineering, and Science employees. Assuming CS represents approximately 20-25% of engineering degrees and maintaining typical 4:1 undergraduate to graduate ratio. PhD estimated at 1/3 of graduate students based on typical CS department distributions."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX6000",
+        "estimated_total": 22,
+        "notes": "Pete supercomputer has 10 GPU nodes with at least 2 RTX6000 GPUs each, total of 22 GPUs"
+      }
+    ],
+    "source_url": "https://hpcc.okstate.edu/pete-supercomputer.html",
+    "notes": "Current system is Pete supercomputer with 22 NVIDIA Quadro RTX6000 GPUs. New supercomputer being built with NSF MRI grant ($4M from NSF + $1.7M from OSU) will include next-generation NVIDIA GPUs, but specifications not yet finalized as of 2022 announcement."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Oklahoma State University currently operates Pete supercomputer with 22 RTX6000 GPUs. Major new supercomputer funded in 2022 ($5.7M total) but specifications and deployment timeline not yet publicly available. Student counts estimated from available data."
+}

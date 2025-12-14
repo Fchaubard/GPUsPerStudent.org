@@ -1,0 +1,47 @@
+{
+  "university_name": "Vanderbilt University",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [
+    {
+      "url": "https://engineering.vanderbilt.edu/cs/",
+      "data_found": "CS Department Homepage (2024): 'The Department of Computer Science... is home to... over 700 undergraduate majors... and over 120 graduate students.'"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 700,
+    "grad_cs_count": 120,
+    "phd_cs_count": 80,
+    "year": "2024",
+    "source_url": "https://engineering.vanderbilt.edu/cs/",
+    "notes": "Student counts taken from CS Department 'About' page stating 'over 700 undergraduate majors' and 'over 120 graduate students'. PhD count is estimated as approx. 66% of the graduate population (80 students), typical for a research-focused engineering department (MS/PhD split not explicitly detailed on the overview page)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 0,
+    "a40_count": 4,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 16,
+    "p100_count": 56,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80",
+        "estimated_total": 8,
+        "notes": "ACCRE docs mention legacy K80 nodes (Roar partition). Estimated 4 nodes x 2 GPUs based on standard legacy configs."
+      }
+    ],
+    "source_url": "https://engineering.vanderbilt.edu/cs/",
+    "notes": "CALCULATIONS:\n\n1) A100 80GB: 2 verified DGX A100 systems (Source: Vanderbilt News 2021). 2 systems \u00d7 8 GPUs/system = 16 GPUs. Assumed 80GB variants as they were acquired for high-end AI research in 2021.\n\n2) H100: Count set to 0. While the 'AI Compute Core' (Jan 2024) announces H100 availability, no specific node count (e.g., '1 DGX H100' or '4 PCIe nodes') is publicly auditable yet.\n\n3) V100: Derived from ACCRE technical training materials referencing the 'Volta' partition: 4 nodes \u00d7 4 GPUs/node = 16 V100s.\n\n4) P100: Derived from ACCRE 'Pascal' partition docs: 28 nodes \u00d7 2 GPUs/node = 56 P100s.\n\n5) A40: Listed in hardware overview. Assumed 1 node \u00d7 4 GPUs (standard config) or distributed, count is conservative estimate. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Vanderbilt's ACCRE is the primary resource. The university has recently (Jan 2024) announced an 'AI Compute Core' with H100s, but exact quantities are not yet in the public hardware specifications, so H100 count is 0 pending verified node counts. Student data is direct from the CS department homepage."
+}

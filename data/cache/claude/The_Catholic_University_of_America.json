@@ -1,0 +1,53 @@
+{
+  "university_name": "The Catholic University of America",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.catholic.edu/all-stories/where-technology-meets-purpose-catholic-university-launches-ai-programs",
+      "data_found": "Catholic University launched Bachelor of Science and Master of Science in Artificial Intelligence programs for fall 2025. The article mentions cloud computing coursework but does not specify on-campus GPU resources."
+    },
+    {
+      "url": "https://engineering.catholic.edu/academics/undergraduate/computer-science/outcome-and-enrollment-data.html",
+      "data_found": "Page shows 'Figure 1: Total undergraduate enrollment in Computer Science program from Fall 2019 to Fall 2025' and 'Figure 2: Total number of bachelor degrees awarded in Computer Science program from the academic year 2018-19 to 2024-25' but actual numbers are not provided in text."
+    },
+    {
+      "url": "https://datausa.io/profile/university/the-catholic-university-of-america",
+      "data_found": "In 2023, 1,357 degrees were awarded across all undergraduate and graduate programs. The most common Bachelor's Degree was General Business Administration & Management (164 degrees). Computer Science was not listed among the most common or specialized majors."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/131283/the-catholic-university-of-america/enrollment/",
+      "data_found": "For 2023-2024: total enrollment 5,171 students (3,139 undergraduate and 2,032 graduate students)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 120,
+    "grad_cs_count": 80,
+    "phd_cs_count": 25,
+    "year": "2024-2025",
+    "source_url": "https://engineering.catholic.edu/academics/undergraduate/computer-science/outcome-and-enrollment-data.html",
+    "notes": "Exact CS enrollment figures not publicly available. Estimates based on: 1) Engineering school is one of 12 schools at CUA, 2) Total undergrad enrollment 3,177 (fall 2024), 3) CS is one department within engineering alongside EE, CE, ME, BME, 4) Typical CS programs at similar-sized private universities enroll 3-5% of undergrads. Estimate: 120 undergrad CS majors (~3.8% of total undergrads), 80 MS students, 25 PhD students. Note that CUA is launching new AI degree programs in fall 2025 which may increase enrollment."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.catholic.edu/all-stories/where-technology-meets-purpose-catholic-university-launches-ai-programs",
+    "notes": "No public documentation of GPU cluster resources found. University is launching AI programs and has appointed Microsoft AI director to lead new AI institute, suggesting investment in computing infrastructure is likely planned but not yet publicly documented. Searched for HPC, research computing, GPU cluster specifications but found no technical documentation. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Catholic University of America is investing heavily in AI education with new degree programs and an AI institute led by Microsoft's Taylor Black, but specific GPU infrastructure details are not publicly available. Student enrollment data exists but CS-specific numbers are not published separately."
+}

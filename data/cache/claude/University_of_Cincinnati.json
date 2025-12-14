@@ -1,0 +1,65 @@
+{
+  "university_name": "University of Cincinnati",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://research.uc.edu/arc",
+      "data_found": "The advanced research computing (ARC) center establishes a high-performance computing (HPC) infrastructure that supports and accelerates computational and data-enabled research, scholarship, and education at the University of Cincinnati"
+    },
+    {
+      "url": "https://www.uc.edu/news/articles/2024/01/the-university-of-cincinnati-receives-supercomputing-resources-from-hewlett-packard-enterprise.html",
+      "data_found": "A recent gift from Hewlett Packard Enterprise (HPE) to the University of Cincinnati's Advanced Research Computing Center will make high-performance computing at the UC center even more valuable to UC's research enterprise. HPE's supercomputing resources will be used for testing and creating learning environments"
+    },
+    {
+      "url": "https://www.uc.edu/news/articles/2023/11/ucs-advanced-research-computing-center-at-digital-futures-helps-expand-scope-of-research.html",
+      "data_found": "Through our over $3 million in investments in tech-savvy staff, upgrades to UC's Data Center and cutting-edge equipment, the Advanced Research Computing Center is propelling research at UC. The center also partnered with sponsors NVIDIA, Hewlett Packard Enterprise, and Procter & Gamble Co."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-cincinnati-main-campus",
+      "data_found": "Computer and Information Sciences and Support Services (1,214 degrees) (as of 2023)"
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/university-of-cincinnati-main-campus/academic-life/academic-majors/computer-information-sciences/",
+      "data_found": "During the 2021-2022 academic year, University of Cincinnati - Main Campus handed out 414 bachelor's degrees in computer & information sciences. In 2022, 353 students received their master's degree in computer & information sciences from UC."
+    },
+    {
+      "url": "https://www.uc.edu/news/articles/2025/09/another-record-year-of-enrollment-for-the-university-of-cincinnati.html",
+      "data_found": "More than a decade of growth continues with the University of Cincinnati seeing its largest enrollment ever as the official head count landed at 53,682 students for fall semester 2025."
+    },
+    {
+      "url": "https://ceas.uc.edu/academics/departments/computer-science/degrees-programs/computer-science-engineering-phd.html",
+      "data_found": "The Computer Science and Engineering doctoral program has excellent research and teaching facilities including research laboratories with state-of-the-art equipment in the areas of computer science, software systems, artificial intelligence, neural networks, and more."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1242,
+    "grad_cs_count": 1059,
+    "phd_cs_count": 150,
+    "year": "2023",
+    "source_url": "https://datausa.io/profile/university/university-of-cincinnati-main-campus",
+    "notes": "Based on DataUSA showing 1,214 Computer and Information Sciences and Support Services degrees awarded in 2023. Using typical degree distribution ratios: Bachelor's degrees (414 from CollegeFact 2022) likely grew to ~520 in 2023, suggesting steady-state undergraduate enrollment of ~520*3 years = 1,560 CS undergrads. However, UC is likely 80% of total CIS degrees, so estimated 1,242 CS undergrads. Master's degrees (353 from CollegeFact 2022) likely grew proportionally to ~440 in 2023, with 2-year program suggesting ~880 MS students. Including other graduate programs, estimated 1,059 total graduate CS students. PhD students estimated at 150 based on typical CS department size for R1 university with doctoral program."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://research.uc.edu/arc",
+    "notes": "Specific GPU specifications not found in public sources. The Advanced Research Computing Center has received equipment donations from HPE and partnerships with NVIDIA, but detailed hardware specifications are not publicly available. The center has a supercomputer housed in UC's Data Center with over $3 million in investments, but no specific GPU counts or models are listed publicly."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Cincinnati has an established Advanced Research Computing Center at Digital Futures with HPC infrastructure, but specific GPU cluster specifications are not publicly available. Student counts estimated from degree completion data and typical program durations."
+}

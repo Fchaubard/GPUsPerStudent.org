@@ -1,0 +1,67 @@
+{
+  "university_name": "Montana State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.montana.edu/uit/rci/tempest/system/index.html",
+      "data_found": "Tempest has 12,264 logical CPU cores, 55.9TB of ECC memory, 26 Nvidia A40 GPUs, 14 Nvidia A100 GPUs, and 12 Nvidia H100 GPUs. For storage, Tempest has 600TB of all-flash high-speed storage."
+    },
+    {
+      "url": "https://www.montana.edu/uit/rci/tempest/tech-description-computational-resources/",
+      "data_found": "Each of the 5 quad-GPU nodes has 4 A100 or H100 GPUs with NVLink interconnect, 96 or 128 logical cores, 1024GB of ECC memory, and 100Gb networking. Each of the 16 dual-GPU nodes has 2 A40 or A100 GPUs."
+    },
+    {
+      "url": "https://www.montana.edu/uit/rci/tempest/",
+      "data_found": "Tempest is comprised of 12,264 logical CPU cores, 52 GPUs, 55.9 TB of memory, and 800 TB of all-flash storage."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/180461/montana-state-university/enrollment/",
+      "data_found": "Montana State University has a total enrollment of 16,960 including 14,872 undergraduate students and 2,088 graduate students (academic year 2023-2024)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/montana-state-university",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Montana State University were General Business (291 degrees awarded), Registered Nursing (284 degrees), and Mechanical Engineering (171 degrees). 3,548 degrees were awarded across all undergraduate and graduate programs."
+    },
+    {
+      "url": "https://www.montana.edu/news/24786/montana-state-enrolls-record-17-165-students-sets-records-for-graduation-rates-and-student-retention",
+      "data_found": "Montana State enrolls record 17,165 students (Fall 2025)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 600,
+    "grad_cs_count": 120,
+    "phd_cs_count": 50,
+    "year": "2024-2025",
+    "source_url": "https://www.collegetuitioncompare.com/edu/180461/montana-state-university/enrollment/",
+    "notes": "CS-specific enrollment data not publicly available. Estimates based on total enrollment (16,960 in 2023-24, 17,165 in Fall 2025) and typical CS program size at similar R1 universities. Undergrad estimate: ~4% of total undergrads (14,872 \u00d7 0.04 = ~600). Grad CS estimate from 2,088 total grad students, assuming CS MS/PhD programs comprise ~8% = ~170 total, split approximately 120 MS and 50 PhD based on typical ratios."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 12,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 14,
+    "a100_40gb_count": 0,
+    "a40_count": 26,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K20",
+        "estimated_total": 6,
+        "notes": "Montana Tech HPC has 2 GPU nodes with 3 NVIDIA Tesla K20 GPUs each = 6 total K20s (different campus, included for completeness)"
+      }
+    ],
+    "source_url": "https://www.montana.edu/uit/rci/tempest/system/index.html",
+    "notes": "TEMPEST CLUSTER TOTALS:\n- H100: 12 GPUs (likely from 3 quad-GPU nodes \u00d7 4 = 12)\n- A100: 14 GPUs (remaining quad-GPU nodes and some dual-GPU nodes)\n- A40: 26 GPUs (from dual-GPU nodes)\nTotal = 52 GPUs as stated.\n\nNote: The older Hyalite cluster was decommissioned and replaced by Tempest per https://www.montana.edu/uit/rci/hyalite/."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Montana State University's main HPC resource is the Tempest cluster with 52 total GPUs (12 H100, 14 A100, 26 A40). CS-specific enrollment numbers not publicly available; estimates based on total university enrollment and typical CS program proportions at R1 universities."
+}

@@ -1,0 +1,55 @@
+{
+  "university_name": "California Institute of Technology",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.caltech.edu/about/news/imss-unveils-42-million-high-performance-computing-center-83433",
+      "data_found": "HPC Center boasts nearly 7,500 CPU cores and 200 NVidia P100 graphics-processing units. Funded by the Office of the Provost and a $2 million grant from the Moore Foundation."
+    },
+    {
+      "url": "https://datausa.io/profile/university/california-institute-of-technology",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at California Institute of Technology were Computer Science (67 degrees awarded). The total enrollment at California Institute of Technology in 2023, both undergraduate and graduate, is 2,463 students."
+    },
+    {
+      "url": "https://www.cms.caltech.edu/academics/grad/grad_cs",
+      "data_found": "The graduate computer science option is primarily oriented toward Ph.D. research. The Ph.D. program requires a minimum of three academic years of residence."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 268,
+    "grad_cs_count": 134,
+    "phd_cs_count": 201,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/california-institute-of-technology",
+    "notes": "Based on DataUSA.io data showing 67 CS bachelor's degrees awarded in 2023. Assuming 4-year program, estimated undergrad CS enrollment = 67 \u00d7 4 = 268. For graduate students, using typical MS:PhD ratio of 2:3 and estimated total CS graduate enrollment of 335 (based on CS being approximately 23% of total graduate enrollment), gives MS count \u2248 134 and PhD count \u2248 201."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 200,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA GPGPUs (older cluster)",
+        "estimated_total": 180,
+        "notes": "CITerra cluster (2011) had 60 nodes with 3 NVIDIA GPGPUs each = 180 total. Model not specified."
+      }
+    ],
+    "source_url": "https://www.caltech.edu/about/news/imss-unveils-42-million-high-performance-computing-center-83433",
+    "notes": "Resnick HPC Center has 200 NVIDIA P100 GPUs as confirmed in the 2018 announcement. No public information found about newer GPU models (H100, A100, etc.) at Caltech's centralized HPC facilities. The HPC Center resources page requires authentication and specific GPU model details are not publicly available."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Limited public information available about Caltech's current GPU resources. Only confirmed data is the 200 P100 GPUs from 2018. Student counts estimated from degree completion data."
+}

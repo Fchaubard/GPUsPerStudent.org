@@ -1,0 +1,66 @@
+{
+  "university_name": "Tufts University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://rtguides.it.tufts.edu/hpc/compute/index.html",
+      "data_found": "Computing Resources table: 5 GPU nodes with 8x a100-40G; 5 GPU nodes with 8x a100-80G; 9 GPU nodes with 4x l40; plus 'Mixed systems include ... V100, A100, H100 and GH200' (no counts for mixed)."
+    },
+    {
+      "url": "https://www.cs.tufts.edu/cs/152L3D/2024f/tufts_hpc_setup.html",
+      "data_found": "GPU hardware list by node/partition: H100: s1cmp010 has 3; A100 (2-GPU nodes): p1cmp110, s1cmp006, s1cmp007 each has 2; V100: p1cmp071 has 3, p1cmp072 has 4, p1cmp074 has 4, p1cmp076 has 2; P100: p1cmp073 has 4; RTX A6000: s1cmp008 has 8; RTX 6000 Ada: s1cmp009 has 4."
+    },
+    {
+      "url": "https://rtguides.it.tufts.edu/hpc/compute/gpu.html",
+      "data_found": "Available GPU models and max-per-node (no node counts): includes a100-40G, a100-80G, p100, v100, h100, l40, l40s, rtx_a6000, rtx_6000ada."
+    },
+    {
+      "url": "https://www.cs.tufts.edu/cs/21/notes/tufts_cluster/Introduction_to_Tufts_HPC_Cluster_cs21_2024.html",
+      "data_found": "Indicates A100 in the 'gpu' partition uses constraint a100-80G; lists available GPU types on preempt including l40s; provides context but not node counts."
+    },
+    {
+      "url": "https://provost.tufts.edu/institutionalresearch/wp-content/uploads/sites/5/CDS_2024-2025-1.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://provost.tufts.edu/institutionalresearch/wp-content/uploads/sites/5/CDS_2024-2025-1.pdf",
+    "notes": "Searched for Tufts CS enrollment counts specifically for AY 2024-2025 / Fall 2024. Found Tufts Common Data Set 2024-2025 (official fall reporting date referenced as of Oct 15, 2024), but it reports institution-wide enrollment totals and does NOT provide enrollment counts by major/department (e.g., Computer Science) or by CS degree level (MS vs PhD). ([provost.tufts.edu](https://provost.tufts.edu/institutionalresearch/wp-content/uploads/sites/5/CDS_2024-2025-1.pdf)) Also checked Tufts OIR Fact Book 'Enrollment' page (dashboard; not exposed in the accessible page content, and no CS-by-major table visible without the interactive dashboard). ([provost.tufts.edu](https://provost.tufts.edu/institutionalresearch/fact-book-enrollment/)) Checked OIR 'Top Undergraduate Majors' page, but it is explicitly for graduates in AY 2022-2023 (rejected as pre-2024). ([provost.tufts.edu](https://provost.tufts.edu/institutionalresearch/top-undergraduate-majors/)) Looked for department/CS-site 'facts/at-a-glance' style pages listing current CS majors / MS / PhD headcounts and did not find any 2024-2025 or Fall 2024 CS headcount figures on publicly accessible pages."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 3,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 40,
+    "a100_40gb_count": 46,
+    "a40_count": 0,
+    "a6000_count": 8,
+    "l40s_count": 0,
+    "v100_count": 13,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA L40 48GB",
+        "count": 36
+      },
+      {
+        "model": "NVIDIA RTX 6000 Ada 48GB",
+        "count": 4
+      }
+    ],
+    "source_url": "https://rtguides.it.tufts.edu/hpc/compute/index.html",
+    "notes": "Cluster identified: Tufts HPC Cluster (pax/login.cluster.tufts.edu).\n\nCounts computed as nodes \u00d7 GPUs_per_node:\n- A100-40G (from RT guides Computing Resources): 5 nodes \u00d7 8 = 40 \u2192 a100_40gb_count += 40\n- A100-80G (from RT guides Computing Resources): 5 nodes \u00d7 8 = 40 \u2192 a100_80gb_count += 40\n- L40 (from RT guides Computing Resources): 9 nodes \u00d7 4 = 36 \u2192 recorded under other_high_vram_gpus (no dedicated l40 field)\n- H100 (from CS152 L3D node list): 1 node (s1cmp010) \u00d7 3 = 3 \u2192 assumed PCIe (non-HGX/8-way), so h100_pcie_count = 3\n- Additional A100 2-GPU nodes (from CS152 L3D node list): 3 nodes (p1cmp110,s1cmp006,s1cmp007) \u00d7 2 = 6 \u2192 counted as A100 40GB (PCIe-style small-GPU-count nodes; memory not stated) so a100_40gb_count += 6 (total a100_40gb_count = 46)\n- V100 (from CS152 L3D node list): p1cmp071 (3) + p1cmp072 (4) + p1cmp074 (4) + p1cmp076 (2) = 13 \u2192 v100_count = 13. Note: the CS152 page also lists p1cmp073 as V100 in preempt but as P100 in gpu; to avoid double counting that node, I treated p1cmp073 as P100 and excluded it from V100 totals.\n- P100 (from CS152 L3D node list): 1 node (p1cmp073) \u00d7 4 = 4 \u2192 p100_count = 4\n- RTX A6000 (from CS152 L3D node list): 1 node (s1cmp008) \u00d7 8 = 8 \u2192 a6000_count = 8\n- RTX 6000 Ada 48GB (from CS152 L3D node list): 1 node (s1cmp009) \u00d7 4 = 4 \u2192 recorded under other_high_vram_gpus\n\nUnresolved/unknown: RT guides mention 'mixed systems' including GH200 but do not provide node/GPU counts, so gh200_count left as 0 (no countable inventory found publicly). L40s appears as an available GPU type in docs, but no node count was found; l40s_count left as 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

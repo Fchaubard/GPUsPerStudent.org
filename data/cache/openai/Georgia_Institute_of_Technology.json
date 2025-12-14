@@ -1,0 +1,57 @@
+{
+  "university_name": "Georgia Institute of Technology",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://cse.gatech.edu/computing-infrastructure",
+      "data_found": "Phoenix cluster: 446 total GPUs (model breakdown not provided); mentions inclusion of NVIDIA H200."
+    },
+    {
+      "url": "https://coe.gatech.edu/academics/ai-for-engineering/ai-makerspace",
+      "data_found": "AI Makerspace: 20 NVIDIA H100-HGX servers (8x H100 SXM5 each) and 18 NVIDIA H200-HGX servers (8x H200 SXM5 each); total stated as 304 H100/H200 GPUs."
+    },
+    {
+      "url": "https://pace.gatech.edu/2024/10/31/new-gpus-for-phoenix-v100s-being-replaced/",
+      "data_found": "Phoenix planned/added GPUs: 6 H200 machines with 8x H200 each (48 H200 total); 8 nodes with 8x L40S each (64 L40S total) plus 2 L40S machines with 8x L40S each (16 L40S total). Also states 24 V100 GPUs were removed/replaced."
+    },
+    {
+      "url": "https://pace.gatech.edu/2024/04/08/phoenix-a100-cpugpu-ratio-change/",
+      "data_found": "Phoenix A100: 12 nodes host 2x A100 (40GB) each; plus 1 node with 8x A100 (memory size not stated)."
+    },
+    {
+      "url": "https://irp.gatech.edu/files/infographics/2025/GT-2024-QuickFacts-Infographic-THUMB.png",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://irp.gatech.edu/files/infographics/2025/GT-2024-QuickFacts-Infographic-THUMB.png",
+    "notes": "Searched per requested strategy for Georgia Tech Computer Science (CS) student enrollment counts specifically for Fall 2024 or AY 2024-2025 (with separate counts for undergraduate CS majors, MS-only CS, and PhD-only CS). Found an official IRP infographic explicitly labeled \u201c2024 Quick Facts\u201d and \u201cFall 2024\u201d (source_url), but the publicly accessible version available during this lookup did not provide CS-major headcount with MS vs PhD breakdown. Also found an official IRP \u201cEnrollment by Major\u201d dashboard that includes AY 2024-2025 and breaks out MS vs PhD, but it is scoped to College of Engineering majors and does not include the Computer Science major. Because no authoritative Fall 2024 / AY 2024-2025 CS-major headcount (UG vs MS vs PhD) could be retrieved from an accessible official page, all counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 446,
+    "h100_pcie_count": 0,
+    "h200_count": 192,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 32,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 80,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://cse.gatech.edu/computing-infrastructure",
+    "notes": "Clusters with computable GPU totals from sources:\n\n1) Georgia Tech AI Makerspace (dedicated teaching cluster)\n- H100: 20 nodes \u00d7 8 H100 SXM5/node = 160 H100 SXM\n- H200: 18 nodes \u00d7 8 H200/node = 144 H200\n\n2) PACE Phoenix (research cluster)\n- Total GPUs on Phoenix (no public breakdown): 446 GPUs\n- H200: 6 nodes \u00d7 8 H200/node = 48 H200\n- L40S: (8 nodes \u00d7 8 L40S/node = 64) + (2 nodes \u00d7 8 L40S/node = 16) => 80 L40S\n- A100: (12 nodes \u00d7 2 A100/node = 24 A100 40GB) + (1 node \u00d7 8 A100/node = 8 A100; assumed 40GB because size not stated) => 32 A100 40GB\n- Remaining Phoenix GPUs = 446 \u2212 (48 H200 + 80 L40S + 32 A100) = 286 GPUs. Per instruction to estimate unknown model by age/newness and given Phoenix references H100/H200 era, these 286 are estimated as H100 SXM.\n\nGrand totals across (AI Makerspace + Phoenix):\n- H100 SXM = 160 + 286 = 446\n- H200 = 144 + 48 = 192\n- A100 40GB = 32\n- L40S = 80\n\nNotes/limits: PACE also operates Hive, ICE, Firebird, and Buzzard, but their hardware breakdown pages are hosted on gatech.service-now.com and did not render in the crawler (no node\u00d7GPU counts available from accessible pages), so they are not included in totals above."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

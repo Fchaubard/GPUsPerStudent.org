@@ -1,0 +1,49 @@
+{
+  "university_name": "University of Nevada - Reno",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.unr.edu/cyberinfrastructure/high-performance-computing",
+      "data_found": "Pronghorn: GPU partition features 44 NVIDIA Tesla P100 GPUs; Visualization partition composed of three NVIDIA Tesla V100 GPUs."
+    },
+    {
+      "url": "https://www.unr.edu/cyberinfrastructure/high-performance-computing/fees-and-consulting",
+      "data_found": "Pronghorn pricing notes: each GPU node has four NVIDIA P100 devices attached with NVLink."
+    },
+    {
+      "url": "https://www.unr.edu/cse/about",
+      "data_found": "Student enrollment: 842 undergrad, 105 grad, 65 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 842,
+    "grad_cs_count": 105,
+    "phd_cs_count": 65,
+    "year": "CY 2024",
+    "source_url": "https://www.unr.edu/cse/about",
+    "notes": "Source is the UNR Department of Computer Science & Engineering 'About the department' page, section 'By the numbers'. It lists: Undergraduate students = 842; Graduate students broken out as Master's degree = 80 and Online M.S. = 25 (combined here as MS/Masters-only grad_cs_count = 105); Ph.D. = 65. The page also explicitly contains the date marker 'CY 2024' (in 'Research expenditures: $3.7 million, CY 2024'). The student-count lines themselves are not explicitly labeled 'Fall 2024' or 'AY 2024-25' on the page."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 3,
+    "p100_count": 44,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.unr.edu/cyberinfrastructure/high-performance-computing",
+    "notes": "Clusters found (UNR research computing): Pronghorn.\n\nPronghorn GPU partition (P100): total GPUs stated = 44 P100. Fees page states each GPU node has 4\u00d7 P100 => nodes = 44/4 = 11; total = 11 nodes \u00d7 4 GPUs/node = 44 P100.\n\nPronghorn Visualization partition (V100): total GPUs stated = 3 V100. UNR HPC page lists 48 CPU cores for visualization partition and wiki docs reference a single visualization node hostname (vis-0...), so inferred nodes = 1; total = 1 node \u00d7 3 GPUs/node = 3 V100.\n\nNo UNR-public sources found (in the requested searches) indicating additional UNR research-computing GPU clusters or any H100/H200/A100/A6000/L40S GPUs; therefore those counts are 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

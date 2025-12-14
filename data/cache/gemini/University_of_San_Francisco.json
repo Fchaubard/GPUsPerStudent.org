@@ -1,0 +1,51 @@
+{
+  "university_name": "University of San Francisco",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=University+of+San+Francisco&s=all&id=122612",
+      "data_found": "IPEDS/College Navigator (2023 Data): Lists total Master's degrees awarded in Computer and Information Sciences as 163."
+    },
+    {
+      "url": "https://catalog.usfca.edu/preview_program.php?catoid=36&poid=36655",
+      "data_found": "MS in Data Science Catalog: Mentions usage of Amazon Web Services (AWS) and distributed computing, reinforcing the cloud-first infrastructure model."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1151,
+    "grad_cs_count": 326,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=University+of+San+Francisco&s=all&id=122612",
+    "notes": "Undergraduate count estimated from Common Data Set 2023-2024 (Section J). Total Bachelor's degrees conferred = 1,291. CIP 11 (Computer Science) = 22.3% of total \u2248 288 degrees/year. Estimated steady-state enrollment = 288 degrees \u00d7 4 years = 1,152 (adjusted to 1,151 for rounding). Graduate count estimated from IPEDS/NCES 2023 data showing 163 Master's degrees awarded in Computer & Information Sciences. Estimated steady-state enrollment = 163 \u00d7 2 years = 326. USF is primarily a Master's/Undergraduate institution for CS; no Ph.D. in Computer Science is offered (0). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Cloud-Based Resources (AWS/GCP)",
+        "estimated_total": null,
+        "notes": "University of San Francisco relies primarily on cloud computing grants (AWS, Google Cloud) for student and research GPU needs rather than maintaining a large on-premise GPU cluster."
+      }
+    ],
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=University+of+San+Francisco&s=all&id=122612",
+    "notes": "Extensive search of USFCA ITS, CS Department, and Data Institute pages reveals no publicly documented specifications for an on-premise GPU cluster containing H100/A100/V100 nodes. The university emphasizes a 'Cloud First' approach for research computing. While a 'modest HPC cluster' is mentioned by ITS, no node/GPU inventory is published, and course syllabi reference AWS instances or Google Colab for Deep Learning coursework. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "USFCA ITS mentions providing 'access to cloud computing resources' and facilitating AWS grants, but no specific total annual dollar value is publicly reported."
+  },
+  "analysis_notes": "USF (University of San Francisco) is distinct from R1 research universities in that it does not appear to maintain a public inventory of heavy iron (H100/A100). The CS and Data Science programs rely heavily on cloud credits. Student numbers are healthy (estimated >1000 undergrads based on high degree completion rates in the CDS), but the hardware ratio is effectively 0 for owned on-premise enterprise GPUs."
+}

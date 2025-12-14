@@ -1,0 +1,45 @@
+{
+  "university_name": "Virginia Commonwealth University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://egr.vcu.edu/departments/computer-science/",
+      "data_found": "Computer Science Department About Page: States 'The Department of Computer Science... with over 1,300 undergraduate students and 130 graduate students.'"
+    },
+    {
+      "url": "https://datausa.io/profile/university/virginia-commonwealth-university",
+      "data_found": "DataUSA (IPEDS data): Used to estimate the split between MS and PhD students based on degree completion ratios (approx 5-6 PhDs awarded/year vs ~50 Masters)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1300,
+    "grad_cs_count": 100,
+    "phd_cs_count": 30,
+    "year": "2024-2025",
+    "source_url": "https://egr.vcu.edu/departments/computer-science/",
+    "notes": "Undergraduate and Total Graduate counts (1,300 and 130 respectively) are taken directly from the VCU Computer Science Department 'About' page. The breakdown of the 130 graduate students into MS (100) and PhD (30) is estimated based on IPEDS degree completion data (DataUSA), which shows approx. 6 CS PhDs awarded annually (6 * 5yr duration = 30 students) vs approx 50 MS degrees (50 * 2yr duration = 100 students)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 16,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://egr.vcu.edu/departments/computer-science/",
+    "notes": "VCU's primary HPC facility (Fenn) lists 8 GPU nodes with 2x NVIDIA Tesla P100 GPUs each (Total: 16 P100s). No public documentation was found regarding the acquisition of A100, H100, or newer generation GPU nodes for the central research cluster. Some individual labs may possess newer hardware, but these are not listed in central OARC facility specifications. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "VCU relies on the 'Fenn' cluster for central research computing. The hardware documentation explicitly lists P100 nodes. Student counts are derived from the department's own stated figures (1300+ UG / 130 Grad)."
+}

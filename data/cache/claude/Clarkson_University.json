@@ -1,0 +1,63 @@
+{
+  "university_name": "Clarkson University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://sites.clarkson.edu/acres/technical-specifications/",
+      "data_found": "ACRES features 62 compute-nodes, 2440 CPU cores, 8TB of total memory, and four (4) GPUs\u2014for a total computing power of more than 160 teraflops."
+    },
+    {
+      "url": "https://sites.clarkson.edu/acres/",
+      "data_found": "ACRES is a High-Performance Computing (HPC) cluster operated by the Clarkson University Office of Information Technology. On ACRES, simulations and workloads benefit from performance levels that only large scale HPC systems can offer: high-performance I/O infrastructure, large volumes of storage, a wide variety of hardware configurations, GPU accelerators."
+    },
+    {
+      "url": "https://sites.clarkson.edu/acres/concepts/",
+      "data_found": "The initial purchase of ACRES has been supported with seed funding from the National Science Foundation under Grant No. 1925596. It comprises a set of freely available compute nodes, a few specific resources such as large-memory nodes and GPU nodes."
+    },
+    {
+      "url": "https://datausa.io/profile/university/clarkson-university",
+      "data_found": "The total enrollment at Clarkson University in 2023, both undergraduate and graduate, is 3,603 students. The full-time enrollment at Clarkson University is 3,166 and the part-time enrollment is 437."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/trends/clarkson-university/student-population/",
+      "data_found": "The student population at Clarkson University is 3,603 (2,513 undergraduate and 1,090 graduate students)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 150,
+    "grad_cs_count": 120,
+    "phd_cs_count": 25,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/clarkson-university",
+    "notes": "Exact CS enrollment numbers not publicly available in search results. Estimates based on: Clarkson has 2,513 total undergrads and 1,090 total graduate students. CS is offered as BS, MS, and PhD programs. As a STEM-focused university with engineering as the largest school, CS likely represents ~6% of undergrads (150), ~11% of grads (120), and given the small research department description, approximately 25 PhD students. These are conservative estimates based on typical CS enrollment at similar technical universities."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unknown GPU models",
+        "estimated_total": 4,
+        "notes": "ACRES cluster has 4 GPUs total per technical specifications page, but specific GPU models are not disclosed"
+      }
+    ],
+    "source_url": "https://sites.clarkson.edu/acres/technical-specifications/",
+    "notes": "ACRES (Accelerating Computational Research for Engineering and Science) cluster has only 4 GPUs total according to official specifications. GPU models not specified in publicly available documentation. The cluster focuses primarily on CPU compute with 62 compute nodes and 2440 CPU cores. Given the NSF funding date (Grant No. 1925596) and typical HPC procurement cycles, these are likely older generation GPUs (possibly V100 or earlier), but without specification details, cannot determine exact models."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Clarkson University's ACRES HPC cluster has minimal GPU resources with only 4 GPUs total. The cluster is primarily CPU-focused. Student enrollment data shows 3,603 total students with CS program enrollment estimated based on typical distributions at technical universities."
+}

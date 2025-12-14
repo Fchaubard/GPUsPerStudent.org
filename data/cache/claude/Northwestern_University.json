@@ -1,0 +1,63 @@
+{
+  "university_name": "Northwestern University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.it.northwestern.edu/departments/it-services-support/research/computing/quest/specs.html",
+      "data_found": "Quest 13 - Intel Emerald Rapids with NVIDIA H100 GPUs: 24 nodes with 4 x 80 GB NVIDIA H100 (Connected with SXM5 and HBM3) per node. Total of 269 GPU cards on 91 GPU nodes across General Access and Priority Access allocations."
+    },
+    {
+      "url": "https://services.northwestern.edu/TDClient/30/Portal/KB/ArticleDet?ID=1112",
+      "data_found": "General Access GPU nodes: 16 nodes with 2 x 40GB Tesla A100 PCIe; 18 nodes with 4 x 80GB Tesla A100 SXM; 24 nodes with 4 x 80GB Tesla H100 SXM. Genomics Compute Cluster: 2 nodes with 4 x 40GB Tesla A100 PCIe; 2 nodes with 4 x 80GB Tesla A100 PCIe."
+    },
+    {
+      "url": "https://www.it.northwestern.edu/departments/it-services-support/research/computing/quest/",
+      "data_found": "Quest includes 200 NVIDIA GPU cards (A100's and H100's) with both SXM and PCIe architectures that are available to General Access users. Quest currently comprises 1,231 compute nodes with 80,398 CPU cores, as well as 91 GPU nodes."
+    },
+    {
+      "url": "https://ciera.northwestern.edu/high-performance-computing/",
+      "data_found": "CIERA cluster: 1 GPU node with NVIDIA 40 GB Tesla A100; 1 GPU node with 2 NVIDIA L40S GPUs. Grail cluster: 3 nodes containing 4 NVIDIA A30 GPUs each (total 12 A30); 1 GPU node with 4 NVIDIA L40S GPUs. Trident: 1 GPU node with NVIDIA 40 GB Tesla A100; 1 GPU node with 2 NVIDIA L40S GPUs."
+    },
+    {
+      "url": "https://www.it.northwestern.edu/departments/it-services-support/research/computing/quest/genomics-compute-cluster.html",
+      "data_found": "Genomics Compute Cluster (GCC): 138 compute nodes, 5 high-memory nodes, 4 GPU nodes, and 655 TB of dedicated scratch space."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 550,
+    "grad_cs_count": 450,
+    "phd_cs_count": 180,
+    "year": "2024",
+    "source_url": "https://www.it.northwestern.edu/departments/it-services-support/research/computing/quest/specs.html",
+    "notes": "Student counts estimated based on Northwestern's enrollment patterns and McCormick School of Engineering typical program sizes. Northwestern CS offers BS/BA degrees through both McCormick School of Engineering and Weinberg College of Arts and Sciences. The department has significantly expanded in recent years with new faculty hires and facilities. Graduate programs include MS in CS, MS in AI, MS in IT, and several interdisciplinary PhD programs (CS+LS, TSB). Based on typical Northwestern engineering department sizes and the fact that CS is one of the most popular majors at Northwestern. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 96,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 80,
+    "a100_40gb_count": 41,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 11,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 (24GB HBM2)",
+        "estimated_total": 12,
+        "notes": "Grail cluster has 3 nodes with 4 A30 GPUs each = 12 total A30s"
+      }
+    ],
+    "source_url": "https://www.it.northwestern.edu/departments/it-services-support/research/computing/quest/specs.html",
+    "notes": "GPU RESOURCES CALCULATION:\n\nQuest General Access:\n- H100 SXM: 24 nodes \u00d7 4 GPUs = 96 H100s\n- A100 SXM 80GB: 18 nodes \u00d7 4 GPUs = 72 A100 80GB\n- A100 PCIe 40GB: 16 nodes \u00d7 2 GPUs = 32 A100 40GB\n\nGenomics Compute Cluster:\n- A100 PCIe 40GB: 2 nodes \u00d7 4 GPUs = 8 A100 40GB\n- A100 PCIe 80GB: 2 nodes \u00d7 4 GPUs = 8 A100 80GB\n\nCIERA/Grail/Trident clusters:\n- A100 40GB: 1 (CIERA) + 1 (Trident) = 2 A100 40GB\n- L40S: 2 (CIERA) + 4 (Grail) + 2 (Trident) + 1\u00d74 (Grail) = 11 L40S\n- A30: 3 nodes \u00d7 4 GPUs = 12 A30 (24GB)\n\nTOTALS:\n- H100 SXM: 96\n- A100 80GB: 72 + 8 = 80\n- A100 40GB: 32 + 8 + 1 = 41\n- L40S: 11\n- A30: 12 (listed in other_high_vram_gpus)\n\nNote: Quest has 269 total GPU cards across 91 nodes, with 200 GPUs available to General Access users. The remaining ~69 GPUs are likely in Priority Access allocations and may include additional GPU models not publicly specified."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Northwestern provides substantial GPU resources through Quest HPC cluster with 96 H100 GPUs as the flagship offering. The university has been expanding GPU capacity with 24 new H100 nodes added recently. Multiple specialized clusters (CIERA, Grail, Genomics) provide additional GPU access for specific research domains. Student enrollment estimates based on typical CS department sizes at peer institutions and Northwestern's engineering school patterns."
+}

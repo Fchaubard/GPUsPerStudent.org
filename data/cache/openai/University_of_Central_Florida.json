@@ -1,0 +1,72 @@
+{
+  "university_name": "University of Central Florida",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://arcc.ist.ucf.edu/index.php/resources/newton/about-newton",
+      "data_found": "Newton GPU cluster: 10 nodes \u00d7 2\u00d7 V100 16GB; 11 nodes \u00d7 2\u00d7 V100 32GB; 29 nodes \u00d7 2\u00d7 H100 80GB PCIe; 4 nodes \u00d7 8\u00d7 H100 80GB PCIe; plus an interactive node with 3\u00d7 GTX980."
+    },
+    {
+      "url": "https://arcc.ist.ucf.edu/",
+      "data_found": "ARCC summary: Newton has 42 V100 GPUs (21 nodes) and H100 GPUs split as 58 H100 across 29 nodes plus 32 H100 across 4 nodes (total 90 H100)."
+    },
+    {
+      "url": "https://rci.research.ucf.edu/resource/newton/",
+      "data_found": "RCI resource page: Newton cluster has 42 V100 GPUs and 90 H100 GPUs."
+    },
+    {
+      "url": "https://rci.research.ucf.edu/fall-2024-arcc-downtime-completed/",
+      "data_found": "Announcement (Dec 12, 2024): ARCC installed four new 8-GPU (H100) nodes on Newton."
+    },
+    {
+      "url": "https://www.cass.eecs.ucf.edu/facilities/",
+      "data_found": "CASS EECS lab GPU Cluster: nine rack servers, each with four NVIDIA GeForce GTX Titan XP GPU cards."
+    },
+    {
+      "url": "https://www.cs.ucf.edu/accreditation-2/",
+      "data_found": "Student enrollment: 3950 undergrad, 284 grad, 164 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 3950,
+    "grad_cs_count": 284,
+    "phd_cs_count": 164,
+    "year": "AY 2024-25 (Fall 2024 enrollment/headcount)",
+    "source_url": "https://www.cs.ucf.edu/accreditation-2/",
+    "notes": "From UCF Department of Computer Science -> Accreditation page. In the tables labeled (1) 'Undergraduate Fall Enrollment and Annual Bachelor's Degrees Granted' the row for Academic Year 2024-25 shows 'Computer Science B.S.' Fall Enrollment = 3950. (2) In 'Master's Fall Enrollment and Annual Master's Degrees Granted' the row for Academic Year 2024-25 shows 'Computer Science M.S.' Fall Enrollment = 284 (masters-only). (3) In 'Doctoral Fall Enrollment and Annual Doctoral Degrees Granted' the row for Academic Year 2024-25 shows 'Computer Science Ph.D.' Fall Enrollment = 164. Page does not display a visible 'last updated' date."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 90,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 42,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA GeForce GTX Titan XP",
+        "count": 36,
+        "note": "CASS EECS lab GPU Cluster: 9 servers \u00d7 4 Titan XP per server"
+      },
+      {
+        "model": "NVIDIA GTX980",
+        "count": 3,
+        "note": "ARCC Newton interactive visualization node: triple GTX980"
+      }
+    ],
+    "source_url": "https://arcc.ist.ucf.edu/index.php/resources/newton/about-newton",
+    "notes": "Clusters found with GPU specs:\n\n1) UCF ARCC Newton GPU cluster:\n- V100 16GB: 10 nodes \u00d7 2 GPUs/node = 20 V100\n- V100 32GB: 11 nodes \u00d7 2 GPUs/node = 22 V100\n  => v100_count total = 20 + 22 = 42\n- H100 80GB PCIe: 29 nodes \u00d7 2 GPUs/node = 58 H100\n- H100 80GB PCIe: 4 nodes \u00d7 8 GPUs/node = 32 H100\n  => h100_pcie_count total = 58 + 32 = 90\n- Also mentioned (not in requested model fields): 1 interactive visualization node with 3 \u00d7 GTX980\n\n2) UCF CASS EECS lab GPU Cluster (departmental/lab, not ARCC):\n- Titan XP: 9 servers \u00d7 4 GPUs/server = 36 Titan XP\n\nNo UCF clusters with H200, A100 (40/80GB), P100, A6000, L40S, B100/B200, GH200, or A40 were found in the provided searches above. Also, no UCF cluster named 'Sherlock' was found in these results (the well-known 'Sherlock' GPU cluster appears to be at Stanford, not UCF), so no 'Sherlock' estimation was applied."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

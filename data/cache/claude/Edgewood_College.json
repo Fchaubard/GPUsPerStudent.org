@@ -1,0 +1,45 @@
+{
+  "university_name": "Edgewood College",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.edgewood.edu/academics/programs/computer-information-systems/",
+      "data_found": "Edgewood University offers a Bachelor of Science in Computer Information Systems (CIS) degree with concentrations in cybersecurity, data science, and web software development."
+    },
+    {
+      "url": "https://datausa.io/profile/university/edgewood-college",
+      "data_found": "Total enrollment at Edgewood College in 2023: 2,001 students. Full-time enrollment: 1,602, part-time enrollment: 399."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": -1,
+    "grad_cs_count": -1,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://www.edgewood.edu/academics/programs/computer-information-systems/",
+    "notes": "Edgewood College offers a Computer Information Systems (CIS) program, not a traditional Computer Science program. No specific enrollment data found for CIS students. The college does not appear to offer PhD programs in computer-related fields. Total university enrollment is approximately 2,001 students (2023). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.edgewood.edu/academics/programs/computer-information-systems/",
+    "notes": "No information found about GPU clusters, HPC resources, or research computing infrastructure at Edgewood College. The institution appears to be a small liberal arts college focused primarily on undergraduate education without significant computational research facilities. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Edgewood College is a small private liberal arts institution with approximately 2,000 total students. The college offers a Computer Information Systems program rather than traditional Computer Science. No evidence found of GPU computing resources or HPC infrastructure. Unable to find specific enrollment numbers for computer-related programs."
+}

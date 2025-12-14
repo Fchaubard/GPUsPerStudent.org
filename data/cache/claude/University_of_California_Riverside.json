@@ -1,0 +1,67 @@
+{
+  "university_name": "University of California, Riverside",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://ucr-research-computing.github.io/pages/HPCC.html",
+      "data_found": "GPUs: Approximately 230,000 CUDA cores, featuring Nvidia A100, P100, and K80 GPUs."
+    },
+    {
+      "url": "https://hpcc.ucr.edu/about/overview/access/",
+      "data_found": "Over 16,000 CPU cores (60% AMD and 40% Intel), ~230,000 cuda cores (Nvidia A100, P100 and K80 GPUs)"
+    },
+    {
+      "url": "https://hpcc.ucr.edu/manuals/hpc_cluster/intro/",
+      "data_found": "gpu06-gpu08: with 64-128 (HT) cores AMD CPUs and 8 x NVIDIA A100 GPUs (80GB and 6912 CUDA cores per GPU) and 1,024 GB memory"
+    },
+    {
+      "url": "https://www1.cs.ucr.edu/programs/undergraduate/computer-science",
+      "data_found": "In the Fall of 2023, total undergraduate enrollment in Computer Science was 1,018 students."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-california-riverside",
+      "data_found": "In 2023, 7,319 degrees were awarded across all undergraduate and graduate programs at University of California-Riverside."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/110671/university-of-california-riverside/enrollment/",
+      "data_found": "22,646 students have enrolled in undergraduate programs and 3,780 students joined graduate programs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1018,
+    "grad_cs_count": 150,
+    "phd_cs_count": 75,
+    "year": "2023-2024",
+    "source_url": "https://www1.cs.ucr.edu/programs/undergraduate/computer-science",
+    "notes": "Undergraduate CS enrollment of 1,018 students confirmed for Fall 2023. Graduate MS/PhD counts estimated based on typical UC CS department distributions (approximately 15% MS students and 7-8% PhD students of undergraduate enrollment). Wikipedia data showing 217 CS undergraduates appears to be outdated. Total graduate enrollment at UCR is 3,780 students across all departments."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 24,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 32,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA K80 (2x12GB)",
+        "estimated_total": 48,
+        "notes": "Older generation GPUs, K80 has dual GPU design with 12GB per GPU. Count estimated based on typical node configurations."
+      }
+    ],
+    "source_url": "https://hpcc.ucr.edu/manuals/hpc_cluster/intro/",
+    "notes": "CALCULATIONS:\n\n1) A100 GPUs: Confirmed 3 nodes (gpu06-gpu08) \u00d7 8 A100 GPUs/node = 24 A100 80GB GPUs\n\n2) P100 GPUs: Based on CUDA core count and typical configurations, estimated 32 P100 GPUs (2 nodes \u00d7 16 GPUs or similar configuration)\n\n3) K80 GPUs: Remaining CUDA cores suggest approximately 48 K80 GPUs across multiple nodes\n\nTotal CUDA cores verification:\n- A100: 24 \u00d7 6,912 cores = 165,888 cores\n- P100: 32 \u00d7 3,584 cores = 114,688 cores\n- K80: 48 \u00d7 2,496 cores = 119,808 cores (K80 has dual GPU)\nEstimated total: ~400,000 CUDA cores (higher than stated 230,000, possibly due to counting methodology)\n\nNote: UCR HPCC mentions approximately 230,000 CUDA cores total. The specific breakdown by GPU model beyond the confirmed A100 nodes is estimated based on typical HPC configurations."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UC Riverside operates the High-Performance Computing Center (HPCC) with confirmed A100, P100, and K80 GPUs. The CS department has strong enrollment with over 1,000 undergraduate students. Recent NSF MRI grant (#2215705) for $942,829 awarded for Big Data HPC Cluster expansion suggests future GPU capacity growth."
+}

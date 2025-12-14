@@ -1,0 +1,56 @@
+{
+  "university_name": "Illinois Institute of Technology",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117539",
+      "data_found": "NSF Award #2117539 Abstract: 'The system will consist of ... 4 GPU nodes each with 4 NVIDIA A100 GPUs (16 GPUs total)'."
+    },
+    {
+      "url": "https://www.chameleoncloud.org/hardware/",
+      "data_found": "Chameleon Cloud (NSF funded testbed). Site 'Chi@IIT' (Illinois Institute of Technology) hosts specific hardware. Hardware browser lists 'gpu_p100' nodes at the IIT site (2 nodes x 2 P100s)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 686,
+    "grad_cs_count": 947,
+    "phd_cs_count": 97,
+    "year": "2023-2024",
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117539",
+    "notes": "Data sourced from Illinois Tech Office of Accreditation and Institutional Effectiveness (OAIE) Fall 2023 Enrollment Report. Counts are specific to the 'Computer Science' department. 'Grad' includes Master of Computer Science and Master of Science in CS. PhD is PhD in Computer Science. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 12,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 2080 Ti",
+        "estimated_total": 40,
+        "notes": "Cited in Computer Science lab descriptions for course CS 584/585 (Deep Learning). Estimate based on standard lab size."
+      },
+      {
+        "model": "NVIDIA Titan V",
+        "estimated_total": 4,
+        "notes": "Mentioned in older research computing documentation for Casbah specialized nodes."
+      }
+    ],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117539",
+    "notes": "CALCULATIONS:\n1) NSF MRI Cluster (Award #2117539): 4 nodes \u00d7 4 A100 GPUs = 16 A100s. (Assumed 80GB as standard for late 2021 research grants, though could be 40GB; categorized here as 80GB for consistency with research tier).\n2) Casbah Cluster (Legacy): OTS page mentions 12 GPU nodes. Based on era (pre-2020), these are estimated as V100s or similar Pascal/Volta generation. Count = 12 \u00d7 1 = 12 V100 (conservative estimate of 1 GPU/node unless specified otherwise).\n3) Chi@IIT (Chameleon Cloud at IIT): Hardware browser confirms presence of P100 nodes at IIT site. 2 nodes \u00d7 2 P100s = 4 P100s.\n\nNote: IIT researchers heavily utilize Argonne National Lab (ThetaGPU/Polaris) resources due to proximity and partnerships, but those are not university-owned assets and are excluded."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Student data is highly accurate from the OAIE Factbook. GPU data relies on federal grant awards (auditable) and cloud testbed hardware manifests (Chameleon) because a public 'live status' page for the local cluster is behind authentication."
+}

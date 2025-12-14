@@ -1,0 +1,57 @@
+{
+  "university_name": "University of Pennsylvania",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-pennsylvania",
+      "data_found": "2022 Degree Completion Data: Computer and Information Sciences (288 Bachelors, 489 Masters, 29 Doctorates)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1152,
+    "grad_cs_count": 978,
+    "phd_cs_count": 160,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-pennsylvania",
+    "notes": "Exact enrollment by major is not provided on the public SEAS website. Counts are estimated using verifiable IPEDS/DataUSA degree completion data scaled by program duration: Undergrad (288 degrees \u00d7 4 years = 1,152); Masters (489 degrees \u00d7 2 years = 978, note: high count likely due to MCIT Online program); PhD (29 degrees \u00d7 5.5 years = ~160)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 34,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 2080 Ti",
+        "estimated_total": 21,
+        "notes": "Located in SEAS CETS student grid (gpunode-1 through gpunode-28 range)."
+      },
+      {
+        "model": "NVIDIA A100 40GB",
+        "estimated_total": -1,
+        "notes": "Confirmed present in Wharton HPCC 'gpu-h' partition, but exact node count is not public."
+      },
+      {
+        "model": "NVIDIA V100",
+        "estimated_total": -1,
+        "notes": "Additional V100s confirmed in PMACS and Wharton clusters, but exact counts are not public."
+      }
+    ],
+    "source_url": "https://datausa.io/profile/university/university-of-pennsylvania",
+    "notes": "GPU counts are highly fragmented at Penn between Medicine (CUBIC/PMACS), Wharton, and Engineering. The only verifiable, specific counts found are for the CUBIC cluster (16x A100 80GB, 34x V100). Wharton and PMACS acknowledge A100/V100 ownership but do not publish node lists publicly. Counts listed here represent the verifiable minimum floor. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Penn lacks a centralized 'Research Computing' inventory page similar to Princeton or Stanford. Resources are siloed by school (Medicine, Business, Engineering). Data collected relies on the specific node manifests of the CUBIC cluster (Medicine/Engineering) and student grids, likely undercounting the total hidden capacity in Wharton and PMACS."
+}

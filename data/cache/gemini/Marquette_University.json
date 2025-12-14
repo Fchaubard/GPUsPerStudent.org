@@ -1,0 +1,41 @@
+{
+  "university_name": "Marquette University",
+  "data_retrieved_date": "2025-05-23",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/marquette-university",
+      "data_found": "2022 Degrees Awarded: Computer Science (Bachelors): 67; Computer Science (Masters): 44; Computer & Information Sciences (Doctoral): 2."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 268,
+    "grad_cs_count": 66,
+    "phd_cs_count": 20,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/marquette-university",
+    "notes": "Exact enrollment headcounts are not published on the Marquette CS department public website. Counts are estimated from DataUSA/IPEDS 'Degrees Awarded' (2022) data. Undergrad CS estimated as 67 degrees * 4 years = 268. Grad (MS) estimated as 44 degrees * 1.5 years = 66. PhD estimated based on program start (2019) and 2 degrees awarded in 2022; assuming ~5 year duration and steady growth, approx 20 students in residence."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 32,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/marquette-university",
+    "notes": "Primary research cluster is 'Raj'. Specifications list 16 GPU nodes, each equipped with 2x NVIDIA Tesla V100 (32GB). Total: 16 * 2 = 32 V100 GPUs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Marquette's primary HPC resource 'Raj' (acquired ~2021) is V100-based. No public evidence of H100 or A100 clusters was found in standard research computing documentation."
+}

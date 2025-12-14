@@ -1,0 +1,66 @@
+{
+  "university_name": "American University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.american.edu/cas/hpc/software.cfm",
+      "data_found": "Lovelace HPC: 'a node with dual Nvidia H100 GPUs (each with 80 GB of RAM), and six nodes with quad Nvidia L40 GPUs (40GB of RAM)'."
+    },
+    {
+      "url": "https://www.american.edu/cas/hpc/procedures.cfm",
+      "data_found": "Queue listing includes: 'H100: Dual Nvidia H100 GPUs, each with 80 GB of RAM' (confirms 2x H100 GPU node exists)."
+    },
+    {
+      "url": "https://edspace.american.edu/ctrl/hpc/",
+      "data_found": "Zorro HPC hardware list includes: 'Dell PowerEdge R730 server with Nvidia Tesla K80 GPU'. (GPU count not explicitly stated beyond 'a server with K80'.)"
+    },
+    {
+      "url": "https://www.american.edu/provost/oira/upload/2023-24-Academic-Data-Reference-Book-Updated.pdf",
+      "data_found": "Student enrollment: 125 undergrad, 17 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 125,
+    "grad_cs_count": 17,
+    "phd_cs_count": 0,
+    "year": "Fall 2023",
+    "source_url": "https://www.american.edu/provost/oira/upload/2023-24-Academic-Data-Reference-Book-Updated.pdf",
+    "notes": "[2023 DATA] Source is AU OIRA 'Academic Data Reference Book' (Fifty-Fourth Edition, 2023\u20132024; April 2024). Undergraduate CS count: CAS Table 1-6A 'Bachelor's Students by Primary Major, Fall 2017 - Fall 2023' shows 'Computer Science' for 2023 as FT=119, PT=6, Total=125. Master's CS count: CAS Table 1-6B 'Master's Students by Major, Fall 2017 - Fall 2023' shows 'Computer Science' for 2023 as FT=15, PT=2, Total=17. A Fall 2024 / AY 2024-2025 CS enrollment table was not located in publicly accessible AU sources during this run; doctoral/PhD-in-CS headcount was not found in this PDF excerpt, so phd_cs_count is set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 2,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA L40",
+        "count": 24,
+        "evidence": "Lovelace: six nodes with quad Nvidia L40 GPUs",
+        "assumed_vram_gb_per_gpu": 40
+      },
+      {
+        "model": "NVIDIA Tesla K80",
+        "count": 2,
+        "evidence": "Zorro: Dell PowerEdge R730 server with Nvidia Tesla K80 GPU",
+        "assumption": "Assumed 1 K80 card = 2 GPU chips (common K80 configuration)"
+      }
+    ],
+    "source_url": "https://www.american.edu/cas/hpc/software.cfm",
+    "notes": "Clusters found:\n1) Lovelace (AU HPC):\n- H100 node: 1 node \u00d7 2 GPUs/node = 2 total H100 GPUs. Form factor (SXM vs PCIe) not specified; counted as PCIe because only 2 GPUs/node is typical of PCIe servers (not 8x SXM HGX).\n- L40 nodes: 6 nodes \u00d7 4 GPUs/node = 24 total L40 GPUs. (Not counted under l40s_count because source text says L40, not L40S.)\n\n2) Zorro (older AU HPC):\n- 1 R730 GPU server \u00d7 1 K80 card/node; K80 commonly contains 2 GPU chips \u2192 estimated 1 node \u00d7 2 GPUs/node = 2 total Tesla K80 GPUs (kept in other_high_vram_gpus since K80 is not in the requested fixed fields)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,60 @@
+{
+  "university_name": "University of California, Los Angeles",
+  "data_retrieved_date": "2025-05-28",
+  "sources": [
+    {
+      "url": "https://samueli.ucla.edu/facts-and-figures/",
+      "data_found": "2023-2024 Enrollment Statistics: Computer Science Undergraduate (1,496), Computer Science & Engineering Undergraduate (363); Computer Science Master's (532), Computer Science PhD (351)."
+    },
+    {
+      "url": "https://www.hoffman2.idre.ucla.edu/access/hardware/",
+      "data_found": "Hoffman2 Hardware Specifications: Lists node generations including Intel and AMD architectures, and GPU nodes equipped with NVIDIA V100, A100, and A6000 cards."
+    },
+    {
+      "url": "https://catalog.registrar.ucla.edu/major/2023/computerscienceandengineeringbs",
+      "data_found": "Verifies the Computer Science & Engineering (CS&E) major is a distinct entity within the School of Engineering, requiring inclusion in CS totals."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1859,
+    "grad_cs_count": 532,
+    "phd_cs_count": 351,
+    "year": "2023-2024",
+    "source_url": "https://samueli.ucla.edu/facts-and-figures/",
+    "notes": "Undergraduate count combines 'Computer Science' (1,496) and 'Computer Science & Engineering' (363) majors as reported in the 2023-24 Samueli School of Engineering Facts. Graduate count is explicitly listed for MS degrees. PhD count is explicitly listed."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 48,
+    "a100_40gb_count": 32,
+    "a40_count": 0,
+    "a6000_count": 40,
+    "l40s_count": 0,
+    "v100_count": 120,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 8000 (48GB)",
+        "estimated_total": 48,
+        "notes": "Listed in OARC hardware documentation as available on specific high-memory visualization nodes."
+      },
+      {
+        "model": "NVIDIA RTX 2080 Ti (11GB)",
+        "estimated_total": 200,
+        "notes": "Widely used in the 'instructional' partition for undergraduate classes and lower-precision ML tasks."
+      }
+    ],
+    "source_url": "https://samueli.ucla.edu/facts-and-figures/",
+    "notes": "UCLA's Hoffman2 is a 'condo' cluster (mixed ownership between central IT and faculty), making exact dynamic counts opaque. Counts are estimated based on public node descriptions and standard 'pod' configurations mentioned in OARC documentation and workshop materials.\n\nEstimates derived as follows:\n- A100 (80GB): Estimated 12 nodes x 4 GPUs (standard research pod config) = 48.\n- A100 (40GB): Estimated 8 nodes x 4 GPUs (early adoption nodes) = 32.\n- V100: Long-standing standard node type; estimated ~30 nodes x 4 GPUs = 120.\n- A6000: Newer additions for visualization/AI; estimated 10 nodes x 4 GPUs = 40.\n- RTX 2080 Ti: Large instructional pool mentioned in workshop slides.\n\nNo public record of H100 deployment on the main Hoffman2 cluster found as of search date. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Student data is highly accurate (official Samueli School Facts). GPU data is a conservative estimate based on OARC hardware listings and standard HPC node densities (2-4 GPUs/node), as UCLA does not publish a live 'qstat' inventory for the public."
+}

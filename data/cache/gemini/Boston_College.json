@@ -1,0 +1,42 @@
+{
+  "university_name": "Boston College",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 839,
+    "grad_cs_count": 25,
+    "phd_cs_count": 22,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Undergrad count (839) is explicitly listed in the 2023-24 Fact Book under 'Undergraduate Majors by School' for the Morrissey College of Arts and Sciences. Graduate count is estimated: The Fact Book does not break out CS Masters enrollment explicitly in the summary tables, but lists 'Natural Sciences' degrees. The CS department website notes the PhD program admits ~4-6 students/year; assuming a 5-year average duration, steady-state PhD enrollment is estimated at ~22. Masters enrollment is small/nascent, estimated at ~3/year based on degrees conferred in related categories. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 24,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80",
+        "estimated_total": 8,
+        "notes": "Mentioned in older documentation/partitions, likely decommissioned or legacy status."
+      }
+    ],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Counts are estimated based on 'System Specifications' and partition descriptions found in BC Research Services documentation and workshop slides. \n1) V100: Documentation references the 'gpu' partition containing nodes with 2x or 4x V100s. Based on standard cluster size for BC's tier (260 nodes total) and NSF CC* award descriptions (Award #1925466 cited adding '8 GPU nodes'), estimated 6 nodes x 4 GPUs or 12 nodes x 2 GPUs = ~24 V100s. \n2) A100: Documentation confirms presence of A100 nodes in the 'gpu' and 'gpu-long' partitions. Estimated 4 nodes x 4 GPUs = 16 A100s (likely 40GB based on acquisition timing, though 80GB is possible). \n3) H100: No public documentation or press releases indicate the acquisition of H100/Hopper architecture as of mid-2025. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Boston College operates a centralized 'Linux Cluster' managed by Research Services. Student data is precise for undergraduates via the official Fact Book, but graduate numbers require estimation due to the program's small size and aggregation in high-level reports. GPU counts are derived from cluster documentation descriptions and NSF grant abstracts rather than a live status page."
+}

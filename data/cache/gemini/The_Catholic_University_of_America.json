@@ -1,0 +1,45 @@
+{
+  "university_name": "The Catholic University of America",
+  "data_retrieved_date": "2025-05-28",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1920079",
+      "data_found": "NSF Award #1920079 (Active start 2019): 'MRI: Acquisition of a High Performance Computing Cluster... The system includes 1 head node, 16 compute nodes, 2 GPU nodes with NVIDIA V100 GPUs, and 1 storage node.'"
+    },
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=Catholic+University+of+America&s=all&id=131283",
+      "data_found": "NCES College Navigator (2023 Data): Computer Science completers - 32 Bachelor's, 11 Master's, 2 Doctoral degrees."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 144,
+    "grad_cs_count": 22,
+    "phd_cs_count": 12,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Catholic+University+of+America&s=all&id=131283",
+    "notes": "Exact enrollment headcounts by major are not published in the CUA Fact Book. Counts are estimated based on verifiable IPEDS/NCES 'Completers' data (Degrees Awarded) for Computer Science. Undergrad estimate: 32 degrees/year \u00d7 4.5 years \u2248 144. Grad (MS) estimate: 11 degrees/year \u00d7 2 years \u2248 22. PhD estimate: 2 degrees/year \u00d7 6 years \u2248 12."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1920079",
+    "notes": "Primary HPC resource is the cluster funded by NSF MRI Award #1920079 (started Oct 2019). The award specifies '2 GPU nodes with NVIDIA V100 GPUs'. The exact count of GPUs per node is not publicly detailed in open documentation, but standard configuration for this grant size ($300k total for cluster) is typically 2x GPUs per GPU node. Total calculated as: 2 nodes \u00d7 2 V100 = 4 V100s. No evidence of newer H100/A100 acquisitions found in public records."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "CUA operates a modest HPC environment consistent with its size and research classification. The primary verifiable GPU resource is the V100-based cluster from a 2019 NSF grant. Student counts are derived from federal completion data as the university does not publish granular enrollment reports."
+}

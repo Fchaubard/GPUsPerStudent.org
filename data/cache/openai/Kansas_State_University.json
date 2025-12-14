@@ -1,0 +1,65 @@
+{
+  "university_name": "Kansas State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://gp-engine.umsystem.edu/updates",
+      "data_found": "Mentions 'October 4, 2023 - GP-ENGINE node delivered to KSU (Dan Andresen)' and describes GP-ENGINE nodes as '4x A100, with 320 GB vRAM' (interpreted as 4x A100 80GB)."
+    },
+    {
+      "url": "https://www.k-state.edu/cnap/research-cores/ni-core.html",
+      "data_found": "Mentions Beocat includes machines 'with multiple nVidia A100 GPUs' but does not provide a count; also mentions NI Core has 'four nVidia GTX 2080 Ti' (not included in requested GPU categories)."
+    },
+    {
+      "url": "https://engg.k-state.edu/about/data/undergrad-enrollment/",
+      "data_found": "Student enrollment: 356 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 356,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://engg.k-state.edu/about/data/undergrad-enrollment/",
+    "notes": "Kansas State University Carl R. Ice College of Engineering page titled \"Undergraduate Fall Enrollment\" includes a table with columns 2021\u20132025. In the row labeled \"Computer Science\", the value under the \"2024\" column is 356 (source noted on the page as \"20th day reports\"). I was not able to find any publicly accessible 2024/Fall 2024 CS graduate (M.S. only) and Ph.D. headcount by program/major; K-State DAIR Quick Facts PDFs provide overall graduate totals and college-level totals but do not provide CS-specific M.S. vs Ph.D. headcounts by major, and the linked \"20th day reports\" area appears to require K-State eID login."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 4,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 2,
+    "l40s_count": 11,
+    "v100_count": 0,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA GeForce RTX 3090 (24GB, count estimated)",
+        "count": 8,
+        "notes": "Warlocks[16-17] lists '3-4 x GTX 3090' per node; estimated as 4 per node (2 nodes). Actual likely 6-8 total."
+      },
+      {
+        "model": "NVIDIA RTX 4500 (VRAM not stated on source page)",
+        "count": 1,
+        "notes": "Warlocks[31] lists '1 x nVidia RTX 4500'."
+      },
+      {
+        "model": "NVIDIA L4 (24GB typical, VRAM not stated on source page)",
+        "count": 2,
+        "notes": "Warlocks[32] and Warlocks[33] each list '1 x nVidia L4'."
+      }
+    ],
+    "source_url": "https://gp-engine.umsystem.edu/updates",
+    "notes": "Clusters found and calculations (nodes \u00d7 GPUs_per_node):\n\n1) Beocat (from Compute_Nodes):\n- L40S: Warlocks[25-26] => 2 nodes \u00d7 4 = 8; Warlocks[38] => 1 node \u00d7 3 = 3; total L40S = 11.\n- RTX A6000: Wizards[32] => 1 node \u00d7 2 = 2; total A6000 = 2.\n- P100: Wizards[20-21] => 2 nodes \u00d7 2 = 4; total P100 = 4 (CUDA page explicitly calls these P100).\n\n2) GP-ENGINE node at KSU (from GP-ENGINE updates):\n- A100: 1 node \u00d7 4 = 4. Model/memory inference: '4x A100, with 320 GB vRAM' => 80GB each, so counted as A100 80GB = 4.\n\nNo K-State sources found indicating any H100/H200/V100/A40 deployments on Beocat as of the cited pages; therefore those totals are set to 0. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

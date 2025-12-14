@@ -1,0 +1,61 @@
+{
+  "university_name": "University of Rhode Island",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://docs.unity.uri.edu/documentation/cluster_specs/gpu_summary/",
+      "data_found": "Unity (URI partition 'uri-gpu'): L40S Total GPUs=16 (4 GPUs/node); A100 80GB Total GPUs=24 (4 GPUs/node); H100 80GB Total GPUs=4 (4 GPUs/node)."
+    },
+    {
+      "url": "https://its.uri.edu/research-computing/andromeda-specs/",
+      "data_found": "Andromeda: GPU node (x2) has A100 (x2, 40GB); GPU node (x1) has A100 (x4, 40GB); plus RTX A4000 (x2, 16GB) on another node."
+    },
+    {
+      "url": "https://its.uri.edu/research-computing/seawulf-specs/",
+      "data_found": "Seawulf: GPU node (x1) has V100 (x8)."
+    },
+    {
+      "url": "https://its.uri.edu/research-computing/uri-mghpcc/",
+      "data_found": "MIT SuperCloud access: '200+ nodes, each with ... 2 Nvidia V100 GPGPUs' (exact node count not specified)."
+    },
+    {
+      "url": "https://docs.nvidia.com/dgx/archives/dgx1-user-guide/introduction-to-dgx1.html",
+      "data_found": "DGX-1 can be configured with 8 GPUs; includes an option of 'Volta 32 GB Tesla V100' per GPU."
+    },
+    {
+      "url": "https://web.uri.edu/ir/data/enrollment-data/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://web.uri.edu/ir/data/enrollment-data/",
+    "notes": "Searched for URI Computer Science (CS) student enrollment/major headcount specifically for Fall 2024 or AY 2024-2025. URI Office of Institutional Research has a \u201cCount of Majors\u201d dashboard (Power BI) that appears to be the correct/current source for major headcounts, but the embedded Power BI report content (needed to extract the CS major counts for Fall 2024 and to separate MS vs PhD) was not accessible in this environment. The only downloadable \u2018Head Count of Majors (PDF/XLSX)\u2019 files linked on the same IR Enrollment Data page are explicitly limited to Fall 2006\u2013Fall 2020 and therefore were rejected per your date rules. URI\u2019s IR site does provide a 2024-25 Common Data Set PDF link, but CDS does not provide CS major enrollment counts split into undergrad/MS/PhD in a way that meets your request. Result: no acceptable 2024-2025 or Fall 2024 CS enrollment counts could be verified from an explicit 2024+ page, so all counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 4,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 24,
+    "a100_40gb_count": 8,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 16,
+    "v100_count": 416,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://docs.unity.uri.edu/documentation/cluster_specs/gpu_summary/",
+    "notes": "Clusters found for URI research computing / AI infrastructure and totals computed as nodes\u00d7GPUs_per_node:\n\n1) Unity (URI-owned/priority partition 'uri-gpu' on Unity):\n- L40S: (16 total GPUs) = 4 nodes \u00d7 4 GPUs/node\n- A100 80GB: (24 total GPUs) = 6 nodes \u00d7 4 GPUs/node\n- H100 80GB: (4 total GPUs) = 1 node \u00d7 4 GPUs/node\nH100 SXM vs PCIe not explicitly stated in Unity docs; estimated as PCIe because it is a 4-GPU node (set all 4 to h100_pcie_count).\n\n2) Andromeda (on-campus URI research cluster):\n- A100 40GB: (2 nodes \u00d7 2 GPUs/node) + (1 node \u00d7 4 GPUs/node) = 4 + 4 = 8\n(Also present but not counted in requested fields: RTX A4000 x2, 16GB.)\n\n3) Seawulf (education cluster):\n- V100: 1 node \u00d7 8 GPUs/node = 8\n\n4) MIT SuperCloud (external resource accessible to URI):\n- V100: 200+ nodes \u00d7 2 GPUs/node => 400+ V100. Used conservative estimate of 200 nodes => 400 V100.\n\n5) URI AI Lab DGX-1:\n- DGX-1 total GPU memory stated as 256GB; estimated 8\u00d7V100 32GB = 8 V100.\n\nGrand totals (requested fields):\n- H100: 4 (counted as PCIe)\n- L40S: 16\n- A100 80GB: 24\n- A100 40GB: 8\n- V100: 400 (SuperCloud est.) + 8 (Seawulf) + 8 (DGX-1 est.) = 416\nNo URI sources found mentioning H200, P100, RTX A6000, or B100/B200/GH200. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

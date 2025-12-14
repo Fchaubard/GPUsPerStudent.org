@@ -1,0 +1,45 @@
+{
+  "university_name": "Yeshiva University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://www.yu.edu/katz/programs/graduate/artificial-intelligence",
+      "data_found": "Program Description: Mentions students build and deploy AI applications using 'cloud-based architecture' and 'modern AI tools', implying reliance on cloud resources rather than a central on-premise supercomputer."
+    },
+    {
+      "url": "https://datausa.io/profile/university/yeshiva-university",
+      "data_found": "2022 Degree Completions: Computer & Information Sciences degrees awarded: 47 Bachelor's degrees, 97 Master's degrees. No Doctoral degrees listed for CS."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 188,
+    "grad_cs_count": 146,
+    "phd_cs_count": 0,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/yeshiva-university",
+    "notes": "Yeshiva University does not publish a live enrollment dashboard for specific majors. Counts are estimated based on the most recent verifiable degree completion data from IPEDS/DataUSA (2022). Undergrad estimate: 47 Bachelor's degrees awarded in Computer & Info Sciences \u00d7 4 years = 188 students. Grad estimate: 97 Master's degrees awarded (reflecting strong enrollment in Katz School MS AI/Data programs) \u00d7 1.5 years (typical duration) = ~146 students. No Computer Science PhD program is listed in the academic catalog; YU offers PhDs in Math and sciences, but CS is Master's focused."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.yu.edu/katz/programs/graduate/artificial-intelligence",
+    "notes": "Exhaustive search of Yeshiva University and Katz School of Science and Health websites (including 'research computing', 'HPC', and 'cluster' queries) yields no evidence of a centralized, university-owned HPC cluster with verifiable GPU specifications (e.g., node counts, GPU models). The curriculum and research descriptions explicitly emphasize 'cloud-based architecture' and 'cloud platforms' (AWS/GCP) rather than on-premise supercomputing infrastructure. While individual labs (e.g., Distributed Systems Lab) mention 'servers', no auditable hardware list exists."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "YU differs from large research universities (like Stanford) in that it does not appear to maintain a central Research Computing Center with a named supercomputer. Compute resources are decentralized to specific labs or offloaded to commercial cloud providers."
+}

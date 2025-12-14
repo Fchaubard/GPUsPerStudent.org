@@ -1,0 +1,49 @@
+{
+  "university_name": "University of Montana",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.umt.edu/it/rci/hellgate/resources/",
+      "data_found": "Hellgate Shared Computing Cluster GPU node list shows: hggpu4-[1-12] each with 4x NVIDIA RTX2080Ti; hggpu5-1 with 4x NVIDIA A40; hggpu9-[1-12] each with 4x NVIDIA A4500 Ada gen."
+    },
+    {
+      "url": "https://www.umt.edu/center-biomolecular-structure-dynamics/facilities/computation/equipment.php",
+      "data_found": "Molecular Computation Core Facility lists 'Newton GPU cluster' with two GPU nodes, each with four Nvidia GTX 1080 GPUs."
+    },
+    {
+      "url": "https://www.umt.edu/institutional-research/documents/census-reports-accessible/202470_censusv2.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.umt.edu/institutional-research/documents/census-reports-accessible/202470_censusv2.pdf",
+    "notes": "Searched specifically for University of Montana CS enrollment data for Fall 2024 / AY 2024-2025. Found an official 'Fall 2024 CENSUS Enrollment Report (Census Day 9/18/2024)' PDF, but it only reports overall UM headcount (undergraduate/graduate/law totals) and does NOT provide enrollment by major/department (no Computer Science, MS CS, or PhD CS counts). Checked UM Computer Science department pages (undergraduate and graduate) and they do not list enrollment counts or term-specific headcounts. Attempted to locate major-level enrollment via UM Institutional Research 'Tableau Infogriz Reports' (external Tableau site), but the Tableau content was not accessible in a way that exposed Fall 2024 CS major headcounts. UM Common Data Set page appears to only list older academic years (2017-2018 and earlier), which is rejected per the 2024+ requirement."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 4,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.umt.edu/it/rci/hellgate/resources/",
+    "notes": "Clusters found at University of Montana (UM):\n\n1) Hellgate Shared Computing Cluster (UM IT Research Computing Infrastructure)\n- RTX2080Ti nodes: 12 nodes (hggpu4-1..hggpu4-12) \u00d7 4 GPUs/node = 48 RTX2080Ti (not represented in requested output keys)\n- A40 node: 1 node (hggpu5-1) \u00d7 4 GPUs/node = 4 A40  ==> contributes to a40_count=4\n- A4500 Ada nodes: 12 nodes (hggpu9-1..hggpu9-12) \u00d7 4 GPUs/node = 48 A4500 Ada (not represented in requested output keys)\n\n2) Newton GPU cluster (Molecular Computation Core Facility)\n- 2 nodes \u00d7 4 GPUs/node = 8 GTX 1080 (not represented in requested output keys)\n\nNo UM sources found that document any H100/H200/A100/V100/P100/A6000/L40s GPUs in UM-owned clusters (as opposed to cloud)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

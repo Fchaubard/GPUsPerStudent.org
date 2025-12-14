@@ -1,73 +1,150 @@
-# GPUs Per Student Initiative (gpusperstudent.org)
+# GPUs Per Student (gpusperstudent.org)
 
-This project tracks and analyzes the availability of GPUs relative to the student population in Computer Science departments across US universities. 
+This project tracks GPU availability relative to CS student population across US universities.
 
-# Why
+## Why This Exists
 
-After [this](https://x.com/FrancoisChauba1/status/1997095264923078856) tweet went viral, it was clear to me that more effort on this analysis would be valuable to the world. Students are clearly unhappy and going to bigger labs to get their research done because of access to GPUs and some faculty are clearly unaware of the issue. Students argued we should include the full university, faculty argued we shouldnt include any undergrads, faculty argued we should include external compute resources (NCSU, Oak Ridge, etc), students argued that we shouldnt include anything that requires a tedious grant process, etc. So I have tried to toe the line to try to make everyone happy and make it as fair as possible. 
+After [this tweet](https://x.com/FrancoisChauba1/status/1997095264923078856) went viral, it was clear more effort on this analysis would be valuable. Students are unhappy and leaving for bigger labs because they cannot get GPU access. Some faculty are unaware of the problem. 
 
-The goal is to provide a standardized metric ("GPUs per Student") to quantify access to compute for research and education. If we want more AI talent, students need GPUs to learn and try stuff. If we want more research, students need minimally sufficient GPUs to conduct research (at least 1 modern GPU!). We want to open this up to the world to shine light on the issue of GPU availability across the US which we have seen be suboptimal. 
+There was a lot of debate:
+- Students: Include only university-owned resources, not grant-based access
+- Faculty: Include external compute (NCSA, Oak Ridge, etc)
+- Some said include all students, others said only PhD students
 
-# Dispute Process
-Since this is highly contentious topic as my tweet highlighted, a dispute process is needed. I have made all the analysis, code, and raw data with receipts available in this repo. If you disagree with any of it, you can submit a PR and I will look at it and if valid, I will update your numbers for your university. 
+I tried to find a reasonable middle ground. The goal is to provide a standardized metric ("GPUs per Student") to quantify compute access for research and education. If we want more AI talent, students need GPUs to learn. If we want more research, students need at least one modern GPU.
 
-# GPUs Per Student
+This project shines a light on GPU availability across US universities, which we have seen be suboptimal.
+
+## Dispute Process
+
+This is a contentious topic. All analysis, code, and raw data with receipts are available in this repo. If you disagree with anything, submit a PR and I will review it. If valid, I will update the numbers for your university.
 
 ## Methodology
 
-The analysis focuses on three key metrics:
-1.  **Weighted Student Count**: Weighted sum of CS students (0.45 * Undergrad + 0.7 * Grad + 0.9 * PhD) who would benefit from access to GPUs in general. These weights comes from surveys done at Stanford on who would like access, and would admittedly vary from university to university and from time to time. While we could arguably add all of EE, maybe all of eng, and some of bio, we limit it to CS dept only. 
-2.  **H100-equivalent GPU Resources**: Count of university-owned, generally accessible to degree program students, high-performance GPUs (H100, A100, etc.), weighted by market value relative to an H100 reference price. For example, if a university has 10 A100-80G (retail price $9,000 lets say) and no H100s (retail price $40,000 lets say), then we will compute the estimated H100-equivalent GPUs to be 2.25 H100-equivalent GPUs (or more simply 2.25 GPUs for short). If a university doesnt own GPUs, but does provide $40k of compute credits available to each student per month, then we convert this to 1.14 H100-equivalent GPUs (assuming an H100-hour is $4/hr then 40000/(4*365*24) = 1.14). If a university doesnt own GPUs, but claim they can apply for grants to national labs or cloud providers or NVIDIA Academic Grant Program to access GPUs, this is not provided. If a university has private GPUs that are not accessible to degree program students, and only a separate group such as is the case for Lincoln Labs, these GPUs will NOT be included as they are not available to the students. 
-3.  **GPUs per Student**: The ratio of the H100-equivalent count to the weighted student count.
+Three key metrics:
 
-Data is aggregated monthly via an automated pipeline that queries university resources and enrollment data.
+1. **Weighted Student Count**: Weighted sum of CS students
+   - 0.45 x Undergrad + 0.7 x Grad + 0.9 x PhD
+   - Weights based on who uses GPUs most (surveys done at Stanford)
+   - Limited to CS department only (could arguably include EE, bio, etc)
+
+2. **H100-equivalent GPU Count**: University-owned GPUs accessible to students
+   - Converted to H100 equivalents using market prices
+   - Example: 10 A100-80GB at $15k each = 4.3 H100-equivalents (H100 = $35k)
+   - Excludes: National labs, shared consortiums, grant-based allocations
+   - Excludes: Private GPUs not accessible to students (e.g., Lincoln Labs)
+
+3. **GPUs per Student**: H100-equivalent count / Weighted student count
+
+## What We Exclude (Important!)
+
+These shared/national resources are NOT counted for any university:
+- Ohio Supercomputer Center (OSC) - shared by 2,700 institutions
+- NCAR-Wyoming Supercomputing Center - shared by 575 universities
+- Texas Advanced Computing Center (TACC)
+- San Diego Supercomputer Center (SDSC)
+- Massachusetts Green HPC Center (MGHPCC)
+- DOE Labs (Oak Ridge, Argonne, LBNL/NERSC, etc)
+- MIT Lincoln Labs
+- Cloud allocations (AWS, GCP, Azure)
+- XSEDE/ACCESS allocations
+
+Only resources the university directly owns and operates count.
 
 ## Project Structure
 
-*   `data/`: Contains the core datasets (universities list, GPU prices) and the generated master dataset.
-*   `run_monthly_analysis.py`: Main execution script for data gathering and processing.
-*   `.github/workflows`: Automation configuration for monthly updates.
+```
+GPUsPerStudent/
+├── data/
+│   ├── filtered_national_universities_name_url.csv  # List of 165 universities
+│   ├── gpu_prices.csv                               # GPU market prices
+│   ├── master_data.csv                              # Generated output
+│   └── cache/
+│       ├── ensemble/                                # Raw LLM ensemble results
+│       └── final/                                   # Validated JSON files
+├── web/
+│   ├── index.html                                   # Main website
+│   ├── style.css
+│   └── data/
+│       └── master_data.csv                          # Copy served by website
+├── scripts/
+│   ├── generate_master_data.py                      # Generates CSV from JSONs
+│   └── validate_gpu_data.py                         # Validates GPU/student data
+├── run_monthly_analysis.py                          # Main data collection script
+├── prompt.md                                        # LLM prompt for data collection
+└── prompt_validation.md                             # LLM prompt for validation
+```
 
-## Usage
+## How It Works
 
-To run the analysis locally:
+1. **Data Collection** (`run_monthly_analysis.py`)
+   - Queries 3 LLMs (OpenAI, Claude, Gemini) for each university
+   - Each LLM searches for student enrollment and GPU resources
+   - Results aggregated using highest values with source validation
+   - Output: JSON files in `data/cache/ensemble/`
 
-1.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. **Validation** (`scripts/validate_gpu_data.py`)
+   - Gemini reviews each JSON to filter shared resources
+   - Estimates missing student counts
+   - Output: Validated JSONs in `data/cache/final/`
 
-2.  Set the environment variable for the automated research agent:
-    ```bash
-    export GEMINI_API_KEY="your_key"
-    ```
+3. **CSV Generation** (`scripts/generate_master_data.py`)
+   - Reads validated JSONs
+   - Calculates H100-equivalent counts and GPUs/student
+   - Output: `data/master_data.csv`
 
-3.  Execute the script:
-    ```bash
-    python run_monthly_analysis.py
-    ```
+4. **Website** (`web/`)
+   - Static HTML/JS that reads master_data.csv
+   - Sortable leaderboard with sources
+   - Horizontal bar chart of all universities
+
+## Local Development
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Set API keys
+export GEMINI_API_KEY="your_key"
+export OPENAI_API_KEY="your_key"  
+export ANTHROPIC_API_KEY="your_key"
+
+# Run full ensemble (takes hours)
+python run_monthly_analysis.py --provider ensemble
+
+# Or just regenerate CSV from existing data
+python scripts/generate_master_data.py
+cp data/master_data.csv web/data/
+
+# Run local server
+cd web && python -m http.server 8080
+```
+
+## Deployment
+
+### Netlify Drop (Easiest)
+1. Run `python scripts/generate_master_data.py`
+2. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
+3. Drag the `web` folder onto the page
+4. Done!
+
+## Data Files
+
+Each university has a JSON file in `data/cache/final/` containing:
+- Student counts (undergrad, grad, PhD)
+- GPU counts by type (H100, A100, V100, etc)
+- Source URLs for verification
+- Validation notes explaining any adjustments
+
+## Contributing
+
+PRs welcome! If your university's data is wrong:
+1. Check the JSON file in `data/cache/final/YourUniversity.json`
+2. Submit a PR with corrected data and sources
+3. I will review and merge if valid
 
 ## License
 
-MIT License
+MIT License - Copyright (c) 2025 Francois Chaubard
 
-Copyright (c) 2025 [Francois Chaubard]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this data or software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
+See LICENSE file for details.

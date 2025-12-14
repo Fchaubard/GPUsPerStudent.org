@@ -1,0 +1,67 @@
+{
+  "university_name": "Auburn University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.auburn.edu/hpc/2020_cluster.php",
+      "data_found": "Easley Cluster: 9 Type I GPU nodes with 2x NVIDIA Tesla T4 GPUs; 2 Type II GPU with 4x NVIDIA Tesla T4 GPUs; Total GPU nodes = 11 nodes."
+    },
+    {
+      "url": "https://eng.auburn.edu/admin/erad/templates/easleylanguage.pdf",
+      "data_found": "Easley cluster has 209 compute nodes with: 9 Type I GPU nodes with 2x nVidia Tesla T4 GPUs; 2 Type II GPU nodes with 4x nVidia Tesla T4 GPUs."
+    },
+    {
+      "url": "https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/gpu.html",
+      "data_found": "Easley GPU nodes are equipped with NVIDIA Tesla T4 devices. Two GPU partitions exist (gpu2 and gpu4), based on the number of GPU devices per node."
+    },
+    {
+      "url": "https://datausa.io/profile/university/auburn-university",
+      "data_found": "In 2023, 8,232 degrees were awarded across all undergraduate and graduate programs at Auburn University. Engineering awarded 1,380 degrees."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/auburn-university-ginn-college-of-engineering-department-of-computer-science-and-software-engineering-000_10038813.aspx",
+      "data_found": "Department of Computer Science and Software Engineering: 189 Applied, 128 Accepted, 51 Enrolled (graduate programs)."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/100858/auburn-university/enrollment/",
+      "data_found": "Auburn University has a total enrollment of 33,015 including 26,874 undergraduate students and 6,141 graduate students (2023-2024)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1200,
+    "grad_cs_count": 128,
+    "phd_cs_count": 60,
+    "year": "2024-2025",
+    "source_url": "https://hpc.auburn.edu/hpc/2020_cluster.php",
+    "notes": "Exact CS undergraduate numbers not publicly available. Estimated based on: College of Engineering has 6,700 undergraduates (2024), and CS/Software Engineering typically comprises 15-20% of engineering enrollment at similar institutions = ~1,200. Graduate CS count from Petersons shows 128 accepted, 51 enrolled for MS programs. PhD estimated from typical ratios at R1 universities with similar engineering programs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla T4 (16GB)",
+        "estimated_total": 26,
+        "notes": "Easley cluster has 9 Type I GPU nodes \u00d7 2 T4/node = 18 T4 GPUs, plus 2 Type II GPU nodes \u00d7 4 T4/node = 8 T4 GPUs. Total = 18 + 8 = 26 Tesla T4 GPUs."
+      }
+    ],
+    "source_url": "https://hpc.auburn.edu/hpc/2020_cluster.php",
+    "notes": "Auburn's Easley HPC cluster (launched 2020) has 26 NVIDIA Tesla T4 GPUs distributed across 11 GPU nodes. No evidence of H100, A100, or other modern datacenter GPUs in public documentation. The Hopper cluster mentioned in some pages was replaced by Easley."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Auburn University's GPU resources appear limited compared to peer R1 institutions, with only Tesla T4 GPUs (2018-era) in their primary HPC cluster. Student enrollment data shows strong engineering presence but exact CS numbers require estimation from available data."
+}

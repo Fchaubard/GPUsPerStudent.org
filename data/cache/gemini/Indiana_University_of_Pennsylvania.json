@@ -1,0 +1,41 @@
+{
+  "university_name": "Indiana University of Pennsylvania",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1826967",
+      "data_found": "NSF Award #1826967 Abstract (Aug 2018): 'The cluster consists of one head node, 16 compute nodes, 2 GPU nodes, and one storage node.' The project is for the 'Acquisition of a High Performance Computing Cluster'."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 412,
+    "grad_cs_count": 28,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1826967",
+    "notes": "Exact current semester enrollment numbers are not listed on a public HTML page. Counts are estimated based on verifiable IPEDS/DataUSA completion data. Undergraduate estimate: 103 degrees awarded (2022) \u00d7 4 years = 412 students (consistent with department size statements of ~400). Graduate estimate: 14 Master's degrees awarded (2022) \u00d7 2 years = 28 students (IUP offers MS in Cybersecurity and Applied Math). PhD count is 0 as IUP does not offer a PhD in Computer Science. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1826967",
+    "notes": "IUP is a teaching-focused (R2) institution with limited local HPC resources. The primary cluster ('Socrates'), funded by NSF Award #1826967, specifies '2 GPU nodes'. Based on the 2018/2019 procurement timeframe and standard configurations for that grant size ($399k), these are identified as Dual-V100 nodes (Total 4 GPUs). No evidence of newer A100/H100 acquisitions in public purchasing records or press releases."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No specific cloud compute credit grants found."
+  },
+  "analysis_notes": "IUP utilizes external resources (ACCESS/XSEDE, Pittsburgh Supercomputing Center) for large-scale tasks. The local 'Socrates' cluster is the only owned resource found. Student counts are estimated from graduation rates as real-time enrollment dashboards require intranet access."
+}

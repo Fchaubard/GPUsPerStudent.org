@@ -1,0 +1,78 @@
+{
+  "university_name": "Duke University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://oit-rc.pages.oit.duke.edu/rcsupportdocs/about/",
+      "data_found": "Duke Compute Cluster (DCC) overview states: 980 GPUs total and includes 64 NVIDIA H200 GPUs."
+    },
+    {
+      "url": "https://oit-rc.pages.oit.duke.edu/rcsupportdocs/dcc/h200/",
+      "data_found": "DCC H200 partition (h200ea) is 6 nodes with 54 H200 GPUs."
+    },
+    {
+      "url": "https://oit-rc.pages.oit.duke.edu/rcsupportdocs/dcc/partitions/",
+      "data_found": "DCC partitions GPU config includes P100: 2 GPUs/node across 10 nodes (and shows other GPU configs)."
+    },
+    {
+      "url": "https://dcc.duke.edu/dcc/slurm/",
+      "data_found": "DCC 'gpuavail' example output shows configuration counts including gpu:p100:2 = 10 nodes and gpu:a6000:1 = 8 nodes; also shows 6000_ada configs totaling 28 GPUs."
+    },
+    {
+      "url": "https://cs.duke.edu/csl/facilities/cluster",
+      "data_found": "Duke Computer Science cluster GPU totals include 16 A6000, 10 V100, 26 P100 (plus other GPUs not tallied here)."
+    },
+    {
+      "url": "https://duke.atlassian.net/wiki/spaces/somhpc/pages/620724636/RCC",
+      "data_found": "SoM HPC (RCC) page lists GPU partition: 1 node with 4 x NVIDIA L40S."
+    },
+    {
+      "url": "https://duke.atlassian.net/wiki/spaces/somhpc/pages/620757379/PRCC",
+      "data_found": "SoM HPC (PRCC) page lists GPU partition: 1 node with 8 x NVIDIA H200."
+    },
+    {
+      "url": "https://cs.duke.edu/sites/cs.duke.edu/files/documents/dukecs-infographics-2024-compressed.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 151 grad, 105 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 151,
+    "phd_cs_count": 105,
+    "year": "2024-2025",
+    "source_url": "https://cs.duke.edu/sites/cs.duke.edu/files/documents/dukecs-infographics-2024-compressed.pdf",
+    "notes": "Source is Duke CS '2024 Infographics Report' PDF. On the page labeled 'GRADUATE ENROLLMENT 2024-2025', it states '105 enrolled in PhD in CS' and '151 enrolled in MS in CS' (also separately lists 48 enrolled in MS in Economics & Computation, which is NOT counted in grad_cs_count). PDF also shows 'Last Updated: December 2024'. I did not find a Fall 2024 or AY 2024-25 undergrad CS *enrollment* headcount in this PDF; it only includes an undergraduate outcome metric ('448 CS majors graduated in 2024'), which I did not use as an enrollment count."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 72,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 24,
+    "l40s_count": 4,
+    "v100_count": 10,
+    "p100_count": 46,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 6000 Ada Generation (48GB)",
+        "count": 28
+      },
+      {
+        "model": "NVIDIA RTX 6000 Pro (96GB)",
+        "count": 20
+      }
+    ],
+    "source_url": "https://oit-rc.pages.oit.duke.edu/rcsupportdocs/about/",
+    "notes": "Clusters included: (1) Duke Compute Cluster (DCC), (2) Duke CS Dept cluster, (3) SoM HPC RCC, (4) SoM HPC PRCC.\n\nH200:\n- DCC overview: total H200 GPUs = 64.\n- PRCC: 1 node \u00d7 8 H200/node = 8.\n=> H200 total = 64 + 8 = 72.\n\nL40S:\n- RCC: 1 node \u00d7 4 L40S/node = 4.\n\nA6000:\n- DCC (gpuavail config): gpu:a6000:1 has 8 nodes \u21d2 8 nodes \u00d7 1 = 8.\n- CS cluster: 4 nodes \u00d7 4 A6000/node = 16.\n=> A6000 total = 8 + 16 = 24.\n\nV100:\n- CS cluster: gpu-compute5 has 2 V100, gpu-compute6 has 4 V100, gpu-compute7 has 4 V100 \u21d2 (1 node \u00d7 2) + (1 node \u00d7 4) + (1 node \u00d7 4) = 10.\n\nP100:\n- DCC (partitions): 10 nodes \u00d7 2 P100/node = 20.\n- CS cluster: linux41-50 (10 nodes \u00d7 2 P100/node = 20) + gpu-compute4 (1 node \u00d7 4 = 4) + gpu-compute5 (1 node \u00d7 2 = 2) = 26.\n=> P100 total = 20 + 26 = 46.\n\nH100/A100:\n- DCC documentation lists GPU types a100 (A100 80GB PCIe) and h100 (H100 NVL) as possible researcher-owned GPU types, but no node/GPU counts were found in publicly accessible Duke pages used above; therefore totals set to 0 here.\n\nOther high-VRAM GPUs (not requested fields):\n- DCC RTX 6000 Ada: 24 nodes \u00d7 1 + 1 node \u00d7 4 = 28.\n- CS cluster RTX 6000 Pro: 20 total GPUs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

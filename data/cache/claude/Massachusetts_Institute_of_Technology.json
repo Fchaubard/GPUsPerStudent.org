@@ -1,0 +1,64 @@
+{
+  "university_name": "Massachusetts Institute of Technology",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://orcd-docs.mit.edu/orcd-systems/",
+      "data_found": "OpenMind: Totally there are around 70 compute nodes, 3500 CPU cores, 48 TB of RAM, and 340 GPUs, including 142 A100-80GB GPUs. SuperCloud system has more than 16,000 x86 CPU cores and more than 850 NVidia Volta GPUs in total."
+    },
+    {
+      "url": "https://orcd.mit.edu/news/orcd-newsletter-april-2024",
+      "data_found": "Engaging cluster has 366 online GPUs. Across all ORCD systems (Engaging, Satori, Openmind and Supercloud) there are more than 1400 GPUs, of various generations. Of these, only 32 are currently the latest generation H100 GPUs, although another 96 are in the process of being added to Engaging."
+    },
+    {
+      "url": "https://www1.psfc.mit.edu/computers/cluster/gpu.html",
+      "data_found": "PSFC GPU Cluster consists of six nodes with four nvidia gpus each. Three nodes have four v100s cards and three nodes have four rtx6000 cards."
+    },
+    {
+      "url": "https://datausa.io/profile/university/massachusetts-institute-of-technology",
+      "data_found": "In 2023, the most popular Masters Degree concentrations at Massachusetts Institute of Technology (166683) were Management Science (716 degrees awarded), Computer Science (265 degrees), and Systems Engineering (178 degrees). Computer and Information Sciences and Support Services (749 degrees)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1300,
+    "grad_cs_count": 535,
+    "phd_cs_count": 485,
+    "year": "2020-2023",
+    "source_url": "https://orcd-docs.mit.edu/orcd-systems/",
+    "notes": "EECS department data from 2020 shows 1,300 undergraduates and 750 graduate students (PhD) plus 270 MEng students. DataUSA shows 265 MS CS degrees awarded in 2023 and 749 total CS/IT degrees across all levels in 2023. Graduate count estimated from MS degrees (265) \u00d7 2-year program = 530 enrolled. PhD count conservatively estimated as remaining graduate students after accounting for MS students. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 128,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 158,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 12,
+    "l40s_count": 0,
+    "v100_count": 862,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 6000 (24GB)",
+        "estimated_total": 12,
+        "notes": "PSFC cluster has 3 nodes with 4 RTX6000 cards each = 12 total"
+      },
+      {
+        "model": "Various older generation GPUs",
+        "estimated_total": 242,
+        "notes": "Engaging cluster remainder (366 total - known GPU types)"
+      }
+    ],
+    "source_url": "https://orcd-docs.mit.edu/orcd-systems/",
+    "notes": "CLUSTERS + CALCULATIONS:\n\n1) OpenMind: 142 A100-80GB GPUs (includes 2 nodes \u00d7 8 A100-80GB = 16 of the 142)\n\n2) SuperCloud: 850+ Volta GPUs (counted as V100)\n\n3) Engaging: 366 GPUs total; 32 H100 currently + 96 H100 being added = 128 H100 total\n\n4) PSFC Cluster: 3 nodes \u00d7 4 V100 = 12 V100; 3 nodes \u00d7 4 RTX6000 = 12 RTX6000\n\n5) OpenMind additional GPUs: 330 total - 142 A100 = 188 other GPUs (included in calculation)\n\n6) Satori: Part of the 1400+ total across all ORCD systems\n\nTOTAL KNOWN:\n- H100: 128 (32 existing + 96 being added)\n- A100-80GB: 142 (OpenMind) + 16 (OpenMind 8-way nodes, already counted) = 158\n- V100: 850 (SuperCloud) + 12 (PSFC) = 862\n- RTX 6000: 12 (PSFC)\n- Other/Unknown: ~242 (to reach 1400+ total mentioned)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "MIT has significant GPU resources distributed across multiple clusters: OpenMind (focused on AI/ML with A100s), SuperCloud (collaboration with Lincoln Lab featuring 850+ V100s), Engaging (general purpose with new H100s), and smaller departmental clusters like PSFC. Total of 1400+ GPUs across all ORCD systems."
+}

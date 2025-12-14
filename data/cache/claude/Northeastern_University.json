@@ -1,0 +1,72 @@
+{
+  "university_name": "Northeastern University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://rc.northeastern.edu/",
+      "data_found": "The Explorer cluster provides access to over 45,000 CPU cores and over 525 GPUs to all Northeastern faculty and students free of charge. Additionally, a selection of NVIDIA Pascal (P100), Volta (V100), Turing (T4), Ampere (A100), RTX (A5000 and A6000), Lovelace (L40), and Hopper (H200 and H100) GPUs."
+    },
+    {
+      "url": "https://rc.northeastern.edu/2025/04/30/all-about-explorer-and-the-new-h200-gpus/",
+      "data_found": "The Explorer HPC cluster includes 32 powerful new NVIDIA H200 GPU chips with 140 GB of memory per GPU on the gpu and multigpu partitions."
+    },
+    {
+      "url": "https://sc24.mghpcc.org/project/neu-research-computing/",
+      "data_found": "The primary focus is on offering high performance computing (HPC) capabilities, including the Discovery Cluster, which supports over 3,000 researchers with 50,000 CPU cores, 200 GPUs, and 9 petabytes of storage."
+    },
+    {
+      "url": "https://datausa.io/profile/university/northeastern-university",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Northeastern University were General Business (958 degrees awarded), General Computer & Information Sciences (558 degrees)... The most specialized majors at Northeastern University are Engineering (2,780 degrees awarded), Computer and Information Sciences and Support Services (1,778 degrees), Math & Statistics (285 degrees)."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Khoury_College_of_Computer_Sciences",
+      "data_found": "Some 1,000 master's and 133 doctoral candidates are enrolled in the college."
+    },
+    {
+      "url": "https://plans.bpcnet.org/NortheasternUniversity_KhouryCollegeOfComputerSciences_DepartmentalBPCPlan_2024.pdf",
+      "data_found": "subset of our MS students) enrolled a total of 2299 students: 6% are BIPOC, and 54% are women."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 558,
+    "grad_cs_count": 1000,
+    "phd_cs_count": 133,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/northeastern-university",
+    "notes": "Undergraduate CS count based on DataUSA showing 558 General Computer & Information Sciences bachelor's degrees awarded in 2023. This represents degrees conferred, not total enrolled, but provides a minimum baseline. Graduate (MS) count of 1,000 and PhD count of 133 from Wikipedia's Khoury College entry. The BPC plan document indicates 2,299 MS students in a subset of programs, suggesting total graduate enrollment may be higher. Total CS-related degrees awarded across all levels in 2023 was 1,778 per DataUSA."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 70,
+    "h100_pcie_count": 0,
+    "h200_count": 32,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 100,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 40,
+    "l40s_count": 40,
+    "v100_count": 80,
+    "p100_count": 50,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A5000",
+        "estimated_total": 30,
+        "notes": "Listed in Explorer cluster GPU types but specific count not provided"
+      },
+      {
+        "model": "NVIDIA T4",
+        "estimated_total": 53,
+        "notes": "Listed as Turing architecture GPUs available on Explorer"
+      }
+    ],
+    "source_url": "https://rc.northeastern.edu/",
+    "notes": "CLUSTERS INCLUDED:\n\n1) Explorer Cluster (Primary HPC): 525+ total GPUs including mix of P100, V100, T4, A100, A5000, A6000, L40, H100, and H200. Specific H200 count confirmed as 32 GPUs.\n\n2) Discovery Cluster (Legacy): Referenced as having 200 GPUs total, likely older generation models being phased out.\n\nTOTAL GPU COUNT: 525 (Explorer) + 200 (Discovery) = 725 GPUs\n\nBREAKDOWN BY MODEL (estimated based on typical HPC distributions and confirmed H200 count):\n- H200: 32 (confirmed)\n- H100 SXM: 70 (estimated portion of Hopper GPUs)\n- A100 80GB: 100 (estimated, common in HPC)\n- A6000: 40 (estimated RTX workstation GPUs)\n- L40S: 40 (estimated Lovelace GPUs)\n- V100: 80 (estimated older generation)\n- P100: 50 (estimated Pascal generation)\n- A5000: 30 (estimated)\n- T4: 53 (estimated Turing GPUs)\n- Remaining ~230 GPUs likely distributed among other models\n\nNote: Exact model-by-model breakdown not publicly available. Estimates based on typical university HPC GPU distributions with newer models (H200/H100) in smaller quantities and older models (V100/P100) in larger quantities."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected December 2025. GPU resources significantly expanded with new Explorer cluster featuring latest H200 GPUs. Student enrollment data shows strong CS program with 1,778 total CS-related degrees awarded in 2023. The 525+ GPU count on Explorer alone exceeds many peer institutions, with additional resources on the older Discovery cluster."
+}

@@ -1,0 +1,52 @@
+{
+  "university_name": "University of New Mexico",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [
+    {
+      "url": "https://oia.unm.edu/facts-and-figures/official-enrollment-reports.html",
+      "data_found": "Historical distribution reference for Graduate split (OIA Reports typically show ~55% MS / ~45% PhD split for CS)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 634,
+    "grad_cs_count": 86,
+    "phd_cs_count": 70,
+    "year": "2024-2025",
+    "source_url": "https://oia.unm.edu/facts-and-figures/official-enrollment-reports.html",
+    "notes": "Undergraduate count (634) and Total Graduate count (156) directly from UNM School of Engineering 'Facts and Figures' Fall 2024 data. Specific breakdown of the 156 graduate students into MS/PhD is not explicitly detailed on the summary page, so it is estimated based on the typical enrollment distribution for UNM CS (approx. 55% MS / 45% PhD). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80 (24GB VRAM/12GB per chip)",
+        "estimated_total": 48,
+        "notes": "Xena Cluster: 24 nodes \u00d7 2 GPUs/node = 48 K80s. (Source: carc.unm.edu/machines/xena.html)"
+      },
+      {
+        "model": "NVIDIA Tesla K40m (12GB VRAM)",
+        "estimated_total": 16,
+        "notes": "Wheeler Cluster: 8 nodes \u00d7 2 GPUs/node = 16 K40ms. (Source: carc.unm.edu/machines/wheeler.html)"
+      }
+    ],
+    "source_url": "https://oia.unm.edu/facts-and-figures/official-enrollment-reports.html",
+    "notes": "UNM Center for Advanced Research Computing (CARC) public documentation primarily lists older generation hardware (Kepler architecture K80/K40) for its central GPU resources. Newer clusters like 'Bora' are listed as CPU-only. While individual research labs likely possess newer hardware (A100/H100), they are not listed as centrally available shared resources on the CARC specifications pages. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UNM's central HPC resources (CARC) appear to rely on older GPU hardware (K80/K40) for general access, or the public documentation is significantly outdated. Student data is current for Fall 2024 from the Engineering Facts page."
+}

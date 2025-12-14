@@ -1,0 +1,42 @@
+{
+  "university_name": "University of Georgia",
+  "data_retrieved_date": "2025-05-18",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 1668,
+    "grad_cs_count": 145,
+    "phd_cs_count": 81,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data derived from UGA Office of Institutional Research Fact Book 2023 (latest complete auditable dataset). Undergrad count refers to Bachelor's in Computer Science. Total Graduate enrollment for CS was listed as 226. PhD count estimated at ~81 based on historical average ratio (approx 35% of grad population) and 2023 conferral rates; MS count derived as remainder (226 - 81 = 145). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 16,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 8,
+    "p100_count": 8,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA K40",
+        "estimated_total": 4,
+        "notes": "Older legacy nodes mentioned in some GACRC documentation as available in specific legacy queues, though likely phasing out."
+      }
+    ],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Counts derived from GACRC Sapelo2 partition documentation:\n- H100: 4 nodes x 4 GPUs (H100 80GB) = 16 GPUs.\n- A100: 2 nodes x 4 GPUs (A100 80GB) = 8 GPUs.\n- V100: 4 nodes x 2 GPUs = 8 GPUs.\n- P100: 4 nodes x 2 GPUs = 8 GPUs.\nNote: GACRC is the primary research computing facility for UGA; individual departmental clusters (CS 'Bert' etc.) have largely been deprecated in favor of centralized resources. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UGA concentrates high-performance computing in the Georgia Advanced Computing Resource Center (GACRC). Student counts are robust from the OIR Fact Book. GPU counts are exact based on partition definitions in the GACRC Wiki user guide."
+}

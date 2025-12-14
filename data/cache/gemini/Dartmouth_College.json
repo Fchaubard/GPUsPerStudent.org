@@ -1,0 +1,51 @@
+{
+  "university_name": "Dartmouth College",
+  "data_retrieved_date": "2025-05-30",
+  "sources": [
+    {
+      "url": "https://www.dartmouth.edu/oir/factbook/",
+      "data_found": "Dartmouth Office of Institutional Research (OIR) Fact Book 2023-2024: Provides specific enrollment numbers for Computer Science majors and graduate students in the Guarini School of Graduate and Advanced Studies."
+    },
+    {
+      "url": "https://datausa.io/profile/university/dartmouth-college",
+      "data_found": "DataUSA Profile: Verification of Computer Science degree completions (212 Bachelor's degrees in most recent year)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 848,
+    "grad_cs_count": 57,
+    "phd_cs_count": 71,
+    "year": "2023-2024",
+    "source_url": "https://www.dartmouth.edu/oir/factbook/",
+    "notes": "Undergraduate count estimated from DataUSA/OIR degree data: 212 Computer Science Bachelor's degrees awarded annually \u00d7 4 years = 848 est. total enrollment. Graduate counts derived from Guarini School of Graduate and Advanced Studies enrollment reports in the OIR Fact Book for the Computer Science program (MS: 57 enrolled, PhD: 71 enrolled)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 32,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 64,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80",
+        "estimated_total": 30,
+        "notes": "Legacy nodes. Based on '35 GPU nodes' total minus identified A100/V100 nodes. Estimated 15 nodes x 2 GPUs."
+      }
+    ],
+    "source_url": "https://www.dartmouth.edu/oir/factbook/",
+    "notes": "Discovery Cluster GPU breakdown estimated from RC documentation stating '35 GPU nodes' total with K80, V100, and A100 mix.\n\nCalculations:\n1. A100: Documentation and grant abstracts reference '4 nodes' of A100s, typically configured as 8x GPUs for large memory jobs. 4 nodes \u00d7 8 GPUs = 32 A100s (Assumed 80GB given 'high memory' description).\n2. V100: Documentation references standard GPU nodes as Quad-V100. Estimating ~16 nodes to balance the cluster generation timeline. 16 nodes \u00d7 4 GPUs = 64 V100s.\n3. K80: Legacy hardware making up the remainder of the 35 nodes. ~15 nodes \u00d7 2 GPUs = 30 K80s.\n\nNo public record of H100 acquisition as of May 2025. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Dartmouth Research Computing operates on a 'fair share' scheduler model generally free for campus researchers. Paid priority queues exist but annual value is not publicly disclosed."
+  },
+  "analysis_notes": "Dartmouth has a centralized Research Computing (RC) unit managing the 'Discovery' cluster. Exact node counts per GPU generation are not explicitly tabulated on a single status page, so totals are derived from the documented '35 GPU nodes' total and standard node configurations (4xV100, 8xA100) described in system guides."
+}

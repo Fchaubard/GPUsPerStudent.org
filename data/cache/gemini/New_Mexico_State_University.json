@@ -1,0 +1,41 @@
+{
+  "university_name": "New Mexico State University",
+  "data_retrieved_date": "2025-05-18",
+  "sources": [
+    {
+      "url": "https://nsf.gov/awardsearch/showAward?AWD_ID=2018917",
+      "data_found": "NSF Award #2018917 (CC* Compute): Funded the acquisition of the 'GPU node with eight NVIDIA A100 GPUs' (referenced as the 'AI Cluster' component)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 406,
+    "grad_cs_count": 97,
+    "phd_cs_count": 40,
+    "year": "2023-2024",
+    "source_url": "https://nsf.gov/awardsearch/showAward?AWD_ID=2018917",
+    "notes": "Student counts derived from NMSU Office of Institutional Analysis (OIA) Fall 2023 Factbook data for the Las Cruces campus. Computer Science is located in the College of Arts and Sciences. Undergrad count is for BS Computer Science majors. Graduate count (MS + PhD) is 97; PhD count is estimated at ~40 based on typical departmental splits (approx 40% of grad population) as explicit PhD-only breakouts were not in the summary table. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 8,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 26,
+    "p100_count": 20,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://nsf.gov/awardsearch/showAward?AWD_ID=2018917",
+    "notes": "GPU counts calculated from NMSU 'Discovery' cluster specifications:\n- A100: 1 node \u00d7 8 GPUs = 8 total (Classified as 40GB based on 2020 NSF Award timing; 80GB not specified).\n- V100: (5 nodes \u00d7 2 GPUs) + (4 nodes \u00d7 4 GPUs) = 10 + 16 = 26 total.\n- P100: 10 nodes \u00d7 2 GPUs = 20 total.\nNo evidence of H100 or newer hardware found in public documentation as of May 2025. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected from NMSU's official HPC 'Discovery' hardware page and the Office of Institutional Analysis Fall 2023 reports. The HPC resources appear centralized under the Discovery cluster managed by ICT."
+}

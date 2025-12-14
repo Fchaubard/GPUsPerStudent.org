@@ -1,0 +1,49 @@
+{
+  "university_name": "University of Dayton",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://udayton.edu/oit/research_computing/index.php",
+      "data_found": "Research Computing at UD: Describes the 'Arcade' high performance compute cluster and access to the Ohio Supercomputer Center (OSC)."
+    },
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=University+of+Dayton&s=all&id=202480",
+      "data_found": "2023 Degrees Awarded: Computer and Information Sciences (Bachelor's: 77, Master's: 39)."
+    },
+    {
+      "url": "https://udayton.edu/artssciences/academics/computerscience/grad/phd/index.php",
+      "data_found": "PhD in Computer Science: Confirms the existence of the doctoral program (relatively new program)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 308,
+    "grad_cs_count": 78,
+    "phd_cs_count": 10,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=University+of+Dayton&s=all&id=202480",
+    "notes": "Exact enrollment figures are not published on the public departmental 'Fast Facts' page. Counts are estimated from NCES/IPEDS verifiable 'Degrees Awarded' data (2022-2023). Undergrad estimate: 77 Bachelor's degrees awarded \u00d7 4 years = 308 students. Master's estimate: 39 Master's degrees awarded \u00d7 2 years = 78 students. PhD count is a conservative estimate as the dedicated CS PhD program is a recent addition to the College of Arts and Sciences."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://udayton.edu/oit/research_computing/index.php",
+    "notes": "UD's primary on-campus cluster is 'Arcade'. \n\nArcade Cluster Calculation:\n- 2 GPU nodes \u00d7 2 V100 GPUs/node = 4 V100 Total.\n\nNote: The University of Dayton is a member of the Ohio Supercomputer Center (OSC). While UD researchers have access to OSC's significant resources (including Ascend's A100s and Owens' P100s), those resources are state-shared and not owned/located on the UD campus, thus they are excluded from this specific inventory. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Dayton maintains a small on-premise footprint ('Arcade') and relies heavily on the shared Ohio Supercomputer Center (OSC) for large-scale GPU workloads. Student counts are derived from federal graduation data due to lack of public granular enrollment reports."
+}

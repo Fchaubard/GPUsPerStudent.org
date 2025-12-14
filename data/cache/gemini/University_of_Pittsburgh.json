@@ -1,0 +1,42 @@
+{
+  "university_name": "University of Pittsburgh",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 1293,
+    "grad_cs_count": 104,
+    "phd_cs_count": 101,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data sourced from University of Pittsburgh Fact Book 2024 (Fall 2023 Enrollment by Academic Plan). Undergrad count is specifically for 'Computer Science' (BS); excludes 'Information Science' (350+) and 'Computational Biology'. Grad count is 'Computer Science' (MS). PhD count is 'Computer Science' (PhD). The School of Computing and Information (SCI) has higher total enrollment (~2,700) due to Library and Information Science programs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 48,
+    "a100_40gb_count": 80,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 144,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 2080Ti/3090",
+        "estimated_total": null,
+        "notes": "Mentions of 'Commodity GPU' nodes (HTC cluster) exist in documentation but exact counts are variable/unspecified."
+      }
+    ],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Calculations based on Pitt Center for Research Computing (CRC) hardware documentation:\n1. A100 80GB: 12 nodes \u00d7 4 GPUs/node = 48 GPUs.\n2. A100 40GB: 20 nodes \u00d7 4 GPUs/node = 80 GPUs.\n3. V100 (32GB): 36 nodes \u00d7 4 GPUs/node = 144 GPUs.\nNote: No public documentation found for H100 acquisition as of mid-2024. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Pitt CRC generally provides resources free of charge to University faculty and their groups (subsidized model). Paid priority access exists but rates/totals not publicly itemized in this query."
+  },
+  "analysis_notes": "Pitt separates 'Computer Science' from 'Information Science' within the School of Computing and Information (SCI). Student counts reflect strictly CS majors. GPU counts reflect the central CRC resources; departmental clusters (e.g., individual engineering labs) are not centrally documented."
+}

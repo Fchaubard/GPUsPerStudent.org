@@ -1,0 +1,41 @@
+{
+  "university_name": "University of Vermont",
+  "data_retrieved_date": "2025-05-30",
+  "sources": [
+    {
+      "url": "https://www.uvm.edu/vacc/kb/knowledge-base/deepgreen-specs/",
+      "data_found": "VACC Knowledge Base (Cached/Public snippet): Confirms DeepGreen nodes utilize NVIDIA Tesla V100 GPUs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 600,
+    "grad_cs_count": 45,
+    "phd_cs_count": 25,
+    "year": "2023-2024",
+    "source_url": "https://www.uvm.edu/vacc/kb/knowledge-base/deepgreen-specs/",
+    "notes": "Official department 'About' page states 'over 600 undergraduate majors and 70 graduate students'. The graduate total (70) was split into MS and PhD estimates based on IPEDS/OIR completion data which shows roughly 20-25 MS degrees awarded annually (implying ~45 enrolled MS students), leaving ~25 PhD students. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 80,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.uvm.edu/vacc/kb/knowledge-base/deepgreen-specs/",
+    "notes": "Primary research cluster is 'DeepGreen'. Launch specifications confirm 80 NVIDIA V100 GPUs. No public documentation was found regarding a 'Phase 2' expansion to A100 or H100 hardware as of mid-2025; UVM Research Computing likely utilizes national ACCESS resources for higher-tier compute needs. Previous clusters (Black Diamond, Bluemoon) are retired. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No specific cloud compute credit programs listed."
+  },
+  "analysis_notes": "UVM relies on a single major local cluster (DeepGreen) launched circa 2019/2020. Student numbers are derived from the department's explicit 'By the Numbers' statement."
+}

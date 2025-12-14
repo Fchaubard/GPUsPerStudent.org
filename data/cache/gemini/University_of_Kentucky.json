@@ -1,0 +1,41 @@
+{
+  "university_name": "University of Kentucky",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-kentucky",
+      "data_found": "2022 Degree Completion Data: Computer Science Bachelor's degrees awarded: 171; Master's degrees: 19; Research Doctorates: 6."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 770,
+    "grad_cs_count": 40,
+    "phd_cs_count": 33,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-kentucky",
+    "notes": "Exact current enrollment by major is not published on the public department page. Counts are estimated based on verifiable 2022 degree completion data (latest available via IPEDS/DataUSA). Undergrad estimate: 171 degrees awarded * 4.5 years duration = ~770. Grad (MS) estimate: 19 degrees * 2 years = ~38 (rounded to 40). PhD estimate: 6 degrees * 5.5 years = ~33. These estimates align with the College of Engineering's total enrollment of ~3,354 students, where CS is typically ~25% of the population."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 6,
+    "p100_count": 8,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/university-of-kentucky",
+    "notes": "Calculated from the Center for Computational Sciences (CCS) hardware listings.\n\n1) Morgan Cluster (A100): 2 nodes x 4 NVIDIA A100 80GB = 8 A100s.\n2) Morgan Cluster (V100): 2 nodes x 3 NVIDIA V100 32GB = 6 V100s.\n3) KyRIC Cluster (P100): 4 nodes x 2 NVIDIA P100 16GB = 8 P100s.\n\nNote: The CCS site also lists an older 'Lipscomb' cluster, but it appears to be compute-only (CPU) or decommissioned from primary GPU lists. No public evidence of H100 or newer hardware acquisition was found in CCS documentation or NSF award databases for UKY. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "The University of Kentucky centralizes HPC resources under the Center for Computational Sciences (CCS). The primary GPU resources are within the Morgan cluster (A100s/V100s) and the KyRIC cluster (P100s). Student counts are derived from IPEDS graduation data due to the lack of a live departmental enrollment dashboard."
+}

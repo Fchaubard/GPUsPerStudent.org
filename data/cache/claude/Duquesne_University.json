@@ -1,0 +1,53 @@
+{
+  "university_name": "Duquesne University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.duq.edu/academics/colleges-and-schools/science-and-engineering/academics/departments-and-programs/mathematics-and-computer-science/index.php",
+      "data_found": "Department of Mathematics and Computer Science - offers undergraduate programs in mathematics and computer science, BS/MS combined degree program in Computer Science, and MS in Computer Science. No specific enrollment numbers found on this page."
+    },
+    {
+      "url": "https://datausa.io/profile/university/duquesne-university",
+      "data_found": "The total enrollment at Duquesne University in 2023, both undergraduate and graduate, is 8,137 students. The full-time enrollment at Duquesne University is 7,820 and the part-time enrollment is 317. No specific Computer Science enrollment data found on this DataUSA profile."
+    },
+    {
+      "url": "https://www.duq.edu/about/departments-and-offices/finance-and-business/planning-budgeting-and-institutional-research/fact-books/index.php",
+      "data_found": "Duquesne University Fact Book page indicates comprehensive data on student enrollment, graduation rates, and academic programs. However, specific computer science enrollment data was not directly accessible from this summary page."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/212106/duquesne-university/enrollment/",
+      "data_found": "Duquesne University has a total enrollment of 8,137 including 5,226 undergraduate students and 2,911 graduate students for academic year 2023-2024. No department-specific enrollment data found."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 150,
+    "grad_cs_count": 50,
+    "phd_cs_count": -1,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/duquesne-university",
+    "notes": "Specific CS enrollment numbers not found in searches. Based on total undergraduate enrollment of 5,226 and graduate enrollment of 2,911 at Duquesne (2023-2024), and considering it's a mid-sized university with active CS department offering BA, BS, and MS programs, estimated 150 undergrads (approximately 3% of undergrad population) and 50 MS students. PhD program not found - Duquesne offers MS in Computer Science but no PhD program was mentioned in any sources."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.duq.edu/academics/colleges-and-schools/science-and-engineering/academics/departments-and-programs/mathematics-and-computer-science/index.php",
+    "notes": "No GPU cluster or HPC specifications found for Duquesne University. Searches for 'Duquesne University research computing', 'Duquesne University HPC', and 'Duquesne University GPU cluster' returned no relevant results about GPU resources. The university's Computing and Technology Services (CTS) website did not mention any GPU computing resources. This may indicate Duquesne does not have a centralized GPU cluster for research computing. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Duquesne University is a mid-sized private Catholic university in Pittsburgh with strong CS programs (BA, BS, BS/MS combined, and MS degrees offered). However, no public information about GPU computing resources was found through extensive searches. The university appears to focus more on undergraduate and master's level education in CS rather than research computing infrastructure. CS enrollment numbers had to be estimated based on overall university enrollment since department-specific data was not publicly available."
+}

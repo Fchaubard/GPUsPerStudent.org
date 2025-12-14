@@ -1,0 +1,65 @@
+{
+  "university_name": "University of Texas - Austin",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.tacc.utexas.edu/hpc/vista/system/",
+      "data_found": "Vista: 600 Grace-Hopper (GH) nodes; each GH node has 1 GPU; text describes the GH node GPU as an NVIDIA H200 GPU with 96 GiB HBM3; total GH nodes=600."
+    },
+    {
+      "url": "https://tacc.utexas.edu/systems/vista/",
+      "data_found": "Vista systems page lists GPU as H100 (Grace Hopper/GH200 Superchip) and shows the system has GH and GG components."
+    },
+    {
+      "url": "https://docs.tacc.utexas.edu/hpc/3stampede/system/",
+      "data_found": "Stampede3: 24 H100 nodes; each node has 4x NVIDIA H100 SXM5 GPUs (H100 queue)."
+    },
+    {
+      "url": "https://docs.tacc.utexas.edu/hpc/lonestar6/",
+      "data_found": "Lonestar6: 84 A100 GPU nodes, each with 3x NVIDIA A100 PCIe 40GB; plus 4 H100 GPU nodes, each with 2x NVIDIA H100 PCIe 80GB."
+    },
+    {
+      "url": "https://tacc.utexas.edu/systems/longhorn/",
+      "data_found": "Longhorn (decommissioned 11/30/2022): 96 V100 nodes + 8 large-memory V100 nodes; each node has 4x V100 GPUs (total 104 GPU nodes)."
+    },
+    {
+      "url": "https://tacc.utexas.edu/systems/maverick2/",
+      "data_found": "Maverick2 (decommissioned): 4 nodes each with 2x V100; and 3 nodes each with 2x P100."
+    },
+    {
+      "url": "https://www.cs.utexas.edu/about",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.cs.utexas.edu/about",
+    "notes": "I located a UT Austin Computer Science (UTCS) official 'About' page that explicitly contains the text 'incoming, fall 2024'. However, the page does NOT provide Fall 2024 (or AY 2024-25) Computer Science enrollment headcounts broken out by (1) undergraduate CS majors, (2) on-campus MS/Masters CS students, and (3) CS PhD students. The page does include a single combined figure ('7,600 undergrad + graduate students'), but it is not explicitly labeled as Fall 2024 enrollment and it also does not separate MS vs PhD, so I rejected using it for the required fields and left all counts as 0. I also checked UT Austin IRRIS/Reports pages (Common Data Set and Trends in Student Data) but could not access a Fall 2024 CS-major enrollment table (MS vs PhD vs undergrad) from those pages without the interactive dashboard data being directly visible as text."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 696,
+    "h100_pcie_count": 8,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 252,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 424,
+    "p100_count": 6,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://docs.tacc.utexas.edu/hpc/vista/system/",
+    "notes": "Clusters tallied (including decommissioned systems):\n1) Vista: interpreted as H100-class (non-PCIe) GPUs based on Vista systems page listing GPU=H100 and GH200 context; counted as H100 SXM-equivalent due to non-PCIe form factor. Calculation: 600 nodes \u00d7 1 GPU/node = 600 H100 (SXM-equivalent). Note: Vista system documentation text conflicts by calling the GPU 'H200' while also stating 96 GiB HBM3; H200 is typically higher-memory, so this appears inconsistent; totals here categorize Vista under H100 SXM.\n2) Stampede3 H100 nodes: 24 nodes \u00d7 4 H100 SXM5/node = 96 H100 SXM.\n3) Lonestar6 H100 nodes: 4 nodes \u00d7 2 H100 PCIe/node = 8 H100 PCIe.\n4) Lonestar6 A100 nodes: 84 nodes \u00d7 3 A100 40GB/node = 252 A100 40GB.\n5) Longhorn V100 nodes: (96+8)=104 nodes \u00d7 4 V100/node = 416 V100.\n6) Maverick2 V100 nodes: 4 nodes \u00d7 2 V100/node = 8 V100.\n7) Maverick2 P100 nodes: 3 nodes \u00d7 2 P100/node = 6 P100.\nSummed totals: H100 SXM=600+96=696; H100 PCIe=8; A100 40GB=252; V100=416+8=424; P100=6."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

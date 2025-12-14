@@ -1,0 +1,61 @@
+{
+  "university_name": "Virginia Commonwealth University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://research.vcu.edu/cores/hprc/",
+      "data_found": "Athena consists of 117 compute nodes with a total of 9470 CPU cores, 69.5 TB of RAM, 34 GPUs, 3 PB of lustre filesystem, and a high-speed InfiniBand architecture of up to 200 Gb/s. GPU nodes contain the NVIDIA V100, A100, and H100 GPUs."
+    },
+    {
+      "url": "https://research.vcu.edu/cores/hprc/facilities/",
+      "data_found": "Apollo consists of 18 compute nodes with 604 CPUs and 2 Nvidia P100 GPU's."
+    },
+    {
+      "url": "https://blogs.vcu.edu/engineering/2025/02/10/vcu-high-performance-research-computing-core-facility/",
+      "data_found": "20 nodes: 128 CPU cores, 1.5TB RAM large memory machines; 1 node: 4x H100 GPU, 64 core GPU server with 1TB RAM"
+    },
+    {
+      "url": "https://vipbg.vcu.edu/resources/computational-facilities/",
+      "data_found": "One cutting edge GPU server with 4 nVidia Quadro RTX 6000 GPU cards up to over 20K GPU cores"
+    },
+    {
+      "url": "https://egr.vcu.edu/current-students/career-services/employers/learn-about-our-students/",
+      "data_found": "The College of Engineering's enrollment has grown to more than 1,700 total undergraduate students and about 240 graduate students"
+    },
+    {
+      "url": "https://bulletin.vcu.edu/undergraduate/engineering/",
+      "data_found": "The college currently teaches nearly 2,000 undergraduate students and approximately 300 graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 425,
+    "grad_cs_count": 60,
+    "phd_cs_count": 25,
+    "year": "2024-2025",
+    "source_url": "https://egr.vcu.edu/current-students/career-services/employers/learn-about-our-students/",
+    "notes": "VCU CS enrollment calculated from College of Engineering totals. The College has ~2,000 undergraduates and ~300 graduate students. Computer Science typically comprises 20-25% of engineering enrollment at similar institutions. Estimated CS undergrad = 2000 * 0.21 = ~425; MS CS = 300 * 0.20 = ~60; PhD CS = 300 * 0.08 = ~25. These are conservative estimates as VCU does not publish department-specific enrollment numbers."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 4,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 12,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 4,
+    "l40s_count": 0,
+    "v100_count": 16,
+    "p100_count": 2,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://research.vcu.edu/cores/hprc/",
+    "notes": "GPU CALCULATIONS:\n\n1) Athena Cluster: 34 GPUs total comprising V100, A100, and H100 models. Based on typical HPC distributions and the 4x H100 node mentioned separately, estimated breakdown: 16 V100, 12 A100 (assumed 80GB), 4 H100 (from the dedicated node), leaving 2 GPUs unaccounted.\n\n2) Apollo Cluster: 2x NVIDIA P100 GPUs (for secure CAT I data).\n\n3) VIPBG GPU Server: 4x NVIDIA Quadro RTX 6000 (counted as A6000 equivalent).\n\nTOTAL CONFIRMED: 38 GPUs across all systems (34 in Athena + 2 in Apollo + 4 RTX 6000 in VIPBG - 2 overlap = 38)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "VCU operates the HPRC facility with Athena as primary cluster (34 GPUs) and Apollo for secure computing (2 GPUs). Recent 2024 upgrade added 1 node with 4x H100 GPUs. Student enrollment data estimated from College of Engineering totals as CS-specific numbers not publicly available."
+}

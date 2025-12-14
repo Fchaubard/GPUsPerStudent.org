@@ -1,0 +1,71 @@
+{
+  "university_name": "University of Wisconsin - Madison",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://dsi.wisc.edu/services/gpu/h100-gpu-cluster/",
+      "data_found": "The H100 cluster is a cluster of three servers with 8 48GB H100 GPUs owned by the Data Science Institute and operated by the Center for High Throughput Computing. The H100 GPU Cluster has the following specifications: 4x Nvidia H100 80GB HBM3 GPU"
+    },
+    {
+      "url": "https://dsi.wisc.edu/services/gpu/l40/",
+      "data_found": "The L40 cluster is a cluster of three servers with 8 48GB L40 GPUs owned by the Data Science Institute and operated by the Center for High Throughput Computing. 8x NVIDIA L40 48GB GPU \u00b7 3x Intel Xeon\u00ae 6342 (2.8GHz) Processor (24-Core) = 72 CPU Cores"
+    },
+    {
+      "url": "https://dsi.wisc.edu/services/gpu/olvi/",
+      "data_found": "Olvi is a machine with two servers, each having 8 Nvidia A100 GPUs. Olvi-1 and Olvi-2 are identical machines, each of which have the following specifications: 8x NVIDIA A100 SXM2 40GB HBM2 NV-LINK"
+    },
+    {
+      "url": "https://chtc.cs.wisc.edu/",
+      "data_found": "CHTC manages over 20,000 cores and dozens of GPUs for the UW-Madison campus; this resource, which is free and shared, aims to advance the mission of the University of Wisconsin"
+    },
+    {
+      "url": "https://research.wisc.edu/processing/",
+      "data_found": "The Center for High Throughput Computing (CHTC) manages a large-scale High-Throughput Computing system of 20,000 cores and hundreds of GPUs available to all researchers at the UW-Madison campus"
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-wisconsin-madison",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at University of Wisconsin-Madison were General Computer & Information Sciences (864 degrees awarded)"
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-wisconsin-madison-college-of-letters-and-science-department-of-computer-sciences-000_10044109.aspx",
+      "data_found": "219 Total Graduate Students \u00b7 52% International Breakout (representing other countries) Male (90%) Female (9%)"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 3456,
+    "grad_cs_count": 219,
+    "phd_cs_count": 110,
+    "year": "2024",
+    "source_url": "https://datausa.io/profile/university/university-of-wisconsin-madison",
+    "notes": "Based on DataUSA 2023 data showing 864 CS bachelor degrees awarded. Using standard 4-year program assumption: 864 graduates/year \u00d7 4 years = 3,456 undergraduate CS majors. Graduate student count (219 total) from Peterson's data split between MS (estimated 109) and PhD (estimated 110 based on typical 50/50 distribution)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 12,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 24,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "CHTC GPU Lab unspecified models",
+        "estimated_total": null,
+        "notes": "CHTC manages 'hundreds of GPUs' through the GPU Lab but specific models not detailed"
+      }
+    ],
+    "source_url": "https://dsi.wisc.edu/services/gpu/h100-gpu-cluster/",
+    "notes": "CLUSTERS INCLUDED:\n1) H100 Cluster (DSI): 3 servers \u00d7 4 H100 80GB/server = 12 H100 (counted as SXM based on 80GB memory)\n2) L40 Cluster (DSI): 3 servers \u00d7 8 L40 48GB/server = 24 L40S\n3) Olvi Cluster (DSI): 2 servers \u00d7 8 A100 40GB/server = 16 A100 40GB\n\nCHTC GPU Lab: While CHTC manages 'hundreds of GPUs' for campus use, specific models and counts are not publicly detailed beyond the DSI clusters listed above. V100 and P100 counts marked as -1 (not found). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected from multiple sources. DSI operates specific GPU clusters (H100, L40, Olvi) with detailed specifications. CHTC manages additional 'hundreds of GPUs' but specific models not publicly detailed. Student counts derived from degree completion data and standard program duration assumptions."
+}

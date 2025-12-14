@@ -1,0 +1,67 @@
+{
+  "university_name": "Texas Tech University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.depts.ttu.edu/hpcc/operations/equipment.php",
+      "data_found": "RedRaider cluster consists of: Nocona and Quanah/XLQuanah CPU partitions, the Matador and Toreador GPU partitions, totaling approximately 2.1 PFLOPS of raw peak computing power."
+    },
+    {
+      "url": "https://www.depts.ttu.edu/hpcc/about/HPCC_New_User_Training_1-Mar22.pdf",
+      "data_found": "Matador partition: 20 GPU nodes with 40 NVIDIA Tesla V100 GPUs (2 V100/node). Toreador partition: 11 nodes with 33 NVIDIA Tesla A100 GPUs (3 A100/node)"
+    },
+    {
+      "url": "https://operations.access-ci.org/node/851",
+      "data_found": "REPACSS GPU nodes feature dual-socket Intel Xeon Gold 6448Y processors, 512GB RAM, and 4 H100 GPUs connected as two H100-NVL pairs per node."
+    },
+    {
+      "url": "https://www.depts.ttu.edu/cs/department/welcome.php",
+      "data_found": "As of Fall 2024, the department is home to 451 undergraduate majors and 559 graduate students, comprising 476 Masters students and 83 Ph.D. students, with a total population of 1,010 students."
+    },
+    {
+      "url": "https://www.depts.ttu.edu/cs/",
+      "data_found": "451 undergraduate majors and 559 graduate students including 476 Master and 83 Ph.D. students as of Fall 2024, the largest of the seven departments in the WCOE"
+    },
+    {
+      "url": "https://discl.cs.ttu.edu/doku.php?id=resources",
+      "data_found": "DISCI cluster: 5-node GPU cluster testbed with dual 512-core NVidia M2090 GPUs on each compute node"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 451,
+    "grad_cs_count": 476,
+    "phd_cs_count": 83,
+    "year": "2024",
+    "source_url": "https://www.depts.ttu.edu/cs/department/welcome.php",
+    "notes": "Official CS department data from Fall 2024. Texas Tech CS became the largest department in the College of Engineering with 1,010 total students. Department has experienced 42.7% undergraduate enrollment growth and 43.1% PhD enrollment growth over the last two years."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 4,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 33,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 40,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla M2090 (6GB)",
+        "estimated_total": 10,
+        "notes": "DISCI cluster: 5 nodes \u00d7 2 M2090 GPUs = 10 total (legacy Fermi architecture GPUs)"
+      }
+    ],
+    "source_url": "https://www.depts.ttu.edu/hpcc/about/HPCC_New_User_Training_1-Mar22.pdf",
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) RedRaider Matador Partition (TTU HPCC): 20 nodes \u00d7 2 V100/node = 40 V100 GPUs\n\n2) RedRaider Toreador Partition (TTU HPCC): 11 nodes \u00d7 3 A100/node = 33 A100 GPUs (assumed 80GB variant as typical for HPC)\n\n3) REPACSS (ACCESS-CI resource at TTU): The ACCESS-CI documentation mentions H100 GPUs at 4 per node, but does not specify total number of nodes deployed. Conservative estimate of 1 node = 4 H100 SXM GPUs.\n\n4) DISCI Cluster (CS Department): 5 nodes \u00d7 2 M2090/node = 10 M2090 GPUs (legacy)\n\nFINAL TOTALS:\n- H100 SXM = 4 (REPACSS, conservative estimate)\n- A100 80GB = 33 (Toreador)\n- V100 = 40 (Matador)\n- M2090 = 10 (DISCI, listed in other_high_vram_gpus)\n\nNote: The HPCC equipment page mentions multiple partitions but does not provide detailed GPU specifications beyond the training document. The REPACSS cluster documentation does not specify the total number of GPU nodes deployed."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Texas Tech has a modest GPU infrastructure compared to peer institutions. The primary GPU resources are in the RedRaider cluster (40 V100s, 33 A100s) managed by HPCC. The REPACSS cluster adds newer H100 capacity, though exact node count was not publicly documented. The CS department also has its own small DISCI cluster with older M2090 GPUs for research. With 1,010 CS students and approximately 77 modern GPUs (excluding legacy M2090s), this yields about 0.08 GPUs per CS student."
+}

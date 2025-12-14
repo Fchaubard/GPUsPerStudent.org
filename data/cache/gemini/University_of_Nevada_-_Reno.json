@@ -1,0 +1,41 @@
+{
+  "university_name": "University of Nevada - Reno",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-nevada-reno",
+      "data_found": "2022 Degrees Awarded in Computer & Information Sciences: 159 Bachelor's, 29 Master's, 7 Research Doctorates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 716,
+    "grad_cs_count": 58,
+    "phd_cs_count": 39,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/university-of-nevada-reno",
+    "notes": "Exact enrollment headcounts by major are not listed on the public UNR website (only College-wide totals). Counts are estimated based on verifiable Degree Completion data from DataUSA (IPEDS). Undergrad Estimate: 159 Bachelor's degrees awarded * 4.5 years = 716. Grad Estimate: 29 Master's degrees * 2 years = 58. PhD Estimate: 7 Doctorates * 5.5 years = 39."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 30,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/university-of-nevada-reno",
+    "notes": "Calculations based on Pronghorn Cluster specs:\n1) Standard GPU Nodes: 15 nodes * 2 NVIDIA P100 GPUs = 30 P100s.\n2) High-Mem GPU Nodes: 2 nodes * 2 NVIDIA V100 GPUs = 4 V100s.\nNote: UNR received an NSF grant (Award #2215886) in late 2022 for a new computing cluster, but specifications and deployment status are not yet publicly listed on the Research Computing 'Cyberinfrastructure' page, so only the verified Pronghorn resources are counted. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UNR's primary documented resource is the 'Pronghorn' cluster. While a newer cluster grant exists, no hardware specs are public yet. Student counts are estimated from degree awards as the university does not publish a live granular enrollment dashboard."
+}

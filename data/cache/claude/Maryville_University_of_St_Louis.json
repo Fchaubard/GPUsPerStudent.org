@@ -1,0 +1,57 @@
+{
+  "university_name": "Maryville University of St. Louis",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.maryville.edu/mpress/maryville-announces-21-million-investment-in-ai-and-new-technologies-amidst-record-growth/",
+      "data_found": "Maryville University has unveiled a substantial $21 million multi-year investment in artificial intelligence (AI) and cutting-edge technologies. This groundbreaking initiative is set to transform the higher education experience to be powered by the latest technology to support student success."
+    },
+    {
+      "url": "https://datausa.io/profile/university/maryville-university-of-saint-louis",
+      "data_found": "There were 9,883 students enrolled at Maryville University of Saint Louis in 2023. The full-time enrollment at Maryville University of Saint Louis is 4,358 and the part-time enrollment is 5,525. The enrolled student population at Maryville University of Saint Louis is 64.1% White, 14.3% Black or African American."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/maryville-university-of-saint-louis/student-life/diversity/",
+      "data_found": "Maryville U total enrollment is approximately 10,979 students. 3,249 are undergraduates and 777 are graduate students."
+    },
+    {
+      "url": "https://online.maryville.edu/online-masters-degrees/artificial-intelligence/",
+      "data_found": "At Maryville University, we know you're brave, and we've got your back. Here, you can learn to use modern, industry-standard tools and programming languages like R, Python, C++, and cloud computing services like Amazon Web Services and Google Colaboratory to build, control, and monitor AI tools and resources."
+    },
+    {
+      "url": "https://computer-science-schools.com/maryville-university-of-saint-louis",
+      "data_found": "Maryville University of Saint Louis is a small not-for-profit college offering many disciplines including computer majors and located in Saint Louis, Missouri. The college was founded in 1872 and is presently offering bachelor's, certificates, and master's degrees in 7 computer programs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 320,
+    "grad_cs_count": 97,
+    "phd_cs_count": 0,
+    "year": "2023",
+    "source_url": "https://www.maryville.edu/mpress/maryville-announces-21-million-investment-in-ai-and-new-technologies-amidst-record-growth/",
+    "notes": "From DataUSA.io for Maryville, MO: Computer Science had 320 degrees awarded and comprised 11.3% of all degrees in 2023. This appears to be primarily undergraduate degrees. Graduate CS enrollment estimated based on the university having master's programs in AI, Software Development, Data Science, and Cybersecurity, but no PhD program found. The university does not offer a PhD in Computer Science. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.maryville.edu/mpress/maryville-announces-21-million-investment-in-ai-and-new-technologies-amidst-record-growth/",
+    "notes": "No GPU cluster or HPC resources documentation was found for Maryville University of St. Louis. The university has made a $21 million investment in AI and technology modernization as of 2024, but specific hardware details were not publicly available. The AI programs appear to leverage cloud services (AWS, Google Colaboratory) rather than on-premises GPU clusters. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Maryville University of St. Louis is a growing private university with strong computer science and AI programs. While they have announced significant investments in AI technology ($21M), no public documentation was found regarding on-premises GPU clusters or HPC resources. Their AI and computer science programs appear to utilize cloud computing platforms (AWS, Google Colaboratory) for computational needs rather than maintaining their own GPU infrastructure."
+}

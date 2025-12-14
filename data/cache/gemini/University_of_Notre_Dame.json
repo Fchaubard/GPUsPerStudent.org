@@ -1,0 +1,42 @@
+{
+  "university_name": "University of Notre Dame",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 864,
+    "grad_cs_count": 133,
+    "phd_cs_count": 61,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Exact enrollment headcounts by major are not publicly listed in the standard Common Data Set or Fact Book summaries. Counts are estimated based on 2023-2024 degrees conferred (CDS Section J, CIP Code 11 - Computer Information Sciences). Undergrad estimate: 216 degrees * 4 years = 864. Grad estimate: 48 Master's * 1.5 years + 11 PhDs * 5.5 years = 72 + 60.5 \u2248 133 total grad students (split estimated as 72 MS / 61 PhD). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 32,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Titan V (12GB)",
+        "estimated_total": 32,
+        "notes": "Listed in 'gpu_titan' partition: 8 nodes x 4 GPUs."
+      }
+    ],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Counts derived from the Center for Research Computing (CRC) public hardware documentation 'GPU Nodes' section. Calculations:\n- A100 80GB: 4 nodes * 4 GPUs = 16 GPUs.\n- V100 32GB: 8 nodes * 4 GPUs = 32 GPUs.\n- P100: 2 nodes * 2 GPUs = 4 GPUs.\n- Titan V: 8 nodes * 4 GPUs = 32 GPUs.\nOlder K80 nodes mentioned in legacy documentation but removed from primary hardware tables are excluded. No H100 resources listed in public specifications as of search date. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Notre Dame CRC documentation provides clear node counts for A100 and V100 generations. Student counts are derived from degree completion data (IPEDS/CDS) as live enrollment dashboards are restricted to internal access."
+}

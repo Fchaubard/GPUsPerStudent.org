@@ -1,0 +1,51 @@
+{
+  "university_name": "Fordham University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1919632",
+      "data_found": "NSF Award #1919632 (2019) 'MRI: Acquisition of a High Performance Computing Cluster': Project description specifies the acquisition of '2 GPU nodes each with 4 NVIDIA V100 GPUs'."
+    },
+    {
+      "url": "https://datausa.io/profile/university/fordham-university",
+      "data_found": "Data USA (latest available IPEDS data): In 2022, Fordham awarded 133 degrees in Computer Information Systems and related fields (General CS + Info Sci). Used for enrollment steady-state validation."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 600,
+    "grad_cs_count": 150,
+    "phd_cs_count": 15,
+    "year": "2023-2024",
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1919632",
+    "notes": "Student counts derived from Fordham News official announcement regarding the department's growth. Undergrad count (~600) aligns with IPEDS data (approx 133 degrees/year * 4.5 years). Grad count explicitly stated as 150 (MS programs). PhD count is estimated at ~15, as the program launched in Fall 2022 with a small inaugural cohort. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 8,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Consumer GPUs (Various)",
+        "estimated_total": null,
+        "notes": "The CIS Robotics and Computer Vision Lab and WISDM Lab utilize workstations with consumer-grade GPUs (likely RTX 3090/4090 class) for student research, but exact inventories are not centrally published."
+      }
+    ],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1919632",
+    "notes": "Fordham is a mid-sized research institution with a centralized HPC resource funded primarily through NSF MRI grants. \n\nCalculations:\n1. Main HPC Cluster (referenced in NSF Award 1919632): 2 nodes * 4 V100 GPUs/node = 8 V100s total.\n\nNote: No public evidence was found of newer A100 or H100 acquisitions in public procurement records or IT announcements as of mid-2024. The university likely supplements on-premise hardware with cloud resources or collaborative access (e.g., NYSERNet) for larger workloads."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Fordham's on-premise GPU footprint is modest, centered around the NSF-funded cluster (V100 era). Student enrollment data is sourced from official university news announcements surrounding the recent launch of the PhD program."
+}

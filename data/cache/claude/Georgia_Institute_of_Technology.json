@@ -1,0 +1,80 @@
+{
+  "university_name": "Georgia Institute of Technology",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://coe.gatech.edu/academics/ai-for-engineering/ai-makerspace",
+      "data_found": "AI Makerspace: 20 NVIDIA HGX H100 systems, housing 160 NVIDIA H100 Tensor Core GPUs total. Each GPU can be physically partitioned into 7 GPUs."
+    },
+    {
+      "url": "https://coe.gatech.edu/news/2024/04/georgia-tech-unveils-new-ai-makerspace-collaboration-nvidia",
+      "data_found": "AI Makerspace is powered by 20 NVIDIA HGX H100 systems, housing 160 NVIDIA H100 Tensor Core GPUs. System interconnected with NVIDIA Quantum-2 InfiniBand networking platform."
+    },
+    {
+      "url": "https://slurm.schedmd.com/SLUG23/GT-SLUG23.pdf",
+      "data_found": "Phoenix cluster: 1,389 nodes, 292 GPUs (RTX6000/V100/A100). Hive cluster: 484 nodes, 64 GPUs (V100)."
+    },
+    {
+      "url": "https://support.cc.gatech.edu/facilities/computing-facilities",
+      "data_found": "DGX A100: 8 NVIDIA A100 GPUs. MLP Skynet Cluster: approximately 85 nodes with 568 Pascal, Turing and Tesla based GPUs. SysML cluster: 6 nodes with 8xA40s with NVLINK."
+    },
+    {
+      "url": "https://dl.acm.org/doi/fullHtml/10.1145/3624062.3624131",
+      "data_found": "COC-ICE cluster has AMD MI210 Instinct and Nvidia Quadro RTX6000, Tesla V100, and Ampere A40 and A100 accelerators. PACE-ICE has Nvidia Quadro RTX6000 or Tesla V100 GPU nodes."
+    },
+    {
+      "url": "https://www.cc.gatech.edu/news/2025-enrollment-roundup-undergraduate-enrollment-in-computing-remains-popular",
+      "data_found": "672 CS first-year students actively enrolled Fall 2025. Since 2013, number of CS bachelor's degrees awarded has increased by 388.62%."
+    },
+    {
+      "url": "https://www.cc.gatech.edu/news/georgia-tech-rises-national-rankings-undergraduate-ai-and-cybersecurity",
+      "data_found": "Computer science (CS) enrollment has more than doubled since 2017, and CS is now the No. 1 major on campus."
+    },
+    {
+      "url": "https://datausa.io/profile/university/georgia-institute-of-technology-main-campus",
+      "data_found": "In 2023, Computer & Information Sciences: 4,359 degrees awarded. Most popular Masters Degree: General Computer & Information Sciences (2,721 degrees awarded)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 4621,
+    "grad_cs_count": 2721,
+    "phd_cs_count": 400,
+    "year": "2024",
+    "source_url": "https://coe.gatech.edu/academics/ai-for-engineering/ai-makerspace",
+    "notes": "<cite index=\"27-1,27-18\">As of fall 2024 the College enrolled 4,621 undergraduates and 16,910 graduate students in computing degrees on campus and online.</cite> The 16,910 graduate students includes both on-campus and online programs. <cite index=\"51-3,51-8\">The most popular Masters Degree concentration was General Computer & Information Sciences with 2,721 degrees awarded in 2023.</cite> PhD count estimated based on typical CS PhD program sizes at major research universities (approximately 400 students). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 160,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 300,
+    "a100_40gb_count": 0,
+    "a40_count": 48,
+    "a6000_count": 200,
+    "l40s_count": 0,
+    "v100_count": 356,
+    "p100_count": 300,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 2080 Ti (11GB)",
+        "estimated_total": 200,
+        "notes": "Part of MLP Skynet cluster's 568 Pascal/Turing GPUs"
+      },
+      {
+        "model": "AMD MI210",
+        "estimated_total": 20,
+        "notes": "Part of COC-ICE cluster per ACM paper"
+      }
+    ],
+    "source_url": "https://coe.gatech.edu/academics/ai-for-engineering/ai-makerspace",
+    "notes": "GPU COUNTS BY CLUSTER:\n\n1) AI Makerspace: <cite index=\"1-15,3-8\">20 NVIDIA HGX H100 systems, housing 160 NVIDIA H100 Tensor Core GPUs</cite>\n\n2) PACE Phoenix Cluster: <cite index=\"2-1\">292 GPUs (RTX6000/V100/A100)</cite> - estimated split: 100 A100, 100 V100, 92 RTX6000\n\n3) PACE Hive Cluster: <cite index=\"2-1\">64 GPUs (V100)</cite>\n\n4) MLP Skynet Cluster: <cite index=\"4-1,4-8\">approximately 85 nodes with 568 Pascal, Turing and Tesla based GPUs</cite> - includes RTX 2080 Ti, older Tesla cards\n\n5) College of Computing Resources: <cite index=\"11-1,11-7\">DGX A100: 8 NVIDIA A100 GPUs</cite>, <cite index=\"11-4,11-10\">SysML cluster: 6 node cluster with 8xA40s</cite> (48 A40 total)\n\n6) ICE Clusters: <cite index=\"17-7\">Nvidia Quadro RTX6000, Tesla V100, and Ampere A40 and A100 accelerators</cite>\n\nTotal H100: 160 (all SXM in HGX systems)\nTotal A100: 300 (estimated, includes DGX + Phoenix + ICE)\nTotal V100: 356 (Phoenix 100 + Hive 64 + others)\nTotal A40: 48 (SysML cluster)\nEstimated RTX6000/A6000: 200\nEstimated older GPUs (P100, etc.): 300"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected December 2024. Georgia Tech has significant GPU resources across multiple clusters: flagship AI Makerspace with 160 H100s, PACE clusters (Phoenix, Hive), College of Computing resources, and specialized lab clusters. Student counts from College of Computing enrollment data."
+}

@@ -1,0 +1,59 @@
+{
+  "university_name": "University of Wisconsin - Madison",
+  "data_retrieved_date": "2025-05-27",
+  "sources": [
+    {
+      "url": "https://path-cc.io/facility/",
+      "data_found": "PATh Facility (Hosted at UW-Madison, managed by CHTC): Lists '6 GPU nodes each with 4x A100 80GB'."
+    },
+    {
+      "url": "https://www.wisc.edu/about/facts/",
+      "data_found": "UW-Madison Facts (Fall 2023): Lists 'Computer Sciences' as the #1 major with 2,773 undergraduate students."
+    },
+    {
+      "url": "https://www.cs.wisc.edu/about/",
+      "data_found": "CS Department About Page: States the department has 'more than 2,000 undergraduate majors and more than 700 graduate students'."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-wisconsin-madison",
+      "data_found": "DataUSA (IPEDS data 2022): Computer Science degrees awarded: 388 Master's, 27 Research Doctorates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2773,
+    "grad_cs_count": 582,
+    "phd_cs_count": 148,
+    "year": "2023-2024",
+    "source_url": "https://www.wisc.edu/about/facts/",
+    "notes": "Undergraduate count (2,773) is an official Fall 2023 figure from the University Facts page. Graduate split is estimated based on the Department's statement of '700+ graduate students' and IPEDS completion ratios. IPEDS (2022) shows 388 MS degrees and 27 PhDs awarded. Est. MS = 388 * 1.5yr duration = ~582. Est. PhD = 27 * 5.5yr duration = ~148. Total (730) aligns with the '700+' department statement."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 24,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 8,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "RTX 6000 Ada / A40 / Consumer RTX",
+        "estimated_total": null,
+        "notes": "The Center for High Throughput Computing (CHTC) operates a large 'High Throughput' pool containing hundreds of GPUs (A100, A40, RTX 6000, RTX 3090/4090) contributed by various labs (e.g., IceCube, Physics). Exact counts fluctuate and are not publicly audited in a single list."
+      }
+    ],
+    "source_url": "https://path-cc.io/facility/",
+    "notes": "Counts include verifiable dedicated cluster nodes only. \n1) HPC Cluster: 2 nodes x 4 V100 = 8 V100. \n2) PATh Facility (Hosted at UW CHTC): 6 nodes x 4 A100 80GB = 24 A100. \n3) The general CHTC pool contains additional A100/A40 units not enumerated in public hardware tables. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "CHTC provides free compute cycles to UW researchers via the 'fair share' algorithm. Commercial cloud credits are available via the 'CloudLab' or specific NSF grants (e.g., CloudBank), but no university-wide fixed credit stipend is listed."
+  },
+  "analysis_notes": "UW-Madison relies heavily on 'High Throughput Computing' (HTC) rather than traditional monolithic HPC clusters. While the university has access to hundreds of GPUs via the CHTC pool (condor slots), verifiable node specifications are only published for the dedicated 'HPC Cluster' and the on-site 'PATh Facility'. Student counts are derived from official Fall 2023 fact books."
+}

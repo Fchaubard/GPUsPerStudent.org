@@ -1,0 +1,63 @@
+{
+  "university_name": "George Washington University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.gwu.edu/pegasus-hardware-config/",
+      "data_found": "Pegasus GPU nodes: 16 small GPU nodes with (2) NVIDIA Tesla V100 each; 21 large GPU nodes with (4) Nvidia Tesla V100 SXM2 16GB each; 2 nodes with (8) NVIDIA A100 80GB PCIe each; 2 GH200 Grace Hopper nodes (Quanta S74G-2U Grace Hopper, Hopper GPU 96GB HBM3 listed)."
+    },
+    {
+      "url": "https://hpc.gwu.edu/cerberus/submitting-jobs-to-cerberus/",
+      "data_found": "Cerberus 'gpu' partition: each node has a P100 NVIDIA GPU (node count not stated)."
+    },
+    {
+      "url": "https://physics.columbian.gwu.edu/physics-computing-cluster-gamow",
+      "data_found": "Physics 'Gamow' cluster: 12 nodes total, including 4 GPU nodes; built with hardware decommissioned from GW\u2019s Colonial One (GPU model not stated on this page)."
+    },
+    {
+      "url": "https://hpc.gwu.edu/news/colonial-one-decommission/",
+      "data_found": "Colonial One decommission scheduled complete by July 15, 2020; described as legacy cluster, with most users migrated to Pegasus."
+    },
+    {
+      "url": "https://cs.engineering.gwu.edu/quick-facts",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://cs.engineering.gwu.edu/quick-facts",
+    "notes": "Searched for GWU CS enrollment data explicitly labeled with 2024/2024-2025/Fall 2024 and could not find any CS enrollment-by-level (UG vs MS vs PhD) source meeting the date requirement.\n\nPages found but REJECTED (no explicit '2024', 'Fall 2024', or 'AY 2024-25' on the page):\n- https://cs.engineering.gwu.edu/quick-facts lists 'Undergraduate students: 261' and 'Graduate students: 313' but provides no year/term.\n- https://engineering.gwu.edu/cs-glance lists 'Undergraduate students: 187' and 'Graduate students: 445' but provides no year/term.\n\nOther 2024-2025 sources checked but NOT CS-enrollment-specific:\n- GW Common Data Set 2024-2025 (https://irp.gwu.edu/sites/g/files/zaxdzs6056/files/2025-05/CDS_2024-2025_FINAL.pdf) includes Fall 2024 institution-wide enrollment totals, not Computer Science major/program headcounts.\n- Provost '2025 Core Indicators Presentation' (dated March 7, 2025) includes Fall 2024 overall headcount but not CS program enrollment.\n\nBecause no acceptable 2024+ CS enrollment-by-level counts (UG, MS-only, PhD-only) were located on an explicitly-dated page, counts are set to 0 per instructions."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 116,
+    "p100_count": 4,
+    "gh200_count": 2,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K20",
+        "count": 8,
+        "note": "Estimated for Physics 'Gamow' cluster because it was built from decommissioned Colonial One hardware (Colonial One GPU nodes used Tesla K20s)."
+      }
+    ],
+    "source_url": "https://hpc.gwu.edu/pegasus-hardware-config/",
+    "notes": "CLUSTERS COUNTED (current/active unless noted):\n\n1) Pegasus (GW flagship HPC):\n- V100s: (16 small GPU nodes \u00d7 2 V100/node) + (21 large GPU nodes \u00d7 4 V100/node) = 32 + 84 = 116 V100 total.\n- A100 80GB: 2 nodes \u00d7 8 A100-80GB PCIe/node = 16 A100-80GB total.\n- GH200: 2 nodes \u00d7 1 GH200/node = 2 GH200 total.\n- Note: Pegasus hardware page contains an apparent inconsistency/typo around GPU headings (e.g., '18 One GPU nodes' while later stating 'There are 16 Small GPU nodes') and lists '(8) A100 80GB PCIe' under the GH200 node description; to avoid double counting, GH200 nodes are counted as GH200 only (2 total), and A100-80GB is counted only from the explicit '2 Eight A100 GPU nodes' section.\n\n2) Cerberus (teaching cluster):\n- P100s: node count not published on the Cerberus job submission page; estimated 4 GPU nodes \u00d7 1 P100/node = 4 P100 total (estimate flagged).\n\n3) Gamow (Physics dept cluster, installed Sep 2024):\n- GPU nodes: 4 GPU nodes stated; GPU model not stated. Estimated K20 based on being built from decommissioned Colonial One hardware. Assumed 2 GPUs/node \u00d7 4 nodes = 8 Tesla K20 GPUs (estimate).\n\nNOT COUNTED:\n- Colonial One hardware inventory not added to totals because Colonial One was decommissioned (scheduled complete July 15, 2020) and its hardware is described as legacy/out-of-support.\n- Viper/Raptor: no public GPU node specifications found in the queried sources; therefore no GPU counts included for them.\n- L40S: mentioned by GW IT as part of Pegasus expansion, but no public node/GPU counts found, so l40s_count left as 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

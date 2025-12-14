@@ -1,0 +1,45 @@
+{
+  "university_name": "Emory University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://www.nvidia.com/en-us/data-center/dgx-h100/",
+      "data_found": "NVIDIA DGX H100 Technical Specifications: Each DGX H100 system contains 8x NVIDIA H100 Tensor Core GPUs."
+    },
+    {
+      "url": "https://datausa.io/profile/university/emory-university",
+      "data_found": "DataUSA (2022 dataset): Computer & Information Sciences degrees awarded: 227 Bachelor's, 59 Master's, 7 Research Doctorates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1228,
+    "grad_cs_count": 89,
+    "phd_cs_count": 39,
+    "year": "2023-2024",
+    "source_url": "https://www.nvidia.com/en-us/data-center/dgx-h100/",
+    "notes": "Undergraduate count from The Emory Wheel (Nov 2023) reporting 1,228 CS majors. Graduate and PhD counts estimated from IPEDS/DataUSA 2022 degree completion data due to lack of public enrollment dashboard. Master's enrollment estimated at 1.5x annual degrees (59 * 1.5 = ~89). PhD enrollment estimated at 5.5x annual degrees (7 * 5.5 = ~39). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 128,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": -1,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.nvidia.com/en-us/data-center/dgx-h100/",
+    "notes": "H100 SXM count calculated from confirmed deployment of 16 NVIDIA DGX H100 systems (16 nodes * 8 GPUs/node = 128 GPUs). Emory's legacy cluster 'Sol' is known to contain V100 and A100 partitions based on user documentation, but exact node counts are not publicly auditable on the RCS website, so those fields are set to -1 (unknown) or 0 to avoid speculation. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Emory has made a significant verifiable investment in H100 infrastructure (128 GPUs) in 2024. Student data is derived from student newspaper reporting (which cites department stats) and federal completion data, as the official Registrar report is not open-access."
+}

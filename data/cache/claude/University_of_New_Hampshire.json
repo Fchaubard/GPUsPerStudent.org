@@ -1,0 +1,55 @@
+{
+  "university_name": "University of New Hampshire",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://premise.sr.unh.edu/",
+      "data_found": "Premise cluster GPU specifications: Nine compute nodes each contain two NVIDIA k80 GPU cards (9 \u00d7 2 = 18 K80 GPUs). One compute node contains a single NVIDIA v100 GPU card. Fourteen compute nodes each contain a single NVIDIA a100 GPU card. Performance calculations mention 1 h100 GPU node with 30 TFlops. Total 26 nodes have GPUs out of 70 total compute nodes."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-new-hampshire-college-of-engineering-and-physical-sciences-department-of-computer-science-000_10027407.aspx",
+      "data_found": "87 Total Graduate Students in Computer Science department. 66% International Breakout. 176 Applied, 113 Accepted, 27 Enrolled."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-new-hampshire-main-campus",
+      "data_found": "In 2023, 3,916 degrees were awarded across all undergraduate and graduate programs at University of New Hampshire-Main Campus. Most popular Bachelors concentrations included General Business Administration (618 degrees), General Psychology (211 degrees)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 400,
+    "grad_cs_count": 70,
+    "phd_cs_count": 17,
+    "year": "2024",
+    "source_url": "https://www.petersons.com/graduate-schools/university-of-new-hampshire-college-of-engineering-and-physical-sciences-department-of-computer-science-000_10027407.aspx",
+    "notes": "Graduate CS count based on Peterson's data showing 87 total graduate students in CS department. PhD count estimated from typical PhD cohort size (approximately 20% of graduate students). Undergraduate CS count estimated based on typical CS department sizes at similarly-sized state universities with ~11,365 undergrads, assuming approximately 3.5% CS majors."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 1,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 14,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 1,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80 (2x12GB)",
+        "estimated_total": 18,
+        "notes": "9 nodes \u00d7 2 K80 GPUs per node = 18 K80 GPUs total. K80 is dual-GPU card with 24GB total VRAM."
+      }
+    ],
+    "source_url": "https://premise.sr.unh.edu/",
+    "notes": "PREMISE CLUSTER GPU CALCULATIONS:\n- K80 GPUs: 9 nodes \u00d7 2 GPUs/node = 18 K80 GPUs\n- V100 GPUs: 1 node \u00d7 1 GPU = 1 V100\n- A100 GPUs: 14 nodes \u00d7 1 GPU = 14 A100 (assumed 80GB variant as specific memory not stated)\n- H100 GPUs: 1 node \u00d7 1 GPU = 1 H100 (mentioned in performance calculations)\n\nTotal GPU nodes: 26 out of 70 total compute nodes in Premise cluster."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UNH operates the Premise HPC cluster with 70 compute nodes total, 26 of which have GPUs. The cluster uses a condo compute model where researchers can buy nodes. GPU resources include older generation K80s as well as newer A100 and a single H100. Student enrollment data shows moderate CS program size appropriate for a state university of UNH's size."
+}

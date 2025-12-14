@@ -1,0 +1,47 @@
+{
+  "university_name": "University of Missouri - Kansas City",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-missouri-kansas-city",
+      "data_found": "2022 Degrees Awarded in Computer & Information Sciences: 147 Bachelor's degrees, 282 Master's degrees, 6 Research Doctorates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 588,
+    "grad_cs_count": 423,
+    "phd_cs_count": 30,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/university-of-missouri-kansas-city",
+    "notes": "Official enrollment headcounts by specific major are not published on public UMKC pages. Counts are estimated from DataUSA/IPEDS 2022 degree completion data. Undergrad estimated as 147 degrees awarded * 4 years = 588. Masters estimated as 282 degrees awarded * 1.5 years = 423. PhD estimated as 6 degrees awarded * 5 years = 30."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 104,
+    "a100_40gb_count": 6,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 40,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA K40m / K20m",
+        "estimated_total": null,
+        "notes": "Legacy GPUs present in the older 'Lewis' cluster partitions, count not prioritized for modern AI compute."
+      }
+    ],
+    "source_url": "https://datausa.io/profile/university/university-of-missouri-kansas-city",
+    "notes": "UMKC utilizes the University of Missouri System shared Research Cyberinfrastructure (RCI). The primary resources listed here (Hellbender and Lewis clusters) are physically managed by MU RCI but are the official HPC resources for UMKC researchers.\n\nCALCULATIONS:\n1. Hellbender Cluster:\n- Standard GPU Nodes: 24 nodes * 4 A100 (80GB) = 96\n- Large Mem GPU Nodes: 2 nodes * 4 A100 (80GB) = 8\n- Interactive GPU Nodes: 3 nodes * 2 A100 (40GB) = 6\nTotal A100 80GB = 104. Total A100 40GB = 6.\n\n2. Lewis Cluster:\n- GPU partition: 20 nodes * 2 V100 = 40 V100. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UMKC relies on the UM System shared infrastructure (Hellbender/Lewis). No purely UMKC-owned large-scale cluster was found in public documentation, though the School of Science and Engineering likely has smaller isolated lab servers not listed in central audit logs. Student counts are derived from IPEDS completions due to lack of public enrollment grid."
+}

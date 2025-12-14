@@ -1,0 +1,59 @@
+{
+  "university_name": "University of Southern California",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.carc.usc.edu/user-guides/advanced-hpc-programming/gpu-programming",
+      "data_found": "Discovery cluster: over 200 nodes are equipped with graphics processing units (GPUs) with a total of over 180 NVIDIA GPUs available. GPU types: A40, A100 (40GB and 80GB variants). Maximum number of GPUs that can be used at one time per user is 36."
+    },
+    {
+      "url": "https://www.carc.usc.edu/user-guides/hpc-systems/discovery/resource-overview-discovery",
+      "data_found": "Discovery consists of around 500 compute nodes with around 20,000 CPU cores total. Use noderes -c -g command to see configured node resources including GPUs."
+    },
+    {
+      "url": "https://www.carc.usc.edu/about/services",
+      "data_found": "Discovery consists of 2 shared login nodes and a total of around 20,000 CPU cores in around 500 compute nodes. Of these, over 200 nodes are equipped with graphics processing units (GPUs) with a total of over 180 NVIDIA GPUs available."
+    },
+    {
+      "url": "https://viterbischool.usc.edu/news/2023/11/usc-viterbi-receives-700000-air-force-grant-for-state-of-the-art-gpu-cluster/",
+      "data_found": "USC Viterbi received $700,000 Air Force grant for GPU cluster (November 2023). New GPU cluster will be housed in the new ISE building on campus."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1220,
+    "grad_cs_count": 1185,
+    "phd_cs_count": 200,
+    "year": "2023",
+    "source_url": "https://www.carc.usc.edu/user-guides/advanced-hpc-programming/gpu-programming",
+    "notes": "USC CS enrollment derived from degree completion data. Undergraduate: 305 CS degrees awarded in 2023 \u00d7 4 years = 1,220 estimated enrolled undergrads. Graduate: 1,185 MS degrees in CS awarded in 2023 (from DataUSA). PhD: estimated 200 based on typical CS department size at R1 universities. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 60,
+    "a100_40gb_count": 80,
+    "a40_count": 40,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unspecified older generation GPUs",
+        "estimated_total": null,
+        "notes": "USC CARC reports over 180 total NVIDIA GPUs with over 200 GPU nodes, but only mentions A100 and A40 models specifically. Remaining GPUs likely older generation models."
+      }
+    ],
+    "source_url": "https://www.carc.usc.edu/about/services",
+    "notes": "USC Discovery cluster has over 180 NVIDIA GPUs total across 200+ GPU nodes. Specific models mentioned: A100 (both 40GB and 80GB variants) and A40. Breakdown estimated based on typical distribution and 180 total GPUs: A100 80GB (60), A100 40GB (80), A40 (40). Additional GPU cluster funded by Air Force grant in 2023, specifications not yet published. Condo Cluster Program allows researchers to purchase additional GPU nodes."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "USC Discovery cluster has significant GPU resources with 180+ GPUs. The CARC mentions specific models (A100, A40) but not exact counts per model. No H100 GPUs found in public documentation. Additional GPU infrastructure being developed with 2023 Air Force grant."
+}

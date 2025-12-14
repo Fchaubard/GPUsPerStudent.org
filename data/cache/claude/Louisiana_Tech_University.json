@@ -1,0 +1,59 @@
+{
+  "university_name": "Louisiana Tech University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "http://hpc.loni.org/resources/hpc/system.php?system=QB2",
+      "data_found": "QB2 is a 1.5 Petaflop peak performance cluster containing 504 compute nodes with 960 NVIDIA Tesla K20x GPUs. As of March 2020, 128 QB2 compute nodes were retired, leaving 376 active nodes."
+    },
+    {
+      "url": "http://hpc.loni.org/resources/hpc/system.php?system=DeepBayou",
+      "data_found": "Deep Bayou is a 13-node GPU cluster with each node equipped with at least two NVIDIA V100S GPUs. Two compute nodes have four NVIDIA V100S GPUs connected by NVLink. Total: 26+ NVIDIA V100S GPUs."
+    },
+    {
+      "url": "https://loni.laregents.edu/wp-content/uploads/LONI-Cyberinfrastructure-Plan-2023-02-27.pdf",
+      "data_found": "QB3 features 193 GB to 1.5 TB RAM per node, 8 pairs of NVIDIA V100 GPUs. LONI members include Louisiana Tech University."
+    },
+    {
+      "url": "https://datausa.io/profile/university/louisiana-tech-university",
+      "data_found": "Total enrollment at Louisiana Tech University in 2023: 11,427 students. Most common industries for degree holders include Computer Systems Design (468,821 people)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 372,
+    "grad_cs_count": 93,
+    "phd_cs_count": 31,
+    "year": "2024",
+    "source_url": "http://hpc.loni.org/resources/hpc/system.php?system=QB2",
+    "notes": "CS enrollment estimated from: 1) College of Engineering & Science total enrollment of 3,100 students (Fall 2024); 2) Computer Science showing 19.3% growth; 3) Historical data showing CS was 3rd most popular major with 63 bachelor's degrees in 2016. With COES being 22.9% of total enrollment and CS being a major program within COES, estimated CS represents ~16% of COES enrollment = 496 total CS students. Split estimated as 75% undergrad (372), 18.75% MS (93), 6.25% PhD (31) based on typical university distributions. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 16,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K20x",
+        "estimated_total": 720,
+        "notes": "Louisiana Tech has access to LONI QB2 cluster with 960 total K20x GPUs (6GB each). Assuming proportional access based on LONI membership, estimate ~720 GPU-hours accessible."
+      }
+    ],
+    "source_url": "http://hpc.loni.org/resources/hpc/system.php?system=DeepBayou",
+    "notes": "Louisiana Tech University does not appear to have its own dedicated GPU cluster. However, as a LONI member institution, Louisiana Tech has access to shared LONI HPC resources including: 1) QB2: ~720 NVIDIA Tesla K20x GPUs (proportional share of 960 total); 2) Deep Bayou: Access to 26+ NVIDIA V100S GPUs; 3) QB3: Access to 16 NVIDIA V100 GPUs (8 pairs). Actual GPU counts available to Louisiana Tech researchers depend on allocation and usage policies within LONI system. Local Louisiana Tech GPU resources not found in available documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Louisiana Tech University relies primarily on shared LONI (Louisiana Optical Network Infrastructure) HPC resources rather than maintaining its own large GPU cluster. Student counts estimated from enrollment growth data and program statistics."
+}

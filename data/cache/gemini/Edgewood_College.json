@@ -1,0 +1,45 @@
+{
+  "university_name": "Edgewood College",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=Edgewood+College&s=all&id=238664",
+      "data_found": "NCES College Navigator (2023-2024 Data): Under 'Programs/Majors' > 'Computer and Information Sciences and Support Services', lists 11 Bachelor's degrees awarded. Lists 0 Master's and 0 Doctoral degrees in this field."
+    },
+    {
+      "url": "https://www.edgewood.edu/academics/programs/computer-information-systems/",
+      "data_found": "Academic program page for 'Computer Information Systems'. Describes the major as focusing on software development, web design, and networking. Mentions access to 'computer labs' but no mentions of High Performance Computing (HPC) or GPU clusters."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 44,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Edgewood+College&s=all&id=238664",
+    "notes": "Edgewood College does not publish a live enrollment dashboard broken down by major. Counts are estimated based on verifiable degree completion data from the National Center for Education Statistics (NCES/IPEDS). For the most recent reported year (2023), Edgewood awarded 11 Bachelor's degrees in Computer and Information Sciences. Assuming a standard 4-year duration and steady enrollment, the estimated undergraduate CS population is 11 * 4 = 44. NCES reports 0 Master's and 0 PhD completions in this field, and the college website does not list a graduate CS program."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.edgewood.edu/academics/programs/computer-information-systems/",
+    "notes": "Edgewood College is a small liberal arts institution with no evidence of a dedicated Research Computing / HPC department or on-premise GPU cluster. Searches for 'Edgewood College HPC', 'Edgewood College GPU cluster', and 'Edgewood College Supercomputer' yield zero results. Computing resources appear limited to standard instructional computer labs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No evidence of cloud compute credits or research computing grants found publicly."
+  },
+  "analysis_notes": "Edgewood College is a small liberal arts school (approx. 1,200 undergrads). It does not maintain the infrastructure for high-performance computing. Student counts are derived from federal graduation data (IPEDS/NCES) as the college does not publish granular enrollment reports."
+}

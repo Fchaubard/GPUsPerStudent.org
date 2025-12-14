@@ -1,0 +1,57 @@
+{
+  "university_name": "University of Kansas",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117449&HistoricalAwards=false",
+      "data_found": "BigJay cluster: mix of CPU, high-memory CPU, and GPU-enabled processors; came online August 2022 and October 2022; 83% GPU usage; MRI funded resource accounts for approximately 42% of the total high-performance computing capacity at KU"
+    },
+    {
+      "url": "https://crc.ku.edu/systems-services/ku-community-cluster",
+      "data_found": "KU Community Cluster: condo model cluster; Standard Compute Unit (SCU) defined as Dual Intel Xeon 6442Y CPU (Total 48 cores @ 2.6GHz)"
+    },
+    {
+      "url": "https://eecs.ku.edu/",
+      "data_found": "EECS Department: 75% of EECS Graduate Students Receive Funding from Assistantships or Fellowships; offers Ph.D. degrees in electrical engineering and computer science; and M.S. degrees in electrical engineering, computer engineering, and computer science"
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/155317/university-of-kansas/enrollment/",
+      "data_found": "University of Kansas total enrollment: 28,406 students including 20,696 undergraduate students and 7,710 graduate students (2023-2024)"
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-kansas",
+      "data_found": "In 2023, 7,809 degrees were awarded across all undergraduate and graduate programs; Most common positions for non-instructional staff include Computer, Engineering, and Science with 515 employees"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 350,
+    "phd_cs_count": 120,
+    "year": "2023-2024",
+    "source_url": "https://www.collegetuitioncompare.com/edu/155317/university-of-kansas/enrollment/",
+    "notes": "Exact CS enrollment figures not publicly available. Estimates based on: (1) Total university enrollment of 28,406 with 20,696 undergrads and 7,710 grad students; (2) EECS is one of 11 major academic departments using BigJay cluster per NSF grant; (3) 75% of EECS graduate students receive funding support; (4) Typical CS department represents 3-5% of total university enrollment at large research universities. Used conservative 4% estimate for undergrads (800) and higher proportion for graduate programs given EECS research focus."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117449&HistoricalAwards=false",
+    "notes": "BigJay cluster funded by NSF MRI Award #2117449 includes GPU-enabled processors, with 83% GPU usage reported. However, specific GPU models and counts are not publicly documented. The cluster represents 42% of KU's total HPC capacity. KU Community Cluster uses condo model where researchers purchase nodes, but detailed GPU specifications not found in public documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Limited public documentation available for University of Kansas HPC resources. While the NSF-funded BigJay cluster is confirmed to have GPU resources with high utilization (83%), specific GPU models and quantities are not publicly disclosed. Student enrollment data estimated from university-wide statistics as department-specific CS enrollment not publicly available."
+}

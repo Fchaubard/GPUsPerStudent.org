@@ -1,0 +1,49 @@
+{
+  "university_name": "Central Michigan University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.merit.edu/about/news/cmu-uses-technology-to-pursue-advanced-research/",
+      "data_found": "Mentions Central Michigan University (CMU) Center for High Performance Scientific Computing (CHiPS) Beowulf-type cluster comprised of 20 dual Alpha EV6 workstations; no GPUs are mentioned and no GPU specifications are provided."
+    },
+    {
+      "url": "https://www.cmich.edu/offices-departments/office-information-technology/oit-organization-structure",
+      "data_found": "Describes CMU Office of Information Technology (OIT) 'Academic and Research Computing' team responsibilities; does not list any HPC/GPU cluster names, node counts, or GPU models."
+    },
+    {
+      "url": "https://www.cmich.edu/docs/default-source/academic-affairs-division/academic-administration/academic-planning-analysis/reports-%28public%29/enrollment-reports/overall/fall_2020_misc_statse6f7f7e7-2044-492c-8517-785075da1a1f.pdf?sfvrsn=474681f8_33",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.cmich.edu/docs/default-source/academic-affairs-division/academic-administration/academic-planning-analysis/reports-%28public%29/enrollment-reports/overall/fall_2020_misc_statse6f7f7e7-2044-492c-8517-785075da1a1f.pdf?sfvrsn=474681f8_33",
+    "notes": "Searched CMU sources for Fall 2024 / AY 2024-2025 Computer Science (major-level) student headcount (undergrad, MS, PhD). CMU Academic Planning & Analysis provides an official Fall End-of-Semester Enrollment Statistics PDF that explicitly includes 2024 totals (overall university headcount and undergraduate/graduate totals) and is dated 'January 2025', but it does NOT break enrollment down by major/department (e.g., Computer Science). CMU\u2019s 2024-2025 Common Data Set PDF also reports overall enrollment as of Oct 15, 2024, but likewise does not provide enrollment by major. CMU Program Reports are limited to degrees conferred and intended majors of first-time freshmen (Power BI) rather than total current majors. Because no publicly accessible CMU page found with an explicit Fall 2024 / AY 2024-2025 Computer Science major enrollment count, all CS counts are set to 0 (unknown/unavailable)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.merit.edu/about/news/cmu-uses-technology-to-pursue-advanced-research/",
+    "notes": "Using the requested searches, no publicly accessible Central Michigan University GPU cluster specification pages were found (no cluster names with nodes \u00d7 GPUs_per_node details, and no H100/A100/V100/P100/A6000/L40S counts). The only identified CMU 'cluster' reference (CHiPS) describes CPU-only Alpha workstations with no GPUs. Therefore totals for all GPU models are set to 0 and no per-cluster multiplication can be performed."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

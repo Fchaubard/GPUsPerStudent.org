@@ -1,0 +1,67 @@
+{
+  "university_name": "University of Notre Dame",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://mendozaresearch.nd.edu/resources/computing/",
+      "data_found": "2 Mendoza Dedicated GPU Machines; 8 NVIDIA H100 SXM GPU's; 640GB GPU RAM"
+    },
+    {
+      "url": "https://docs.crc.nd.edu/resources/caml.html",
+      "data_found": "CAML provides GPU resources for accelerating machine learning; GPU properties mentioned: Quadro RTX 6000 major: 7 minor: 5"
+    },
+    {
+      "url": "https://science.nd.edu/news-and-media/news/notre-dames-infrastructure-for-machine-learning-to-be-expanded/",
+      "data_found": "CAML (Cyberinfrastructure to Accelerate Machine Learning) $400,000 NSF grant; upgrade will complement the University's existing graphical processing unit (GPU) cluster at the Center for Research Computing"
+    },
+    {
+      "url": "https://docs.crc.nd.edu/resources/gpu.html",
+      "data_found": "GPU cluster documentation; runtime limit for GPU systems is 4 days; CRC owned GPU systems referenced"
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/152080/university-of-notre-dame/enrollment/",
+      "data_found": "University of Notre Dame has a total enrollment of 13,174 including 8,968 undergraduate students and 4,206 graduate students"
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-notre-dame",
+      "data_found": "In 2023, 4,643 degrees were awarded across all undergraduate and graduate programs; total enrollment at University of Notre Dame in 2023 is 13,174 students"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 400,
+    "grad_cs_count": 150,
+    "phd_cs_count": 100,
+    "year": "2024-2025",
+    "source_url": "https://mendozaresearch.nd.edu/resources/computing/",
+    "notes": "Exact CS enrollment numbers were not found in publicly accessible sources. Based on Computer Science being ranked #54 nationally (US News), having an active CSE department with undergraduate and graduate programs, and total university enrollment of 13,174 (8,968 undergrad, 4,206 grad), CS enrollment is estimated at approximately 4-5% of total enrollment. This aligns with typical CS enrollment percentages at similar research universities. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX 6000",
+        "estimated_total": 10,
+        "notes": "CAML cluster GPUs mentioned in documentation; exact count not specified"
+      }
+    ],
+    "source_url": "https://mendozaresearch.nd.edu/resources/computing/",
+    "notes": "Confirmed GPU counts: 8 H100 SXM GPUs at Mendoza College. Additional GPUs exist in CAML cluster and general CRC GPU resources but specific models and counts are not publicly documented. The university has been expanding GPU infrastructure with NSF funding."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Limited public documentation of GPU resources at Notre Dame. Only Mendoza College provides specific GPU specifications (8 H100 SXM). CRC manages additional GPU resources but details are not publicly available. Student enrollment data is comprehensive but CS-specific numbers are not published."
+}

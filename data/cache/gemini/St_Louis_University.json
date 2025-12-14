@@ -1,0 +1,45 @@
+{
+  "university_name": "St. Louis University",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [
+    {
+      "url": "https://catalog.slu.edu/colleges-schools/science-engineering/computer-science/computer-science-ms/",
+      "data_found": "Computer Science, M.S. Program Overview: Describes the curriculum and research thesis options, indicating an active graduate research program."
+    },
+    {
+      "url": "https://datausa.io/profile/university/saint-louis-university",
+      "data_found": "DataUSA (IPEDS data): In 2022, SLU awarded 41 Computer Science degrees (Bachelor's) and 14 Computer Science Master's degrees. (Used for graduate program size estimation)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 201,
+    "grad_cs_count": 30,
+    "phd_cs_count": 5,
+    "year": "2023-2024",
+    "source_url": "https://catalog.slu.edu/colleges-schools/science-engineering/computer-science/computer-science-ms/",
+    "notes": "Undergraduate count (201) is precise from the SLU ABET Accreditation/Assessment page for the B.S. in Computer Science (Fall 2023). Does not include B.A. students if tracked separately. Graduate counts are estimated based on degree conferrals reported via IPEDS/DataUSA (approx. 14 MS degrees/year -> ~30 enrolled assuming 2-year duration; PhD count estimated <10 based on program size relative to peers). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://catalog.slu.edu/colleges-schools/science-engineering/computer-science/computer-science-ms/",
+    "notes": "Specific GPU node counts and models for St. Louis University are not publicly listed on open web pages. While the university confirms the existence of an 'HPC environment' with 'GPU nodes' (likely for the Taylor Geospatial Institute collaboration or general research), the technical specifications are behind login-protected wikis (wikis.slu.edu) or internal service catalogs. No public press releases regarding H100/A100 acquisitions were found. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "SLU publishes precise undergraduate B.S. enrollment data for ABET accreditation. However, detailed HPC hardware specifications are not public facing; they are likely contained within internal documentation or shared via the Taylor Geospatial Institute partnership, details of which are not itemized by university on public pages."
+}

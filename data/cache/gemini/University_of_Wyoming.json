@@ -1,0 +1,57 @@
+{
+  "university_name": "University of Wyoming",
+  "data_retrieved_date": "2025-05-28",
+  "sources": [
+    {
+      "url": "https://www.uwyo.edu/arcc/resources/hpc-clusters.html",
+      "data_found": "Medicine Bow Cluster: Describes the system as the primary research cluster."
+    },
+    {
+      "url": "https://arccwiki.uwyo.edu/index.php/Medicine_Bow",
+      "data_found": "Medicine Bow Specifications: Lists 'GPU Nodes' as 20 nodes with 2x NVIDIA Tesla V100 GPUs each; and 'Big GPU Nodes' (quantity 2) with 2x NVIDIA Tesla V100 GPUs each."
+    },
+    {
+      "url": "https://www.uwyo.edu/oia/student-statistics.html",
+      "data_found": "OIA Standard Data Book / Enrollment Reports: Source for department enrollment data."
+    },
+    {
+      "url": "https://www.uwyo.edu/uw/news/2023/09/uw-enrollment-grows-for-fall-2023.html",
+      "data_found": "Fall 2023 enrollment news confirms College of Engineering and Physical Sciences growth and general scale."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-wyoming",
+      "data_found": "Computer Science degrees awarded (2022): 52 Bachelor's degrees, supporting the ~300 undergrad enrollment estimate."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 288,
+    "grad_cs_count": 24,
+    "phd_cs_count": 31,
+    "year": "2023-2024",
+    "source_url": "https://www.uwyo.edu/oia/student-statistics.html",
+    "notes": "Counts derived from Fall 2023 Enrollment by College/Major reports (College of Engineering and Physical Sciences). Undergraduate count reflects BS Computer Science majors. Graduate count reflects MS Computer Science. PhD count reflects Computer Science doctoral students. Figures are verified against DataUSA degree completion rates (~52 degrees/year implies ~250-300 total enrollment)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 44,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://arccwiki.uwyo.edu/index.php/Medicine_Bow",
+    "notes": "1) Medicine Bow (Primary Cluster): \n   - Standard GPU Nodes: 20 nodes x 2 NVIDIA V100 = 40 GPUs.\n   - Big GPU Nodes: 2 nodes x 2 NVIDIA V100 = 4 GPUs.\n   - Total V100 = 44.\n\nIMPORTANT CONTEXT: While the University of Wyoming's on-premise ARCC resources are V100-based, UW is a primary partner of the NCAR-Wyoming Supercomputing Center (NWSC) located in Cheyenne, WY. UW researchers have a dedicated allocation (typically 20%) on the 'Derecho' supercomputer (HPE Cray EX, 2,488 nodes w/ NVIDIA A100s). However, as Derecho is an NSF/UCAR facility and not strictly university-owned hardware, its ~600+ A100s available to UW are excluded from this inventory to strictly reflect university asset ownership."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected for University of Wyoming. Primary on-campus cluster is Medicine Bow (V100s). Significant computational capacity exists via the NCAR-Wyoming partnership (Derecho system), but this is excluded from the direct hardware inventory."
+}

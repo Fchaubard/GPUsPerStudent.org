@@ -1,0 +1,57 @@
+{
+  "university_name": "Central Michigan University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.cmich.edu/academics/colleges/college-science-engineering/departments-schools/computer-science",
+      "data_found": "The Department of Computer Science at Central Michigan University offers a challenging and comprehensive program designed to prepare students for high-impact careers in technology. Programs emphasize both theoretical foundations and advanced practical skills with hands-on learning in specialized labs equipped with the latest software and tools."
+    },
+    {
+      "url": "https://datausa.io/profile/university/central-michigan-university/",
+      "data_found": "Central Michigan University had a total enrollment of 14,399 students in 2023. The full-time enrollment is 11,065 students and the part-time enrollment is 3,334."
+    },
+    {
+      "url": "https://www.cmich.edu/news/details/new-academic-year-new-faces-on-campus",
+      "data_found": "Included in this year's new student enrollment are 2,044 new First Time In Any College (freshman or first-year) students, 921 new transfer students and 1,238 graduate students. International students: 1,734 students representing 70 countries."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/169248/central-michigan-university/enrollment/",
+      "data_found": "Central Michigan University has a total enrollment of 14,399 including 10,055 undergraduate students and 4,344 graduate students for academic year 2023-2024."
+    },
+    {
+      "url": "https://www.cm-life.com/article/2024/10/d_increasedenrollment_news_102524",
+      "data_found": "Central Michigan University's enrollment increased for the first time in over a decade, with 14,466 students enrolled this fall semester (2024)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 350,
+    "grad_cs_count": 150,
+    "phd_cs_count": -1,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/central-michigan-university/",
+    "notes": "Central Michigan University Computer Science enrollment estimated based on university-wide data. Total enrollment 14,399 (2023), with College of Science and Engineering being one of the major colleges. CS department offers BS and MS programs but specific CS enrollment numbers not publicly available. Estimate based on typical CS program sizes at similar R2 universities (2-3% of total enrollment for CS undergrad, ~1% for CS grad). No PhD program found in Computer Science."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.cmich.edu/academics/colleges/college-science-engineering/departments-schools/computer-science",
+    "notes": "No publicly accessible information found about GPU cluster specifications or HPC resources at Central Michigan University. The university has a Computer Science department with specialized labs for hands-on learning, but specific GPU hardware details are not published online. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Central Michigan University is an R2 research university with approximately 14,466 students (Fall 2024). While the CS department exists and offers BS/MS programs with specialized computing labs, no public documentation of GPU cluster resources was found. Student counts for CS programs are estimates based on typical departmental sizes at comparable institutions."
+}

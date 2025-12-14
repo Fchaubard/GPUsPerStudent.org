@@ -1,0 +1,52 @@
+{
+  "university_name": "Clark University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=Clark+University&s=all&id=165335",
+      "data_found": "NCES College Navigator (2023 Data): Awards conferred in Computer Science (Bachelor's: 45, Master's: 22). No PhD program listed for Computer Science."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 180,
+    "grad_cs_count": 44,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Clark+University&s=all&id=165335",
+    "notes": "Exact enrollment headcounts by major are not publicly published on Clark's open web. Counts are estimated based on NCES IPEDS 2023 awards data using a program duration multiplier. Undergrad: 45 CS Bachelor's degrees * 4 years = 180. Grad: 22 CS Master's degrees * 2 years = 44. (Note: Clark also has a large Game Design program and IT Master's program not included in these strict 'Computer Science' counts). Clark does not offer a Computer Science PhD."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Shared Unity Cluster Access",
+        "estimated_total": null,
+        "notes": "Clark University is a partner in the MGHPCC and utilizes the 'Unity' cluster (managed by UMass Amherst). While Clark faculty/students have access, the hardware is not exclusively owned by or located at Clark."
+      },
+      {
+        "model": "Legacy NVIDIA Tesla (Goddard)",
+        "estimated_total": null,
+        "notes": "The local 'Goddard' cluster is described as legacy; historical documentation (circa 2015) referenced Tesla K40/K80 GPUs, but current verifiable specifications for active high-end nodes are not available."
+      }
+    ],
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Clark+University&s=all&id=165335",
+    "notes": "Clark University relies primarily on the shared Unity cluster (MGHPCC) for high-performance computing. No public documentation confirms the purchase or on-premise deployment of dedicated H100/A100 nodes exclusively for Clark. A 2019 NSF MRI grant (#1919691) was awarded for cluster acquisition ($399k), but specific hardware manifest (GPU model/count) is not publicly auditable. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Clark University is a smaller research institution that leverages consortium resources (MGHPCC/Unity) rather than maintaining a large local datacenter of H100s. Student counts are estimated from federal graduation data as direct enrollment reports were unavailable."
+}

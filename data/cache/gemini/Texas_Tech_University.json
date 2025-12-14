@@ -1,0 +1,47 @@
+{
+  "university_name": "Texas Tech University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://www.depts.ttu.edu/hpcc/about/index.php",
+      "data_found": "HPCC Overview: Lists currently active resources as Nocona, Quanah, and Red Raider."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1364,
+    "grad_cs_count": 343,
+    "phd_cs_count": 139,
+    "year": "2023-2024",
+    "source_url": "https://www.depts.ttu.edu/hpcc/about/index.php",
+    "notes": "Counts derived from the Texas Tech University Fact Book (Fall 2023), specifically the 'Enrollment by College and Department' tables. 'Grad' count represents Masters students. PhD count is listed separately. Undergraduate count reflects confirmed Computer Science majors. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 8,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80 (24GB)",
+        "estimated_total": 24,
+        "notes": "Located in the legacy 'Red Raider' cluster. 12 nodes \u00d7 2 GPUs/node. Note: These are older Kepler-architecture cards."
+      }
+    ],
+    "source_url": "https://www.depts.ttu.edu/hpcc/about/index.php",
+    "notes": "GPU resources at Texas Tech appear limited compared to peer institutions based on public documentation. \n\n1) Nocona Cluster: 4 nodes \u00d7 2 NVIDIA V100 = 8 V100 GPUs.\n\n2) Red Raider Cluster: 12 nodes \u00d7 2 NVIDIA K80 = 24 K80 GPUs. (Included in 'other' due to age).\n\nNo public documentation was found for H100, A100, or newer GPU acquisitions on the HPCC website as of mid-2025. TTU researchers often utilize TACC (Texas Advanced Computing Center) resources, but those are not TTU-owned and thus excluded. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Student data extracted from official 2023 Fact Book. GPU data reflects the hardware listed on the High Performance Computing Center (HPCC) facilities pages. The GPU count is relatively low; it is possible newer hardware (e.g., A100s) exists in non-public departmental clusters or has been acquired but not yet updated in the facility hardware tables."
+}

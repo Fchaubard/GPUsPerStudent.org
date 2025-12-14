@@ -1,0 +1,59 @@
+{
+  "university_name": "University of Alabama - Huntsville",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.uah.edu/announcements/18298-regional-computing-center-for-alabama-universities-launches-at-uah",
+      "data_found": "Voyager cluster: 3000 core, 24 GPU cluster acquired with funding from an NSF grant. The facility is open to all faculty and staff from Alabama research universities."
+    },
+    {
+      "url": "https://www.uah.edu/news/news/grant-establishes-uah-as-hub-for-statewide-university-high-performance-computing",
+      "data_found": "UAH HPC system will consist of three to four racks densely packed with individual servers called nodes. Each node will have 64-128 central processing unit cores, for a total of about 3,000 cores for the entire system. NSF grant of $972,261 from NSF's Established Program to Stimulate Competitive Research (EPSCoR)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-alabama-in-huntsville",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at University of Alabama in Huntsville were Registered Nursing (176 degrees awarded), General Computer & Information Sciences (168 degrees), and Mechanical Engineering (127 degrees). Total enrollment: 8,743 students (6,851 undergraduate and 1,892 graduate students)."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/the-university-of-alabama-in-huntsville-college-of-science-department-of-computer-science-000_10039129.aspx",
+      "data_found": "Computer Science Department: 132 Total Graduate Students, 45% International Breakout, Male (79%) Female (20%). 219 Applied, 161 Accepted, 37 Enrolled."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 672,
+    "grad_cs_count": 132,
+    "phd_cs_count": 44,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-alabama-in-huntsville",
+    "notes": "Undergraduate CS count estimated from datausa.io reporting 168 CS bachelor degrees awarded in 2023. Assuming 4-year program and steady enrollment: 168 degrees \u00d7 4 years = 672 undergraduates. Graduate count of 132 from Peterson's data. PhD count estimated at 1/3 of graduate students based on typical CS program distribution (44 students). Total CS enrollment estimated at 848 students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unknown GPUs in Voyager cluster",
+        "estimated_total": 24,
+        "notes": "Voyager cluster has 24 GPUs total, but specific models not disclosed in available sources. System acquired via NSF EPSCoR grant for ~$972,261."
+      }
+    ],
+    "source_url": "https://www.uah.edu/announcements/18298-regional-computing-center-for-alabama-universities-launches-at-uah",
+    "notes": "UAH operates the Voyager cluster with 3,000 CPU cores and 24 GPUs as a regional computing center for Alabama universities. Specific GPU models and VRAM capacities were not found in any accessible documentation. The system was funded by an NSF grant and serves a consortium of 10 Alabama universities. Without access to detailed technical specifications or user documentation, GPU model information remains unavailable."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collection revealed Voyager cluster specifications (24 GPUs total) but no model details. CS enrollment estimated from degree completion data: 168 CS bachelor degrees awarded annually suggests ~672 undergraduates (4-year program). Graduate CS enrollment of 132 confirmed via Peterson's. PhD count estimated as typical proportion of graduate students."
+}

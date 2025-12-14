@@ -1,0 +1,69 @@
+{
+  "university_name": "East Carolina University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://rede.ecu.edu/hpcprogram/",
+      "data_found": "ECU HPC Program states ECU has access via NC State HPC Partner Program (Hazel) and also Microsoft Azure N-series GPU systems; ECU purchased a dedicated 3-node CPU-only cluster at NC State Hazel (no ECU-owned GPUs stated)."
+    },
+    {
+      "url": "https://hpc.ncsu.edu/Monitor/ClusterStatusGpu.php",
+      "data_found": "NC State Hazel cluster GPU totals by model: h100=16, l40s=56, l40=8, a10=16, a30=8, p100=4, rtx2080=4, gtx1080=2 (GPU counts shown directly on page)."
+    },
+    {
+      "url": "https://cet.ecu.edu/csci/graduate-programs/ms_software_eng/",
+      "data_found": "ECU CS program page lists local GPU systems: 'IBM Minsky Power Server ... four interconnected GPUs' (GPU model not specified) and 'Nvidia DGX Station ... Nvidia V100 GPUs' (count not specified)."
+    },
+    {
+      "url": "https://ipar.ecu.edu/university_quick_facts/enrollment_by_major/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://ipar.ecu.edu/university_quick_facts/enrollment_by_major/",
+    "notes": "Searched specifically for ECU Computer Science student enrollment counts (headcount) for Fall 2024 / AY 2024-2025. ECU IPAR lists an official 'Enrollment by Major' resource (the URL in source_url), but the page content is delivered via an embedded/interactive component that was not accessible in a way that exposed the underlying Fall 2024 program-level counts (e.g., Computer Science undergrad/masters/doctoral). Attempted alternatives: ECU News Services Fall 2024 enrollment release (overall enrollment only, no CS breakdown), ECU 'By the Numbers' PDF revised April 2025 with data from Fall 2024 (overall + some top programs only, no CS counts), and UNC System interactive enrollment dashboards (blocked by access/403). Because no source explicitly stating Fall 2024 / AY 2024-25 Computer Science major enrollment counts could be retrieved, all CS counts are set to 0 per instructions."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 16,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 56,
+    "v100_count": 4,
+    "p100_count": 8,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA L40",
+        "count": 8,
+        "notes": "From NC State Hazel cluster GPU status page; ECU access via ECU HPC Program (NCSU partner)."
+      },
+      {
+        "model": "NVIDIA A10",
+        "count": 16,
+        "notes": "From NC State Hazel cluster GPU status page; ECU access via ECU HPC Program (NCSU partner)."
+      },
+      {
+        "model": "NVIDIA A30",
+        "count": 8,
+        "notes": "From NC State Hazel cluster GPU status page; ECU access via ECU HPC Program (NCSU partner)."
+      }
+    ],
+    "source_url": "https://rede.ecu.edu/hpcprogram/",
+    "notes": "Clusters/systems included in totals:\n\n1) NC State Hazel cluster GPUs (accessible to ECU via ECU HPC Program):\n- H100: 16 total GPUs (count given, form factor not specified on Hazel page; assumed PCIe due to mixed PCIe-style fleet incl. L40/L40S/A10/A30). Node calc (assumed 4 GPUs/node): 4 nodes \u00d7 4 = 16.\n- L40S: 56 total GPUs. Node calc (assumed 4 GPUs/node): 14 nodes \u00d7 4 = 56.\n- P100: 4 total GPUs. Node calc (assumed 4 GPUs/node): 1 node \u00d7 4 = 4.\n- Other (not mapped to requested keys): A10=16 (4\u00d74), A30=8 (2\u00d74), L40=8 (2\u00d74). (RTX2080=4, GTX1080=2 were not included in 'other_high_vram_gpus'.)\n\n2) ECU local systems (not a multi-node cluster, but GPU computing infrastructure mentioned on ECU site):\n- Nvidia DGX Station with Nvidia V100 GPUs: assumed 1 node \u00d7 4 V100 = 4 V100 (DGX Station commonly has 4 GPUs; page did not state the count).\n- IBM Minsky Power Server with 'four interconnected GPUs': GPU model not stated; estimated as 1 node \u00d7 4 P100 = 4 P100 (IBM 'Minsky' systems are commonly paired with Tesla P100; treated as an estimate).\n\nNot counted due to no fixed GPU quantity published on ECU pages:\n- Microsoft Azure N-series GPU resources (P40/M60/V100 listed as possible GPU types, but ECU page does not provide a fixed number of GPU nodes/GPUs to sum)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

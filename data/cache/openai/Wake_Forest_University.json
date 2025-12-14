@@ -1,0 +1,53 @@
+{
+  "university_name": "Wake Forest University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://deac-wiki.readthedocs.io/en/latest/cluster-hardware.html",
+      "data_found": "DEAC Cluster GPU Nodes breakdown: 1 node with 2x 'H200 80GB' GPUs; 2 nodes with 4x A100 80GB GPUs each; 2 nodes with 4x A100 40GB GPUs each; 4 nodes with 4x V100 32GB GPUs each. Also states overall 'GPU Nodes: 9 - 34 GPU Cards'."
+    },
+    {
+      "url": "https://deac-wiki.readthedocs.io/en/latest/research-grant_writing.html",
+      "data_found": "Grant-writing template states DEAC has '38 GPUs' and that '9 GPU nodes' include V100, A100 (40GB & 80GB), L40S, and H200 models (does not provide per-node counts for L40S)."
+    },
+    {
+      "url": "https://deac-wiki.readthedocs.io/en/latest/cluster-gpu.html",
+      "data_found": "DeviceQuery examples show A100 80GB nodes and A100 40GB nodes detect 4 GPUs per node; V100 examples show 4 GPUs on one node and 6 GPUs on other legacy nodes (page does not include H200/L40S deviceQuery examples)."
+    },
+    {
+      "url": "https://cs.wfu.edu/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://cs.wfu.edu/",
+    "notes": "Searched Wake Forest sources for CS-specific enrollment counts with an explicit 2024/2024-2025/Fall 2024 label. Found WFU University Registrar 'Official Enrollment Reports' with a Fall 2024 headcount PDF (overall university/school totals only; no breakdown by major/department). Found WFU Office of Institutional Research 'Common Data Set 2024-2025' PDF (includes enrollment as of Oct 15, 2024, but does not provide Computer Science major/program enrollment headcounts). Found CS department pages (e.g., cs.wfu.edu) that list 'By the Numbers' figures (e.g., majors/minors and MS students), but those pages do NOT explicitly state '2024', 'Fall 2024', or '2024-2025' alongside the counts, so per your absolute date requirement those numbers were rejected. No CS enrollment headcount for Fall 2024 or AY 2024-2025 was located after the required search sequence; therefore counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 2,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 8,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 4,
+    "v100_count": 16,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://deac-wiki.readthedocs.io/en/latest/cluster-hardware.html",
+    "notes": "Cluster identified: WFU DEAC Cluster. Calculations from Cluster Resource Overview GPU Nodes section: H200: 1 node \u00d7 2 GPUs/node = 2. A100 80GB: 2 nodes \u00d7 4 GPUs/node = 8. A100 40GB: 2 nodes \u00d7 4 GPUs/node = 8. V100 32GB: 4 nodes \u00d7 4 GPUs/node = 16. These sum to 34 GPUs and match the same page's 'GPU Nodes: 9 - 34 GPU Cards'. Separately, Grant Writing page claims 38 GPUs total and includes L40S; since it does not provide L40S node counts, L40S was estimated as the residual: 38 total GPUs \u2212 34 GPUs (explicitly itemized above) = 4 L40S GPUs (assumed 1 node \u00d7 4 GPUs/node)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

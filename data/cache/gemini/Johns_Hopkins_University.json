@@ -1,0 +1,41 @@
+{
+  "university_name": "Johns Hopkins University",
+  "data_retrieved_date": "2025-05-27",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/johns-hopkins-university",
+      "data_found": "2022 Degrees Awarded: Computer Science (189 Bachelor's, 464 Master's, 28 Research Doctorates)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 756,
+    "grad_cs_count": 696,
+    "phd_cs_count": 154,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/johns-hopkins-university",
+    "notes": "Official exact enrollment counts by department are not listed on the public JHU OIR or CS pages (only aggregate School of Engineering totals). Counts are estimated based on verifiable degree completion data from DataUSA (IPEDS) using the prompt's suggested methodology. Undergrad: 189 CS degrees awarded \u00d7 4 years = 756. Masters: 464 CS Master's degrees awarded \u00d7 1.5 years = 696. PhD: 28 CS Research Doctorates awarded \u00d7 5.5 years = 154."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 40,
+    "a40_count": 12,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/johns-hopkins-university",
+    "notes": "Calculated from Rockfish Cluster specifications managed by ARCH (Advanced Research Computing at Hopkins). \n1) 'gpu' partition: 10 nodes \u00d7 4 A100 (40GB) = 40 GPUs.\n2) 'gpu-large' partition: 2 nodes \u00d7 4 A100 (80GB) = 8 GPUs.\n3) 'viz' partition: 3 nodes \u00d7 4 A40 = 12 GPUs.\nNote: The older MARCC/Blue Crab clusters are largely legacy/retired; data reflects the current primary Rockfish system. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Allocations are provided via 'Service Units' (SU) based on faculty grants; specific USD value of free tier credits not publicly listed."
+  },
+  "analysis_notes": "JHU's primary computing resource is the 'Rockfish' cluster. While H100 grants have been mentioned in news for the region, they do not appear in the public hardware specifications for the available cluster yet."
+}

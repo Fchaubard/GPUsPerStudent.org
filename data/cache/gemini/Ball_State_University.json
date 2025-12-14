@@ -1,0 +1,41 @@
+{
+  "university_name": "Ball State University",
+  "data_retrieved_date": "2025-05-30",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/ball-state-university",
+      "data_found": "2022 Degrees Awarded in Computer Science: 139 Bachelor's degrees, 41 Master's degrees."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 556,
+    "grad_cs_count": 82,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/ball-state-university",
+    "notes": "Official enrollment dashboards are interactive and difficult to deep-link. Counts are estimated using IPEDS completion data via DataUSA (2022). Undergrad estimate: 139 degrees awarded \u00d7 4 years = 556. Grad estimate: 41 degrees awarded \u00d7 2 years = 82. The Computer Science department website confirms they offer Bachelor's and Master's degrees, but no PhD program."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/ball-state-university",
+    "notes": "Extensive searches for '[University] research computing', 'HPC cluster', and 'GPU nodes' yielded no evidence of a centralized high-performance computing center or GPU cluster at Ball State University. The Computer Science department relies on workstation labs and likely cloud resources or external supercomputing access (e.g., ACCESS/XSEDE) for research needs. No owned data center GPU resources (H100/A100) were found in public documentation. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Ball State University appears to be primarily a teaching institution regarding CS infrastructure, without a dedicated Research Computing center or public specifications for an HPC cluster."
+}

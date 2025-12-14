@@ -1,0 +1,70 @@
+{
+  "university_name": "Boston College",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://rs.bc.edu/compute/",
+      "data_found": "Andromeda GPU Nodes table lists: 3 community nodes with A100 (4 GPUs/node), 4 community nodes with A100 (4 GPUs/node), 2 community nodes with V100 (4 GPUs/node), 1 private node with V100 (4 GPUs/node), 2 private nodes with A10 (4 GPUs/node), 1 private node with L40S (4 GPUs/node), 1 private node with L4 (7 GPUs/node), 10 community nodes with L40S (4 GPUs/node), 1 private node with H100 (2 GPUs/node), 1 community node with H200 (8 GPUs/node). Node totals show 109 GPUs."
+    },
+    {
+      "url": "https://www.bc.edu/content/bc-web/offices/its/services/research-services/linux-cluster.html",
+      "data_found": "Hardware section includes a GPU Nodes table (same overall node total of 26 GPU nodes / 109 GPUs) and lists H100 (94GB, 2 GPUs/node), H200 (141GB, 8 GPUs/node), A100 40GB (3 nodes, 4 GPUs/node), A100 80GB (4 nodes, 4 GPUs/node), plus L40S and L4. It also contains two rows labeled 'Nvidia A100 64GB' that conflict with rs.bc.edu/compute's 'V100 64GB per node' rows."
+    },
+    {
+      "url": "https://www.bc.edu/content/bc-web/offices/its/about/its-news/2025/hpc-cluster-upgrade.html",
+      "data_found": "ITS news item (published Aug 6, 2025) describing the June 2025 HPC upgrade and noting GPU resources were doubled and include an H200 GPU."
+    },
+    {
+      "url": "https://rs.bc.edu/",
+      "data_found": "Announcement notes the old cluster (\u201cAndromeda 1\u201d) has been permanently offline since 9/15/25."
+    },
+    {
+      "url": "https://www.bc.edu/content/dam/bc1/offices/irp/ir/enrollment_highlights/2024%20Enrollment%20and%20Degree%20Highlights.pdf",
+      "data_found": "Student enrollment: 533 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 533,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.bc.edu/content/dam/bc1/offices/irp/ir/enrollment_highlights/2024%20Enrollment%20and%20Degree%20Highlights.pdf",
+    "notes": "From Boston College Institutional Research & Planning (IR&P) PDF titled \"FALL 2024 ENROLLMENT & DEGREE HIGHLIGHTS\" (explicitly dated Fall 2024; \"Last Updated: September 2024\"). Under the \"TOP 10 MAJORS\" section (for Undergraduate Day Bachelor\u2019s Students), the entry \"Computer Science\" is listed with a count of 533. The document does not provide CS-specific graduate enrollment broken out by degree (MS vs PhD), so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 2,
+    "h200_count": 8,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 12,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 44,
+    "v100_count": 12,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A10 (24GB)",
+        "count": 8,
+        "how_counted": "2 nodes \u00d7 4 GPUs/node",
+        "vram_per_gpu_gb_est": 24
+      },
+      {
+        "model": "NVIDIA L4 (24GB)",
+        "count": 7,
+        "how_counted": "1 node \u00d7 7 GPUs/node",
+        "vram_per_gpu_gb_est": 24
+      }
+    ],
+    "source_url": "https://rs.bc.edu/compute/",
+    "notes": "Cluster found: Andromeda (Boston College ITS Research Computing).\n\nPer-node to total calculations (nodes \u00d7 GPUs/node):\n- A100 40GB: 3 \u00d7 4 = 12 GPUs (counted as a100_40gb_count=12)\n- A100 80GB: 4 \u00d7 4 = 16 GPUs (counted as a100_80gb_count=16)\n- V100: (2 \u00d7 4) + (1 \u00d7 4) = 12 GPUs (v100_count=12)\n- L40S: (10 \u00d7 4) + (1 \u00d7 4) = 44 GPUs (l40s_count=44)\n- H100: 1 \u00d7 2 = 2 GPUs; VRAM shown as 94GB per GPU on bc.edu table / 188GB per node on rs.bc.edu implies H100 PCIe 94GB (h100_pcie_count=2; h100_sxm_count=0)\n- H200: 1 \u00d7 8 = 8 GPUs; VRAM shown as 141GB per GPU on bc.edu table / 1128GB per node on rs.bc.edu (h200_count=8)\n\nNot in requested keys (reported under other_high_vram_gpus):\n- A10: 2 \u00d7 4 = 8 GPUs (24GB per GPU inferred from 96GB VRAM per node on rs.bc.edu)\n- L4: 1 \u00d7 7 = 7 GPUs (24GB per GPU inferred from 168GB VRAM per node on rs.bc.edu)\n\nConsistency check: requested-key GPUs sum = 12 + 16 + 12 + 44 + 2 + 8 = 94; adding A10 (8) and L4 (7) = 109 total GPUs, matching the stated node total on rs.bc.edu.\n\nData conflict note: bc.edu Linux HPC Cluster page lists two rows labeled 'Nvidia A100 64GB' (2 community nodes + 1 private node, 4 GPUs/node). Because A100 64GB is not a standard A100 configuration and rs.bc.edu/compute lists these rows as V100 with 64GB VRAM per node, totals were computed using rs.bc.edu/compute's V100 classification."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

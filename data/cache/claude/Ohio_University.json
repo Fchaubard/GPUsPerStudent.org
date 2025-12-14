@@ -1,0 +1,57 @@
+{
+  "university_name": "Ohio University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.ohio.edu/iea/student-data/enrollment",
+      "data_found": "Enrollment Data portal for Ohio University Athens. Contains information by major as well as by student characteristics."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/ohio-university-main-campus/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Ohio University - Athens Campus handed out 53 bachelor's degrees in computer science. In 2022, 7 students received their master's degree in compsci from OHIO Athens."
+    },
+    {
+      "url": "https://www.ohio.edu/engineering/about/fast-facts",
+      "data_found": "374 graduate students in Russ College of Engineering and Technology."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ohio_University_Russ_College_of_Engineering_and_Technology",
+      "data_found": "It enrolls approximately 1,400 undergraduates and almost 300 graduate students."
+    },
+    {
+      "url": "https://www.ohio.edu/news/2025/09/ohio-grows-enrollment-more-30000-including-more-8000-new-students",
+      "data_found": "Record first-year student enrollment in the Russ College of Engineering and Technology. Total enrollment at Ohio University of 30,682."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 212,
+    "grad_cs_count": 30,
+    "phd_cs_count": 15,
+    "year": "2024-2025",
+    "source_url": "https://www.collegefactual.com/colleges/ohio-university-main-campus/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "Undergraduate CS count estimated from 53 bachelor's degrees awarded in 2021-2022 \u00d7 4 years = 212. Graduate CS count estimated from 7 master's degrees in 2022 \u00d7 1.5 year program = 10.5, rounded to 11. However, since the Russ College has 374 graduate students total and multiple departments, estimated 30 MS CS students. PhD estimated at 15 based on the overall PhD student-faculty ratio of 0.8:1 with 63 faculty across all engineering departments, assuming CS has approximately 15-20 faculty."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.ohio.edu/iea/student-data/enrollment",
+    "notes": "Unable to find any public information about GPU resources or HPC clusters specifically at Ohio University Athens campus. The university appears to rely on the Ohio Supercomputer Center (OSC) for HPC resources rather than maintaining its own GPU cluster. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Ohio University Athens appears to have limited publicly available information about dedicated GPU computing resources. The university seems to utilize the Ohio Supercomputer Center (OSC) for HPC needs rather than maintaining its own GPU cluster. Student enrollment data for CS was estimated from degree completion data and typical program durations."
+}

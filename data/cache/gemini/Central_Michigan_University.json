@@ -1,0 +1,49 @@
+{
+  "university_name": "Central Michigan University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1919616",
+      "data_found": "NSF Award Abstract #1919616 (2019): 'MRI: Acquisition of a High Performance Computing Cluster... The instrument will consist of a head node, 3 login nodes, 44 compute nodes, 2 GPU nodes...'"
+    },
+    {
+      "url": "https://www.cmich.edu/academics/colleges/college-science-engineering/departments-schools/computer-science",
+      "data_found": "Department of Computer Science page lists degrees: B.S. in Computer Science, M.S. in Computer Science. No Ph.D. in Computer Science listed (only Ph.D. in Earth/Ecosystem Science, Math, etc. in the college)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/central-michigan-university",
+      "data_found": "2022 Degrees Awarded: Computer Science (Bachelor's): 91; Computer Science (Master's): 59. (Used for enrollment estimation)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 409,
+    "grad_cs_count": 118,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/central-michigan-university",
+    "notes": "Exact enrollment headcounts not published on department 'About' page. Counts estimated from DataUSA/IPEDS 2022 degree completion data. Undergraduate: 91 degrees awarded * 4.5 year avg duration \u2248 409 students. Graduate (MS): 59 degrees awarded * 2 year avg duration \u2248 118 students. PhD: CMU does not list a standalone Computer Science PhD program on the College of Science & Engineering website."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 8,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1919616",
+    "notes": "CMU HPC Cluster (funded by NSF MRI #1919616): Specification lists '2 GPU nodes'. Press releases identify the hardware as Dell PowerEdge (likely C4140 based on 2019 MRI timing/budget) with 'NVIDIA Tesla V100 GPUs'. Standard configuration for Dell GPU nodes in this class is 4x GPUs per node. Estimated Total: 2 nodes * 4 V100 = 8 V100 GPUs. No newer clusters (A100/H100) found in public documentation or newer NSF awards as of late 2024. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Central Michigan University is an R2 institution with a focused HPC resource funded by a 2019 NSF MRI grant. The cluster is relatively small (2 GPU nodes). No evidence of newer A100/H100 acquisitions found in public NSF award databases or IT news releases. CS PhD count is 0 as the university does not appear to offer a standalone CS doctorate."
+}

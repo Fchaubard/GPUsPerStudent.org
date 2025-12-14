@@ -6,6 +6,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPUs Per Student</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <style>
+        .tooltip-trigger {
+            cursor: help;
+            border-bottom: 1px dotted #666;
+            position: relative;
+        }
+
+        .tooltip-trigger:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: pre-line;
+            width: 300px;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            line-height: 1.4;
+        }
+
+        .asterisk {
+            color: #888;
+            font-size: 0.8em;
+            vertical-align: super;
+        }
+
+        .chart-wrapper {
+            height: 700px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-bottom: 40px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+        }
+
+        th.sortable {
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        th.sortable:hover {
+            background: #ddd !important;
+        }
+
+        th.sorted-asc::after {
+            content: ' ▲';
+            font-size: 0.8em;
+        }
+
+        th.sorted-desc::after {
+            content: ' ▼';
+            font-size: 0.8em;
+        }
+
+        .sources-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            color: #333;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 700px;
+            max-height: 80%;
+            overflow: auto;
+            z-index: 2000;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .sources-popup.active {
+            display: block;
+        }
+
+        .sources-popup h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .sources-popup ul {
+            padding-left: 20px;
+        }
+
+        .sources-popup li {
+            margin-bottom: 8px;
+        }
+
+        .sources-popup a {
+            color: #0066cc;
+            word-break: break-all;
+        }
+
+        .download-btn {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .download-btn:hover {
+            background: #555;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .gpus-cell {
+            cursor: pointer;
+        }
+
+        .gpus-cell:hover {
+            text-decoration: underline;
+        }
+
+        .sources-count {
+            display: block;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .favicon {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+
+        td a {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .about-link {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .about-popup {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .about-link:hover .about-popup {
+            display: block;
+        }
+
+        .about-popup p {
+            margin: 0 0 12px 0;
+        }
+
+        .about-popup p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,44 +211,94 @@
         <header>
             <div class="logo">GPUsPerStudent.org</div>
             <nav>
-                <a href="#">About Us</a>
+                <span class="about-link">About Us
+                    <div class="about-popup">
+                        <p><strong>Why GPUsPerStudent.org?</strong></p>
+                        <p>After a spirited debate following my first-order analysis (<a
+                                href="https://x.com/francoischauba1/status/1997095264923078856" target="_blank">see
+                                post</a>), I wanted to incorporate all the feedback and do a second-order attempt. This
+                            website tracks a metric and leaderboard for GPU access at universities.</p>
+                        <p>Shedding light on a problem often fixes the problem. Most people do not know how poor the
+                            situation is, so as a PhD student paying for my own compute out of pocket, I thought it
+                            would be a good idea to provide hard data on the problem.</p>
+                        <p>It is critical for students to have access to GPUs: (1) to learn and (2) to conduct research.
+                            If we want more of both, we need more GPUs for students in America!</p>
+                        <p>No effort online has made a real attempt to show the severity of the current GPU drought. So
+                            this is my best attempt. All feedback is welcome. We use GitHub for all PRs and issue
+                            tracking.</p>
+                    </div>
+                </span>
                 <a href="https://github.com/Fchaubard/GPUsPerStudent.org/pulls" target="_blank">Dispute via GitHub</a>
                 <a href="data/master_data.csv" target="_blank">Raw Data</a>
             </nav>
         </header>
 
         <section>
-            <h2>Top 20 Universities (GPUs/Student)</h2>
-            <div id="chart" class="chart-container">
-                <!-- Bars will be injected here -->
-                <p>Loading Data...</p>
+            <h2>All Universities (H100-Equivalent GPUs Per Student)</h2>
+            <div class="chart-wrapper">
+                <div class="chart-container">
+                    <canvas id="chart"></canvas>
+                </div>
             </div>
         </section>
 
         <section>
             <h2>Leaderboard</h2>
-            <table class="leaderboard-table">
+            <table class="leaderboard-table" id="leaderboard">
                 <thead>
                     <tr>
-                        <th>Rank</th>
-                        <th>University</th>
-                        <th>Est. Weighted Students</th>
-                        <th>Weighted H100 Count</th>
-                        <th>GPUs Per Student</th>
+                        <th class="sortable" data-key="Rank">Rank</th>
+                        <th class="sortable" data-key="university">University</th>
+                        <th class="sortable tooltip-trigger" data-key="weighted_students" data-tooltip="Weighted Student Count = (Undergrad CS × 0.45) + (Master's CS × 0.7) + (PhD CS × 0.9)
+
+Weights reflect GPU usage intensity:
+• Undergrads: 45% - Basic coursework
+• Master's: 70% - Research projects
+• PhD: 90% - Heavy research computing
+
+Data from: Department websites, DataUSA, enrollment reports">Weighted CS Students<span class="asterisk">*</span></th>
+                        <th class="sortable tooltip-trigger" data-key="h100_equivalent" data-tooltip="H100-Equivalent = Total GPU Value ÷ $35,000
+
+Normalizes all GPU types to H100 units:
+• H100 SXM: 1.0x ($35,000)
+• H200: 1.14x ($40,000)
+• A100 80GB: 0.43x ($15,000)
+• V100: 0.10x ($3,500)
+
+Data from: HPC cluster pages, research computing docs">H100-Equiv. Available<span class="asterisk">*</span></th>
+                        <th class="sortable sorted-desc tooltip-trigger" data-key="gpus_per_student" data-tooltip="GPUs Per Student = H100-Equivalent ÷ Weighted Students
+
+Higher = more compute resources per student
+
+Ensemble methodology:
+• 3 AI models (OpenAI, Claude, Gemini) search independently
+• Results aggregated, highest values used
+• All source URLs validated for accessibility">GPUs/Student<span class="asterisk">*</span></th>
                     </tr>
                 </thead>
                 <tbody id="leaderboard-body">
-                    <!-- Rows will be injected here -->
                 </tbody>
             </table>
         </section>
 
         <footer>
-            <p>Data updated monthly by AI Agents. Last update: <span id="last-update">...</span></p>
+            <p>Data updated monthly by AI Agents. Last update: <span id="last-update">December 2024</span></p>
         </footer>
     </div>
 
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="sources-popup" id="sources-popup">
+        <h3 id="popup-title">Sources</h3>
+        <ul id="sources-list"></ul>
+        <button class="download-btn" id="download-btn">Download Full JSON</button>
+    </div>
+
     <script>
+        let chartInstance = null;
+        let allData = [];
+        let currentSort = { key: 'gpus_per_student', desc: true };
+        let jsonCache = {};
+
         async function loadData() {
             try {
                 const response = await fetch('data/master_data.csv');
@@ -59,7 +306,6 @@
                 parseCSV(text);
             } catch (error) {
                 console.error('Error loading CSV:', error);
-                document.getElementById('chart').innerHTML = '<p>Error loading data. Please check back later.</p>';
             }
         }
 
@@ -67,54 +313,109 @@
             const lines = text.trim().split('\n');
             const headers = lines[0].split(',').map(h => h.trim());
 
-            const data = lines.slice(1).map(line => {
-                // Simple regex to split by comma ignoring quotes
+            allData = lines.slice(1).map((line, index) => {
                 const regex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
                 const values = line.split(regex).map(v => v.replace(/^"|"$/g, '').trim());
 
-                let entry = {};
+                let entry = { Rank: index + 1 };
                 headers.forEach((h, i) => {
                     entry[h] = values[i];
                 });
                 return entry;
             });
 
-            renderDashboard(data);
+            renderDashboard();
         }
 
-        function renderDashboard(data) {
-            // Sort by Rank Ascending (just in case)
-            data.sort((a, b) => parseInt(a.Rank) - parseInt(b.Rank));
+        function renderDashboard() {
+            renderChart(allData);  // Show ALL universities
+            renderLeaderboard(allData);
+            setupSorting();
+        }
 
-            // Top 20 for Chart
-            const top20 = data.slice(0, 20);
-            renderChart(top20);
+        function getFaviconUrl(url) {
+            try {
+                const domain = new URL(url).hostname;
+                return `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+            } catch (e) {
+                return '';
+            }
+        }
 
-            // Full Leaderboard
-            renderLeaderboard(data);
+        function getJsonFilename(university) {
+            // Convert to filename format: spaces -> underscores, remove special chars
+            return university.replace(/[,'"]/g, '').replace(/\s+/g, '_').replace(/-/g, '_-_') + '.json';
         }
 
         function renderChart(data) {
-            const container = document.getElementById('chart');
-            container.innerHTML = '';
+            const ctx = document.getElementById('chart').getContext('2d');
 
-            // Find max value for scaling
-            const maxVal = Math.max(...data.map(d => parseFloat(d.Gpus_Per_Student)));
+            // Set dynamic height: 30px per bar
+            const chartHeight = Math.max(700, data.length * 30);
+            document.querySelector('.chart-container').style.height = chartHeight + 'px';
 
-            data.forEach(d => {
-                const val = parseFloat(d.Gpus_Per_Student);
-                const percentage = (val / maxVal) * 100;
+            const labels = data.map(d => d.university);
+            const values = data.map(d => parseFloat(d.gpus_per_student) || 0);
 
-                const group = document.createElement('div');
-                group.className = 'bar-group';
+            // Gradient from black to gray
+            const colors = data.map((_, i) => {
+                const ratio = i / (data.length - 1);
+                const gray = Math.round(20 + ratio * 150);
+                return `rgb(${gray}, ${gray}, ${gray})`;
+            });
 
-                group.innerHTML = `
-                    <div class="bar-value">${val.toFixed(2)}</div>
-                    <div class="bar" style="height: ${percentage}%;"></div>
-                    <div class="bar-label" title="${d.University}">${d.University}</div>
-                `;
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
 
-                container.appendChild(group);
+            Chart.register(ChartDataLabels);
+
+            chartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'H100-Equiv GPUs Per Student',
+                        data: values,
+                        backgroundColor: colors,
+                        borderColor: '#000',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: { right: 80 }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => ctx.parsed.x.toFixed(3) + ' H100-equiv GPUs/student'
+                            }
+                        },
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'right',
+                            color: '#333',
+                            font: { weight: 'bold', size: 11 },
+                            formatter: (value) => value.toFixed(2)
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0,0,0,0.1)' },
+                            ticks: { callback: (v) => v.toFixed(1) }
+                        },
+                        y: {
+                            ticks: { font: { size: 11 } },
+                            grid: { display: false }
+                        }
+                    }
+                }
             });
         }
 
@@ -122,20 +423,133 @@
             const tbody = document.getElementById('leaderboard-body');
             tbody.innerHTML = '';
 
-            data.forEach(d => {
+            data.forEach((d, index) => {
+                const weightedStudents = parseFloat(d.weighted_students) || 0;
+                const h100Equiv = parseFloat(d.h100_equivalent) || 0;
+                const gpuPerStudent = parseFloat(d.gpus_per_student) || 0;
+                const sources = parseInt(d.sources) || 0;
+                const url = d.url || '#';
+                const faviconUrl = getFaviconUrl(url);
+
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${d.Rank}</td>
-                    <td><a href="#">${d.University}</a></td>
-                    <td>${parseFloat(d.Weighted_Student_Count).toFixed(0)}</td>
-                    <td>${parseFloat(d.Weighted_H100_Count).toFixed(1)}</td>
-                    <td><strong>${parseFloat(d.Gpus_Per_Student).toFixed(4)}</strong></td>
+                    <td>${index + 1}</td>
+                    <td>
+                        <a href="${url}" target="_blank">
+                            <img src="${faviconUrl}" class="favicon" onerror="this.style.display='none'" alt="">
+                            ${d.university}
+                        </a>
+                    </td>
+                    <td>${weightedStudents.toLocaleString()}</td>
+                    <td>${h100Equiv.toLocaleString()}</td>
+                    <td class="gpus-cell" onclick="showSources('${d.university.replace(/'/g, "\\'")}')">
+                        <strong>${gpuPerStudent.toFixed(3)}</strong>
+                        <span class="sources-count">(sources: ${sources})</span>
+                    </td>
                 `;
                 tbody.appendChild(row);
             });
         }
 
-        // Initialize
+        function setupSorting() {
+            const headers = document.querySelectorAll('th.sortable');
+            headers.forEach(th => {
+                th.onclick = () => {
+                    const key = th.dataset.key;
+
+                    if (currentSort.key === key) {
+                        currentSort.desc = !currentSort.desc;
+                    } else {
+                        currentSort.key = key;
+                        currentSort.desc = true;
+                    }
+
+                    headers.forEach(h => h.classList.remove('sorted-asc', 'sorted-desc'));
+                    th.classList.add(currentSort.desc ? 'sorted-desc' : 'sorted-asc');
+
+                    allData.sort((a, b) => {
+                        let aVal = a[key];
+                        let bVal = b[key];
+                        const aNum = parseFloat(aVal);
+                        const bNum = parseFloat(bVal);
+
+                        if (!isNaN(aNum) && !isNaN(bNum)) {
+                            return currentSort.desc ? bNum - aNum : aNum - bNum;
+                        }
+                        aVal = (aVal || '').toString().toLowerCase();
+                        bVal = (bVal || '').toString().toLowerCase();
+                        return currentSort.desc ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
+                    });
+
+                    // Update both leaderboard AND chart
+                    renderLeaderboard(allData);
+                    renderChart(allData);  // Show ALL universities
+                };
+            });
+        }
+
+        async function showSources(university) {
+            const popup = document.getElementById('sources-popup');
+            const list = document.getElementById('sources-list');
+            const title = document.getElementById('popup-title');
+            const downloadBtn = document.getElementById('download-btn');
+
+            title.textContent = university + ' - Sources';
+            list.innerHTML = '<li>Loading...</li>';
+
+            popup.classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+
+            // Try to load JSON - use proper filename format
+            const filename = university.replace(/[,'"]/g, '').replace(/\s+/g, '_');
+            const jsonUrl = `data/cache/final/${filename}.json`;
+
+            try {
+                const response = await fetch(jsonUrl);
+                if (!response.ok) throw new Error('Not found');
+
+                const data = await response.json();
+                jsonCache[university] = data;
+
+                const sources = data.sources || [];
+                if (sources.length === 0) {
+                    list.innerHTML = '<li>No sources available</li>';
+                } else {
+                    list.innerHTML = sources.map(s => {
+                        const url = s.url || s;
+                        const desc = s.data_found ? `<br><small style="color:#666">${s.data_found.substring(0, 100)}...</small>` : '';
+                        return `<li><a href="${url}" target="_blank">${url}</a>${desc}</li>`;
+                    }).join('');
+                }
+
+                downloadBtn.onclick = () => downloadJSON(university, data);
+
+            } catch (e) {
+                console.error('Error loading JSON:', e, jsonUrl);
+                list.innerHTML = `<li>Could not load sources. File: ${filename}.json</li>`;
+                downloadBtn.onclick = () => alert('JSON not available');
+            }
+        }
+
+        function downloadJSON(university, data) {
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = university.replace(/\s+/g, '_') + '.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function closePopup() {
+            document.getElementById('sources-popup').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closePopup();
+        });
+
         loadData();
     </script>
 </body>

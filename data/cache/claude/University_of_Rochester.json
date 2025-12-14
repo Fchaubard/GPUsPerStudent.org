@@ -1,0 +1,63 @@
+{
+  "university_name": "University of Rochester",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.circ.rochester.edu/resources",
+      "data_found": "BlueHive cluster: approximately 480 nodes total; A number of compute nodes have dedicated coprocessing cards, including NVIDIA's K80 (Kepler), V100 (Volta), and A100 (Ampere) GPUs."
+    },
+    {
+      "url": "https://www.circ.rochester.edu/about",
+      "data_found": "CIRC currently deploys a major computing system for high-performance computing. A Beowulf-style Linux cluster with more than 480 nodes and NVIDIA GPU cards provides high-performance computing capacity; maintains systems with an aggregated computational performance of 1,440 teraFLOPS."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-rochester-hajim-school-of-engineering-and-applied-sciences-department-of-computer-science-department-of-computer-science-000_10062370.aspx",
+      "data_found": "994 Applied; 162 Accepted; 15 Enrolled; 94 Total Graduate Students; 72% International Breakout (representing other countries) Male (80%) Female (19%)"
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-rochester",
+      "data_found": "In 2023, the most popular Masters Degree concentrations at University of Rochester were Other Management Sciences & Quantitative Methods (768 degrees awarded), General Business Administration & Management (85 degrees), and Computational Science (56 degrees)."
+    },
+    {
+      "url": "https://admissions.rochester.edu/campus-life/university-facts/",
+      "data_found": "In the 2024\u201325 academic year, Arts, Sciences & Engineering had 6,917 students enrolled"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": -1,
+    "grad_cs_count": 94,
+    "phd_cs_count": -1,
+    "year": "2024",
+    "source_url": "https://www.petersons.com/graduate-schools/university-of-rochester-hajim-school-of-engineering-and-applied-sciences-department-of-computer-science-department-of-computer-science-000_10062370.aspx",
+    "notes": "Graduate CS students (MS and PhD combined) = 94 based on Peterson's data. Unable to find specific undergraduate CS enrollment numbers despite multiple searches. Total Arts, Sciences & Engineering enrollment is 6,917 but breakdown by department not publicly available. PhD-specific counts not found separately from total graduate numbers."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": -1,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA K80 (Kepler)",
+        "estimated_total": null,
+        "notes": "Listed as one of the GPU types in BlueHive cluster but count not specified"
+      }
+    ],
+    "source_url": "https://www.circ.rochester.edu/resources",
+    "notes": "BlueHive cluster has approximately 480 nodes total with 1,440 TFLOPS computing capacity. GPU-equipped nodes include NVIDIA K80 (Kepler), V100 (Volta), and A100 (Ampere) GPUs, but specific counts of GPU nodes and GPUs per node are not publicly specified. Unable to calculate exact GPU totals without node-level specifications."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Rochester's Center for Integrated Research Computing (CIRC) operates the BlueHive cluster with approximately 480 nodes. While they confirm having V100 and A100 GPUs, specific counts are not publicly available. CS graduate student data shows 94 total (MS+PhD combined) but undergraduate CS enrollment numbers could not be found despite extensive searching."
+}

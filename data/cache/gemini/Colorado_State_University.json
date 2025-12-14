@@ -1,0 +1,55 @@
+{
+  "university_name": "Colorado State University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://curc.readthedocs.io/en/latest/clusters/alpine/index.html",
+      "data_found": "Alpine Cluster (Primary HPC resource for CSU via RMACC): 'aa100' partition has 8 nodes, each with 3x NVIDIA A100 (40GB) GPUs; 'ami100' partition has 64 nodes, each with 3x AMD MI100 GPUs."
+    },
+    {
+      "url": "https://datausa.io/profile/university/colorado-state-university-fort-collins",
+      "data_found": "DataUSA (IPEDS) Completions 2022: Computer Science & Systems degrees awarded: 300+ Bachelors, ~80 Masters, ~10 PhDs (used for grad/PhD split estimation)."
+    },
+    {
+      "url": "https://www.cs.colostate.edu/~info/machines",
+      "data_found": "CS Department Machines: Lists various servers (Garm, etc.) but lacks public quantitative GPU cluster specs comparable to Alpine."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1154,
+    "grad_cs_count": 178,
+    "phd_cs_count": 60,
+    "year": "2023-2024",
+    "source_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/index.html",
+    "notes": "Counts derived from CSU Institutional Research 'Enrollment by Major' data for Computer Science (College of Natural Sciences). Total Grad CS enrollment was ~238. Split between MS and PhD estimated based on IPEDS completion ratios (approx 10-12 PhDs awarded/year * 5-year tenure = ~60 PhDs; remainder MS). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 24,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "AMD MI100 (32GB)",
+        "estimated_total": 192,
+        "notes": "Alpine Cluster (RMACC) partition 'ami100': 64 nodes \u00d7 3 GPUs/node."
+      }
+    ],
+    "source_url": "https://curc.readthedocs.io/en/latest/clusters/alpine/index.html",
+    "notes": "CSU's primary research computing resource is the 'Alpine' cluster, provided through the Rocky Mountain Advanced Computing Consortium (RMACC) in partnership with CU Boulder. CSU researchers have full access to these nodes. Counts: 8 nodes \u00d7 3 A100 (40GB) = 24 A100s; 64 nodes \u00d7 3 MI100 = 192 MI100s. No specific local H100 clusters were found in public documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Access to Alpine is generally provided at no cost to CSU researchers for the 'General' partitions; specific condo/buy-in values not publicly listed."
+  },
+  "analysis_notes": "CSU relies heavily on the shared RMACC Alpine cluster rather than maintaining a large separate local HPC datacenter. Student counts reflect the Computer Science major specifically, excluding Computer Engineering."
+}

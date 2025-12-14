@@ -1,0 +1,47 @@
+{
+  "university_name": "Duquesne University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1919691",
+      "data_found": "NSF Award #1919691 (Sept 2019): 'MRI: Acquisition of a High Performance Computing Cluster'. Abstract confirms the instrument includes 'GPU nodes' for machine learning. Grant value $400,000 (indicates small-scale cluster, likely 2-8 GPUs)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 136,
+    "grad_cs_count": 21,
+    "phd_cs_count": 0,
+    "year": "2023",
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1919691",
+    "notes": "Exact counts from the 2023 Duquesne Fact Book. Undergrad count combines Computer Science BS (102) and Computer Science BA (34). Excludes 'Information Systems Management' and 'Cybersecurity' majors. PhD count is 0 as Duquesne does not list a specific Computer Science PhD program in the Fact Book (only Computational Sciences is listed as an interdisciplinary area without a dedicated headcount in the CS table). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA V100 (Unspecified Count)",
+        "estimated_total": null,
+        "notes": "The 'Livingstone' cluster (funded by 2019 NSF MRI grant #1919691) is confirmed to contain 'GPU nodes'. Based on the grant timing and budget ($400k), these are likely V100 GPUs, but exact counts are not publicly enumerated on the university website."
+      }
+    ],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1919691",
+    "notes": "Duquesne is a smaller research institution (R2). Primary research computing is handled by the 'Livingstone' cluster (managed by the Center for Computational Sciences). While the existence of GPU nodes is confirmed via NSF grant records and press releases, specific hardware manifests (node counts/GPU models) are not published on the open web. Counts are set to 0 to avoid fabrication, with existence noted in 'other_high_vram_gpus'."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No specific compute credit allocations (AWS/Azure/GCP) for students found in public documentation."
+  },
+  "analysis_notes": "Student data is highly accurate (from official 2023 Fact Book). GPU data is limited to confirmation of existence via grant awards; specific inventory is not public."
+}

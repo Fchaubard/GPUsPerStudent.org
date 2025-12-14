@@ -1,0 +1,74 @@
+{
+  "university_name": "Western Michigan University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://wmich.edu/research/hpchub",
+      "data_found": "WMU Office of Research and Innovation states WMU purchased access to MSU computing cluster, called 'HPCHub'."
+    },
+    {
+      "url": "https://cs.wmich.edu/hpcs/cluster/",
+      "data_found": "WMU 'Thor' cluster hardware: 19 'Kepler GPU Node' and 1 'Fermi GPU Node' (lists Tesla M2090 explicitly)."
+    },
+    {
+      "url": "https://cs.wmich.edu/hpcs/documentation/quickstart/torque/",
+      "data_found": "Thor GPU nodes identified via Torque GRES: node 2 has Tesla M2090; several nodes have Kepler K20; GPU is requested/claimed as a single GRES per node (supports 1 GPU per node assumption)."
+    },
+    {
+      "url": "https://docs.icer.msu.edu/Cluster_Resources/",
+      "data_found": "MSU ICER/HPCC node inventory with GPU node counts and GPUs-per-node: H200 (nfh 6x4, neh 2x8), L40S (nel 3x8), A100 SXM 80GB (nal 11x4), A100 PCIe 40GB (nif 6x4), V100s 32GB (nvf 21x4), V100 32GB (nvl 8x8)."
+    },
+    {
+      "url": "https://docs.icer.msu.edu/Getting_Started_with_Grace_Hopper_and_Grace_Grace/",
+      "data_found": "MSU ICER 'Grace Hopper' nodes listing: GH200 96GB (1 per node) with 4 nodes total (nch-[000-002] and nch-003)."
+    },
+    {
+      "url": "https://wmich.edu/cs/accreditation-info",
+      "data_found": "Student enrollment: 263 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 263,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2024-25",
+    "source_url": "https://wmich.edu/cs/accreditation-info",
+    "notes": "WMU Computer Science department ABET accreditation page includes a table labeled 'Program enrollment and degree data' with 'Academic Year' and 'Total Undergraduate Enrollment'. The row for academic year 2024-25 lists Total Undergraduate Enrollment = 263 (and Bachelor's Degrees Awarded = 45). The same page does not provide any 2024-25 headcount/enrollment numbers for the M.S. or Ph.D. programs (only objectives/assessment text), so grad_cs_count and phd_cs_count are set to 0. Page does not show an explicit 'last updated' date."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 40,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 44,
+    "a100_40gb_count": 24,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 24,
+    "v100_count": 148,
+    "p100_count": 0,
+    "gh200_count": 4,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K20 (Kepler)",
+        "count": 19,
+        "cluster": "WMU Thor",
+        "notes": "19 Kepler GPU nodes; per-node GPU count not explicitly stated, but Torque GRES usage indicates 1 GPU per node."
+      },
+      {
+        "model": "NVIDIA Tesla M2090 (Fermi)",
+        "count": 1,
+        "cluster": "WMU Thor",
+        "notes": "Single node with M2090; Torque docs indicate only one such GPU node."
+      }
+    ],
+    "source_url": "https://wmich.edu/research/hpchub",
+    "notes": "Clusters included:\n1) WMU Thor (local WMU cluster): 19 Kepler GPU nodes assumed 1x Tesla K20 each => 19*1=19; 1 Fermi GPU node with Tesla M2090 => 1*1=1. (These GPUs are not in the requested H100/H200/A100/V100/P100/A6000/L40S buckets; listed under other_high_vram_gpus.)\n2) WMU HPCHub (WMU-purchased access to MSU ICER/HPCC):\n- H200: nfh 6 nodes * 4 GPUs/node = 24; neh 2 nodes * 8 GPUs/node = 16; total H200 = 40\n- L40S: nel 3 nodes * 8 GPUs/node = 24\n- A100 80GB (SXM): nal 11 nodes * 4 GPUs/node = 44\n- A100 40GB (PCIe): nif 6 nodes * 4 GPUs/node = 24\n- V100 32GB: nvf 21 nodes * 4 GPUs/node = 84; nvl 8 nodes * 8 GPUs/node = 64; total V100 = 148\n- GH200: nch 4 nodes * 1 GPU/node = 4\nNo H100, P100, A6000, A40 observed in these sources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

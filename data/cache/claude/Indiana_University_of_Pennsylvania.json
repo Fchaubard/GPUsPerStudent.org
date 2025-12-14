@@ -1,0 +1,49 @@
+{
+  "university_name": "Indiana University of Pennsylvania",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.collegefactual.com/colleges/indiana-university-of-pennsylvania-main-campus/academic-life/academic-majors/computer-information-sciences/",
+      "data_found": "During the 2021-2022 academic year, Indiana University of Pennsylvania - Main Campus handed out 47 bachelor's degrees in computer & information sciences."
+    },
+    {
+      "url": "https://datausa.io/profile/university/indiana-university-of-pennsylvania-main-campus",
+      "data_found": "The total enrollment at Indiana University of Pennsylvania-Main Campus in 2023, both undergraduate and graduate, is 9,246 students."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/trends/indiana-university-of-pennsylvania-main-campus/student-population/",
+      "data_found": "The average student population over the last 11 years is 11,321 where 9,246 students are attending the school for the academic year 2023-2024. 80.38% of total students is undergraduate students and 19.62% students is graduate students. The average number of Undergraduate students over the last 11 years is 9,256 where 7,432 students are attending the Undergraduate school for the academic year 2023-2024. The average number of Graduate students over the last 11 years is 2,065 where 1,814 students are attending the Graduate school for the academic year 2023-2024."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 188,
+    "grad_cs_count": 30,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://www.collegefactual.com/colleges/indiana-university-of-pennsylvania-main-campus/academic-life/academic-majors/computer-information-sciences/",
+    "notes": "IUP does not have a PhD program in Computer Science. Undergraduate CS count estimated from: 47 bachelor's degrees awarded in 2021-2022 \u00d7 4 years = 188. Graduate CS count estimated conservatively as there was no specific data found for MS Computer Science enrollment. IUP total enrollment has declined from peak of 15,379 in 2012 to current 9,246."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.collegefactual.com/colleges/indiana-university-of-pennsylvania-main-campus/academic-life/academic-majors/computer-information-sciences/",
+    "notes": "No public GPU cluster specifications found for Indiana University of Pennsylvania. The university's IT resources page did not list any HPC or GPU cluster resources. Searches returned results for Indiana University (a different institution) which has Big Red 200 with 256 A100 GPUs, but this is NOT Indiana University of Pennsylvania. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Indiana University of Pennsylvania appears to have limited public information about HPC/GPU resources. The institution has seen significant enrollment decline from 15,379 in 2012 to 9,246 in 2023. CS program is small with only 47 bachelor's degrees awarded in 2021-2022. No PhD program in Computer Science was found."
+}

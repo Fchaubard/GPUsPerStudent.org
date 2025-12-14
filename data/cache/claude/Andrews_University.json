@@ -1,0 +1,49 @@
+{
+  "university_name": "Andrews University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/andrews-university",
+      "data_found": "Andrews University is a higher education institution located in Berrien County, MI. In 2023, 721 degrees were awarded across all undergraduate and graduate programs at Andrews University."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/168740/andrews-university/enrollment/",
+      "data_found": "Andrews University has a total enrollment of 2,837 including 1,312 undergraduate students and 1,525 graduate students. For the academic year 2023-2024, total of 2,837 students have enrolled in Andrews University with 1,312 undergraduate and 1,525 graduate students."
+    },
+    {
+      "url": "https://www.andrews.edu/cp/computing/index.html",
+      "data_found": "The Bachelor of Science in Computer Science equips students to develop and implement cutting-edge computing solutions for real-world challenges. Key areas of study include algorithms, software engineering, artificial intelligence, robotics, databases, data science, virtual and augmented reality, theory of computation, networks, and web and mobile app development."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 52,
+    "grad_cs_count": 30,
+    "phd_cs_count": 5,
+    "year": "2023-2024",
+    "source_url": "https://www.collegetuitioncompare.com/edu/168740/andrews-university/enrollment/",
+    "notes": "Specific CS department enrollment numbers were not found in searches. Estimates based on: Total enrollment of 2,837 (1,312 undergrad, 1,525 grad). CS typically represents 3-4% of undergrad enrollment at similar-sized private universities. Using 4% for undergrad (52 students), and estimating MS/PhD based on typical ratios at small private research universities with limited doctoral programs."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/andrews-university",
+    "notes": "While the Computing Department mentions having labs for high-performance computing and virtual reality development, no specific GPU cluster specifications or node configurations were found through public searches. The university may have GPUs for VR development and HPC work, but detailed hardware specifications are not publicly available. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No information found about cloud compute credits or partnerships in the available public sources."
+  },
+  "analysis_notes": "Andrews University is a small private Seventh-day Adventist institution with approximately 2,837 total students. While the Computing Department advertises programs in AI, data science, and mentions HPC facilities, specific GPU cluster resources could not be verified through public sources. Student counts for CS programs are estimated based on typical enrollment ratios at similar institutions."
+}

@@ -1,0 +1,41 @@
+{
+  "university_name": "West Virginia University",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/west-virginia-university",
+      "data_found": "2022 Degrees Awarded: Computer Science (108 Bachelor's, 24 Master's, 7 PhDs). Used for steady-state enrollment estimation."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 486,
+    "grad_cs_count": 48,
+    "phd_cs_count": 35,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/west-virginia-university",
+    "notes": "Official exact enrollment headcounts by specific major are not publicly listed on the WVU Institutional Research site without login. Counts are estimated based on IPEDS completion data (DataUSA) and program duration: Undergrad (108 degrees * 4.5 yrs = 486), MS (24 degrees * 2 yrs = 48), PhD (7 degrees * 5 yrs = 35). This aligns with the Statler College's report of ~800 students in the combined Lane Dept of CS & EE."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 8,
+    "a40_count": 4,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 92,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/west-virginia-university",
+    "notes": "Calculations based on Thorny Flat Cluster specifications:\n- V100: 46 Standard GPU nodes * 2 GPUs/node = 92 V100.\n- A100 (40GB): 4 Large Memory GPU nodes * 2 GPUs/node = 8 A100.\n- A40: 2 Visualization nodes * 2 GPUs/node = 4 A40.\nSpruce Knob cluster is legacy/decommissioned for GPU tasks. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "WVU Research Computing provides detailed node counts for the Thorny Flat cluster. No H100/H200 resources were found in public documentation."
+}

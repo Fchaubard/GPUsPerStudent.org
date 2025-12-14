@@ -1,0 +1,45 @@
+{
+  "university_name": "University of Houston",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.uh.edu/nsm/computer-science/about/",
+      "data_found": "Department overview: 'The Department of Computer Science... with an enrollment of over 2,300 undergraduate students, 200 masters students and 140 Ph.D. students.'"
+    },
+    {
+      "url": "https://uh.edu/ir/reports/statistical-handbook/student-enrollment/",
+      "data_found": "UH Institutional Research Statistical Handbook (Fall 2023 Data by Department): Computer Science Undergraduate: 2,752; Masters: 202; Doctoral: 137."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2752,
+    "grad_cs_count": 202,
+    "phd_cs_count": 137,
+    "year": "2023",
+    "source_url": "https://uh.edu/ir/reports/statistical-handbook/student-enrollment/",
+    "notes": "Data sourced from the University of Houston Institutional Research Statistical Handbook for Fall 2023 (latest full dataset available). Counts are specifically for the Department of Computer Science."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 16,
+    "p100_count": 32,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.uh.edu/nsm/computer-science/about/",
+    "notes": "GPU totals calculated from HPE Data Science Institute hardware pages.\n\n1) DGX Systems: 2 nodes x 8 A100 GPUs = 16 A100s (News release specifies 320GB system memory, implying 40GB variant: 320/8=40).\n2) Carya Cluster: 8 GPU nodes x 2 V100 (32GB) = 16 V100s.\n3) Sabine Cluster: 16 GPU nodes x 2 P100 = 32 P100s.\n\nLegacy hardware (Opuntia cluster with M2070s) excluded as obsolete. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UH centralizes research computing under the HPE Data Science Institute (HPE DSI). The primary AI resource consists of two NVIDIA DGX A100 systems. Student counts are robust via the Institutional Research portal."
+}

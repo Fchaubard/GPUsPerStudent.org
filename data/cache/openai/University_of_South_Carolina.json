@@ -1,0 +1,56 @@
+{
+  "university_name": "University of South Carolina",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://sc.edu/about/offices_and_divisions/division_of_information_technology/rc/resources/",
+      "data_found": "Historical Summary of HPC Clusters -> GPU Nodes: Theia: 9\u00d7 Quad A100 + 1\u00d7 Quad H100; Hyperion Phase III: 1\u00d7 DGX (8\u00d7 A100) + 44\u00d7 Dual V100; Hyperion Phase II: 9\u00d7 Dual P100 + 44\u00d7 Dual V100; Hyperion Phase I: 9\u00d7 Dual P100."
+    },
+    {
+      "url": "https://aiisc.cse.sc.edu/facility.html",
+      "data_found": "AI Institute infrastructure lists: two L40S nodes each with 2\u00d7 L40S 48GB; also lists 'Nvidia V100 GPU with 32GB' (counted as 1 additional V100) and 'three M-6000 GPUs each with 24 GB memory' (counted under other_high_vram_gpus)."
+    },
+    {
+      "url": "https://sc.edu/study/colleges_schools/engineering_and_computing/about/accreditation/index.php",
+      "data_found": "Student enrollment: 620 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 620,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://sc.edu/study/colleges_schools/engineering_and_computing/about/accreditation/index.php",
+    "notes": "Found Fall 2024 undergraduate Computer Science enrollment on the Molinaroli College of Engineering and Computing Accreditation page under the section 'Computer Science' -> 'Undergraduate Enrollment and Degrees Awarded' table. The row for Enrollment Year 2024 lists Fall Enrollment = 620 (explicitly tied to Fall enrollment for that year). No 2024+ source on sc.edu that explicitly lists Computer Science M.S. (masters-only) headcount or Computer Science Ph.D. headcount was found; the official Fall 2024 enrollment PDF link on the university's Enrollment Data (2024) page is hosted on oiraa.dw.sc.edu but was not retrievable due to repeated timeouts, and the Data Dashboards/Table Generator pages did not provide program-level graduate/PhD headcounts in a crawlable format."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 4,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 36,
+    "a100_40gb_count": 8,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 4,
+    "v100_count": 177,
+    "p100_count": 36,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro M6000",
+        "vram_gb": 24,
+        "count": 3,
+        "notes": "Listed as 'three M-6000 GPUs each with 24 GB memory' (counted as other_high_vram_gpus)."
+      }
+    ],
+    "source_url": "https://sc.edu/about/offices_and_divisions/division_of_information_technology/rc/resources/",
+    "notes": "Cluster-by-cluster breakdown (nodes \u00d7 GPUs_per_node = total GPUs):\n\n1) Theia (from RC Resources page):\n- 9\u00d7 Quad A100 => 9\u00d74=36 A100\n- 1\u00d7 Quad H100 => 1\u00d74=4 H100\n\n2) Hyperion Phase III (from RC Resources page):\n- 1\u00d7 DGX (8\u00d7 A100) => 1\u00d78=8 A100\n- 44\u00d7 Dual V100 => 44\u00d72=88 V100\n\n3) Hyperion Phase II (from RC Resources page):\n- 9\u00d7 Dual P100 => 9\u00d72=18 P100\n- 44\u00d7 Dual V100 => 44\u00d72=88 V100\n\n4) Hyperion Phase I (from RC Resources page):\n- 9\u00d7 Dual P100 => 9\u00d72=18 P100\n\n5) Additional AI Institute nodes/GPUs (from AIISC facility page):\n- Two L40S nodes, each with 2\u00d7 L40S => 2\u00d72=4 L40S\n- 1\u00d7 V100 (32GB) => 1 V100 (added to V100 total)\n- 3\u00d7 M-6000 (24GB) => 3 GPUs (tracked under other_high_vram_gpus)\n\nTotals computed:\n- H100 total: 4 (assumed SXM due to 'quad H100' server style; PCIe unknown)\n- A100 total: 36+8=44 (split estimate: Theia A100 counted as 80GB; DGX A100 counted as 40GB)\n- V100 total: 88+88+1=177\n- P100 total: 18+18=36\n- L40S total: 4\n\nMemory/SKU assumptions (because sources do not specify A100 40GB vs 80GB, nor H100 PCIe vs SXM):\n- A100: assigned Theia's newer A100s to 80GB (36); assigned Hyperion DGX A100s to 40GB (8).\n- H100: assigned Theia's 4\u00d7 H100 to H100 SXM (4) and H100 PCIe (0) as a best-effort estimate."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

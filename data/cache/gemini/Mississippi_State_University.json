@@ -1,0 +1,42 @@
+{
+  "university_name": "Mississippi State University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 919,
+    "grad_cs_count": 61,
+    "phd_cs_count": 83,
+    "year": "2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data sourced from the Official Fall 2024 Enrollment Report (Office of Institutional Research). Counts reflect the specific 'Computer Science' major. The Department of Computer Science & Engineering also houses a 'Software Engineering' major (225 undergrads) and 'Cyber Security and Operations' (59 undergrads, 21 masters) which are excluded from these specific CS counts to remain strictly within the definition of CS. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 288,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K40/K20",
+        "estimated_total": null,
+        "notes": "Listed in the legacy Atlas cluster (11 GPU nodes total) but excluded from main count due to age."
+      }
+    ],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "GPU counts calculated from HPC\u00b2 (High Performance Computing Collaboratory) system specifications.\n1) Orion (Primary Cluster): 72 nodes \u00d7 4 V100 32GB = 288 V100.\n2) Hercules (AI Cluster): 4 nodes \u00d7 4 A100 80GB = 16 A100.\n3) Atlas: Contains legacy K40/K20 GPUs, not tallied in modern specs.\nNo H100 resources found in public documentation as of May 2025. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "MSU possesses a significant V100 deployment via the Orion cluster (a Top500 system at launch), but A100 resources are limited to the smaller Hercules cluster. No H100 deployment has been publicly announced or documented on the HPC\u00b2 site."
+}

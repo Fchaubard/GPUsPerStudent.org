@@ -1,0 +1,57 @@
+{
+  "university_name": "Seton Hall University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.shu.edu/math-compsci/computing-facilities.html",
+      "data_found": "The Department of Mathematics and Computer Science operates, jointly with the Department of Chemistry and Biochemistry, an IBM cluster computer, used in research and education."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/186584/seton-hall-university/enrollment/",
+      "data_found": "Seton Hall University has a total enrollment of 9,494 including 6,061 undergraduate students and 3,433 graduate students."
+    },
+    {
+      "url": "https://datausa.io/profile/university/seton-hall-university",
+      "data_found": "The enrolled student population at Seton Hall University is 48.1% White, 22.4% Hispanic or Latino, 11.6% Black or African American, 9.06% Asian, 3.9% Two or More Races, 0.105% Native Hawaiian or Other Pacific Islanders, and 0.105% American Indian or Alaska Native."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/seton-hall-university/academic-life/academic-majors/computer-information-sciences/",
+      "data_found": "During the 2021-2022 academic year, Seton Hall University handed out 78 bachelor's degrees in computer & information sciences. This is an increase of 111% over the previous year when 37 degrees were handed out. In 2022, 3 students received their master's degree in computer & information sciences from Seton Hall."
+    },
+    {
+      "url": "https://computer-science-schools.com/seton-hall-university",
+      "data_found": "Seton Hall University is a small not-for-profit Catholic college offering many disciplines along with computer majors and located in South Orange, New Jersey. This school was founded in 1856 and is currently offering bachelor's and master's degrees in 4 computer programs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 312,
+    "grad_cs_count": 6,
+    "phd_cs_count": 0,
+    "year": "2021-2022",
+    "source_url": "https://www.collegefactual.com/colleges/seton-hall-university/academic-life/academic-majors/computer-information-sciences/",
+    "notes": "CS undergraduate count estimated from: 78 bachelor's degrees awarded in 2021-2022 (111% increase from 37 previous year) \u00d7 4 years = approximately 312 enrolled CS undergrads. Graduate CS enrollment (MS level) based on 3 master's degrees awarded in 2022, estimated at 6 enrolled (using 2-year program assumption). No PhD program in Computer Science found at Seton Hall University."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.shu.edu/math-compsci/computing-facilities.html",
+    "notes": "No GPU cluster specifications found. Only reference is to 'an IBM cluster computer' operated jointly with Chemistry department. No specific GPU models, counts, or specifications were found in available public sources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Seton Hall appears to have limited HPC/GPU infrastructure. The only computing cluster reference found was an IBM cluster operated jointly between Math/CS and Chemistry departments, but no GPU specifications were publicly available. CS enrollment estimated from degree completion data."
+}

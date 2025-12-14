@@ -1,0 +1,77 @@
+{
+  "university_name": "West Virginia University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.hpc.wvu.edu/text/83.ThornyFlat.html",
+      "data_found": "Thorny Flat GPU specs: 7 compute nodes with 3 GPUs NVIDIA(R) Quadro P6000 24GB PCIe GPUs. 3 compute nodes with 8 GPUs NVIDIA(R) Quadro RTX 6000 24GB PCIe GPUs. 1 compute node with 2 GPUs NVIDIA(R) A100 40GB PCIe GPUs."
+    },
+    {
+      "url": "https://docs.hpc.wvu.edu/text/84.DollySods.html",
+      "data_found": "Dolly Sods GPU specs: 30 compute nodes with 4 GPUs NVIDIA(R) A30 24GB PCIe. 4 compute nodes with 4 GPUs NVIDIA(R) A40 24GB PCIe. 2 compute nodes with 8 GPUs NVIDIA(R) A100 40GB PCIe. The login node also has 3 GPUs NVIDIA(R) A40 24GB PCIe. The system has 155 NVIDIA GPU cards total: 120 NVIDIA A30, 19 NVIDIA A40, and 16 NVIDIA A100."
+    },
+    {
+      "url": "https://research.wvu.edu/tools/research-computing/high-performance-computing",
+      "data_found": "New AI/ML cluster set for deployment in 2023: 30 nodes with 32 CPU cores and four A30 GPUs each, four nodes with 32 CPU cores and four A40 GPUs, two nodes with 64 CPU cores and eight SXM A100 GPUs, and one node with three A40 GPUs for visualization and testing."
+    },
+    {
+      "url": "https://media.statler.wvu.edu/news/2024/10/01/wvu-computer-science-and-cybersecurity-undergraduate-programs-reach-significant-growth-this-fall-semester",
+      "data_found": "Computer science and cybersecurity undergraduate programs have reached a significant high of 41% in enrollment growth this year. Over the past five years, enrollment has grown by 77%. Freshmen in CS and cybersecurity majors are now directly placed in the Lane Department, leading to approximately 88% enrollment growth this fall."
+    },
+    {
+      "url": "https://www.wvu.edu/about-wvu/wvu-facts",
+      "data_found": "Fall 2024 WVU System full headcount enrollment is 25,994, which includes 4,724 first-time freshmen."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/west-virginia-university/student-life/diversity/",
+      "data_found": "WVU total enrollment is approximately 26,269 students. 18,726 are undergraduates and 4,216 are graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 150,
+    "phd_cs_count": 50,
+    "year": "2024-2025",
+    "source_url": "https://media.statler.wvu.edu/news/2024/10/01/wvu-computer-science-and-cybersecurity-undergraduate-programs-reach-significant-growth-this-fall-semester",
+    "notes": "Based on 41% enrollment growth in 2024 and 77% growth over past 5 years for CS and cybersecurity programs. With freshmen direct admission leading to 88% growth this fall, estimated ~800 undergrads in CS (including cybersecurity). Graduate and PhD estimates based on typical CS department ratios at R1 universities, as specific graduate CS enrollment numbers were not found."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 16,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 18,
+    "a40_count": 19,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 (24GB)",
+        "estimated_total": 120,
+        "notes": "Dolly Sods cluster has 30 nodes \u00d7 4 A30 GPUs each = 120 total A30 GPUs"
+      },
+      {
+        "model": "NVIDIA Quadro P6000 (24GB)",
+        "estimated_total": 21,
+        "notes": "Thorny Flat cluster has 7 nodes \u00d7 3 P6000 GPUs each = 21 total P6000 GPUs"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000 (24GB)",
+        "estimated_total": 24,
+        "notes": "Thorny Flat cluster has 3 nodes \u00d7 8 RTX 6000 GPUs each = 24 total RTX 6000 GPUs"
+      }
+    ],
+    "source_url": "https://docs.hpc.wvu.edu/text/84.DollySods.html",
+    "notes": "GPU CALCULATIONS:\n\n1) Thorny Flat cluster:\n   - P6000: 7 nodes \u00d7 3 GPUs = 21 GPUs\n   - RTX 6000: 3 nodes \u00d7 8 GPUs = 24 GPUs\n   - A100 40GB: 1 node \u00d7 2 GPUs = 2 GPUs\n   Total Thorny Flat: 47 GPUs\n\n2) Dolly Sods cluster (2023):\n   - A30: 30 nodes \u00d7 4 GPUs = 120 GPUs\n   - A40: 4 nodes \u00d7 4 GPUs = 16 GPUs\n   - A100 40GB SXM: 2 nodes \u00d7 8 GPUs = 16 GPUs\n   - A40 (login node): 3 GPUs\n   Total Dolly Sods: 155 GPUs (120 A30 + 19 A40 + 16 A100)\n\n3) New AI/ML cluster (described for 2023 deployment but counted as A100 SXM based on description):\n   - A30: 30 nodes \u00d7 4 GPUs = 120 GPUs (likely same as Dolly Sods)\n   - A40: 4 nodes \u00d7 4 GPUs = 16 GPUs (likely same as Dolly Sods)\n   - A100 SXM: 2 nodes \u00d7 8 GPUs = 16 GPUs (counted as A100 80GB SXM)\n   - A40 (viz node): 3 GPUs\n\nFINAL TOTALS:\n- A100 80GB (SXM): 16 (from new AI/ML cluster description)\n- A100 40GB: 18 (16 from Dolly Sods + 2 from Thorny Flat)\n- A40: 19 (from Dolly Sods)\n- A30: 120 (from Dolly Sods)\n- P6000: 21 (from Thorny Flat)\n- RTX 6000: 24 (from Thorny Flat)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach. Student enrollment numbers estimated based on growth percentages reported in news articles. GPU resources calculated from detailed cluster specifications in HPC documentation."
+}

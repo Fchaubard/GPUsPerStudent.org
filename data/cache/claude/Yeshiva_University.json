@@ -1,0 +1,67 @@
+{
+  "university_name": "Yeshiva University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.yu.edu/katz/computer-science-engineering",
+      "data_found": "The department boasts state-of-the-art computing facilities, including a high-performance GPU-based server from MIT Cambridge Research."
+    },
+    {
+      "url": "https://www.yu.edu/news/yu/yeshiva-university-launches-two-masters-programs-computer-science",
+      "data_found": "They will also have access to significant computing capacity, including a high-performance, GPU-based server from MIT Cambridge Research."
+    },
+    {
+      "url": "https://www.yu.edu/katz/computer-science-agile",
+      "data_found": "State-of-the-art computing facilities, including a high performance GPU-based server from MIT Cambridge Research."
+    },
+    {
+      "url": "https://yucommentator.org/2024/05/frustration-in-yus-four-year-computer-science-programs/",
+      "data_found": "Last year there were over 150 students taking Computer Science classes or about one-third of all of Yeshiva College."
+    },
+    {
+      "url": "https://blogs.yu.edu/news/yu-graduate-schools-achieving-record-growth/",
+      "data_found": "Enrollment in Katz programs has increased over 85% since 2018."
+    },
+    {
+      "url": "https://blogs.yu.edu/news/yu-celebrates-record-growth-in-graduate-school-enrollment/",
+      "data_found": "Enrollment at the Katz School of Science and Health has skyrocketed nearly 400 percent since 2017, over 200 percent since 2019, and over 50 percent since 2022."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 150,
+    "grad_cs_count": 250,
+    "phd_cs_count": -1,
+    "year": "2023",
+    "source_url": "https://yucommentator.org/2024/05/frustration-in-yus-four-year-computer-science-programs/",
+    "notes": "Undergrad CS count based on 'over 150 students taking Computer Science classes' reported in 2023, representing approximately one-third of Yeshiva College. Grad CS count estimated from significant Katz School growth (85%+ enrollment increase since 2018) with multiple CS-related graduate programs. PhD count not found - Yeshiva University does not appear to offer a PhD in Computer Science based on available sources."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [
+      {
+        "model": "MIT Cambridge Research GPU Server",
+        "estimated_total": null,
+        "notes": "High-performance GPU-based server mentioned in multiple sources but specific GPU models and quantities not publicly disclosed."
+      }
+    ],
+    "source_url": "https://www.yu.edu/katz/computer-science-engineering",
+    "notes": "Multiple sources confirm Yeshiva University has a 'high-performance GPU-based server from MIT Cambridge Research' but no public specifications found regarding specific GPU models, quantities, or technical details. The system is referenced as a key computing resource for the Katz School's Department of Graduate Computer Science and Engineering."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "GPU specifications are not publicly available. Yeshiva University emphasizes their MIT Cambridge Research GPU server across multiple program pages but does not provide technical details. Student enrollment data suggests approximately 150 undergraduate CS students and an estimated 250 graduate CS students based on significant growth trends."
+}

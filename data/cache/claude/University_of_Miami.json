@@ -1,0 +1,49 @@
+{
+  "university_name": "University of Miami",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://idsc.miami.edu/triton/",
+      "data_found": "The University's latest supercomputer acquisition, TRITON\u2014rated one of the Top 5 Academic Institution Supercomputers in the U.S. for 2019\u2014is UM's first GPU-accelerated high-performance computing (HPC) system. Built using IBM Power Systems AC922 servers, this system was designed to maximize data movement between the IBM POWER9 CPU and attached accelerators like GPUs."
+    },
+    {
+      "url": "https://insidehpc.com/2019/08/ibm-deploys-triton-ai-supercomputer-at-university-of-miami/",
+      "data_found": "Built using IBM Power Systems AC922 servers, the new HPC system was designed to maximize data movement between the IBM POWER9 CPU and attached accelerators like GPUs."
+    },
+    {
+      "url": "https://idsc.miami.edu/magazine/idsc-advanced-computing-gets-another-upgrade/",
+      "data_found": "The Pegasus cluster has been augmented with an additional 1024 cores, 6TB of memory and 1PB of high-performance IBM ESS storage. Each additional compute node is equipped with two Intel Xeon scalable 32-core 3.0GHz processors and 256GB DDR4 3200Mhz memory."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 200,
+    "phd_cs_count": 50,
+    "year": "2024-2025",
+    "source_url": "https://idsc.miami.edu/triton/",
+    "notes": "University of Miami CS enrollment estimated based on available data. Peterson's shows 12 total graduate students in CS, which appears to be incomplete data. Based on program offerings (BS, BA, BS+MS, MS, PhD programs) and university total enrollment of 19,593 (12,883 undergraduate, 6,710 graduate), CS enrollment estimated using typical CS department ratios: ~6% of undergrads (800), ~3% of grad students excluding PhD (200), and ~50 PhD students based on typical research university CS PhD cohort sizes. The department offers comprehensive programs and has active research areas, supporting these enrollment estimates. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 20,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://idsc.miami.edu/triton/",
+    "notes": "GPU CALCULATIONS:\n\n1) Triton Cluster: 10 IBM Power System AC922 nodes \u00d7 2 NVIDIA Tesla V100 GPUs per node = 20 V100 GPUs total.\n\n2) Pegasus Cluster: CPU-only cluster with 350 nodes, no GPUs mentioned in documentation.\n\nTOTAL: 20 V100 GPUs\n\nNote: The University of Miami appears to have limited GPU resources compared to peer institutions, with only the Triton cluster providing GPU capabilities for research computing. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Miami has two main HPC clusters: Triton (GPU-enabled with 10 nodes \u00d7 2 V100 GPUs = 20 total) and Pegasus (CPU-only with 350+ nodes). Student enrollment data was estimated based on typical CS department ratios as specific CS enrollment figures were not publicly available."
+}

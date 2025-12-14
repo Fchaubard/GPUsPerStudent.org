@@ -1,0 +1,49 @@
+{
+  "university_name": "University of Dayton",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://pssclabs.com/press-release/pssc-labs-hpc-clusters-selected-by-university-of-dayton-for-atmospheric-optics-systems-research/",
+      "data_found": "University of Dayton's Intelligent Optics Laboratory uses PowerWulf HPC Cluster for atmospheric optics research. The new cluster reduces WRF model run times from 1-3 weeks to just a few days. Specific GPU specifications not provided."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-dayton",
+      "data_found": "In 2023, the most popular Masters Degree concentrations at University of Dayton were Computer Science (463 degrees awarded). Total degrees awarded in Computer and Information Sciences and Support Services: 516 degrees."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/trends/university-of-dayton/student-population/",
+      "data_found": "The student population at University of Dayton is 11,304 (8,176 undergraduate and 3,128 graduate students). The average number of Undergraduate students over the last 10 years is 8,496 where 8,176 students are attending the Undergraduate school for the academic year 2023-2024."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 210,
+    "grad_cs_count": 463,
+    "phd_cs_count": 50,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-dayton",
+    "notes": "CS enrollment estimated from degrees awarded data: 463 MS CS degrees awarded in 2023 (datausa.io). With typical MS duration of 2 years, estimated MS enrollment = 463 * 2 = 926 students. However, this seems high; using more conservative estimate of 463 MS students (1:1 ratio). Undergrad CS estimated as proportional share of total CS degrees (516 total CS degrees - 463 MS = ~53 BS degrees * 4 years = ~210 undergrads). PhD estimated at typical 10-15% of graduate CS enrollment."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://pssclabs.com/press-release/pssc-labs-hpc-clusters-selected-by-university-of-dayton-for-atmospheric-optics-systems-research/",
+    "notes": "University of Dayton has HPC computing resources including a PowerWulf Cluster for atmospheric optics research, but specific GPU models and counts were not found in publicly accessible documentation. The university is focused on AI and semiconductor research (IBM partnership announced Nov 2024) but detailed GPU cluster specifications are not publicly available."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Dayton has confirmed HPC resources but does not publish detailed GPU specifications publicly. The university has significant computer science enrollment with 516 total CS degrees awarded in 2023, with MS in CS being the most popular graduate program (463 degrees). The university recently announced a major AI/semiconductor research partnership with IBM, suggesting computational resources exist but are not publicly documented in detail."
+}

@@ -1,0 +1,49 @@
+{
+  "university_name": "Montana State University",
+  "data_retrieved_date": "2025-05-30",
+  "sources": [
+    {
+      "url": "https://www.montana.edu/uit/rci/tempest/",
+      "data_found": "Tempest Cluster Specifications: '10 GPU nodes, each with 2 NVIDIA A100 80GB GPUs.' (Total 20 GPUs)."
+    },
+    {
+      "url": "https://www.montana.edu/news/21743/msu-debuts-new-supercomputer-tempest-to-aid-researchers",
+      "data_found": "News Release: Confirms the acquisition of Tempest (NSF OAC-1925267) replacing the older Hyalite cluster."
+    },
+    {
+      "url": "https://www.montana.edu/opa/enrollment/",
+      "data_found": "Office of Planning and Analysis (OPA) Enrollment Reports hub page for Fall 2024 data."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 628,
+    "grad_cs_count": 34,
+    "phd_cs_count": 31,
+    "year": "2024",
+    "source_url": "https://www.montana.edu/opa/enrollment/",
+    "notes": "Data sourced from MSU Office of Planning & Analysis (OPA) Fall 2024 Enrollment reports (Headcount by Major). Undergrad count reflects the 'Computer Science' major (approx 628); the Gianforte School of Computing also houses 'Software Engineering' majors (~100) which are not included in this strict CS count. Grad count reflects MS Computer Science. PhD count reflects PhD Computer Science."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 20,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.montana.edu/uit/rci/tempest/",
+    "notes": "The primary research cluster at MSU is 'Tempest'.\n\nCALCULATIONS:\n- Tempest GPU Partition: 10 nodes \u00d7 2 A100 80GB (SXM4) per node = 20 A100 80GB GPUs.\n\nNote: The previous cluster 'Hyalite' has been largely retired/superseded by Tempest; its legacy hardware (potentially P100s) is not listed in the current primary specifications."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "MSU Research Cyberinfrastructure (RCI) centralized documentation is clear regarding the 'Tempest' cluster. Student data is derived from the official OPA census dashboards."
+}

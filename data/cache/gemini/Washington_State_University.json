@@ -1,0 +1,47 @@
+{
+  "university_name": "Washington State University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/washington-state-university",
+      "data_found": "DataUSA WSU Profile (2022 Data): Computer Science degrees awarded: 199 Bachelor's, 46 Master's, 11 Research Doctorates. Used for calculating major-specific enrollment estimates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 895,
+    "grad_cs_count": 100,
+    "phd_cs_count": 60,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/washington-state-university",
+    "notes": "Exact current CS-only enrollment numbers are not explicitly separated from Electrical Engineering (EECS) on the department website (which cites 'over 1000 undergrads' for the combined school). Counts here are estimated using degree-completion data from DataUSA (IPEDS source). Undergrad: 199 CS bachelor's degrees awarded (2022) \u00d7 4.5 years \u2248 895. MS: 46 degrees \u00d7 2 years \u2248 92 (rounded to 100). PhD: 11 degrees \u00d7 5.5 years \u2248 60."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 8,
+    "a40_count": 4,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 40,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80",
+        "estimated_total": 8,
+        "notes": "Mentioned in historical partition lists (4 nodes x 2 GPUs). Likely retired or legacy backfill."
+      }
+    ],
+    "source_url": "https://datausa.io/profile/university/washington-state-university",
+    "notes": "WSU's 'Kamiak' is a 'condo-model' cluster where inventory fluctuates as professors purchase nodes. Exact real-time counts are not published in a live table. Counts below are estimated based on 'Standard' purchase configurations and 'Infrastructure' page descriptions:\n\n1) A100s: Infrastructure page confirms presence. Purchase configs list 2-GPU nodes. Estimating 4 nodes of 80GB (4x2=8) and 4 nodes of 40GB (4x2=8) based on typical R1 university 'seed' cluster sizes documented in news releases.\n2) V100s: The primary GPU resource for several years. Infrastructure text historically cited '20 GPU nodes' during the V100 era. Calculated as 20 nodes \u00d7 2 GPUs/node = 40 V100s.\n3) A40s: Listed as an available configuration for visualization/AI. Estimated 1 node x 4 GPUs = 4.\n4) P100s: Legacy hardware mentioned in older documentation (2 nodes x 2 GPUs = 4). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "WSU operates a heterogeneous 'condo' cluster (Kamiak). Unlike centralized centers, hardware is often bought by individual labs. GPU counts are derived from the 'Standard Configuration' options listed on the pricing page and historical 'Infrastructure' descriptions (e.g., '20 GPU nodes'). Student counts are derived from degrees awarded due to combined EECS department reporting."
+}

@@ -1,0 +1,53 @@
+{
+  "university_name": "University of Denver",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://ccm-docs.readthedocs.io/en/latest/alderaan/",
+      "data_found": "Alderaan cluster (funded by NSF grant 2019089): 2 high-memory GPU nodes, each with 2 AMD EPYC 7502 32 core processors for total 64 cores, 2 NVIDIA Tesla A100 GPUs, and 2TB DDR4 memory."
+    },
+    {
+      "url": "https://www.du.edu/it/services/research-services/research-computing",
+      "data_found": "The University of Denver hosts a High Performance Computing (HPC) cluster available to faculty members, researchers, and students engaged in research activities."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-denver-school-of-engineering-and-computer-science-department-of-computer-science-000_10016088.aspx",
+      "data_found": "316 Total Graduate Students in the Department of Computer Science."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-denver?redirect=true",
+      "data_found": "In 2022, 5,363 degrees were awarded across all undergraduate and graduate programs at University of Denver."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 330,
+    "grad_cs_count": 220,
+    "phd_cs_count": 96,
+    "year": "2023-2024",
+    "source_url": "https://www.petersons.com/graduate-schools/university-of-denver-school-of-engineering-and-computer-science-department-of-computer-science-000_10016088.aspx",
+    "notes": "CS undergraduate count estimated based on the pattern that CS typically represents ~5% of total undergrads at similarly-sized private research universities, applied to DU's 6,619 undergrads = ~330. Graduate CS count (MS students) estimated at 220 based on 316 total CS graduate students minus estimated 96 PhD students. PhD count estimated at 96 using typical ratios where PhD students comprise ~30% of total CS graduate enrollment at research universities."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 4,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://ccm-docs.readthedocs.io/en/latest/alderaan/",
+    "notes": "CLUSTERS INCLUDED:\n\n1) Alderaan Cluster (NSF-funded joint resource): 2 high-memory GPU nodes \u00d7 2 NVIDIA Tesla A100 GPUs each = 4 A100 GPUs total. Memory capacity not specified in source, conservatively assuming 80GB variant as these are high-memory nodes with 2TB system RAM each.\n\nNote: The University of Denver IT page confirms they have an HPC cluster but does not provide hardware specifications. No other GPU-equipped clusters were found in accessible public documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Limited GPU infrastructure found for University of Denver. Only the Alderaan cluster with 4 A100 GPUs was documented in public sources. Student enrollment numbers for CS specifically were not found in public sources, so estimates were made based on typical CS enrollment patterns at similar private research universities."
+}

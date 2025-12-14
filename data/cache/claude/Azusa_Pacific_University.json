@@ -1,0 +1,53 @@
+{
+  "university_name": "Azusa Pacific University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.apu.edu/humanities-sciences/cemps/",
+      "data_found": "APU is one of the nation's few Christian liberal arts universities with an R2 designation from Carnegie; Azusa Pacific University recently announced a $2 million investment to purchase equipment which will enable faculty and students to conduct cutting edge research."
+    },
+    {
+      "url": "https://www.apu.edu/humanities-sciences/cemps/about/",
+      "data_found": "The Department of Computer Science, Engineering, Math, Physics, and Statistics at Azusa Pacific University offers undergraduate degree programs in engineering, computer science, and computer information systems; With a faculty of competent and dedicated teachers, small classes, state-of-the-art computer labs."
+    },
+    {
+      "url": "https://catalog.apu.edu/academics/college-arts-humanities-theology-sciences/school-humanities-sciences/math-physics-statistics/",
+      "data_found": "The department operates two computer science laboratories on the Azusa campus: the advanced technologies/multimedia laboratory and the computer science main laboratory."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/109785/azusa-pacific-university/enrollment/",
+      "data_found": "For the academic year 2023-2024, total of 6,487 students have enrolled in Azusa Pacific University with 2,977 undergraduate and 3,510 graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 120,
+    "grad_cs_count": 40,
+    "phd_cs_count": -1,
+    "year": "2024-2025",
+    "source_url": "https://www.apu.edu/humanities-sciences/cemps/",
+    "notes": "Exact CS enrollment numbers not published. Estimated based on: APU has 2,759 undergrads total (fall 2024). The CEMPS department covers 5 disciplines (CS, Engineering, Math, Physics, Statistics). With small class sizes mentioned and assuming roughly equal distribution across CEMPS programs, estimated ~550 CEMPS undergrads total, with CS being approximately 20-25% of CEMPS enrollment = ~120 undergrad CS majors. Graduate estimate based on proportion of total grad enrollment (3,510) and limited CS graduate programs. PhD count marked as -1 (not found) as APU does not appear to offer PhD programs in Computer Science."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.apu.edu/humanities-sciences/cemps/",
+    "notes": "No public information found about GPU clusters or HPC resources at Azusa Pacific University. The university mentions state-of-the-art computer labs and a $2 million investment in research equipment, but no specific GPU infrastructure details are publicly available. All GPU counts marked as -1 (not found). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Azusa Pacific University is a small private Christian university with limited public information about specific CS enrollment or GPU computing resources. The university has an R2 Carnegie classification and recently invested $2 million in research equipment, but details about GPU infrastructure are not publicly available."
+}

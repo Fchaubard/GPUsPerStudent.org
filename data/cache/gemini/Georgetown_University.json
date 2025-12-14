@@ -1,0 +1,49 @@
+{
+  "university_name": "Georgetown University",
+  "data_retrieved_date": "2025-05-18",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117533",
+      "data_found": "NSF Award #2117533 'CC* Compute: Building a High Performance Computing Cluster at Georgetown University' (Awarded 2021, $399,755). Funding explicitly for 'GPU nodes' to support deep learning."
+    },
+    {
+      "url": "https://cs.georgetown.edu/graduate/phd/",
+      "data_found": "States: 'We currently have about 35 PhD students.'"
+    },
+    {
+      "url": "https://datausa.io/profile/university/georgetown-university",
+      "data_found": "2022 Data: Computer Science degrees awarded: 64 Bachelors, 36 Masters. (Used for MS enrollment estimation)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 400,
+    "grad_cs_count": 107,
+    "phd_cs_count": 35,
+    "year": "2023-2024",
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117533",
+    "notes": "Undergrad count (400) sourced from The Hoya report on department overcrowding. PhD count (35) sourced directly from the CS Department 'PhD Program' page. MS (Grad) count is estimated: CS Department does not publish live MS enrollment numbers, so calculated based on DataUSA/IPEDS 'degrees awarded' (36 MS degrees/year) multiplied by standard 2-year program duration (36 * 2 = 72 est. MS students) + 35 PhDs = 107 total grad students. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 8,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117533",
+    "notes": "Georgetown's HPC resources are modest compared to large state schools. The 'Gus' cluster is the primary resource.\n\n1) A100 Count: 8. Derived from NSF Award 2117533 ($400k grant in 2021/2022). This funding amount typically covers one DGX A100 or HGX A100 system (8 GPUs) plus infrastructure. Documentation references a specific 'a100' slurm partition.\n\n2) V100 Count: 8. Sourced from older UIS Research Technologies specifications listing '2 GPU nodes with 4x NVIDIA V100 GPUs each'.\n\nNote: The university emphasizes cloud credits and shared resources (MDI) over large on-premise clusters. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "The UIS HPC page mentions cloud partnerships (AWS/Google) but does not list a specific dollar amount for student allocations."
+  },
+  "analysis_notes": "Georgetown has a smaller, social-science focused footprint. Student counts are derived from department statements and degree completion data. GPU resources are estimated based on grant awards and node configuration descriptions found in technical docs."
+}

@@ -1,0 +1,41 @@
+{
+  "university_name": "University of Southern California",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://viterbigrad.usc.edu/academic-programs/phd/",
+      "data_found": "Viterbi PhD enrollment generally ~1,300 total across all engineering. Used to estimate CS portion."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1697,
+    "grad_cs_count": 3341,
+    "phd_cs_count": 400,
+    "year": "2023-2024",
+    "source_url": "https://viterbigrad.usc.edu/academic-programs/phd/",
+    "notes": "Undergraduate count (1,697) and Total Graduate count (3,741) taken directly from Viterbi Facts & Figures 'Departmental Enrollments' table for Computer Science. The University does not explicitly break down CS Graduate enrollment into MS vs PhD on the summary page. PhD count is estimated at ~400 based on USC's typical conferral rate of ~60-70 CS PhDs per year (DataUSA/IPEDS) multiplied by approx 6 years residence, and consistent with the scale of a top-tier research department. MS count is calculated as Total Grad (3,741) - Est. PhD (400) = 3,341. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 134,
+    "a40_count": 8,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 82,
+    "p100_count": 40,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://viterbigrad.usc.edu/academic-programs/phd/",
+    "notes": "Counts derived from Center for Advanced Research Computing (CARC) documentation for Discovery (public) and Endeavour (condo) clusters.\n\n1) DISCOVERY CLUSTER:\n- A100 (40GB): 11 nodes * 2 GPUs = 22\n- V100: (9 nodes * 2 GPUs) + (2 nodes * 2 GPUs) = 22\n- P100: 18 nodes * 2 GPUs = 36\n- A40: 4 nodes * 2 GPUs = 8\n\n2) ENDEAVOUR CLUSTER (Condo - counts fluctuate, based on docs):\n- A100: (1 node * 8 GPUs) + (52 nodes * 2 GPUs) = 8 + 104 = 112. (Mapped to 40GB as CARC docs typically distinguish 80GB if present, and these are existing nodes).\n- V100: (3 nodes * 8 GPUs) + (16 nodes * 2 GPUs) = 24 + 32 = 56\n- P100: 2 nodes * 2 GPUs = 4\n\nTOTALS:\n- A100 Total: 22 (Disc) + 112 (End) = 134\n- V100 Total: 22 (Disc) + 56 (End) = 78\n- P100 Total: 36 (Disc) + 4 (End) = 40\n- A40 Total: 8 (Disc)\n\nNote: USC has announced a 'Frontiers of Computing' initiative with $1B investment which implies new hardware (potentially H100s), but specific node counts for these new systems are not yet public in CARC user guides. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "USC CARC operates on an allocation model for Discovery (free for researchers) and a buy-in model for Endeavour. Explicit annual dollar value of free credits not listed in public docs."
+  },
+  "analysis_notes": "USC has a very large Master's in CS population (~3,300+), significantly skewing the GPU-per-student ratio if looking at the whole department. The primary HPC resources are centrally managed by CARC. Newer H100 resources likely exist under the new Frontiers of Computing institute but are not yet cataloged in the standard public CARC hardware tables."
+}

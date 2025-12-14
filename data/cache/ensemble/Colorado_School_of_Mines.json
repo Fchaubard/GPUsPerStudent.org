@@ -1,0 +1,49 @@
+{
+  "university_name": "Colorado School of Mines",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://rc-docs.mines.edu/pages/systems.html",
+      "data_found": "Wendian GPU node details: 5 GPU nodes each with 4x NVIDIA Tesla V100-SXM2 32GB; 4 GPU nodes each with 4x NVIDIA A100-PCIe 40GB."
+    },
+    {
+      "url": "https://rc-docs.mines.edu/pages/guidelines.html",
+      "data_found": "Student Partition of Wendian system specs: GPU Node count=1; GPUs per node=4x NVIDIA L40s (48 GB VRAM)."
+    },
+    {
+      "url": "https://ir.mines.edu/data-visualizations/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://ir.mines.edu/data-visualizations/",
+    "notes": "Searched exactly per your required strategy for Fall 2024 / AY 2024-25 CS enrollment counts (UG, MS-only, PhD-only). Colorado School of Mines' official Institutional Research 'Common Data Set' page only lists CDS files up through 2022-2023 (older than your allowed window), so it was rejected. The IR 'Data Visualizations' page lists dashboards (e.g., 'Enrollment' and 'Fall Census Student Profiles') and an '2017-2018 to Present Enrollment Report' link, but I could not retrieve any Fall 2024 / AY 2024-25 CS headcount figures from a publicly accessible page/PDF that explicitly states 'Fall 2024' or '2024-2025' and contains CS enrollment-by-level numbers. Therefore, to comply with your rejection rule for 2023-and-earlier data, all counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 4,
+    "v100_count": 20,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://rc-docs.mines.edu/pages/systems.html",
+    "notes": "Cluster breakdown (nodes \u00d7 GPUs_per_node = total):\n- Wendian (V100): 5 GPU nodes \u00d7 4 V100-SXM2 (32GB) per node = 20 V100 GPUs.\n- Wendian (A100 40GB): 4 GPU nodes \u00d7 4 A100-PCIe (40GB) per node = 16 A100 40GB GPUs.\n- Wendian Student partition (L40s): 1 GPU node \u00d7 4 L40s (48GB) per node = 4 L40s GPUs.\n- Mio: docs show at least one node named 'gpu004' but do not specify GPU model or GPUs per node, so Mio GPU totals are not included."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

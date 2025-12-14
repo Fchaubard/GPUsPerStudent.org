@@ -1,0 +1,41 @@
+{
+  "university_name": "University of North Dakota",
+  "data_retrieved_date": "2025-05-27",
+  "sources": [
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=University+of+North+Dakota&s=all&id=200280",
+      "data_found": "NCES/IPEDS 2023 Award Data for University of North Dakota: Computer Science (11.0701) Bachelor's degrees: 59; Master's degrees: 19; Doctorates: 3."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 295,
+    "grad_cs_count": 38,
+    "phd_cs_count": 18,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=University+of+North+Dakota&s=all&id=200280",
+    "notes": "Official enrollment headcounts by major are not listed on the UND public analytics pages. Counts are estimated from NCES/IPEDS 2023 degrees awarded data using steady-state program duration multipliers. Undergrad: 59 degrees * 5 years = 295. Master's: 19 degrees * 2 years = 38. PhD: 3 degrees * 6 years = 18."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=University+of+North+Dakota&s=all&id=200280",
+    "notes": "Talon Cluster: 2 GPU nodes * 2 V100 GPUs per node = 4 total V100 GPUs. While a 2022 NSF award (#2215993) exists for a new cluster, specific hardware specifications (e.g., node counts/GPU models) are not yet publicly listed on the CRC website, so only the confirmed V100s are counted. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UND has a centralized HPC resource (Talon). The publicly auditable specs only list V100 GPUs. Student counts estimated via federal IPEDS graduation data due to lack of granular public enrollment reports."
+}

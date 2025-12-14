@@ -1,0 +1,53 @@
+{
+  "university_name": "Howard University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://cea.howard.edu/research/research-labs",
+      "data_found": "Applied Fluid Dynamics Research Laboratory (AFDRL) lists a '125-node HPC cluster for CFD modeling' but provides no GPU model/count details."
+    },
+    {
+      "url": "https://gs.howard.edu/index.php/research/core-research-facilities",
+      "data_found": "Core Research Facilities page repeats AFDRL has a '125-node HPC cluster for CFD modeling' but provides no GPU model/count details."
+    },
+    {
+      "url": "https://rcmi.howard.edu/ric/",
+      "data_found": "RCMI Research Infrastructure Core page states CCBB is 'equipped with the necessary computer hardware' for computational biology/bioinformatics, but does not disclose any GPU cluster specifications or counts."
+    },
+    {
+      "url": "https://ira.howard.edu/sites/ira.howard.edu/files/2025-06/FA24_FTIC%20STUDENT%20PROFILE.pdf",
+      "data_found": "Student enrollment: 94 undergrad, 3 grad, 3 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 94,
+    "grad_cs_count": 3,
+    "phd_cs_count": 3,
+    "year": "Fall 2024",
+    "source_url": "https://ira.howard.edu/sites/ira.howard.edu/files/2025-06/FA24_FTIC%20STUDENT%20PROFILE.pdf",
+    "notes": "Fall 2024-only sources found (no 2023 or earlier used).\n\nUNDERGRAD CS: From the PDF titled \"Fall 2024 FTIC Profile\" (First Time in College / incoming undergraduates). On the program list for the College of Engineering & Architecture, it shows \"BS in Computer Science (COSI)\" with N=94; also listed in the Top 10 Majors as \"Computer Science 94\".\n\nGRAD + PHD CS: From the separate PDF titled \"FALL 2024 FTG STUDENTS PROFILE\" (First Time Graduates / newly enrolled graduate students), it shows in the Graduate School program list: \"MCS-Computer Science\" with FA24=3 (masters) and \"PHD-Computer Science\" with FA24=3 (doctoral). Source for grad/phd counts: https://ira.howard.edu/sites/ira.howard.edu/files/2025-06/Fall%202024-FTG.pdf\n\nIMPORTANT LIMITATION: These are FIRST-TIME cohort enrollments for Fall 2024 (newly entering students), not the total enrolled Computer Science headcount across all class years."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://cea.howard.edu/research/research-labs",
+    "notes": "Clusters found in public Howard University pages:\n\n1) AFDRL '125-node HPC cluster' (CFD modeling)\n- nodes = 125\n- GPUs_per_node = 0 (no GPUs mentioned anywhere in the source pages; treated as CPU-only for counting)\n- total GPUs = 125 \u00d7 0 = 0\n\nNo public Howard University pages located in the requested searches disclosed GPU types (H100/H200/A100/V100/etc.), GPU-per-node, or total GPU counts for any Howard-owned/operated cluster. Therefore all GPU totals are set to 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

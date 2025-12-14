@@ -1,0 +1,41 @@
+{
+  "university_name": "Bowling Green State University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/bowling-green-state-university-main-campus",
+      "data_found": "2022 Degree Completions: Computer Science (Masters) = 47 degrees awarded. (Used for graduate enrollment estimation)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 472,
+    "grad_cs_count": 94,
+    "phd_cs_count": 25,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/bowling-green-state-university-main-campus",
+    "notes": "Undergraduate count is exact verifiable data from the BGSU CS Accreditation page (Fall 2023 B.S. Computer Science enrollment). Does not include the 146 Software Engineering majors in the College of Technology. Graduate (MS) count estimated from DataUSA/IPEDS completions (47 degrees awarded * 2 year duration = 94). PhD count estimated based on the 'PhD in Data Science' (interdisciplinary, housed partly in CS) typical cohort size of ~5/year * 5 years. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/bowling-green-state-university-main-campus",
+    "notes": "BGSU does not own a publicly specified on-premise research cluster with reportable GPU nodes. The university explicitly directs researchers to the Ohio Supercomputer Center (OSC). While BGSU researchers utilize OSC's 'Ascend' (A100s) and 'Pitzer' (V100s) clusters, these are shared state resources, not university-owned hardware. A 2020 NSF grant (Award #2018811) funded a small local compute resource, but specifications and current operational status are not public; therefore, verifiable counts are set to 0 to avoid conflating shared state resources with owned assets. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "BGSU provides access to Ohio Supercomputer Center (OSC) credits, but specific annual dollar values allocated per student/lab are not public."
+  },
+  "analysis_notes": "BGSU is a member of the Ohio Supercomputer Center consortium. Unlike larger R1 institutions that maintain both local clusters and external access, BGSU relies almost exclusively on the state-funded OSC for GPU compute. Student data is highly accurate due to ABET accreditation transparency."
+}

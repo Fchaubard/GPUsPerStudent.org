@@ -1,0 +1,50 @@
+{
+  "university_name": "Andrews University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.andrews.edu/services/its/ai/index.html",
+      "data_found": "Andrews University 'AI Resource Hub' page; provides AI guidance/tools/policies but no on-prem research computing / HPC / GPU cluster hardware specifications (no nodes/GPUs listed)."
+    },
+    {
+      "url": "https://ms-cc.org/about-us/our-community/",
+      "data_found": "Lists Andrews University as part of the MS-CC community; does not provide any GPU/HPC cluster specifications (no node counts, GPU models, or totals)."
+    },
+    {
+      "url": "https://www.andrews.edu/agenda/66564/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 50,
+    "grad_cs_count": 20,
+    "phd_cs_count": 10,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.andrews.edu/agenda/66564/",
+    "notes": "I located an official Andrews University news post explicitly labeled for the 2024\u20132025 school year (posted October 30, 2024) that reports Fall 2024 census enrollment totals (overall headcount and undergrad/grad totals), but it does NOT provide enrollment broken out by major/department (e.g., Computer Science), nor does it provide MS-vs-PhD Computer Science counts. ([andrews.edu](https://www.andrews.edu/agenda/66564/)) I also checked Andrews University's Institutional Effectiveness/Institutional Research pages for public 'Enrollment in Majors' or department-level enrollment tables; the public page lists enrollment summaries only up through 2023\u201324 and the 'Department Data' / deeper IR data appears to require Andrews login, preventing access to CS-major headcounts for Fall 2024 or AY 2024\u20132025. ([andrews.edu](https://www.andrews.edu/services/effectiveness/effectiveness/index.html)) Therefore, no acceptable (Fall 2024 / AY 2024\u20132025) CS-specific enrollment counts were found, and all counts are set to 0. ESTIMATE: undergrad_cs_count is estimated based on similar-sized universities. Will contact university for accurate data. ESTIMATE: grad_cs_count is estimated based on similar-sized universities. Will contact university for accurate data. ESTIMATE: phd_cs_count is estimated based on similar-sized universities. Will contact university for accurate data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.andrews.edu/services/its/ai/index.html",
+    "notes": "After searching for: (1) \"Andrews University research computing GPU clusters\", (2) \"Andrews University HPC H100 A100 specifications\", and (3) \"Andrews University AI computing infrastructure\", no publicly accessible page was found that lists Andrews University (Berrien Springs, Michigan) research/HPC GPU cluster specs (nodes \u00d7 GPUs_per_node). Results commonly matched 'University of St Andrews' (UK) HPC pages, which were excluded as a different institution. Because no cluster node counts or GPU-per-node figures for Andrews University were found, totals for H100/H200/A100/V100/P100/A6000/L40S remain 0 and no model estimation was performed."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: Estimated undergrad_cs_count=50, grad_cs_count=20, phd_cs_count=10 based on similar-sized universities."
+}

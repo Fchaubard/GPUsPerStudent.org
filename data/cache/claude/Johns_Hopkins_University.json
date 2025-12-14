@@ -1,0 +1,72 @@
+{
+  "university_name": "Johns Hopkins University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://jhpce.jhu.edu/",
+      "data_found": "JHPCE cluster has 7 GPU nodes with 23 Nvidia H100, V100, and A100 GPUs in support of numerous AI, ML, and LLM efforts across the JHU campuses."
+    },
+    {
+      "url": "https://jhpce.jhu.edu/aboutus/GrantAndAckBlurbs/",
+      "data_found": "As of September 2024, JHPCE cluster has 7 GPU nodes with 23 Nvidia H100, V100, and A100 GPUs in support of numerous AI, ML, and LLM efforts across the JHU campuses."
+    },
+    {
+      "url": "https://support.access-ci.org/affinity-groups/rockfish",
+      "data_found": "Rockfish compute nodes: The GPU nodes also have 4 Nvidia A100 GPUs."
+    },
+    {
+      "url": "https://www.hopkinsmedicine.org/som/education-programs/graduate-programs/johns-hopkins-medical-physics-program/facilities",
+      "data_found": "Medical Physics cluster contains several GPU's including an NVIDIA Quadro P5000, an NVIDIA Tesla C1060, and 4 Tesla K40m GPUs. A recently purchased Microway workstation with dual XEON CPU, 512 GM memory, and a NVDIA H100 GPU with 80 GM of memory."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/the-johns-hopkins-university-g-w-c-whiting-school-of-engineering-department-of-computer-science-000_10014491.aspx",
+      "data_found": "277 Total Graduate Students (CS department)"
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/johns-hopkins-university/academic-life/academic-majors/computer-information-sciences/",
+      "data_found": "During 2021-2022 academic year, Johns Hopkins University handed out 151 bachelor's degrees in computer & information sciences. In 2022, 463 students received their master's degree in computer & information sciences from Johns Hopkins."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 604,
+    "grad_cs_count": 463,
+    "phd_cs_count": 277,
+    "year": "2021-2022",
+    "source_url": "https://www.collegefactual.com/colleges/johns-hopkins-university/academic-life/academic-majors/computer-information-sciences/",
+    "notes": "Undergrad count estimated from 151 bachelor degrees awarded annually \u00d7 4 years = 604. Graduate CS master's count from 463 MS degrees awarded in 2022. PhD count inferred from the 277 total graduate students reported in CS department (Peterson's), which typically refers to PhD students in research-focused departments."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 1,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": -1,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro P5000 (16GB)",
+        "estimated_total": 1,
+        "notes": "Medical Physics cluster"
+      },
+      {
+        "model": "NVIDIA Tesla K40m (12GB)",
+        "estimated_total": 4,
+        "notes": "Medical Physics cluster"
+      }
+    ],
+    "source_url": "https://jhpce.jhu.edu/",
+    "notes": "GPU counts are difficult to determine precisely from available sources. JHPCE reports 23 total GPUs (mix of H100, V100, A100) across 7 nodes, but exact model breakdown not provided. Rockfish cluster has GPU nodes with 4x A100 each, but total node count unclear. Medical Physics has 1 H100 (80GB) in workstation. Total A100 and V100 counts marked as -1 (not found) because sources only provide aggregate numbers."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Johns Hopkins has multiple distributed HPC clusters: JHPCE (biostatistics focus), Rockfish/ARCH (general research), and departmental clusters. GPU resources appear limited compared to peer institutions, with only 23 GPUs total in JHPCE cluster. Exact GPU model distributions could not be determined from available sources."
+}

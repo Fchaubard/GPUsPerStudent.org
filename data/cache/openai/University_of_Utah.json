@@ -1,0 +1,61 @@
+{
+  "university_name": "University of Utah",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www-prod.chpc.utah.edu/newsletter_updates/read.php?article=81ca4&month=06&year=2025",
+      "data_found": "One-U RAI Initiative GPU nodes: total of ten GPU nodes; each node contains eight NVIDIA H200 GPUs; 8 nodes in Granite (GE) and 2 nodes in Redwood (PE)."
+    },
+    {
+      "url": "https://chpc.utah.edu/documentation/guides/granite.php",
+      "data_found": "Granite general CHPC GPU nodes: 3 GPU nodes total; 1 node contains H100NVL GPUs; 2 nodes contain L40S GPUs. (GPUs per node not specified.)"
+    },
+    {
+      "url": "https://www.chpc.utah.edu/news/latest_news/2018newshistory/2018_mar/20180314.php",
+      "data_found": "Notchpeak launch highlights: three GPU nodes each have three Nvidia V100 GPUs."
+    },
+    {
+      "url": "https://www.chpc.utah.edu/documentation/guides/notchpeak.php",
+      "data_found": "Notchpeak user guide: 9 GPU nodes total with a mix of P40, V100, A100, and RTX2080Ti GPUs (exact per-model counts not specified)."
+    },
+    {
+      "url": "https://www.chpc.utah.edu/documentation/guides/kingspeak.php",
+      "data_found": "Kingspeak user guide: four general GPU nodes exist, but GPU model/GPUs-per-node not specified on this page."
+    },
+    {
+      "url": "https://registrar.utah.edu/faculty/datawarehouse/data.php",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://registrar.utah.edu/faculty/datawarehouse/data.php",
+    "notes": "No publicly accessible University of Utah Computer Science (Kahlert School of Computing) student headcount data for Fall 2024 or AY 2024-2025 was found. UAIR (data.utah.edu) appears to have the needed dashboard (\"UU Major Profile\" / Common Data Set 2024) but pages were not accessible (blocked with HTTP 403) so I could not verify or extract any 2024+ CS enrollment numbers from them. The Registrar's Student Data Warehouse 'Library Reports' page documents an 'Enrolled Majors by Term' report that would provide counts by major and academic term (which could include Fall 2024), but the page itself contains no headcount figures and the actual SDW report appears intended for internal (faculty/staff) access. Per your rules, I did not use any 2023-or-earlier figures as substitutes, and since no 2024+ CS enrollment counts were verifiable on an accessible page, all counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 8,
+    "h200_count": 80,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 8,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 16,
+    "v100_count": 9,
+    "p100_count": 8,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www-prod.chpc.utah.edu/newsletter_updates/read.php?article=81ca4&month=06&year=2025",
+    "notes": "Cluster-by-cluster breakdown (nodes \u00d7 GPUs_per_node = total):\n\n1) One-U RAI H200 nodes (GE Granite + PE Redwood): 10 nodes \u00d7 8 H200/node = 80 H200 total.\n\n2) Granite general CHPC GPU nodes: 3 total GPU nodes, but GPUs_per_node not specified. Estimated 8 GPUs/node based on CHPC examples where modern GPU nodes use 8 GPUs/node (e.g., H200 MIG examples). Therefore:\n   - 1 H100NVL node \u00d7 8 GPUs/node = 8 H100 (counted as H100 PCIe, not SXM).\n   - 2 L40S nodes \u00d7 8 GPUs/node = 16 L40S.\n\n3) Notchpeak V100 nodes (from 2018 launch post): 3 nodes \u00d7 3 V100/node = 9 V100.\n\n4) Notchpeak A100 nodes (est.): Notchpeak currently lists 9 GPU nodes total, but only the V100 nodes are explicitly counted above; the user guide indicates A100 exists but does not give counts. To account for A100 presence while respecting the 9-node total, estimate 2 GPU nodes dedicated to A100, each with 4 GPUs (consistent with older CHPC GPU-node patterns of 3\u20134 GPUs/node from 2018\u20132019 era announcements): 2 nodes \u00d7 4 A100/node = 8 A100 (assumed 40GB PCIe).\n\n5) Kingspeak P100 nodes (est.): Kingspeak has 4 general GPU nodes, but no GPU model/GPUs-per-node specified on the user guide page; CHPC GPU inventory indicates P100 exists on Kingspeak. Estimated 2 P100 GPUs/node: 4 nodes \u00d7 2 P100/node = 8 P100.\n\nExcluded from requested fields: GTX1080Ti / RTX2080Ti / P40 / 1080Ti counts are present in sources but not requested in output fields. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

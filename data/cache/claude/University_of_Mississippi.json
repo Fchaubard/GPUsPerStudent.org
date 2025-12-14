@@ -1,0 +1,63 @@
+{
+  "university_name": "University of Mississippi",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://mcsr.olemiss.edu/supercomputers/magnolia/",
+      "data_found": "GPU nodes have two NVIDIA L40S accelerators each. They also have a single Intel Xeon Gold 6548Y+ 32 core processor, 512GB of RAM, and a 3.8TB SSD for local storage."
+    },
+    {
+      "url": "https://mcsr.olemiss.edu/supercomputers/",
+      "data_found": "Maple is a Cray cluster with a theoretical peak performance of 382 TFLOPS, 140 compute nodes, a total of 5,454 CPU cores, 29 NVIDIA Kepler K20 GPUs, 4 NVIDIA Tesla P100 GPUs, 12 NVIDIA Tesla V100S GPUs, and 27.1 TB of memory. Magnolia is an HPE Apollo 2000 cluster with 50 total compute nodes: 44 CPU-only nodes and 6 nodes with dual GPUs."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-mississippi",
+      "data_found": "There were 24,043 students enrolled at University of Mississippi in 2023. In 2023, the most popular Bachelors Degree concentrations at University of Mississippi were Digital Communication & Multimedia (293 degrees awarded), Registered Nursing (282 degrees), and Accounting (219 degrees)."
+    },
+    {
+      "url": "https://cs.olemiss.edu/",
+      "data_found": "Welcome to the Department of Computer and Information Science at the University of Mississippi! We offer exciting and innovative undergraduate and graduate programs on the beautiful campus of the University of Mississippi in historic Oxford, Mississippi."
+    },
+    {
+      "url": "https://cs.olemiss.edu/doctor-of-philosophy/",
+      "data_found": "The Ph.D. Degree program in Engineering Science is one of the graduate degree programs of the School of Engineering administered through the Graduate School of The University of Mississippi."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 400,
+    "grad_cs_count": 80,
+    "phd_cs_count": 20,
+    "year": "2023",
+    "source_url": "https://datausa.io/profile/university/university-of-mississippi",
+    "notes": "The University of Mississippi does not publish exact CS enrollment numbers on their department website. Based on DataUSA showing total enrollment of 24,043 students (19,094 undergraduate and 4,949 graduate) and typical CS department sizes at similar R1 universities in the Southeast, estimated CS enrollment is: undergraduate ~400 students (roughly 2% of undergrad population), master's ~80 students, PhD ~20 students. The university offers BS, MS, and PhD programs through the Department of Computer and Information Science."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 12,
+    "v100_count": 12,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Kepler K20 (5GB)",
+        "estimated_total": 29,
+        "notes": "Maple cluster has 29 NVIDIA Kepler K20 GPUs"
+      }
+    ],
+    "source_url": "https://mcsr.olemiss.edu/supercomputers/",
+    "notes": "The University of Mississippi operates two main GPU-equipped clusters through the Mississippi Center for Supercomputing Research (MCSR): 1) Maple cluster with 29 K20 GPUs, 4 P100 GPUs, and 12 V100S GPUs. 2) Magnolia cluster (HPE Apollo 2000) with 6 GPU nodes, each containing 2 NVIDIA L40S GPUs = 12 L40S total. Total GPU counts: 12 L40S + 12 V100S + 4 P100 + 29 K20 = 57 GPUs total."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Mississippi operates mid-scale HPC resources through MCSR with 57 total GPUs across two clusters (Maple and Magnolia). The newest GPUs are 12 L40S cards in the Magnolia cluster. CS enrollment estimated based on university-wide statistics, as department-specific numbers not publicly available."
+}

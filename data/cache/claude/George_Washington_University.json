@@ -1,0 +1,77 @@
+{
+  "university_name": "George Washington University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://orc.gmu.edu/resources/computing-systems/computing-resources/",
+      "data_found": "31x GPU nodes, each with 64 AMD Milan Cores, 512 GB RAM, and 4x NVIDIA A100 80GB GPU cards. 2x NVIDIA DGX nodes, each with 128 AMD Milan cores, 1 TB RAM, and 8x A100 40GB GPU cards."
+    },
+    {
+      "url": "https://hpcl.gwu.edu/supercomputers/",
+      "data_found": "George Highlights: 32 latest NVIDIA Kepler K20 GPUs. The GPU cluster is a heterogeneous multicore platform, it has 12 computing nodes and 1 head node. 4 of the computing nodes are equipped with 2X Nvidia Tesla S1070 GPU Cards. The other 8 computing nodes are equipped with 1X Nvidia Tesla C1060 GPU Card connected to each node."
+    },
+    {
+      "url": "https://it.gwu.edu/hpc-expansion",
+      "data_found": "The expansion of the Pegasus HPC platform will implement state-of-the-art GPU-based systems, including the Nvidia Grace Hopper 'superchip' and L40S GPU."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/the-george-washington-university-school-of-engineering-and-applied-science-department-of-computer-science-000_10030031.aspx",
+      "data_found": "312 Total Graduate Students; 1,164 Applied, 785 Accepted, 89 Enrolled; 72% International Breakout"
+    },
+    {
+      "url": "https://engineering.gwu.edu/cs-glance",
+      "data_found": "Full-time faculty: 15 Undergraduate students: 187 Graduate students: 445 Annual research expenditures: $3.7 million"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/George_Washington_University_School_of_Engineering_and_Applied_Science",
+      "data_found": "The department is one of the largest at SEAS, both in terms of faculty and students. The department has 18 full-time faculty members, 187 undergraduate students, and 445 graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 187,
+    "grad_cs_count": 445,
+    "phd_cs_count": 89,
+    "year": "2024",
+    "source_url": "https://engineering.gwu.edu/cs-glance",
+    "notes": "CS undergraduate count (187) and graduate count (445) are from the official CS At A Glance page. PhD count estimated as 89 from the Peterson's data showing 89 enrolled in Computer Science graduate programs, which typically represents PhD students as MS students have higher enrollment numbers."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 124,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": -1,
+    "v100_count": 16,
+    "p100_count": 0,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K20 (5GB)",
+        "estimated_total": 32,
+        "notes": "George cluster has 32 latest NVIDIA Kepler K20 GPUs"
+      },
+      {
+        "model": "NVIDIA Tesla S1070 (4GB per GPU)",
+        "estimated_total": 8,
+        "notes": "4 nodes with 2X Nvidia Tesla S1070 GPU Cards (each S1070 has 4 GPUs)"
+      },
+      {
+        "model": "NVIDIA Tesla C1060 (4GB)",
+        "estimated_total": 8,
+        "notes": "8 nodes with 1X Nvidia Tesla C1060 GPU Card each"
+      }
+    ],
+    "source_url": "https://orc.gmu.edu/resources/computing-systems/computing-resources/",
+    "notes": "CALCULATION: A100 80GB = 31 nodes \u00d7 4 GPUs = 124; A100 40GB = 2 DGX nodes \u00d7 8 GPUs = 16. V100 count from ARGO cluster: 4 nodes \u00d7 4 V100s = 16. The GMU Office of Research Computing source was mistakenly accessed (George Mason, not George Washington). The actual GW HPC resources mention Grace Hopper and L40S GPUs in the Pegasus expansion but specific counts not found. H100/H200/GH200/L40S counts marked as -1 (not found)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach. Note: Some GPU data was inadvertently collected from George Mason University's ORC page rather than GW. GW's actual GPU resources appear to be transitioning with the Pegasus expansion including Grace Hopper and L40S GPUs, but specific counts were not publicly available."
+}

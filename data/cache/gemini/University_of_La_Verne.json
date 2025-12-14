@@ -1,0 +1,49 @@
+{
+  "university_name": "University of La Verne",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://laverne.edu/institutional-research/fact-book/",
+      "data_found": "University Fact Book and Common Data Sets. Used for total enrollment context to validate departmental estimates."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-la-verne",
+      "data_found": "2022 Data: 40 Computer Science Bachelor's degrees awarded; 83 Master's degrees awarded in Computer & Information Sciences (General + Data Processing/Data Science)."
+    },
+    {
+      "url": "https://business.laverne.edu/msda/",
+      "data_found": "Master of Science in Data Analytics (MSDA) program page. Confirms graduate level curriculum involving analytics, implying demand for compute, but likely utilizing local workstations or cloud rather than on-premise HPC."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 180,
+    "grad_cs_count": 166,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-la-verne",
+    "notes": "University of La Verne does not publish live departmental enrollment dashboards. Counts are estimated based on IPEDS completion data reported via Data USA. Undergrad: ~40 BS Computer Science degrees awarded annually; assuming 4.5-year retention/completion, estimated enrollment is 40 * 4.5 = 180. Grad: 83 Master's degrees awarded in CIS fields (primarily Data Analytics and General CS); assuming 2-year program duration, estimated enrollment is 83 * 2 = 166. PhD: The university does not offer a PhD in Computer Science (verified via catalog)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://laverne.edu/institutional-research/fact-book/",
+    "notes": "Exhaustive search for 'University of La Verne HPC', 'Research Computing', 'GPU Cluster', and 'Supercomputer' yielded zero results. The university is primarily a teaching institution. Computer Science and Data Analytics students utilize standard computer labs (Founders Hall) and likely personal devices or cloud resources for coursework. No evidence of on-premise high-performance research computing infrastructure (A100/H100 clusters) exists. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No evidence of centralized cloud compute credit grants found."
+  },
+  "analysis_notes": "University of La Verne is a private university with a focus on instruction rather than R1-level research. While they have a robust MS in Data Analytics program, the hardware infrastructure appears to be decentralized (standard labs) or cloud-based, with no public documentation of an institutional GPU cluster."
+}

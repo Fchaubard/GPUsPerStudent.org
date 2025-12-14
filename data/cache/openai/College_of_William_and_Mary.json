@@ -1,0 +1,70 @@
+{
+  "university_name": "College of William and Mary",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.wm.edu/offices/it/services/researchcomputing/atwm/systemarchitecture/nodes/",
+      "data_found": "W&M Research Computing 'RC/HPC available resources' lists SciClone GPU resources (e.g., gulf gu03-gu06: 2x A40 per node; astral as01: 8x A30) and Main-campus Kubernetes GPU nodes (e.g., gu07-gu19: 13 nodes with 2x A40 each; jdserver1: 8x L40s; jdserver2: 4x H100 96GB; brewster: GH200 96GB; d3i01/d3i02: 4x L4 each; ts4: 8x RTX 6000)."
+    },
+    {
+      "url": "https://support.cs.wm.edu/index.php/specs",
+      "data_found": "CS support 'Machine Specs' lists: bg13 has 1\u00d7 NVIDIA A100-PCIE-40GB; bg14 has 8\u00d7 NVIDIA A40 48GB; bg15 has 1\u00d7 H100 NVL 94GB; lab resources described as th121-{1\u201312} with RTX A5000 24GB and th121-{13\u201324} with RTX 5000 Ada 32GB."
+    },
+    {
+      "url": "https://www.wm.edu/offices/provost/data-trends/student-enrollment/undergraduate/",
+      "data_found": "Student enrollment: 292 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 292,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.wm.edu/offices/provost/data-trends/student-enrollment/undergraduate/",
+    "notes": "Undergraduate CS enrollment: On the Provost 'Undergraduate' enrollment page, the table 'Undergraduate enrollment by major 2022-2025' includes a section for 'School of Computing, Data Sciences & Physics' with a 'Computer Science' row. The value in the '2024' column for 'Computer Science' is 292 (interpreted as Fall 2024 census enrollment by major). Graduate CS enrollment (MS) and PhD CS enrollment: No Fall 2024 or AY 2024-2025 CS graduate headcount-by-program data was found on publicly accessible W&M pages during the search; the publicly visible graduate enrollment-by-program table on the Provost graduate page is Spring 2023 (rejected per requirements), so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 5,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 1,
+    "a40_count": 42,
+    "a6000_count": 0,
+    "l40s_count": 8,
+    "v100_count": 2,
+    "p100_count": 2,
+    "gh200_count": 1,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 24GB",
+        "count": 8
+      },
+      {
+        "model": "NVIDIA L4 24GB",
+        "count": 8
+      },
+      {
+        "model": "NVIDIA RTX 6000 24GB",
+        "count": 8
+      },
+      {
+        "model": "NVIDIA RTX A5000 24GB",
+        "count": 12
+      },
+      {
+        "model": "NVIDIA RTX 5000 Ada 32GB",
+        "count": 12
+      }
+    ],
+    "source_url": "https://www.wm.edu/offices/it/services/researchcomputing/atwm/systemarchitecture/nodes/",
+    "notes": "Counts aggregated across (1) Research Computing SciClone + k8s resources and (2) CS shared compute resources.\n\nH100 PCIe/NVL:\n- k8s jdserver2: 1 node \u00d7 4 H100 (96GB) = 4\n- CS bg15: 1 machine \u00d7 1 H100 NVL (94GB) = 1\nTotal H100 PCIe/NVL = 4 + 1 = 5 (assumed PCIe/NVL form factor due to NVL/94\u201396GB labeling; no SXM indicated)\n\nA100 40GB:\n- CS bg13: 1 machine \u00d7 1 A100-PCIE-40GB = 1\nTotal A100 40GB = 1\n\nA40:\n- SciClone gulf gu03-gu06: 4 nodes \u00d7 2 A40/node = 8\n- k8s gu07-gu19: 13 nodes \u00d7 2 A40/node = 26\n- CS bg14: 1 machine \u00d7 8 A40 = 8\nTotal A40 = 8 + 26 + 8 = 42\n\nL40s:\n- k8s jdserver1: 1 node \u00d7 8 L40s = 8\nTotal L40s = 8\n\nV100:\n- Hima hi06-hi07: 2 nodes \u00d7 1 V100/node = 2\nTotal V100 = 2\n\nP100:\n- Hima hi04-hi05: 2 nodes \u00d7 1 P100/node = 2\nTotal P100 = 2\n\nGH200:\n- k8s brewster: 1 node \u00d7 1 GH200 = 1\nTotal GH200 = 1\n\nOther (reported but not mapped to requested primary fields):\n- SciClone astral as01: 1 node \u00d7 8 A30 = 8\n- k8s d3i01-d3i02: 2 nodes \u00d7 4 L4/node = 8\n- k8s ts4: 1 node \u00d7 8 RTX 6000 = 8\n- CS th121-{1\u201312}: 12 machines \u00d7 1 RTX A5000 = 12\n- CS th121-{13\u201324}: 12 machines \u00d7 1 RTX 5000 Ada = 12"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

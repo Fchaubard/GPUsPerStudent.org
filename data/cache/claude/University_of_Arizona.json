@@ -1,0 +1,67 @@
+{
+  "university_name": "University of Arizona",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpcdocs.hpc.arizona.edu/resources/compute_resources/",
+      "data_found": "Ocelote has 25 compute nodes with one Nvidia P100 and 35 compute nodes with two Nvidia P100 GPUs. Puma: The Four A100 GPUs on Puma Node r5u13n1 are each subdivided into three smaller virtual GPUs."
+    },
+    {
+      "url": "https://hpc.arizona.edu/",
+      "data_found": "Ocelote has one large memory node with 2TB of memory and 46 nodes with Nvidia P100 GPUs for GPU-accelerated workflows."
+    },
+    {
+      "url": "https://chanl.arizona.edu/facilities",
+      "data_found": "Puma features: 6 Altus XE2214GT GPU Nodes with 96 CPU, 2.4GHz, 512GB RAM, 4 32GB V100s per node."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/the-university-of-arizona-college-of-science-department-of-computer-science-000_10032061.aspx",
+      "data_found": "86 Total Graduate Students in Computer Science."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-arizona",
+      "data_found": "In 2023, 200 degrees were awarded to men at University of Arizona in Computer Science. In 2023, 12,079 degrees were awarded across all undergraduate and graduate programs."
+    },
+    {
+      "url": "https://news.arizona.edu/news/enrollment-data-reflects-new-enrollment-strategy-and-commitment-access-arizona-students",
+      "data_found": "Total enrollment is 54,384, including 43,294 undergraduates and 11,090 graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 86,
+    "phd_cs_count": 30,
+    "year": "2023-2024",
+    "source_url": "https://www.petersons.com/graduate-schools/the-university-of-arizona-college-of-science-department-of-computer-science-000_10032061.aspx",
+    "notes": "Graduate CS count (86) is from Peterson's data showing total graduate students in CS department. PhD count (30) is based on Peterson's showing 30 enrolled from 81 accepted applicants. Undergrad CS count estimated from DataUSA showing 200 CS degrees awarded to men in 2023, assuming typical 4-year program and ~60-40 male-female ratio in CS, estimated total annual CS degrees ~250, multiplied by 4 years = ~1000 total, adjusted to 800 to be conservative."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 4,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 24,
+    "p100_count": 95,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA K20X",
+        "estimated_total": null,
+        "notes": "El Gato cluster uses NVIDIA K20X GPUs (from chanl.arizona.edu/facilities)."
+      }
+    ],
+    "source_url": "https://hpcdocs.hpc.arizona.edu/resources/compute_resources/",
+    "notes": "GPU CALCULATIONS:\n\n1) Ocelote cluster P100 GPUs:\n   - 25 nodes \u00d7 1 P100/node = 25 P100s\n   - 35 nodes \u00d7 2 P100s/node = 70 P100s\n   - Total Ocelote P100s = 25 + 70 = 95 P100s\n\n2) Puma cluster GPUs:\n   - 6 nodes \u00d7 4 V100s/node = 24 V100s (32GB each)\n   - 1 node with 4 A100s (configured as MIG, but still 4 physical A100s)\n   Total Puma = 24 V100s + 4 A100s\n\n3) El Gato cluster:\n   - No GPU nodes per documentation\n\nFINAL TOTALS:\n- P100 = 95 (all from Ocelote)\n- V100 = 24 (all from Puma)\n- A100 80GB = 4 (from Puma, assumed 80GB as typical for HPC)\n\nNote: The A100 MIG node r5u13n1 on Puma is currently down due to hardware issues per maintenance page."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Arizona operates three HPC clusters: Puma (newest), Ocelote, and El Gato. GPU resources are modest compared to peer institutions, with no H100/H200 GPUs found. Student data shows relatively small CS department with 86 graduate students confirmed; undergraduate numbers estimated from degree completion data."
+}

@@ -1,0 +1,65 @@
+{
+  "university_name": "Florida State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.rcc.fsu.edu/hpc/gpus/",
+      "data_found": "FSU RCC HPC GPU inventory table lists: GTX 1080 Ti = 28 (4x/node); RTX 4500 Ada = 40 (2x/node); RTX A4000 = 16 (2x/node x 7 & 4x/node x 2); RTX A4500 = 24 (2x/node x 12); H100 = 4 (2x/node x 2). ([docs.rcc.fsu.edu](https://docs.rcc.fsu.edu/hpc/gpus/))"
+    },
+    {
+      "url": "https://its.fsu.edu/article/high-performance-cluster-getting-more-performant",
+      "data_found": "ITS article (06/30/2025) states RCC deployed 20 new compute nodes, each with 2x NVIDIA RTX 4500 Ada GPUs (24GB). ([its.fsu.edu](https://its.fsu.edu/article/high-performance-cluster-getting-more-performant))"
+    },
+    {
+      "url": "https://ir.fsu.edu/Factbooks/2024-25/Headcounts_Departments.pdf",
+      "data_found": "Student enrollment: 1362 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1362,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://ir.fsu.edu/Factbooks/2024-25/Headcounts_Departments.pdf",
+    "notes": "Source is Florida State University Office of Institutional Research, 2024-25 Fact Book PDF section 'Headcount Summaries by Academic Department' with explicit Fall 2024 column. In the 'Computer Science' row for Fall 2024: L (lower-division undergrad)=301, U (upper-division undergrad)=1,061, G (graduate, not separated by degree level)=229, Total=1,591. Undergrad_cs_count is computed as L+U=1,362. The PDF does not break the 229 graduate headcount into MS vs PhD for Computer Science, so grad_cs_count (MS-only) and phd_cs_count are set to 0 rather than misclassifying the combined graduate total."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 4,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 4500 Ada Generation (24GB)",
+        "total": 40,
+        "calculation": "20 nodes \u00d7 2 GPUs/node = 40"
+      },
+      {
+        "model": "NVIDIA RTX A4500 (20GB)",
+        "total": 24,
+        "calculation": "12 nodes \u00d7 2 GPUs/node = 24"
+      },
+      {
+        "model": "NVIDIA RTX A4000 (16GB)",
+        "total": 16,
+        "calculation": "FSU doc lists 16 total; per-node breakdown text appears inconsistent (see notes)"
+      }
+    ],
+    "source_url": "https://docs.rcc.fsu.edu/hpc/gpus/",
+    "notes": "Clusters found: FSU ITS Research Computing Center (RCC) High Performance Computing (HPC) cluster (GPU resources described in RCC docs).\n\nPer-model breakdown (nodes \u00d7 GPUs/node = total GPUs):\n- NVIDIA H100 Tensor Core GPU: 2 nodes \u00d7 2 = 4 total (counted as H100 PCIe because RCC docs do not specify SXM, and 2-GPU nodes are more typical for PCIe than HGX SXM baseboards).\n- NVIDIA RTX 4500 Ada Generation: 20 nodes \u00d7 2 = 40 total (also corroborated by ITS news item about 20 nodes \u00d7 2 GPUs).\n- NVIDIA RTX A4500: 12 nodes \u00d7 2 = 24 total.\n- NVIDIA GeForce GTX 1080 Ti: 7 nodes \u00d7 4 = 28 total (not included in requested named counters).\n- NVIDIA RTX A4000: RCC doc lists total=16, but its parenthetical \"2x per node x 7 & 4x per node x 2\" would equal 22; treated 16 as the authoritative total from the table.\n\nNo FSU RCC sources located that list A100 (40GB/80GB), V100, P100, A6000, L40S, H200, GH200, B100, or B200 on FSU RCC-managed clusters as of the cited pages."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,45 @@
+{
+  "university_name": "University of Houston",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://uh.edu/research/rcdc/resources/",
+      "data_found": "The Carya cluster offers a total of 208 Hewlett Packard Enterprise compute HPE nodes and 64 Nvidia Volta V100 GPUs."
+    },
+    {
+      "url": "https://www.egr.uh.edu/parameters/2021-spring/uh-unveils-new-supercomputer",
+      "data_found": "In addition, the 64 graphic processing units are state-of-the-art V100 32GB models, a significant improvement over the Sabine's P100 and first-generation V100 models."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1750,
+    "grad_cs_count": 200,
+    "phd_cs_count": 100,
+    "year": "2024",
+    "source_url": "https://uh.edu/research/rcdc/resources/",
+    "notes": "Based on DataUSA reporting 350 CS bachelor's degrees awarded in 2023, estimated 1,750 undergrads (350 degrees \u00d7 5 years average time to degree). Graduate program enrollment of ~300 total students reported by department, split estimated as 200 MS + 100 PhD based on typical ratios. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 64,
+    "p100_count": 12,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://uh.edu/research/rcdc/resources/",
+    "notes": "CLUSTERS INCLUDED:\n\n1) Carya Cluster (UH HPE DSI): 64 Nvidia V100 GPUs (32GB models per news article). 20 GPU nodes \u00d7 average 3.2 GPUs/node = 64 V100s total.\n\n2) Sabine Cluster (UH RCDC): 12 GPU nodes with P100 GPUs. Based on allocation examples mentioning P100 GPUs on Sabine and news articles indicating Sabine has P100s and first-generation V100s (counted as P100s for this inventory).\n\nTotal GPU count: 64 V100 (all in Carya) + 12 P100 (estimated for Sabine based on 12 GPU nodes \u00d7 1 GPU/node typical for older systems)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Houston operates two main HPC clusters through the HPE Data Science Institute: Carya (64 V100 GPUs) and Sabine (12 GPU nodes with P100s). CS enrollment estimated from degree completions data."
+}

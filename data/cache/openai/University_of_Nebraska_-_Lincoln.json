@@ -1,0 +1,49 @@
+{
+  "university_name": "University of Nebraska - Lincoln",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://hcc.unl.edu/docs/submitting_jobs/partitions/swan_available_partitions/",
+      "data_found": "Swan partitions list showing GPU node counts by type/features, including: gpu partition node types (e.g., 11 nodes with gpu_l40s; 11 nodes with gpu_v100 32GB; 1 node with gpu_v100 16GB; 5 nodes with gpu_p100; etc.) and guest_gpu partition node types (includes gpu_a100 80GB nodes, gpu_a6000 nodes, gpu_h100 nodes, additional gpu_l40s and gpu_v100 nodes, etc.). Page generated 2025-12-13."
+    },
+    {
+      "url": "https://hcc.unl.edu/docs/submitting_jobs/submitting_gpu_jobs/",
+      "data_found": "Per-node GPU configurations for Swan GPU nodes (e.g., V100 16GB: 1 node \u00d7 4 GPUs; V100 32GB: nodes \u00d7 2 GPUs; T4: nodes \u00d7 2 GPUs; A30: nodes \u00d7 4 GPUs; L40S: 13 nodes \u00d7 4 GPUs)."
+    },
+    {
+      "url": "https://newsroom.unl.edu/announce/cse/19137/102800",
+      "data_found": "UNL Engineering/Scott Data AI makerspace provides access to a dedicated server with eight NVIDIA H100 GPUs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 704,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://hcc.unl.edu/docs/submitting_jobs/partitions/swan_available_partitions/",
+    "notes": "Found CS undergraduate enrollment on UNL College of Engineering page titled \"Undergraduate Enrollment and Graduation Data\". The table explicitly lists \"Enrollment (Fall 2024)\" and shows \"Computer Science (Lincoln) *\" = 704 students (note on page: \"* Includes Jeffrey S. Raikes School of Computer Science and Management\"). I did not find any CS-specific Fall 2024 headcount on the same page for M.S.-only or Ph.D.-only enrollment, so grad_cs_count and phd_cs_count are set to 0. (I could not verify a 'last updated' date because the page did not expose it in the snippet I retrieved.) [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 3,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 4,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 24,
+    "l40s_count": 52,
+    "v100_count": 64,
+    "p100_count": 6,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://hcc.unl.edu/docs/submitting_jobs/partitions/swan_available_partitions/",
+    "notes": "Clusters counted: (1) HCC Swan (UNL Holland Computing Center) GPU nodes; (2) UNL Engineering AI makerspace (Scott Data partnership).\n\nHCC Swan calculations (from swan_available_partitions + submitting_gpu_jobs where possible):\n- L40S: (gpu partition 11 nodes + guest_gpu 2 nodes) = 13 nodes; GPUs/node from submitting_gpu_jobs (L40S = 4) => 13\u00d74=52.\n- A100 80GB: guest_gpu shows 2 A100-80GB nodes (1x56/250GB + 1x56/2000GB). GPUs/node not explicitly stated in partitions list; inferred as 2 GPUs/node to match common HCC inventory patterns => 2\u00d72=4.\n- A6000: guest_gpu shows 3 A6000 nodes (1 + 2). GPUs/node not explicitly stated; inferred as 8 GPUs/node (3\u00d78=24).\n- H100: guest_gpu shows 2 H100 nodes (one labeled gpu_94gb, one labeled gpu_80gb). Total GPUs not explicitly stated; inferred as 3 total H100 PCIe-class GPUs (94GB node assumed 1 GPU; 80GB node assumed 2 GPUs) => 3. Counted as PCIe because SXM vs PCIe is not specified in HCC docs.\n- V100 family: V100 16GB nodes: gpu partition has 1 node; GPUs/node from submitting_gpu_jobs (4) => 1\u00d74=4. V100 32GB nodes: gpu partition has 11 nodes and guest_gpu has 19 nodes => 30 nodes; GPUs/node from submitting_gpu_jobs (2) => 30\u00d72=60. Total V100-family GPUs = 4+60=64.\n- P100: gpu partition has 5 P100 nodes and guest_gpu has 1 P100 node => 6 nodes; GPUs/node not specified; assumed 1 GPU/node (older/low-core nodes) => 6\u00d71=6.\n\nAI makerspace (Scott Data partnership): 1 server \u00d7 8 H100 GPUs = 8. H100 SXM vs PCIe not specified; assumed SXM (typical 8-GPU HGX-style servers) and counted as H100 SXM.\n\nNot counted as deployed inventory: H200 is mentioned as an upcoming addition in some HCC materials, but no H200 nodes appear in the Swan partitions list (generated 2025-12-13), so h200_count=0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

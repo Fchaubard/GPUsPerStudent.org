@@ -1,0 +1,63 @@
+{
+  "university_name": "University of Florida",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.rc.ufl.edu/about/hipergator/",
+      "data_found": "In 2025, the original HiPerGator AI NVIDIA DGX SuperPOD consisting of 140 NVIDIA DGX A100 nodes was replaced with a new SuperPOD of 63 NVIDIA DGX B200 nodes, each with 8 Blackwell B200 GPU's with 180 GB RAM. In 2025, 30,000 Intel CPU cores and 640 NVIDIA 2080ti GPUs were retired. They were replaced with 600 NVIDIA L4 GPUs with 24 GB RAM."
+    },
+    {
+      "url": "https://www.hpcwire.com/2020/07/21/university-of-florida-to-deploy-world-class-ai-supercomputer/",
+      "data_found": "Comprising 148 Nvidia DGX A100 systems, UF's third-generation HiPerGator machine will be one of the top AI-focused supercomputers in the world. With a total 1,120 A100 GPUs."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-florida-college-of-engineering-department-of-computer-and-information-science-and-engineering-000_10027435.aspx",
+      "data_found": "569 Total Graduate Students; 2,043 Applied, 452 Accepted, 156 Enrolled"
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-florida",
+      "data_found": "In 2023, the most popular Masters Degree concentrations at University of Florida were General Business Administration & Management (979 degrees awarded), General Computer & Information Sciences (389 degrees)"
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/university-of-florida/academic-life/academic-majors/computer-information-sciences/",
+      "data_found": "During the 2021-2022 academic year, University of Florida handed out 338 bachelor's degrees in computer & information sciences. In 2022, 516 students received their master's degree in computer & information sciences from UF. In addition, 19 students received their doctoral degrees in computer & information sciences in 2022."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1352,
+    "grad_cs_count": 516,
+    "phd_cs_count": 95,
+    "year": "2024",
+    "source_url": "https://www.collegefactual.com/colleges/university-of-florida/academic-life/academic-majors/computer-information-sciences/",
+    "notes": "Undergraduate CS count estimated from: 338 bachelor degrees awarded in 2021-2022 \u00d7 4 years = 1,352 students (using steady-state enrollment model). Master's CS count from 516 MS degrees awarded in 2022. PhD CS count estimated from: 19 PhDs awarded in 2022 \u00d7 typical 5-year program = 95 PhD students in residence. Graduate student data at CISE department shows 569 total graduate students, which includes both MS and PhD across CS, CE, and HCC programs."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 504,
+    "a100_80gb_count": 1136,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA L4 (24GB)",
+        "estimated_total": 600,
+        "notes": "600 NVIDIA L4 GPUs with 24 GB RAM replaced the retired 2080ti GPUs in 2025"
+      }
+    ],
+    "source_url": "https://www.rc.ufl.edu/about/hipergator/",
+    "notes": "CALCULATIONS:\n1) HiPerGator AI DGX B200 SuperPOD: 63 nodes \u00d7 8 B200 GPUs/node = 504 B200 GPUs (replaced the original A100 SuperPOD)\n2) Original HiPerGator AI DGX A100 SuperPOD: 140 nodes \u00d7 8 A100/node = 1,120 A100 GPUs (from 2020 deployment, likely 80GB models)\n3) Additional nodes: 2 DGX A100 nodes \u00d7 8 A100/node = 16 A100 GPUs\nTotal A100s = 1,120 + 16 = 1,136 A100 GPUs\n4) L4 GPUs: 600 NVIDIA L4 GPUs (24GB) replaced retired 2080ti GPUs in 2025\n\nNote: The original 140-node A100 SuperPOD was replaced by the 63-node B200 SuperPOD in 2025, but the A100s may still be available for certain workloads during transition."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Florida has made a significant GPU infrastructure investment with the new 63-node DGX B200 SuperPOD (504 B200 GPUs), making it the first university to deploy Blackwell architecture. The CS student population is substantial with approximately 1,352 undergraduates, 516 MS students, and 95 PhD students based on degree completion data."
+}

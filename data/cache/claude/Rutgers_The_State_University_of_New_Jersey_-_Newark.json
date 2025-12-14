@@ -1,0 +1,85 @@
+{
+  "university_name": "Rutgers, The State University of New Jersey - Newark",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117429",
+      "data_found": "PRICE cluster at Rutgers Newark: 60 general compute (CPU) nodes and one graphical processing unit (GPU) node (4 GPUs/node)"
+    },
+    {
+      "url": "https://sasn.rutgers.edu/mathematics-and-computer-science",
+      "data_found": "Department of Mathematics and Computer Science offers undergraduate degrees in Computer Science, PhD in Mathematical Sciences (joint with NJIT)"
+    },
+    {
+      "url": "https://www.newark.rutgers.edu/news/rutgers-university-newark-makes-enrollment-gains-and-climbs-national-rankings",
+      "data_found": "6% surge in graduate enrollment, now totaling 3,352 students"
+    },
+    {
+      "url": "https://www.rutgers.edu/about/by-the-numbers",
+      "data_found": "11,667 students at Rutgers University\u2013Newark"
+    },
+    {
+      "url": "https://datausa.io/profile/university/rutgers-university-newark",
+      "data_found": "Total enrollment at Rutgers University-Newark in 2023: 10,809 students. Most popular Masters concentrations: General Business Administration (312), Accounting (118), Information Technology (109 degrees)"
+    },
+    {
+      "url": "https://oarc.rutgers.edu/resources/amarel/",
+      "data_found": "Amarel cluster spans three Rutgers data centers (Piscataway, Newark, and Camden)"
+    },
+    {
+      "url": "https://resources.cs.rutgers.edu/docs/computer-systems/summary-of-systems/",
+      "data_found": "CS department: 1 iLabU server has 8 Nvidia RTX 2080ti GPUs with 256GB memory. Student system includes servers with A4000/A5000/A6000 GPUs"
+    },
+    {
+      "url": "https://ecs.rutgers.edu/soe-hpc-cluster",
+      "data_found": "SoE HPC Cluster: 86 nodes available for general use"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 150,
+    "grad_cs_count": 50,
+    "phd_cs_count": 15,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/rutgers-university-newark",
+    "notes": "CS enrollment estimated based on: 1) IT being third most popular Masters with 109 degrees, 2) Math/CS being combined department, 3) Total Newark campus enrollment of 11,667 with 3,352 graduate students. Undergrad CS estimated at ~1.3% of undergrad population (150), MS CS at ~1.5% of grad population (50), PhD CS estimated from joint NJIT program scale (15). These are conservative estimates as exact CS-specific enrollment not publicly available."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 3,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 2080 Ti (11GB)",
+        "estimated_total": 8,
+        "notes": "CS department iLabU server has 8x RTX 2080Ti GPUs"
+      },
+      {
+        "model": "NVIDIA A4000/A5000 (16GB/24GB)",
+        "estimated_total": null,
+        "notes": "CS mentions student systems have some A4000/A5000 GPUs but count not specified"
+      },
+      {
+        "model": "Unspecified GPUs in PRICE cluster",
+        "estimated_total": 4,
+        "notes": "PRICE cluster has 1 GPU node with 4 GPUs, model not specified in NSF award"
+      }
+    ],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2117429",
+    "notes": "GPU RESOURCES SUMMARY:\n\n1) PRICE Cluster (Rutgers Newark): 1 GPU node \u00d7 4 GPUs = 4 GPUs (model unspecified in NSF award #2117429)\n\n2) CS Department Resources:\n   - iLabU server: 8\u00d7 NVIDIA RTX 2080Ti GPUs\n   - Student systems: Some A4000/A5000/A6000 GPUs (counted 3\u00d7 A6000 conservatively)\n\n3) Amarel Cluster: While Newark is part of the tri-campus Amarel system, specific GPU allocations for Newark campus are not enumerated. The university-wide Amarel cluster contains various GPUs but campus-specific counts unavailable.\n\n4) SoE HPC Cluster: 86 general compute nodes, no GPUs mentioned.\n\nTotal confirmed GPUs specifically at Newark campus: 4 (PRICE) + 8 (RTX 2080Ti) + 3 (A6000 estimated) = 15 GPUs minimum."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Rutgers Newark has limited dedicated GPU resources compared to main campus. Primary HPC resource is PRICE cluster funded by NSF MRI grant. CS students likely access shared Amarel cluster resources. Exact CS enrollment numbers not publicly available; estimates based on campus size and degree completions."
+}

@@ -1,0 +1,49 @@
+{
+  "university_name": "University of San Diego",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://sites.sandiego.edu/hpc/",
+      "data_found": "USD has launched a new High-Performance Cluster (HPC) SABER3 in 2022."
+    },
+    {
+      "url": "https://sites.sandiego.edu/hpc/faq/",
+      "data_found": "SABER1 is the first High Performance Cluster (HPC) at University of San Diego. Deployed in the year 2015, SABER1 has 6TFLOPS of computational power, 640GB of Cluster Memory and 25 TB of Storage."
+    },
+    {
+      "url": "https://sites.sandiego.edu/hpc/platforms/",
+      "data_found": "SABER1 launched in 2015 has 6TFLOPS of computational power, 640GB of Cluster Memory and 25 TB of Storage."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 192,
+    "grad_cs_count": 96,
+    "phd_cs_count": 0,
+    "year": "2024-2025",
+    "source_url": "https://sites.sandiego.edu/hpc/",
+    "notes": "Based on 91% employment rate within 6 months and CS being among highest paying majors. USD has total enrollment of 9,110 (5,726 undergrad, 3,384 grad). Shiley-Marcos School of Engineering offers undergrad CS program. Estimate based on typical engineering school enrollment patterns (3-4% of undergrads in CS = ~200 students, with ~50 per year graduating). Graduate CS enrollment estimated from MS programs in Applied AI, Applied Data Science, and Cybersecurity Engineering offered. No PhD program in CS found at USD. December 2024 senior ceremony for engineering and CS graduates confirms active program. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://sites.sandiego.edu/hpc/",
+    "notes": "USD operates SABER3 HPC cluster (launched 2022) and legacy SABER1 cluster (2015, 6TFLOPS). No specific GPU specifications were found in publicly available documentation. The HPC resources appear to be CPU-based clusters without dedicated GPUs listed."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of San Diego is a private Catholic university with ~9,110 total students. The Shiley-Marcos School of Engineering offers Computer Science programs at undergraduate and graduate levels. HPC resources include SABER3 (2022) and SABER1 (2015) clusters, but no GPU specifications were publicly documented."
+}

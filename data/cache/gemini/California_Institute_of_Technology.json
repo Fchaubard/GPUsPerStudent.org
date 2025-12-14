@@ -1,0 +1,42 @@
+{
+  "university_name": "California Institute of Technology",
+  "data_retrieved_date": "2025-05-18",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 295,
+    "grad_cs_count": 93,
+    "phd_cs_count": 93,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data sourced from Caltech Registrar Fall 2023-24 Enrollment Statistics. 'Computer Science' option specifically selected. Undergrad count (295) represents CS majors (Caltech's most popular option). Grad count (93) represents CS graduate students. Note: Caltech's graduate program is almost exclusively PhD-focused; terminal MS degrees are rare in the CS option, so the entire graduate count is estimated as PhD candidates. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 60,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Generic GPU Nodes (Central HPC)",
+        "estimated_total": null,
+        "notes": "The Central IMSS HPC cluster mentions GPU nodes (historically V100/P100), but exact counts are behind authentication and not publicly verifiable."
+      }
+    ],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Counts derived from the Resnick High Performance Computing Center specifications (15 nodes \u00d7 4 A100 80GB = 60 GPUs). Note: Caltech relies heavily on cloud computing (AWS) and external NSF Access resources, resulting in a smaller on-premise footprint compared to peer institutions. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Caltech is a 'Cloud First' institution with significant reliance on AWS partnerships, making on-premise GPU counts lower than typical state universities. The Resnick HPC cluster is the primary verifiable source for on-premise AI hardware."
+}

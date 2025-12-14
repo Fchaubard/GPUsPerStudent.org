@@ -1,0 +1,61 @@
+{
+  "university_name": "University of Alabama - Birmingham",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://docs.rc.uab.edu/cheaha/hardware/",
+      "data_found": "Cheaha hardware table lists GPU generations including: (a) gpu: pascal = 18 nodes, 4 GPUs/node, NVIDIA Tesla P100 16GB (total GPUs=72); (b) gpu: ampere = 20 nodes, 2 GPUs/node, NVIDIA A100 80GB (total GPUs=40). Also includes entries showing 4 nodes with 8x A100 40GB (total GPUs=32) matching DGX-A100 nodes used by other UAB RC services."
+    },
+    {
+      "url": "https://docs.rc.uab.edu/cheaha/slurm/gpu/",
+      "data_found": "Cheaha GPU partitions indicate P100 GPUs on pascalnodes and A100 80GB GPUs on amperenodes; also notes pascalnodes have 4 GPUs/node and amperenodes have 2 GPUs/node."
+    },
+    {
+      "url": "https://docs.rc.uab.edu/uab_cloud/hardware/",
+      "data_found": "Cloud.rc hardware: 4 DGX-A100 nodes; total GPUs=32; GPU info = NVIDIA A100 40GB (implies 8 GPUs/node)."
+    },
+    {
+      "url": "https://docs.rc.uab.edu/kubernetes/hardware/",
+      "data_found": "Kubernetes container service planned hardware: 4 DGX-A100 nodes; total GPUs=32; GPU info = NVIDIA A100 40GB (implies 8 GPUs/node). Marked as planned / not ready for researcher use."
+    },
+    {
+      "url": "https://www.uab.edu/it/home/research-computing/cheaha",
+      "data_found": "Cheaha overview page states Cheaha 'consists of ... 72 NVIDIA-P100 GPUs' (matches 18 nodes \u00d7 4 P100)."
+    },
+    {
+      "url": "https://www.uab.edu/institutionaleffectiveness/images/documents/enrollment-by-major/Fall-2025-Graduate-Enrollment-by-Major-and-Degree-Level.pdf",
+      "data_found": "Student enrollment: 503 undergrad, 409 grad, 20 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 503,
+    "grad_cs_count": 409,
+    "phd_cs_count": 20,
+    "year": "Fall 2024",
+    "source_url": "https://www.uab.edu/institutionaleffectiveness/images/documents/enrollment-by-major/Fall-2025-Graduate-Enrollment-by-Major-and-Degree-Level.pdf",
+    "notes": "Fall 2024 CS enrollment counts come from UAB Institutional Effectiveness & Analysis 'Enrollment by Major and Degree Level' PDFs (which include columns for Fall 2021\u2013Fall 2025, including Fall 2024). Undergrad CS: in the Undergraduate Enrollment PDF, under Arts & Sciences \u2192 Baccalaureate \u2192 'Computer Science', the Fall 2024 column is 503. ([uab.edu](https://www.uab.edu/institutionaleffectiveness/images/documents/enrollment-by-major/Fall-2025-Undergraduate-Enrollment-by-Major-and-Degree-Level.pdf)) Masters (MS) CS: in the Graduate Enrollment PDF, under Arts & Sciences \u2192 Master's \u2192 'Computer Science', the Fall 2024 column is 409. PhD CS: in the same Graduate Enrollment PDF, under Arts & Sciences \u2192 Doctoral \u2192 'Computer Science', the Fall 2024 column is 20. ([uab.edu](https://www.uab.edu/institutionaleffectiveness/images/documents/enrollment-by-major/Fall-2025-Graduate-Enrollment-by-Major-and-Degree-Level.pdf)) No explicit 'last updated' date was visible on the PDFs in the extracted text."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 40,
+    "a100_40gb_count": 64,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 72,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://docs.rc.uab.edu/cheaha/hardware/",
+    "notes": "Clusters counted:\n1) Cheaha (HPC):\n- Pascal GPU nodes: 18 nodes \u00d7 4 P100/node = 72 P100\n- Ampere GPU nodes: 20 nodes \u00d7 2 A100-80GB/node = 40 A100 80GB\n2) Cloud.rc (OpenStack): 4 DGX-A100 nodes \u00d7 8 A100-40GB/node = 32 A100 40GB\n3) Kubernetes container service (planned): 4 DGX-A100 nodes \u00d7 8 A100-40GB/node = 32 A100 40GB\nTotals:\n- P100 = 72\n- A100 80GB = 40\n- A100 40GB = 32 + 32 = 64\nNote: Cloud.rc and Kubernetes pages describe identical DGX-A100 inventories; they may represent the same physical nodes used for different services, but were summed as separate 'clusters' per the request."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

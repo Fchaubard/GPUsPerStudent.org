@@ -1,0 +1,64 @@
+{
+  "university_name": "University of Florida",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.rc.ufl.edu/about/hipergator/",
+      "data_found": "HiPerGator AI: The cluster consists of 140 NVIDIA DGX A100 nodes. It includes 1,120 NVIDIA A100 GPUs."
+    },
+    {
+      "url": "https://help.rc.ufl.edu/doc/Hardware_Specifications",
+      "data_found": "Hardware Specifications table lists: 'A100 GPU Nodes (hipergator-ai)': 140 nodes w/ 8x A100-80GB. 'Standard GPU Nodes': 34 nodes w/ 4x A100-80GB. 'Large Memory GPU Nodes': 17 nodes w/ 8x A100-80GB. Also lists 'NGPU Nodes' with 44 nodes w/ 4x RTX 2080Ti and 'NVIDIA Quadro RTX 6000' nodes."
+    },
+    {
+      "url": "https://news.ufl.edu/2020/07/nvidia-partnership/",
+      "data_found": "Press release confirming the purchase of 140 DGX A100 systems for the AI supercomputer."
+    },
+    {
+      "url": "https://www.cise.ufl.edu/about/",
+      "data_found": "Department of Computer & Information Science & Engineering (CISE) stats: 'approximately 2,900 undergraduate students and 600 graduate students'."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2900,
+    "grad_cs_count": 400,
+    "phd_cs_count": 200,
+    "year": "2024",
+    "source_url": "https://www.cise.ufl.edu/about/",
+    "notes": "Student counts derived from the Official CISE Department 'About' page which states 'approximately 2,900 undergraduate students and 600 graduate students'. The graduate split is estimated as ~200 PhD and ~400 Master's based on typical R1 engineering department ratios and previous institutional data reports, as the primary source only provides the aggregate '600 graduate students' figure."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 1392,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 2080 Ti (11GB)",
+        "estimated_total": 176,
+        "notes": "From 'NGPU Nodes' partition: 44 nodes x 4 GPUs/node."
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000 (24GB)",
+        "estimated_total": 64,
+        "notes": "From Hardware Specs: 32 nodes x 2 GPUs/node."
+      }
+    ],
+    "source_url": "https://help.rc.ufl.edu/doc/Hardware_Specifications",
+    "notes": "The University of Florida hosts 'HiPerGator', one of the largest university AI clusters. \n\nCALCULATIONS:\n1) HiPerGator AI Partition (DGX SuperPod): 140 nodes x 8 A100 80GB = 1,120 GPUs.\n2) Standard GPU Partition: 34 nodes x 4 A100 80GB = 136 GPUs.\n3) Large Memory GPU Partition: 17 nodes x 8 A100 80GB = 136 GPUs.\n\nTotal A100 80GB = 1,120 + 136 + 136 = 1,392 GPUs.\n\nOlder generations (V100/K80) listed in archived docs appear retired or are not listed in the current active hardware specification table."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UF provides highly transparent hardware specifications via their Research Computing documentation. The A100 count is exact based on the provided node configurations. Student data is rounded/approximate based on the department's 'About' page."
+}

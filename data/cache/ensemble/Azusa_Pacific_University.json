@@ -1,0 +1,53 @@
+{
+  "university_name": "Azusa Pacific University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.apu.edu/articles/cultivating-stem-leaders-through-research-as-an-r2-institution/",
+      "data_found": "Mentions a $2M investment in 'state-of-the-art equipment' to enable research, but provides no HPC/GPU cluster hardware specifications (no cluster names, GPU models, node counts, or GPUs-per-node)."
+    },
+    {
+      "url": "https://www.apu.edu/programs/computer-science-major/",
+      "data_found": "Program page references the $2M research equipment investment and links to the R2/research article, but does not list any GPU cluster specifications."
+    },
+    {
+      "url": "https://www.apu.edu/it/index.html",
+      "data_found": "General IT services page; no research computing/HPC/GPU cluster specifications."
+    },
+    {
+      "url": "https://www.apu.edu/oir/institutionaldata/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.apu.edu/oir/institutionaldata/",
+    "notes": "Could not find any publicly available Azusa Pacific University (APU) Computer Science (CS) student enrollment headcount that is explicitly labeled for AY 2024-2025 or Fall 2024. I followed your required search order and checked APU's Office of Institutional Research (OIR) pages first. OIR's Common Data Set page only publishes CDS PDFs for 2020-21 and earlier, which must be rejected per your rules. ([apu.edu](https://www.apu.edu/oir/commondata/)) The OIR Institutional Data page links to (a) a Fact Sheet and (b) 'IPEDS Submissions' hosted on Google Drive, but the Google Drive folder requires sign-in, preventing verification of any Fall 2024/AY 2024-25 CS enrollment counts. ([apu.edu](https://www.apu.edu/oir/institutionaldata/)) I also checked APU's Computer Science major program page; it does not provide any Fall 2024/AY 2024-25 CS enrollment counts. ([apu.edu](https://www.apu.edu/programs/computer-science-major/index.html?utm_source=openai)) Therefore, per your instructions, all counts are set to 0 and year is set to NO_RECENT_DATA_FOUND."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.apu.edu/articles/cultivating-stem-leaders-through-research-as-an-r2-institution/",
+    "notes": "Searched for APU research computing / GPU clusters / HPC H100 A100 specs / AI computing infrastructure and reviewed relevant APU pages (CS program page + linked research investment article + IT page). No publicly available APU GPU cluster specifications (cluster names, node counts, GPU models, or GPUs per node) were found in the sources reviewed; therefore totals for all requested GPU categories are 0 and no nodes\u00d7GPUs_per_node calculations could be performed."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

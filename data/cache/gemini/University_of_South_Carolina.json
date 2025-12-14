@@ -1,0 +1,36 @@
+{
+  "university_name": "University of South Carolina",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 1400,
+    "grad_cs_count": 150,
+    "phd_cs_count": 72,
+    "year": "2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Undergraduate and total Graduate counts taken directly from the Department of Computer Science and Engineering 'About' page which states 'over 1,400 undergraduate students and 150 graduate students'. PhD count is estimated based on DataUSA/IPEDS completion data (approx 13 PhDs awarded/year \u00d7 5.5 years duration \u2248 72 students), with the remainder assumed to be MS students. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 48,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 56,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "GPU counts calculated from Hyperion cluster specifications page. A100 80GB: (2 nodes \u00d7 8 GPUs) + (8 nodes \u00d7 4 GPUs) = 16 + 32 = 48 GPUs. V100 32GB: (20 nodes \u00d7 2 GPUs) + (4 nodes \u00d7 4 GPUs) = 40 + 16 = 56 GPUs. No public mentions of H100/H200 infrastructure found as of search date. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data reflects the 'Hyperion' cluster, which is the primary centralized research computing resource at UofSC. Student counts are based on specific department 'About' page figures."
+}

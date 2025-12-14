@@ -1,0 +1,64 @@
+{
+  "university_name": "University of California, Irvine",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://rcic.uci.edu/slurm/slurm.html",
+      "data_found": "scontrol show node hpc3-gpu-16-00: Gres=gpu:V100:4; Listing shows nodes hpc3-gpu-16-[00-07],hpc3-gpu-17-[...] with gpu:V100:4; hpc3-gpu-l54-[03-06] with gpu:A100:2; hpc3-gpu-l54-[08-09] and hpc3-gpu-18-[03-04],hpc3-gpu-24-[...] with gpu:A30:4."
+    },
+    {
+      "url": "https://airesearch.medschool.uci.edu/",
+      "data_found": "Largest GPU cluster (9,200+ TFLOPs) in any Radiology Department in US."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-california-irvine",
+      "data_found": "In 2023, 534 degrees were awarded to men at University of California-Irvine in Computer Science, which is 3.34 times more than the 160 female recipients with that same degree."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-california-irvine-donald-bren-school-of-information-and-computer-sciences-department-of-computer-science-department-of-computer-science-000_10062233.aspx",
+      "data_found": "432 Total Graduate Students; 4,166 Applied; 646 Accepted; 137 Enrolled; Male (76%) Female (23%)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1170,
+    "grad_cs_count": 330,
+    "phd_cs_count": 102,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-california-irvine",
+    "notes": "Undergraduate CS count calculated from 3.9% of 30,000 total undergraduates = 1,170. Graduate CS students estimated from Peterson's data showing 432 total graduate students in CS department, with 76% male/24% female distribution. Assuming typical 3:1 ratio of MS to PhD students, estimated 330 MS and 102 PhD students. DataUSA shows 694 total CS degrees awarded in 2023 (534 male + 160 female)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 12,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 158,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 (24GB)",
+        "estimated_total": 24,
+        "notes": "From Slurm node listing showing hpc3-gpu-l54-[08-09] and hpc3-gpu-18-[03-04],hpc3-gpu-24-[...] with gpu:A30:4. Estimated 6 nodes \u00d7 4 GPUs = 24 A30s."
+      },
+      {
+        "model": "Unknown models in Medical School AI Research cluster",
+        "estimated_total": null,
+        "notes": "The Medical School's A2IR center claims the largest GPU cluster (9,200+ TFLOPs) in any Radiology Department but specific GPU models not disclosed."
+      }
+    ],
+    "source_url": "https://rcic.uci.edu/slurm/slurm.html",
+    "notes": "HPC3 GPU inventory based on Slurm node listings: V100 GPUs = 32 nodes \u00d7 4 GPUs + 10 from older HPC = ~158 total V100s (conservative estimate including both clusters). A100 GPUs = 6 nodes \u00d7 2 GPUs = 12 A100s. A30 GPUs = ~6 nodes \u00d7 4 GPUs = 24 A30s. The medical school's A2IR center claims a separate large GPU cluster but specifications unavailable. Total excludes the medical school's undisclosed GPUs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UC Irvine operates multiple computing clusters. The main HPC3 cluster has documented V100, A100, and A30 GPUs. The older HPC cluster lists 30 Nvidia GPUs (type unspecified). The Medical School operates a separate large GPU cluster (9,200+ TFLOPs) but specific GPU models and counts are not publicly available. Student counts are based on enrollment percentages and degree completion data."
+}

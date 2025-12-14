@@ -1,0 +1,72 @@
+{
+  "university_name": "Carnegie Mellon University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.cmu.edu/rcd/faq.html",
+      "data_found": "ORCHARD Google Cloud Cluster: 37 compute nodes; each node is a GCP a3-megagpu-8g with 8x NVIDIA H100 80GB GPUs; total stated = 296 H100 GPUs."
+    },
+    {
+      "url": "https://cloud.google.com/compute/docs/accelerator-optimized-machines",
+      "data_found": "GCP a3-megagpu-8g (A3 Mega) uses NVIDIA H100 SXM GPUs (so ORCHARD H100s categorized as SXM, not PCIe)."
+    },
+    {
+      "url": "https://www.cmu.edu/engineering/trace/capabilities/index.html",
+      "data_found": "TRACE cluster: lists 29 x NVIDIA Ampere A40 (direct compute) and 4 x NVIDIA Ampere A16 (VMs). Also states 33 Dell R7525 servers total (29 direct compute, 4 VM)."
+    },
+    {
+      "url": "https://www.meche.engineering.cmu.edu/news/2017/05/31-arjuna-gpu-cluster.html",
+      "data_found": "Arjuna GPU cluster: 1,792 CPU cores and 112 GPUs total; GPU model not specified."
+    },
+    {
+      "url": "https://www.ece.cmu.edu/news-and-events/story/2025/04/supporting-high-performance-computing-research.html",
+      "data_found": "HACC heterogeneous cluster: five servers plus 16 AMD Instinct MI210 GPUs (and other accelerators)."
+    },
+    {
+      "url": "https://www.cmu.edu/ira/Enrollment/pdf/fall-2024-pdfs/scs-f24-enrollmet-08nov2024.pdf",
+      "data_found": "Student enrollment: 1073 undergrad, 1124 grad, 763 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1073,
+    "grad_cs_count": 1124,
+    "phd_cs_count": 763,
+    "year": "Fall 2024",
+    "source_url": "https://www.cmu.edu/ira/Enrollment/pdf/fall-2024-pdfs/scs-f24-enrollmet-08nov2024.pdf",
+    "notes": "Source is CMU Institutional Research and Analysis (IR&A) \u201cEnrollment Fall 2024\u201d for the School of Computer Science (SCS), titled \u201cEnrollment by Degree Level, Sex, and Race/Citizenship.\u201d The PDF explicitly states: \u201cInformation as of Fall 2024 census date (September 16, 2024).\u201d From the Fall 2024 Total row: Undergrad = 1,073; Master\u2019s = 1,124; PhD = 763 (Other = 19; Total SCS enrollment = 2,979). Counts reported here are SCS-level enrollment (not necessarily only the Computer Science Department sub-unit)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 296,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 29,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 112,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A16 (Ampere, virtualization GPU)",
+        "count": 4,
+        "notes": "TRACE lists '4 x NVIDIA Ampere A16 (optimized for VMs)'. Count treated as 4 A16 cards; not mapped into the requested fixed buckets."
+      },
+      {
+        "model": "AMD Instinct MI210",
+        "count": 16,
+        "notes": "HACC (AMD donation) includes 16 MI210 GPUs; not mapped into NVIDIA-only fixed buckets."
+      }
+    ],
+    "source_url": "https://www.cmu.edu/rcd/faq.html",
+    "notes": "Clusters included: ORCHARD (RCD Google Cloud Cluster), TRACE, Arjuna, HACC.\n\n1) ORCHARD (Google Cloud Cluster / 'ORCHARD'):\n- From CMU RCD FAQ: 37 compute nodes; 8 H100 GPUs per node.\n- Total = 37 x 8 = 296.\n- GPU type: H100 SXM (a3-megagpu-8g / A3 Mega uses H100 SXM).\n=> Added to h100_sxm_count: +296.\n\n2) TRACE (Tartan Research Advanced Computing Environment):\n- TRACE capabilities page lists 29 x NVIDIA Ampere A40 (direct compute).\n- Interpreted as 29 GPU-enabled servers with 1 A40 each.\n- Total A40 = 29 x 1 = 29.\n=> Added to a40_count: +29.\n- Also lists 4 x NVIDIA Ampere A16 (VMs): recorded under other_high_vram_gpus (counted as 4 cards).\n\n3) Arjuna (College of Engineering multi-departmental GPU cluster):\n- Article states total GPUs = 112; CPU cores = 1,792.\n- Node/GPU breakdown not provided. To satisfy nodes x GPUs_per_node, inferred a plausible configuration from the CPU core count:\n  - Assume 32 CPU cores per node (common dual-socket configuration), so nodes = 1,792 / 32 = 56.\n  - Then GPUs_per_node = 112 / 56 = 2.\n  - Total check: 56 x 2 = 112.\n- GPU model not specified; per instruction to estimate by age (2017-era), classified as P100.\n=> Added to p100_count: +112.\n\n4) HACC (AMD heterogeneous cluster, on CMU campus initially):\n- Article states 16 AMD Instinct MI210 GPUs across five servers; per-node GPU distribution not specified.\n- For nodes x GPUs_per_node, assumed 4 GPU servers with 4 MI210 each (16 total) plus 1 additional server without MI210.\n- Not mapped into NVIDIA buckets; recorded under other_high_vram_gpus.\n\nGrand totals (requested buckets):\n- H100 SXM: 296\n- A40: 29\n- P100 (estimated for Arjuna): 112\n- All other requested buckets: 0"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

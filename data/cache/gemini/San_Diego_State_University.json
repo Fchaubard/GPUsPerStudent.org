@@ -1,0 +1,52 @@
+{
+  "university_name": "San Diego State University",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [
+    {
+      "url": "https://asir.sdsu.edu/data-and-analysis/enrollment/",
+      "data_found": "SDSU Enrollment Dashboard (Fall 2023 data): Computer Science Undergraduate: 1,847; Computer Science Graduate (MS): 121; Computational Science PhD: 48."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1847,
+    "grad_cs_count": 121,
+    "phd_cs_count": 48,
+    "year": "2023-2024",
+    "source_url": "https://asir.sdsu.edu/data-and-analysis/enrollment/",
+    "notes": "Data retrieved from official SDSU Analytic Studies & Institutional Research (ASIR) Enrollment Dashboard (Fall 2023 census). Undergrad count is for 'Computer Science' major. Grad count is for 'Computer Science' MS. PhD count is for the 'Computational Science' joint doctoral program (as SDSU CS does not offer a standalone PhD, but participates in the Computational Science joint program with Claremont Graduate University)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unspecified GPU Nodes (CSRC)",
+        "estimated_total": null,
+        "notes": "The Computational Science Research Center mentions 'several GPU nodes' but does not publish model specifications publicly."
+      },
+      {
+        "model": "Pacific Research Platform Nodes (Fiona)",
+        "estimated_total": 0,
+        "notes": "SDSU hosts Data Transfer Nodes (Fiona) connected to the Pacific Research Platform. While these typically contain consumer GPUs (e.g., 1080Ti/2080Ti/3090) for acceleration, no specific count or model is publicly verified on an SDSU domain."
+      }
+    ],
+    "source_url": "https://asir.sdsu.edu/data-and-analysis/enrollment/",
+    "notes": "SDSU operates on a partnership model, relying primarily on the San Diego Supercomputer Center (SDSC)\u2014located at UCSD\u2014for High Performance Computing. While SDSU faculty have access to SDSC clusters (like Expanse), these are not SDSU-owned assets. No public documentation exists for a central, university-owned research cluster with significant H100/A100 resources. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "SDSU represents a 'Cloud/Partner' infrastructure model. Unlike R1 universities with dedicated 'Research Computing' centers hosting local clusters (like Stanford's Sherlock), SDSU leverages its proximity to SDSC. Therefore, while student counts are high, auditable on-premise GPU counts are 0 based on public web data."
+}

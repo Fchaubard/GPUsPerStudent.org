@@ -1,0 +1,57 @@
+{
+  "university_name": "Georgetown University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.georgetown.edu/",
+      "data_found": "Georgetown University offers HPC on Google Cloud Platform (GCP) for faculty and staff research. No specific on-premises GPU cluster information found."
+    },
+    {
+      "url": "https://mdi.georgetown.edu/resources-and-training/enabling-research/compute/",
+      "data_found": "The Massive Data Institute uses Google and Microsoft Cloud resources. Faculty have access to large-scale servers, compute clusters, GPUs, and data storage (cloud-based, not specific hardware counts)."
+    },
+    {
+      "url": "https://campustechnology.com/articles/2019/04/08/georgetown-tapping-into-google-cloud-to-manage-research-and-data.aspx",
+      "data_found": "Georgetown implementing AI-first and cloud-first approach using Google Cloud for high-performance computing and storage resources."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/georgetown-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During 2021-2022: 46 bachelor's degrees in computer science awarded (down from 47 previous year); 34 master's degrees in CS awarded; 4 doctoral degrees."
+    },
+    {
+      "url": "https://cs.georgetown.edu/news-story/georgetown-university-computer-science-masters-program-ranked-15-in-us/",
+      "data_found": "Georgetown CS Master's program ranked #15 nationwide by TechGuide in 2025. Low student-to-faculty ratio mentioned."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 184,
+    "grad_cs_count": 51,
+    "phd_cs_count": 22,
+    "year": "2024-2025",
+    "source_url": "https://www.collegefactual.com/colleges/georgetown-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "Estimated from degree completion data: Undergrad CS = 46 degrees/year \u00d7 4 years = 184 enrolled. MS CS = 34 degrees \u00d7 1.5 year average = 51 enrolled. PhD CS = 4 degrees/year \u00d7 5.5 years average = 22 enrolled. These are conservative estimates based on 2021-2022 graduation data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://hpc.georgetown.edu/",
+    "notes": "Georgetown University utilizes cloud-based HPC through Google Cloud Platform rather than maintaining on-premises GPU clusters. The Massive Data Institute provides cloud access to GPUs through Google and Microsoft Cloud, but specific GPU counts are not publicly available as they use dynamic cloud resources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": -1.0,
+    "description": "Georgetown faculty access HPC resources through Google Cloud Platform allocations. Specific credit values not publicly disclosed."
+  },
+  "analysis_notes": "Georgetown has adopted a cloud-first approach for HPC, partnering with Google Cloud Platform. While they provide GPU access through cloud services, no on-premises GPU cluster specifications were found. Student enrollment estimated from graduation data using standard program durations."
+}

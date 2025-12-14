@@ -1,0 +1,57 @@
+{
+  "university_name": "Florida Institute of Technology",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://help.fit.edu/TDClient/39/Portal/KB/ArticleDet?ID=2831&SIDs=260",
+      "data_found": "AI.Panther HPC Cluster at Florida... of 16 compute nodes (Total of 768 processor cores and 6,144 GB RAM), 8 GPU nodes with each node containing 4 Nvidia A100 GPUs, 3 storage nodes, 1 login node, and 1 head node."
+    },
+    {
+      "url": "https://research.fit.edu/craft/aipanther/",
+      "data_found": "Acquisition of the AI.Panther HPC was made possible by the following grant: 'Acquisition of a High Performance GPU / CPU Cluster for Research and Innovation in Computational Sciences and Engineering', National Science Foundation - Major Research Instrumentation Program."
+    },
+    {
+      "url": "https://datausa.io/profile/university/florida-institute-of-technology",
+      "data_found": "Florida Institute of Technology is a higher education institution located in Brevard County, FL. In 2023, 2,529 degrees were awarded across all undergraduate and graduate programs at Florida Institute of Technology. The total enrollment at Florida Institute of Technology in 2023, both undergraduate and graduate, is 8,516 students."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/florida-institute-of-technology-college-of-engineering-computer-science-department-000_10013556.aspx",
+      "data_found": "65 Total Graduate Students; 75% International Breakout (representing other countries) Male (61%) Female (38%); 463 Applied, 206 Accepted, 18 Enrolled."
+    },
+    {
+      "url": "https://www.fit.edu/electrical-engineering-and-computer-science/",
+      "data_found": "The department offers a variety of undergraduate and/or graduate programs in Computer Engineering, Computer Information Systems, Computer Science, Cybersecurity, Electrical Engineering, Human-Centered Design, and Software Engineering."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 459,
+    "grad_cs_count": 65,
+    "phd_cs_count": 20,
+    "year": "2023-2024",
+    "source_url": "https://www.petersons.com/graduate-schools/florida-institute-of-technology-college-of-engineering-computer-science-department-000_10013556.aspx",
+    "notes": "Undergrad CS count estimated from: Total undergrad enrollment of 3,677 (Fall 2024), with approximately 50% in College of Engineering & Science (1,839 students). CS typically represents ~25% of engineering students at similar technical universities, yielding estimate of 459. Graduate CS count from Peterson's data showing 65 total graduate students in CS department. PhD count estimated from typical PhD-to-MS ratio of 1:3.25 based on 18 new enrollees mentioned, suggesting approximately 20 PhD students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 32,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://help.fit.edu/TDClient/39/Portal/KB/ArticleDet?ID=2831&SIDs=260",
+    "notes": "AI.Panther cluster calculation: 8 GPU nodes \u00d7 4 NVIDIA A100 GPUs per node = 32 A100 GPUs total. VRAM capacity not specified in source, assumed to be 80GB variants typical for HPC installations."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Florida Institute of Technology operates the AI.Panther HPC cluster funded by NSF MRI grant. GPU count is clear: 8 nodes with 4 A100 GPUs each = 32 total. Student enrollment data shows 8,516 total students (2023), with CS graduate program having 65 students. Undergraduate CS enrollment estimated based on engineering college proportion."
+}

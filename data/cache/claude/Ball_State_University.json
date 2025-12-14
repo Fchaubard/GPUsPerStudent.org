@@ -1,0 +1,49 @@
+{
+  "university_name": "Ball State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.bsu.edu/academics/collegesanddepartments/computer-science",
+      "data_found": "Department of Computer Science exists with BS, BA, and MS degree programs"
+    },
+    {
+      "url": "https://datausa.io/profile/university/ball-state-university/",
+      "data_found": "Total enrollment: 20,440 students (2023); 14,874 undergraduate and 5,566 graduate students"
+    },
+    {
+      "url": "https://www.bsu.edu/about/administrativeoffices/information-technology",
+      "data_found": "Information Technology division exists but no HPC/GPU cluster specifications found"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": -1,
+    "grad_cs_count": -1,
+    "phd_cs_count": -1,
+    "year": "2023-2024",
+    "source_url": "https://www.bsu.edu/academics/collegesanddepartments/computer-science",
+    "notes": "Despite multiple searches, could not find specific CS department enrollment data. University has CS programs at undergraduate (BS/BA) and graduate (MS) levels, but exact enrollment numbers are not publicly available. Total university enrollment is 20,440 (14,874 undergrad, 5,566 grad). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.bsu.edu/academics/collegesanddepartments/computer-science",
+    "notes": "No public information found about GPU clusters, HPC resources, or research computing infrastructure at Ball State University. The IT department website does not list HPC or GPU computing services. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Ball State University appears to have limited publicly available information about research computing infrastructure. While they have CS programs including a Data Analytics & Machine Learning concentration, no GPU cluster specifications or CS enrollment statistics were found through multiple targeted searches."
+}

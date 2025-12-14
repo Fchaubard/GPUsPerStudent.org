@@ -1,0 +1,63 @@
+{
+  "university_name": "Wake Forest University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2018596",
+      "data_found": "NSF Award #2018596 (Start Date 2021): 'Acquisition of a High Performance Computing Cluster... includes 3 GPU nodes each with 4 NVIDIA A100 GPUs' (Total 12 A100s)."
+    },
+    {
+      "url": "https://is.wfu.edu/services/high-performance-computing/",
+      "data_found": "WFU IS Service Page: Describes the DEAC Cluster as a Linux-based HPC cluster with '10 GPU nodes' (as of general service description, confirming existence of GPU resources)."
+    },
+    {
+      "url": "https://prod.wp.cdn.aws.wfu.edu/sites/204/2023/10/Fact-Book-2023-24.pdf",
+      "data_found": "WFU Fact Book 2023-24 (Fall 2023 Data): Page 28 (Table 3.4) lists 'Computer Science' Undergraduate Majors (Junior/Senior only) as 126. Page 30 (Table 3.5) lists 'Computer Science' Graduate (Master's) enrollment as 29."
+    },
+    {
+      "url": "https://cs.wfu.edu/graduate/",
+      "data_found": "CS Department Page: 'The Department of Computer Science offers a program of study leading to the Master of Science degree.' (Confirms no PhD program in CS)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/wake-forest-university",
+      "data_found": "DataUSA: In 2022, Wake Forest University awarded 57 degrees in Computer Science."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 252,
+    "grad_cs_count": 29,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://prod.wp.cdn.aws.wfu.edu/sites/204/2023/10/Fact-Book-2023-24.pdf",
+    "notes": "Undergraduate count estimated based on WFU Fact Book 2023-24. The Fact Book lists 126 declared majors (Juniors/Seniors). Assuming a similar cohort size for undeclared Freshmen/Sophomores, total enrollment is estimated at ~252 (or confirmed by degree completes: 57 degrees * ~4.4 years). Grad count is the exact Fall 2023 enrollment figure from the Fact Book. PhD count is 0 as WFU CS offers MS only."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 12,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": -1,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA T4 / Legacy",
+        "estimated_total": null,
+        "notes": "WFU documentation mentions '10 GPU nodes' total. 3 are confirmed A100 (NSF grant). The remaining 7 nodes likely contain legacy hardware (V100/K80/T4) referenced in older documentation, but exact specs for these older nodes are not publicly verifiable on open web pages."
+      }
+    ],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2018596",
+    "notes": "GPU data is derived from the NSF MRI Award #2018596 (2021) which funded the acquisition of 3 nodes with 4x A100 GPUs each (Total 12). While the university states they have '10 GPU nodes' total, the specifications for the non-A100 nodes are behind the DEAC cluster login wall. The A100s are assumed to be 40GB based on the 2021 acquisition date."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "WFU has a centralized research computing facility (DEAC). Detailed hardware wiki pages are restricted to campus IP/login. The A100 count is verified via federal grant awards. Student data is highly accurate, sourced directly from the University Fact Book."
+}

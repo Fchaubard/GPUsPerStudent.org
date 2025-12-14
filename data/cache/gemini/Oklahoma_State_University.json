@@ -1,0 +1,41 @@
+{
+  "university_name": "Oklahoma State University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/oklahoma-state-university-main-campus",
+      "data_found": "2022 Degrees Awarded in Computer Science: 96 Bachelor's degrees, 26 Master's degrees, and 5 Research Doctorates (PhDs)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 432,
+    "grad_cs_count": 52,
+    "phd_cs_count": 25,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/oklahoma-state-university-main-campus",
+    "notes": "Official current enrollment headcount by major is not available on public OSU IRIM pages without login/Tableau access. Counts are estimated based on verifiable IPEDS/DataUSA degree completion data: Undergrad estimated as 4.5x annual Bachelor's degrees (96 * 4.5 = 432). Master's estimated as 2x annual Master's degrees (26 * 2 = 52). PhD estimated as 5x annual Doctoral degrees (5 * 5 = 25)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 24,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/oklahoma-state-university-main-campus",
+    "notes": "The primary research cluster 'Pete' lists 12 GPU nodes with dual NVIDIA V100 cards (12 nodes * 2 GPUs = 24 V100 total). No public documentation was found for newer A100/H100 clusters or AI-specific hardware partitions at the university-wide HPCC level. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "OSU's HPCC relies primarily on the 'Pete' cluster (deployed circa 2019/2020), which utilizes V100 GPUs. Newer generation hardware (A100/H100) does not appear in public system specifications or user guides."
+}

@@ -1,0 +1,45 @@
+{
+  "university_name": "Temple University",
+  "data_retrieved_date": "2024-05-24",
+  "sources": [
+    {
+      "url": "https://www.temple.edu/research/technology-resources",
+      "data_found": "Confirmation of High Performance Computing (HPC) service managed by ITS, referencing the 'Compute' cluster."
+    },
+    {
+      "url": "https://datausa.io/profile/university/temple-university",
+      "data_found": "2022 Degrees Awarded: Computer & Information Sciences (251), Information Science (122), Computer Systems Analysis (133). Total Bachelors ~506. Master's degrees: ~55. Research Doctorates: 7."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2024,
+    "grad_cs_count": 110,
+    "phd_cs_count": 35,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/temple-university",
+    "notes": "Official exact enrollment counts for the CIS department are not published on a public static page for the current year. Counts are estimated based on IPEDS data (DataUSA) for degrees awarded in 2022. Undergraduate: ~506 CS/IS-related bachelors awarded * 4 years = 2,024 students. Graduate (MS): ~55 masters awarded * 2 years = 110 students. PhD: 7 doctorates awarded * 5 years = 35 students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 12,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.temple.edu/research/technology-resources",
+    "notes": "Primary HPC resource is the 'Compute' cluster. Specs listed on the ITS service page confirm 3 GPU nodes with 4x NVIDIA Tesla V100 32GB GPUs each (3 * 4 = 12). Older documentation referencing 'Owlsnest' with P100s appears to refer to decommissioned or legacy hardware not listed on the current service description. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Temple University's centralized HPC resources appear modest compared to larger R1 institutions, relying on a V100-based cluster ('Compute'). No public evidence of A100/H100 acquisitions was found on ITS or Research Computing pages."
+}

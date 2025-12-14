@@ -1,0 +1,41 @@
+{
+  "university_name": "Immaculata University",
+  "data_retrieved_date": "2025-05-27",
+  "sources": [
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=Immaculata+University&s=all&id=213014#programs",
+      "data_found": "NCES IPEDS Data (2022-2023 Completions): Bachelors degrees awarded in 'Computer and Information Sciences and Support Services': 11. No Master's or Doctoral degrees recorded in this category."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 44,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Immaculata+University&s=all&id=213014#programs",
+    "notes": "Immaculata is a small private institution. Official enrollment numbers by major are not publicly itemized on the university website. Counts are estimated based on the most recent NCES IPEDS completion data (2022-2023). 11 Bachelor's degrees were awarded in Computer & Information Sciences; assuming a 4-year program steady state (11 * 4 = 44 enrolled). While the university advertises an M.S. in Cybersecurity on their website, IPEDS reports 0 completions for Computer Science or Protective Services (Cybersecurity) at the Master's level for the reported year, suggesting the program is new or currently has negligible enrollment."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Immaculata+University&s=all&id=213014#programs",
+    "notes": "Immaculata University is a primarily undergraduate liberal arts institution and does not maintain an on-premise Research Computing / HPC center or GPU cluster. Technology resources are limited to standard instructional computer labs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No evidence of cloud compute credit programs found."
+  },
+  "analysis_notes": "Extensive searches for 'Immaculata University HPC', 'cluster', 'GPU node', and 'research computing' yielded no results. The university relies on standard desktop computing for instruction."
+}

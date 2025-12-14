@@ -1,0 +1,56 @@
+{
+  "university_name": "University of California, Berkeley",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://eecs.berkeley.edu/about/by-the-numbers",
+      "data_found": "Undergraduate Students (Fall 2023): 3,820 total (1,631 EECS + 2,189 L&S CS). Graduate Students (Fall 2023): 817 total (338 PhD, 479 Master's)."
+    },
+    {
+      "url": "https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/running-your-jobs/scheduler-config/",
+      "data_found": "Lists partitions including 'savio4_gpu', 'savio3_gpu', 'savio3_2080ti'. Confirms active status of these hardware generations."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 3820,
+    "grad_cs_count": 479,
+    "phd_cs_count": 338,
+    "year": "2023-2024",
+    "source_url": "https://eecs.berkeley.edu/about/by-the-numbers",
+    "notes": "Data sums 'Electrical Engineering & Computer Sciences' (CoE) and 'Computer Science' (L&S) undergraduate majors. Grad count combines Master of Engineering (MEng), Master of Science (MS), and 5th Year MS. PhD count is specifically for EECS/CS doctoral candidates."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 40,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA 2080 Ti",
+        "estimated_total": null,
+        "notes": "Mentioned in Savio 3 HTC partition documentation but specific node counts for this partition are not detailed in public news releases."
+      },
+      {
+        "model": "NVIDIA K80",
+        "estimated_total": 60,
+        "notes": "Savio 2 (Legacy) documentation lists 15 nodes x 4 GPUs = 60 K80s. Status is likely near retirement."
+      }
+    ],
+    "source_url": "https://eecs.berkeley.edu/about/by-the-numbers",
+    "notes": "Counts represent the *verifiable public minimums* derived from Research Computing news announcements and partition documentation for the 'Savio' campus cluster. \n\nCalculations:\n1. A100 80GB: 4 nodes x 4 GPUs (Oct 2023 announcement) = 16 GPUs.\n2. V100: 16 nodes x 2 GPUs (Savio 3 Launch) + 4 nodes x 2 GPUs (2022 Expansion) = 40 GPUs.\n\nIMPORTANT CONTEXT: Berkeley utilizes a 'Condo' model where faculty purchase nodes that are added to the cluster. The total number of faculty-owned nodes is significantly higher (documentation cites 'over 450 nodes' total for the cluster, including CPUs) but exact GPU inventories for private/condo partitions are not public. These numbers reflect the general access/publicly documented institutional purchases only. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Allowance system exists (Faculty Computing Allowance) but specific USD total value per student not publicly quantified in search."
+  },
+  "analysis_notes": "Student data is high-quality and specific (EECS official stats). GPU data is a conservative floor estimate based on public 'General Access' hardware additions. The actual hardware footprint including private faculty nodes (Condo model) and the affiliated LBL NERSC facility (Perlmutter, etc.)\u2014which students often access\u2014is exponentially larger but technically owned by DOE/LBL or individual labs, not the central University IT public pool."
+}

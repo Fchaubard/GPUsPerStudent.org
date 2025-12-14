@@ -1,0 +1,36 @@
+{
+  "university_name": "College of William and Mary",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 664,
+    "grad_cs_count": 73,
+    "phd_cs_count": 43,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Undergraduate count estimated from degrees awarded to account for undeclared freshmen/sophomores (W&M students declare major in junior year): 166 Bachelors degrees awarded in 2023-24 * 4 years = 664 estimated total undergrads. (Official 'Declared' count is 446, covering mostly Jr/Sr). Graduate count is the official Fall 2023 enrollment figure (73). PhD count estimated from the Graduate total (73) minus estimated Masters students (derived from 21 MS degrees/year * 1.5 year duration = ~30 MS students); 73 - 30 = 43 estimated PhD students. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 20,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 8,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data derived from Chesapeake Cluster sub-system specifications listed in W&M Research Computing infrastructure documentation:\n- Albemarle: 2 nodes * 2 A100 80GB = 4\n- Dare: 6 nodes * 2 A100 80GB = 12\n- Edgecombe: 1 node * 4 A100 80GB = 4\n  (Total A100 80GB = 20)\n- Berkeley: 2 nodes * 2 V100 32GB = 4\n- Currituck: 4 nodes * 2 P100 16GB = 8\nOlder 'James' and 'SciClone' hardware appears retired or consolidated into Chesapeake. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "W&M uses a consolidated cluster model ('Chesapeake') with sub-clusters named after local counties. Hardware counts are specific and verifiable via the IT Infrastructure pages. Student counts required estimation for total undergraduate population due to W&M's sophomore-year major declaration policy."
+}

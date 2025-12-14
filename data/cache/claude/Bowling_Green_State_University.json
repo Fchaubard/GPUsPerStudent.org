@@ -1,0 +1,57 @@
+{
+  "university_name": "Bowling Green State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.bgsu.edu/news/2025/08/bgsu-welcomes-largest-freshman-class-in-history-with-back-to-back-years-of-record-enrollment.html",
+      "data_found": "There is a 48% increase in new students enrolling in computer science, a pioneering program for BGSU."
+    },
+    {
+      "url": "https://www.bgsu.edu/arts-and-sciences/computer-science.html",
+      "data_found": "In recent years we saw a nearly 50 percent increase in student enrollment, and we're working on developing new majors and specializations to attract even more quality students to fulfill market needs."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/201441/bowling-green-state-university-main-campus/enrollment/",
+      "data_found": "Bowling Green State University-Main Campus has a total enrollment of 17,027 including 14,014 undergraduate students and 3,013 graduate students."
+    },
+    {
+      "url": "https://datausa.io/profile/university/bowling-green-state-university-main-campus",
+      "data_found": "In 2023, 4,692 degrees were awarded across all undergraduate and graduate programs at Bowling Green State University-Main Campus."
+    },
+    {
+      "url": "https://www.bgsu.edu/arts-and-sciences/computer-science/graduate.html",
+      "data_found": "The Master of Science in Computer Science degree from Bowling Green State University provides students with added depth and technical expertise beyond that of an undergraduate degree."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 350,
+    "grad_cs_count": 60,
+    "phd_cs_count": 25,
+    "year": "2024-2025",
+    "source_url": "https://www.bgsu.edu/news/2025/08/bgsu-welcomes-largest-freshman-class-in-history-with-back-to-back-years-of-record-enrollment.html",
+    "notes": "CS enrollment estimated based on 48% increase in new CS students and department stating 'nearly 50 percent increase in student enrollment' in recent years. With total university enrollment of 17,027 (14,014 undergrad, 3,013 grad), and CS being a growing program, estimated 350 undergrads (2.5% of total undergrad), 60 MS students, and 25 PhD students in CS and Data Science combined."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.bgsu.edu/news/2025/08/bgsu-welcomes-largest-freshman-class-in-history-with-back-to-back-years-of-record-enrollment.html",
+    "notes": "No publicly available information found about GPU cluster or HPC resources at Bowling Green State University. The university appears to focus on undergraduate education with growing CS programs but may not have published details about research computing infrastructure. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Bowling Green State University is experiencing significant growth in CS enrollment with 48% increase in new students. They are the first in Ohio to offer a computer science program (1969) and recently launched the nation's first customizable AI+X bachelor's degree. However, no public information about GPU/HPC resources was found through extensive searches."
+}

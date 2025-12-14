@@ -1,0 +1,53 @@
+{
+  "university_name": "Immaculata University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://magazine.immaculata.edu/winter-2023/students-explore-experiment-learn-in-new-applied-technology-lab/",
+      "data_found": "Describes a new Applied Technology Lab and adjacent computer research room (Linux/hardware learning), but provides no GPU cluster name, node counts, GPU models, or GPU quantities."
+    },
+    {
+      "url": "https://magazine.immaculata.edu/fall-2025/shaping-the-future-immaculata-university-is-redefining-workforce-ready-education/",
+      "data_found": "Discusses AI-related curriculum/programs (e.g., MBA AI concentration) but provides no on-prem research computing/HPC or GPU cluster specifications."
+    },
+    {
+      "url": "https://www.immaculata.edu/news/immaculata-university-brings-magic-school-ai-to-teacher-preparation-programs/",
+      "data_found": "Mentions adopting an AI platform (Magic School) for education programs; no GPU/cluster infrastructure details."
+    },
+    {
+      "url": "https://www.immaculata.edu/wp-content/uploads/2025/03/Common-Data-Set-2024-2025-Immaculata-University-Section-H-AY2324.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.immaculata.edu/wp-content/uploads/2025/03/Common-Data-Set-2024-2025-Immaculata-University-Section-H-AY2324.pdf",
+    "notes": "Searched for Immaculata University Computer Science (incl. Applied Computer Science) student enrollment counts specifically for Fall 2024 / AY 2024-2025. The official Common Data Set labeled \u201cCommon Data Set 2024-2025\u201d explicitly reports institutional enrollment as of the official fall reporting date / October 15, 2024 (Fall 2024), but it does NOT provide enrollment/headcount by major/department (no CS major enrollment table). The CDS includes only overall headcount totals (undergraduate/graduate) and degree-completion percentages by CIP, which are not CS enrollment counts. Additional searches of Immaculata\u2019s program/department pages did not yield any Fall 2024 CS major headcount. Therefore, CS-specific enrollment counts could not be verified for 2024+ and are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://magazine.immaculata.edu/winter-2023/students-explore-experiment-learn-in-new-applied-technology-lab/",
+    "notes": "Searches performed (Dec 14, 2025): 'Immaculata University research computing GPU clusters', 'Immaculata University HPC H100 A100 specifications', 'Immaculata University AI computing infrastructure', plus additional targeted queries including site:immaculata.edu with GPU/HPC terms (H100/A100/V100/P100/A6000/L40S, CUDA, Slurm). No publicly documented Immaculata University GPU cluster(s) with node\u00d7GPU counts or GPU models were found in accessible sources. Therefore, total counts for all requested GPU models are 0 and no node\u00d7GPU calculations apply."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

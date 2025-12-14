@@ -1,0 +1,57 @@
+{
+  "university_name": "Syracuse University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://researchcomputing.syr.edu/resources/",
+      "data_found": "SUrge, a growing computing cluster with hundreds of GPUs, supporting GPU enabled applications and allowing development with CUDA and OpenCL."
+    },
+    {
+      "url": "https://gravitationalwaves.syracuse.edu/computing/",
+      "data_found": "Additional NSF funding that the Center has collaborated with Syracuse University Information Technology Services to secure include funding for a full-time campus cyberinfrastructure engineer, an open-source project office, SUrge, a computing cluster with over 250 GPUs, and upgrades to the campus network backbone to support research computing."
+    },
+    {
+      "url": "https://researchcomputing.syr.edu/resources/zest-hpc/",
+      "data_found": "Zest Cluster Architecture: node [1024-1027] 36 CPUs, 188G memory, 2 GPUs each GPU worker nodes."
+    },
+    {
+      "url": "https://datausa.io/profile/university/syracuse-university",
+      "data_found": "In 2023, 198 degrees were awarded to men at Syracuse University (196413) in General Computer & Information Sciences, which is 3.14 times more than the 63 female recipients with that same degree."
+    },
+    {
+      "url": "https://ecs.syracuse.edu/admissions/graduate/faqs",
+      "data_found": "The College of Engineering and Computer Science is home to approximately 1000 graduate students: roughly 75% M.S. students and 25% Ph.D. students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 500,
+    "grad_cs_count": 188,
+    "phd_cs_count": 62,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/syracuse-university",
+    "notes": "Undergraduate CS count estimated from CS bachelor's degrees awarded in 2023 (125 CS degrees based on Information Science degrees listed) multiplied by 4 years = 500. Graduate MS count estimated from 1000 total ECS graduate students \u00d7 75% MS students \u00d7 ~25% in CS programs = 188. PhD count estimated from 1000 total ECS graduate students \u00d7 25% PhD students \u00d7 ~25% in CS programs = 62. DataUSA shows 261 total Computer & Information Sciences degrees awarded in 2023 (198 male + 63 female)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://researchcomputing.syr.edu/resources/",
+    "notes": "Syracuse has SUrge GPU cluster with 'over 250 GPUs' and Zest HPC cluster with 4 GPU nodes (2 GPUs each = 8 GPUs), totaling at least 258 GPUs. However, specific GPU models (H100, A100, etc.) are not disclosed in publicly accessible documentation. NSF awarded $390,000 in 2020 for GPU cluster expansion, but current specifications are not publicly available."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not found in public sources."
+  },
+  "analysis_notes": "Syracuse University operates multiple GPU-enabled computing resources including SUrge (250+ GPUs) and Zest HPC (8 GPUs in 4 nodes). Specific GPU models and counts by type are not publicly disclosed. Student data estimated from degree completion data as specific enrollment figures for CS department were not found."
+}

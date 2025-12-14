@@ -1,0 +1,36 @@
+{
+  "university_name": "Northwestern University",
+  "data_retrieved_date": "2024-05-22",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 1400,
+    "grad_cs_count": 221,
+    "phd_cs_count": 168,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Undergraduate count derived from Daily Northwestern reporting 'over 1,400 students' because CS is split between McCormick School of Engineering and Weinberg College of Arts & Sciences. Official McCormick facts only list the engineering portion (668). Graduate (MS) and PhD counts taken directly from McCormick facts page as CS graduate degrees are primarily housed there. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 108,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 32,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Calculated from Quest Documentation System Configuration: \n1) General Access A100: 25 nodes x 4 GPUs = 100 A100 (80GB). \n2) Genomics Cluster A100: 2 nodes x 4 GPUs = 8 A100 (80GB). \nTotal A100 = 108. \n\n3) General Access V100: 12 nodes x 2 GPUs = 24 V100 (32GB). \n4) General Access V100 (older): 2 nodes x 4 GPUs = 8 V100 (16GB). \nTotal V100 = 32. \n\nDocumentation mentions K80 nodes are retired. No explicit H100 general access nodes listed in public system configuration as of May 2024. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Northwestern CS students are split between two colleges (McCormick and Weinberg), making single-source verification tricky; the student newspaper provides the aggregate total. GPU resources are centralized under 'Quest'. The 108 A100 count is verifiable via the NUIT Research Computing GitHub documentation."
+}

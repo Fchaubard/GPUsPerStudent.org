@@ -1,0 +1,72 @@
+{
+  "university_name": "Brandeis University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.brandeis.edu/mrsec/facilities/computational.html",
+      "data_found": "The GPU cluster contains 16 GPU nodes and one storage node. In total, it has 24 Tesla V100 32GB GPUs and 40 Titan V 12 GB GPUs."
+    },
+    {
+      "url": "https://www.cs.brandeis.edu/~guru/gpu-cluster/",
+      "data_found": "The CS department has a small GPU cluster for student use. The cluster consists of four nodes and 32 GPUs."
+    },
+    {
+      "url": "https://www.cs.brandeis.edu/~guru/gpu-cluster/usage/",
+      "data_found": "To request an A40 GPU (which have 48 GiB of GPU RAM, in contrast to the A5000's 24 GiB of GPU RAM), specify the gpu48g partition"
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/brandeis-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Brandeis University handed out 99 bachelor's degrees in computer science. This is an increase of 15% over the previous year when 86 degrees were handed out."
+    },
+    {
+      "url": "https://computersciencedegree.io/colleges/brandeis-university/computer-science/",
+      "data_found": "In 2021, 30 students received their master's degree in compsci from Brandeis. There were 2 students who received their doctoral degrees in compsci."
+    },
+    {
+      "url": "https://www.brandeis.edu/computer-science/",
+      "data_found": "The department has 12 research faculty members with diverse research interests, plus several teaching faculty and research associates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 396,
+    "grad_cs_count": 42,
+    "phd_cs_count": 11,
+    "year": "2021-2022",
+    "source_url": "https://www.collegefactual.com/colleges/brandeis-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "Undergraduate CS count estimated from 99 bachelor's degrees awarded in 2021-2022 \u00d7 4-year program = 396 students. MS count estimated from 28-30 master's degrees \u00d7 1.5-year average completion = 42 students. PhD count estimated from 2 doctoral degrees \u00d7 5.5-year average completion = 11 students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 16,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 24,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Titan V (12GB)",
+        "estimated_total": 40,
+        "notes": "MRSEC computational facility"
+      },
+      {
+        "model": "NVIDIA RTX A5000 (24GB)",
+        "estimated_total": 16,
+        "notes": "CS student cluster - estimated half of the 32 GPUs are A5000s based on partition descriptions"
+      }
+    ],
+    "source_url": "https://www.brandeis.edu/mrsec/facilities/computational.html",
+    "notes": "CLUSTERS INCLUDED:\n\n1) MRSEC GPU Cluster: 16 nodes total with 24 Tesla V100 32GB + 40 Titan V 12GB = 64 GPUs\n\n2) CS Student Cluster: 4 nodes \u00d7 8 GPUs/node = 32 GPUs. Based on partition info mentioning A40 (48GB) and A5000 (24GB), estimated 16 A40 + 16 A5000.\n\nTOTAL KNOWN GPUs: 96 (24 V100 + 40 Titan V + 16 A40 + 16 A5000)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Brandeis has modest GPU resources compared to larger research universities, with 96 total GPUs across two clusters. The MRSEC cluster uses older V100 and Titan V GPUs, while the CS student cluster has newer Ampere-generation A40 and A5000 GPUs. With approximately 449 CS students total, this yields about 0.21 GPUs per CS student."
+}

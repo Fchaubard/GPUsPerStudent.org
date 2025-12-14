@@ -1,0 +1,57 @@
+{
+  "university_name": "Maryville University of St. Louis",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.maryville.edu/mpress/maryville-announces-21-million-investment-in-ai-and-new-technologies-amidst-record-growth/",
+      "data_found": "Press release about a $21M multi-year investment in AI and new technologies (posted Feb 14, 2024). No GPU cluster / HPC system specifications (no node counts, GPU models, or totals)."
+    },
+    {
+      "url": "https://www.maryville.edu/mpress/cyber-fusion-center-provides-major-opportunities/",
+      "data_found": "Cyber Fusion Center described as technology-rich and driven by Apple hardware; no HPC/GPU cluster specifications (no node counts or GPU models)."
+    },
+    {
+      "url": "https://online.maryville.edu/computer-science-degrees/",
+      "data_found": "Mentions hands-on experience via the Maryville Virtual Lab / Cyber Fusion Lab; no research computing GPU cluster specs (no nodes/GPUs)."
+    },
+    {
+      "url": "https://www.slu.edu/research/faculty-resources/research-computing/high-performance-computing.php",
+      "data_found": "NOT Maryville University: Saint Louis University (SLU) HPC cluster page (Libra) mentions GPU nodes but the excerpt does not provide GPU model counts; included because it can be confused with 'St. Louis' universities."
+    },
+    {
+      "url": "https://www.maryville.edu/administrative-offices/wp-content/uploads/sites/28/2025/02/Fall2024_enrollment_summary_v2_20250211.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.maryville.edu/administrative-offices/wp-content/uploads/sites/28/2025/02/Fall2024_enrollment_summary_v2_20250211.pdf",
+    "notes": "Verified this official Maryville University Office of Institutional Research PDF explicitly contains Fall 2024 census enrollment (it shows \"CENSUS FALL 2024\" and \"Census Date 2024: Sept 23, 2024\") and a \"Last Updated: Febuary 11, 2025\" stamp. However, the report only provides institution-wide enrollment totals (e.g., total enrollment, total undergraduates, and total graduates incl. doctorate) and does NOT break enrollment down by major/department (no Computer Science-specific headcount for undergrad/masters/PhD). I also checked Maryville\u2019s Common Data Set 2024-2025 (official PDF) and it similarly reports overall enrollment but does not provide Computer Science major enrollment counts. Therefore, CS-specific enrollment counts for Fall 2024 / AY 2024-2025 were not found in available official 2024+ sources, so counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.maryville.edu/mpress/maryville-announces-21-million-investment-in-ai-and-new-technologies-amidst-record-growth/",
+    "notes": "Web search for Maryville University of St. Louis research computing / HPC / GPU clusters and for H100/A100/H200/L40S/A6000 mentions did not locate any publicly posted GPU cluster specification page (nodes \u00d7 GPUs_per_node) attributable to Maryville University. Maryville pages found describe AI initiatives and cyber labs (Virtual Lab / Cyber Fusion Center) but do not provide GPU model inventories or node/GPU counts. Therefore all requested GPU totals are set to 0 (no clusters with quantifiable specs found), and no model estimation was applied because no GPU counts were published to estimate from."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

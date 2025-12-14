@@ -1,0 +1,57 @@
+{
+  "university_name": "Widener University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.widener.edu/academics/undergraduate-programs/major-computer-science-computer-information-systems",
+      "data_found": "Freedom Hall holds three student-managed computer laboratories with 66 Linux and Windows workstations, a computer forensics lab with 12 specialized FRED systems, and a high-performance computing cluster."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/216852/widener-university/enrollment/",
+      "data_found": "Widener University has a total enrollment of 5,610 including 2,811 undergraduate students and 2,799 graduate students."
+    },
+    {
+      "url": "https://datausa.io/profile/university/widener-university",
+      "data_found": "Total enrollment at Widener University in 2023 is 5,610 students. The full-time enrollment at Widener University is 4,383 and the part-time enrollment is 1,227."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Widener_University",
+      "data_found": "Widener enrolls approximately 3,500 undergraduate students across six colleges and schools. Widener enrolls approximately 6,300 total students including 3,600 undergraduate, 1,700 graduate students, and 1,000 law school students."
+    },
+    {
+      "url": "https://www.widener.edu/profile/computer-science-computer-information-systems-department",
+      "data_found": "The Computer Science & Computer Information Systems Department provides strong foundations in programming, computer security, databases, networks, artificial intelligence, and more."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 55,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2021-2022",
+    "source_url": "https://www.widener.edu/academics/undergraduate-programs/major-computer-science-computer-information-systems",
+    "notes": "Based on College Factual data showing 11 bachelor's degrees awarded in computer science in 2021-2022 (down from 18 previous year). With a typical 4-year program, estimated undergraduate CS enrollment is approximately 11 \u00d7 5 years = 55 students. No graduate CS programs found. The university offers BS degrees in both Computer Science and Computer Information Systems, but does not appear to have MS or PhD programs in computer science. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.widener.edu/academics/undergraduate-programs/major-computer-science-computer-information-systems",
+    "notes": "Widener University has a high-performance computing cluster located in Freedom Hall, but no publicly available information specifies the GPU models, counts, or specifications. The university's computer science facilities include 66 Linux/Windows workstations and a computer forensics lab with 12 FRED systems, but GPU cluster details are not published on their public websites."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Widener University is a small private university with limited publicly available data on their HPC/GPU infrastructure. While they mention having a 'high-performance computing cluster', no specifications are provided. Student enrollment data shows approximately 55 undergraduate CS students based on degree completion rates, with no evidence of graduate CS programs. The lack of detailed GPU information suggests either a small cluster or restricted access to infrastructure details."
+}

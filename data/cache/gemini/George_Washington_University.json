@@ -1,0 +1,45 @@
+{
+  "university_name": "George Washington University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://hpc.gwu.edu/hardware",
+      "data_found": "Pegasus Cluster Specs: '34 GPU nodes each with 2x NVIDIA V100-32GB GPUs' and '6 GPU nodes each with 4x NVIDIA A100-80GB GPUs'."
+    },
+    {
+      "url": "https://datausa.io/profile/university/george-washington-university",
+      "data_found": "2022 Degree Completions for Computer Science: 208 Bachelor's degrees awarded, 332 Master's degrees awarded, 12 Research Doctorates awarded."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 832,
+    "grad_cs_count": 498,
+    "phd_cs_count": 66,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/george-washington-university",
+    "notes": "Exact current CS enrollment by level is not explicitly published on the department 'About' page. Counts are estimated based on verifiable NCES/IPEDS degree completion data (via DataUSA) and standard program duration multipliers. Undergraduate: 208 CS Bachelor's degrees awarded (2022) \u00d7 4 years = 832 estimated majors. Master's: 332 CS Master's degrees awarded (2022) \u00d7 1.5 years duration = 498 estimated MS students. PhD: ~12 CS Doctorates awarded annually \u00d7 5.5 years duration = 66 estimated PhD students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 24,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 68,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://hpc.gwu.edu/hardware",
+    "notes": "GPU counts calculated from Pegasus cluster specifications. 1) V100 Nodes: 34 nodes \u00d7 2 GPUs/node = 68 V100 (32GB). 2) A100 Nodes: 6 nodes \u00d7 4 GPUs/node = 24 A100 (80GB). No H100 resources listed in current documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "GWU centralizes HPC in the 'Pegasus' cluster. The documentation explicitly lists node counts and GPU density per node. Student counts are derived from degree completion data as the department does not publish a live enrollment dashboard."
+}

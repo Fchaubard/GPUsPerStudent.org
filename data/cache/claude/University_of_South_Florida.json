@@ -1,0 +1,60 @@
+{
+  "university_name": "University of South Florida",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.usf.edu/engineering/cse/about/index.aspx",
+      "data_found": "With 440 Bachelor's, 129 Master's, and 16 Ph.D. graduates in computer science, computer engineering, information technology, and cybersecurity in the academic year 2023-24. With an enrollment of 670 students, this program is seeing rapid growth."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-south-florida-college-of-engineering-department-of-computer-science-and-engineering-000_10037090.aspx",
+      "data_found": "230 Total Graduate Students; 67% International Breakout (representing other countries) Male (73%) Female (26%)"
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/university-of-south-florida-main-campus/academic-life/academic-majors/computer-information-sciences/",
+      "data_found": "During the 2021-2022 academic year, University of South Florida - Main Campus handed out 480 bachelor's degrees in computer & information sciences. In 2022, 257 students received their master's degree in computer & information sciences from USF Tampa."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1920,
+    "grad_cs_count": 516,
+    "phd_cs_count": 80,
+    "year": "2024",
+    "source_url": "https://www.usf.edu/engineering/cse/about/index.aspx",
+    "notes": "Undergraduate CS count estimated from: 480 bachelor's degrees awarded in 2021-22 (from collegefactual.com) \u00d7 4 years = 1,920. The CSE department website notes 670 students in cybersecurity program with rapid growth, plus 440 Bachelor's graduates across CS/CpE/IT/Cybersecurity in 2023-24. Graduate MS count estimated from: 257 MS degrees in 2022 (collegefactual.com) \u00d7 2 years average completion = 514, plus data showing 230 total graduate students (petersons.com). PhD count estimated from: 16 PhD graduates in 2023-24 (CSE website) \u00d7 5 years average = 80 PhD students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unknown high-end NVIDIA GPU models",
+        "estimated_total": 436,
+        "notes": "USF has multiple GPU clusters: RRA cluster with 120 GPUs, CIRCE cluster with 171 GPUs, and a dedicated AI/data science cluster with 145 high-end NVIDIA GPUs across 27 nodes (from NSF CRI grant). Total = 120 + 171 + 145 = 436 GPUs. Specific models not publicly disclosed beyond mention of 'very high-end GPU NVIDIA processors' and Tesla K20 mentioned in SLURM documentation."
+      },
+      {
+        "model": "NVIDIA Tesla K20",
+        "estimated_total": null,
+        "notes": "SLURM documentation shows constraint option for 'gpu_K20' model. Tesla K20 has 5GB GDDR5 memory. Count not specified in public documentation."
+      }
+    ],
+    "source_url": "https://www.usf.edu/engineering/cse/about/index.aspx",
+    "notes": "USF operates multiple GPU-enabled clusters: 1) RRA cluster: 120 GPUs across 77 nodes, 2) CIRCE cluster: 171 GPUs (main research cluster), 3) NSF-funded AI/data science cluster: 145 high-end NVIDIA GPUs across 27 nodes with 2.6TB aggregated GPU memory. Total GPU count across all clusters = 436. Specific GPU models and counts by model are not publicly detailed in documentation, though Tesla K20 is mentioned in SLURM configuration. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "USF has significant GPU computing resources with 436 total GPUs across three major clusters (RRA, CIRCE, and NSF CRI-funded). However, specific GPU model breakdowns are not publicly available. Student counts are estimated from graduation data and enrollment figures, showing approximately 2,516 total CS students across all degree levels."
+}

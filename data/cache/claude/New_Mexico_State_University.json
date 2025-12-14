@@ -1,0 +1,63 @@
+{
+  "university_name": "New Mexico State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.nmsu.edu/home/resources/discovery/",
+      "data_found": "Discovery is equipped with Lenovo nx360, SR650, SR670, SR850, Dell R440, R640, and R740 hardware. It has 54 compute nodes(38 CPU nodes and 16 GPU nodes), with total of 1,536 cores."
+    },
+    {
+      "url": "https://dl.acm.org/doi/10.1145/3437359.3465610",
+      "data_found": "Over the years, the cluster has grown 6 times, and as of March 2021 has 52 compute nodes, 1480 CPU cores, 17 Terabytes of RAM, 30 GPUs, and 1.8 Petabytes of usable storage."
+    },
+    {
+      "url": "https://ui.adsabs.harvard.edu/abs/2020nsf....2019000D/abstract",
+      "data_found": "This activity expands the existing HPC resources at NMSU by roughly 30% through the acquisition of 10 compute nodes each with 36 CPU cores, at least 256 GB of RAM and 960 GB of local storage for a total of 360 cores, two GPU nodes similar to the compute nodes but with dual Tesla V100 GPUs, 600 TB of network connected storage, and Infiniband interconnect hardware."
+    },
+    {
+      "url": "https://computerscience.nmsu.edu/department/enrollment-and-graduation-data.html",
+      "data_found": "Enrollment data is taken from the Fall semester of each stated year. Part time is 11 credits or less. Full time is 12 credits or more. Graduation data is the total for the preceding summer, the given fall, and the following spring semester."
+    },
+    {
+      "url": "https://computerscience.nmsu.edu/majors/why-cs-at-nmsu.html",
+      "data_found": "Student enrollment is approximately 220 undergraduate majors and 85 graduate students, including 35 doctoral students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 220,
+    "grad_cs_count": 50,
+    "phd_cs_count": 35,
+    "year": "2024",
+    "source_url": "https://computerscience.nmsu.edu/majors/why-cs-at-nmsu.html",
+    "notes": "Based on department's official page stating approximately 220 undergraduate majors and 85 graduate students, including 35 doctoral students. The grad_cs_count is calculated as total graduate students (85) minus PhD students (35) = 50 MS students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unknown GPU models",
+        "estimated_total": 26,
+        "notes": "2021 paper reports 30 total GPUs, with 4 V100s identified from NSF grant. This leaves 26 GPUs of unspecified models."
+      }
+    ],
+    "source_url": "https://dl.acm.org/doi/10.1145/3437359.3465610",
+    "notes": "Discovery HPC cluster has 16 GPU nodes out of 54 total compute nodes. NSF grant (2020) added 2 GPU nodes with dual Tesla V100 GPUs = 4 V100s total. 2021 paper states cluster has 30 GPUs total, but specific models for the remaining 26 GPUs are not documented in available sources. The cluster uses heterogeneous hardware including Lenovo and Dell servers acquired through university funds, condo-model contributions, and grants."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "NMSU's Discovery cluster appears to be a modest-sized heterogeneous system built incrementally through various funding sources. The cluster provides free access to NMSU students, faculty and staff. While specific GPU models beyond the 4 V100s are not documented in accessible sources, the system has grown from initial deployment in 2015 to include 16 GPU nodes as of 2024."
+}

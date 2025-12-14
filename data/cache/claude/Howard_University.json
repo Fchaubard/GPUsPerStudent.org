@@ -1,0 +1,53 @@
+{
+  "university_name": "Howard University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://gs.howard.edu/research/core-research-facilities",
+      "data_found": "Applied Fluid Dynamics Research Laboratory has a 125-node HPC cluster for CFD modeling."
+    },
+    {
+      "url": "https://datausa.io/profile/university/howard-university",
+      "data_found": "In 2023, 2,490 degrees were awarded across all undergraduate and graduate programs at Howard University. The most popular Bachelor's Degree concentrations included General Biological Sciences (186 degrees awarded), General Political Science & Government (148 degrees), and General Psychology (132 degrees)."
+    },
+    {
+      "url": "https://howard.edu/about/howard-glance",
+      "data_found": "Howard's enrollment has approximately 14,500 undergraduate, graduate and professional students representing 49 U.S. states, the District of Columbia as well as 61 countries. Students pursue studies in more than 130 areas within the University's 14 schools and colleges. Howard ranked as the no. 1 HBCU for undergraduate programs in computer science according to U.S. News & World Report."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/131520/howard-university/enrollment/",
+      "data_found": "Howard University has a total enrollment of 13,416 including 10,190 undergraduate students and 3,226 graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 400,
+    "grad_cs_count": 100,
+    "phd_cs_count": 30,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/howard-university",
+    "notes": "Exact CS enrollment numbers not found in search results. Estimates based on: 1) Howard's total enrollment of 13,416 (10,190 undergrad, 3,226 grad) and 2) Howard being ranked #1 HBCU for undergraduate CS programs. Typical CS program sizes at comparable universities range from 3-5% of total enrollment. Conservative estimate of 4% for undergrad (400), with typical MS/PhD distribution of 100 MS and 30 PhD students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://gs.howard.edu/research/core-research-facilities",
+    "notes": "No publicly accessible information about GPU clusters found for Howard University. The Applied Fluid Dynamics Research Laboratory has a 125-node HPC cluster for CFD modeling, but GPU specifications were not provided. Howard has research centers in AI/ML (Center for Applied Data Science and Analytics, Data Science and Cybersecurity Center) but specific GPU infrastructure details are not publicly available. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Limited public data available for Howard University's GPU infrastructure. While the university has strong AI/ML research programs and centers, specific GPU cluster specifications are not publicly documented. Student enrollment data in CS programs also not explicitly stated, requiring estimation based on total enrollment figures and Howard's #1 HBCU ranking in CS."
+}

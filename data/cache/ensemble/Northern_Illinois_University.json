@@ -1,0 +1,62 @@
+{
+  "university_name": "Northern Illinois University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.niu.edu/crcd/prospective-user/index.shtml",
+      "data_found": "Metis: 32-node cluster, each node has 1x NVIDIA A100 GPU (40 GB). Gaea: 60-node cluster, each node has 2x NVIDIA Tesla P4 (8 GB). Mentions NICADD cluster (700 processor slots) with link to NICADD HPC pages."
+    },
+    {
+      "url": "https://www.niu.edu/crcd/images/metislayoutandspecification.pdf",
+      "data_found": "Metis node layout confirms A100 40 GB PCIe GPUs across node roles (Login Node, GPU Nodes, Large Mem Nodes, VM Node), totaling 32 GPU-bearing nodes each with 1x A100 40GB PCIe."
+    },
+    {
+      "url": "https://nicadd.niu.edu/nhpc/index.php?n=Nhpc.Hardware",
+      "data_found": "NICADD hardware page lists cms1.nicadd.niu.edu as a 'CMS login/CUDA developer node' with GPU: 'NVIDIA Corporation GM206GL [Quadro M2000]'."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "",
+    "notes": "I could not locate any NIU-published Computer Science (CS) major enrollment counts that explicitly state \u201cFall 2024\u201d or \u201cAY 2024-25\u201d (or \u201c2024-2025\u201d) as required.\n\nWhat I found but REJECTED (missing explicit 2024/Fall 2024/AY 2024-25 labeling for the counts):\n- NIU Department of Computer Science homepage lists \u201cBY THE NUMBERS: 750+ Undergraduate Majors; 200+ Graduate Students\u201d but the page does not explicitly state \u201cFall 2024\u201d, \u201c2024-2025\u201d, or similar for those counts, so it fails the absolute date requirement and was not used. (https://www.cs.niu.edu/)\n\nSearches attempted (per your requested strategy and similar queries):\n- Looked for \u201cNorthern Illinois University computer science enrollment Fall 2024\u201d, \u201cNIU CS department facts 2024\u201d, registrar/institutional research \u2018enrollment by major\u2019 dashboards/reports, and a NIU Common Data Set 2024-2025.\n- Found multiple sources for overall NIU Fall 2024 enrollment (e.g., 10-day count / overall enrollment news) but none provided CS-major headcount broken out into undergrad vs MS vs PhD with an explicit Fall 2024 / AY 2024-25 label.\n\nBecause no qualifying 2024+ CS enrollment counts were found, all counts are set to 0 per your instructions."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 32,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla P4",
+        "vram_gb": 8,
+        "count": 120,
+        "cluster": "Gaea"
+      },
+      {
+        "model": "NVIDIA Quadro M2000",
+        "vram_gb": 4,
+        "count": 1,
+        "cluster": "NICADD (cms1 login/CUDA developer node)"
+      }
+    ],
+    "source_url": "https://www.niu.edu/crcd/prospective-user/index.shtml",
+    "notes": "Clusters found: Metis (CRCD), Gaea (CRCD), NICADD (NICADD Compute Cluster).\n\nMetis GPU count: 32 nodes \u00d7 1 GPU/node = 32 total GPUs. GPU model: NVIDIA A100 40GB (PCIe form factor stated in Metis layout PDF) => a100_40gb_count += 32.\n\nGaea GPU count: 60 nodes \u00d7 2 GPUs/node = 120 total GPUs. GPU model: NVIDIA Tesla P4 8GB (not a requested bucket, recorded under other_high_vram_gpus).\n\nNICADD GPU count: Only one explicitly specified GPU found: cms1 node has 1\u00d7 NVIDIA Quadro M2000 => 1 GPU total (not a requested bucket, recorded under other_high_vram_gpus).\n\nNo NIU sources located indicating any H100/H200, A100 80GB, V100, P100, A6000, L40S, B100/B200, GH200, or A40 GPUs in NIU-operated clusters."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

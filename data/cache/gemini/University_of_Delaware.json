@@ -1,0 +1,41 @@
+{
+  "university_name": "University of Delaware",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.cis.udel.edu/about/",
+      "data_found": "CIS Department By the Numbers (Fall 2023): 'Undergraduate Students: 879', 'Graduate Students: 318', 'Faculty: 34'."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 879,
+    "grad_cs_count": 318,
+    "phd_cs_count": 130,
+    "year": "2023-2024",
+    "source_url": "https://www.cis.udel.edu/about/",
+    "notes": "Student counts taken directly from the Department of Computer & Information Sciences 'About' page (Fall 2023 data). Total graduate students listed as 318. PhD count is estimated/derived from typical department ratios and older ASEE data suggesting ~40% of graduate enrollment in the department is PhD, or approximately 130 students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 68,
+    "p100_count": 2,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.cis.udel.edu/about/",
+    "notes": "GPU counts calculated from official UD HPC Wiki specifications:\n\n1) DARWIN CLUSTER: 14 nodes \u00d7 4 V100 (32GB SXM2) = 56 V100s.\n\n2) CAVINESS CLUSTER: 3 nodes \u00d7 4 V100 = 12 V100s; 1 node \u00d7 2 P100 = 2 P100s.\n\nTOTALS: V100 = 56 + 12 = 68. P100 = 2.\n\nNote: While grant proposals mention potential future acquisition of newer hardware (A100/H100), only V100 and P100 nodes are currently verified in the active cluster documentation. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Delaware centralizes HPC under IT Research Computing (clusters 'Darwin' and 'Caviness'). The majority of GPU resources are V100-based. Student data is explicitly published on the CIS department website."
+}

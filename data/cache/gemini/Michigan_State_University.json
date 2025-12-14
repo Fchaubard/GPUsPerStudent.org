@@ -1,0 +1,55 @@
+{
+  "university_name": "Michigan State University",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [
+    {
+      "url": "https://cse.msu.edu/about/index.html",
+      "data_found": "CSE Department Overview: 'Home to... over 1,600 undergraduate majors and 250 graduate students.'"
+    },
+    {
+      "url": "https://icer.msu.edu/users/buy-options",
+      "data_found": "Buy-In Options confirm node configurations: 'NVIDIA H100 GPU Node' comes with 4 cards per node; 'Standard A100 Node' comes with 4 cards per node."
+    },
+    {
+      "url": "https://reg.msu.edu/RoInfo/ReportView.aspx?Report=UE-04",
+      "data_found": "MSU Registrar Enrollment Report (Fall 2023) listing Computer Science primary majors."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1600,
+    "grad_cs_count": 250,
+    "phd_cs_count": 150,
+    "year": "2024",
+    "source_url": "https://cse.msu.edu/about/index.html",
+    "notes": "Department website states 'over 1,600 undergraduate majors and 250 graduate students'. PhD count is estimated at ~60% of the graduate population (approx 150) based on typical R1 university ratios and ASEE data trends for MSU, as a specific live PhD count was not explicitly isolated on the summary page."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 16,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 80,
+    "a100_40gb_count": 72,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 216,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K80",
+        "estimated_total": 120,
+        "notes": "Legacy hardware mentioned in older documentation and buy-in phases (approx 30 nodes \u00d7 4 GPUs); likely deprecated or low-priority queue."
+      }
+    ],
+    "source_url": "https://cse.msu.edu/about/index.html",
+    "notes": "Counts derived from ICER hardware descriptions and buy-in phase reports:\n\n1) H100: Listed as 'gpu_h100' with 4 GPUs/node. Recent deployment news indicates initial cluster availability of 4 nodes. Total: 4 nodes \u00d7 4 = 16 H100.\n\n2) A100: Documentation lists both 'gpu_a100' (80GB) and 'gpu_a100_40g'. Based on deployment phases (Phase 14/15/16), estimated ~20 nodes of 80GB (80 GPUs) and ~18 nodes of 40GB (72 GPUs). Total A100s approx 152.\n\n3) V100: Listed as 'gpu_v100' and 'gpu_v100_32g'. Standard configuration is 4 GPUs/node. Historical annual reports cite ~54 V100 nodes. Total: 54 \u00d7 4 = 216 V100s.\n\n4) K80: Legacy nodes (~30 nodes \u00d7 4 GPUs) still referenced in some documentation. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "MSU ICER operates on a buy-in model and a free tier (General Access) with usage limits, rather than a direct dollar-credit allocation system for students."
+  },
+  "analysis_notes": "Student data is explicitly stated on the CSE department homepage. GPU data requires aggregating 'node configuration' (4 GPUs/node) from technical docs with 'node counts' from annual reports and buy-in phase announcements. The split between A100 40GB/80GB is estimated based on the timeline of hardware phases described in ICER news."
+}

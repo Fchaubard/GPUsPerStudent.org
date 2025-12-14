@@ -1,0 +1,49 @@
+{
+  "university_name": "University of Arizona",
+  "data_retrieved_date": "2025-05-14",
+  "sources": [
+    {
+      "url": "https://public.confluence.arizona.edu/display/UAHPC/System+Configuration",
+      "data_found": "Puma Cluster: 28 standard GPU nodes, each with 4x Nvidia V100S (32GB) GPUs. Ocelot Cluster: 14 GPU nodes, each with 2x Nvidia P100 (12GB) GPUs. ElGato Cluster: 1 large memory GPU node (4x P100), 4 standard GPU nodes (4x V100)."
+    },
+    {
+      "url": "https://public.confluence.arizona.edu/display/UAHPC/Puma",
+      "data_found": "Puma specifications confirmation: 28 GPU nodes with 4x V100S each."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-arizona",
+      "data_found": "2022 Degrees Awarded in Computer & Information Sciences: 351 Bachelor's, 59 Master's, 11 Doctorates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1833,
+    "grad_cs_count": 89,
+    "phd_cs_count": 61,
+    "year": "2023-2024",
+    "source_url": "https://public.confluence.arizona.edu/display/UAHPC/System+Configuration",
+    "notes": "Undergraduate count is the official Fall 2023 BS Computer Science enrollment reported by the department for ABET. Graduate counts are estimated based on degree completion data from DataUSA (2022) due to lack of a direct 'grad enrollment' table on the department site. MS estimated as 59 degrees * 1.5 year duration = ~89. PhD estimated as 11 degrees * 5.5 year duration = ~61. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 128,
+    "p100_count": 32,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://public.confluence.arizona.edu/display/UAHPC/System+Configuration",
+    "notes": "Counts derived from University of Arizona Research Computing system configuration pages. \n\n1) PUMA CLUSTER: 28 nodes x 4 V100S = 112 V100.\n2) OCELOT CLUSTER: 14 nodes x 2 P100 = 28 P100.\n3) ELGATO CLUSTER: 4 nodes x 4 V100 = 16 V100; 1 node x 4 P100 = 4 P100. (Note: ElGato also lists K80 nodes which are excluded here due to age).\n\nTOTAL V100: 112 (Puma) + 16 (ElGato) = 128.\nTOTAL P100: 28 (Ocelot) + 4 (ElGato) = 32.\n\nNo centralized A100 or H100 clusters were found in public documentation for the central Research Computing facility as of search date."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UA research computing relies heavily on the 'Puma' cluster (V100-based). Newer H100/A100 resources may exist within private lab groups (e.g., CyVerse or individual grants) but are not listed as general-access queues in the central HPC documentation."
+}

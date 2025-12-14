@@ -1,0 +1,53 @@
+{
+  "university_name": "University of San Francisco",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.cs.usfca.edu/~mmalensek/cs220/schedule/materials/ssh.html",
+      "data_found": "USF CS course infrastructure references a 'cluster of NVIDIA Jetson TK1 embedded development kits' with hostnames jet01\u2013jet24 (24 nodes). ([cs.usfca.edu](https://www.cs.usfca.edu/~mmalensek/cs220/schedule/materials/ssh.html?utm_source=openai))"
+    },
+    {
+      "url": "https://www.usfca.edu/data-institute/about",
+      "data_found": "USF Data Institute 'About' page describes the institute but does not publish any on-prem GPU cluster hardware specs (no node/GPU counts). ([usfca.edu](https://www.usfca.edu/data-institute/about?utm_source=openai))"
+    },
+    {
+      "url": "https://www.usfca.edu/data-institute/memberships-projects/projects",
+      "data_found": "Data Institute projects page mentions work performed 'on an A100 GPU' in a project description, but does not provide any cluster specification (no nodes/GPUs-per-node totals). ([usfca.edu](https://www.usfca.edu/data-institute/memberships-projects/projects?utm_source=openai))"
+    },
+    {
+      "url": "https://myusf.usfca.edu/sites/default/files/users/ncain/CDS%202024-2025.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://myusf.usfca.edu/sites/default/files/users/ncain/CDS%202024-2025.pdf",
+    "notes": "Searched for CS enrollment headcount specifically for AY 2024-2025 / Fall 2024. Found USF's Common Data Set 2024-2025 (includes overall Fall 2024 institutional enrollment totals as of the official fall reporting date/Oct 15, 2024, but does NOT provide enrollment counts by major/department such as Computer Science). Also found USF Quick Facts with Fall Census enrollment dated September 6, 2024 (overall university/college totals only; no Computer Science major headcount). USF's CIPE/OIRA 'Census Reports' page that might contain enrollment-by-major appears to require myUSF login, so CS-major enrollment counts for Fall 2024 / AY 2024-2025 were not publicly accessible in the sources checked. The public BS Computer Science program page contains a '2023 USF Census' statistic (percent women in major), which is pre-2024 and was therefore rejected per your date rules."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.cs.usfca.edu/~mmalensek/cs220/schedule/materials/ssh.html",
+    "notes": "Clusters found for University of San Francisco (USFCA):\n\n1) 'Jetson TK1' teaching cluster (cs.usfca.edu): jet01\u2013jet24 => 24 nodes. GPUs-per-node not explicitly stated on page; assuming 1 integrated NVIDIA GPU per Jetson TK1 device => 24 \u00d7 1 = 24 total GPUs. These are embedded Jetson TK1 GPUs (not H100/H200/A100/V100/P100/A6000/L40S), so they are not counted in the requested model totals.\n\nData Institute pages reference GPU usage (including an A100 mention) but do not disclose any on-prem cluster node counts or GPU models/quantities; therefore no A100/H100 totals can be computed from public specifications."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

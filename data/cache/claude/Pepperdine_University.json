@@ -1,0 +1,57 @@
+{
+  "university_name": "Pepperdine University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://community.pepperdine.edu/it/services/research-computing.htm",
+      "data_found": "On-premise system consists of two Cisco blades with a terabyte of RAM in each one. The blades have Intel Xeon Gold 6238 CPUs and up to 44 cores per blade. No GPU resources mentioned."
+    },
+    {
+      "url": "https://www.pepperdine.edu/oie/content/pdf/oie-quick-facts.pdf",
+      "data_found": "Fall 2024: Total students: 8,976; Undergraduate: 3,553 (40%); Graduate: 5,423 (60%)"
+    },
+    {
+      "url": "https://datausa.io/profile/university/pepperdine-university",
+      "data_found": "2023 total enrollment: 9,545 students. 3,629 undergraduate and 5,916 graduate students. Most specialized majors include Psychology (1,061 degrees), Business (1,190 degrees)"
+    },
+    {
+      "url": "https://seaver.pepperdine.edu/natural-science/undergraduate/computer-science/",
+      "data_found": "Computer Science major and minor programs offered. Combination of in-class instruction, internships, and capstone course prepares CS majors for careers or graduate school."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/pepperdine-university/academic-life/academic-majors/multi-interdisciplinary-studies/math-computer-science/",
+      "data_found": "2021-2022: 15 bachelor's degrees in mathematics & computer science (25% increase from 12 previous year)"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 60,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2021-2022",
+    "source_url": "https://www.collegefactual.com/colleges/pepperdine-university/academic-life/academic-majors/multi-interdisciplinary-studies/math-computer-science/",
+    "notes": "Based on 15 Math & CS bachelor's degrees awarded in 2021-2022 \u00d7 4 years = ~60 undergrads. No graduate CS programs found. Pepperdine does not offer PhD in CS."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://community.pepperdine.edu/it/services/research-computing.htm",
+    "notes": "Pepperdine's research computing resources are CPU-only (Intel Xeon Gold 6238). No GPU resources found in any searches."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Pepperdine is a smaller private university with limited research computing infrastructure. They offer undergraduate CS programs but no graduate CS degrees. Research computing consists of CPU-only resources with no GPU availability."
+}

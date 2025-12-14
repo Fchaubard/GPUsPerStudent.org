@@ -1,0 +1,41 @@
+{
+  "university_name": "Drexel University",
+  "data_retrieved_date": "2025-05-28",
+  "sources": [
+    {
+      "url": "https://drexel.edu/cci/about/",
+      "data_found": "Drexel College of Computing & Informatics (CCI) About page: 'A vibrant community of more than 2,500 undergraduate and 1,300 graduate students.'"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1500,
+    "grad_cs_count": 650,
+    "phd_cs_count": 80,
+    "year": "2024-2025",
+    "source_url": "https://drexel.edu/cci/about/",
+    "notes": "Exact CS department-level enrollment is not broken out on the public site, only College of Computing & Informatics (CCI) totals (2,500+ undergrad, 1,300+ grad). CS is the largest major within CCI. Counts are estimated as ~60% of the CCI total based on typical CS/Information Systems ratios and degree conferral data from DataUSA (showing CS as the dominant degree)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 48,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://drexel.edu/cci/about/",
+    "notes": "Primary resource is the 'Picotte' cluster. Specification: 12 GPU nodes \u00d7 4 NVIDIA A100 80GB GPUs = 48 A100 80GB total. Older clusters (Proteus) are considered legacy/retired and not listed in active high-performance inventory. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Drexel centralizes high-end GPU resources in the URCF 'Picotte' cluster. Student counts are derived from College of Computing & Informatics totals, as specific CS department rosters are not public."
+}

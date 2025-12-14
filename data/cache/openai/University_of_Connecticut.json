@@ -1,0 +1,53 @@
+{
+  "university_name": "University of Connecticut",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.uconn.edu/storrs/cluster-resources/",
+      "data_found": "Storrs HPC Cluster GPU Node Details table lists totals: V100 total GPUs=18, A100 total GPUs=28, A30 total GPUs=5 (A30 not requested in output schema)."
+    },
+    {
+      "url": "https://uconn.atlassian.net/wiki/spaces/SH/pages/26032963610/Partitions%2BStorrs%2BHPC%2BResources",
+      "data_found": "Storrs HPC GPU Specifications table lists memory per card: Tesla A100 = 40.960 GB (treated as A100 40GB class), Tesla V100 = 16.384 GB, Tesla L40 = 46.068 GB (L40 count not provided)."
+    },
+    {
+      "url": "https://health.uconn.edu/high-performance-computing/resources/",
+      "data_found": "Farmington (Xanadu/Mantis/NMR) resources list includes: 15 NVIDIA A100 80gb PCIe GPUs; and '2 Quanta Cloud S76 nodes with NVIDIA Grace Hopper Superchip' (counted as 2 GH200 GPUs, assuming 1 Grace Hopper GPU per node). Also mentions 6 NVIDIA A10 GPUs and 2 NVIDIA M10 GPUs (not in requested output fields)."
+    },
+    {
+      "url": "https://engineering.uconn.edu/abet/computer-science/",
+      "data_found": "Student enrollment: 941 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 941,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://engineering.uconn.edu/abet/computer-science/",
+    "notes": "Source page includes explicit sections labeled \"Fall 2024 Enrollment\" for \"Computer Science - Storrs\" and \"Computer Science - Stamford\". Undergrad headcount totals shown are 799 (Storrs) and 142 (Stamford), summed to 941. This ABET page does not provide Fall 2024 master's (MS) or PhD student headcounts for Computer Science, so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 15,
+    "a100_40gb_count": 28,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 18,
+    "p100_count": 0,
+    "gh200_count": 2,
+    "other_high_vram_gpus": [],
+    "source_url": "https://hpc.uconn.edu/storrs/cluster-resources/",
+    "notes": "Clusters included: (1) Storrs HPC Cluster; (2) Farmington/UConn Health HPC (Xanadu, Mantis, NMR). Storrs: V100=18 GPUs (table shows 2 nodes and total GPUs=18; implied average 9 GPUs/node though the same table also states '1 to 3' GPUs/node -> inconsistent, so total GPUs value used). Storrs: A100=28 GPUs; Confluence page specifies A100 memory per card 40.960GB => counted as a100_40gb_count=28. Farmington: A100 80GB PCIe total explicitly listed as 15 => a100_80gb_count=15 (node count / GPUs-per-node not stated on the page, so total used directly). Farmington: 2 Quanta Cloud S76 nodes with NVIDIA Grace Hopper Superchip counted as gh200_count=2 (assumption: 1 Grace Hopper GPU per node). No UConn sources found indicating any H100/H200/P100/A6000/L40S/A40/B100/B200 GPUs in these central clusters; Storrs Confluence mentions L40 (non-S) exists but does not provide a GPU count, so l40s_count left as 0 and no L40 quantity added."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,57 @@
+{
+  "university_name": "Michigan State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.icer.msu.edu/Cluster_Resources/",
+      "data_found": "GPU node counts and GPUs-per-node: H200 nodes: nfh (6 nodes, 4x H200 each) and neh (2 nodes, 8x H200 each); L40S nodes: nel (3 nodes, 8x L40S each); A100 SXM nodes: nal (11 nodes, 4x A100 80GB each); A100 PCIe nodes: nif (6 nodes, 4x A100 40GB each); V100s nodes: nvf (20+1 nodes, 4x V100s each); V100 nodes: nvl (8 nodes, 8x V100 each)."
+    },
+    {
+      "url": "https://docs.icer.msu.edu/GPU_resources/",
+      "data_found": "GPU model mapping and memory: H200 (141GB, SXM), L40S (48GB, PCIe), A100 SXM (80GB), A100 PCIe (40GB), V100/V100s (32GB)."
+    },
+    {
+      "url": "https://docs.icer.msu.edu/Getting_Started_with_Grace_Hopper_and_Grace_Grace/",
+      "data_found": "Grace Hopper node listing: 3 nodes (nch-[000-002]) each with 1x GH200 96GB, plus 1 node (nch-003) with 1x GH200 96GB (total 4 GH200 GPUs)."
+    },
+    {
+      "url": "https://docs.icer.msu.edu/Data_Machine/",
+      "data_found": "Data Machine overview indicates 4 GPU nodes each with 4x NVIDIA A100 80GB (these appear to be part of the A100 SXM nodes listed under amd21/nal in Cluster Resources)."
+    },
+    {
+      "url": "https://engineering.msu.edu/about/departments/cse/about",
+      "data_found": "Student enrollment: 2352 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2352,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://engineering.msu.edu/about/departments/cse/about",
+    "notes": "MSU College of Engineering \u2192 Department of Computer Science and Engineering (CSE) \u2018About\u2019 page lists: Undergraduate Students (Fall 2024) = 2,352 and Graduate Students (Fall 2024) = 236. The page does NOT break the 236 graduate students into M.S.-only vs Ph.D.-only counts, so grad_cs_count and phd_cs_count are set to 0 to avoid guessing. No explicit 'last updated' date was visible on the page. ([engineering.msu.edu](https://engineering.msu.edu/about/departments/cse/about))  (Related cross-check: the College of Engineering 'Enrollment Data' page lists Computer Science B.S. undergraduate enrollment for Fall 2024 = 1,965, which is program-specific and therefore differs from the CSE department-wide undergraduate total above.) ([engineering.msu.edu](https://engineering.msu.edu/academics/undergraduate-studies/enrollment-data))"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 40,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 44,
+    "a100_40gb_count": 24,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 24,
+    "v100_count": 148,
+    "p100_count": 0,
+    "gh200_count": 4,
+    "other_high_vram_gpus": [],
+    "source_url": "https://docs.icer.msu.edu/Cluster_Resources/",
+    "notes": "Per-cluster GPU totals (nodes \u00d7 GPUs_per_node):\n- H200: nfh = 6\u00d74=24; neh = 2\u00d78=16; H200 total=40\n- L40S: nel = 3\u00d78=24; L40S total=24\n- A100 80GB (SXM): nal = 11\u00d74=44; A100_80GB total=44\n- A100 40GB (PCIe): nif = 6\u00d74=24; A100_40GB total=24\n- V100 family: nvf (V100s) = (20+1)\u00d74=84; nvl (V100) = 8\u00d78=64; V100 total=148\n- No H100, P100, A6000, A40 found in the current MSU ICER/HPCC cluster resource tables referenced above; those are set to 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

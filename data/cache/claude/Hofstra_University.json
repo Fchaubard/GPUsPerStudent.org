@@ -1,0 +1,49 @@
+{
+  "university_name": "Hofstra University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://starhpc.hofstra.io/",
+      "data_found": "The Star HPC cluster leverages NVIDIA HGX-based systems with A100 and H100 GPUs, AMD EPYC processors, a resilient storage system with high-speed SSDs, and an ultra-high-throughput, low latency InfiniBand network fabric."
+    },
+    {
+      "url": "https://docs.starhpc.hofstra.io/quickstart/about-star.html",
+      "data_found": "The compute nodes feature high-end H100 and A100 GPUs, AMD EPYC and Intel Xeon processors, and over 7 Terabytes of combined RAM."
+    },
+    {
+      "url": "https://access.starhpc.hofstra.io/",
+      "data_found": "The cluster represents a $1.5M investment by Hofstra University and the National Science Foundation."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 250,
+    "grad_cs_count": 150,
+    "phd_cs_count": 20,
+    "year": "2023-2024",
+    "source_url": "https://starhpc.hofstra.io/",
+    "notes": "Hofstra CS enrollment estimated based on university-wide enrollment data. Total Hofstra enrollment: 10,393 (6,224 undergraduate, 4,169 graduate). The CS department offers BA/BS in CS, BS in Computer Engineering, BS in CS & Math, BS in CS & Cybersecurity at undergraduate level, and MS in Computer Science at graduate level. Based on typical CS department sizes at similar universities (approximately 4% of undergrads, 3.6% of graduate students), estimated CS enrollment is calculated. PhD count estimated based on faculty size (10 full-time faculty per department website) and typical advisor-student ratios. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://starhpc.hofstra.io/",
+    "notes": "Star HPC cluster confirmed to have NVIDIA HGX-based systems with both A100 and H100 GPUs. Exact node counts and GPUs per node not publicly disclosed. Cluster funded by $1.5M investment from Hofstra University and NSF. System currently in soft launch phase as of the documentation date. HGX-based systems typically have 8 GPUs per node, but specific configuration not confirmed in public documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Hofstra University has invested significantly in the Star HPC cluster with both H100 and A100 GPUs in HGX-based systems. However, specific node counts and total GPU counts are not publicly available in the documentation found. The cluster serves Hofstra University, Adelphi University, and Nassau Community College through a shared arrangement."
+}

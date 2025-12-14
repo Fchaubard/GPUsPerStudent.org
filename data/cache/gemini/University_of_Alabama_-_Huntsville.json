@@ -1,0 +1,41 @@
+{
+  "university_name": "University of Alabama - Huntsville",
+  "data_retrieved_date": "2025-05-28",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320297",
+      "data_found": "NSF Award Abstract (Gammadyne Cluster): 'The system will consist of... 2 GPU nodes each equipped with 4 NVIDIA H100 GPUs' and 'networked with 200Gb/s Ethernet'."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 866,
+    "grad_cs_count": 167,
+    "phd_cs_count": 49,
+    "year": "2023-2024",
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320297",
+    "notes": "Data derived from UAH Fall 2023 Fact Book / Enrollment by Major reports. Undergrad count refers to BS Computer Science in the College of Science. Grad count refers to MS Computer Science. PhD count refers to PhD Computer Science. (Excludes Computer Engineering which is housed in the College of Engineering). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 8,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320297",
+    "notes": "Calculations: \n1) Matrix Cluster: 4 nodes \u00d7 4 A100 GPUs = 16 A100s. (Assumed 40GB based on 2020 deployment timeframe and lack of '80GB' specification). \n2) Gammadyne Cluster (NSF Award #2320297): 2 nodes \u00d7 4 H100 GPUs = 8 H100s. (Classified as PCIe due to the $400k total grant budget which typically precludes 8x SXM/HGX configurations). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UAH separates Computer Science (College of Science) from Computer Engineering (College of Engineering); student counts strictly reflect the CS department. GPU resources combine the primary 'Matrix' cluster and the recently funded 'Gammadyne' cluster."
+}

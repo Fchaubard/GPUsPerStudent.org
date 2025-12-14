@@ -1,0 +1,45 @@
+{
+  "university_name": "University of Nevada, Reno",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.unr.edu/cyberinfrastructure/high-performance-computing",
+      "data_found": "The GPU partition features 44 NVIDIA Tesla P100 GPUs, 352 CPU cores, and 2.75TiB of memory. The Visualization partition is composed of three NVIDIA Tesla V100 GPUs, 48 CPU cores, and 1.1TiB of memory."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-nevada-reno/",
+      "data_found": "In 2023, 144 degrees were awarded to men at University of Nevada-Reno in Computer Science, which is 4.97 times more than the 29 female recipients with that same degree."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 692,
+    "grad_cs_count": 98,
+    "phd_cs_count": 49,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-nevada-reno/",
+    "notes": "Based on 173 CS degrees awarded in 2023 (144 men + 29 women) from DataUSA. Estimated undergraduate enrollment = 173 degrees/year \u00d7 4 years = 692. Graduate enrollment estimated from MS program (2-year duration per search results) and PhD program patterns. MS enrollment estimated as 65 completions \u00d7 1.5 years = 98. PhD enrollment estimated as 8-10 completions \u00d7 5.5 years = 49."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 3,
+    "p100_count": 44,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.unr.edu/cyberinfrastructure/high-performance-computing",
+    "notes": "Pronghorn HPC cluster has two GPU partitions: 1) GPU partition with 44 NVIDIA Tesla P100 GPUs. 2) Visualization partition with 3 NVIDIA Tesla V100 GPUs. Total = 44 P100 + 3 V100 = 47 GPUs. No H100, H200, or A100 GPUs were found in the current configuration."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Nevada, Reno operates the Pronghorn HPC cluster with 44 P100 and 3 V100 GPUs. Student counts estimated from CS degree completion data, as specific enrollment figures were not publicly available."
+}

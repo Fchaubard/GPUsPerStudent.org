@@ -1,0 +1,57 @@
+{
+  "university_name": "Baylor University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://its.web.baylor.edu/hpc",
+      "data_found": "Kodiak's computing resources consists of 70 community compute nodes, five GPU nodes, condominium nodes, and 2.5PB of multi-tiered storage."
+    },
+    {
+      "url": "https://rtservices.baylor.edu/hprcs/",
+      "data_found": "Kodiak's computing resources, including condominium systems, consist of 100 compute nodes, nine GPU nodes, one large-memory system, and 2.5PB of multi-tiered storage."
+    },
+    {
+      "url": "https://casper.research.baylor.edu/facilities/computational-facilities",
+      "data_found": "CASPER researchers utilize a Cray CS400-AC with 64 compute nodes, two Intel Knights Landing (KNL) nodes, and two Nvidia P100 GPU nodes, each configured with two GPUs. The GPU nodes have an aggregate peak performance of at least 9.4TF (double precision)."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/baylor-university-school-of-engineering-and-computer-science-department-of-computer-science-000_10015958.aspx",
+      "data_found": "Department of Computer Science: 75 Applied \u00b7 32 Accepted \u00b7 22 Enrolled"
+    },
+    {
+      "url": "https://datausa.io/profile/university/baylor-university",
+      "data_found": "In 2023, the most common positions for non-instructional staff at Baylor University included Computer, Engineering, and Science with 310 employees."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 450,
+    "grad_cs_count": 150,
+    "phd_cs_count": 22,
+    "year": "2024",
+    "source_url": "https://www.petersons.com/graduate-schools/baylor-university-school-of-engineering-and-computer-science-department-of-computer-science-000_10015958.aspx",
+    "notes": "Graduate student data from Peterson's shows 22 enrolled (likely PhD students based on acceptance/enrollment ratio). Undergraduate CS enrollment estimated based on typical CS department size at similar research universities with ~20,000 total students. The university has 15,155 undergraduates and 5,669 graduate students total (2024). With a School of Engineering and Computer Science, CS typically represents 3-5% of undergraduate enrollment at peer institutions, suggesting ~450-750 CS undergrads. Used conservative estimate of 450. MS CS students estimated at 150 based on typical MS:PhD ratios at research universities."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://casper.research.baylor.edu/facilities/computational-facilities",
+    "notes": "CALCULATIONS: CASPER facility has 2 Nvidia P100 GPU nodes \u00d7 2 GPUs per node = 4 P100 GPUs total. The main Kodiak HPC cluster is reported to have 5 GPU nodes (older source) or 9 GPU nodes (newer source from rtservices.baylor.edu), but specific GPU models and counts per node are not provided for the main cluster. Only the CASPER P100 GPUs have verifiable specifications."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via web searches. GPU data is limited - only CASPER facility provides specific GPU model information (4x P100 total). Main Kodiak cluster has 9 GPU nodes but lacks specification details. Student enrollment numbers for CS department specifically were not found in official sources; estimates based on graduate program application data and typical department sizes at peer institutions."
+}

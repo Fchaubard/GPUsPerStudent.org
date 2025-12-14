@@ -1,0 +1,53 @@
+{
+  "university_name": "Western Michigan University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://wmich.edu/research/hpchub",
+      "data_found": "WMU HPCHub: The Office of Research and Innovation has purchased access to the MSU computing cluster which we are calling HPCHub. This system is currently available to WMU faculty and graduate students under the supervision of a faculty mentor who is also an authorized user."
+    },
+    {
+      "url": "https://docs.icer.msu.edu/GPU_resources/",
+      "data_found": "MSU HPCC GPU resources documentation states that V100 and A100 GPUs use NVIDIA architectures. V100 GPUs follow the Volta architecture. Some of the HPCC's V100 and A100 GPUs are connected to each other using NVIDIA's NVLink technology."
+    },
+    {
+      "url": "https://datausa.io/profile/university/western-michigan-university",
+      "data_found": "Western Michigan University had a total enrollment of 16,693 students in 2023. The enrolled student population at Western Michigan University, both undergraduate and graduate, is 66.8% White, 8.35% Hispanic or Latino, 7.73% Black or African American."
+    },
+    {
+      "url": "https://wmich.edu/cs/academics/graduate",
+      "data_found": "The doctoral program is designed to develop computer scientists with research expertise in computer science. Areas include artificial intelligence, cloud computing, computational geometry, computer architecture, computer graphics, high-performance computing, neural networks, parallel algorithms."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 450,
+    "grad_cs_count": 85,
+    "phd_cs_count": 35,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/western-michigan-university",
+    "notes": "CS enrollment estimated based on WMU's total enrollment of 16,693 students and typical CS program proportions at similar universities. Undergraduate CS estimated at ~3.2% of total undergrad enrollment (13,860), MS CS estimated from graduate program descriptions mentioning 16-month completion timeline with ~50-60 students per cohort, PhD estimated from doctoral program descriptions and faculty research areas listed."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://wmich.edu/research/hpchub",
+    "notes": "WMU does not operate its own GPU cluster. Instead, they purchase access to Michigan State University's HPCC cluster through 'HPCHub'. The MSU HPCC documentation mentions V100 and A100 GPUs in their system, but specific counts and models allocated to WMU users are not publicly disclosed. WMU researchers access these shared resources through the HPCHub portal."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "WMU operates differently from universities with dedicated GPU clusters. They leverage shared access to MSU's HPCC resources rather than maintaining their own hardware. Student counts are estimates based on typical CS program proportions at similar-sized engineering schools."
+}

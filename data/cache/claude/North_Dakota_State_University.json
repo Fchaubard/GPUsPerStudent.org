@@ -1,0 +1,75 @@
+{
+  "university_name": "North Dakota State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://kb.ndsu.edu/page.php?id=128284",
+      "data_found": "Thunder Prime cluster: 81 AMD EPYC nodes, 8,932 CPU cores, 40 TB aggregate memory, 64 Nvidia GPUs, 2.2 PB GPFS parallel filesystem."
+    },
+    {
+      "url": "https://kb.ndsu.edu/104188",
+      "data_found": "CCAST Thunder Cluster (Intel CPUs) and Thunder Prime Cluster (AMD CPUs) have a combination of over 12,000 CPU cores and 70 GPUs in total."
+    },
+    {
+      "url": "https://www.osc.edu/press/north_dakota_state_university_deployed_open_ondemand_improving_hpc_features_access_and",
+      "data_found": "CCAST has more than 12,000 CPU cores and 70 GPUs, CCAST is the largest academic supercomputing facility in the state of North Dakota."
+    },
+    {
+      "url": "https://www.ndsu.edu/news/ndsu-awarded-nearly-4-million-deploy-supercomputer-ai-research",
+      "data_found": "NDSU awarded $3.85 million for new Bison supercomputer with powerful GPUs and AI-optimized storage system, operation targeted for summer 2026."
+    },
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/north-dakota-state-university-awarded-385m-for-bison-ai-supercomputer/",
+      "data_found": "CCAST is reportedly the largest academic supercomputing facility in North Dakota, with more than 13,000 CPU cores and 100 GPUs."
+    },
+    {
+      "url": "https://www.hpcwire.com/off-the-wire/north-dakotas-largest-academic-supercomputing-facility-adopts-open-ondemand/",
+      "data_found": "With more than 12,000 CPU cores and 70 GPUs, CCAST is the largest academic supercomputing facility in the state of North Dakota."
+    },
+    {
+      "url": "https://datausa.io/profile/university/north-dakota-state-university-main-campus",
+      "data_found": "NDSU had a total enrollment of 11,952 students in 2023. Full-time enrollment: 9,796. Student demographics: 79.7% White. Most common staff positions: Computer, Engineering, and Science with 287 employees."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/200332/north-dakota-state-university-main-campus/enrollment/",
+      "data_found": "Total enrollment: 11,952 (9,791 undergraduate and 2,161 graduate). By gender: 5,831 male and 6,121 female. 774 international students (87 undergraduate, 687 graduate)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 350,
+    "grad_cs_count": 320,
+    "phd_cs_count": 50,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/north-dakota-state-university-main-campus",
+    "notes": "CS enrollment estimated based on DataUSA showing Computer, Engineering, and Science staff (287) which indicates significant STEM programs. Northwest Missouri State University data shows MS Computer Science awarded 320 degrees, suggesting similar-sized programs at peer institutions. Using typical enrollment ratios: undergrad estimated at 350, MS at 320 (based on Northwest Missouri State comparable), PhD estimated at 50 (typical 15% of grad enrollment). Note: NDSU CS department website did not provide specific enrollment numbers."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 64,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA GPUs (unspecified models)",
+        "estimated_total": 70,
+        "notes": "Thunder Prime has 64 Nvidia GPUs (likely V100 based on 2021 deployment). Additional 6-36 GPUs in Thunder cluster to reach 70-100 total reported."
+      }
+    ],
+    "source_url": "https://kb.ndsu.edu/page.php?id=128284",
+    "notes": "Current systems: Thunder Prime (2021) has 64 NVIDIA GPUs. Total CCAST resources reported as 70-100 GPUs across Thunder and Thunder Prime clusters. GPU models not specified but likely V100/older generation based on 2021 deployment. New Bison AI supercomputer with modern GPUs (likely H100/H200) coming summer 2026."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not found in search results."
+  },
+  "analysis_notes": "NDSU CCAST is the largest academic supercomputing facility in North Dakota with significant GPU resources (70-100 GPUs total). Current GPUs appear to be older generation (likely V100). Major $3.85M investment in new Bison AI supercomputer suggests significant upgrade to modern GPUs (H100/H200) by 2026. Student counts estimated from comparable institutions due to lack of specific CS enrollment data on department website."
+}

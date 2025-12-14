@@ -1,0 +1,59 @@
+{
+  "university_name": "East Carolina University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://rede.ecu.edu/hpcprogram/",
+      "data_found": "ECU's Office of Research has purchased a 3-node cluster totaling 192 CPU cores and 1,280 GB of RAM in NC State's HPC core facility. N-Series systems optimized for GPU workloads including NVIDIA Tesla P40, M60, or V100 GPUs."
+    },
+    {
+      "url": "https://facts.ecu.edu/",
+      "data_found": "Total Enrollment 26,940 ECU Students. STEM/Health Care Enrollment 42% of Total Student Body 8,598 Undergraduate 2,821 Graduate."
+    },
+    {
+      "url": "https://datausa.io/profile/university/east-carolina-university",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at East Carolina University were Registered Nursing (351 degrees awarded), General Business Administration & Management (311 degrees), and Public Health Education & Promotion (261 degrees). There were 26,785 students enrolled at East Carolina University in 2023."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/east-carolina-university/academic-life/academic-majors/computer-information-sciences/",
+      "data_found": "Of the 104 students who earned a bachelor's degree in Computer & Information Sciences from ECU in 2021-2022, 89% were men and 11% were women."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 250,
+    "grad_cs_count": 45,
+    "phd_cs_count": -1,
+    "year": "2024-2025",
+    "source_url": "https://www.collegefactual.com/colleges/east-carolina-university/academic-life/academic-majors/computer-information-sciences/",
+    "notes": "Based on 104 CS bachelor's degrees awarded in 2021-2022 and typical 4-year program duration, estimated undergraduate CS enrollment is ~250-260. Graduate CS count estimated from typical MS enrollment patterns. PhD count not found - ECU CS department does not appear to offer a PhD program."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 3,
+    "p100_count": 3,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla M60",
+        "estimated_total": 3,
+        "notes": "ECU has access to Azure N-Series systems with M60 GPUs through Microsoft Azure HPC pilot program. Exact count not specified."
+      }
+    ],
+    "source_url": "https://rede.ecu.edu/hpcprogram/",
+    "notes": "ECU has limited GPU resources through two pilot programs: 1) Microsoft Azure cloud access with N-Series systems including P40, M60, or V100 GPUs (consumption-based, no specific counts), and 2) NC State HPC Partner Program access through Hazel cluster. ECU owns a 3-node CPU cluster at NC State but GPU access appears to be through shared queue time. Estimated 3-6 total GPUs accessible between V100, P40, and M60 models."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "ECU has very limited GPU infrastructure. Primary HPC access is through partnerships - a pilot program with Microsoft Azure (consumption-based cloud GPUs) and owned compute nodes at NC State's Hazel cluster (CPU-focused with shared GPU queue access). The university does not appear to operate its own on-campus GPU cluster."
+}

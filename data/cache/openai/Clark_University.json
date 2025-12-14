@@ -1,0 +1,55 @@
+{
+  "university_name": "Clark University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://wordpress.clarku.edu/shuo/research/",
+      "data_found": "Computing resources section states: 'Clark University high-performance computing cluster: 320 CPU cores and 5 A30 GPUs.' (No node count / GPUs-per-node breakdown provided.)"
+    },
+    {
+      "url": "https://sites.clarku.edu/its-files-secure/cluster-documentation/?_gl=1%2A11trq1z%2A_gcl_au%2AMTQ1Nzg5MjE0MS4xNzUyMjQwNTU4",
+      "data_found": "Redirects to Clark ADFS sign-in (not publicly accessible), preventing extraction of GPU node specifications from official documentation."
+    },
+    {
+      "url": "https://www.clarku.edu/saair/wp-content/uploads/sites/95/Clark-CDS-2024-25.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.clarku.edu/saair/wp-content/uploads/sites/95/Clark-CDS-2024-25.pdf",
+    "notes": "Searched (in order requested) for Clark University CS enrollment counts for Fall 2024 / AY 2024-2025. Found Clark University Common Data Set 2024-2025 (PDF) which explicitly references Fall 2024 / October 15, 2024 reporting date and provides overall undergraduate/graduate headcount, but it does NOT provide enrollment-by-major (Computer Science) counts\u2014only overall enrollment and degree-conferred percentages by CIP category. Attempted to access STAIR 'Factbook' (which the STAIR FAQ indicates contains majors/minors counts), but the Factbook download link redirects to Clark University ADFS sign-in (not publicly accessible). Also located CS department 'Fast Facts' PDF, but it is explicitly for Fall 2021 and therefore rejected per your date requirement. Because no public source with explicit 2024 / Fall 2024 CS major enrollment counts (UG / MS / PhD) was found, all counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 (VRAM typically 24GB; not one of the requested keys)",
+        "count": 5,
+        "source": "https://wordpress.clarku.edu/shuo/research/"
+      }
+    ],
+    "source_url": "https://wordpress.clarku.edu/shuo/research/",
+    "notes": "Clusters found with GPU counts: (1) Clark University HPC (as cited by Huo Group): total A30 GPUs = 5. Nodes and GPUs_per_node not provided; treated as total GPUs=5. No public sources found listing any H100/H200/A100/V100/P100/A6000/L40S counts for Clark University; therefore requested model-specific totals set to 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

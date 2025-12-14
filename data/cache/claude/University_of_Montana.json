@@ -1,0 +1,64 @@
+{
+  "university_name": "University of Montana",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925267&HistoricalAwards=false",
+      "data_found": "The GSCC (Griz Shared Computing Cluster), deployed by January 2020, provides 16 computing nodes and 12 GPU nodes. In addition, the cluster has 2 storage nodes, 1 head node and 2 login nodes."
+    },
+    {
+      "url": "https://www.umt.edu/center-biomolecular-structure-dynamics/facilities/computation/equipment.php",
+      "data_found": "GPU workstations (Linux): Two Exxact workstations, each with 48 CPU cores and four Nvidia GTX A5500 GPUs (running Rocky v.8)"
+    },
+    {
+      "url": "https://datausa.io/profile/university/the-university-of-montana?redirect=true",
+      "data_found": "In 2023, 3,102 degrees were awarded across all undergraduate and graduate programs at The University of Montana. The most common positions for non-instructional staff at The University of Montana were Management with 396 employees, Computer, Engineering, and Science with 260 employees."
+    },
+    {
+      "url": "https://www.umt.edu/news/2024/09/092424enrl.php",
+      "data_found": "In total, there are 484 more students enrolled at UM this fall than in fall 2023, bringing total enrollment to 10,811. UM's Graduate School grew nearly 1% to 1,847 students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 150,
+    "grad_cs_count": 75,
+    "phd_cs_count": 20,
+    "year": "2024-2025",
+    "source_url": "https://datausa.io/profile/university/the-university-of-montana?redirect=true",
+    "notes": "Direct CS enrollment figures not publicly available. Estimated based on: DataUSA shows 260 total Computer, Engineering, and Science staff (likely supporting multiple departments). UM has MS and PhD programs in CS with rolling admissions. With total enrollment of 10,811 and 1,847 graduate students, and CS being a mid-sized program, conservative estimates: undergrad CS ~150 (1.9% of 8,014 undergrads), MS CS ~75, PhD CS ~20."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA GTX A5500 (24GB)",
+        "estimated_total": 8,
+        "notes": "BioSpectroscopy Core has two workstations, each with four Nvidia GTX A5500 GPUs = 8 total A5500 GPUs"
+      },
+      {
+        "model": "Unknown GPU models",
+        "estimated_total": -1,
+        "notes": "GSCC has 12 GPU nodes per NSF grant, but specific GPU models not disclosed in public documentation"
+      }
+    ],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1925267&HistoricalAwards=false",
+    "notes": "CLUSTERS INCLUDED:\n\n1) Griz Shared Computing Cluster (GSCC) at University of Montana: Has 12 GPU nodes per NSF award documentation, but specific GPU models and counts per node are not publicly specified. Hardware specs page notes configurations are from February 2020.\n\n2) BioSpectroscopy Core Research Facility: 2 workstations \u00d7 4 NVIDIA GTX A5500 GPUs each = 8 A5500 GPUs total.\n\nNote: Unlike many universities that publicly list detailed GPU specifications, University of Montana's GSCC documentation does not specify the GPU models in their 12 GPU nodes. The A5500 GPUs in the BioSpectroscopy facility are the only specifically identified GPUs found."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Montana's GSCC was deployed in 2020 with NSF CC* funding. While the cluster has 12 GPU nodes, the specific GPU models and quantities are not disclosed in public documentation. The only specifically identified GPUs are 8 NVIDIA A5500s in the BioSpectroscopy Core facility."
+}

@@ -1,0 +1,77 @@
+{
+  "university_name": "Emory University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://computerscience.emory.edu/about/facilities.html",
+      "data_found": "The server 'h200' is an Exxact server with eight H200 GPUs, each with 141GB of RAM. The server 'h100' is an Exxact server with eight H100 GPUs, each with 80 GB of RAM. The server 'turing' has eight Quadro RTX 8000 GPUs, each with 48 GB of RAM. The server 'hopper' has eight Titan RTX GPUs, each with 24 GB of RAM. The department maintains ten GPU servers suited for AI and Machine Learning."
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/publicsector/emory-university-supports-ai-humanity-initiative-with-high-performance-computing-on-aws/",
+      "data_found": "The cloud cluster features two P4 (8x NVIDIA A100 GPUs) instances, both purchased as reserved instances. GPU computing: Researchers have access to state-of-the-art graphics processing units (GPUs) like Tensor Core A100s and H100s."
+    },
+    {
+      "url": "https://www.cores.emory.edu/csic/resources/computer/index.html",
+      "data_found": "The GPU nodes are equipped with 3x P100 GPUs and 21x A40 GPUs. It consists of 6 head nodes/file servers, 16 CPU intensive calculation nodes, 6 GPU enhanced nodes with NVIDIA P100 and A40 GPUs."
+    },
+    {
+      "url": "https://aihumanity.emory.edu/resources/computing-infrastructure.html",
+      "data_found": "Compute resources are upgraded on a regular cadence and currently include a mix of nodes featuring Nvidia A100 and A10 GPUs, accessible through the popular Slurm job management interface."
+    },
+    {
+      "url": "https://www.cores.emory.edu/csic/resources/faqs/cluster_use.html",
+      "data_found": "The cluster is assembled with multiple generation of nodes with variety of configurations. Among all 24 nodes, 7 of them are equipped with GPUs."
+    },
+    {
+      "url": "https://med.emory.edu/departments/biomedical-informatics/research/facilities.html",
+      "data_found": "The HIPPA-compliant storage and compute environment involves a complex distributed PHI protected infrastructure consisting of an HPC cluster containing multiple GPUs and a ~3.1PB parallel file system."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 350,
+    "grad_cs_count": 150,
+    "phd_cs_count": 80,
+    "year": "2024-2025",
+    "source_url": "https://computerscience.emory.edu/about/facilities.html",
+    "notes": "Emory CS does not publish exact enrollment numbers on publicly accessible pages. Based on department descriptions mentioning 'several undergraduate majors and minors' and 'MS and PhD offerings,' total enrollment estimated from: (1) University total enrollment of ~16,000 students with CS being a growing but mid-sized department, (2) Multiple joint majors offered (CS+Math, CS+Economics) suggesting substantial undergraduate interest, (3) Graduate programs in both CS and Informatics concentrations. Undergrad estimate: ~350 based on typical mid-sized CS department at R1 university. MS estimate: ~150 based on selective admissions and program descriptions. PhD estimate: ~80 based on CSI joint program across CS/BMI/Biostatistics departments with 5-year typical completion. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 0,
+    "h200_count": 8,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 16,
+    "a100_40gb_count": 0,
+    "a40_count": 21,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 3,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX 8000 (48GB)",
+        "estimated_total": 8,
+        "notes": "Server 'turing' has 8x Quadro RTX 8000 GPUs"
+      },
+      {
+        "model": "NVIDIA Titan RTX (24GB)",
+        "estimated_total": 8,
+        "notes": "Server 'hopper' has 8x Titan RTX GPUs"
+      },
+      {
+        "model": "NVIDIA A10 (24GB)",
+        "estimated_total": null,
+        "notes": "AI.Humanity infrastructure mentions A10 GPUs but count not specified"
+      }
+    ],
+    "source_url": "https://computerscience.emory.edu/about/facilities.html",
+    "notes": "GPU INVENTORY BY LOCATION:\n\n1) Computer Science Department:\n   - Server 'h200': 1 node \u00d7 8 H200 = 8 H200\n   - Server 'h100': 1 node \u00d7 8 H100 = 8 H100\n   - Server 'turing': 1 node \u00d7 8 Quadro RTX 8000 = 8 RTX 8000\n   - Server 'hopper': 1 node \u00d7 8 Titan RTX = 8 Titan RTX\n   - 6 additional GPU servers (reserved for specific research teams, models unspecified)\n   Total CS: 10 GPU servers\n\n2) AWS Cloud (HyPER C3 / AI.Humanity):\n   - 2 P4 instances \u00d7 8 A100/instance = 16 A100 (likely 80GB as P4 instances typically use 80GB variant)\n   - Additional A10 GPUs mentioned but count unspecified\n\n3) CSIC (Center for Systems Imaging):\n   - 3 P100 GPUs\n   - 21 A40 GPUs\n   - Distributed across 6 GPU-enhanced nodes\n\n4) EICC (Emory Integrated Computational Core):\n   - 1 GPU node \u00d7 4 V100 = 4 V100\n\n5) BMI Department:\n   - 'HPC cluster containing multiple GPUs' (specific models/counts not public)\n\nTOTAL KNOWN GPUs: 8 H200 + 8 H100 + 16 A100 + 21 A40 + 4 V100 + 3 P100 + 8 Quadro RTX 8000 + 8 Titan RTX = 76+ GPUs\n\nNote: Several clusters mention GPUs without specifying exact counts or models, particularly the BMI HIPAA-compliant cluster and the 6 reserved CS research servers."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected December 2025. Emory has distributed GPU infrastructure across multiple departments and cloud resources. Major concentrations in CS department (H100/H200 servers), AWS cloud (A100s), and imaging cores (A40s). Student enrollment numbers estimated based on program descriptions as exact figures not publicly available."
+}

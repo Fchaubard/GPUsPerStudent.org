@@ -1,0 +1,41 @@
+{
+  "university_name": "Auburn University",
+  "data_retrieved_date": "2025-06-01",
+  "sources": [
+    {
+      "url": "https://eng.auburn.edu/csse/about/index",
+      "data_found": "CSSE Department About Page: 'The Department of Computer Science and Software Engineering (CSSE) is home to more than 1,800 undergraduate students and 200 graduate students.'"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1800,
+    "grad_cs_count": 90,
+    "phd_cs_count": 110,
+    "year": "2024",
+    "source_url": "https://eng.auburn.edu/csse/about/index",
+    "notes": "Department 'About' page explicitly states 'more than 1,800 undergraduate students and 200 graduate students'. The breakdown of the 200 graduate students is estimated based on typical R1 university ratios and OIR trends (approx 110 PhD / 90 MS)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 32,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://eng.auburn.edu/csse/about/index",
+    "notes": "Primary resource is the 'Easley' cluster. Specs confirm 4x NVIDIA DGX A100 nodes. 4 nodes x 8 GPUs/node = 32 A100 GPUs total. Based on the 2020 deployment date, these are categorized as A100 40GB (standard DGX A100 launch config). Older 'Hopper' cluster (V100s) appears decommissioned/replaced by Easley. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No specific data found regarding cloud compute credits."
+  },
+  "analysis_notes": "Auburn's CSSE department is large (2000+ total students). GPU resources are centralized in the Easley cluster (managed by OIT/HPC). No evidence of newer H100 deployments was found in public documentation as of mid-2025."
+}

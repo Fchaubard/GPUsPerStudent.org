@@ -1,0 +1,61 @@
+{
+  "university_name": "Kent State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.osc.edu/services/cluster_computing",
+      "data_found": "Ohio Supercomputer Center (OSC) resources available to Kent State University researchers. Ascend: 96 NVIDIA A100s and NVLink (four each on 24 nodes); 500 NVIDIA A100s and NVLink (two each on 250 nodes). Cardinal: 128 NVIDIA H100s and NVLink (four each on 32 nodes)."
+    },
+    {
+      "url": "https://www.osc.edu/press/kent_state_students_prepare_for_growing_artificial_intelligence_industry",
+      "data_found": "Kent State University students worked on OSC's Ascend and Pitzer clusters. Ascend, which came online in late 2022, can accommodate deep learning-based image analysis needs in AI projects using GPUs."
+    },
+    {
+      "url": "https://www.kent.edu/cs/global-circ/nsf-cybercluster",
+      "data_found": "Professor Javed I. Khan and his team has just been awarded $400,000 grant from the National Science Foundation to design a new generation agile locally and globally sharable HPCC (High-Performance Computing Cluster)."
+    },
+    {
+      "url": "https://www.kent.edu/cs",
+      "data_found": "The Department of Computer Science offers degrees at the Bachelors, Masters, and PhD levels."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/kent-state-university-college-of-arts-and-sciences-department-of-computer-science-000_10022497.aspx",
+      "data_found": "336 Applied, 194 Accepted, 15 Enrolled (graduate programs)."
+    },
+    {
+      "url": "https://www.univstats.com/colleges/kent-state-university-at-kent/student-population/",
+      "data_found": "Kent State University at Kent has a total enrollment of 26,106."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 180,
+    "phd_cs_count": 30,
+    "year": "2024",
+    "source_url": "https://www.petersons.com/graduate-schools/kent-state-university-college-of-arts-and-sciences-department-of-computer-science-000_10022497.aspx",
+    "notes": "Undergraduate CS count estimated based on total university enrollment of 26,106 students and typical CS department size (3-4% of total enrollment). Graduate numbers based on Peterson's data showing 336 applications with 194 accepted and 15 enrolled for graduate programs. PhD count estimated based on typical MS to PhD ratio and Kent State offering a doctoral program in CS."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 128,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 596,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 64,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.osc.edu/services/cluster_computing",
+    "notes": "Kent State University researchers have access to Ohio Supercomputer Center (OSC) resources. OSC Ascend cluster: 96 A100 GPUs (4 per node on 24 nodes) + 500 A100 GPUs (2 per node on 250 nodes) = 596 total A100s. OSC Cardinal cluster: 128 H100 GPUs (4 per node on 32 nodes). OSC Pitzer cluster: 64 V100 GPUs mentioned (2 per node on 32 nodes). Kent State also received a $400,000 NSF grant for a new cyber cluster, but specific GPU configurations were not detailed in available sources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not found in search results. Kent State researchers use Ohio Supercomputer Center resources which are subsidized for Ohio academic institutions."
+  },
+  "analysis_notes": "Kent State University does not appear to have significant on-campus GPU clusters. Instead, faculty and students primarily rely on Ohio Supercomputer Center (OSC) resources. The university received an NSF grant for developing a sharable cyber cluster, but specific GPU specifications were not available in public sources. Student enrollment numbers for CS specifically were not published; estimates based on typical CS department proportions and graduate application data."
+}

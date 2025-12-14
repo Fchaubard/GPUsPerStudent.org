@@ -1,0 +1,49 @@
+{
+  "university_name": "St. John's University",
+  "data_retrieved_date": "2025-05-28",
+  "sources": [
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924092",
+      "data_found": "NSF Award #1924092 (MRI: Acquisition of a High Performance Computing Cluster): Specifies the acquisition of a cluster with 'one GPU node with 4 NVIDIA Tesla V100 GPUs' for multidisciplinary research."
+    },
+    {
+      "url": "https://www.stjohns.edu/academics/programs/computer-science-master-science",
+      "data_found": "Program page confirms existence of Master of Science in Computer Science and Data Science programs, but no PhD program in CS is listed in the academic catalog."
+    },
+    {
+      "url": "https://www.stjohns.edu/research/student-research",
+      "data_found": "Mentions the 'Technology Commons' and research labs, but refers back to the HPC cluster funded by the NSF grant as the primary computational resource."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 417,
+    "grad_cs_count": 70,
+    "phd_cs_count": 0,
+    "year": "2023",
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924092",
+    "notes": "Counts sourced from the Official Fall 2023 Fact Book. Undergrad count (417) reflects the 'Computer Science' major within St. John's College of Liberal Arts & Sciences. It does not include the ~326 students in 'Cyber Security Systems' or 'Information Technology' in the Collins College of Professional Studies. Grad count (70) combines 'Computer Science' (23) and 'Data Science' (47) Master's students. St. John's University does not appear to offer a Ph.D. specifically in Computer Science (closest is a Doctorate in Professional Studies in unrelated fields or a PhD in Library/Info Science). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1924092",
+    "notes": "St. John's University does not have a large-scale central research computing center with a public wiki detailing hardware. The primary identifiable research computing asset is an HPC cluster funded by NSF MRI Grant #1924092 (Awarded 2019), which specifies 'one GPU node with 4 NVIDIA Tesla V100 GPUs'. No subsequent major HPC grants or public documentation of cluster upgrades (A100/H100) were found. Student labs likely contain workstations with consumer-grade GPUs, but these are not verifiable as research compute resources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No public data found regarding cloud compute credits."
+  },
+  "analysis_notes": "Student data is precise based on the 2023 Fact Book. GPU data is based on federal grant records (NSF) due to the lack of a public 'Research Computing' hardware documentation page. The identified cluster is relatively small (16 compute nodes, 1 GPU node), consistent with the university's size and research classification."
+}

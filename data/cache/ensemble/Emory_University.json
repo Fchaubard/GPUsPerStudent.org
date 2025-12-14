@@ -1,0 +1,106 @@
+{
+  "university_name": "Emory University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://boilerplate.emory.edu/pages/department-of-biomedical-informatics",
+      "data_found": "BMI HPC cluster: 23 nodes total. Type A: 8 nodes, each with 1x NVIDIA A30 (24GB). Type B: 7 nodes, each with 2x NVIDIA RTX 6000 Ada (48GB). Type C: 4 nodes, each with 1x NVIDIA Quadro RTX 6000 (24GB). Type D (4 special nodes): (1) 8x V100 32GB; (2) 4x P100 12GB; (3) 8x A100 40GB; (4) 8x L40S 48GB."
+    },
+    {
+      "url": "https://www.cores.emory.edu/csic/resources/computer/index.html",
+      "data_found": "CSIC mini-cluster: GPU nodes equipped with total 3x P100 GPUs and 21x A40 GPUs (also states 6 GPU enhanced nodes)."
+    },
+    {
+      "url": "https://www.cores.emory.edu/csic/resources/faqs/cluster_use.html",
+      "data_found": "CSIC GPU node breakdown includes: node8 has 2x Tesla P100; node23 has 1x Tesla P100; node7 has Tesla K40c + 2x Tesla C2050; nodes15-18 have Quadro P1000."
+    },
+    {
+      "url": "https://computerscience.emory.edu/about/facilities.html",
+      "data_found": "CS dept GPU servers listed: server \"h200\" has 8x H200; server \"h100\" has 8x H100 80GB with NVSwitch; server \"turing\" has 8x Quadro RTX 8000 48GB; server \"hopper\" has 8x Titan RTX 24GB."
+    },
+    {
+      "url": "https://quantitative.emory.edu/research/research-computing.html",
+      "data_found": "QTM research computing server: 1 Exxact server with 8x NVIDIA RTX A6000 (48GB each)."
+    },
+    {
+      "url": "https://emerson.emory.edu/about/index.html",
+      "data_found": "Emerson Center cluster description mentions an NVIDIA-SMI node with Tesla V100 GPU (GPU count not specified)."
+    },
+    {
+      "url": "https://news.emory.edu/stories/2023/12/er_ai_infrastructure_23-12-12/story.html",
+      "data_found": "HyPER C3 described as cloud-based, expandable, includes NVIDIA A100 and V100 GPUs, but no fixed node/GPU inventory published (elastic cloud capacity)."
+    },
+    {
+      "url": "https://provost.emory.edu/planning-administration/data/common-data-set.html",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://provost.emory.edu/planning-administration/data/common-data-set.html",
+    "notes": "Searched for Emory CS student enrollment counts specifically for AY 2024-2025 / Fall 2024. Found Emory's Common Data Set 2024-2025 PDF (official fall snapshot date is Oct 15, 2024) but it reports overall university enrollment totals, not Computer Science (CS) major/program enrollment by department/program. ([provost.emory.edu](https://provost.emory.edu/planning-administration/data/common-data-set.html)) Emory's IRDS 'Fact Book - Enrollment - Fall' dashboard appears to contain enrollment distributions (including by CIP code), but the official dashboard links require Emory Tableau login, so CS enrollment headcounts for Fall 2024 could not be accessed publicly. ([provost.emory.edu](https://provost.emory.edu/planning-administration/data/factbook/dashboard-library.html)) Checked CS department graduate materials with 2024+ timestamps (e.g., CS MS Program Handbook updated Oct 2024) but they do not state current enrolled MS headcount. ([computerscience.emory.edu](https://computerscience.emory.edu/documents/csms-handbook-2024-v3.pdf)) The CS site lists 'Current PhD Students' (with cohort years including 2024), but it does not provide an explicit total headcount or a Fall 2024 enrollment number; deriving a count by manually counting names would not meet the requirement for an explicitly stated 2024/Fall 2024 enrollment figure. ([computerscience.emory.edu](https://computerscience.emory.edu/graduate-phd/current-student/current-students.html))"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 0,
+    "h200_count": 8,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 8,
+    "a40_count": 21,
+    "a6000_count": 8,
+    "l40s_count": 8,
+    "v100_count": 13,
+    "p100_count": 7,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 6000 Ada",
+        "count": 14,
+        "vram_gb": 48,
+        "where": "Emory Dept. of Biomedical Informatics (Type B nodes)"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000",
+        "count": 4,
+        "vram_gb": 24,
+        "where": "Emory Dept. of Biomedical Informatics (Type C nodes)"
+      },
+      {
+        "model": "NVIDIA A30",
+        "count": 8,
+        "vram_gb": 24,
+        "where": "Emory Dept. of Biomedical Informatics (Type A nodes)"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 8000",
+        "count": 8,
+        "vram_gb": 48,
+        "where": "Emory Computer Science department server \"turing\""
+      },
+      {
+        "model": "NVIDIA Titan RTX",
+        "count": 8,
+        "vram_gb": 24,
+        "where": "Emory Computer Science department server \"hopper\""
+      },
+      {
+        "model": "Tesla K40c",
+        "count": 1,
+        "vram_gb": 12,
+        "where": "Emory CSIC cluster (node7)"
+      }
+    ],
+    "source_url": "https://boilerplate.emory.edu/pages/department-of-biomedical-informatics",
+    "notes": "Counts are summed across all Emory clusters/pages with explicit GPU inventory.\n\nH100:\n- Emory CS server \"h100\": 1 node \u00d7 8 GPUs/node = 8 H100 (counted as H100 SXM because NVSwitch implies HGX/SXM-style configuration; form factor not explicitly stated).\n\nH200:\n- Emory CS server \"h200\": 1 \u00d7 8 = 8 H200.\n\nA100 40GB:\n- BMI Type D (A100 node): 1 \u00d7 8 = 8 A100 (40GB).\n\nV100:\n- EICC GPU node: 1 \u00d7 4 = 4 V100.\n- BMI Type D (V100 node): 1 \u00d7 8 = 8 V100.\n- Emerson Center: assumed 1 \u00d7 1 = 1 V100 (page states \"Tesla V100 GPU\" on an NVIDIA-SMI node but does not give a count).\n=> V100 total = 4 + 8 + 1 = 13.\n\nP100:\n- BMI Type D (P100 node): 1 \u00d7 4 = 4 P100.\n- CSIC: node8 (1 \u00d7 2 = 2 P100) + node23 (1 \u00d7 1 = 1 P100) => 3 P100.\n=> P100 total = 4 + 3 = 7.\n\nA40:\n- CSIC total A40 GPUs stated as 21 (node-level distribution not provided on the public pages).\n\nL40S:\n- BMI Type D (L40S node): 1 \u00d7 8 = 8 L40S.\n\nRTX A6000:\n- QTM server: 1 \u00d7 8 = 8 RTX A6000.\n\nHyPER C3 (Emory AWS cloud HPC): mentions A100/V100 availability but no fixed node/GPU counts are publicly specified (elastic cloud), so it is not included in the numeric totals."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,53 @@
+{
+  "university_name": "Rice University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://kb.rice.edu/page.php?id=147971",
+      "data_found": "NOTS GPU node configurations: 1 node with 4x Tesla A40; 3 nodes with 8x Tesla A40; 16 nodes with 2x Tesla V100; 12 nodes with 4x Tesla L40S."
+    },
+    {
+      "url": "https://researchcomputing.rice.edu/high-performance-computing-resources",
+      "data_found": "Cluster list includes NOTS, ARIES (AMD GPUs), and RAPID described as a GPU-only cluster with 80 Nvidia GPUs."
+    },
+    {
+      "url": "https://ofs.rice.edu/communications/featured-stories/elevating-ai-research-rice",
+      "data_found": "RANGE (Rice AI Networked GPU Engine) includes 80 NVIDIA H100 and H200 GPUs (breakdown not specified)."
+    },
+    {
+      "url": "https://public.tableau.com/static/images/Ri/RiceUniversityPublicEnrollmentbyMajor-ProgramSnapshot/Snapshot/1_rss.png",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://public.tableau.com/static/images/Ri/RiceUniversityPublicEnrollmentbyMajor-ProgramSnapshot/Snapshot/1_rss.png",
+    "notes": "Searched Rice/IDEAS institutional reporting sources for Fall 2024 / AY 2024-25 Computer Science enrollment (majors/program headcounts). Found an official Rice/Registrar-sourced Tableau Public dashboard titled \"FALL ENROLLMENT BY MAJOR/PROGRAM - SNAPSHOT\", but the accessible published view rendered with the term set to \"Fall 2025\" (and showed CS counts for Fall 2025), which does NOT meet the user's absolute date requirement (must be Fall 2024 or AY 2024-25). Therefore, all counts are set to 0 and the Fall 2025 numbers are rejected. ([public.tableau.com](https://public.tableau.com/static/images/Ri/RiceUniversityPublicEnrollmentbyMajor-ProgramSnapshot/Snapshot/1_rss.png))"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 64,
+    "h100_pcie_count": 0,
+    "h200_count": 16,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 80,
+    "a100_40gb_count": 0,
+    "a40_count": 28,
+    "a6000_count": 0,
+    "l40s_count": 48,
+    "v100_count": 32,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://researchcomputing.rice.edu/high-performance-computing-resources",
+    "notes": "Clusters included: NOTS, RAPID, RANGE.\n\nNOTS (from kb.rice.edu/page.php?id=147971):\n- A40: (1 node \u00d7 4 GPUs/node) + (3 nodes \u00d7 8 GPUs/node) = 4 + 24 = 28\n- V100: 16 nodes \u00d7 2 GPUs/node = 32\n- L40S: 12 nodes \u00d7 4 GPUs/node = 48\n\nRAPID (from researchcomputing.rice.edu/high-performance-computing-resources):\n- Only '80 Nvidia GPUs' is specified; model not stated. Estimated as A100 80GB due to likely modern AI-focused interactive GPU cluster; assumed 10 nodes \u00d7 8 GPUs/node = 80 total GPUs.\n\nRANGE (from ofs.rice.edu featured story):\n- '80 NVIDIA H100 and H200 GPUs' total; per-model counts not stated. Estimated split: 64\u00d7 H100 + 16\u00d7 H200; assumed SXM form factor for both (no PCIe explicitly stated). Assumed 10 nodes \u00d7 8 GPUs/node = 80 total GPUs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,64 @@
+{
+  "university_name": "Dartmouth College",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://rc.dartmouth.edu/hpc/discovery-cluster-details/",
+      "data_found": "Discovery Cluster Details table: a01-a05 (5 nodes) each w/ 2 A100; p01-p04 (4 nodes) each w/ 4 Tesla V100; centurion01-centurion09 (9 nodes) each w/ 8 A5500; amp01-amp06 (6 nodes) each w/ 10 A5000; adanova01 (1 node) w/ 4 l40s. Also notes A100 GPUs are provided in MIG with 40GB slices."
+    },
+    {
+      "url": "https://services.dartmouth.edu/TDClient/1806/Portal/KB/ArticleDet?ID=134058",
+      "data_found": "KB article 'Discovery Cluster details' repeats the same node/GPU breakdown as rc.dartmouth.edu (A100, V100, A5500, A5000, l40s)."
+    },
+    {
+      "url": "https://rc.dartmouth.edu/hpc/discovery-overview/",
+      "data_found": "Discovery Overview summary mentions GPU nodes incorporate 10 A100 GPUs, 72 A5500 GPUs, and 12 V100 GPUs (summary-level counts; differs from the more detailed node table for V100)."
+    },
+    {
+      "url": "https://www.dartmouth.edu/oir/data-reporting/factbook/fall_2024_factcard.pdf",
+      "data_found": "Student enrollment: 251 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 251,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.dartmouth.edu/oir/data-reporting/factbook/fall_2024_factcard.pdf",
+    "notes": "Found in Dartmouth Office of Institutional Research (OIR) \u201c2024 Fact Card\u201d (Fall 2024 Fact Card PDF). Under 'Top 5 Majors* (Undergraduate) - Highest Enrollment', it lists 'Computer Science (251)'. The footnote states dual/triple major students are counted once for each major (i.e., this is a count of declared CS majors, not unduplicated students). This PDF does not provide CS-specific graduate enrollment (MS vs PhD) counts for Fall 2024 / AY 2024-25, so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 10,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 4,
+    "v100_count": 16,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX A5500",
+        "count": 72,
+        "notes": "Discovery 'centurion' nodes list '8 A5500' each across centurion01-centurion09 (9 nodes). VRAM not specified on Dartmouth pages."
+      },
+      {
+        "model": "NVIDIA RTX A5000",
+        "count": 60,
+        "notes": "Discovery 'amp' nodes list '10 A5000' each across amp01-amp06 (6 nodes). VRAM not specified on Dartmouth pages."
+      }
+    ],
+    "source_url": "https://rc.dartmouth.edu/hpc/discovery-cluster-details/",
+    "notes": "Clusters found with explicit GPU inventory: Discovery Cluster (Dartmouth Research Computing & Data).\n\nPer-node calculations from Discovery Cluster Details:\n- A100: nodes a01-a05 = 5 nodes \u00d7 2 GPUs/node = 10 total A100 GPUs.\n- V100: nodes p01-p04 = 4 nodes \u00d7 4 GPUs/node = 16 total V100 GPUs.\n- RTX A5500: nodes centurion01-centurion09 = 9 nodes \u00d7 8 GPUs/node = 72 total A5500 GPUs.\n- RTX A5000: nodes amp01-amp06 = 6 nodes \u00d7 10 GPUs/node = 60 total A5000 GPUs.\n- L40S: node adanova01 = 1 node \u00d7 4 GPUs/node = 4 total L40S GPUs.\n\nA100 80GB vs 40GB: Dartmouth does not state A100 memory size explicitly; however, the page states A100s are provided in MIG with 40GB slices, which is consistent with physical A100 80GB GPUs. Counted all A100s as a100_80gb_count=10 and a100_40gb_count=0.\n\nDiscrepancy note: the Discovery Overview page summarizes '12 V100 GPUs', but the detailed node hardware table lists 4 V100 nodes (p01-p04) with 4 V100 each (=16). Used the detailed node table (16) for totals.\n\nNo Dartmouth sources found indicating any H100/H200/B100/B200/GH200/A6000/P100/A40 GPUs in Dartmouth-owned research computing clusters on the pages retrieved."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,53 @@
+{
+  "university_name": "Montana State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.montana.edu/uit/rci/tempest/system/computational-resources.html",
+      "data_found": "Tempest GPU node table: H100 Quad GPU nodes=3 with 4 GPUs each; A100 Quad GPU nodes=2 with 4 GPUs each; A100 Dual GPU nodes=3 with 2 GPUs each; A40 Dual GPU nodes=13 with 2 GPUs each. Also states A100 GPUs are 40GB and H100 GPUs are 80GB."
+    },
+    {
+      "url": "https://www.montana.edu/uit/rci/tempest/system/",
+      "data_found": "Tempest overall totals: 26 Nvidia A40 GPUs, 14 Nvidia A100 GPUs, 12 Nvidia H100 GPUs."
+    },
+    {
+      "url": "https://www.montana.edu/uit/rci/tempest/cluster-description-grant-template/",
+      "data_found": "Grant template restates Tempest totals (A40=26, A100=14, H100=12) and cluster size (128 nodes)."
+    },
+    {
+      "url": "https://www.cs.montana.edu/about.html",
+      "data_found": "Student enrollment: 469 undergrad, 37 grad, 26 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 469,
+    "grad_cs_count": 37,
+    "phd_cs_count": 26,
+    "year": "Fall 2024",
+    "source_url": "https://www.cs.montana.edu/about.html",
+    "notes": "Source is MSU Gianforte School of Computing (Computer Science Department) 'General Information' page under 'Enrollment and Graduation Information'. It explicitly lists 'Fall 2024 Enrollment: 469 CS majors, 5 Data Science majors, 30 M.S., 7 Cyber M.S., 26 Ph.D.' I used 469 as undergrad_cs_count (CS majors) and summed masters as grad_cs_count = 30 (M.S.) + 7 (Cyber M.S.) = 37. PhD count taken directly as 26. Page content includes 'Fall 2024' explicitly; no visible 'last updated' date on the page."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 12,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 14,
+    "a40_count": 26,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.montana.edu/uit/rci/tempest/system/computational-resources.html",
+    "notes": "Cluster found with explicit GPU counts/specs: Tempest (MSU RCI). Calculations from node counts: H100: 3 nodes \u00d7 4 GPUs/node = 12 (counted as H100 SXM due to 'NVLink interconnect' on quad-GPU nodes; form factor not explicitly stated on source page). A100: (2 quad nodes \u00d7 4) + (3 dual nodes \u00d7 2) = 8 + 6 = 14, and A100 described as 40GB => a100_40gb_count=14. A40: 13 nodes \u00d7 2 GPUs/node = 26. Other listed RCI systems (Hyalite, Snowcrest, Nautilus) did not provide a fixed inventory count of GPUs on public pages, so they are not included in totals."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

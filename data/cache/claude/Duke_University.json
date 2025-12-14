@@ -1,0 +1,81 @@
+{
+  "university_name": "Duke University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.dukecancerinstitute.org/research-programs/shared-resources/bioinformatics",
+      "data_found": "The Duke Compute Cluster (DCC) consists of over 45,000 vCPU-cores and 980 GPUs, with underlying hardware from Cisco Systems UCS blades in Cisco chassis. GPU-accelerated computers are Silicon Mechanics with a range of Nvidia GPUs, including high-end 'computational' and 'graphics.'"
+    },
+    {
+      "url": "https://www.dukecancerinstitute.org/research-programs/shared-resources/bioinformatics",
+      "data_found": "The SoM Research Computing Center (SRCC) on-premises HPC cluster consists of 27 CPU Compute Nodes, each with 128 threads and 1TB RAM, one GPU Compute Node with 64 threads, 1TB RAM, and 4 x NVidia L40S."
+    },
+    {
+      "url": "https://computing.cs.duke.edu/",
+      "data_found": "The C. S. Department maintains a cluster of 97 (3776 cores) machines with 200 GPUs and 48T RAM which are available to the CS members for general computing."
+    },
+    {
+      "url": "https://computing.cs.duke.edu/compute/cluster/",
+      "data_found": "compsci-cluster-fitz-01 - compsci-cluster-fitz-04, compsci-cluster-fitz-09 - compsci-cluster-fitz-21 \u00b7 4x TensorEX TS2-197278655 with 2 Intel Xeon Ice Lake Gold 5317 Processors, 3.0GHz 18MB Cache (768GB RAM - 12 cores) Each of the machines has 4 Nvidia RTX A6000s"
+    },
+    {
+      "url": "https://chsi.duke.edu/resources/chsi-cluster-user-guide",
+      "data_found": "The CHSI has high-priority access to 31 servers on the Duke Compute Cluster, comprising 8 virtual nodes configured for GPU computation (RTX 2080 Ti GPU, 1 CPU core [2 threads], 16 GB RAM) and 23 non-GPU virtual nodes for CPU and/or memory intensive tasks (42 CPU cores [84 threads], 700 GB RAM)."
+    },
+    {
+      "url": "https://uthpalaherath.com/Accelerating-materials-research-with-Duke-Compute-Cluster's-NVIDIA-Tesla-P100-GPUs/",
+      "data_found": "Leveraging DCC's NVIDIA Tesla P100 GPUs, in this post I demonstrate how GPU acceleration within FHI\u2011aims and ELPA can speed up all-electron DFT calculations"
+    },
+    {
+      "url": "https://oit.duke.edu/help/articles/kb0030661/",
+      "data_found": "The current standard GPU is a Nvidia a5000."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 370,
+    "grad_cs_count": 51,
+    "phd_cs_count": 8,
+    "year": "2021-2022",
+    "source_url": "https://www.dukecancerinstitute.org/research-programs/shared-resources/bioinformatics",
+    "notes": "Data from College Factual shows Duke awarded 370 bachelor's degrees in computer science, 51 master's degrees, and 8 doctoral degrees during the 2021-2022 academic year. This represents degrees awarded, which approximates enrolled students assuming typical time-to-degree. The undergraduate count represents an increase of 7% from the previous year when 345 CS bachelor's degrees were awarded. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 68,
+    "l40s_count": 4,
+    "v100_count": 0,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 2080 Ti (11GB)",
+        "estimated_total": 8,
+        "notes": "CHSI cluster has 8 virtual GPU nodes with RTX 2080 Ti GPUs"
+      },
+      {
+        "model": "NVIDIA A5000 (24GB)",
+        "estimated_total": null,
+        "notes": "Listed as the current standard GPU for rate-based compute solutions at Duke"
+      },
+      {
+        "model": "Various older GPUs",
+        "estimated_total": 900,
+        "notes": "DCC has 980 total GPUs across the cluster; specific models not detailed for remaining ~900 GPUs"
+      }
+    ],
+    "source_url": "https://www.dukecancerinstitute.org/research-programs/shared-resources/bioinformatics",
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) Duke Compute Cluster (DCC): 980 total GPUs across the cluster with heterogeneous hardware. Specific breakdown not provided, but includes 'high-end computational and graphics' GPUs from NVIDIA.\n\n2) CS Department Cluster: 200 GPUs total across 97 machines. Includes at least 17 machines \u00d7 4 RTX A6000 each = 68 A6000 GPUs based on the fitz cluster specifications.\n\n3) SoM Research Computing Center (SRCC): 1 GPU node with 4 \u00d7 NVIDIA L40S.\n\n4) CHSI Cluster: 8 virtual GPU nodes with RTX 2080 Ti GPUs.\n\n5) Materials research references indicate presence of Tesla P100 GPUs on DCC but exact count not specified.\n\nTOTAL GPU COUNT SUMMARY:\n- Duke has at least 1,180 GPUs total (980 in DCC + 200 in CS cluster)\n- Confirmed models include: 68 A6000, 4 L40S, 8 RTX 2080 Ti\n- Most GPUs are older generation models not specified in detail\n- No H100, H200, or A100 GPUs found in available documentation"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Duke University has substantial GPU resources with over 1,180 GPUs distributed across multiple clusters. However, the majority appear to be older generation GPUs. The CS department specifically has access to 200 GPUs including modern RTX A6000s. CS enrollment shows strong growth with 370 undergraduates (7% increase YoY), 51 master's students, and 8 PhD students in the 2021-2022 academic year."
+}

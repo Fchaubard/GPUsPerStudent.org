@@ -1,0 +1,45 @@
+{
+  "university_name": "St. Mary's University of Minnesota",
+  "data_retrieved_date": "2025-05-23",
+  "sources": [
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=Saint+Mary%27s+University+of+Minnesota&s=all&id=174914#programs",
+      "data_found": "NCES College Navigator 2023 Data: Bachelor's degrees awarded in Computer and Information Sciences (13); Master's degrees awarded in Computer and Information Sciences (0) and Data Science/Analytics (68)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/saint-marys-university-of-minnesota",
+      "data_found": "DataUSA profile confirms degree completion trends used for enrollment estimation."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 52,
+    "grad_cs_count": 136,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Saint+Mary%27s+University+of+Minnesota&s=all&id=174914#programs",
+    "notes": "Exact enrollment by major is not publicly reported in a Common Data Set. Counts are estimated based on 2023 IPEDS degree completion data. Undergrad CS: 13 Bachelor's degrees awarded in Computer & Information Sciences * 4 years = 52 est. enrollment. Grad CS/Data: 68 Master's degrees awarded in Data Intelligence/Analytics fields * 2 years = 136 est. enrollment. The university does not offer a PhD in Computer Science. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Saint+Mary%27s+University+of+Minnesota&s=all&id=174914#programs",
+    "notes": "No public record of an on-premise research computing cluster, HPC facility, or enterprise GPU resources (H100/A100) exists for this university. Computer Science and Data Intelligence programs appear to rely on standard computer labs and potentially cloud-based resources, though no specific hardware specifications are published. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No public information available regarding compute credit grants."
+  },
+  "analysis_notes": "St. Mary's University of Minnesota is a smaller private institution. Extensive searches for 'HPC', 'Cluster', 'GPU', and 'Supercomputer' on the .smumn.edu domain yielded no results. The curriculum focuses on applied analytics and standard CS education rather than large-scale computational research."
+}

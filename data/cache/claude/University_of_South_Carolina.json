@@ -1,0 +1,51 @@
+{
+  "university_name": "University of South Carolina",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://sc.edu/about/offices_and_divisions/division_of_information_technology/rc/resources/",
+      "data_found": "Theia is a new AI-focused HPC cluster in early-stage production at the University of South Carolina. Theia features (28) 112-core CPU nodes, 10 quad A100/H100 GPU nodes, and 1.5 PB GPFS scratch for a total of 3808 Cores and 675 TFLOPS combined CPU and GPU peak performance."
+    },
+    {
+      "url": "https://research.cec.sc.edu/aii/",
+      "data_found": "It provides world-class computing resources (e.g., the latest Nvidia 8xA100 Tensor core based GPU cluster with 5 petaFLOPS AI, 10 petaOPS INT8)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 350,
+    "grad_cs_count": 150,
+    "phd_cs_count": 50,
+    "year": "2024-2025",
+    "source_url": "https://sc.edu/about/offices_and_divisions/division_of_information_technology/rc/resources/",
+    "notes": "CS enrollment estimated based on total university enrollment of 38,300+ students (Fall 2024) and typical CS department sizes at similar R1 universities. The College of Engineering and Computing has more than 3300 students total, with CS typically comprising 15-20% of engineering enrollment at comparable institutions. Conservative estimates used given lack of department-specific data. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 20,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 48,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 80,
+    "p100_count": 40,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "IBM Power8 GPU servers",
+        "estimated_total": 8,
+        "notes": "Hyperion includes 2 IBM Power8 quad GPU servers = 8 GPUs total. Specific GPU models not stated but likely Tesla-generation given IBM Power8 era."
+      }
+    ],
+    "source_url": "https://sc.edu/about/offices_and_divisions/division_of_information_technology/rc/resources/",
+    "notes": "CLUSTERS INCLUDED:\n\n1) Theia (AI-focused cluster): 10 quad A100/H100 GPU nodes = 40 GPUs total. Split estimated as 20 H100 + 20 A100 since described as 'A100/H100' mixed cluster.\n\n2) AI Institute cluster: 8xA100 GPU cluster mentioned separately = 8 A100 GPUs.\n\n3) Hyperion (flagship cluster): 53 GPU nodes total. Based on 2017 announcement of 'powerful GPU nodes' and 2023 Phase III CPU-only expansion, these are likely older generation GPUs (V100/P100 era).\n\nTOTAL CALCULATIONS:\n- H100: 20 (from Theia mixed nodes)\n- A100 80GB: 20 (Theia) + 8 (AI Institute) + 20 (est. newer Hyperion nodes) = 48\n- V100: 80 (est. from portion of Hyperion's 53 GPU nodes)\n- P100: 40 (est. from older Hyperion GPU nodes)\n- Other: 8 (IBM Power8 quad GPU servers)\n\nNote: Exact GPU counts per node and model distribution for Hyperion's 53 GPU nodes not specified in sources, so estimates based on typical configurations and cluster age."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected December 2025. GPU resources documented across three main clusters: Theia (new AI-focused), Hyperion (flagship HPC), and AI Institute resources. Student counts estimated from university-wide enrollment data as CS-specific enrollment not found in public sources."
+}

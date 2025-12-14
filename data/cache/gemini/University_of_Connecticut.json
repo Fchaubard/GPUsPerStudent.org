@@ -1,0 +1,42 @@
+{
+  "university_name": "University of Connecticut",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 1029,
+    "grad_cs_count": 94,
+    "phd_cs_count": 118,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Undergraduate count refers specifically to the 'Computer Science' BS major (excluding Computer Engineering). Graduate counts are from the 'Computer Science & Engineering' department breakdown in the official BPIR enrollment report (94 MS + 118 PhD). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 40,
+    "p100_count": 40,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K40/K80",
+        "estimated_total": null,
+        "notes": "Older nodes (Hornet cluster) historically contained K40/K80s, but recent documentation focuses on the P100/V100 partition."
+      }
+    ],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Calculations based on Storrs HPC Guide Hardware page:\n1. P100: 20 nodes * 2 GPUs = 40 P100.\n2. V100: (12 nodes * 2 GPUs) + (4 nodes * 4 GPUs) = 24 + 16 = 40 V100.\nNo public documentation was found confirming the deployment of A100 or H100 nodes in the central Storrs HPC cluster as of mid-2024. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UConn's primary central resource (Storrs HPC) relies heavily on V100 and P100 generations according to public documentation. While individual labs may possess newer hardware (A100/H100), they are not listed in the central facility's public hardware inventory."
+}

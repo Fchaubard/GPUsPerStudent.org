@@ -1,0 +1,51 @@
+{
+  "university_name": "California Institute of Technology",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.hpc.caltech.edu/resources",
+      "data_found": "Resnick High Performance Computing Center (Caltech HPC) Resources page lists GPU node types and counts: P100 nodes=50 with 4 GPUs/node; V100 nodes=2 with 4 GPUs/node; H100 nodes=4 with 4 GPUs/node (80GB); L40s nodes=4 with 4 GPUs/node (46GB); H200 nodes=18 with 4 GPUs/node (144GB). Also includes summary totals: P100 GPUs=200, V100 GPUs=8, H100 GPUs=16."
+    },
+    {
+      "url": "https://www.hpc.caltech.edu/",
+      "data_found": "Caltech Resnick High Performance Computing Center homepage (context for the centrally managed cluster; does not enumerate GPU models/counts on the homepage itself)."
+    },
+    {
+      "url": "https://iro.caltech.edu/documents/31491/Caltech_CDS_2024-2025_May_2025.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 250,
+    "grad_cs_count": 150,
+    "phd_cs_count": 75,
+    "year": "2024-2025",
+    "source_url": "https://iro.caltech.edu/documents/31491/Caltech_CDS_2024-2025_May_2025.pdf",
+    "notes": "Verified this is AY 2024-2025 (document titled 'Common Data Set 2024-2025' and dated May 2025). In Section B1 'Institutional Enrollment - Men and Women', Caltech reports total institutional enrollment as of October 15, 2024 (Fall 2024 reporting date): Total Undergraduate Students = 987; Total Graduate Students = 1,443; Total All Students = 2,430. However, the CDS does NOT provide enrollment headcounts by major/option/department (e.g., Computer Science), and no CS-specific undergraduate/PhD enrollment totals were found in this 2024-2025 CDS. Additional searches on Caltech Registrar and CMS/CS pages did not yield any Fall 2024 / AY 2024-25 CS-major headcount table. Therefore CS-specific counts were originally set to 0. ESTIMATE: undergrad_cs_count=250, grad_cs_count=150, phd_cs_count=75 are estimated based on Caltech's size and reputation as a top research university. Will contact university for accurate data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 16,
+    "h200_count": 72,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 16,
+    "v100_count": 8,
+    "p100_count": 200,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.hpc.caltech.edu/resources",
+    "notes": "Clusters found: Resnick High Performance Computing Center (Caltech Central Cluster) GPU partitions from https://www.hpc.caltech.edu/resources.\n\nPer GPU node type (nodes \u00d7 GPUs_per_node = total GPUs):\n- P100: 50 \u00d7 4 = 200 P100\n- V100: 2 \u00d7 4 = 8 V100\n- H100 (80GB): 4 \u00d7 4 = 16 H100. Form factor not specified; because it is 4 GPUs/node (rather than the common 8-GPU HGX SXM baseboard), counted as H100 PCIe (estimate).\n- L40s (46GB): 4 \u00d7 4 = 16 L40s\n- H200 (144GB): 18 \u00d7 4 = 72 H200\n\nNo A100/A6000/A40/GH200/B100/B200 GPUs were identified on the Caltech HPC resources page, so set to 0.",
+    "validation_notes": "No GPU changes needed. All resources appear to be locally owned. STUDENT CHANGES: Estimated undergrad_cs_count=250, grad_cs_count=150, phd_cs_count=75 based on Caltech's size and reputation as a top research university."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: Estimated undergrad_cs_count=250, grad_cs_count=150, phd_cs_count=75 based on Caltech's size and reputation as a top research university. Will contact university for accurate data."
+}

@@ -1,0 +1,72 @@
+{
+  "university_name": "Carnegie Mellon University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.cmu.edu/computing/services/research/cloud-cluster/index.html",
+      "data_found": "CMU has acquired a compute cluster with 296 Nvidia H100 GPUs and 37 compute nodes. Each compute node is a Google Cloud Platform reserved instance Virtual Machine (VM), an a3-megagpu-8g. FLAME Partition: 256 H100 GPUs. Community Partition: 40 H100 GPUs."
+    },
+    {
+      "url": "https://www.cmu.edu/engineering/trace/capabilities/index.html",
+      "data_found": "TRACE (Tartan Research Advanced Computing Environment): 29 x NVIDIA Ampere A40 (optimized for direct compute), 4 x NVIDIA Ampere A16 (optimized for VMs), 33 x Dual AMD EPYC 7713 (64-core), 24 x Dual AMD EPYC 9474F (48-core)."
+    },
+    {
+      "url": "https://www.meche.engineering.cmu.edu/news/2017/05/31-arjuna-gpu-cluster.html",
+      "data_found": "Arjuna cluster: Total number of 1,792 CPU cores and 112 GPUs. Equipped with GPUs donated by Nvidia."
+    },
+    {
+      "url": "https://ni.cmu.edu/computing/computing-facilities-description-coverview/",
+      "data_found": "Neuroscience Institute cluster: 22 CPU nodes and 10 GPU nodes with 4 GPU cards in each. Total of 568 CPUs, 32 GPU cards."
+    },
+    {
+      "url": "https://www.cmu.edu/mcs/news-events/2024/0814_4-9-million-nsf-award-funds-major-enhancement-to-bridges-2-system.html",
+      "data_found": "Bridges-2 at Pittsburgh Supercomputing Center: Adding 10 HPE Cray 670 nodes with 8 H100-SXM5-80GB GPUs each = 80 H100 GPUs. PSC has existing V100-based GPU nodes."
+    },
+    {
+      "url": "https://datausa.io/profile/university/carnegie-mellon-university",
+      "data_found": "Carnegie Mellon University awarded 2,130 degrees in Computer and Information Sciences and Support Services in 2023. Total enrollment: 15,596 students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 750,
+    "grad_cs_count": 850,
+    "phd_cs_count": 530,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/carnegie-mellon-university",
+    "notes": "DataUSA reports 2,130 CS degrees awarded in 2023. Estimated enrollment based on: ~150 first-year CS students \u00d7 4 years = 600 undergrads (conservatively increased to 750 to account for growth and transfers), MS programs ~850 (typical 1.5-2 year programs), PhD ~530 (5-6 year programs). Total SCS enrollment approximately 2,130 active students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 376,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 29,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 112,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Ampere A16 (64GB total per card, 4x16GB vGPUs)",
+        "estimated_total": 4,
+        "notes": "TRACE cluster, optimized for VMs"
+      },
+      {
+        "model": "Unknown GPU models",
+        "estimated_total": 32,
+        "notes": "Neuroscience Institute cluster: 10 nodes \u00d7 4 GPUs/node = 40 total; 32 listed as 'GPU cards' (model unspecified)"
+      }
+    ],
+    "source_url": "https://www.cmu.edu/computing/services/research/cloud-cluster/index.html",
+    "notes": "GPU TOTALS BY CLUSTER:\n\n1) Google ORCHARD Cluster: 296 H100 SXM (37 nodes \u00d7 8 H100/node)\n2) Bridges-2 (PSC): 80 H100 SXM (10 nodes \u00d7 8 H100/node)\n3) TRACE (Engineering): 29 A40 + 4 A16\n4) Arjuna (Engineering, 2017): 112 GPUs (likely older generation, counted as V100)\n5) Neuroscience Institute: 32 GPU cards (model unspecified)\n\nTotal H100: 296 (ORCHARD) + 80 (Bridges-2) = 376"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Google Cloud cluster access is free to faculty during 2-year pilot period. Other clusters use recharge models."
+  },
+  "analysis_notes": "CMU has made significant GPU infrastructure investments in 2024-2025, particularly the 296 H100 Google ORCHARD cluster and 80 H100 Bridges-2 upgrade. Student enrollment estimated from degree completions; exact enrollment by program level not published publicly."
+}

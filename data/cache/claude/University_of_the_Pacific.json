@@ -1,0 +1,57 @@
+{
+  "university_name": "University of the Pacific",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.collegefactual.com/colleges/university-of-the-pacific/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, University of the Pacific handed out 68 bachelor's degrees in computer science. This is an increase of 113% over the previous year when 32 degrees were handed out."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-the-pacific",
+      "data_found": "In 2023, 1,905 degrees were awarded across all undergraduate and graduate programs at University of the Pacific. The most common bachelors degree concentration at University of the Pacific was General Biological Sciences with 130 degrees awarded."
+    },
+    {
+      "url": "https://www.pacific.edu/about-pacific/fast-facts",
+      "data_found": "Enrollment as of Fall 2025; Demographics as of Fall 2024; Student/Faculty ratio: 13:1"
+    },
+    {
+      "url": "https://www.aubsp.com/pacific-edu/",
+      "data_found": "As of Fall 2024, the total enrollment was 6,945 students, comprising 3,250 undergraduates, 2,068 graduate students, and 1,627 professional students."
+    },
+    {
+      "url": "https://engineering.pacific.edu/engineering/academics/computer-science",
+      "data_found": "The computer science program is accredited by the Computing Accreditation Commission of ABET"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 272,
+    "grad_cs_count": 10,
+    "phd_cs_count": 0,
+    "year": "2024-2025",
+    "source_url": "https://www.collegefactual.com/colleges/university-of-the-pacific/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "CS undergraduate count estimated from: 68 bachelor's degrees awarded in 2021-2022 (increase of 113% from prior year's 32). With this growth trajectory and assuming a 4-year program duration, estimated steady-state enrollment = 68 degrees \u00d7 4 years = 272 undergraduates. Graduate CS count (MS) estimated from: 5 master's degrees awarded in 2021-2022 per the same source, with 1.5-2 year program duration yielding ~10 enrolled MS students. PhD CS count: No evidence of a CS PhD program at University of the Pacific."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.collegefactual.com/colleges/university-of-the-pacific/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "No GPU cluster or HPC resources with GPU specifications were found in public searches for University of the Pacific. The university appears to focus on undergraduate teaching and does not publicly document research computing GPU infrastructure. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of the Pacific is primarily an undergraduate-focused institution with a strong computer science program that awarded 68 bachelor's degrees in 2021-2022. The university has limited public information about research computing infrastructure or GPU resources. Total enrollment is approximately 6,945 students across three campuses (Fall 2024)."
+}

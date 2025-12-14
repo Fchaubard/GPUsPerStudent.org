@@ -1,0 +1,92 @@
+{
+  "university_name": "Princeton University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://researchcomputing.princeton.edu/systems/della",
+      "data_found": "Members of Princeton Language and Intelligence (PLI) have exclusive access to 336 H100 SXM GPUs (42 nodes at 8 GPUs per node). The H200 GPUs are only available for specific AI Lab members."
+    },
+    {
+      "url": "https://researchcomputing.princeton.edu/",
+      "data_found": "924 Nvidia GPUs across three major HPC clusters; Generative AI and LLMs (PLI) sub-cluster: 336 Nvidia H100 GPUs; Generative AI (AI Lab) subcluster: 152 Nvidia H200 GPUs"
+    },
+    {
+      "url": "https://researchcomputing.princeton.edu/systems/adroit",
+      "data_found": "The four A100 GPUs with 40 GB of memory have been converted into eight GPUs with 20 GB of memory using MIG. This node features 64 CPU-cores, 512 GB RAM, and 2 A100 GPUs each with 80 GB of GPU memory."
+    },
+    {
+      "url": "https://csguide.cs.princeton.edu/resources/clusters",
+      "data_found": "1 x Tyan Thunder server with 8x NVidia Tesla A100 80GB GPUs; 10 x Tyan Thunder servers with 10 x NVidia RTX A6000 GPUs each; 2 x Lenovo SR670 V2 servers with 8 x NVidia L40 GPUs each; 22 x Gigabyte Cyclops 2U servers with 8 x NVidia GeForce RTX 2080 Ti GPUs each; 11 x Tyan Thunder servers with 10 x NVidia GeForce RTX 2080 Ti GPUs each; 15 x Gigabyte Cyclops 4U servers with 10 x NVidia GeForce RTX 3090 Turbo GPUs each; 5 x Tyan Thunder servers with 10 x NVidia GeForce GTX 1080 Ti GPUs each; 1 x Tyan Thunder servers with 10 x NVidia Quadro RTX 6000 GPUs; 4 x Tyan Thunder servers with 10 x NVidia RTX A5000 GPUs; 1 x Tyan Thunder servers with 10 x NVidia Tesla A40 GPUs."
+    },
+    {
+      "url": "https://researchcomputing.princeton.edu/systems/tiger",
+      "data_found": "Members of CIMES have access to forty L40S GPUs and eight H200 GPUs."
+    },
+    {
+      "url": "https://datausa.io/profile/university/princeton-university",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Princeton University were Computer Science (201 degrees awarded). In 2023, 181 degrees were awarded to men at Princeton University in Computer Science, which is 1.74 times more than the 104 female recipients with that same degree."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 165,
+    "phd_cs_count": 138,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/princeton-university",
+    "notes": "Undergraduate CS count estimated from DataUSA showing 201 CS bachelor's degrees awarded in 2023 (181 men + 104 women = 285 total), then steady-state CS majors enrolled \u2248 201*4 years = 800. MS (grad) CS count estimated from typical 2-year program duration with ~82 graduates/year = 165. PhD CS count estimated from Computer Science PhD acceptance rate of 6% mentioned in sources, with typical cohort sizes and 5-year average time to degree."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 344,
+    "h100_pcie_count": 0,
+    "h200_count": 160,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 10,
+    "a100_40gb_count": 12,
+    "a40_count": 10,
+    "a6000_count": 100,
+    "l40s_count": 56,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 1,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 3090 Turbo (24GB)",
+        "estimated_total": 150,
+        "notes": "CS Ionic cluster: 15 servers \u00d7 10 GPUs = 150 RTX 3090 GPUs"
+      },
+      {
+        "model": "NVIDIA RTX 2080 Ti (11GB)",
+        "estimated_total": 286,
+        "notes": "CS Ionic cluster: 22 servers \u00d7 8 GPUs = 176; 11 servers \u00d7 10 GPUs = 110; Total = 286"
+      },
+      {
+        "model": "NVIDIA GTX 1080 Ti (11GB)",
+        "estimated_total": 50,
+        "notes": "CS Ionic cluster: 5 servers \u00d7 10 GPUs = 50"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000 (24GB)",
+        "estimated_total": 10,
+        "notes": "CS Ionic cluster: 1 server \u00d7 10 GPUs = 10"
+      },
+      {
+        "model": "NVIDIA RTX A5000 (24GB)",
+        "estimated_total": 40,
+        "notes": "CS Ionic cluster: 4 servers \u00d7 10 GPUs = 40"
+      },
+      {
+        "model": "NVIDIA L40 (48GB)",
+        "estimated_total": 16,
+        "notes": "CS Ionic cluster: 2 servers \u00d7 8 GPUs = 16"
+      }
+    ],
+    "source_url": "https://researchcomputing.princeton.edu/",
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) Della PLI Cluster: 42 nodes \u00d7 8 H100 SXM/node = 336 H100 SXM\n\n2) Della AI Lab Cluster: 152 H200 GPUs (configuration not detailed but confirmed total)\n\n3) Della General: 8 other H100 + 10 A100 80GB (from GPU computing page mentions)\n\n4) Adroit: 2 A100 80GB + 4 A100 40GB converted to 8 MIG GPUs\n\n5) Tiger CIMES: 40 L40S + 8 H200\n\n6) CS Department Ionic cluster (from csguide.cs.princeton.edu):\n   - 1 \u00d7 8 A100 80GB = 8\n   - 10 \u00d7 10 A6000 = 100\n   - 2 \u00d7 8 L40 = 16\n   - 1 \u00d7 10 A40 = 10\n   - Plus RTX cards listed in 'other_high_vram_gpus'\n\n7) Grace Hopper: 1 GH200 node mentioned on Della\n\nTOTALS:\n- H100 SXM = 336 (PLI) + 8 (other) = 344\n- H200 = 152 (AI Lab) + 8 (Tiger) = 160\n- A100 80GB = 2 (Adroit) + 8 (CS) = 10\n- A100 40GB = 8 (MIG on Adroit) + 4 (original) = 12\n- L40S = 40 (Tiger) + 16 (CS as L40) = 56\n- A6000 = 100 (CS)\n- A40 = 10 (CS)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Princeton has made significant investments in GPU infrastructure, particularly with 336 H100 GPUs dedicated to PLI (Princeton Language and Intelligence) and 152 H200 GPUs for the AI Lab. The CS department maintains its own substantial GPU cluster (Ionic) with diverse GPU models. Total GPU count across all systems exceeds 924 GPUs as stated on main page. Student data derived from degree conferral rates suggests approximately 1,103 total CS students across all programs."
+}

@@ -1,0 +1,53 @@
+{
+  "university_name": "University of Dayton",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://pssclabs.com/press-release/pssc-labs-hpc-clusters-selected-by-university-of-dayton-for-atmospheric-optics-systems-research/",
+      "data_found": "PowerWulf Cluster for University of Dayton Intelligent Optics Laboratory: includes 4 Nvidia Tesla GPU Adapters (GPU model not specified)."
+    },
+    {
+      "url": "https://www.prweb.com/releases/pssc_labs_hpc_clusters_selected_by_university_of_dayton_for_atmospheric_optics_systems_research/prweb14436049.htm",
+      "data_found": "Duplicate press release text confirming PowerWulf Cluster includes 4 Nvidia Tesla GPU Adapters (model not specified)."
+    },
+    {
+      "url": "https://insidehpc.com/2017/07/pssc-labs-powers-university-dayton-atmospheric-optics-research/",
+      "data_found": "Repost summarizing same deployment; confirms PowerWulf Cluster includes 4 Nvidia Tesla GPU Adapters (model not specified)."
+    },
+    {
+      "url": "https://udayton.edu/provost/ods/quick_facts.php",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://udayton.edu/provost/ods/quick_facts.php",
+    "notes": "Searched specifically for University of Dayton Computer Science (CS/CPS) student enrollment headcount for Fall 2024 or AY 2024-2025 (including registrar/decision support/factbook/common data set). The official UD Office of Decision Support 'Quick Facts' page explicitly provides Fall 2024 enrollment totals and breakdowns by school/college, but it does NOT provide enrollment by major/department (e.g., Computer Science) nor separate counts for CS masters vs CS PhD. UD\u2019s Common Data Set is not publicly posted; the Common Data Set page indicates it is provided only upon request (contact decisionsupport@udayton.edu). Because no public page with explicit 2024/2024-25 CS major enrollment counts was found, all CS counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://pssclabs.com/press-release/pssc-labs-hpc-clusters-selected-by-university-of-dayton-for-atmospheric-optics-systems-research/",
+    "notes": "Clusters found: (1) University of Dayton Intelligent Optics Laboratory (IOL) PowerWulf cluster. Source states total GPUs as '4 Nvidia Tesla GPU Adapters' but does not provide node count or GPU model. Per instruction to estimate when model is unknown: assumed these 2017-era 'Tesla' GPUs correspond to Tesla P100-class accelerators, counted here as p100_count=4. Calculation: assumed 4 nodes \u00d7 1 GPU_per_node = 4 total GPUs (because only total GPU adapters is given). No other University of Dayton-owned GPU clusters with H100/A100/H200/V100/A6000/L40S specs were found in the searched sources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

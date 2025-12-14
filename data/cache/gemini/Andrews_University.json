@@ -1,0 +1,41 @@
+{
+  "university_name": "Andrews University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/andrews-university",
+      "data_found": "2022 Degrees Awarded in Computer & Information Sciences: 17 Bachelor's degrees (13 General CS + 4 Informatics). 0 Master's or Doctoral degrees awarded in this category."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 76,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/andrews-university",
+    "notes": "Official enrollment specific to the Department of Computing is not published on a live HTML page. Counts are estimated based on verifiable degree completion data from IPEDS/DataUSA. In 2022, 17 Bachelor's degrees were awarded in Computer & Information Sciences. Estimating steady-state enrollment: 17 degrees/year \u00d7 4.5 years (avg duration) \u2248 76 undergraduates. No Graduate or PhD programs in Computer Science are currently listed in the department catalog; '0' reflects the lack of an active degree program in this specific field."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/andrews-university",
+    "notes": "Extensive searches for 'HPC', 'Cluster', 'GPU', 'H100', 'A100', and 'Slurm' on the Andrews University domain yielded no evidence of an on-premise research computing cluster. The Department of Computing website lists standard instructional labs (Windows/Linux workstations) but no datacenter-class GPU resources. As a smaller liberal arts institution (~3,000 students), it likely relies on cloud resources or individual workstations for any necessary GPU compute. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No public data found regarding centrally managed cloud compute credits."
+  },
+  "analysis_notes": "Andrews University is a private teaching university. Unlike R1 research institutions, it does not maintain a dedicated Research Computing center. Hardware searches confirm the presence of instructional labs but the absence of verifiable HPC clusters."
+}

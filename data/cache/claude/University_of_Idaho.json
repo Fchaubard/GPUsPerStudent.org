@@ -1,0 +1,65 @@
+{
+  "university_name": "University of Idaho",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.uidaho.edu/compute/Tutorials/GPU_Nodes.html",
+      "data_found": "Node 123, a Supermicro server with four NVIDIA A100 GPUs; Multiple GPU nodes in gpu-short, gpu-long, gpu-8, gpu-9, and gpu-volatile partitions"
+    },
+    {
+      "url": "https://researchcomputing.uidaho.edu/high-performance-computing/",
+      "data_found": "The IBEST CRC provides researchers with large computing clusters, big memory machines, specialized GPU nodes, and massive data storage capacity"
+    },
+    {
+      "url": "https://www.c3plus3.org/falcon/",
+      "data_found": "Falcon supercomputer: approximately 932 nodes with dual Intel Xeon E5-2695v4 18-core processors (36 cores per node) for a total of 33,552 cores capable of more than 1 PetaFLOPS; owned by Idaho National Laboratory, managed by Idaho research computing consortium"
+    },
+    {
+      "url": "https://hpc.uidaho.edu",
+      "data_found": "Research Computing and Data Services (RCDS) is the central provider of research computing infrastructure; provides state-of-the-art high performance computing (HPC); supports an advanced mix of parallel clusters, customized virtual machines, and powerful stand-alone servers"
+    },
+    {
+      "url": "https://hpc.uidaho.edu/compute/Hardware/hardware.html",
+      "data_found": "Our main cluster provides over 1500 processor cores and over 8 terabytes of system memory, with Infiniband network connections"
+    },
+    {
+      "url": "https://www.uidaho.edu/newsroom/fall-enrollment-2024",
+      "data_found": "Overall student enrollment for Fall 2023 is 11,849 students; Graduate student enrollment is 1,929"
+    },
+    {
+      "url": "https://content-hub.uidaho.edu/api/public/content/e16fc402fa1841c5ab570a0ced6409e0?v=65d4dcf1",
+      "data_found": "University of Idaho Spring 2024 Enrollment by Campus and College shows Engineering college enrollment data"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 300,
+    "grad_cs_count": 75,
+    "phd_cs_count": 25,
+    "year": "2023-2024",
+    "source_url": "https://hpc.uidaho.edu/compute/Tutorials/GPU_Nodes.html",
+    "notes": "Exact CS department enrollment numbers not found in public sources. Estimates based on: 1) Total enrollment of 11,849 students (Fall 2023); 2) 1,929 graduate students total; 3) Engineering college patterns from Spring 2024 enrollment data; 4) DataUSA showing Computer, Engineering, and Science as the most common non-instructional staff category with 360 employees, suggesting a sizable CS department. Conservative estimates used. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 4,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": -1,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://hpc.uidaho.edu/compute/Tutorials/GPU_Nodes.html",
+    "notes": "CONFIRMED GPUs: Node 123 has 4x NVIDIA A100 GPUs (specific documentation found). The GPU nodes page mentions V100 GPUs are available but exact count not specified. Multiple GPU partitions exist (gpu-short, gpu-long, gpu-8, gpu-9, gpu-volatile, cmci-gpu-8) but specific node counts and GPU models per partition not detailed in public documentation. Falcon supercomputer (932 nodes) appears to be CPU-only based on specifications. University has access to off-campus resources through C3+3 collaboration and Idaho National Laboratory partnerships."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Limited public GPU specifications available. University of Idaho's Research Computing and Data Services (RCDS) manages multiple GPU nodes across different partitions, but detailed hardware inventory not publicly documented. Confirmed 4x A100 GPUs on Node 123. Additional GPU resources likely exist but specific counts not available in public sources. CS student enrollment estimated from overall university patterns due to lack of department-specific published data."
+}

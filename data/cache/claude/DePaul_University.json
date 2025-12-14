@@ -1,0 +1,53 @@
+{
+  "university_name": "DePaul University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/depaul-university",
+      "data_found": "Computer and Information Sciences and Support Services: 643 degrees awarded in 2023. The most popular Masters Degree concentration: General Computer Programming (106 degrees)."
+    },
+    {
+      "url": "https://offices.depaul.edu/president/notes-from-rob/2024-2025/Pages/student-success-enrollment-24.aspx",
+      "data_found": "10,504 undergraduates continued their studies this fall. Total enrollment fall 2024 is 21,210 compared to 21,348 in fall 2023."
+    },
+    {
+      "url": "https://www.cdm.depaul.edu/about/Pages/School-of-Computing.aspx",
+      "data_found": "One of the nation's largest and most comprehensive programs, DePaul University's Jarvis College of Computing and Digital Media (CDM) offers undergraduate and graduate programs. CDM has 30 labs with the latest technology."
+    },
+    {
+      "url": "https://resources.depaul.edu/newsline/sections/campus-and-community/Pages/cyberlabs.aspx",
+      "data_found": "Virtual labs in the Server Room support coursework and research with over 1,500 virtual machines that can simulate industries, threat environments, and enterprise-scale networks, making it possible to test developing tools such as small AI models and cloud systems."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 523,
+    "grad_cs_count": 106,
+    "phd_cs_count": 14,
+    "year": "2023",
+    "source_url": "https://datausa.io/profile/university/depaul-university",
+    "notes": "Data sourced from datausa.io. Undergraduate CS count estimated based on proportion of 643 total CS degrees awarded (523 estimated bachelor's based on typical 81% undergraduate proportion). Graduate CS count from reported 106 General Computer Programming MS degrees. PhD count estimated based on CDM's selective PhD program size (approximately 1-2% of total CS students)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://resources.depaul.edu/newsline/sections/campus-and-community/Pages/cyberlabs.aspx",
+    "notes": "No specific GPU cluster hardware specifications found. DePaul has virtual computing infrastructure with 1,500+ VMs for testing AI models and cloud systems, but no dedicated research GPU nodes were documented in available sources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "DePaul University has approximately 643 CS students across all levels based on degrees awarded. The university has 30 computing labs and virtual infrastructure for AI/ML work, but no dedicated GPU research cluster was found. As an urban teaching-focused institution, DePaul appears to emphasize cloud-based resources over on-premise HPC infrastructure."
+}

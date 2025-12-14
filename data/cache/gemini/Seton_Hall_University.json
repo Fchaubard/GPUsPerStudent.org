@@ -1,0 +1,45 @@
+{
+  "university_name": "Seton Hall University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.shu.edu/technology/services/high-performance-computing.html",
+      "data_found": "High Performance Computing (HPC) Service Description: Mentions availability of 'HPC resources' and a 'Linux cluster' for research, but provides no specific hardware specifications (node counts, GPU models) on the public-facing page."
+    },
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=Seton+Hall&s=all&id=186584#programs",
+      "data_found": "IPEDS/NCES Data 2023: Bachelor's degrees awarded in 'Computer and Information Sciences': 35. Master's degrees awarded in 'Data Science/Analytics': 29. No PhDs awarded in CS."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 140,
+    "grad_cs_count": 58,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Seton+Hall&s=all&id=186584#programs",
+    "notes": "Seton Hall does not publish a live enrollment dashboard for specific majors. Counts are estimated based on 2023 IPEDS completion data (degrees awarded). Undergrad CS estimated: 35 degrees awarded * 4 years = 140 students. Grad CS/Data Science estimated: 29 degrees awarded * 2 years (standard MS duration) = 58 students. Seton Hall does not currently offer a PhD in Computer Science."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.shu.edu/technology/services/high-performance-computing.html",
+    "notes": "No public hardware specifications found. While Seton Hall mentions a 'High Performance Computing' service and 'Linux cluster' on their technology services website, the page is a generic service description with no node inventory, GPU models, or counts listed. Access to specification details appears restricted to the 'mySHU' intranet. Consequently, verifiable counts are set to 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Seton Hall is a smaller research institution heavily focused on its 'Mobile Computing' (laptop) program. Unlike R1 institutions, it does not publish a public wiki or status page for a research cluster. Student numbers are estimated via federal IPEDS graduation data."
+}

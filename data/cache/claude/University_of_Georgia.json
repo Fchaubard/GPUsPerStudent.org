@@ -1,0 +1,52 @@
+{
+  "university_name": "University of Georgia",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/university-of-georgia-invests-24m-in-26-gpus-and-3tb-memory-nodes-for-sapelo2-hpc-cluster/",
+      "data_found": "The new compute nodes will be made up of Nvidia hardware; a 12-quad H100, a two-quad A100, and a 12-quad L4. Expected to be fully operational by fall 2024"
+    },
+    {
+      "url": "https://engineering.uga.edu/forging-the-future-of-computing-at-uga/",
+      "data_found": "It now serves nearly 1,800 undergraduate students pursuing computer science and data science degrees, another 260 graduate students, and more than 200 students pursuing one of its three certificate programs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1800,
+    "grad_cs_count": 239,
+    "phd_cs_count": 21,
+    "year": "2024",
+    "source_url": "https://engineering.uga.edu/forging-the-future-of-computing-at-uga/",
+    "notes": "Based on 2024 article stating School of Computing serves 'nearly 1,800 undergraduate students pursuing computer science and data science degrees, another 260 graduate students.' The 260 graduate students includes both MS and PhD students. News from fall 2024 enrollment shows computer science PhD program increased by 21 students, suggesting approximately 21 PhD students. MS enrollment estimated as 260 - 21 = 239 students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 48,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 64,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "l40_count": 48,
+    "v100_count": 34,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unspecified GPU models",
+        "estimated_total": 34,
+        "notes": "July 2024 data shows 194 total GPUs. Accounting for 48 H100, 64 A100, 48 L4 = 160 identified GPUs. Remaining 34 GPUs are likely older models (possibly V100, P100, etc.)"
+      }
+    ],
+    "source_url": "https://www.datacenterdynamics.com/en/news/university-of-georgia-invests-24m-in-26-gpus-and-3tb-memory-nodes-for-sapelo2-hpc-cluster/",
+    "notes": "CALCULATIONS: Based on multiple sources confirming new GPU deployments in 2024. From wiki.gacrc.uga.edu: 12 nodes \u00d7 4 H100/node = 48 H100 GPUs; 14 nodes \u00d7 4 A100/node = 56 A100 GPUs (existing). From DataCenterDynamics article about new 2024 investment: additional 2 nodes \u00d7 4 A100/node = 8 A100 GPUs, bringing total A100 to 64. L4 GPUs: 12 nodes \u00d7 4 L4/node = 48 L4 GPUs. Total identified: 48 H100 + 64 A100 + 48 L4 = 160 GPUs. The July 2024 proposal document states 194 total GPUs, leaving 34 unspecified GPUs of various models (likely older generation like V100). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected from University of Georgia's research computing center (GACRC) documentation and news sources. GPU counts based on node specifications with calculations shown. Student enrollment data from April 2024 article about School of Computing, with PhD count estimated from fall 2024 enrollment growth data."
+}

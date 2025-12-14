@@ -1,0 +1,55 @@
+{
+  "university_name": "Florida State University",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [
+    {
+      "url": "https://rcc.fsu.edu/systems",
+      "data_found": "HPC Cluster specifications: Lists 'gpu-a100' partition with 4 nodes (4 A100 GPUs each) and 'gpu-v100' partition with 6 nodes (2 V100 GPUs each)."
+    },
+    {
+      "url": "https://rcc.fsu.edu/hardware",
+      "data_found": "Detailed Hardware Table: Confirms A100 nodes have 4x A100 40GB; V100 nodes have 2x V100 32GB. Also lists 'gen-gpu' queue with 8 nodes of 4x GTX 1080Ti."
+    },
+    {
+      "url": "https://ir.fsu.edu/facts.aspx",
+      "data_found": "FSU Common Data Set / Fact Book data used to estimate graduate split (PhD vs MS) based on typical degree conferral ratios."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2100,
+    "grad_cs_count": 130,
+    "phd_cs_count": 70,
+    "year": "2024",
+    "source_url": "https://rcc.fsu.edu/systems",
+    "notes": "Undergrad count taken directly from Department 'About' page ('over 2,100'). Total graduate count listed as 'over 200'. Specific split between MS (Grad) and PhD is not explicitly detailed on the summary page, so it is estimated here as a 65/35 split based on typical FSU degree conferral rates found in Institutional Research reports (approx 130 MS / 70 PhD). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 12,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA GTX 1080Ti",
+        "estimated_total": 32,
+        "notes": "Listed in 'gen-gpu' partition: 8 nodes x 4 GPUs per node."
+      }
+    ],
+    "source_url": "https://rcc.fsu.edu/systems",
+    "notes": "GPU counts calculated from FSU Research Computing Center (RCC) system pages. \n1. 'gpu-a100' partition: 4 nodes x 4 A100 (40GB) = 16 GPUs.\n2. 'gpu-v100' partition: 6 nodes x 2 V100 (32GB) = 12 GPUs.\n3. 'gen-gpu' partition: 8 nodes x 4 GTX 1080Ti = 32 GPUs.\nFSU also operates 'Owner-based' condo nodes, but their specifications are not publicly enumerated in aggregate, so only public general access queues are counted here."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "FSU utilizes a central Research Computing Center (RCC) rather than department-specific clusters for the bulk of AI work. The 'HPC' cluster is the primary resource. Student numbers are high (over 2,000 undergrads), sourced from the department's overview."
+}

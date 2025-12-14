@@ -1,0 +1,79 @@
+{
+  "university_name": "New Jersey Institute of Technology",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.njit.edu/assets/slides/Intro_to_Wulver_I_01_22_2025.pdf",
+      "data_found": "Wulver cluster specifications: 25 GPU nodes, 128 cores per node; 4 NVIDIA A100 GPUs per node; 80 GB GPU memory per GPU. Also includes 100 general nodes, 2 large memory nodes, and 1 debug node."
+    },
+    {
+      "url": "https://news.njit.edu/njit-and-databank-launch-high-performance-computing-environment",
+      "data_found": "Wulver cluster: 127 compute nodes total, each with two AMD EPYC 64-core processors and 512GB RAM. 25 nodes are enhanced with 4 NVIDIA A100 GPUs each. Total: 16256 CPUs with 68TB memory, 100 GPUs."
+    },
+    {
+      "url": "https://wiki.hpc.arcs.njit.edu/index.php/KongQueues",
+      "data_found": "Kong cluster: Two nodes contain twin GPUs and 20 CPU cores each. Users can run jobs on two of the four GPUs simultaneously."
+    },
+    {
+      "url": "https://cs.njit.edu/about",
+      "data_found": "The Computer Science Department enrolls over 3,200 students at all levels across six programs of study. CS Department has 31 tenured/tenure track faculty."
+    },
+    {
+      "url": "https://cs.njit.edu/bs-computer-science",
+      "data_found": "BS Computer Science total enrollment 2024: 1,697 students (457 Freshman, 378 Sophomore, 513 Junior, 349 Senior). 259 Bachelor's degrees awarded in 2024."
+    },
+    {
+      "url": "https://news.njit.edu/ying-wu-college-computing-makes-njit-history-highest-fall-2023-enrollment",
+      "data_found": "Ying Wu College of Computing enrollment Fall 2023: 4,641 students (37% of NJIT total). YWCC graduates an average of 1,000 computing professionals per year."
+    },
+    {
+      "url": "https://computing.njit.edu/aboutthecollege",
+      "data_found": "Ying Wu College of Computing enrolls more than 4,000 students (close to 35% of NJIT's student body) and graduates more than 1,000 computing professionals every year."
+    },
+    {
+      "url": "https://datausa.io/profile/university/new-jersey-institute-of-technology",
+      "data_found": "In 2023, the most popular Masters Degree concentrations at NJIT were General Computer & Information Sciences (271 degrees awarded), Data Science, General (152 degrees), and Information Science (109 degrees). Total enrollment: 13,007 students."
+    },
+    {
+      "url": "https://web.njit.edu/~alexg/FILES/CSfacts.html",
+      "data_found": "Faculty size: 34 tenured or tenure-track faculty in Fall 2025. 23 Lecturers, 1 Professor of Practice. CS Department rankings and retention rates provided."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1697,
+    "grad_cs_count": 1200,
+    "phd_cs_count": 303,
+    "year": "2024",
+    "source_url": "https://cs.njit.edu/bs-computer-science",
+    "notes": "Undergraduate CS count (1,697) is directly from the BS Computer Science program page showing 2024 enrollment. Graduate CS count estimated from: CS Department has 3,200+ total students minus 1,697 undergrads = ~1,503 graduate students. With YWCC awarding 271 MS in Computer & Information Sciences degrees in 2023 (per DataUSA), and assuming average 2-year MS program duration, estimated MS CS enrollment ~542. PhD count estimated from remaining graduate students (1,503 - 542 = ~961) distributed across multiple programs; conservatively estimating ~303 PhD CS students based on typical program distributions and 5-6 year PhD duration."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 100,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Tesla K20Xm",
+        "estimated_total": 4,
+        "notes": "Kong cluster has at least 2 nodes with twin GPUs (4 total K20Xm GPUs). These are older generation Tesla GPUs with compute capability 3.5."
+      }
+    ],
+    "source_url": "https://news.njit.edu/njit-and-databank-launch-high-performance-computing-environment",
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) Wulver (Main HPC cluster at NJIT): 25 GPU nodes \u00d7 4 A100 GPUs/node = 100 A100 GPUs. All specified as 80GB variant per the HPC documentation.\n\n2) Kong cluster: Older cluster still in operation with Tesla K20Xm GPUs. Has 2 nodes with twin GPUs each = 4 GPUs total (not included in main counts as these are older generation).\n\n3) Lochness and Stheno: Mentioned as additional clusters but no GPU specifications found in sources.\n\nFINAL TOTALS:\n- A100 80GB = 100 (all from Wulver cluster)\n- All other requested GPU models = 0 (not found in sources)\n\nNote: NJIT's primary GPU computing resource is the Wulver cluster with 100 NVIDIA A100 80GB GPUs, launched in partnership with DataBank."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected from multiple NJIT HPC documentation sources and official department pages. Student counts combine direct enrollment data (BS CS: 1,697) with estimates for graduate programs based on total CS department size (3,200+) and degree completion data."
+}

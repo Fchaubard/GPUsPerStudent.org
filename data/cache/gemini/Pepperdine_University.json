@@ -1,0 +1,45 @@
+{
+  "university_name": "Pepperdine University",
+  "data_retrieved_date": "2025-05-27",
+  "sources": [
+    {
+      "url": "https://seaver.pepperdine.edu/natural-science/undergraduate/computer-science/",
+      "data_found": "Program overview: Describes the Computer Science major at Seaver College (undergraduate only). Mentions availability of 'computer labs' within the Keck Science Center but lists no specific HPC or cluster resources."
+    },
+    {
+      "url": "https://www.pepperdine.edu/academics/programs/",
+      "data_found": "Academic Program List: Confirms Pepperdine offers a B.S. in Computer Science and a B.S. in Mathematics/Computer Science, but does not offer a dedicated Master of Science in Computer Science or a PhD in Computer Science (Graduate programs focus on Business, Psychology, Law, and Public Policy)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 160,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://seaver.pepperdine.edu/natural-science/undergraduate/computer-science/",
+    "notes": "Undergraduate count is estimated based on IPEDS/NCES data regarding degrees conferred. In the most recent reported year, Pepperdine awarded approximately 35-40 bachelor's degrees in Computer Science and Mathematics-Computer Science. Assuming a standard 4-year retention and enrollment pipeline: ~40 graduates * 4 years = ~160 active majors. Graduate and PhD counts are 0 as Pepperdine is a Primarily Undergraduate Institution (PUI) for sciences and does not have a dedicated CS graduate school. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://seaver.pepperdine.edu/natural-science/undergraduate/computer-science/",
+    "notes": "Extensive searches for 'Pepperdine HPC', 'Pepperdine Research Computing Cluster', and 'Pepperdine GPU' yield no public evidence of a centralized research computing cluster or GPU farm. As a liberal arts-focused university, Pepperdine likely relies on standard teaching labs (workstations) and cloud computing for CS coursework rather than maintaining on-premise H100/A100 data centers found at R1 research universities."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No public data found regarding centralized compute credit allocations."
+  },
+  "analysis_notes": "Pepperdine is a moderate-sized private university with a focus on undergraduate liberal arts and professional graduate schools (Law, Business, Psychology). It does not fit the profile of an HPC-heavy research institution. No evidence of a 'research computing' division with hardware specs exists publicly. Student counts reflect the lack of a graduate CS program."
+}

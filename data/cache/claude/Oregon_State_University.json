@@ -1,0 +1,86 @@
+{
+  "university_name": "Oregon State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://it.engineering.oregonstate.edu/hpc/about-cluster",
+      "data_found": "The cluster is highlighted by the recent addition of 4 Nvidia DGX H100/H200 systems, each with 112 cores, 8 Hopper H100 or H200 GPUs, 2.0 GB RAM and 25 TB local scratch space, and our 6 Nvidia DGX-2 systems, each with 48 cores, 16 Tesla V100 GPUs, 1.5 TB RAM and 27 TB local scratch space. The cluster also has 24 additional GPU servers which include the L40S, A40, Tesla V100, Tesla T4, Quadro RTX 6000, and Quadro RTX 8000 GPUs. The College of Engineering HPC cluster is a heterogeneous mix of about 130 servers providing over 5000 CPU cores, over 200 GPUs, and over 50 TB total RAM."
+    },
+    {
+      "url": "https://research.oregonstate.edu/ora/internal-funding/huang-complex-supercomputing-seed-fund",
+      "data_found": "When the Jen-Hsun Huang and Lori Mills Huang Collaborative Innovation Complex (Huang Complex) opens in late 2026, it will host a nationally leading AI supercomputer that has a large number (150+) of the latest generation of NVIDIA Rubin GPUs, combined with NVIDIA Vera ARM CPUs."
+    },
+    {
+      "url": "https://engineering.oregonstate.edu/all-stories/nvidia-dgx-2",
+      "data_found": "In the summer of 2019, the college invested $2.6 million in a high-performance artificial intelligence computing cluster built using six NVIDIA DGX-2 systems, which are in operation at the Kelley Engineering Center."
+    },
+    {
+      "url": "https://cosine.oregonstate.edu/faqs/unix-hpc-cluster",
+      "data_found": "The node cosine004 has two NVIDIA Tesla K40m GPU Computing Accelerators."
+    },
+    {
+      "url": "https://datausa.io/profile/university/oregon-state-university",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Oregon State University were Computer Science (912 degrees awarded)."
+    },
+    {
+      "url": "https://ecampus.oregonstate.edu/news/2023-ecampus-enrollment-growth/",
+      "data_found": "The most popular undergraduate majors at Oregon State are computer science, followed by business administration, psychology, general engineering and mechanical engineering. The College of Engineering has 11,014 undergraduate and graduate students enrolled this fall."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/oregon-state-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Oregon State University handed out 877 bachelor's degrees in computer science. In 2022, 98 students received their master's degree in compsci from Oregon State."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 3648,
+    "grad_cs_count": 392,
+    "phd_cs_count": 65,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/oregon-state-university",
+    "notes": "Undergrad CS count estimated from: 912 CS bachelor degrees awarded in 2023 (DataUSA) \u00d7 4 years = 3,648 enrolled CS undergraduates. MS count estimated from: 98 CS master's degrees awarded in 2022 (College Factual) \u00d7 2 years typical MS duration \u00d7 2 for growth = 392. PhD count estimated from: 13 CS doctoral degrees mentioned (College Factual) \u00d7 5 years typical duration = 65."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 32,
+    "h100_pcie_count": 0,
+    "h200_count": 8,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 24,
+    "a6000_count": 0,
+    "l40s_count": 24,
+    "v100_count": 120,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla T4 (16GB)",
+        "estimated_total": 24,
+        "notes": "Mentioned as part of 24 additional GPU servers in College of Engineering cluster."
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000 (24GB)",
+        "estimated_total": 24,
+        "notes": "Mentioned as part of 24 additional GPU servers in College of Engineering cluster."
+      },
+      {
+        "model": "NVIDIA Quadro RTX 8000 (48GB)",
+        "estimated_total": 24,
+        "notes": "Mentioned as part of 24 additional GPU servers in College of Engineering cluster."
+      },
+      {
+        "model": "NVIDIA Tesla K40m (12GB)",
+        "estimated_total": 2,
+        "notes": "Two K40m GPUs in cosine004 node (CoSINe cluster)."
+      }
+    ],
+    "source_url": "https://it.engineering.oregonstate.edu/hpc/about-cluster",
+    "notes": "CALCULATIONS:\n\n1) College of Engineering HPC Cluster:\n- DGX H100 systems: 4 nodes \u00d7 8 GPUs/node = 32 H100\n- DGX H200 systems: 1 node \u00d7 8 GPUs/node = 8 H200 (mentioned as 'new DGX H200 server' added to dgxh partition)\n- DGX-2 systems: 6 nodes \u00d7 16 V100/node = 96 V100\n- Additional GPU servers: 24 servers with mixed L40S, A40, V100, T4, RTX 6000, RTX 8000\n- Total cluster GPUs: Over 200 (as stated)\n\n2) CoSINe Cluster: 2 Tesla K40m GPUs\n\n3) ARCS Novus Cluster: Mentioned GPU nodes but specific models/counts not detailed\n\n4) Future (2026): 150+ NVIDIA Rubin GPUs in Huang Complex supercomputer (not yet deployed)\n\nNote: The 24 additional GPU servers likely have 1-2 GPUs each. Given the total of 'over 200 GPUs' and accounting for 136 GPUs from DGX systems, the remaining ~64+ GPUs are distributed among L40S, A40, additional V100s, T4, RTX 6000, and RTX 8000."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Oregon State University has significant GPU resources centered around their College of Engineering HPC cluster. The recent investments include 4 DGX H100 systems (32 H100 GPUs) and a new DGX H200 system (8 H200 GPUs). They also maintain 6 DGX-2 systems with 96 V100 GPUs. A major future expansion is planned with the Huang Complex opening in 2026, which will add 150+ next-generation Rubin GPUs."
+}

@@ -1,0 +1,49 @@
+{
+  "university_name": "Stevens Institute of Technology",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.stevens.edu/page-chapter/research-computing",
+      "data_found": "JARVIS: 55 nodes, 3,168 CPU cores, 32 GPUs total; explicitly lists 8 L40s GPUs; states 'Upgrades ... coming this fall including 12 Nvidia H200\u2019s'. Also FAQ notes L40S available and H100 can be made available based on requirements (no counts). DuckUte present but without GPU model/count on this page."
+    },
+    {
+      "url": "https://fsc.stevens.edu/computational/",
+      "data_found": "Hanlon Financial Systems Labs: 'GPU Computing Cluster' includes 10 nVidia Tesla K20 GPUs (no node count given)."
+    },
+    {
+      "url": "https://assets.stevens.edu/mviowpldu823/3SfLlv6eteWCMn9esoQj07/0b259517699e3401c9c29b1d77eeb33a/Fact_sheet_2024-2025_ADA.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024 (AY 2024-2025)",
+    "source_url": "https://assets.stevens.edu/mviowpldu823/3SfLlv6eteWCMn9esoQj07/0b259517699e3401c9c29b1d77eeb33a/Fact_sheet_2024-2025_ADA.pdf",
+    "notes": "I located an official Stevens Fact Sheet explicitly labeled \u201cFACT SHEET 2024-2025\u201d with \u201cSTUDENTS FALL 2024\u201d totals (Total Enrollment 8,469; Undergraduate 4,236; Graduate 4,233; and Graduate By Degree: Master\u2019s 3,480; Ph.D. 527). However, this document does NOT provide Computer Science-major enrollment headcounts (UG vs MS vs PhD) for Fall 2024/AY 2024-2025. I also attempted to use Stevens\u2019 official ABET enrollment/graduation resource (linked from the Office of Institutional Research and Effectiveness), but it resolves to an embedded Microsoft Power BI report that did not expose program-level counts in a non-interactive, citable page via this environment. Per your rules, I am not using any 2023-or-earlier CS counts, so all CS-specific counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 24,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 8,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.stevens.edu/page-chapter/research-computing",
+    "notes": "Clusters identified (GPU-relevant):\n\n1) JARVIS (Stevens Research Computing Services page)\n- Published specs: 55 nodes; 32 GPUs total; explicitly: 8x NVIDIA L40S.\n- Model breakdown used here:\n  - L40S: 8 (explicit)\n  - Remaining GPUs: 32 - 8 = 24 GPUs not specified on-page.\n  - Per instruction to estimate when model unknown: assumed these 24 are NVIDIA H100 PCIe (newest campus cluster; page notes H100 availability but provides no inventory/count).\n- Node\u00d7GPU calculation (assumed typical 8-GPU servers; GPU-node count not stated):\n  - 1 node \u00d7 8 L40S/node = 8 L40S\n  - 3 nodes \u00d7 8 H100 PCIe/node = 24 H100 PCIe\n  - Total = 32 GPUs\n- H200: page says 'upgrades ... coming this fall including 12 Nvidia H200\u2019s' but no confirmation they are installed; counted as 0 (planned/unconfirmed).\n\n2) DuckUte (High Performance Computing Clusters page)\n- GPU mentioned: NVIDIA Quadro K3100M 4GB RAM; total CUDA cores 10,752.\n- Inference: Quadro K3100M has 768 CUDA cores, so 10,752 / 768 = 14 GPUs.\n- These GPUs are not in the requested count buckets (H/A/V/P/L-series) so contribute 0 to all requested model totals.\n- Node\u00d7GPU calculation (GPU-node count not stated; inferred): 14 nodes \u00d7 1 GPU/node = 14 K3100M GPUs.\n\n3) Hanlon Financial Systems Labs GPU Computing Cluster\n- 10\u00d7 NVIDIA Tesla K20 GPUs (not in requested buckets) => contributes 0 to requested model totals.\n- Node\u00d7GPU calculation: node count not stated; treated as 10 total GPUs (10\u00d71).\n\nTotals in requested buckets:\n- H100 PCIe: 24 (estimated from JARVIS unspecified 24 GPUs)\n- L40S: 8 (explicit from JARVIS)\n- All other requested GPU categories: 0"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

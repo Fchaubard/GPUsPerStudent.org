@@ -1,0 +1,68 @@
+{
+  "university_name": "Auburn University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.auburn.edu/hpc/2020_cluster.php",
+      "data_found": "Easley (2020) GPU nodes: 9 Type I GPU nodes with 2x NVIDIA Tesla T4 GPUs; 2 Type II GPU nodes with 4x NVIDIA Tesla T4 GPUs; plus 'Nova' nodes include GPU: 2 nodes with 2x NVIDIA Tesla K80 cards."
+    },
+    {
+      "url": "https://aaice.net/faqs/",
+      "data_found": "AAICE: 'NVIDIA presently hosts, two DGX A100 nodes' (AI/ML supercomputer capability)."
+    },
+    {
+      "url": "https://docs.nvidia.com/dgx/dgxa100-user-guide/introduction-to-dgxa100.html",
+      "data_found": "DGX A100 system is built on eight NVIDIA A100 Tensor Core GPUs (Qty 8 NVIDIA A100 GPUs)."
+    },
+    {
+      "url": "https://hpc.auburn.edu/hpc/2016_cluster.php",
+      "data_found": "Hopper (2016) lists '2 nVidia Tesla K80 nodes' (no GPUs-per-node specified on this page; Easley page later specifies migrated K80 nodes as 2 nodes with 2x K80 cards)."
+    },
+    {
+      "url": "https://bulletin.auburn.edu/generalinformation/enrollmentstatistics/",
+      "data_found": "Student enrollment: 546 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 546,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://bulletin.auburn.edu/generalinformation/enrollmentstatistics/",
+    "notes": "Source is Auburn University Bulletin \u2192 Enrollment Statistics. In the 'SAMUEL GINN COLLEGE OF ENGINEERING \u2014 Fall 2024' table: (1) 'Computer Science (CSCI)' shows 319 undergrad male + 56 undergrad female = 375 total undergrad. (2) 'Computer Science - Completer (CPSC)' shows 122 undergrad male + 49 undergrad female = 171 total undergrad. Undergrad CS total reported here = 375 + 171 = 546. The same Fall 2024 table lists 'Computer Sci & Software Engr (COMP)' with graduate male 156 + graduate female 42 = 198 total graduate, but it does NOT break graduate enrollment into Master's vs PhD; therefore grad_cs_count and phd_cs_count are set to 0 per your requirement (MS-only and PhD-only counts)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla T4 (16GB)",
+        "count": 26,
+        "cluster": "Auburn University Easley Cluster (2020)"
+      },
+      {
+        "model": "NVIDIA Tesla K80 (listed as 'cards' in source; each K80 card contains 2 GPU chips)",
+        "count": 4,
+        "cluster": "Auburn University Easley Cluster (migrated 'Nova' nodes from prior Hopper cluster)"
+      }
+    ],
+    "source_url": "https://hpc.auburn.edu/hpc/2020_cluster.php",
+    "notes": "Clusters counted:\n\n1) Auburn University Easley Cluster (2020):\n- T4 GPUs: (9 nodes \u00d7 2 T4/node) + (2 nodes \u00d7 4 T4/node) = 18 + 8 = 26 Tesla T4 GPUs (not a requested output category).\n- K80: 2 nodes \u00d7 2 K80 cards/node = 4 K80 cards total (not a requested output category; source calls them 'cards' so GPU-chip count could be higher).\n\n2) AAICE (public-private partnership in Auburn, AL; includes Auburn University as a participant):\n- 'two DGX A100 nodes' \u00d7 (8 A100 GPUs per DGX A100 node) = 2 \u00d7 8 = 16 A100 GPUs.\n- Memory size (40GB vs 80GB) not stated by AAICE; estimated as A100 40GB (DGX A100 320GB-class) due to lack of explicit '80GB/640GB' wording; actual could be A100 80GB.\n\nRequested GPU totals derived:\n- a100_40gb_count = 16 (estimated; see above)\n- all other requested categories (H100/H200/V100/P100/A6000/L40S/etc.) = 0 based on sources found."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

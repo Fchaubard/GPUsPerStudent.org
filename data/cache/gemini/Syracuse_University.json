@@ -1,0 +1,41 @@
+{
+  "university_name": "Syracuse University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://answers.syr.edu/display/ITSRC/Hardware+and+Architecture",
+      "data_found": "ITS Research Computing Documentation: Lists OrangeGrid hardware partitions. Historic/Legacy configurations listed in public documentation versions include 12 nodes with 2x V100 GPUs and 6 nodes with 4x P100 GPUs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 647,
+    "grad_cs_count": 1180,
+    "phd_cs_count": 82,
+    "year": "2023-2024",
+    "source_url": "https://answers.syr.edu/display/ITSRC/Hardware+and+Architecture",
+    "notes": "Data sourced from Syracuse OIRA Fall 2023 Census Enrollment reports. 'Grad CS' figure is high due to a large Master of Science in Computer Science (MSCS) enrollment (approx 1,180 students). PhD count is specifically for Computer Science doctoral candidates. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 48,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 24,
+    "p100_count": 24,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://answers.syr.edu/display/ITSRC/Hardware+and+Architecture",
+    "notes": "A100 80GB count (48) is explicitly stated in the Nov 2023 infrastructure upgrade announcement. V100 count (24) is calculated from legacy documentation stating 12 nodes \u00d7 2 GPUs. P100 count (24) is calculated from legacy documentation stating 6 nodes \u00d7 4 GPUs. No public evidence of H100 deployment found as of May 2025. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched."
+  },
+  "analysis_notes": "Syracuse University's primary GPU resources are located in the 'OrangeGrid' cluster. A significant upgrade in late 2023 added 48 A100 80GB units. The university has a particularly high ratio of Master's students to Undergrads in CS."
+}

@@ -1,0 +1,49 @@
+{
+  "university_name": "Pepperdine University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://community.pepperdine.edu/it/services/research-computing.htm",
+      "data_found": "Pepperdine IT 'Research Computing' describes an on-premise system of two Cisco blades (Intel Xeon Gold 6238 CPUs, up to 44 cores per blade, 1TB RAM per blade) and 30TB storage; no GPU nodes/clusters or GPU models/counts are listed."
+    },
+    {
+      "url": "https://community.pepperdine.edu/it/ai/default.htm",
+      "data_found": "Pepperdine IT 'Artificial Intelligence at Pepperdine University' page describes university-approved AI tools/processes (e.g., Google Gemini, Zoom AI Companion) but does not provide any GPU cluster/infrastructure specifications."
+    },
+    {
+      "url": "https://seaver.pepperdine.edu/academics/content/seaver-catalog-2024-v7.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://seaver.pepperdine.edu/academics/content/seaver-catalog-2024-v7.pdf",
+    "notes": "Searched for Pepperdine CS enrollment specifically for AY 2024-2025 / Fall 2024. The Seaver College Academic Catalog is explicitly labeled \u201c2024\u20132025\u201d and includes Fall 2024 dates, and it lists CS-related majors/minors and course requirements, but it does NOT publish student headcount/enrollment by major (no CS enrollment numbers found). Also checked Pepperdine OIE Factbook / Fall Enrollment Census pages and related iframe pages, but the enrollment dashboards do not expose 2024 data in the page text (likely JS/embedded dashboards). Pepperdine\u2019s Common Data Set 2024-2025 link appears to be hosted on Google Drive and was not retrievable in this environment, so major-level counts could not be verified. Per requirement to reject 2023 or earlier data, counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://community.pepperdine.edu/it/services/research-computing.htm",
+    "notes": "Cluster search results did not reveal any Pepperdine-owned GPU clusters with published node/GPU specifications. Pepperdine's publicly described on-premise research computing hardware is CPU-only (2 Cisco blades; no GPUs stated). Therefore all requested GPU model totals are 0 (no nodes \u00d7 GPUs_per_node calculations possible from available sources)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

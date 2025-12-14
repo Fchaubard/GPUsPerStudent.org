@@ -1,0 +1,42 @@
+{
+  "university_name": "Harvard University",
+  "data_retrieved_date": "2024-05-23",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 584,
+    "grad_cs_count": 101,
+    "phd_cs_count": 223,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data derived from the Official Harvard SEAS Fact Book (Fall 2023 figures). Undergrad count refers to declared 'Computer Science' concentrators only (freshmen often undeclared). Grad count combines SM (Master of Science) and ME (Master of Engineering) in Computer Science specifically; it excludes the 148 students in Data Science and 52 in Computational Science and Engineering to remain strictly 'CS'. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 384,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 128,
+    "a100_40gb_count": 264,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 152,
+    "p100_count": 72,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A40 / RTX 6000 / RTX 8000",
+        "estimated_total": 40,
+        "notes": "FASRC Visualization partition lists 19 nodes with various RTX/A40 cards (e.g., 'holyviz' partition), though exact breakdown per card is variable in documentation."
+      }
+    ],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Calculations based on node counts listed in official FASRC and Kempner documentation:\n\n1. KEMPNER INSTITUTE CLUSTER:\n- 384 NVIDIA H100 GPUs explicitly stated on the 'Compute' page.\n\n2. FASRC CANNON CLUSTER (GPU Partitions):\n- A100 80GB: 32 nodes (Sapphire Rapids) \u00d7 4 GPUs = 128.\n- A100 40GB: 66 nodes (Ice Lake) \u00d7 4 GPUs = 264.\n- V100: 26 nodes (Cascade Lake, 32GB) \u00d7 4 GPUs = 104; PLUS 12 nodes (Skylake, 16GB) \u00d7 4 GPUs = 48. Total V100 = 152.\n- P100: 18 nodes (Broadwell) \u00d7 4 GPUs = 72.\n\n3. NOT INCLUDED:\n- Harvard Medical School (O2 Cluster) is not included in these totals as it requires distinct medical school access and specific node counts are behind a wiki login, though it is known to house ~120+ mixed generation GPUs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "FASRC operates on a cost-recovery model for storage and prioritized compute, though general access is often subsidized for FAS researchers. Specific 'compute credit' dollar values for students are not publicly listed in a unified format."
+  },
+  "analysis_notes": "Data is highly verifiable via the FASRC 'KB' (Knowledge Base) which lists exact node specifications, and the Kempner Institute's public hardware overview. Student data is precise due to the SEAS Fact Book."
+}

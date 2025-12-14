@@ -1,0 +1,61 @@
+{
+  "university_name": "Utah State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://bioinfocore.usu.edu/resources/hardware",
+      "data_found": "Guru Cluster: The Bioinformatics Facility hosts a ~510 Tera FLOPS HPC cluster has ~500 CPU cores, 3TB of RAM, and 250TB of data storage. In addition, the facility has a strong GPU node having 4x of v100 cards on it (total ~25K cuda cores)."
+    },
+    {
+      "url": "https://research.usu.edu/hpc",
+      "data_found": "USU provides access to high performance computing resources through the University of Utah's Center for High Performance Computing (CHPC). USU faculty and students have the same access rights and privileges at the CHPC as do University of Utah faculty and students."
+    },
+    {
+      "url": "https://rai.utah.edu/chpc-new-gpus/",
+      "data_found": "University of Utah CHPC installed 10 powerful computer servers with 80 high-end NVIDIA graphics processing units (GPUs). CHPC also supports research groups from Utah Valley University, Snow College, Weber State University, Utah Tech University, and Utah State University."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/utah-state-university-college-of-science-department-of-computer-science-000_10034503.aspx",
+      "data_found": "138 Applied; 94 Accepted; 42 Enrolled (graduate CS applications)"
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/230728/utah-state-university/enrollment/",
+      "data_found": "Utah State University has a total enrollment of 28,063 including 25,048 undergraduate students and 3,015 graduate students."
+    },
+    {
+      "url": "https://engineering.usu.edu/cs/assessment/undergraduate/enrollment-data",
+      "data_found": "Enrollment data for the Computer Science undergraduate program at Utah State University."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 750,
+    "grad_cs_count": 125,
+    "phd_cs_count": 40,
+    "year": "2023-2024",
+    "source_url": "https://www.petersons.com/graduate-schools/utah-state-university-college-of-science-department-of-computer-science-000_10034503.aspx",
+    "notes": "Undergraduate CS count estimated based on typical CS department enrollment at similar-sized state universities (approximately 3% of total undergraduate enrollment of 25,048). Graduate CS count based on Peterson's data showing 42 enrolled from 94 accepted, suggesting active MS enrollment of ~125 students. PhD count estimated from typical PhD program sizes in CS departments of similar universities."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://bioinfocore.usu.edu/resources/hardware",
+    "notes": "USU has limited on-campus GPU resources. The Guru Cluster at the Bioinformatics Facility has 4 V100 GPUs. USU faculty and students primarily access GPU resources through the University of Utah's CHPC, which has extensive GPU infrastructure including H100s and A100s, but these are shared resources not owned by USU."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Utah State University has minimal dedicated GPU infrastructure on campus. The primary GPU resource is the Guru Cluster with 4 V100 GPUs at the Bioinformatics Facility. USU researchers rely heavily on the University of Utah's CHPC for GPU computing, which provides access to state-of-the-art GPUs but as a shared resource. CS enrollment numbers are estimates based on available data - exact CS-specific enrollment was not found in publicly available sources."
+}

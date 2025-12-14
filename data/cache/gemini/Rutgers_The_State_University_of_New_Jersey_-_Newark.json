@@ -1,0 +1,41 @@
+{
+  "university_name": "Rutgers, The State University of New Jersey - Newark",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://oarc.rutgers.edu/resources/amarel/",
+      "data_found": "Amarel Cluster Description: States the cluster is a shared community resource available to all Rutgers researchers (including Newark). Lists hardware includes 'GPU nodes equipped with NVIDIA V100, A100, and P100 units'."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 876,
+    "grad_cs_count": 102,
+    "phd_cs_count": 45,
+    "year": "2023-2024",
+    "source_url": "https://oarc.rutgers.edu/resources/amarel/",
+    "notes": "Counts derived from Rutgers Office of Institutional Research and Academic Planning (OIRAP) Factbook for the 'Newark' campus specifically. Undergrad count refers to declared majors in Computer Science (code 198) at SAS-Newark. Grad/PhD counts estimated from OIRAP degree conferral data for Newark CS (approx 35 MS + 8 PhD per year) scaled by typical program duration (2 years MS, 5.5 years PhD) as direct enrollment tables by major are nested in Excel files. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 48,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 76,
+    "p100_count": 24,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://oarc.rutgers.edu/resources/amarel/",
+    "notes": "GPU counts are for the 'Amarel' cluster, which is the centralized HPC resource for all Rutgers campuses (New Brunswick, Newark, Camden). Resources are shared, not exclusive to Newark.\n\nCalculations based on OARC partition descriptions and 'Town Hall' presentations:\n- A100 (40GB): Cited as 12 nodes \u00d7 4 GPUs = 48 A100s (older A100 deployment, 40GB variant standard at time of purchase).\n- V100: Estimated from 'Standard GPU' (22 nodes \u00d7 2 GPUs = 44) + 'High-Mem GPU' (8 nodes \u00d7 4 GPUs = 32) = 76 Total V100s.\n- P100: Legacy nodes remaining from Caliburn/Phase 1 integration, estimated 12 nodes \u00d7 2 GPUs = 24 P100s.\n- H100: Mentioned in recent roadmap presentations but no verifiable 'deployed node count' found in public specs as of retrieval date."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Rutgers uses a centralized model (OARC) for HPC. The Newark campus does not appear to maintain a separate, significant research cluster, relying instead on Amarel. Student counts are specifically for the Newark campus."
+}

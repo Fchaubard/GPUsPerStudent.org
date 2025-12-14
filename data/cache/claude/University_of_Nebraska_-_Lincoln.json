@@ -1,0 +1,83 @@
+{
+  "university_name": "University of Nebraska-Lincoln",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://hcc.unl.edu/ai",
+      "data_found": "Swan cluster GPUs: 4\u00d7 A100 (80 GB), 14\u00d7 A30 (24 GB), 8\u00d7 L40S (48 GB), 3\u00d7 H100 (96 GB), 4\u00d7 V100 (16 GB), 62\u00d7 V100S (32 GB), 24\u00d7 T4 (16 GB), 7\u00d7 RTX 5000 (16 GB), 2\u00d7 RTX 8000 (48 GB), 24\u00d7 A6000 (48 GB). In addition to Swan's current inventory of GPUs, additional GPUs will be added as part of NSF Grant #2430234: 6\u00d7 NVIDIA H200 NVL (141 GB), 52\u00d7 NVIDIA L40S (48 GB). All new GPUs from the grant will be fully and freely available to NU researchers."
+    },
+    {
+      "url": "https://news.hcc.unl.edu/publications/swan-now-available-for-use",
+      "data_found": "Swan consists of 144 worker nodes with 2 CPUs/56 cores per node and nominally 256GB of RAM, 2 nodes with 2TB of RAM, and 12 GPU nodes with two NVIDIA T4 GPUs each."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Holland_Computing_Center",
+      "data_found": "As of May 2019, Crane is composed of 548 nodes offering a total of 12,236 cores, 68,000 GB of memory, and 57 Nvidia GPU's."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/181464/university-of-nebraska-lincoln/enrollment/",
+      "data_found": "For the academic year 2023-2024, total of 23,986 students have enrolled in University of Nebraska-Lincoln with 19,338 undergraduate and 4,648 graduate students."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-nebraska-lincoln",
+      "data_found": "The most common positions for non-instructional staff at University of Nebraska-Lincoln are: Computer, Engineering, and Science, with 662 employees."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 550,
+    "grad_cs_count": 175,
+    "phd_cs_count": 75,
+    "year": "2023-2024",
+    "source_url": "https://www.collegetuitioncompare.com/edu/181464/university-of-nebraska-lincoln/enrollment/",
+    "notes": "Exact CS department enrollment numbers were not found through available public sources. Estimates based on: 1) Total UNL enrollment of 23,986 students (19,338 undergrad, 4,648 grad) 2) College of Engineering has 3,722 undergrads 3) Computer, Engineering, and Science staff count of 662 employees suggests significant CS programs 4) Conservative estimates: ~2.8% of undergrads in CS (550 students), ~3.8% of grads in CS (175 students), with approximately 75 PhD students based on typical PhD program sizes at similar R1 universities."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 3,
+    "h100_pcie_count": 0,
+    "h200_count": 6,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 4,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 24,
+    "l40s_count": 60,
+    "v100_count": 66,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 (24GB)",
+        "estimated_total": 14,
+        "notes": "14\u00d7 A30 GPUs listed in Swan cluster"
+      },
+      {
+        "model": "NVIDIA T4 (16GB)",
+        "estimated_total": 48,
+        "notes": "24\u00d7 T4 in Swan inventory + 12 GPU nodes \u00d7 2 T4 GPUs each = 48 total T4"
+      },
+      {
+        "model": "NVIDIA RTX 5000 (16GB)",
+        "estimated_total": 7,
+        "notes": "Listed in Swan cluster"
+      },
+      {
+        "model": "NVIDIA RTX 8000 (48GB)",
+        "estimated_total": 2,
+        "notes": "Listed in Swan cluster"
+      },
+      {
+        "model": "NVIDIA GPUs in Crane cluster",
+        "estimated_total": 57,
+        "notes": "Crane has 57 NVIDIA GPUs (model unspecified, likely older generation)"
+      }
+    ],
+    "source_url": "https://hcc.unl.edu/ai",
+    "notes": "PRIMARY CLUSTERS:\n1) Swan (HCC's newest): Current inventory includes 3 H100 (96GB variant), 4 A100 80GB, 24 A6000, 8 L40S, 66 V100/V100S, 14 A30, 24 T4, and other GPUs. NSF Grant #2430234 adds 6 H200 NVL and 52 additional L40S.\n2) Crane (older cluster): 57 NVIDIA GPUs total (specific models not detailed in sources)\n\nTOTALS: H100=3, H200=6 (coming via NSF grant), A100 80GB=4, A6000=24, L40S=60 (8 current + 52 from grant), V100/V100S=66 (4 V100 16GB + 62 V100S 32GB)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Nebraska-Lincoln's Holland Computing Center provides HPC resources through multiple clusters. Swan is the primary GPU cluster with modern GPUs including H100s and A100s. A significant NSF grant is adding H200 and L40S GPUs. Student counts are estimates as specific CS enrollment data was not publicly available."
+}

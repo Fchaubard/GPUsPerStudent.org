@@ -1,0 +1,45 @@
+{
+  "university_name": "Clark University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/clark-university",
+      "data_found": "In 2023, 1,388 degrees were awarded across all undergraduate and graduate programs at Clark University. The most popular Bachelors Degree concentrations at Clark University were General Psychology (112 degrees awarded), General Business Administration & Management (50 degrees), and Animation, Interactive Technology, Video Graphics, & Special Effects (47 degrees)."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/165334/clark-university/enrollment/",
+      "data_found": "Clark University has a total enrollment of 4,124 including 2,369 undergraduate students and 1,755 graduate students (academic year 2023-2024 data)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 60,
+    "grad_cs_count": 35,
+    "phd_cs_count": 10,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/clark-university",
+    "notes": "Specific CS enrollment numbers not found in public sources. Estimated based on: 1) Clark has 2,369 total undergrads and 1,755 graduate students (2023-24); 2) Clark offers CS major/minor plus data science programs; 3) Typical liberal arts CS programs are 2-5% of undergrads. Estimated 60 undergrad CS majors (~2.5% of 2,369), 35 MS students, and 10 PhD students based on department size of 8 faculty members and 10:1 student-faculty ratio."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/clark-university",
+    "notes": "Clark University HPC cluster specifications found: 28 nodes \u00d7 8 cores each = 224 CPU cores total. However, NO GPU specifications were found in any public sources. The 2016 article describes it as CPU-based HP blade servers. Current HPC page mentions Rocky Linux 8 and SLURM but does not list any GPU resources. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Clark University appears to have a CPU-based HPC cluster without dedicated GPU resources based on available public information. As a small liberal arts university with ~4,100 total students, the lack of large-scale GPU infrastructure is consistent with peer institutions of similar size and focus."
+}

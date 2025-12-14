@@ -1,0 +1,58 @@
+{
+  "university_name": "University of the Pacific",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://ecs-network.serv.pacific.edu/research/private/ecs-cluster-configuration/gpu-node-installation",
+      "data_found": "States the GPU node contains 2 Nvidia K20X GPUs."
+    },
+    {
+      "url": "https://ecs-network.serv.pacific.edu/research/private/ecs-cluster-configuration",
+      "data_found": "Lists 'GPU Node Installation' under ecs-cluster configuration, indicating the GPU node is part of the ecs-cluster setup."
+    },
+    {
+      "url": "https://www.pacific.edu/sites/default/files/users/user777/Fall_2024_Census_Data_.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.pacific.edu/sites/default/files/users/user777/Fall_2024_Census_Data_.pdf",
+    "notes": "Fall 2024 Census Data (University of the Pacific IRDS) provides institution-wide enrollment headcount totals by campus and level (Undergraduate/Graduate/Professional) as of the Fall 2024 census date, but it does NOT provide enrollment broken out by major/department (e.g., Computer Science) or by graduate program (MS vs PhD). The IRDS page indicates more detailed enrollment/admissions/course/degree reports are on a Pacific SharePoint site that requires institutional login, so no public Fall 2024 CS-major headcount (UG/MS/PhD) was found."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K20X",
+        "count": 2,
+        "nodes": 1,
+        "gpus_per_node": 2,
+        "total_formula": "1 \u00d7 2 = 2",
+        "memory_note": "K20X is typically 6GB; not a high-VRAM GPU, but included as 'other' because it is explicitly documented."
+      }
+    ],
+    "source_url": "https://ecs-network.serv.pacific.edu/research/private/ecs-cluster-configuration/gpu-node-installation",
+    "notes": "Clusters found for University of the Pacific (School of Engineering and Computer Science / ECS Networking site):\n- ECS 'ecs-cluster' GPU node: 1 node \u00d7 2 NVIDIA K20X GPUs/node = 2 total K20X GPUs.\nNo public University of the Pacific sources found (in the requested searches) that document any H100/H200/A100/V100/P100/RTX A6000/L40S GPU clusters; those counts set to 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

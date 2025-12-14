@@ -1,0 +1,57 @@
+{
+  "university_name": "Missouri University of Science and Technology",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.itrss.umsystem.edu/pub/hpc/start",
+      "data_found": "The Mill is a traditional HPC research cluster built at S&T in 2023. The Mill currently consists of 229 compute nodes; 25 with 512GB of DDR4 RAM, a single 1.6Tb NVME drive for local scratch and 128 cores; and 160 with 256GB of DDR4 RAM, a single 2.6TB NVME drive for local scratch and 64 cores; 44 with 192GB of DDR4 RAM, 2.6TB of local scratch and 40 cores, totaling 15,200 compute cores across the system. There are also 8 GPU nodes; 6 with 4 Nvidia V100 GPUs; 1 with 8 H100 GPUs; 1 with 2 V100s, totaling 34 GPUs."
+    },
+    {
+      "url": "https://docs.itrss.umsystem.edu/pub/hpc/start",
+      "data_found": "The Foundry is a traditional HPC research cluster built at S&T in 2019 to support regional higher education institutions. The Foundry is comprised of 160 5 compute nodes with 2 AMD Epyc 7502 processors and 256GB of RAM and 6 GPU nodes with 2x Intel Xeon 6248 processors 192GB of system RAM and 4 Nvidia V100 GPUs with 32GB of GPU RAM"
+    },
+    {
+      "url": "https://scholarsmine.mst.edu/the-mill/1/",
+      "data_found": "This cluster currently consists of 229 compute nodes; 25 with 512GB of DDR4 RAM, a single 1.6Tb NVME drive for local scratch and 128 cores; and 160 with 256GB of DDR4 RAM, a single 2.6TB NVME drive for local scratch and 64 cores; 44 with 192GB of DDR4 RAM, 2.6TB of local scratch and 40 cores, totaling 15,200 compute cores across the system. There are also 8 GPU nodes; 6 with 4 Nvidia V100 GPUs; 1 with 8 H100 GPUs; 1 with 2 V100s, totaling 34 GPUs."
+    },
+    {
+      "url": "https://datausa.io/profile/university/missouri-university-of-science-and-technology",
+      "data_found": "The total enrollment at Missouri University of Science and Technology in 2023, both undergraduate and graduate, is 7,156 students. The full-time enrollment at Missouri University of Science and Technology is 6,058 and the part-time enrollment is 1,098."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/178411/missouri-university-of-science-and-technology/enrollment/",
+      "data_found": "Missouri University of Science and Technology has a total enrollment of 7,156 including 5,510 undergraduate students and 1,646 graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 600,
+    "grad_cs_count": 250,
+    "phd_cs_count": 70,
+    "year": "2023-2024",
+    "source_url": "https://docs.itrss.umsystem.edu/pub/hpc/start",
+    "notes": "The computer science department has awarded over 2,100 bachelor of science degrees and 1,100 master of science degrees. Department faculty have also directed dissertations for over 70 Ph.D. degrees. Based on total university enrollment of 7,156 (5,510 undergrad, 1,646 grad) and Missouri S&T's STEM focus, estimated CS undergraduate enrollment at 600 (approximately 11% of undergrads), MS CS enrollment at 250, and PhD CS enrollment at 70 based on historical degree awards. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 50,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://docs.itrss.umsystem.edu/pub/hpc/start",
+    "notes": "GPU CLUSTER BREAKDOWN:\n\n1) The Mill (2023): 8 GPU nodes total\n   - 6 nodes \u00d7 4 V100 GPUs = 24 V100\n   - 1 node \u00d7 8 H100 GPUs = 8 H100\n   - 1 node \u00d7 2 V100 GPUs = 2 V100\n   Total: 8 H100 + 26 V100 = 34 GPUs\n\n2) The Foundry (2019): 6 GPU nodes\n   - 6 nodes \u00d7 4 V100 GPUs = 24 V100\n   Total: 24 V100\n\nCOMBINED TOTALS:\n- H100: 8 (from The Mill)\n- V100: 50 (26 from The Mill + 24 from The Foundry)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Missouri S&T operates two main GPU clusters: The Mill (2023) with 8 H100 and 26 V100 GPUs, and The Foundry (2019) with 24 V100 GPUs. Total GPU count is 58 GPUs across both clusters."
+}

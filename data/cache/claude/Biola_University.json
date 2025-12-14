@@ -1,0 +1,57 @@
+{
+  "university_name": "Biola University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.biola.edu/information-technology",
+      "data_found": "IT Service Catalog available for information about IT services, no specific GPU cluster or HPC information found."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/biola-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Biola University handed out 15 bachelor's degrees in computer science. This is a decrease of 21% over the previous year when 19 degrees were handed out."
+    },
+    {
+      "url": "https://datausa.io/profile/university/biola-university",
+      "data_found": "There were 5,296 students enrolled at Biola University in 2023. In 2023, 1,260 degrees were awarded across all undergraduate and graduate programs."
+    },
+    {
+      "url": "https://computersciencedegree.io/colleges/biola-university/computer-science/general-computer-science/",
+      "data_found": "In the 2020-2021 academic year, 19 students received a bachelor's degree in computer science from Biola."
+    },
+    {
+      "url": "https://computersciencedegree.io/colleges/biola-university/",
+      "data_found": "There are 3,596 undergraduate students at Biola, with 3,289 being full-time and 307 being part-time. There are also 1,955 graduate students at the school."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 60,
+    "grad_cs_count": -1,
+    "phd_cs_count": -1,
+    "year": "2021-2022",
+    "source_url": "https://www.collegefactual.com/colleges/biola-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "Estimated undergraduate CS enrollment based on 15 CS bachelor's degrees awarded in 2021-2022 \u00d7 4 years = 60 students. No specific graduate or PhD CS enrollment data found. Total university enrollment is 5,296 students (2023), with 3,596 undergraduates and 1,955 graduate students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.biola.edu/information-technology",
+    "notes": "No publicly available information found about GPU clusters or HPC resources at Biola University. The university IT website provides general IT services information but does not list research computing or GPU resources. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Biola University is a small private Christian university with approximately 60 computer science undergraduates based on degrees awarded. No public information about GPU computing resources or HPC infrastructure was found through multiple searches."
+}

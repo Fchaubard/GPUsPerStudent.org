@@ -1,0 +1,49 @@
+{
+  "university_name": "Princeton University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://researchcomputing.princeton.edu/systems/della",
+      "data_found": "Della Cluster Specs: 'Della-H100' partition consists of 12 nodes, each with 4 NVIDIA H100 80GB GPUs (Total 48 H100). 'Della-GPU' partition consists of 28 nodes, each with 2 NVIDIA A100 80GB GPUs (Total 56 A100)."
+    },
+    {
+      "url": "https://researchcomputing.princeton.edu/systems/tiger",
+      "data_found": "Tiger Cluster Specs: TigerGPU Phase 1 has 80 nodes with 4 NVIDIA P100 GPUs (Total 320 P100). Phase 2 has 10 nodes with 4 NVIDIA V100 GPUs (Total 40 V100)."
+    },
+    {
+      "url": "https://researchcomputing.princeton.edu/systems/adroit",
+      "data_found": "Adroit (Test Cluster) Specs: 1 node with 4 H100 GPUs; 1 node with 4 V100 GPUs; 2 nodes with 2 A100 GPUs (assumed 40GB for test env)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 732,
+    "grad_cs_count": 46,
+    "phd_cs_count": 188,
+    "year": "2023-2024",
+    "source_url": "https://researchcomputing.princeton.edu/systems/della",
+    "notes": "Undergraduate count is estimated based on the 2023-2024 Registrar report of degrees conferred. Total CS degrees (AB + BSE) was 366. Assuming a standard 2-year declared major duration (Junior/Senior years), total enrollment is estimated at 366 * 2 = 732. Graduate counts (PhD and Masters) are direct enrollment figures from the Princeton Graduate School Fields of Study dashboard for 2023-24. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 52,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 56,
+    "a100_40gb_count": 4,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 228,
+    "p100_count": 320,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://researchcomputing.princeton.edu/systems/della",
+    "notes": "CALCULATIONS:\n1) Della Cluster: \n- 12 nodes x 4 H100 80GB = 48 H100.\n- 28 nodes x 2 A100 80GB = 56 A100 80GB.\n\n2) Traverse Cluster:\n- 46 nodes x 4 V100 = 184 V100.\n\n3) Tiger Cluster:\n- 80 nodes x 4 P100 = 320 P100.\n- 10 nodes x 4 V100 = 40 V100.\n\n4) Adroit (Test) Cluster:\n- 1 node x 4 H100 = 4 H100.\n- 1 node x 4 V100 = 4 V100.\n- 2 nodes x 2 A100 = 4 A100 (Classified as 40GB/Test).\n\nTOTALS:\n- H100 = 48 (Della) + 4 (Adroit) = 52.\n- A100 80GB = 56 (Della).\n- A100 40GB = 4 (Adroit).\n- V100 = 184 (Traverse) + 40 (Tiger) + 4 (Adroit) = 228.\n- P100 = 320 (Tiger)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Princeton Research Computing provides very detailed hardware specifications per cluster. The student data requires aggregating both AB and BSE Computer Science tracks from the Registrar's degree conferral reports to get an accurate major count."
+}

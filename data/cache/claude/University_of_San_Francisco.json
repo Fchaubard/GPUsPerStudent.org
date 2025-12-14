@@ -1,0 +1,53 @@
+{
+  "university_name": "University of San Francisco",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-san-francisco",
+      "data_found": "University of San Francisco (122612) has a total enrollment of 9,212 students. In 2023, 3,040 degrees were awarded across all undergraduate and graduate programs. University of San Francisco has 5,729 undergraduate students and 3,483 graduate students."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/122612/university-of-san-francisco/enrollment/",
+      "data_found": "University of San Francisco has a total enrollment of 9,212 including 5,729 undergraduate students and 3,483 graduate students."
+    },
+    {
+      "url": "https://www.usfca.edu/arts-sciences/programs/graduate/computer-science",
+      "data_found": "University of San Francisco offers MS in Computer Science program."
+    },
+    {
+      "url": "https://www.niche.com/graduate-schools/search/best-computer-science-graduate-programs/m/san-francisco-metro-area/",
+      "data_found": "University of San Francisco, Graduate School is listed among computer science graduate programs in the San Francisco Bay Area."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 150,
+    "grad_cs_count": 120,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-san-francisco",
+    "notes": "USF does not publish specific CS enrollment numbers by degree level on publicly accessible pages. Based on total enrollment of 5,729 undergrads and 3,483 graduate students, with USF being a liberal arts university with many programs, CS is estimated to represent approximately 2.6% of undergrads (150) and 3.4% of graduate students (120). USF offers MS in Computer Science but does not appear to have a PhD program in CS based on search results."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/university-of-san-francisco",
+    "notes": "No publicly accessible information about GPU clusters or HPC resources at University of San Francisco was found. The university may have computing resources but they are not detailed on public-facing websites. Note that SFSU (San Francisco State University) was mentioned to have HPC resources in testing phase, but this is a different institution. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Limited public data available. University of San Francisco (USF) is a private Jesuit university focused on liberal arts. While they offer CS programs at undergraduate and graduate (MS) levels, no specific CS enrollment numbers or GPU/HPC infrastructure details were found on publicly accessible websites. Student counts are estimates based on typical program sizes at similar institutions."
+}

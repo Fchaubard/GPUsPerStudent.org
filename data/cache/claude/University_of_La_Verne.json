@@ -1,0 +1,49 @@
+{
+  "university_name": "University of La Verne",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://artsci.laverne.edu/compsci/",
+      "data_found": "Computer Science provides a variety of majors, minors, and certificates to La Verne students across multiple campuses. In addition to the Computer Science major and its four concentrations \u2013 engineering, information science, internet programming, and software \u2013 the university offers degrees in E-Commerce and Information Technology."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/university-of-la-verne/academic-life/academic-majors/computer-information-sciences/",
+      "data_found": "During the 2021-2022 academic year, University of La Verne handed out 35 bachelor's degrees in computer & information sciences."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-la-verne",
+      "data_found": "There were 5,596 students enrolled at University of La Verne (117140) in 2023. The full-time enrollment at University of La Verne (117140) is 4,303 and the part-time enrollment is 1,293."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 140,
+    "grad_cs_count": -1,
+    "phd_cs_count": 0,
+    "year": "2021-2022",
+    "source_url": "https://www.collegefactual.com/colleges/university-of-la-verne/academic-life/academic-majors/computer-information-sciences/",
+    "notes": "Undergraduate CS count estimated from: 35 CS bachelor's degrees awarded in 2021-2022 \u00d7 4 years = 140 estimated steady-state enrollment. Graduate CS count not found - University of La Verne does not appear to offer graduate degrees in Computer Science. The university offers 5 doctoral programs total but Computer Science is not among them."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://artsci.laverne.edu/compsci/",
+    "notes": "No publicly available information found about GPU computing resources at University of La Verne. The university does not appear to have a documented HPC cluster or research computing facility with GPU resources. Searched for research computing, HPC, GPU cluster, and AI computing infrastructure but found no evidence of such facilities. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of La Verne is a smaller private institution focused primarily on undergraduate education. No evidence of research computing infrastructure or GPU resources found in extensive web searches."
+}

@@ -1,0 +1,65 @@
+{
+  "university_name": "Northern Illinois University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.niu.edu/crcd/index.shtml",
+      "data_found": "Center for Research Computing and Data: The center's main high-performance computing cluster, Metis, is a hybrid CPU/GPU cluster with a peak computing performance of more than 400 teraflops."
+    },
+    {
+      "url": "https://www.niu.edu/crcd/about/index.shtml",
+      "data_found": "The success of CRCD in attracting external funds allowed the Center to obtain NIU's financing for the new Metis HPC system (commissioned in September of 2023), a hybrid CPU/GPU cluster equipped with a fast 1PB parallel storage system."
+    },
+    {
+      "url": "https://www.cs.niu.edu/campus/facilities/",
+      "data_found": "Facilities High Performance Computing Facilities Northern Illinois University has a high performance computing cluster named Gaea. It is a hybrid CPU/GPU cluster."
+    },
+    {
+      "url": "https://niutoday.info/tag/supercomputer/",
+      "data_found": "The hybrid GPU/CPU supercomputer has a capacity of more than 30 teraflops, meaning it can do more than 30 trillion calculations per second."
+    },
+    {
+      "url": "https://datausa.io/profile/university/northern-illinois-university",
+      "data_found": "In 2023, 142 degrees were awarded to men at Northern Illinois University in Computer Science, which is 5.07 times more than the 28 female recipients with that same degree."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/northern-illinois-university-college-of-liberal-arts-and-sciences-department-of-computer-science-000_10034366.aspx",
+      "data_found": "120 Total Graduate Students"
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/northern-illinois-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Northern Illinois University handed out 132 bachelor's degrees in computer science. In 2022, 42 students received their master's degree in compsci from NIU."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 528,
+    "grad_cs_count": 120,
+    "phd_cs_count": -1,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/northern-illinois-university",
+    "notes": "Undergraduate CS count estimated from 132 CS bachelor's degrees awarded in 2021-2022 (per CollegeFactual) \u00d7 4 years = 528 students. Graduate CS count of 120 from Peterson's data. PhD count not found separately from master's students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.niu.edu/crcd/index.shtml",
+    "notes": "NIU operates two HPC clusters: Metis (commissioned Sept 2023, 400+ teraflops) and Gaea (older system, 30+ teraflops). Both are described as hybrid CPU/GPU clusters but specific GPU models and counts are not publicly disclosed. Unable to find detailed hardware specifications."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach. GPU specifications not publicly available despite multiple searches. Student counts estimated from degree completion data."
+}

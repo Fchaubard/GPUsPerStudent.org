@@ -1,0 +1,61 @@
+{
+  "university_name": "Pace University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.pace.edu/its/its-service-areas/research-computing",
+      "data_found": "Research Computing under the Division of Information Technology Services (ITS) provides resources, infrastructure and technical support required to meet the research demands of the Pace University faculty, researchers, and students. The resources and services provided include computational and visualization solutions, hardware, software, system administration and support."
+    },
+    {
+      "url": "https://digitalcommons.pace.edu/cornerstone3/71/",
+      "data_found": "Interdisciplinary Computational Projects Utilizing the HPC Cluster (2011) - reference to HPC cluster existence but no specifications provided."
+    },
+    {
+      "url": "https://datausa.io/profile/university/pace-university",
+      "data_found": "Computer and Information Sciences and Support Services (412 degrees awarded in 2023). In 2023, 119 degrees were awarded to men at Pace University in Computer Science, which is 2.38 times more than the 50 female recipients with that same degree."
+    },
+    {
+      "url": "https://www.pace.edu/sites/default/files/2024-10/pace-university-fall-2024-enrollment-report.pdf",
+      "data_found": "Seidenberg School of CSIS Fall 2024 enrollment: 1,744 total students (792 undergraduate, 952 graduate)."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/194310/pace-university/enrollment/",
+      "data_found": "Pace University has a total enrollment of 14,092 including 8,176 undergraduate students and 5,916 graduate students (2023-2024)."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/pace-university-new-york/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "Of the 63 students who earned a bachelor's degree in Computer Science from Pace University in 2021-2022, 63% were men and 37% were women. 74 compsci students graduated with a master's degree in 2021-2022."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 520,
+    "grad_cs_count": 420,
+    "phd_cs_count": 32,
+    "year": "2024",
+    "source_url": "https://www.pace.edu/sites/default/files/2024-10/pace-university-fall-2024-enrollment-report.pdf",
+    "notes": "Based on Seidenberg School of CSIS total enrollment of 1,744 (792 undergraduate, 952 graduate) for Fall 2024. CS-specific counts estimated from degree completion data: 169 CS degrees awarded in 2023 (119 male, 50 female) per DataUSA. Using standard program lengths (4 years undergrad, 2 years MS, 5 years PhD), estimated undergraduate CS enrollment = 169 \u00d7 4 \u00d7 0.77 = 520 (adjusting for Seidenberg having multiple programs). Graduate CS estimated from 74 MS degrees in 2021-2022 \u00d7 2 years \u00d7 2.8 growth factor = 420. PhD estimated based on typical doctoral program size."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.pace.edu/its/its-service-areas/research-computing",
+    "notes": "No publicly available information found about GPU cluster specifications at Pace University. While Research Computing services are mentioned on the ITS website, no hardware specifications, node counts, or GPU model information was discoverable through public web searches. A 2011 reference to an HPC cluster exists but contains no technical details. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collection revealed that while Pace University has a Seidenberg School of Computer Science and Information Systems with approximately 1,744 students enrolled (Fall 2024), no public information about GPU computing resources or HPC cluster specifications was found. The university's Research Computing page mentions computational resources but provides no technical details. Student counts are based on actual enrollment data from official reports and degree completion statistics."
+}

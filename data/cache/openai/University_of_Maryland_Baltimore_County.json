@@ -1,0 +1,64 @@
+{
+  "university_name": "University of Maryland Baltimore County",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://hpcf.umbc.edu/compute/overview/",
+      "data_found": "As of April 2025, all on-premises centrally managed compute resources are available via the `chip` HPC cluster. GPU-relevant rows in the hardware table: (a) 2024: 2 nodes with 2x H100 each (GPU Mem shown as 100GB); (b) 2024: 10 nodes with 4x L40S each (48GB); (c) 2020: 2 nodes with 8x RTX 8000 each (48GB); (d) 2020: 7 nodes with 8x RTX 6000 each (24GB); (e) 2020: 4 nodes with 8x RTX 2080Ti each (11GB). ([hpcf.umbc.edu](https://hpcf.umbc.edu/compute/overview/))"
+    },
+    {
+      "url": "https://circ.umbc.edu/outreach/hosting/how-to-use-your-chip-account/",
+      "data_found": "Describes chip as live in early 2025 and shows an example `sinfo` output listing chip-gpu node groups and GPU types available (RTX_2080Ti, RTX_6000, RTX_8000, L40s, H100) and typical GPU-per-node values (e.g., L40s nodes show gpu:4 and H100 nodes show gpu:2). ([circ.umbc.edu](https://circ.umbc.edu/outreach/hosting/how-to-use-your-chip-account/?utm_source=openai))"
+    },
+    {
+      "url": "https://doit.umbc.edu/eis/hpcc/",
+      "data_found": "DoIT page stating UMBC advanced compute resources are clustered in the HPCC named `chip` and linking to the system description. ([doit.umbc.edu](https://doit.umbc.edu/eis/hpcc/?utm_source=openai))"
+    },
+    {
+      "url": "https://coeit.umbc.edu/enrollment-graduation-data/",
+      "data_found": "Student enrollment: 1846 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1846,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://coeit.umbc.edu/enrollment-graduation-data/",
+    "notes": "SOURCE CHECK: The COEIT 'Enrollment and Graduation Data' page (last updated 9/30/2025) contains tables labeled with year columns including 2024 (Fall 2024 enrollment; primary plan counts). Undergrad CS: In the 'Undergraduate Programs \u2013 Bachelor\u2019s (2021-2025)' table, the 'Computer Science' row shows 2024 Enrolled = 1846 (with an 'all plans' value shown in parentheses as 1987). Graduate CS: In the 'Graduate Programs \u2013 Master\u2019s and Doctorate (2021-2025)' table, the 'Computer Science' row shows 2024 Enrolled = 247 (parentheses 260), but this row explicitly combines M.S. and Ph.D. ('M.S. and Ph.D.'), so it cannot be split into MS-only vs PhD-only from this source. Therefore grad_cs_count and phd_cs_count are set to 0, and the combined CS graduate (MS+PhD) headcount for Fall 2024 is 247."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 4,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 40,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX 8000",
+        "vram_gb": 48,
+        "count": 16
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000",
+        "vram_gb": 24,
+        "count": 56
+      }
+    ],
+    "source_url": "https://hpcf.umbc.edu/compute/overview/",
+    "notes": "Cluster(s) counted: `chip` only, because the HPCF states that as of April 2025 all on-premises and centrally managed advanced compute resources are available through `chip`.\n\nPer-GPU totals (nodes \u00d7 GPUs_per_node):\n- H100: 2 nodes \u00d7 2 GPUs/node = 4 H100 total. Categorized as H100 PCIe (not SXM) because it is a 2-GPU-per-node configuration typical of PCIe servers; the sources do not explicitly label SXM vs PCIe (inference).\n- L40S: 10 nodes \u00d7 4 GPUs/node = 40 L40S total.\n- Quadro RTX 8000 (48GB): 2 nodes \u00d7 8 GPUs/node = 16 total.\n- Quadro RTX 6000 (24GB): 7 nodes \u00d7 8 GPUs/node = 56 total.\n\nNot mapped into requested fields (still present on chip): RTX 2080 Ti: 4 nodes \u00d7 8 GPUs/node = 32 total.\n\nNo A100/H200/V100/P100/P100/P100, etc. are listed for `chip` in the April 2025 HPCF hardware table; therefore their counts are set to 0. ([hpcf.umbc.edu](https://hpcf.umbc.edu/compute/overview/))"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

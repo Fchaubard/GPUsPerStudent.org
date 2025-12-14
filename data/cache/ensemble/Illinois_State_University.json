@@ -1,0 +1,49 @@
+{
+  "university_name": "Illinois State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://about.illinoisstate.edu/rcab/hpc/",
+      "data_found": "ISU HPC has a total of 30 nodes, including '2 GPU Nodes (Compute Cluster)'; GPU listed as 'NVIDIA Tesla V100S (optional)' with 32GB VRAM. No GPUs-per-node count provided."
+    },
+    {
+      "url": "https://physics.illinoisstate.edu/facilities/computational-facilities/",
+      "data_found": "Physics department page reiterates the same central ISU HPC cluster description (30 nodes total; includes 2 GPU nodes; GPU: NVIDIA Tesla V100S (optional)). Also mentions a separate Dell T630 with a Tesla K20 GPU (not part of the HPC cluster)."
+    },
+    {
+      "url": "https://prpa.illinoisstate.edu/downloads/CDS-2024-2025_ISU_FINAL.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024 (AY 2024-25)",
+    "source_url": "https://prpa.illinoisstate.edu/downloads/CDS-2024-2025_ISU_FINAL.pdf",
+    "notes": "NO CS-MAJOR ENROLLMENT COUNTS FOUND IN 2024+ PUBLIC SOURCES. I verified 2024+ sources first: (1) Illinois State University Common Data Set 2024-2025 and (2) PRPA Fall 2024 Fact Sheet. Both are explicitly dated 2024/2024-2025 but only report institution-level enrollment (not Computer Science major/program enrollment by degree level). The PRPA site indicates major-level enrollment is available via Power BI 'Enrollment Dashboards (Fall 2015 through Current Term)', but those dashboards are hosted on app.powerbi.com and I could not retrieve a CS-major headcount for Fall 2024 from a static, citable page. Because no page I could cite explicitly states Computer Science enrollment counts for Fall 2024 or AY 2024-25, all CS counts are set to 0 per your instructions."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://about.illinoisstate.edu/rcab/hpc/",
+    "notes": "Clusters found with relevant GPU info: (1) Illinois State University central HPC cluster in Julian Hall / RCAB HPC: 2 GPU nodes with NVIDIA Tesla V100S (32GB). GPUs-per-node is not stated publicly on the cited pages, so an estimate is required to compute totals. Estimated GPUs_per_node=2 (typical small university HPC GPU-node configuration for V100S-era systems). Calculation: 2 GPU nodes \u00d7 2 V100S per node (estimated) = 4 total V100S, counted under v100_count. No public evidence of H100/H200/A100/A6000/L40S/P100/V100 (non-S)/etc on these pages; totals set to 0 for those models."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

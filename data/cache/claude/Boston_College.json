@@ -1,0 +1,49 @@
+{
+  "university_name": "Boston College",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.bc.edu/bc-web/offices/its/about/its-news/2025/hpc-cluster-upgrade.html",
+      "data_found": "In June 2025, ITS completed a substantial upgrade to the Boston College High-Performance Computing (HPC) cluster. Graphical Processing Unit (GPU) resources were doubled, including the latest and most powerful H200 GPU currently available. The HPC is used by approximately 400 researchers in the BC community."
+    },
+    {
+      "url": "https://www.bc.edu/bc-web/offices/its/services/research-services/linux-cluster.html",
+      "data_found": "Andromeda, the Linux High-Performance Computing (HPC) cluster provides computational resources."
+    },
+    {
+      "url": "https://www.bc.edu/bc-web/sites/bc-news/articles/2025/fall/bc-to-offer-doctoral-program-in-computer-science.html",
+      "data_found": "Computer science is among the top 10 most popular majors at BC, with 533 undergraduate students. With recruitment efforts under way for the first cohort of five students, the goal is to expand to 25 total doctoral students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 533,
+    "grad_cs_count": -1,
+    "phd_cs_count": 0,
+    "year": "2025",
+    "source_url": "https://www.bc.edu/bc-web/sites/bc-news/articles/2025/fall/bc-to-offer-doctoral-program-in-computer-science.html",
+    "notes": "533 undergraduate CS majors confirmed from BC news article. MS (grad) CS count not found in available sources. PhD program launching in fall 2026 with first cohort of 5 students, so currently 0 PhD students. The 25 total doctoral students mentioned is a future goal."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.bc.edu/bc-web/offices/its/about/its-news/2025/hpc-cluster-upgrade.html",
+    "notes": "Boston College confirmed GPU resources were doubled in June 2025 and include H200 GPUs. However, exact counts and specifications were not found in publicly available sources. The Andromeda cluster exists but detailed GPU inventory is not publicly listed."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Boston College has clear CS enrollment data (533 undergrads) but limited public information about specific GPU resources. The June 2025 HPC upgrade doubled GPU resources and added H200s, but exact counts are not publicly disclosed. The CS PhD program is new, launching fall 2026."
+}

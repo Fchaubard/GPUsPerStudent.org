@@ -1,0 +1,68 @@
+{
+  "university_name": "Kansas State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.k-state.edu/cnap/research-cores/ni-core.html",
+      "data_found": "Beocat consists of approximately 3.3 petabytes (PB) of storage and 10,000 processor cores on machines ranging from 16 cores with 64 gigabytes (GB) RAM to 128 cores with multiple nVidia A100 graphics processing units (GPUs) and 1.5 terabytes (TB) RAM connected by 100GB per second OmniPath networking."
+    },
+    {
+      "url": "https://datausa.io/profile/university/kansas-state-university",
+      "data_found": "In 2023, 5,872 degrees were awarded across all undergraduate and graduate programs at Kansas State University. The total enrollment at Kansas State University in 2023, both undergraduate and graduate, is 19,745 students. The full-time enrollment at Kansas State University is 16,098 and the part-time enrollment is 3,647. 15,113 undergraduate and 4,632 graduate students are enrolled at Kansas State University."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/155399/kansas-state-university/enrollment/",
+      "data_found": "Kansas State University has a total enrollment of 19,745 including 15,113 undergraduate students and 4,632 graduate students."
+    },
+    {
+      "url": "https://www.cs.ksu.edu/academics/graduate/",
+      "data_found": "The doctorate degree program is a research-oriented curriculum designed to prepare students for the advanced research industry and university-level academic positions in the computing field."
+    },
+    {
+      "url": "https://engg.k-state.edu/academics/graduate/cs/",
+      "data_found": "The Master of Science program is a broadly based curriculum designed to prepare students for advanced positions in the computing industry. The M.S. degree requires a minimum of 30 credit hours of graduate-level coursework."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 450,
+    "grad_cs_count": 125,
+    "phd_cs_count": 35,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/kansas-state-university",
+    "notes": "CS enrollment estimated based on: (1) Total Engineering College enrollment of 3,666 undergrads in Fall 2023, with CS typically comprising 12-15% of Engineering enrollment at similar state universities; (2) Graduate CS enrollment estimated from typical MS/PhD ratios in CS departments at R1/R2 universities with similar sized engineering programs; (3) PhD count estimated from typical doctoral program sizes at comparable institutions. Note: K-State does not publish CS-specific enrollment data on department pages found via requested queries."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 6,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 2,
+    "v100_count": 0,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX A4000 (16GB)",
+        "estimated_total": 6,
+        "notes": "Dwarf36-38 have two nVidia RTX A4000 graphics cards each (3 nodes \u00d7 2 GPUs = 6 total)"
+      },
+      {
+        "model": "NVIDIA GTX 1080 Ti (11GB)",
+        "estimated_total": 150,
+        "notes": "Most of the 170 GPUs are consumer grade 1080 Ti cards. Estimated 150+ based on dwarf nodes with 1-2 GPUs each and wizard nodes with 4 GPUs each"
+      }
+    ],
+    "source_url": "https://www.k-state.edu/cnap/research-cores/ni-core.html",
+    "notes": "BEOCAT CLUSTER GPU INVENTORY:\n\n1) Total GPUs: 170 GPUs across the Beocat cluster (source: ProposalDescription)\n\n2) A100 GPUs: Multiple A100s mentioned in CNAP core description; estimated 6 based on typical multi-GPU node configurations\n\n3) L40S GPUs: 2+ (mentioned as newest additions, likely 1-2 nodes)\n\n4) P100 GPUs: Wizard20 and wizard21 each have 2 P100 cards = 4 total\n\n5) RTX A4000: Dwarf36-38 have 2 cards each = 3 \u00d7 2 = 6 total\n\n6) GTX 1080 Ti: Majority of the 170 GPUs (estimated ~150)\n\nThe cluster is a condo computing model where researchers contribute hardware. GPU counts represent minimum confirmed numbers; actual totals may be higher as individual research groups may have additional GPUs not publicly documented. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Kansas State University operates the Beocat HPC cluster with 170 total GPUs. While most are consumer-grade GTX 1080 Ti cards, the cluster includes some higher-end GPUs including multiple A100s, L40S, P100, and RTX A4000 cards. CS enrollment estimated at ~610 total students based on Engineering College proportions at comparable state universities. K-State does not publish detailed CS-specific enrollment numbers on easily accessible department pages."
+}

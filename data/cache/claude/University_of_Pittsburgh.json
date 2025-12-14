@@ -1,0 +1,59 @@
+{
+  "university_name": "University of Pittsburgh",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://crc.pitt.edu/news/new-gpu-preempt-partition-announcement",
+      "data_found": "GPU cluster's A100_MULTI partition hosts 10 high-powered computing nodes, each equipped with 4 A100 GPUs."
+    },
+    {
+      "url": "https://www.cs.pitt.edu/",
+      "data_found": "Our community includes 37 full-time faculty members, two staff members, over 100 graduate students, over 900 pre-CS/CS majors, and thousands of alumni."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-pittsburgh-school-of-arts-and-sciences-department-of-computer-science-000_10021250.aspx",
+      "data_found": "91 Total Graduate Students; 695 Applied, 72 Accepted, 7 Enrolled."
+    },
+    {
+      "url": "https://datausa.io/profile/geo/pittsburgh-pa/",
+      "data_found": "Computer Science: 486 degrees awarded [in Pittsburgh, PA universities in 2023]."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 900,
+    "grad_cs_count": 91,
+    "phd_cs_count": -1,
+    "year": "2024-2025",
+    "source_url": "https://www.cs.pitt.edu/",
+    "notes": "CS Department states 'over 900 pre-CS/CS majors' for undergraduates and 'over 100 graduate students'. Peterson's data shows 91 total graduate students in CS. PhD count not separately specified in available sources."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 48,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": -1,
+    "v100_count": 16,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA GTX 1080",
+        "estimated_total": null,
+        "notes": "Mentioned in node/685 page as 'gtx1080' partition with 11GB memory"
+      }
+    ],
+    "source_url": "https://crc.pitt.edu/news/new-gpu-preempt-partition-announcement",
+    "notes": "CALCULATIONS: 1) A100_MULTI partition: 10 nodes \u00d7 4 A100 GPUs = 40 A100s. 2) A100_NVLINK partition: 1 HGX platform \u00d7 8 A100 = 8 A100s. Total A100s = 40 + 8 = 48. 3) POWER9 partition: 4 nodes \u00d7 4 V100 GPUs = 16 V100s. L40S partition mentioned in documentation but specific count not provided. No H100, H200, or newer generation GPUs found in search results."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Pittsburgh's CRC (Center for Research Computing and Data) provides GPU resources through multiple partitions. The A100_MULTI partition alone provides 40 A100 GPUs (10 nodes \u00d7 4 GPUs each). CS department enrollment shows over 900 undergraduate CS majors and 91 graduate students."
+}

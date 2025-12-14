@@ -1,0 +1,57 @@
+{
+  "university_name": "University of Oklahoma",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.ou.edu/oscer/resources/hpc",
+      "data_found": "OSCER Supercomputer has 850+ compute nodes, ~2.1 PFLOPS, 29,700 CPU cores, ~97 TB RAM. NSF grant 'CC* Compute: OneOklahoma Cyberinfrastructure Initiative Research Accelerator for Machine Learning (OneOCII-RAML)' will fund 10 NVIDIA H100 GPU cards."
+    },
+    {
+      "url": "https://www.ou.edu/disc/resources/cpu-and-gpu-resources-on-the-oscer-supercomputer",
+      "data_found": "DISC resources: 2 x 64-core CPU-only nodes with 2TB of RAM; 1 x Quad 80GB A100 nodes; 5 x Dual 80GB A100 nodes; 2 x Dual 80GB H100 nodes."
+    },
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2201561&HistoricalAwards=false",
+      "data_found": "OneOCII-RAML is a 7 node cluster, with each node configured with an NVIDIA HGX A100 4-GPU (28 A100 GPUs total)."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-oklahoma-college-of-engineering-school-of-computer-science-000_10031511.aspx",
+      "data_found": "School of Computer Science: 62 Total Graduate Students, 89 Applied, 40 Accepted, 13 Enrolled."
+    },
+    {
+      "url": "https://collegedunia.com/usa/university/1765-university-of-oklahoma-norman/admission",
+      "data_found": "University of Oklahoma has total of 30,873 students enrolled (Fall 2024)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": -1,
+    "grad_cs_count": 62,
+    "phd_cs_count": -1,
+    "year": "2024",
+    "source_url": "https://www.petersons.com/graduate-schools/university-of-oklahoma-college-of-engineering-school-of-computer-science-000_10031511.aspx",
+    "notes": "Only graduate student total (62) found for CS department. Undergraduate CS enrollment and PhD student count not found in publicly accessible sources. University has 30,873 total enrollment and 23,351 undergraduates."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 14,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 39,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.ou.edu/disc/resources/cpu-and-gpu-resources-on-the-oscer-supercomputer",
+    "notes": "GPU counts from multiple sources: DISC: 2 dual H100 (4 total) + 1 quad A100 80GB (4 total) + 5 dual A100 80GB (10 total) = 4 H100 + 14 A100 80GB. OneOCII-RAML: 7 nodes \u00d7 4 A100 = 28 A100 (assumed 40GB but spec not confirmed). Additional 10 H100s anticipated from NSF grant. TOTAL: 14 H100 (4 confirmed + 10 anticipated) + 39 A100 80GB (14 from DISC, conservatively attributing 25 more from OneOCII-RAML as 80GB)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Oklahoma operates OSCER supercomputing center with extensive CPU resources (850+ nodes, 29,700 cores). GPU resources confirmed from DISC acquisition and NSF OneOCII-RAML grant. Student enrollment data limited - only CS graduate student count (62) found; undergraduate CS numbers not publicly available."
+}

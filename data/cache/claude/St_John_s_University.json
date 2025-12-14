@@ -1,0 +1,61 @@
+{
+  "university_name": "St. John's University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.stjohns.edu/academics/programs/computing-and-machine-learning-bachelor-science",
+      "data_found": "Our computer labs contain more than 300 Intel workstations and more than 30 high-end Macintosh computers."
+    },
+    {
+      "url": "https://www.govtech.com/champions/higher-ed/st-johns-university",
+      "data_found": "Hardware constraints restricting development flexibility; Rising operational costs and inefficient data center maintenance; By transitioning to AWS, St. John's University achieved significant, measurable outcomes; Increased AI capabilities enabling new services for staff and students."
+    },
+    {
+      "url": "https://www.stjohns.edu/enrollment-reports",
+      "data_found": "Fall 2019 Enrollment Trends - by Major, School & Campus (PDF) [multiple enrollment report PDFs listed but not directly accessible]"
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/195809/st-johns-university-new-york/enrollment/",
+      "data_found": "St. John's University-New York has a total enrollment of 19,691 including 15,699 undergraduate students and 3,992 graduate students. For the academic year 2023-2024."
+    },
+    {
+      "url": "https://datausa.io/profile/university/st-johns-university-new-york",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at St. John's University-New York were General Biological Sciences (253 degrees awarded), General Business Administration & Management (171 degrees), and General Psychology (168 degrees). The most common Bachelor's Degree concentration at St. John's University-New York is General Biological Sciences (253 degrees awarded)."
+    },
+    {
+      "url": "https://www.stjohns.edu/offices-departments/computer-science-mathematics-and-science",
+      "data_found": "There are five major degree programs of study offered by the Division of Computer Science, Mathematics and Science which address the mainstream needs of careers in the broad fields of Computer Science, Cyber Security Systems, Healthcare Informatics, Information Technology, and Telecommunications."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 450,
+    "grad_cs_count": 180,
+    "phd_cs_count": -1,
+    "year": "2023-2024",
+    "source_url": "https://www.collegetuitioncompare.com/edu/195809/st-johns-university-new-york/enrollment/",
+    "notes": "St. John's University does not publish specific CS enrollment numbers by degree level on publicly accessible pages. Total enrollment data shows 19,691 students with 15,699 undergraduate and 3,992 graduate students. Based on typical CS program proportions at similar universities (~2-3% of undergrads in CS, ~4-5% of grads in CS/tech fields), estimated undergraduate CS count = 450 and graduate MS CS count = 180. St. John's University offers MS in Computer Science but does not appear to have a PhD program in Computer Science based on available sources."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.stjohns.edu/academics/programs/computing-and-machine-learning-bachelor-science",
+    "notes": "No dedicated GPU cluster or HPC resources with GPUs were found for St. John's University. The university appears to rely on traditional computer lab workstations (300 Intel workstations and 30 Macintosh computers) and has transitioned to AWS cloud services for AI capabilities rather than maintaining on-premises GPU infrastructure."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "St. John's University appears to be primarily focused on cloud-based AI solutions (AWS) rather than on-premises GPU clusters. No evidence of research computing GPU resources was found despite multiple targeted searches."
+}

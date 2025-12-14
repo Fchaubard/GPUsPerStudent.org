@@ -1,0 +1,57 @@
+{
+  "university_name": "Rensselaer Polytechnic Institute",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://cci.rpi.edu/center-capabilities",
+      "data_found": "14 racks (252 nodes, 130,000 cores, 1512 v100 GPUs) with 128 TB of RAM total. Debut at #24 on the Top 500 list"
+    },
+    {
+      "url": "https://news.rpi.edu/content/2019/12/05/aimos-most-powerful-supercomputer-private-university-focus-ai-research",
+      "data_found": "Named AiMOS (short for Artificial Intelligence Multiprocessing Optimized System) in honor of Rensselaer co-founder Amos Eaton, the machine will serve as a test bed for the New York State-IBM Research AI Hardware Center"
+    },
+    {
+      "url": "https://datausa.io/profile/university/rensselaer-polytechnic-institute",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Rensselaer Polytechnic Institute were Computer Science (250 degrees awarded), Mechanical Engineering (162 degrees), and Aerospace, Aeronautical, & Astronautical Engineering (117 degrees)"
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/rensselaer-polytechnic-institute-school-of-science-department-of-computer-science-000_10013817.aspx",
+      "data_found": "84 Total Graduate Students; 44% International Breakout (representing other countries) Male (79%) Female (20%)"
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/rensselaer-polytechnic-institute/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Rensselaer Polytechnic Institute handed out 284 bachelor's degrees in computer science. In 2022, 26 students received their master's degree in compsci from RPI"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1000,
+    "grad_cs_count": 84,
+    "phd_cs_count": -1,
+    "year": "2024",
+    "source_url": "https://datausa.io/profile/university/rensselaer-polytechnic-institute",
+    "notes": "Undergraduate CS count estimated from 250 CS degrees awarded in 2023 (per datausa.io) \u00d7 4 years = ~1000. Graduate CS count of 84 from Peterson's graduate school data. PhD CS count could not be separated from total graduate count."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 1512,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://cci.rpi.edu/center-capabilities",
+    "notes": "CLUSTERS INCLUDED:\n\n1) AiMOS (Artificial Intelligence Multiprocessing Optimized System): 252 nodes with 1,512 NVIDIA V100 GPUs total (calculation: 252 nodes \u00d7 6 V100s/node = 1,512 V100s). This IBM POWER9-based system was #24 on the Top500 list when it debuted in 2019. It delivers 8 petaflops of computing power.\n\nNote: Only V100 GPUs were found in the publicly available documentation. No evidence of newer generation GPUs (H100, A100, etc.) was discovered in the search results."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach. GPU data shows RPI's primary HPC resource is the AiMOS supercomputer with 1,512 V100 GPUs. Student enrollment data combined official sources showing total undergraduate enrollment of 5,743 (Fall 2024) with CS being the most popular major (250 degrees awarded in 2023)."
+}

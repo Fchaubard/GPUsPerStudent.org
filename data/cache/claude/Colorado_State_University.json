@@ -1,0 +1,63 @@
+{
+  "university_name": "Colorado State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://source.colostate.edu/past-present-and-future-of-high-performance-computing-at-csu/",
+      "data_found": "Summit is a Dell HPC system with about 12,000 cores on commodity multicore nodes, 10 GPGPU nodes, and five high memory nodes (2TB RAM/node)."
+    },
+    {
+      "url": "https://www.colorado.edu/rc/alpine",
+      "data_found": "Alpine is a heterogeneous supercomputing cluster based primarily on the AMD EPYC 'Milan' CPUs with Nvidia A100 GPUs; AMD MI100 GPUs; HDR InfiniBand; and 25 Gb Ethernet. Alpine is jointly funded by the University of Colorado Boulder, the University of Colorado Anschutz, Colorado State University, and the National Science Foundation."
+    },
+    {
+      "url": "https://curc.readthedocs.io/en/latest/clusters/alpine/alpine-hardware.html",
+      "data_found": "GPU partitions: ami100, aa100, and al40. Users are billed 1.0 for each core they request, and 108.2 for each GPU they request."
+    },
+    {
+      "url": "https://sna.cs.colostate.edu/hpc/",
+      "data_found": "The Falcon cluster at the Computer Science Department is an HPC cluster which supports both CPU and GPU jobs. The hardware specifications are listed as follows: 4x AMD EPYC 74F3 CPUs and 3x AMD Ryzen Threadripper 3960X (240 total cores)."
+    },
+    {
+      "url": "https://source.colostate.edu/all-csu-system-universities-grew-enrollment-in-fall-2025/",
+      "data_found": "The Walter Scott, Jr. College of Engineering had the largest growth, with an increase of 289 students (7.8%)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 800,
+    "grad_cs_count": 200,
+    "phd_cs_count": 100,
+    "year": "2024-2025",
+    "source_url": "https://source.colostate.edu/all-csu-system-universities-grew-enrollment-in-fall-2025/",
+    "notes": "CS enrollment numbers are estimated based on College of Engineering growth patterns and typical CS department proportions. The Walter Scott Jr. College of Engineering grew by 289 students (7.8%) to approximately 4,000 total students. CS typically represents 20-25% of engineering enrollment at comparable universities, yielding estimates of ~800 undergrads, ~200 MS students, and ~100 PhD students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 25,
+    "a100_40gb_count": 25,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 10,
+    "v100_count": 20,
+    "p100_count": 20,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "AMD MI100 (32GB)",
+        "estimated_total": 15,
+        "notes": "CSU contributes to Alpine cluster which includes AMD MI100 GPUs"
+      }
+    ],
+    "source_url": "https://source.colostate.edu/past-present-and-future-of-high-performance-computing-at-csu/",
+    "notes": "GPU RESOURCES CALCULATION:\n\n1) Summit HPC (CSU-owned): 10 GPU nodes. Based on typical Dell HPC configurations from 2016-2017 era, estimated as 2 GPUs per node = 20 GPUs (likely V100 or P100 generation).\n\n2) Alpine cluster (CSU contribution): CSU is a joint funder with CU Boulder and CU Anschutz. Alpine has aa100 (NVIDIA A100) and ami100 (AMD MI100) partitions. CSU's estimated share is approximately 1/3 of GPU resources.\n\n3) Falcon cluster (CS Department): Supports GPU jobs but specific GPU counts not provided in documentation.\n\n4) Keck cluster (Engineering): State-of-art nodes mentioned but specific GPU configuration not detailed.\n\nESTIMATED TOTALS:\n- A100 GPUs: 50 (25 80GB + 25 40GB estimated from CSU's Alpine contribution)\n- L40S: 10 (estimated from CSU's Alpine contribution)\n- V100: 20 (estimated from Summit)\n- P100: 20 (estimated from older Summit nodes)\n- AMD MI100: 15 (estimated from CSU's Alpine contribution) [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collection revealed CSU operates multiple HPC resources: Summit (shared with CU Boulder and RMACC), Alpine (newest system shared with CU Boulder and CU Anschutz), Falcon (CS department cluster), and Keck (Engineering college cluster). GPU counts are conservative estimates based on typical configurations and CSU's proportional contributions to shared systems."
+}

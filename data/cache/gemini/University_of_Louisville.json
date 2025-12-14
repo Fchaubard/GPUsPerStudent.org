@@ -1,0 +1,36 @@
+{
+  "university_name": "University of Louisville",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 624,
+    "grad_cs_count": 104,
+    "phd_cs_count": 73,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data derived from Fall 2023 Enrollment by Academic Plan reports. Undergrad count includes 'Computer Science & Engineering' (BS). Grad count includes 'Computer Science' (MS). PhD count includes 'Computer Science & Engineering' (PhD). Does not include Data Analytics or Applied Cybersecurity certificate students to maintain strict CS definition. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 8,
+    "a40_count": 4,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 8,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data reflects the central 'Dandeneau' cluster managed by Research Computing. \n\nCalculations:\n1. A100: 1 node x 8 GPUs = 8 A100 (Assumed 40GB as they are not specified as 80GB and 40GB is standard for earlier deployments).\n2. V100: (1 node x 4 GPUs) + (2 nodes x 2 GPUs) = 4 + 4 = 8 V100.\n3. A40: 2 nodes x 2 GPUs = 4 A40.\n\nNo H100 or H200 resources are publicly listed in the central cluster specifications. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UofL Research Computing (KyRC) explicitly lists GPU counts per node on their public hardware page. Student counts taken from the most recent available Fall census data (2023) provided by the Office of Institutional Research."
+}

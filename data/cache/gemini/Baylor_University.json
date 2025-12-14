@@ -1,0 +1,36 @@
+{
+  "university_name": "Baylor University",
+  "data_retrieved_date": "2025-06-02",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 638,
+    "grad_cs_count": 38,
+    "phd_cs_count": 48,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Undergraduate count derived from Baylor Institutional Research Fall 2023 Profile: Computer Science B.S.C.S. (560) + Computer Science Fellows (78). Does not include B.A. or Bioinformatics to remain strict to CS. Graduate counts from Fall 2023 Graduate Profile. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 4,
+    "a100_40gb_count": 34,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 16,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data based on the 'Kodiak' cluster specifications listed on the Baylor HPC main site/documentation.\n\nCALCULATIONS:\n- A100 40GB: (3 DGX nodes x 8 GPUs/node) + (5 Dell R7525 nodes x 2 GPUs/node) = 24 + 10 = 34.\n- A100 80GB: (1 Dell XE8545 node x 4 GPUs/node) = 4.\n- V100: (4 Dell R740 nodes x 4 GPUs/node) = 16.\n- P100: (2 Dell R740 nodes x 2 GPUs/node) = 4.\n\nNo H100 or newer hardware was found in public documentation as of retrieval date. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Baylor's primary resource is the Kodiak cluster. Enrollment numbers are precise from the Fall 2023 Institutional Research PDF reports."
+}

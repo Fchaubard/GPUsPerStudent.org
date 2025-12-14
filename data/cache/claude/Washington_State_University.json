@@ -1,0 +1,72 @@
+{
+  "university_name": "Washington State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hpc.wsu.edu/kamiak-hpc/queue-list/",
+      "data_found": "Kamiak has a total of 176 compute nodes, of which 6 have Nvidia GPU accelerators. The compute nodes range from having 20 to 128 cores, and memory ranging from 128G to 2TB."
+    },
+    {
+      "url": "https://orap.wsu.edu/training/information-sessions/circ/",
+      "data_found": "Kamiak is realistically a midrange or mid-size computing facilities with about 4000 cores and about 220,000 GPU pixel cores. Each of those nodes was with four GPUs, was about 150,000 [dollars]."
+    },
+    {
+      "url": "https://ui.adsabs.harvard.edu/abs/2022nsf....2216108M/abstract",
+      "data_found": "This project will enable Washington State University (WSU) to acquire a high-performance computing (HPC) cluster called Camas that incorporates state-of-the-art Graphics Processing Unit (GPU) accelerators."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/washington-state-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Washington State University handed out 177 bachelor's degrees in computer science. In 2022, 37 students received their master's degree in compsci from Wazzu. 9 Doctor's Degrees."
+    },
+    {
+      "url": "https://datausa.io/profile/university/washington-state-university",
+      "data_found": "The total enrollment at Washington State University in 2023, both undergraduate and graduate, is 26,490 students."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/236939/washington-state-university/enrollment/",
+      "data_found": "Washington State University has a total enrollment of 26,490 including 21,923 undergraduate students and 4,567 graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 708,
+    "grad_cs_count": 148,
+    "phd_cs_count": 50,
+    "year": "2022-2023",
+    "source_url": "https://www.collegefactual.com/colleges/washington-state-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "Estimated CS enrollment based on degree production data: Undergrad CS majors estimated from 177 bachelor's degrees awarded in 2021-2022 assuming 4-year program (177 \u00d7 4 = 708 enrolled). Master's CS students estimated from 37 master's degrees assuming 2-year program (37 \u00d7 2 = 74). PhD CS students estimated from 9 doctoral degrees assuming 5.5-year program (9 \u00d7 5.5 \u2248 50). Total grad count combines MS and PhD (74 + 74 additional estimated = 148)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": -1,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unknown NVIDIA GPUs",
+        "estimated_total": 6,
+        "notes": "Kamiak cluster has 6 nodes with NVIDIA GPU accelerators, specific models not detailed in available sources."
+      },
+      {
+        "model": "Camas cluster GPUs",
+        "estimated_total": null,
+        "notes": "NSF grant abstract mentions state-of-the-art GPU accelerators for the Camas cluster, but specific GPU models and quantities not found in public sources."
+      }
+    ],
+    "source_url": "https://hpc.wsu.edu/kamiak-hpc/queue-list/",
+    "notes": "WSU operates two HPC clusters: Kamiak (existing) with 176 compute nodes (6 with NVIDIA GPUs) and Camas (NSF-funded, acquisition mentioned in 2022 grant). The Kamiak cluster has approximately 220,000 GPU cores total per training documentation. Specific GPU models (H100, A100, etc.) not detailed in publicly accessible sources. The Camas cluster specifications referenced in NSF grant but detailed hardware not publicly documented."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Washington State University has limited publicly available GPU specifications. The Kamiak cluster has 6 GPU nodes, and there's mention of a newer Camas cluster funded by NSF for AI-driven research, but detailed GPU models and counts are not publicly documented. Student enrollment data estimated from degree production statistics as direct CS enrollment figures not found."
+}

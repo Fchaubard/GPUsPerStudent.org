@@ -1,0 +1,47 @@
+{
+  "university_name": "University of Rhode Island",
+  "data_retrieved_date": "2025-05-27",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-rhode-island",
+      "data_found": "2022 Degrees Awarded (Computer Science): 136 Bachelors, 11 Masters, 2 PhDs. (Used to validate/estimate program breakdown)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 489,
+    "grad_cs_count": 26,
+    "phd_cs_count": 10,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-rhode-island",
+    "notes": "Undergraduate and total Graduate counts taken directly from URI Institutional Research 'Fall 2023 Enrollment by Major' report (Computer Science code 110701). Specific PhD breakdown not explicitly separated in the summary PDF (which lists 'Graduate'), so PhD count is estimated based on DataUSA/IPEDS degree completion data (approx 2 PhD degrees/year * 5 years duration = 10), with the remainder (16) assigned to MS. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 32,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 176,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 64,
+    "v100_count": 100,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 2080 Ti",
+        "estimated_total": 80,
+        "notes": "10 nodes with 8x RTX 2080 Ti each. Listed in Unity hardware specs."
+      }
+    ],
+    "source_url": "https://datausa.io/profile/university/university-of-rhode-island",
+    "notes": "URI utilizes the 'Unity' cluster (managed by UMass Amherst/MGHPCC) as its primary Research Computing facility. The counts above represent the total GPU resources in the Unity cluster available to the consortium (URI, UMass, etc.), as URI does not publish a separate isolated list of 'URI-owned' nodes within the cluster, and URI students have access to the general gpu partitions. CALCULATIONS: H100 (4 nodes * 8 cards = 32); A100 (22 nodes * 8 cards = 176); L40S (16 nodes * 4 cards = 64); V100 (50 nodes * 2 cards = 100). [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "URI relies on the shared Unity cluster (MGHPCC) for high-end GPU compute. Student numbers are sourced from 2023 Institutional Research reports."
+}

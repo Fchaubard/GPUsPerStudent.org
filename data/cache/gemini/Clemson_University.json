@@ -1,0 +1,45 @@
+{
+  "university_name": "Clemson University",
+  "data_retrieved_date": "2025-05-24",
+  "sources": [
+    {
+      "url": "https://www.clemson.edu/cecas/departments/computing/about/index.html",
+      "data_found": "School of Computing About Page: 'The School of Computing is home to over 1,800 undergraduates and over 400 graduate students.'"
+    },
+    {
+      "url": "https://www.clemson.edu/cecas/departments/computing/academics/graduates/index.html",
+      "data_found": "Graduate Program Overview: Offers PhD in Computer Science, PhD in Human-Centered Computing, MFA, and MS degrees."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1800,
+    "grad_cs_count": 400,
+    "phd_cs_count": 130,
+    "year": "2023-2024",
+    "source_url": "https://www.clemson.edu/cecas/departments/computing/about/index.html",
+    "notes": "Student counts derived from the School of Computing 'About' page which states 'over 1,800 undergraduates and over 400 graduate students'. PhD count is estimated at ~130 based on the presence of two distinct PhD programs (CS and Human-Centered Computing) and typical R1 university ratios of MS to PhD students within the stated 400 graduate total."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 36,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 234,
+    "a100_40gb_count": 20,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 50,
+    "p100_count": 40,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.clemson.edu/cecas/departments/computing/about/index.html",
+    "notes": "GPU counts calculated from Palmetto Cluster Hardware Table node configurations:\n\n- H100 PCIe/NVL: Phase 32 (3 nodes * 4 H100 NVL = 12) + Phase 30 (12 nodes * 2 H100 = 24). Total = 36. (H100 NVL is technically PCIe form factor but bridged; grouped here as PCIe).\n- A100 80GB: Phase 29 (20*2) + Phase 28a (25*2) + Phase 27 (7*2) + Phase 25 (18*2) + Phase 23 (15*4) + Phase 21 (17*2) = 40+50+14+36+60+34 = 234 GPUs.\n- A100 40GB: Phase 19 (10 nodes * 2) = 20 GPUs.\n- V100: Phase 18a (5*2) + Phase 17a (12*2) + Phase 16a (4*2) + Phase 13b (4*2) = 10+24+8+8 = 50 GPUs.\n- P100: Phase 11a (10*2) + Phase 7b (10*2) = 40 GPUs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Clemson uses a 'Condominium Model' where researchers purchase hardware to add to the cluster, granting them priority. General access is available to all students/faculty without direct charge but with lower priority (preemptible queues)."
+  },
+  "analysis_notes": "Clemson's Palmetto cluster has a very transparent hardware table. The 'AI Cluster' expansion (Phase 23) utilizes A100s, while newer Phase 30/32 additions introduce H100s. Student numbers are rounded figures provided by the department's overview page."
+}

@@ -1,0 +1,61 @@
+{
+  "university_name": "Stanford University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://datascience.stanford.edu/marlowe",
+      "data_found": "Marlowe is an NVIDIA DGX H100 Superpod with 31 NVIDIA H100 nodes and 248 total H100 GPUs (31 nodes \u00d7 8 GPUs/node). ([datascience.stanford.edu](https://datascience.stanford.edu/marlowe?utm_source=openai))"
+    },
+    {
+      "url": "https://carinadocs.stanford.edu/carina-resources",
+      "data_found": "Carina hardware specs include: 2 GPU nodes with Dual P100 (2\u00d72=4 P100), 6 GPU nodes with Quad V100 (6\u00d74=24 V100), 6 GPU nodes with Quad A100 (6\u00d74=24 A100, VRAM not stated), plus dedicated GPU nodes including 2 nodes with Quad A100 40GB (2\u00d74=8), 1 node with Quad A100 80GB (1\u00d74=4), 2 nodes with 8\u00d7 V100 32GB (2\u00d78=16), and 1 node with 8\u00d7 H100 80GB (1\u00d78=8). ([carinadocs.stanford.edu](https://carinadocs.stanford.edu/carina-resources?utm_source=openai))"
+    },
+    {
+      "url": "https://www.sherlock.stanford.edu/docs/tech/",
+      "data_found": "Sherlock public `gpu` partition breakdown includes specific node counts and GPU models, including P100 PCIe, V100 (SXM2/PCIe/V100S), L40S, and H100_SXM5. ([sherlock.stanford.edu](https://www.sherlock.stanford.edu/docs/tech/))"
+    },
+    {
+      "url": "https://www.sherlock.stanford.edu/docs/tech/facts/",
+      "data_found": "Sherlock total GPUs: 1,068 (as of December 2025). ([sherlock.stanford.edu](https://www.sherlock.stanford.edu/docs/tech/facts/?utm_source=openai))"
+    },
+    {
+      "url": "https://login.scg.stanford.edu/tutorials/gpus/",
+      "data_found": "SCG Genomics GPUs: UV300 has 4\u00d7 Tesla P100; one batch partition node has 2\u00d7 Tesla A100 (VRAM not stated). ([login.scg.stanford.edu](https://login.scg.stanford.edu/tutorials/gpus/?utm_source=openai))"
+    },
+    {
+      "url": "https://facts.stanford.edu/academics/undergraduate-education/other-undergraduate-education-facts",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://facts.stanford.edu/academics/undergraduate-education/other-undergraduate-education-facts",
+    "notes": "FOUND (meets 2024+ requirement): Stanford Facts page explicitly lists \u201cTop Undergraduate Majors by Enrollment \u2014 Fall 2024\u201d and includes \u201cComputer Science\u201d as the top major, but it does NOT provide numeric enrollment counts for CS majors.\n\nCOULD NOT FIND PUBLIC 2024+ CS ENROLLMENT COUNTS: I searched for (1) Stanford CS dept facts/at-a-glance pages, (2) Stanford Common Data Set 2024-2025, (3) Stanford IR&DS enrollment statistics, and (4) registrar enrollment stats. Stanford Facts also has a \u201cGraduate Student Profile \u2014 Fall 2024\u201d page, but it only reports totals by degree type and school (no CS-program breakdown).\n\nBLOCKER: Stanford\u2019s SIRIS \u201cCensus Autumn Enrollment Dashboard\u201d (which appears to support \u2018Major Student Count\u2019 breakdowns) requires Stanford authentication and is not publicly accessible, so I could not extract Fall 2024 Computer Science headcounts for BS/MS/PhD.\n\nPer your instructions, because no PUBLIC source with explicit 2024-2025 or Fall 2024 numeric CS major enrollment counts was found, all counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 512,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 304,
+    "a100_40gb_count": 284,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 32,
+    "v100_count": 218,
+    "p100_count": 32,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datascience.stanford.edu/marlowe",
+    "notes": "Clusters counted and arithmetic:\n\n1) Marlowe (Stanford Data Science): 31 nodes \u00d7 8 H100/node = 248 H100. Assumed H100 are SXM-class (DGX/HGX style). ([datascience.stanford.edu](https://datascience.stanford.edu/marlowe?utm_source=openai))\n\n2) HAI Compute Cluster (Stanford CS): 5 systems and 40 H100 total; interpreted as 5 systems \u00d7 8 H100/system = 40 H100. Assumed SXM due to NVLink/full-system phrasing. ([www4.cs.stanford.edu](https://www4.cs.stanford.edu/haic?utm_source=openai))\n\n3) Carina (secure on-prem):\n   - Public: 2 nodes \u00d7 2 P100/node = 4 P100.\n   - Public: 6 nodes \u00d7 4 V100/node = 24 V100.\n   - Public: 6 nodes \u00d7 4 A100/node = 24 A100 (VRAM not stated).\n   - Dedicated: 2 nodes \u00d7 4 A100(40GB)/node = 8 A100 40GB.\n   - Dedicated: 1 node \u00d7 4 A100(80GB)/node = 4 A100 80GB.\n   - Dedicated: 2 nodes \u00d7 8 V100(32GB)/node = 16 V100.\n   - Dedicated: 1 node \u00d7 8 H100(80GB)/node = 8 H100.\n   For the 24 public A100 GPUs with unspecified VRAM, estimated as A100 40GB based on likely deployment era (Ampere-era, common 40GB configs). ([carinadocs.stanford.edu](https://carinadocs.stanford.edu/carina-resources?utm_source=openai))\n\n4) Sherlock (Stanford Research Computing):\n   - Public `gpu` partition exact counts from Tech Specs:\n     * 1 node \u00d7 4 P100 PCIe/node = 4 P100.\n     * V100-family: (2 nodes \u00d7 4 V100_SXM2) + (1 node \u00d7 4 V100_SXM2) + (2 nodes \u00d7 4 V100 PCIe) + (2 nodes \u00d7 4 V100S PCIe) = 8+4+8+8 = 28 V100-family GPUs.\n     * 4 nodes \u00d7 4 L40S/node = 16 L40S.\n     * (2 nodes \u00d7 4 H100_SXM5) + (1 node \u00d7 8 H100_SXM5) = 8+8 = 16 H100 SXM.\n     (Other public GPUs not counted in requested buckets: 64\u00d7 RTX_2080Ti and 4\u00d7 P40.) ([sherlock.stanford.edu](https://www.sherlock.stanford.edu/docs/tech/))\n   - Sherlock total GPUs (all partitions) reported as 1,068. ([sherlock.stanford.edu](https://www.sherlock.stanford.edu/docs/tech/facts/?utm_source=openai))\n   - Owner GPU breakdown is not published in the sources above; per instruction, remaining GPUs were estimated by era:\n     * Total public `gpu` partition GPUs = 132 (sums all public models listed in Tech Specs). Remaining GPUs = 1,068 - 132 = 936.\n     * Estimated distribution of those 936 (owners partition) into requested buckets (older\u2192V100/P100, newer\u2192A100/H100, some L40S):\n       - 200\u00d7 H100 (SXM)\n       - 300\u00d7 A100 80GB\n       - 250\u00d7 A100 40GB\n       - 150\u00d7 V100 (incl. V100S)\n       - 20\u00d7 P100\n       - 16\u00d7 L40S\n     * Therefore Sherlock totals used in this JSON (public exact + owner estimates):\n       - H100 SXM: 16 + 200 = 216\n       - L40S: 16 + 16 = 32\n       - V100: 28 + 150 = 178\n       - P100: 4 + 20 = 24\n       - A100 80GB: 300\n       - A100 40GB: 250\n\n5) SCG Genomics:\n   - P100: 4\n   - A100: 2 (VRAM not stated; estimated as A100 40GB)\n\nGrand totals across all clusters (including Sherlock owner estimates):\n- H100 SXM = Marlowe 248 + HAI 40 + Carina 8 + Sherlock 216 = 512\n- A100 80GB = Carina 4 + Sherlock 300 = 304\n- A100 40GB = Carina 32 + SCG 2 + Sherlock 250 = 284\n- V100 = Carina 40 + Sherlock 178 = 218\n- P100 = Carina 4 + SCG 4 + Sherlock 24 = 32\n- L40S = Sherlock 32\n\nFarmShare and Nero are listed as Stanford platforms but no authoritative, model-specific GPU inventory (nodes \u00d7 GPUs/node) was found in the searched sources, so they are not included in counts here. ([srcc.stanford.edu](https://srcc.stanford.edu/support/gettingstarted-hpc?utm_source=openai)) [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

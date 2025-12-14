@@ -1,0 +1,72 @@
+{
+  "university_name": "Tufts University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://rtguides.it.tufts.edu/hpc/compute/index.html",
+      "data_found": "Mixed systems include a limited number of various GPUs including V100, A100, H100 and GH200."
+    },
+    {
+      "url": "https://www.cs.tufts.edu/cs/21/notes/tufts_cluster/Introduction_to_Tufts_HPC_Cluster_cs21_2024.html",
+      "data_found": "GPU types available on preempt partition: V100 (16GB DRAM per GPU), A100 (40GB or 80GB DRAM, up to 8 per node), H100 (80GB DRAM, up to 3 per node), L40s (48GB DRAM, up to 4 per node), RTX 6000 (24GB), RTX A6000 (48GB, up to 8 per node), T4 (16GB, up to 4 per node), P100 (16GB, up to 6 per node)."
+    },
+    {
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2018149",
+      "data_found": "CC* Compute: GPU Infrastructure grant (2020): six GPU enhanced compute nodes each configured with dual 20-core Intel Xeon Gold 6248 CPUs, 768GB of RAM and 8 NVIDIA Tesla V100 (32GB) GPUs interconnected with NVLink. Total: 6 nodes \u00d7 8 V100 GPUs = 48 V100 GPUs funded by NSF grant."
+    },
+    {
+      "url": "https://datausa.io/profile/university/tufts-university",
+      "data_found": "In 2023, 208 degrees were awarded to men at Tufts University in Computer Science, which is 2.42 times more than the 86 female recipients with that same degree. Total CS degrees in 2023: 208 + 86 = 294."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/tufts-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Tufts University handed out 171 bachelor's degrees in computer science. In 2022, 51 students received their master's degree in compsci from Tufts."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/tufts-university-school-of-engineering-department-of-computer-science-000_10026418.aspx",
+      "data_found": "CS graduate program applications: 934 Applied, 475 Accepted, 126 Enrolled."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 684,
+    "grad_cs_count": 126,
+    "phd_cs_count": 50,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/tufts-university",
+    "notes": "Undergrad CS count estimated from: DataUSA shows 294 total CS degrees awarded in 2023. Assuming 4-year program, steady-state enrollment = 294 degrees/year \u00d7 4 years \u00d7 0.58 retention factor = ~684 students. Graduate MS count from Peterson's showing 126 enrolled in CS graduate programs. PhD count estimated from typical CS PhD program size of 40-60 students, using 50 as midpoint given Tufts' size and research profile."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 9,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 24,
+    "a100_40gb_count": 24,
+    "a40_count": 0,
+    "a6000_count": 32,
+    "l40s_count": 16,
+    "v100_count": 48,
+    "p100_count": 24,
+    "gh200_count": 3,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 6000 (24GB)",
+        "estimated_total": 32,
+        "notes": "Mentioned in CS cluster documentation; up to 8 per node."
+      },
+      {
+        "model": "NVIDIA T4 (16GB)",
+        "estimated_total": 16,
+        "notes": "Mentioned in CS cluster documentation; up to 4 per node."
+      }
+    ],
+    "source_url": "https://rtguides.it.tufts.edu/hpc/compute/index.html",
+    "notes": "GPU counts estimated from multiple sources: NSF grant shows 48 V100s (6 nodes \u00d7 8 GPUs). CS documentation shows various GPU types available with max counts per node (H100: up to 3/node, estimated 3 nodes = 9 GPUs; A100: up to 8/node with 40GB and 80GB variants, estimated 3 nodes each = 48 total; L40s: up to 4/node, estimated 4 nodes = 16; RTX A6000: up to 8/node, estimated 4 nodes = 32; P100: up to 6/node, estimated 4 nodes = 24). GH200 count estimated based on 'limited number' mentioned in documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected December 2025. GPU counts are estimates based on node configurations and typical cluster deployments. The cluster reports 6784 GPU cores total, suggesting significant GPU capacity. Student counts based on degree completions and standard enrollment patterns."
+}

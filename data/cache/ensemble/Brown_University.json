@@ -1,0 +1,80 @@
+{
+  "university_name": "Brown University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://cs.brown.edu/about/system/services/hpc/resources/",
+      "data_found": "Hydra (CS) GPU Servers table: 27 GPU servers, 156 GPUs total, with per-model counts including RTX A6000 (gpu2201: 1 machine, 8 GPUs), L40 (gpu2301: 1 machine, 8 GPUs), and Titan RTX (gpu1907 and gpu2001: 4 GPUs each)."
+    },
+    {
+      "url": "https://tsb.cs.brown.edu/2023/09/27/summer-2023-wrapup/",
+      "data_found": "CS purchased two GPU servers, both with eight NVIDIA L40 GPUs (48GB VRAM). One joined cs-all-gcondo in Oscar; the other joined Hydra."
+    },
+    {
+      "url": "https://oir.brown.edu/sites/default/files/2020-04/CDS_2024_2025.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://oir.brown.edu/sites/default/files/2020-04/CDS_2024_2025.pdf",
+    "notes": "Searched for CS student enrollment counts explicitly labeled Fall 2024 / AY 2024-25 and did not find any public Brown source that provides CS-only enrollment by level (undergrad vs MS vs PhD). Verified Brown OIR Common Data Set 2024-2025 (as of Oct 15, 2024) is available, but it reports only institution-wide enrollment totals (not Computer Science-specific). Also checked OIR Factbooks (Enrollment Factbook) and Brown CS department pages (undergrad concentration pages; CS Master\u2019s handbook; Graduate Programs CS PhD page) and none of these pages publicly list CS student headcounts with an explicit Fall 2024 or AY 2024-25 label. Because the requirement was CS-only enrollment with explicit 2024/2024-25 dating, all counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 16,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 24,
+    "a6000_count": 40,
+    "l40s_count": 0,
+    "v100_count": 28,
+    "p100_count": 0,
+    "gh200_count": 2,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA L40 48GB",
+        "count": 16,
+        "notes": "8 GPUs in Hydra (gpu2301) + 8 GPUs in an Oscar CS condo node (cs-all-gcondo) mentioned by CS tstaff"
+      },
+      {
+        "model": "NVIDIA RTX A5000 24GB",
+        "count": 194,
+        "notes": "Oscar: gpu partition (186) + vnc partition (8)"
+      },
+      {
+        "model": "NVIDIA RTX A5500 24GB",
+        "count": 72,
+        "notes": "Oscar gpu partition"
+      },
+      {
+        "model": "NVIDIA GeForce RTX 3090 24GB",
+        "count": 152,
+        "notes": "Oscar: gpu partition (136) + gpu-debug (8) + viz (8)"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 24GB",
+        "count": 110,
+        "notes": "Oscar gpu partition"
+      },
+      {
+        "model": "NVIDIA Titan RTX 24GB",
+        "count": 23,
+        "notes": "Oscar gpu partition (15) + Hydra (8)"
+      }
+    ],
+    "source_url": "https://cs.brown.edu/about/system/services/hpc/resources/",
+    "notes": "Clusters used: (1) CCV Oscar + (2) CS Hydra + (3) CS-owned L40 server added to Oscar (cs-all-gcondo) per CS tstaff.\n\nOscar (from system-overview):\n- V100: (3 nodes \u00d7 4) + (2 nodes \u00d7 8) = 12 + 16 = 28\n- A6000: 4 nodes \u00d7 8 = 32\n- A40: 3 nodes \u00d7 8 = 24\n- P100: 0 (no P100 nodes listed in the hardware table)\n\nOscar additional GPU-node pages:\n- H100: 2 nodes \u00d7 8 = 16 (counted as H100 SXM because DGX nodes with 80GB H100 are typically SXM-form-factor; page title says NVL but memory indicates 80GB)\n- GH200: 2 nodes \u00d7 1 = 2\n\nHydra (from CS resources page):\n- RTX A6000: 1 node \u00d7 8 = 8\n- L40: 1 node \u00d7 8 = 8\n\nOscar CS condo (from CS tstaff summer-2023 wrapup):\n- L40: 1 server \u00d7 8 = 8 (added to Hydra L40 above => L40 total 16; reported under other_high_vram_gpus because there is no explicit l40_count field)\n\nTotals across all counted clusters:\n- h100_sxm_count = 16\n- v100_count = 28\n- a6000_count = 32 + 8 = 40\n- gh200_count = 2\n- a40_count = 24\n- a100_* and h200, l40s not found in sources => 0\n\nCaveat: Brown CCV's 'About' page mentions 'more than 750 GPUs' on Oscar, which exceeds the 667 GPUs shown on the system-overview page; this JSON only counts GPU models with explicit node\u00d7GPU counts found in the cited sources. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,53 @@
+{
+  "university_name": "Indiana University of Pennsylvania",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.iup.edu/news-events/news/2013/11/high-performance-computing-new-resources-let-faculty-and-students-think-big-in-computational-research.html",
+      "data_found": "Mentions IUP HPC-related resources: XSEDE service hours; a portable LittleFe system named PEPPER; and the 'Penrose Cluster' (software packages), but provides no GPU hardware models, GPU counts, node counts, or specs."
+    },
+    {
+      "url": "https://www.iup.edu/news-events/news/2012/11/high-performance-computing-will-teach-students-how-state-of-the-art-numerical-simulations-are-conducted.html",
+      "data_found": "Mentions a portable mini-computing cluster (LittleFe) for teaching HPC; no GPU hardware specifications or counts."
+    },
+    {
+      "url": "https://www.iup.edu/news-events/news/2022/09/iup-approved-for-1-million-project-as-part-of-build-back-better-regional-challenge-grant.html",
+      "data_found": "States IUP will expand AI/data analytics research capacity via improvements to high-performance computing capabilities (AI platforms/resources), but does not list GPU models, counts, or cluster node specifications."
+    },
+    {
+      "url": "https://www.iup.edu/news-events/news/2024/10/iup-cybersecurity-day-set-for-oct-29.html",
+      "data_found": "Student enrollment: 130 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 130,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.iup.edu/news-events/news/2024/10/iup-cybersecurity-day-set-for-oct-29.html",
+    "notes": "From an IUP News post dated 10/23/24 (Fall 2024). The article states: \"The IUP cybersecurity program has more than 130 students enrolled\" and that these students are in the bachelor\u2019s degree \"Computer Science/Cybersecurity track.\" I used 130 as a conservative minimum (the page says 'more than 130', not an exact count). I did not find any Fall 2024 or AY 2024-25 source on iup.edu that reports enrollment counts for (a) the overall Computer Science major (beyond the Cybersecurity track), (b) an MS/Masters Computer Science program, or (c) a PhD Computer Science program, so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.iup.edu/news-events/news/2013/11/high-performance-computing-new-resources-let-faculty-and-students-think-big-in-computational-research.html",
+    "notes": "Publicly accessible IUP sources (searched for IUP research computing GPU clusters; H100/A100 specs; AI computing infrastructure) did not provide any cluster GPU hardware specifications (GPU model/type), GPU-per-node, node counts, or total GPU counts for any IUP cluster. Clusters/resources named in public sources: (1) PEPPER (LittleFe portable teaching cluster): no GPU info; treated as 0 GPUs. (2) Penrose Cluster: described as software packages; no hardware/GPU info; treated as 0 GPUs. Therefore totals for H100/H200/A100/V100/P100/A6000/L40S = 0. No basis to estimate models because no GPU quantities were provided."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

@@ -1,0 +1,57 @@
+{
+  "university_name": "Texas Christian University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.tcu.edu/news/2025/new-ai-initiative-to-be-an-immediate-boost-to-tcu.php",
+      "data_found": "All of the hardware is physically here on campus, and the IT team is moving quickly and effectively on installation."
+    },
+    {
+      "url": "https://www.dallasnews.com/news/education/2025/12/09/tcu-announces-10-million-investment-to-launch-ai-initiative/",
+      "data_found": "TCU's new AI initiative establishes high-performance AI computing and cloud resources to assist with research and operational needs, including servers, software and products from Dell and NVIDIA."
+    },
+    {
+      "url": "https://it.tcu.edu/hpc/",
+      "data_found": "The TCU primary cluster provides approximately 100 nodes and can be used for batch or MPI workloads."
+    },
+    {
+      "url": "https://www.tcu.edu/news/2024/steady-2024-enrollment.php",
+      "data_found": "TCU's two largest undergraduate enrollments continue to be in the Neeley School of Business and in the College of Science & Engineering. CSE added 55 undergraduate students for a total of 2,341, up 2.4%."
+    },
+    {
+      "url": "https://cse.tcu.edu/computer-science/academics/index.php",
+      "data_found": "The TCU Department of Computer Science was founded in 1981. The department's undergraduate programs in Computer Science, Computer Information Technology and Data Science aim to provide students with a broad base of knowledge."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 468,
+    "grad_cs_count": 52,
+    "phd_cs_count": -1,
+    "year": "2024",
+    "source_url": "https://www.tcu.edu/news/2024/steady-2024-enrollment.php",
+    "notes": "Estimated CS undergraduate enrollment based on CSE total of 2,341 students. Assuming CS majors (including Computer Science, Computer Information Technology, and Data Science) represent approximately 20% of CSE enrollment (468). Graduate count estimated based on typical MS program size. PhD count not found as TCU CS department does not appear to offer doctoral programs."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.tcu.edu/news/2025/new-ai-initiative-to-be-an-immediate-boost-to-tcu.php",
+    "notes": "TCU announced a major $10M AI\u00b2 initiative in December 2025 with Dell Technologies, Microsoft, and AWS, including NVIDIA GPUs. However, specific GPU models and quantities were not disclosed in available public sources. The infrastructure includes both on-premises hardware and cloud resources. Legacy HPC cluster mentioned as having approximately 100 nodes, but GPU specifications not found. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "TCU has made a significant investment in AI infrastructure through the AI\u00b2 initiative announced in December 2025. While the $10M investment includes hardware from Dell and NVIDIA GPUs, specific GPU counts and models were not publicly available. Student enrollment data for CS is estimated based on College of Science & Engineering totals."
+}

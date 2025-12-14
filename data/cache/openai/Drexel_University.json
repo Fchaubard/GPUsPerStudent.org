@@ -1,0 +1,64 @@
+{
+  "university_name": "Drexel University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.urcf.drexel.edu/clusters/picotte/hardware/",
+      "data_found": "Picotte GPU compute nodes: 12 nodes, each with 4x NVIDIA Tesla V100-SXM2 32GB (48 total V100 GPUs)."
+    },
+    {
+      "url": "https://docs.urcf.drexel.edu/clusters/proteus/specifications/",
+      "data_found": "Proteus (retired) GPU compute nodes: 8 nodes, each with 2x NVIDIA Tesla K20Xm (16 total K20Xm GPUs)."
+    },
+    {
+      "url": "https://docs.urcf.drexel.edu/clusters/",
+      "data_found": "URCF documentation states Drexel currently has one supported HPC research cluster (Picotte) and that Proteus was retired on 2021-07-31."
+    },
+    {
+      "url": "https://drexel.edu/institutionalresearch/~/media/Drexel/Provost-Group/InstitutionalResearch/Documents/Factbook/2526MarjosDeclared.pdf",
+      "data_found": "Student enrollment: 1607 undergrad, 119 grad, 36 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1607,
+    "grad_cs_count": 119,
+    "phd_cs_count": 36,
+    "year": "Fall 2024",
+    "source_url": "https://drexel.edu/institutionalresearch/~/media/Drexel/Provost-Group/InstitutionalResearch/Documents/Factbook/2526MarjosDeclared.pdf",
+    "notes": "Source is Drexel Factbook PDF 'Majors declared' (report produced 11/13/2025). It explicitly includes a 'Fall year (fall snapshot) 2021 2022 2023 2024 2025' table and is labeled within the document as '2024-2025 Drexel University Factbook'. Used the 2024 column (Fall 2024 snapshot, census ~6 weeks into fall term) under 'Computing and Informatics' -> 'Baccalaureate Degree' -> 'Computer Science' = 1,607 (undergrad CS majors). Used the 2024 column under the same school for 'Masters Degree' -> 'Computer Science' = 119 (masters/MS-level CS majors) and 'Doctoral Degree' -> 'Computer Science' = 36 (PhD CS majors). Validation: counts are from 2024 column; no 2023-or-earlier-only data used."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 3,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 48,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K20Xm (6GB)",
+        "count": 16,
+        "context": "Proteus (retired 2021-07-31) GPU compute nodes"
+      },
+      {
+        "model": "NVIDIA Tesla T4 (16GB)",
+        "count": 6,
+        "context": "CCI Proxmox VE shared GPU node"
+      }
+    ],
+    "source_url": "https://docs.urcf.drexel.edu/clusters/picotte/hardware/",
+    "notes": "Clusters found and GPU totals (nodes \u00d7 GPUs_per_node): Picotte (URCF): 12 GPU nodes \u00d7 4 V100-SXM2 per node = 48 V100 GPUs. Proteus (URCF, retired; info retained for historical purposes): 8 GPU nodes \u00d7 2 Tesla K20Xm per node = 16 K20Xm GPUs (not mapped to requested model fields; listed under other_high_vram_gpus). CCI Proxmox VE: shared GPU node = 1 \u00d7 6 Tesla T4 = 6 T4 GPUs (not mapped to requested model fields; listed under other_high_vram_gpus); research GPU node = 1 \u00d7 3 A40 = 3 A40 GPUs. No Drexel-published specs found in these sources indicating any H100/H200/A100/L40S/A6000/P100/V100(64GB)/etc in the listed clusters; therefore those counts are 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

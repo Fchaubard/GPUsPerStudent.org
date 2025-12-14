@@ -1,0 +1,49 @@
+{
+  "university_name": "St. Mary's University of Minnesota",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.smumn.edu/information-technology/",
+      "data_found": "B.S. in Information Technology online program offered. No GPU cluster or HPC resources mentioned on IT pages."
+    },
+    {
+      "url": "https://techfaq.smumn.edu/",
+      "data_found": "IT HelpDesk page lists basic student computing requirements (dual-core processors, 4GB RAM minimum). No mention of research computing resources."
+    },
+    {
+      "url": "https://www.bachelorstudies.co.uk/institutions/saint-marys-university-of-minnesota/bachelor-in-computer-science",
+      "data_found": "Bachelor's in Computer Science offered with tracks in cybersecurity, software design, and data analytics. Small class sizes mentioned (8-10:1 student-teacher ratio)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": -1,
+    "grad_cs_count": -1,
+    "phd_cs_count": 0,
+    "year": "2024",
+    "source_url": "https://www.smumn.edu/information-technology/",
+    "notes": "Unable to find specific CS enrollment numbers. The university emphasizes small class sizes (8-10:1 student-teacher ratio per GradReports reviews). University appears to be primarily teaching-focused with no PhD programs in CS found. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.smumn.edu/information-technology/",
+    "notes": "No research computing infrastructure or GPU resources found in public documentation. St. Mary's University of Minnesota appears to be a small liberal arts institution focused on undergraduate teaching rather than research computing. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "St. Mary's University of Minnesota is a small Lasallian Catholic university. No public information found about research computing infrastructure, GPU clusters, or HPC resources. The institution appears focused on undergraduate education with small class sizes. Unable to find specific CS enrollment data through public sources."
+}

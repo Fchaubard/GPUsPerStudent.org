@@ -1,0 +1,73 @@
+{
+  "university_name": "University of Michigan - Ann Arbor",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://its.umich.edu/advanced-research-computing/facilities-services",
+      "data_found": "Secure Enclave Services (SES): 2560 hyperthreaded CPU cores, 20TB of RAM, 640TB of NVME storage, and 10 A100 GPUs."
+    },
+    {
+      "url": "https://www.nextplatform.com/2020/01/21/the-university-of-michigan-gets-serious-about-supercomputing-roi/",
+      "data_found": "Great Lakes cluster has > 44 NVIDIA GPUs inside Dell EMC PowerEdge servers; cluster sports HDR100; The addition of the latest generation GPUs can also be considered future-proofing the cluster for the rise in AI application counts."
+    },
+    {
+      "url": "https://developer.nvidia.com/blog/university-of-michigan-to-install-a-new-gpu-accelerated-cluster/",
+      "data_found": "University of Michigan announced a brand new GPU-accelerated cluster that will include NVIDIA's Tesla V100 Tensor Core GPUs. The new cluster, which will be named Great Lakes."
+    },
+    {
+      "url": "https://its.umich.edu/advanced-research-computing/high-performance-computing/great-lakes/features-benefits",
+      "data_found": "The Great Lakes HPC Cluster provides researchers with access to GPUs and large-memory nodes for processing research data."
+    },
+    {
+      "url": "https://www.michigandaily.com/news/academics/eecs-department-struggles-satisfy-record-demand/",
+      "data_found": "Currently, the EECS department is comprised of 143 faculty, 1,882 undergraduate students and 1,094 graduate students. Number of undergraduates with declared CSE majors has doubled, increasing from 748 in Fall 2013 to 1,457 in Fall 2017."
+    },
+    {
+      "url": "https://obp.umich.edu/wp-content/uploads/pubdata/factsfigures/enrollment_umaa_Fall2024.pdf",
+      "data_found": "Fall 2024: Undergraduate Total 34,454; Graduate Total 15,688"
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-michigan-college-of-engineering-department-of-computer-science-and-engineering-000_10059286.aspx",
+      "data_found": "413 Total Graduate Students in Department of Computer Science and Engineering"
+    },
+    {
+      "url": "https://collegedunia.com/usa/university/921-university-of-michigan-ann-arbor/acceptance-rate",
+      "data_found": "Top master's programs like Computer Science admitted just 10% of applicants. 3,834 masters students are enrolled to Ann Arbor's Rackham Graduate School."
+    },
+    {
+      "url": "https://www.michigandaily.com/news/academics/umich-computer-science-program-restricts-admission-starting-in-fall-2023-as-demand-rises/",
+      "data_found": "The University of Michigan's computer science major has seen its enrollment nearly quadruple since 2010 for undergraduate students in both LSA and COE."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1457,
+    "grad_cs_count": 413,
+    "phd_cs_count": -1,
+    "year": "2017-2018",
+    "source_url": "https://www.michigandaily.com/news/academics/eecs-department-struggles-satisfy-record-demand/",
+    "notes": "Undergraduate CS count of 1,457 is from Fall 2017 data, which shows the number doubled from 748 in Fall 2013. Graduate student count of 413 is the total graduate enrollment in the Department of Computer Science and Engineering. PhD-specific count not found separately from total graduate enrollment. Note: 2017-2018 data is the most recent specific CS enrollment data found."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 10,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 44,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://its.umich.edu/advanced-research-computing/facilities-services",
+    "notes": "CLUSTERS IDENTIFIED:\n\n1) Secure Enclave Services (SES): 10 A100 GPUs (specific variant not stated, counted as 80GB).\n\n2) Great Lakes HPC Cluster: >44 NVIDIA GPUs inside Dell EMC PowerEdge servers. Based on 2020 article and 2018/2019 announcements, these are V100 GPUs.\n\n3) Armis2 and Lighthouse clusters are mentioned but no specific GPU counts found.\n\nTOTAL KNOWN GPUs:\n- A100: 10 (from SES)\n- V100: 44 (from Great Lakes)\n\nNote: The Great Lakes cluster was announced in 2018 to replace Flux supercomputer and would include V100 Tensor Core GPUs. Specific counts beyond '> 44' were not found in accessible documentation."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collection was challenging as specific GPU inventory details for University of Michigan clusters were not readily available in public documentation. The university operates three main HPC clusters (Great Lakes, Armis2, Lighthouse) but detailed hardware specifications are not published. Student enrollment data is from 2017-2018 for CS-specific numbers, as more recent CS-specific enrollment was not found. The university has seen significant growth in CS enrollment, nearly quadrupling since 2010."
+}

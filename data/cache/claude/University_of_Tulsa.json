@@ -1,0 +1,71 @@
+{
+  "university_name": "University of Tulsa",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/university-of-tulsa",
+      "data_found": "In 2023, 65 degrees were awarded to men at University of Tulsa in Computer Science, which is 9.29 times more than the 7 female recipients with that same degree."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/207971/university-of-tulsa/enrollment/",
+      "data_found": "University of Tulsa has a total enrollment of 3,559 including 2,485 undergraduate students and 1,074 graduate students."
+    },
+    {
+      "url": "https://graduate.utulsa.edu/phd-computer-science/",
+      "data_found": "Students and faculty pursue their lines of inquiry with the benefit of a dedicated research network that hosts a private multi-tenant cloud and a collection of experimental high-performance computing platforms."
+    },
+    {
+      "url": "https://www.linuxfoundation.org/blog/blog/tulsas-community-collaboration-model-for-supercomputing",
+      "data_found": "The Tandy Supercomputing Center holds 100 nodes with 128 GB of RAM, comprised of two 2.7 GHz Intel Xeon CPUs each running Red Hat Linux for a total of 1600 cores with about 30 Teraflops at current capacity."
+    },
+    {
+      "url": "https://engineering.utulsa.edu/computer-science/",
+      "data_found": "The Tandy School of Computer Science offers cutting edge programs leading to a bachelor of science degree in computer science (CS) and computer simulation and gaming (CSG). In addition the Tandy School of Computer Science offers both a master of science and doctoral degree."
+    },
+    {
+      "url": "https://www.ou.edu/polytechnic/resources/computing-technology",
+      "data_found": "OUPI is home to the OU-Tulsa Accelerated Composable Computing System (OU-TACCS). This system provides state-of-the-art resources for machine learning and artificial intelligence coursework and research. Dedicated to OUPI, this system provides an array of accelerated computing modules (GPUs)"
+    },
+    {
+      "url": "https://utulsa.edu/academics/engineering-computer-science/academics/departments/computer-science/computer-science-facilities/",
+      "data_found": "Computer Simulation & Gaming (CSG) Studio state-of-the-art lab provides exclusive access to industry-standard software and hardware. Equipped with 20 VR-capable gaming PCs, our studio is primed to handle the demands of cutting-edge development."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 260,
+    "grad_cs_count": 72,
+    "phd_cs_count": 20,
+    "year": "2023",
+    "source_url": "https://datausa.io/profile/university/university-of-tulsa",
+    "notes": "Based on 72 total CS degrees awarded in 2023 (65 men, 7 women). Estimated breakdown: Assuming typical 4-year undergrad program = ~260 undergrad CS majors (72 degrees/year \u00d7 ~3.6 years average). Graduate/PhD estimates based on typical university distribution where grad programs are ~22% of total CS enrollment and PhD ~6%. Total CS enrollment estimated at ~352 students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "VR-capable gaming GPUs",
+        "estimated_total": 20,
+        "notes": "CSG Studio has 20 VR-capable gaming PCs. Specific GPU models not disclosed."
+      }
+    ],
+    "source_url": "https://utulsa.edu/academics/engineering-computer-science/academics/departments/computer-science/computer-science-facilities/",
+    "notes": "University of Tulsa mentions having 'dedicated research network that hosts a private multi-tenant cloud and a collection of experimental high-performance computing platforms' but specific GPU specifications are not publicly available. The historical Tandy Supercomputing Center (community collaboration) had 100 CPU nodes but no GPUs mentioned. Current HPC/GPU resources not found in public sources. OU-TACCS system mentioned for OU-Tulsa campus includes GPUs but specific models/counts not disclosed."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Tulsa has relatively small CS enrollment with 72 degrees awarded in 2023. While they mention having HPC resources and a dedicated research network, specific GPU cluster configurations are not publicly documented. The CSG Studio has 20 VR-capable gaming workstations but enterprise GPU specifications were not found."
+}

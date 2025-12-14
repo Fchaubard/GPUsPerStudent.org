@@ -1,0 +1,41 @@
+{
+  "university_name": "University of the Pacific",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://nces.ed.gov/collegenavigator/?q=University+of+the+Pacific&s=all&id=120839#programs",
+      "data_found": "NCES College Navigator (2023 data): Awards conferred in Computer Science (Master's): 188; Data Science (Master's): 59."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 496,
+    "grad_cs_count": 370,
+    "phd_cs_count": 0,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=University+of+the+Pacific&s=all&id=120839#programs",
+    "notes": "Undergraduate count estimated from Common Data Set 2023-2024: 14.5% of 857 total bachelor's degrees were in CS (CIP 11), totaling ~124 degrees/year. Assuming 4-year enrollment: 124 * 4 = 496. Graduate count estimated from NCES IPEDS data (2023) showing 188 CS Master's degrees + 59 Data Science Master's degrees awarded annually. Assuming 1.5-year average program duration: (188 + 59) * 1.5 = 370. University of the Pacific does not list a standalone Computer Science PhD program in its graduate catalog. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 8,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=University+of+the+Pacific&s=all&id=120839#programs",
+    "notes": "University of the Pacific acquired a single NVIDIA DGX A100 system in Feb 2021 via an Army Research Office grant. 1 Node x 8 GPUs = 8 A100s. Due to the acquisition date (Feb 2021), these are classified as the original 40GB models rather than the 80GB models released later that year, absent specific confirmation of 80GB. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UOP is a smaller private institution; its primary research compute resource is the documented DGX A100 system. No evidence found of newer H100 acquisitions or large-scale clusters common at R1 institutions. Student counts derived from degrees awarded due to lack of public live enrollment dashboards."
+}

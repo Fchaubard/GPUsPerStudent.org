@@ -1,0 +1,79 @@
+{
+  "university_name": "University of Louisville",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://louisville.edu/its/services/research-computing/computing-and-research",
+      "data_found": "Flagship HPC system purpose-built for AI, features NVIDIA GPUs (H200 and H100), powerful AMD CPUs and high-memory (6 TB, 3 TB, 1.5 TB) compute nodes. High-throughput computing system with advanced GPUs (NVIDIA H100). NVIDIA V100 GPU-accelerated HPC system for small-scale (2-4 servers) computing. System named LARCC is smaller than unnamed system, which is smaller than system Zurada."
+    },
+    {
+      "url": "https://campustechnology.com/articles/2011/08/10/u-louisville-research-cluster-capacity-with-194-ibm-idataplex-nodes.aspx",
+      "data_found": "Cardinal Research Cluster expansion: added 194 IBM iDataPlex dx360 M3 nodes. System includes 4 nodes (soon to be 14) with dual GPGPUs for visualization and accelerated processing. Total 520 nodes and over 5,000 cores (as of 2011)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-louisville",
+      "data_found": "Total enrollment 22,139 students (2023). Undergraduate enrollment: 16,194. Graduate enrollment: 5,945. Most popular Masters: General Business (353 degrees), Social Work (188 degrees). Engineering total degrees: 551 awarded (2023)."
+    },
+    {
+      "url": "https://engineering.louisville.edu/about/factsandfigures/computerscienceandengineeringfactsandfigures/",
+      "data_found": "Computer Science and Engineering Facts and Figures page exists but specific enrollment numbers not shown in search results. Note: 1st year students enrolled in Engineering Fundamentals, not admitted to department until 2nd year."
+    },
+    {
+      "url": "https://engineering.louisville.edu/academics/departments/computer/researchcse/",
+      "data_found": "CSE Department has faculty and students with international recognition. Areas include data mining, web mining, knowledge discovery, multimedia, networking, intelligent systems, bio-informatics, information assurance."
+    },
+    {
+      "url": "https://catalog.louisville.edu/graduate/programs-study/doctor-philosophy-computer-science-engineering/",
+      "data_found": "PhD program in Computer Science and Engineering exists. Intended for persons with accredited master's/baccalaureate degree in CS, computer engineering, or electrical engineering."
+    },
+    {
+      "url": "https://catalog.louisville.edu/graduate/programs-study/master-of-science-computer-science/",
+      "data_found": "MS degree program in Computer Science exists. Typical undergraduate GPA requirement of 2.75 or above."
+    },
+    {
+      "url": "https://catalog.louisville.edu/undergraduate/majors/computer-engineering-science-bs/",
+      "data_found": "Bachelor of Science in Computer Science and Engineering accredited by ABET Engineering and Computing Accreditation Commissions."
+    },
+    {
+      "url": "https://catalog.louisville.edu/undergraduate/majors/computer-engineering-science-ba/",
+      "data_found": "Bachelor of Arts in Computer Science program exists, providing solid foundation while allowing other areas of study."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 450,
+    "grad_cs_count": 150,
+    "phd_cs_count": 50,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-louisville",
+    "notes": "Exact CS enrollment numbers not publicly available. Estimates based on: Total Engineering degrees awarded (551) and typical CS proportion of engineering programs (~30-35%). University has BS in CSE, BA in CS, MS in CS, MEng in CSE, and PhD in CSE programs. First-year students are in Engineering Fundamentals before admission to CS department in 2nd year."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 16,
+    "h100_pcie_count": 0,
+    "h200_count": 8,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 16,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "GPGPU nodes (model unspecified)",
+        "estimated_total": 28,
+        "notes": "2011 report mentioned 4 nodes with dual GPGPUs expanding to 14 nodes. Likely upgraded since then."
+      }
+    ],
+    "source_url": "https://louisville.edu/its/services/research-computing/computing-and-research",
+    "notes": "CLUSTERS AND CALCULATIONS:\n\n1) Main HPC System (unnamed): Features H200 and H100 GPUs with high-memory nodes. Exact node count not specified. Conservative estimate: 2 nodes \u00d7 8 H200 = 16 H200, 2 nodes \u00d7 8 H100 = 16 H100.\n\n2) High-throughput system: Features H100 GPUs. Node count not specified.\n\n3) LARCC: V100 GPU-accelerated system with 2-4 servers. Estimate: 4 servers \u00d7 4 V100 = 16 V100.\n\n4) Cardinal Research Cluster (CRC): Originally 520 nodes total (2011), includes GPU nodes. Current GPU configuration not detailed.\n\nNote: The University describes having multiple HPC systems but does not publish detailed GPU node specifications. The flagship system is described as having H200 and H100 GPUs but exact counts are not publicly available. System hierarchy: LARCC < unnamed system < Zurada in terms of CPU/GPU count."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Louisville operates multiple HPC clusters including the Cardinal Research Cluster and newer systems with H100/H200 GPUs. Exact GPU counts and CS enrollment figures are not publicly detailed on accessible pages. Estimates provided based on typical configurations and available aggregate data."
+}

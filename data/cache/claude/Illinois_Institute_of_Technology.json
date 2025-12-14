@@ -1,0 +1,59 @@
+{
+  "university_name": "Illinois Institute of Technology",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "http://www.cs.iit.edu/~scs/resources.html",
+      "data_found": "SCS lab Chameleon Cloud platform: 20 GPU nodes. IIT SCS lab manages two cluster computers: Ares cluster with 1576 cores and HEC cluster with 128 cores."
+    },
+    {
+      "url": "https://datausa.io/profile/university/illinois-institute-of-technology",
+      "data_found": "In 2023, 549 Computer and Information Sciences and Support Services degrees awarded at IIT. Most popular Masters Degree: Computer Science (231 degrees awarded). Total enrollment: 8,563 students (3,316 undergraduate and 5,247 graduate)."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/illinois-institute-of-technology-college-of-science-and-letters-department-of-computer-science-000_10013495.aspx",
+      "data_found": "Department of Computer Science: 549 Total Graduate Students, 90% International, 244 newly enrolled graduate students in CS department."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/145725/illinois-institute-of-technology/enrollment/",
+      "data_found": "Total enrollment: 8,563 students (3,316 undergraduate and 5,247 graduate students)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 200,
+    "grad_cs_count": 549,
+    "phd_cs_count": 100,
+    "year": "2023",
+    "source_url": "https://datausa.io/profile/university/illinois-institute-of-technology",
+    "notes": "Based on datausa.io, IIT awarded 549 Computer and Information Sciences degrees in 2023 with 231 MS in Computer Science degrees. The CS department has 549 graduate students total per Petersons.com. Undergraduate CS count estimated based on typical 4-year program with ~50 CS degrees awarded annually. PhD count estimated as typical portion (15-20%) of 549 graduate CS students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": -1,
+    "b200_count": -1,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": -1,
+    "other_high_vram_gpus": [
+      {
+        "model": "Chameleon Cloud GPU nodes",
+        "estimated_total": 20,
+        "notes": "IIT SCS Lab has access to Chameleon Cloud platform with 20 GPU nodes. Specific GPU models not detailed."
+      }
+    ],
+    "source_url": "http://www.cs.iit.edu/~scs/resources.html",
+    "notes": "IIT research computing resources found include: 1) SCS Lab Ares cluster (1576 CPU cores), 2) SCS Lab HEC cluster (128 CPU cores), 3) Access to Chameleon Cloud platform with 20 GPU nodes. Specific modern GPU models (H100, A100, etc.) not found in publicly accessible documentation. The SCS lab page mentions 20 GPU nodes in Chameleon Cloud but does not specify GPU models."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Illinois Institute of Technology has approximately 849 CS students total (200 undergraduate + 549 graduate + 100 PhD estimated). GPU resources are limited based on available public documentation - only found reference to 20 GPU nodes via Chameleon Cloud access. No specific modern GPU models (H100, A100, etc.) were documented on publicly accessible pages."
+}

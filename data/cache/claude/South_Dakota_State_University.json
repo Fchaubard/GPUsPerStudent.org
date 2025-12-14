@@ -1,0 +1,63 @@
+{
+  "university_name": "South Dakota State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://help.sdstate.edu/TDClient/2744/Portal/KB/ArticleDet?ID=159597",
+      "data_found": "Innovator HPC cluster: 105 nodes total divided into four partitions\u2014bigmem, compute, gpu, and quickq. GPU nodes equipped with NVIDIA A100 80GB PCIe GPUs (2 per node), ideal for parallel processing and graphics-intensive applications."
+    },
+    {
+      "url": "https://www.sdstate.edu/information-technology/research-cyberinfrastructure",
+      "data_found": "SDSU Division of Technology and Security manages a 240 TFLOP (approx.) cluster. Funding from NSF MRI Award 1726946. This cluster includes substantial general compute pool, 3TB of high memory, and NVIDIA GPU nodes to support GPU-intensive computing."
+    },
+    {
+      "url": "https://help.sdstate.edu/TDClient/2744/Portal/KB/ArticleDet?ID=159532",
+      "data_found": "Innovator cluster running on Linux Rocky 9, powered by advanced Intel processors with NVIDIA A100 GPUs, all connected via high-speed InfiniBand network. 105 nodes divided into four distinct partitions."
+    },
+    {
+      "url": "https://www.sdstate.edu/office-president/university-facts",
+      "data_found": "Fall 2025 enrollment: 12,139 total students. Jerome J. Lohr College of Engineering: 1,741 students (14% of total)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/south-dakota-state-university",
+      "data_found": "Total enrollment at South Dakota State University in 2023: 11,498 students (10,177 undergraduate and 1,321 graduate)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 205,
+    "grad_cs_count": 45,
+    "phd_cs_count": 18,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/south-dakota-state-university",
+    "notes": "CS enrollment estimated from College of Engineering total (1,741 students representing 14% of university enrollment). Based on typical CS department sizes within engineering colleges (12-15%), estimated CS undergrads at 205, MS students at 45, and PhD students at 18."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 10,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla (unspecified model)",
+        "estimated_total": 5,
+        "notes": "UNRC cluster has 'a few' nodes with Nvidia Tesla GPUs. Estimated 5 GPUs based on typical small deployments."
+      }
+    ],
+    "source_url": "https://help.sdstate.edu/TDClient/2744/Portal/KB/ArticleDet?ID=159597",
+    "notes": "CALCULATION: Innovator cluster GPU partition has nodes with 2x NVIDIA A100 80GB PCIe GPUs per node. Based on the 105 total nodes with GPU partition being one of four partitions, estimated 5 GPU nodes \u00d7 2 GPUs/node = 10 A100 80GB GPUs total. Additional Tesla GPUs in older UNRC cluster."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "South Dakota State University operates the Innovator HPC cluster (240 TFLOP, 105 nodes) funded by NSF MRI Award 1726946. GPU resources include NVIDIA A100 80GB GPUs (2 per GPU node) in the dedicated GPU partition. Additionally, the older UNRC iDataPlex cluster has 70+ nodes with some Tesla GPU nodes. CS enrollment estimated from engineering college percentage."
+}

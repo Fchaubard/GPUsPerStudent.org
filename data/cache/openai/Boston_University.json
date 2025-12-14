@@ -1,0 +1,77 @@
+{
+  "university_name": "Boston University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.bu.edu/tech/support/research/computing-resources/tech-summary/",
+      "data_found": "BU SCC technical summary lists GPU-equipped node groups (shared + buy-in) including H200, L40S, A100 (40GB and 80GB via footnotes), V100, P100 (12GB and 16GB via footnotes), A40, L40, A6000, RTX 6000 Ada, RTX 8000."
+    },
+    {
+      "url": "https://www.bu.edu/hic/2024/04/16/the-nercs-newly-installed-gpus-to-speed-up-training-tasks/",
+      "data_found": "NERC installed 64 NVIDIA A100 GPUs in 16 liquid cooled servers (implies 16 nodes \u00d7 4 GPUs/node = 64 GPUs)."
+    },
+    {
+      "url": "https://www.bu.edu/hic/bu-airr/",
+      "data_found": "BU-AIRR page states NERC has acquired 192 NVIDIA H100 GPUs (expected to go online in December 2024)."
+    },
+    {
+      "url": "https://nerc-project.github.io/nerc-docs/openshift/gpus/intro-to-gpus-on-nerc-ocp/",
+      "data_found": "NERC OpenShift GPU docs: A100 worker nodes have 4 GPUs/node; H100 worker nodes have 4 GPUs/node; V100 worker nodes have 1 GPU/node."
+    },
+    {
+      "url": "https://nerc.mghpcc.org/expanding-our-gpu-offerings/",
+      "data_found": "NERC announcement explicitly references NVIDIA A100 SXM4 40GB GPUs (used here to classify NERC A100s as 40GB)."
+    },
+    {
+      "url": "https://www.bu.edu/asir/files/2025/03/cds-2025.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.bu.edu/asir/files/2025/03/cds-2025.pdf",
+    "notes": "Searched for Boston University Computer Science (CS) enrollment counts specifically for Fall 2024 or AY 2024-2025 (rejecting anything labeled 2023-2024 or earlier for primary use). I found Boston University\u2019s Common Data Set 2024-2025 PDF (explicitly labeled \u201c2024-2025\u201d and includes a table labeled \u201cB1. Institutional enrollment \u2026 (Fall 2024)\u201d; the CDS landing page lists \u201cLast updated: March 2025\u201d). However, this source reports ONLY overall BU enrollment totals (undergraduate and graduate/professional) and does NOT provide enrollment headcounts by major/program such as \u201cComputer Science,\u201d nor does it split graduate enrollment into MS vs PhD for CS. I also checked BU\u2019s ASIR Fact Book \u2018Student Enrollment\u2019 page and BU Graduate Education \u2018PhD Program Profiles\u2019 pages, but their CS-specific metrics appear to be embedded in interactive dashboards/pages that require JavaScript and did not expose any static Fall 2024 / AY 2024-25 CS enrollment headcounts on the publicly accessible page content. Therefore, no verifiable 2024+ BU CS enrollment headcounts (UG / MS / PhD) were found from public, non-JS-embedded sources, so all counts are set to 0 per instructions."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 192,
+    "h100_pcie_count": 0,
+    "h200_count": 20,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 20,
+    "a100_40gb_count": 73,
+    "a40_count": 68,
+    "a6000_count": 78,
+    "l40s_count": 114,
+    "v100_count": 71,
+    "p100_count": 49,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "RTX 6000 Ada",
+        "vram_gb": 48,
+        "count": 30
+      },
+      {
+        "model": "RTX 8000",
+        "vram_gb": 48,
+        "count": 8
+      },
+      {
+        "model": "L40",
+        "vram_gb": 48,
+        "count": 6
+      }
+    ],
+    "source_url": "https://www.bu.edu/tech/support/research/computing-resources/tech-summary/",
+    "notes": "CLUSTERS COUNTED: (1) BU SCC (Tech Summary page) + (2) NERC (BU Hariri + NERC docs).\n\nNERC:\n- A100_40GB: 16 servers \u00d7 4 GPUs/server = 64.\n- H100: BU-AIRR says 192 total; NERC docs say H100 nodes have 4 GPUs/node => 48 nodes \u00d7 4 = 192. Interface not specified; classified as H100_SXM based on NERC doc GPU naming and lack of explicit 'PCIe'.\n\nBU SCC (from Tech Summary node groups; totals are sums of (nodes \u00d7 GPUs/node)):\n- H200: shared (2\u00d74=8) + buy-in (2\u00d74=8) + buy-in (2\u00d72=4) => 20.\n- L40S: shared (10\u00d74=40) + shared (11\u00d74=44) + shared (1\u00d72=2) + shared (2\u00d72=4) + buy-in (3\u00d78=24) => 114.\n- A100_40GB: (2\u00d74=8) + (1\u00d71=1) => 9.\n- A100_80GB: (1\u00d74=4) + (2\u00d72=4) + (1\u00d74=4) + (2\u00d74=8) => 20.\n- V100 (16GB/32GB mixed per footnotes): (2\u00d72=4) + (4\u00d72=8) + (1\u00d71=1) + (2\u00d71=2) + (1\u00d71=1) + (4\u00d72=8) + (1\u00d71=1) + (1\u00d74=4) + (10\u00d74=40) + (1\u00d72=2) => 71.\n- P100 (12GB + 16GB mixed per footnotes): 12GB groups (4\u00d72=8) + (3\u00d74=12) + (4\u00d72=8) = 28; 16GB groups (2\u00d74=8) + (3\u00d74=12) + (1\u00d71=1) = 21; total 49.\n- A40: (1\u00d74=4) + (3\u00d76=18) + (1\u00d710=10) + (1\u00d78=8) + (3\u00d72=6) + (3\u00d74=12) + (1\u00d710=10) => 68.\n- L40: (1\u00d76=6) => 6.\n- A6000: (1\u00d79=9) + (1\u00d710=10) + (1\u00d710=10) + (1\u00d74=4) + (1\u00d75=5) + (5\u00d78=40) => 78.\n- RTX 6000 Ada: (1\u00d74=4) + (1\u00d710=10) + (1\u00d78=8) + (1\u00d78=8) => 30.\n- RTX 8000: (1\u00d78=8) => 8.\n\nFINAL TOTALS (SCC + NERC): H200=20; L40S=114; A100_40GB=9+64=73; A100_80GB=20; V100=71; P100=49; A40=68; A6000=78; H100=192."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

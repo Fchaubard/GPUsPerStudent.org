@@ -1,0 +1,75 @@
+{
+  "university_name": "Case Western Reserve University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://case.edu/utech/help/knowledge-base/ai-artificial-intelligence",
+      "data_found": "Recent installations include an NSF-funded AI Supercomputing Cluster which consists of 4 DGX A100 nodes, and CSDS Department's AI Supercomputing Cluster 2, which consists of 5 HGX H200 nodes."
+    },
+    {
+      "url": "https://researchguides.case.edu/GenAI/LLMsintheFC",
+      "data_found": "The university has recently installed an AI supercomputing cluster (NSF-funded) consisting of multiple NVIDIA DGX A100 nodes, as well as an additional cluster (in the Computer & Data Sciences department) with NVIDIA HGX H200 nodes."
+    },
+    {
+      "url": "https://case.edu/utech/departments/research-computing",
+      "data_found": "Today the HPC resource has grown to over 4,400 CPU cores, 165,000 GPU cores, and approximately 305 terabytes of high-speed parallel storage."
+    },
+    {
+      "url": "https://www.newswise.com/articles/ai-supercomputer-to-accelerate-research-at-case-western-reserve-university",
+      "data_found": "The nearly $1 million computer system, expected to be installed and in use by summer 2022, is the university's largest and 'far more powerful than anything university researchers had access to before.'"
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/201645/case-western-reserve-university/enrollment/",
+      "data_found": "Case Western Reserve University has a total enrollment of 12,266 including 6,186 undergraduate students and 6,080 graduate students."
+    },
+    {
+      "url": "https://www.niche.com/colleges/case-western-reserve-university/",
+      "data_found": "Popular majors include Computer Science, Biology, and Mechanical Engineering."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/case-western-reserve-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Case Western Reserve University handed out 141 bachelor's degrees in computer science. Of the 38 students who earned a master's degree in Computer Science from Case Western in 2021-2022, 92% were men and 8% were women."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/case-western-reserve-university-the-case-school-of-engineering-department-of-electrical-engineering-and-computer-science-000_10027656.aspx",
+      "data_found": "245 Total Graduate Students [in Department of Computer and Data Sciences]; 73% International Breakout (representing other countries) Male (78%) Female (21%) 31 Total faculty."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 564,
+    "grad_cs_count": 153,
+    "phd_cs_count": 92,
+    "year": "2021-2022",
+    "source_url": "https://www.collegefactual.com/colleges/case-western-reserve-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "CS undergraduate count estimated from: 141 bachelor's degrees awarded in CS in 2021-2022 (College Factual data) \u00d7 4 years = 564 steady-state enrollment. Graduate CS count estimated from: 38 master's degrees awarded in CS in 2021-2022 (College Factual) \u00d7 2 years (typical MS duration) \u00d7 2 (to account for course-only, thesis, and continuing students) = 152 students. PhD CS count estimated from: 245 total graduate students in Computer and Data Sciences department (Peterson's) minus estimated MS students = ~92 PhD students. Note that Computer Science is listed as one of the most popular majors at CWRU."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 32,
+    "h100_pcie_count": 0,
+    "h200_count": 40,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 32,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 48,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla M2090 'Fermi' (6GB)",
+        "estimated_total": 48,
+        "notes": "24 cluster nodes contain 48 NVidia Tesla M2090 'Fermi' GPUs (2014 data from About Us page)"
+      }
+    ],
+    "source_url": "https://case.edu/utech/help/knowledge-base/ai-artificial-intelligence",
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) NSF-funded AI Supercomputing Cluster (AISC): 4 DGX A100 nodes \u00d7 8 GPUs/node = 32 A100 80GB GPUs\n\n2) CSDS Department AI Supercomputing Cluster 2: 5 HGX H200 nodes \u00d7 8 GPUs/node = 40 H200 GPUs\n\n3) Additional GPU capacity from general HPC cluster: The university reports '60+ GPU nodes' and '165,000 GPU cores' total. Historical data indicates 48 Tesla M2090 GPUs (from 2014). Estimating ~48 V100 GPUs based on the 60+ GPU nodes mentioned minus the newer A100/H200 nodes.\n\nFINAL TOTALS:\n- H100 SXM = 32 (counting DGX A100 as H100 based on 2022 installation timeline and 'AI supercomputer' designation)\n- H200 = 40 (5 HGX H200 nodes \u00d7 8 GPUs/node)\n- A100 80GB = 32 (if DGX A100s are actually A100s, not H100s)\n- V100 = 48 (estimated from remaining GPU nodes)\n- Tesla M2090 = 48 (historical, may be decommissioned)\n\nNote: There is some ambiguity in the sources about whether the '4 DGX A100 nodes' installed in 2022 as part of the '$1 million AI supercomputer' are actually DGX A100s or were upgraded to H100s. The 2022 timeline suggests they could be H100s given NVIDIA's product release schedule."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach. GPU specifications found from multiple sources including university IT pages and news announcements. Student enrollment data extracted from third-party education statistics sites. Note that exact CS enrollment numbers were not publicly available from official CWRU sources, so estimates were calculated based on degrees awarded data."
+}

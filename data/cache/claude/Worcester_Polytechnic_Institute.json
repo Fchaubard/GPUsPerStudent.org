@@ -1,0 +1,71 @@
+{
+  "university_name": "Worcester Polytechnic Institute",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.wpi.edu/offices/vice-provost-research/academic-research-computing/high-performance-computing",
+      "data_found": "This cluster features 480 Intel Xeon E-5 2680v2 @2.8GHz CPUs and 48 Nvidia Tesla K40m GPUs each one with Peak double precision floating point performance of 1.43 Tflops."
+    },
+    {
+      "url": "https://arc.wpi.edu/computing/hpc-clusters/",
+      "data_found": "Turing consists of a 4-node hyperconverged head that controls 79 compute nodes. Total CPU/RAM/GPU counts across all 79 compute nodes are as follows: The distribution of GPUs available across the compute nodes are:"
+    },
+    {
+      "url": "https://grantome.com/grant/NSF/DMS-1337943",
+      "data_found": "The targeted system consists of 64 16-core central processing units (CPUs) augmented with 64 high-performance general-purpose graphical processing units (GPUs)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/worcester-polytechnic-institute",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Worcester Polytechnic Institute were Computer Science (222 degrees awarded). Total enrollment of 7,353 students in 2023."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/worcester-polytechnic-institute-graduate-studies-and-research-department-of-computer-science-000_10014038.aspx",
+      "data_found": "133 Total Graduate Students in Computer Science department (72% male, 27% female, 66% international)."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/168421/worcester-polytechnic-institute/enrollment/",
+      "data_found": "Worcester Polytechnic Institute has a total enrollment of 7,353 including 5,453 undergraduate students and 1,900 graduate students."
+    },
+    {
+      "url": "https://www.wpi.edu/news/announcements/expanded-high-performance-computing",
+      "data_found": "Information Technology Services (ITS) is excited to announce expanded high performance computing capabilities as WPI joins the Massachusetts Green High Performance Computing Center (MGHPCC) this summer!"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 888,
+    "grad_cs_count": 103,
+    "phd_cs_count": 30,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/worcester-polytechnic-institute",
+    "notes": "Undergraduate CS count estimated from 222 bachelor's degrees awarded in CS (2023) \u00d7 4 years = 888. Graduate CS students reported as 133 total by CS department. PhD count estimated at 30 based on typical MS/PhD distribution (approximately 22.5% of graduate students)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K40m (12GB)",
+        "estimated_total": 48,
+        "notes": "48 Tesla K40m GPUs reported in the HPC cluster. These are older generation GPUs from ~2013-2014 era."
+      }
+    ],
+    "source_url": "https://www.wpi.edu/offices/vice-provost-research/academic-research-computing/high-performance-computing",
+    "notes": "WPI's main HPC cluster features 48 NVIDIA Tesla K40m GPUs (12GB memory each). The Turing cluster has 79 compute nodes total, but specific GPU counts beyond the 48 K40m GPUs were not detailed in available documentation. WPI is transitioning HPC resources to MGHPCC (Massachusetts Green High Performance Computing Center) in summer 2024, which may provide access to newer GPU resources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "WPI's GPU resources appear to be primarily older generation (Tesla K40m from ~2013). The university is joining MGHPCC which may provide access to newer GPU resources. Student counts are based on degree completion data and standard enrollment duration estimates."
+}

@@ -1,0 +1,55 @@
+{
+  "university_name": "University of Miami",
+  "data_retrieved_date": "2025-05-28",
+  "sources": [
+    {
+      "url": "https://idsc.miami.edu/advanced-computing/triton/",
+      "data_found": "Triton Supercomputer: IBM Power System AC922; 96 compute nodes; each node contains 4 NVIDIA Tesla V100 GPUs."
+    },
+    {
+      "url": "https://idsc.miami.edu/advanced-computing/pegasus/",
+      "data_found": "Pegasus Cluster: General purpose cluster with ~250 Intel CPU nodes. Mentions 'GPU nodes' generally but no specific model/count listed on public spec sheet."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-miami",
+      "data_found": "2022 Degrees Awarded in Computer Science: 87 Bachelors, 19 Masters, 3 Research Doctorates."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 391,
+    "grad_cs_count": 38,
+    "phd_cs_count": 18,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/university-of-miami",
+    "notes": "Exact current enrollment figures not listed on CS department 'About' page. Counts estimated based on DataUSA/IPEDS 2022 degree completion data. Undergrad estimated as Degrees Awarded (87) \u00d7 4.5 years duration \u2248 391. Grad (MS) estimated as Degrees (19) \u00d7 2 years \u2248 38. PhD estimated as Degrees (3) \u00d7 6 years duration \u2248 18."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 384,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Generic/Unspecified GPU Nodes (Pegasus)",
+        "estimated_total": null,
+        "notes": "The Pegasus cluster documentation mentions the existence of GPU queues/partitions, but specific hardware counts (likely older K80 or P100) are not publicly enumerated on the IDSC specifications page."
+      }
+    ],
+    "source_url": "https://idsc.miami.edu/advanced-computing/triton/",
+    "notes": "Primary GPU resource is the 'Triton' cluster managed by IDSC. Calculation: 96 IBM AC922 nodes \u00d7 4 V100 GPUs per node = 384 Total V100s. No public documentation found for newer A100/H100 installations as of May 2025."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Miami relies heavily on the IBM Power9 'Triton' system for AI/GPU workloads. While newer clusters may exist internally, public documentation only verifies the V100-based Triton system."
+}

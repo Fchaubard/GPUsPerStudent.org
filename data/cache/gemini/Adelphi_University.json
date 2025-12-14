@@ -1,0 +1,45 @@
+{
+  "university_name": "Adelphi University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/adelphi-university",
+      "data_found": "2022 Degree Completion Data: Computer Science & Information Sciences produced 44 Bachelor's degrees and 19 Master's degrees."
+    },
+    {
+      "url": "https://www.adelphi.edu/math-computer-science/facilities/",
+      "data_found": "Describes departmental facilities: 'The Department of Mathematics and Computer Science maintains... three computer laboratories.' Mentions 'Linux and Windows workstations' but no specific HPC cluster or datacenter GPU hardware (e.g., DGX, H100)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 176,
+    "grad_cs_count": 38,
+    "phd_cs_count": 0,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/adelphi-university",
+    "notes": "Adelphi does not publish a live dashboard of enrollment by major. Counts are estimated based on IPEDS/DataUSA degree completion data using a standard multiplier (Degrees Awarded \u00d7 Years in Program). Undergrad: 44 Bachelors degrees (CS + Info Sys) \u00d7 4 years = 176. Grad: 19 Masters degrees \u00d7 2 years = 38. PhD count is 0 as the university does not offer a PhD in Computer Science."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.adelphi.edu/math-computer-science/facilities/",
+    "notes": "Adelphi University is primarily a teaching institution and does not maintain a centralized Research Computing center or public High Performance Computing (HPC) cluster documentation. Departmental facilities pages describe 'computer laboratories' and 'workstations' rather than cluster nodes. No evidence of Datacenter-class GPUs (H100/A100/V100) was found in public grants, IT documentation, or department news. GPU resources are likely limited to individual workstations (e.g., RTX/Quadro series) in the Math/CS labs or cloud-based resources."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "No public data found regarding cloud compute credit allocations for students."
+  },
+  "analysis_notes": "Adelphi University is not an R1 research institution. Extensive searches for 'Adelphi HPC', 'Adelphi GPU Cluster', and 'Adelphi Research Computing' yield no results for centralized infrastructure. Student counts are derived from federal completion data (IPEDS via DataUSA) as specific departmental enrollment rosters are not public."
+}

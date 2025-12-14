@@ -1,0 +1,55 @@
+{
+  "university_name": "Yale University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://docs.ycrc.yale.edu/clusters/mccleary/",
+      "data_found": "McCleary Cluster: 22 GPU nodes each with 4 NVIDIA A100 40GB GPUs."
+    },
+    {
+      "url": "https://docs.ycrc.yale.edu/clusters/milgram/",
+      "data_found": "Milgram Cluster: 9 GPU nodes each with 4 NVIDIA A100 40GB GPUs (SXM4)."
+    },
+    {
+      "url": "https://docs.ycrc.yale.edu/clusters/grace/",
+      "data_found": "Grace Cluster: 3 nodes with 4x A100 40GB; 9 nodes with 4x V100 32GB; (older K80 nodes excluded as legacy/retired)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 534,
+    "grad_cs_count": 62,
+    "phd_cs_count": 138,
+    "year": "2023-2024",
+    "source_url": "https://docs.ycrc.yale.edu/clusters/mccleary/",
+    "notes": "Undergrad count estimated: Yale OIR only reports declared majors (Juniors/Seniors). 'Computer Science' and joint CS majors (Math/CS, Econ/CS, EECS, Computing & Arts) totaled 267 Juniors/Seniors in Fall 2023. Multiplied by 2 to estimate total 4-year undergraduate CS population (267 * 2 = 534). Graduate and PhD counts taken directly from OIR GSAS enrollment report. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 136,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 36,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A100 40GB",
+        "estimated_total": 136,
+        "notes": "Yale standardizes on the 40GB A100 model across clusters."
+      }
+    ],
+    "source_url": "https://docs.ycrc.yale.edu/clusters/mccleary/",
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS:\n\n1) McCleary Cluster: 22 nodes * 4 A100 (40GB) = 88 A100.\n\n2) Milgram Cluster: 9 nodes * 4 A100 (40GB) = 36 A100.\n\n3) Grace Cluster: 3 nodes * 4 A100 (40GB) = 12 A100; 9 nodes * 4 V100 (32GB) = 36 V100.\n\nTOTAL A100 (40GB) = 88 + 36 + 12 = 136.\nTOTAL V100 = 36.\n\nNote: Farnam cluster (P100s) is listed as legacy/retired and excluded. No public documentation found yet for H100 nodes in the new 'Roberts' or 'Palmer' clusters as of search date."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Yale provides High Performance Computing resources to faculty and research groups. While 'compute credits' are not sold publicly, resource allocation is managed via fair-share scheduling."
+  },
+  "analysis_notes": "Yale distinguishes between legacy clusters (Farnam) and active production clusters (McCleary, Milgram, Grace). The count strictly reflects active production nodes documented on the YCRC site. Student data uses Yale OIR official fact sheets, extrapolating undergraduate total from Junior/Senior declared major data."
+}

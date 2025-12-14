@@ -1,0 +1,89 @@
+{
+  "university_name": "Arizona State University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://dl.acm.org/doi/fullHtml/10.1145/3569951.3597573",
+      "data_found": "Sol supercomputer: 224 80GiB A100 and 15 24GiB A30 GPUs. Sol provides ASU researchers with free access to 17904 Zen3 cores, 224 80GiB A100 and 15 24GiB A30 Graphics Processing Units (GPUs), 104 TB of RAM."
+    },
+    {
+      "url": "https://cores.research.asu.edu/research-computing/about",
+      "data_found": "FISMA high secure computing environment with 20 A100 80GB GPUs. Over 580 GPU accelerators across two supercomputers."
+    },
+    {
+      "url": "https://cores.research.asu.edu/sites/default/files/2024-05/Research%20Computing%20Facilities%20Statement.pdf",
+      "data_found": "Phoenix cluster: 360 GPUs (including NVIDIA A100, V100, GTX 1080, and RTX 2080). Sol has 56 nodes with 4 A100 GPUs each (224 A100s) and 5 nodes with 3 A30 GPUs each (15 A30s)."
+    },
+    {
+      "url": "https://asurc.atlassian.net/wiki/spaces/RC/overview",
+      "data_found": "Phoenix cluster: 360 GPUs (including NVIDIA A100, V100, GTX 1080, and RTX 2080)."
+    },
+    {
+      "url": "https://news.asu.edu/20220526-solutions-new-dawn-supercomputing-asu",
+      "data_found": "Sol will bring 18,000 state-of-the-art CPU cores to the table and add more graphical processing units (GPUs) to Research Computing's overall infrastructure."
+    },
+    {
+      "url": "https://datausa.io/profile/university/arizona-state-university-campus-immersion",
+      "data_found": "In 2023, 1,186 degrees were awarded to men at Arizona State University Campus Immersion in Computer Science, which is 4.13 times more than the 287 female recipients. Total CS degrees awarded: 1,473."
+    },
+    {
+      "url": "https://datausa.io/profile/university/arizona-state-university-digital-immersion?redirect=true",
+      "data_found": "Computer Science (362 degrees) was the second most popular Masters Degree at ASU Digital Immersion. 274 degrees awarded to men, 88 to women in Computer Science."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ira_A._Fulton_Schools_of_Engineering",
+      "data_found": "Fall 2024 enrollment (21st day census) in the Fulton Schools was 32,709 students total (undergraduate and graduate)."
+    },
+    {
+      "url": "https://www.asu.edu/about/facts-and-figures",
+      "data_found": "ASU's total, unduplicated annual enrollment for the past year exceeded 194,000 students annually. 77% undergraduate (more than 150,000 students), 43,000-plus enrolled as graduate students."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 3600,
+    "grad_cs_count": 900,
+    "phd_cs_count": 250,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/arizona-state-university-campus-immersion",
+    "notes": "CS enrollment estimated from degree completion data. Campus Immersion: 1,473 CS bachelor's degrees awarded in 2023 (1,186 men + 287 women). Using typical 4-year program duration, estimated undergrad enrollment = 1,473 \u00d7 2.5 \u2248 3,600. Digital Immersion MS CS: 362 degrees awarded, estimated 1.5-year duration = 362 \u00d7 1.5 \u2248 540. Campus MS/MCS estimated at 360. Total grad CS \u2248 900. PhD estimated from typical CS program size (5-6% of undergrad) \u2248 250. Total engineering enrollment is 32,709 (Fall 2024), with CS being a major component of SCAI."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 244,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 100,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 (24GB)",
+        "estimated_total": 15,
+        "notes": "Sol supercomputer has 5 nodes \u00d7 3 A30 GPUs = 15 A30s (confirmed in ACM paper)"
+      },
+      {
+        "model": "NVIDIA RTX 2080 (11GB)",
+        "estimated_total": 130,
+        "notes": "Part of Phoenix cluster's 360 GPU total"
+      },
+      {
+        "model": "NVIDIA GTX 1080 (8GB)",
+        "estimated_total": 130,
+        "notes": "Part of Phoenix cluster's 360 GPU total"
+      }
+    ],
+    "source_url": "https://dl.acm.org/doi/fullHtml/10.1145/3569951.3597573",
+    "notes": "GPU TOTALS BY CLUSTER:\n\n1) Sol Supercomputer (2022):\n- 56 nodes \u00d7 4 NVIDIA A100 80GB = 224 A100s\n- 5 nodes \u00d7 3 NVIDIA A30 24GB = 15 A30s (Note: HPC Wire article incorrectly states 4 nodes)\n- Total Sol GPUs = 239\n\n2) Phoenix Cluster:\n- 360 total GPUs including A100, V100, RTX 2080, GTX 1080\n- Estimated breakdown: ~100 V100s, ~130 RTX 2080s, ~130 GTX 1080s\n\n3) FISMA High Secure Environment:\n- 20 NVIDIA A100 80GB GPUs\n\nTOTAL A100 80GB = Sol 224 + FISMA 20 = 244\nTOTAL V100 = Phoenix ~100\nOTHER GPUs = 15 A30 + ~260 consumer GPUs (RTX 2080/GTX 1080)\n\nTotal GPU count across all systems: 580+ GPUs as stated by Research Computing"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "ASU has two main HPC clusters: Sol (launched 2022) and Phoenix (older system). Sol is the flagship with 224 A100 GPUs. Phoenix has diverse GPU mix including older models. CS enrollment estimated from degree completion data showing strong program with 1,473+ bachelor's degrees awarded annually."
+}

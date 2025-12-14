@@ -1,0 +1,57 @@
+{
+  "university_name": "University of Houston",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.uh.edu/research/rcdc/resources/hpc/carya.php",
+      "data_found": "Carya GPU nodes: 16x (NVIDIA V100; GPU cores shown as 10,240 and GPU memory 64GB -> inferred 2 GPUs/node), plus 4x (NVIDIA V100; explicitly GPU:8 and GPU memory 256GB -> 8 GPUs/node)."
+    },
+    {
+      "url": "https://www.uh.edu/research/rcdc/resources/hpc/sabine.php",
+      "data_found": "Sabine GPU nodes: 8x (NVIDIA P100; explicitly GPU:2 and GPU memory 32GB -> 2 GPUs/node), plus 4x (NVIDIA V100; explicitly GPU:8 and GPU memory 128GB -> 8 GPUs/node)."
+    },
+    {
+      "url": "https://www.uh.edu/research/rcdc/support-and-services/user-guide/what-is-new.php",
+      "data_found": "Update note: 'Now Carya has 26 Nodes with NVIDIA L40S GPUs' (GPU-per-node not specified on the page)."
+    },
+    {
+      "url": "https://www.uh.edu/research/rcdc/resources/hpc/opuntia.php",
+      "data_found": "Opuntia GPU nodes: 4x Tesla K40m (explicit GPU:1 per node; not included in requested GPU-type totals)."
+    },
+    {
+      "url": "https://www.uh.edu/ir/reports/statistical-handbook/student-enrollment/index.php",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.uh.edu/ir/reports/statistical-handbook/student-enrollment/index.php",
+    "notes": "Searched for University of Houston Computer Science (major-level) enrollment counts specifically labeled Fall 2024 / AY 2024-2025 and did not find a public static table/PDF giving CS headcount split into undergraduate vs. master's vs. PhD. UH publishes Fall 2024 overall enrollment (e.g., 'UH Facts: Fall 2024' PDF) and NSM college-level Fall 2024 enrollment totals, but neither source provides Computer Science-only headcount. UH Institutional Research 'Statistical Handbook' indicates it can be filtered by major and academic level, but the publicly accessible page is an interactive dashboard and does not expose the underlying Fall 2024 CS counts in a verifiable text/table format via the retrieved page content, so no compliant 2024+ CS headcount numbers could be validated."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 52,
+    "v100_count": 96,
+    "p100_count": 16,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.uh.edu/research/rcdc/resources/hpc/carya.php",
+    "notes": "Cluster-by-cluster breakdown (nodes \u00d7 GPUs_per_node = total GPUs):\n- Carya (V100):\n  - XL190r V100 nodes: 16 nodes \u00d7 2 GPUs/node = 32 V100 (inferred from 'GPU: 10,240' = 2\u00d75120 CUDA cores and 'GPU: 64 GB' = 2\u00d732GB).\n  - XL270d V100 nodes: 4 nodes \u00d7 8 GPUs/node = 32 V100 (explicit 'GPU:8').\n  - Carya V100 subtotal = 64.\n- Sabine:\n  - P100 nodes: 8 nodes \u00d7 2 GPUs/node = 16 P100 (explicit 'GPU:2').\n  - V100 nodes: 4 nodes \u00d7 8 GPUs/node = 32 V100 (explicit 'GPU:8').\n  - Sabine subtotals: P100 = 16; V100 = 32.\n- L40S on Carya (added later): 26 nodes \u00d7 2 GPUs/node = 52 L40S (ESTIMATE; source only states node count, not GPUs/node; used conservative assumption of 2 GPUs per node).\n\nGrand totals used in JSON:\n- V100: 64 (Carya) + 32 (Sabine) = 96\n- P100: 16 (Sabine)\n- L40S: 52 (estimated from 26 nodes)\n\nOther GPUs observed but not requested in output keys:\n- Opuntia: 4 \u00d7 Tesla K40m (4 total)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

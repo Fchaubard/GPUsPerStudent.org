@@ -1,0 +1,65 @@
+{
+  "university_name": "University of La Verne",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://laverne.edu/technology/computer-labs/hoover-200/",
+      "data_found": "General computer lab info (hours/location). No HPC/GPU cluster specs listed."
+    },
+    {
+      "url": "https://laverne.edu/technology/computer-labs/barkley-building-28/",
+      "data_found": "General computer lab + software list. No HPC/GPU cluster specs listed."
+    },
+    {
+      "url": "https://library.laverne.edu/compute-print-copy-scan/",
+      "data_found": "Library public computing/printing info (e.g., SPSS). No research computing/GPU cluster specs listed."
+    },
+    {
+      "url": "https://laverne.edu/news/2024/04/15/university-of-la-verne-earns-25k-impact-award/",
+      "data_found": "Mentions AI use for administrative automation; no on-prem GPU/HPC infrastructure specifications."
+    },
+    {
+      "url": "https://sdsu-research-ci.github.io/instructionalcluster/architecture",
+      "data_found": "NOT University of La Verne: describes SDSU instructional cluster 'VERNE' with 8 GPU nodes \u00d7 4\u00d7 NVIDIA A100 80GB each (=32 A100 80GB). Excluded from ULV totals."
+    },
+    {
+      "url": "https://pacificwave.net/blog/san-diego-state-universitys-verne-applying-the-cenic-ai-resource-to-multi-disciplinary-instruction",
+      "data_found": "NOT University of La Verne: another description of SDSU 'VERNE'/CENIC AIR resources; excluded from ULV totals."
+    },
+    {
+      "url": "https://laverne.edu/institutional-research/current-fact-book/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2024-2025",
+    "source_url": "https://laverne.edu/institutional-research/current-fact-book/",
+    "notes": "FOUND 2024-25 SOURCE but could not extract CS enrollment counts. The University of La Verne Office of Institutional Research publishes a 'Current Fact Book 2024-25' page that explicitly states it was 'Published April 2025' and links to a Power BI report titled 'Headcounts by Colleges and Program Majors' (this is the most relevant place to find Computer Science headcounts for AY 2024-25 / census dates). However, the major-level headcount data is only available inside embedded Power BI (app.powerbi.com) and was not accessible for automated extraction (no visible table text / no downloadable PDF/CSV found from the public pages). Because no 2024-25 (or Fall 2024) Computer Science headcount number could be directly read/verified from an accessible page, counts are set to 0. Relevant page with explicit year and report links: https://laverne.edu/institutional-research/current-fact-book/ ; the specific (inaccessible-to-extract) majors headcount report link is reached from that page via 'Headcounts by Colleges and Program Majors'."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://laverne.edu/technology/computer-labs/hoover-200/",
+    "notes": "Searched for University of La Verne (ULV) research computing / GPU clusters / HPC (including site:laverne.edu for 'hpc', 'high performance computing', 'research computing', 'GPU cluster') and did not find any ULV-published pages listing GPU cluster/node counts or GPU models (H100/H200/A100/V100/etc.). The only concrete GPU-cluster specs encountered were for San Diego State University\u2019s cluster named 'VERNE' (8 GPU nodes \u00d7 4\u00d7 A100 80GB = 32 GPUs), which is unrelated to University of La Verne and therefore excluded. With no ULV clusters found, all GPU totals are 0 and no nodes\u00d7GPUs_per_node calculations apply."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

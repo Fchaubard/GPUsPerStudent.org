@@ -1,0 +1,64 @@
+{
+  "university_name": "Fordham University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.fordham.edu/information-technology/it-services/academic-technology/research-computing/",
+      "data_found": "Magis is a 56 Teraflops cluster that has separate Graphics Processing Units (GPUs) equipped with 64,000 CUDA cores, meaning it can handle multiple computationally intensive tasks in parallel at a high speed. We will soon be adding Grace-Hopper GPUs to further enhance Magis's capabilities."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/191241/fordham-university/enrollment/",
+      "data_found": "Fordham University has a total enrollment of 16,153 including 10,307 undergraduate students and 5,846 graduate students."
+    },
+    {
+      "url": "https://datausa.io/profile/university/fordham-university",
+      "data_found": "The total enrollment at Fordham University in 2023, both undergraduate and graduate, is 16,153 students. The full-time enrollment at Fordham University is 13,471 and the part-time enrollment is 2,682."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/fordham-university-graduate-school-of-arts-and-sciences-department-of-computer-and-information-sciences-000_10014387.aspx",
+      "data_found": "378 Applied \u00b7 268 Accepted \u00b7 94 Enrolled \u00b7 70 Application Fee - Domestic"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 400,
+    "grad_cs_count": 200,
+    "phd_cs_count": 30,
+    "year": "2024-2025",
+    "source_url": "https://www.fordham.edu/information-technology/it-services/academic-technology/research-computing/",
+    "notes": "Fordham CS does not publish comprehensive enrollment statistics by department. Estimates based on: Graduate program data showing 94 MS students enrolled (from Peterson's data), small class sizes mentioned across sources, and typical program sizes at similar universities. The CIS department offers BA-CS, BS-CS, BS-ITS degrees at undergraduate level and MS-CS, MS-Cybersecurity, MS-Data Science, and PhD-CS at graduate level. With 10,307 total undergraduates and CS being a popular major, estimated 400 undergrads (3.9% of total). Graduate estimate includes all CIS programs. PhD estimate based on typical small program size and 5-year guaranteed funding mentioned. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
+    "h200_count": -1,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Unknown GPU models in Magis cluster",
+        "estimated_total": 8,
+        "notes": "Magis cluster has 64,000 CUDA cores total. This typically corresponds to 8-16 modern GPUs depending on model. For example: 8x A100 (6,912 cores each) = 55,296 cores, or 8x H100 (14,592 cores each) = 116,736 cores. The 64,000 core count suggests likely 8-10 GPUs of A100/V100 generation."
+      },
+      {
+        "model": "Grace-Hopper GPUs (future)",
+        "estimated_total": null,
+        "notes": "University states they will soon be adding Grace-Hopper GPUs (GH200) to enhance Magis's capabilities, but these are not yet deployed."
+      }
+    ],
+    "source_url": "https://www.fordham.edu/information-technology/it-services/academic-technology/research-computing/",
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) Magis Cluster (Fordham Research Computing): 56 Teraflops total compute power with GPUs equipped with 64,000 CUDA cores. Specific GPU models not disclosed. Based on CUDA core count, estimated 8-10 GPUs total.\n\nThe university does not provide detailed specifications about GPU models, memory configurations, or exact counts. The 64,000 CUDA cores could represent various configurations:\n- ~9x V100 (5,120 cores each) = 46,080 cores\n- ~8x A100 (6,912 cores each) = 55,296 cores\n- ~10x A40 (10,752 cores each) = 107,520 cores\n\nGiven the 56 TFLOPS performance mentioned, this most closely aligns with 8-10 GPUs of the V100/A100 generation. Grace-Hopper (GH200) GPUs are planned but not yet installed.\n\nNote: All specific GPU model counts marked as -1 (not found) as Fordham does not publish detailed hardware specifications."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach. Fordham University provides limited public information about their HPC resources, mentioning only the Magis cluster with 56 TFLOPS and 64,000 CUDA cores. Student enrollment data at department level is not publicly available; estimates provided based on total university enrollment and typical CS program sizes."
+}

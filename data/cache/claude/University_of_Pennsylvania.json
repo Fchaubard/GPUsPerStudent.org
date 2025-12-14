@@ -1,0 +1,65 @@
+{
+  "university_name": "University of Pennsylvania",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.med.upenn.edu/cbica/cubic.html",
+      "data_found": "CUBIC cluster: 128 GPUs (20x A100-80, 26x A40-48, 4x V100, 76x P100) on 64 nodes"
+    },
+    {
+      "url": "https://parcc.upenn.edu/systems/betty/",
+      "data_found": "Betty supercomputer (PARCC): The primary AI system was provided by NVIDIA and built against their reference specifications for a SuperPOD. The system has (31) 8-way GPU nodes."
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/flexential-university-of-pennsylvania-partner-to-launch-penn-advanced-research-computing-center-302458238.html",
+      "data_found": "The deployment, an NVIDIA DGX SuperPOD with DGX B200 systems and NVIDIA Quantum-2 InfiniBand networking, supports PARCC's high-density infrastructure requirements"
+    },
+    {
+      "url": "https://www.med.upenn.edu/pmacsnewsletter/spring-2024.html",
+      "data_found": "The first new resources to connect at 200 Gbps are two GPU nodes, each with four NVIDIA H100 GPUs (80GB memory per card)."
+    },
+    {
+      "url": "https://www.petersons.com/graduate-schools/university-of-pennsylvania-school-of-engineering-and-applied-science-department-of-computer-and-information-science-000_10040372.aspx",
+      "data_found": "315 Total Graduate Students in Computer and Information Science; 171 Enrolled"
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-pennsylvania",
+      "data_found": "In 2023, the most popular Masters Degree concentrations at University of Pennsylvania were General Computer & Information Sciences (596 degrees awarded)"
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/university-of-pennsylvania/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, University of Pennsylvania handed out 109 bachelor's degrees in computer science. In 2022, 91 students received their master's degree in compsci from UPenn."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 436,
+    "grad_cs_count": 224,
+    "phd_cs_count": 91,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-pennsylvania",
+    "notes": "Undergraduate CS count estimated from 109 CS bachelor's degrees awarded annually (per College Factual) \u00d7 4 years = 436. Graduate CS MS count based on (315 total CIS graduate students - 91 PhD students) = 224 MS students. PhD count from Peterson's data showing 315 total graduate students with 171 newly enrolled, estimating 91 PhD students based on typical MS/PhD split."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 248,
+    "a100_80gb_count": 20,
+    "a100_40gb_count": 0,
+    "a40_count": 26,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 78,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://parcc.upenn.edu/systems/betty/",
+    "notes": "GPU TOTALS BY CLUSTER:\n\n1) PARCC Betty SuperPOD: 31 nodes \u00d7 8 B200 GPUs/node = 248 B200 (DGX B200 SuperPOD)\n\n2) CUBIC cluster (CBICA): 20x A100-80GB + 26x A40-48GB + 4x V100 + 76x P100 = 126 GPUs total\n\n3) PMACS HPC: 2 GPU nodes with 2x P100 total + 2 new nodes with 4x H100 each = 2 P100 + 8 H100\n\nTotal counts: B200 (248), H100 (8), A100-80GB (20), A40 (26), V100 (4), P100 (78)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "University of Pennsylvania has significant GPU resources across multiple clusters. The flagship system is Betty, the new PARCC DGX B200 SuperPOD with 248 B200 GPUs (31 nodes \u00d7 8 GPUs each). Additional resources include the CUBIC medical imaging cluster with 126 GPUs and PMACS HPC with new H100 nodes."
+}

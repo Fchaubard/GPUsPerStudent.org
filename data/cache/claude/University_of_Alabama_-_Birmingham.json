@@ -1,0 +1,67 @@
+{
+  "university_name": "University of Alabama - Birmingham",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.rc.uab.edu/cheaha/hardware/",
+      "data_found": "The Cloud service hardware consists of 5 Intel nodes and 4 DGX-A100 nodes."
+    },
+    {
+      "url": "https://insidehpc.com/2021/09/accelerating-discovery-and-innovation-at-the-university-of-alabama-with-the-dell-cheaha-supercomputer/",
+      "data_found": "This UAB addition incorporates four DGX A100 systems with 2nd Gen AMD EPYC processors. Each DGX system can allocate up to 56 GPU instances using NVIDIA multi-instance GPU (MIG) technology."
+    },
+    {
+      "url": "https://www.uab.edu/news/research/item/7603-state-s-new-fastest-supercomputer-accelerates-uab-research",
+      "data_found": "The supercomputer \u2014 High Performance Computing Cluster at 110 Tflops, powered by Dell EMC \u2014 consists of a mix of Dell EMC PowerEdge 13th Generation Servers, all with Intel 24-core Haswell processors, 36x128GB RAM nodes, 38x256GB RAM nodes, 14x384GB RAM, four nodes with nVidia K80 GPU cards, and four nodes with Intel Xeon Phi cards."
+    },
+    {
+      "url": "https://uabrc.readthedocs.io/en/latest/cheaha/resources/hardware.html",
+      "data_found": "Gen7: 18 2x14 core (504 cores total) 2.4GHz Intel Xeon E5-2680 v4 compute nodes with 256GB RAM, four NVIDIA Tesla P100 16GB GPUs, and EDR InfiniBand interconnect (supported by UAB, 2017)."
+    },
+    {
+      "url": "https://www.collegetuitioncompare.com/edu/100663/university-of-alabama-at-birmingham/enrollment/",
+      "data_found": "For the academic year 2023-2024, total of 21,160 students have enrolled in University of Alabama at Birmingham with 12,382 undergraduate and 8,778 graduate students."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-alabama-at-birmingham",
+      "data_found": "In 2023, the most popular Masters Degree concentrations at University of Alabama at Birmingham were Registered Nursing (588 degrees awarded), General Business Administration & Management (384 degrees), and General Public Health (248 degrees)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 850,
+    "grad_cs_count": 280,
+    "phd_cs_count": 45,
+    "year": "2023-2024",
+    "source_url": "https://www.collegetuitioncompare.com/edu/100663/university-of-alabama-at-birmingham/enrollment/",
+    "notes": "UAB CS department does not publish specific enrollment numbers by major. Total UAB enrollment is 21,160 (12,382 undergrad, 8,778 grad). Based on CS being part of College of Arts & Sciences and typical CS program sizes at similar R1 universities, estimates: Undergrad CS ~850 (estimated 6.8% of undergrads), MS CS ~280 (estimated from graduate programs), PhD CS ~45 (estimated based on 4-year PhD program duration with typical admissions)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 32,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 72,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA K80 (2x12GB)",
+        "estimated_total": 8,
+        "notes": "4 nodes with NVIDIA K80 GPU cards (2017 Cheaha expansion). Each K80 has dual GPUs."
+      }
+    ],
+    "source_url": "https://docs.rc.uab.edu/cheaha/hardware/",
+    "notes": "UAB Cheaha cluster GPU resources: 1) Cloud service: 4 DGX-A100 nodes \u00d7 8 A100 GPUs/node = 32 A100 (80GB assumed for DGX-A100). 2) Gen7 nodes (2017): 18 nodes with 4 P100 16GB GPUs each = 72 P100. 3) 2017 expansion: 4 nodes with NVIDIA K80 GPUs. Total confirmed: 32 A100 + 72 P100 = 104 GPUs. The '80 accelerators' mentioned in obsolete docs likely includes Intel Xeon Phi cards."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "UAB operates the Cheaha supercomputer, Alabama's fastest HPC cluster. GPU infrastructure includes modern A100 GPUs in DGX systems for AI/ML workloads and older P100 GPUs for general compute. CS enrollment estimated from university-wide data as department-specific numbers not published."
+}

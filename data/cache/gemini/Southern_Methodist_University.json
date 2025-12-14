@@ -1,0 +1,41 @@
+{
+  "university_name": "Southern Methodist University",
+  "data_retrieved_date": "2025-06-03",
+  "sources": [
+    {
+      "url": "https://datausa.io/profile/university/southern-methodist-university",
+      "data_found": "2022 Degrees Awarded in Computer & Information Sciences: 79 Bachelor's degrees, 253 Master's degrees, 6 Doctoral degrees."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 316,
+    "grad_cs_count": 380,
+    "phd_cs_count": 33,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/southern-methodist-university",
+    "notes": "Official granular enrollment by major is not publicly listed on SMU's Registrar website. Counts are estimated based on IPEDS/DataUSA completion data for 'Computer & Information Sciences' (CIP 11.01). Undergrad estimated as 79 degrees awarded * 4 years = 316. Grad (MS) estimated as 253 degrees awarded * 1.5 year avg duration = ~380 (High number reflects SMU's large professional/online MS programs). PhD estimated as 6 degrees * 5.5 years = 33."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 160,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 10,
+    "p100_count": 36,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/southern-methodist-university",
+    "notes": "Calculations: \n1) NVIDIA DGX SuperPOD: 20 DGX nodes * 8 GPUs/node = 160 A100 GPUs. (Categorized as 80GB based on 'SuperPOD' designation and late 2021 installation date). \n2) ManeFrame II (Accelerator Nodes): 36 nodes * 1 P100/node = 36 P100 GPUs. \n3) ManeFrame II (Standard/GPU Nodes): 5 nodes * 2 V100/node = 10 V100 GPUs. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "SMU has a very high GPU-to-student ratio due to the dedicated NVIDIA DGX SuperPOD (160 A100s) relative to a smaller private university student body. Student counts are derived from degree completion rates as direct 'enrollment by major' tables were not accessible without login."
+}

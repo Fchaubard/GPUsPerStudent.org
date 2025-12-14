@@ -1,0 +1,78 @@
+{
+  "university_name": "University of North Dakota",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://und.edu/research/computational-research-center/clusters-equipment/talon.html",
+      "data_found": "Talon GPU Accelerated Deep Learning Nodes: Quantity=2 nodes; GPUs per node=8 NVIDIA Tesla V100 with 32GB VRAM each."
+    },
+    {
+      "url": "https://und.edu/research/crc/clusters-equipment/hodor.html",
+      "data_found": "Hodor cluster: 32 nodes total; 16 nodes have an NVIDIA Tesla K20 GPU accelerator (other 16 have Intel Xeon Phi 3120P co-processor)."
+    },
+    {
+      "url": "https://und.edu/research/crc/clusters-equipment/cfl-vr-lab.html",
+      "data_found": "AI & VR Lab workstation specs include: Titan RTX GPUs (Stations 1-2 and 3-6), Quadro RTX 6000 GPUs (Laser Scanning, Activity Space, Maker Space 1), and GeForce RTX 2080 (Maker Space 2/Room 331)."
+    },
+    {
+      "url": "https://dream.crc.und.edu/about_the_dream_lab.php",
+      "data_found": "DREAM Lab mentions access to NVIDIA A6000/A5000 GPUs, but does not list quantities."
+    },
+    {
+      "url": "https://und.edu/analytics-and-planning/_files/docs/data-and-reports/2510-fall.pdf",
+      "data_found": "Student enrollment: 218 undergrad, 19 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 218,
+    "grad_cs_count": 19,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://und.edu/analytics-and-planning/_files/docs/data-and-reports/2510-fall.pdf",
+    "notes": "Source is UND 'Fall 2024 Official Enrollment' PDF (term 2510), report section 'Headcounts by Major/Minor/Cert, Class and Sex' with header explicitly stating 'Fall 2024 Official Enrollment' and report run date '09/24/2024'. Undergrad CS count computed by summing CS major plan rows shown under 'Computer Science - College of Engineering & Mines': BA-CSCI total=1, BSCSCI-CS2 totals=26(F)+49(M)=75, BSCSCI-CSC totals=23(F)+118(M)=141; plus CS second-major row ND-MJCSCI total=1 (ND-MJxx indicates 2nd major per report legend). Total undergrad CS = 1+75+141+1 = 218. Masters CS count computed from 'Computer Science' (CSCI) plan rows: MS-CSCI totals=2(F)+11(M)=13, plus MS-CSCI2 total=6(M) => 19. No Computer Science PhD academic plan appears in this Fall 2024 enrollment report section, so phd_cs_count set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 16,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla K20",
+        "count": 16,
+        "where": "Hodor (SandyBridge Linux Cluster) - 16 nodes have an NVIDIA Tesla K20 GPU accelerator (assumed 1 GPU per node)"
+      },
+      {
+        "model": "NVIDIA Titan RTX",
+        "count": 6,
+        "where": "AI & VR Lab workstations (Stations 1-2 = 2, Stations 3-6 = 4)"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000",
+        "count": 3,
+        "where": "AI & VR Lab workstations (Laser Scanning, Activity Space, Maker Space 1)"
+      },
+      {
+        "model": "NVIDIA GeForce RTX 2080",
+        "count": 1,
+        "where": "AI & VR Lab workstation (Maker Space 2/Room 331)"
+      }
+    ],
+    "source_url": "https://und.edu/research/computational-research-center/clusters-equipment/talon.html",
+    "notes": "Clusters/resources found under UND Computational Research Center pages:\n- Talon (GPU nodes): 2 nodes \u00d7 8 V100 (32GB) per node = 16 V100 total.\n- Hodor (legacy cluster): 16 nodes with NVIDIA Tesla K20 GPU accelerators \u00d7 1 GPU per node (quantity per node not explicitly stated; assumed 1) = 16 Tesla K20 total (not mapped to requested fields).\n- AI & VR Lab is workstation-based (not an HPC cluster) but included as UND AI computing infrastructure: Titan RTX = (Stations 1-2: 2) + (Stations 3-6: 4) = 6; Quadro RTX 6000 = 3; GeForce RTX 2080 = 1.\n- DREAM Lab: A6000/A5000 mentioned but no counts; therefore a6000_count set to 0 (unknown quantity, not safely inferable from sources).\nRequested model totals: V100=16; all H100/H200/A100/P100/A6000/L40s counts found as 0 from available UND-published specs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}

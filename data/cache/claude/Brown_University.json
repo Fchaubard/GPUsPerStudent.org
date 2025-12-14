@@ -1,0 +1,53 @@
+{
+  "university_name": "Brown University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://bulletin.brown.edu/centerforcomputationandvisualization/",
+      "data_found": "The computing platform comprises a 700+ high performance computing node system, some with extra large memory and some with GPUs for accelerated computing, for a total core count of over 7,000, and peak performance of roughly 125 Teraflops."
+    },
+    {
+      "url": "https://cs.brown.edu/news/2020/05/27/brown-cs-graduates-record-number-undergrads-39-are-women/",
+      "data_found": "Brown CS graduated 297 undergraduate students, its highest total ever, as well as 89 Master's students and eight PhDs."
+    },
+    {
+      "url": "https://datausa.io/profile/university/brown-university",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Brown University were Computer Science (236 degrees awarded). In 2023, 263 degrees were awarded to men at Brown University in Computer Science, which is 2.25 times more than the 117 female recipients with that same degree."
+    },
+    {
+      "url": "https://plans.bpcnet.org/BrownUniversity_ComputerScience_DepartmentalBPCPlan.pdf",
+      "data_found": "36.8% of Brown CS and joint-CS undergraduate concentrators identify as women, and 11.2% identify as being from HUGs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 944,
+    "grad_cs_count": 150,
+    "phd_cs_count": 44,
+    "year": "2024",
+    "source_url": "https://datausa.io/profile/university/brown-university",
+    "notes": "Undergraduate CS count estimated from: datausa.io shows 236 CS bachelor's degrees awarded in 2023 (117 to women + 263 to men = 380 total, indicating a reporting discrepancy); using the 236 figure and assuming 4-year program gives estimated enrollment of 236 \u00d7 4 = 944. Graduate MS count estimated from: 2020 news article showed 89 Master's students graduated; assuming typical 1.5-2 year MS program duration, estimated enrollment = 89 \u00d7 1.7 \u2248 150. PhD count estimated from: 2020 article showed 8 PhDs graduated; assuming typical 5.5-year program gives estimated enrollment = 8 \u00d7 5.5 = 44. The 36.8% women figure from BPC plan provides additional validation of significant CS enrollment."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 16,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": -1,
+    "a100_40gb_count": -1,
+    "a40_count": -1,
+    "a6000_count": -1,
+    "l40s_count": -1,
+    "v100_count": -1,
+    "p100_count": -1,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://bulletin.brown.edu/centerforcomputationandvisualization/",
+    "notes": "CLUSTERS INCLUDED:\n\n1) Oscar (Brown CCV): 2 DGX H100 nodes \u00d7 8 H100 GPUs/node = 16 H100 GPUs (H100 NVL/SXM with 80GB memory each)\n\n2) CS Department Hydra cluster: Mentioned in CS department pages but no specific GPU specifications found\n\nThe Brown Bulletin mentions '700+ high performance computing node system, some with GPUs' but does not provide specific GPU models or counts beyond the H100s. Unable to find detailed specifications for other GPU models (A100, V100, etc.) in the Oscar cluster despite multiple searches. The CS department's Hydra cluster is mentioned as having GPU servers purchased in 2016-2023 but without model specifications. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach. Found concrete H100 specifications for Oscar cluster (2 DGX nodes with 8 H100s each = 16 total). Other GPU models likely exist based on the '700+ node' reference but specific counts not publicly documented. Student enrollment estimated from degree completion data as direct enrollment figures by department not found."
+}
