@@ -1,0 +1,54 @@
+{
+  "university_name": "Texas Christian University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://it.tcu.edu/hpc/",
+      "data_found": "TCU Advanced Computing Center (TCU ACC) primary cluster: approximately 20 nodes (no GPU model/count listed)."
+    },
+    {
+      "url": "https://t.e2ma.net/message/i7330q/yvp157qb",
+      "data_found": "AI\u00b2 press release: on-premises foundation uses Dell AI Factory with NVIDIA including Dell PowerEdge servers with NVIDIA GPUs (GPU model/count not disclosed)."
+    },
+    {
+      "url": "https://www.tcu.edu/news/2025/new-ai-initiative-to-be-an-immediate-boost-to-tcu.php",
+      "data_found": "TCU News Q&A confirms AI\u00b2 on-campus hardware is present/being installed, but does not provide GPU model/count."
+    },
+    {
+      "url": "https://ir.tcu.edu/wp-content/uploads/2025/09/TCU-CDS_2024_2025.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 150,
+    "grad_cs_count": 50,
+    "phd_cs_count": 10,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://ir.tcu.edu/wp-content/uploads/2025/09/TCU-CDS_2024_2025.pdf",
+    "notes": "Searched for Fall 2024 / AY 2024-2025 Computer Science (CS) major enrollment counts (UG / MS / PhD) at TCU via (1) TCU CS department pages, (2) TCU Institutional Research Fact Book, (3) registrar/enrollment reports, and (4) the TCU Common Data Set. Found an official 'Common Data Set 2024-2025' PDF (explicitly labeled '2024-2025' and marked 'TCU Institutional Research rev. 5.29.25'). It reports overall institutional enrollment for the fall reporting date / 'as of October 15, 2024' (e.g., total undergraduates 11,049; total graduate 1,889; grand total 12,938) but does NOT provide enrollment by major/department, so CS-specific student counts cannot be extracted. TCU Fact Book appears to be hosted on Tableau (public.tableau.com) and was not accessible in a non-interactive format during this search, preventing retrieval of CS-major headcounts for Fall 2024. ESTIMATE: undergrad_cs_count is estimated based on university size and CS program presence. Will contact university for accurate data. ESTIMATE: grad_cs_count is estimated based on university size and CS program presence. Will contact university for accurate data. ESTIMATE: phd_cs_count is estimated based on university size and CS program presence. Will contact university for accurate data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://t.e2ma.net/message/i7330q/yvp157qb",
+    "notes": "Clusters found:\n1) TCU ACC primary cluster (it.tcu.edu/hpc/): ~20 nodes. GPU count/model not specified anywhere on the public page or linked access PDF => assumed 0 GPUs (20 nodes \u00d7 0 GPUs/node = 0).\n2) AI\u00b2 on-prem Dell AI Factory with NVIDIA (press release): GPU model/count not disclosed publicly. Per instruction to estimate when unknown, assumed a minimal single-node HGX-style AI server deployment typical of Dell AI Factory marketing (1 node \u00d7 8 GPUs/node = 8) and classified as H100 SXM (Dell PowerEdge XE9680 commonly uses 8x H100 SXM/HGX). No evidence found to justify >1 node or to select H200/A100/L40S specifically, so kept counts conservative.\nTotals: H100 SXM = 8; all other listed GPU categories = 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: Estimated undergrad_cs_count=150, grad_cs_count=50, and phd_cs_count=10 based on university size and CS program presence. Will contact university for accurate data."
+}

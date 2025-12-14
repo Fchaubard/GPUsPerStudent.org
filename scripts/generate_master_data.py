@@ -2,6 +2,8 @@
 """
 Generate master_data.csv from final/*.json files.
 Core metric: H100-equivalent GPUs per weighted student
+
+Also checks individual model caches for max student counts if final has zeros.
 """
 
 import os
@@ -51,6 +53,37 @@ WEIGHT_UNDERGRAD = 0.45
 WEIGHT_GRAD = 0.7
 WEIGHT_PHD = 0.9
 
+def get_max_student_data(filename):
+    """
+    Check all model caches (openai, claude, gemini, ensemble) and return max student counts.
+    This fixes the issue where ensemble aggregation incorrectly took 0s.
+    """
+    basename = os.path.basename(filename)
+    model_dirs = ['data/cache/openai', 'data/cache/claude', 'data/cache/gemini', 'data/cache/ensemble']
+    
+    max_ug = 0
+    max_ms = 0
+    max_phd = 0
+    
+    for model_dir in model_dirs:
+        model_file = os.path.join(model_dir, basename)
+        if os.path.exists(model_file):
+            try:
+                with open(model_file) as f:
+                    data = json.load(f)
+                sd = data.get('student_data', {})
+                ug = max(0, sd.get('undergrad_cs_count', 0) or 0)
+                ms = max(0, sd.get('grad_cs_count', 0) or 0)
+                phd = max(0, sd.get('phd_cs_count', 0) or 0)
+                
+                max_ug = max(max_ug, ug)
+                max_ms = max(max_ms, ms)
+                max_phd = max(max_phd, phd)
+            except:
+                pass
+    
+    return max_ug, max_ms, max_phd
+
 def main():
     gpu_prices = load_gpu_prices()
     university_urls = load_university_urls()
@@ -60,6 +93,7 @@ def main():
     print(f"H100 SXM price (baseline): ${h100_price:,}")
     
     results = []
+    student_fixes = 0
     
     for json_file in glob('data/cache/final/*.json'):
         with open(json_file) as f:
@@ -69,10 +103,19 @@ def main():
         sd = data.get('student_data', {})
         gd = data.get('gpu_resources', {})
         
-        # Student counts (handle -1 and None)
+        # Student counts from final (handle -1 and None)
         ug = max(0, sd.get('undergrad_cs_count', 0) or 0)
         ms = max(0, sd.get('grad_cs_count', 0) or 0)
         phd = max(0, sd.get('phd_cs_count', 0) or 0)
+        
+        # ALWAYS check all model caches for max values - ensemble/validation may have underestimated
+        max_ug, max_ms, max_phd = get_max_student_data(json_file)
+        if max_ug > ug or max_ms > ms or max_phd > phd:
+            print(f"  📊 {uni_name}: Using max from model caches - UG:{ug}->{max_ug}, MS:{ms}->{max_ms}, PhD:{phd}->{max_phd}")
+            ug = max(ug, max_ug)
+            ms = max(ms, max_ms)
+            phd = max(phd, max_phd)
+            student_fixes += 1
         
         # Weighted student count
         weighted_students = (ug * WEIGHT_UNDERGRAD) + (ms * WEIGHT_GRAD) + (phd * WEIGHT_PHD)
@@ -129,6 +172,7 @@ def main():
         writer.writerows(results)
     
     print(f"\n✅ Generated {output_file} with {len(results)} universities")
+    print(f"📊 Fixed student data for {student_fixes} universities using model cache max values")
     print("\n🏆 TOP 15 LEADERBOARD:")
     print(f"{'Rank':<5} {'University':<40} {'GPUs/Student':<12} {'H100 Equiv':<10} {'Sources':<8}")
     print("-" * 80)

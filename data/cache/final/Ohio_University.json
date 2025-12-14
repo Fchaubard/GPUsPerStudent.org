@@ -1,0 +1,58 @@
+{
+  "university_name": "Ohio University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.osc.edu/services/cluster_computing",
+      "data_found": "GPU-capable clusters and node/GPU counts: Pitzer V100 nodes (32x2, 42x2, 4x4); Ascend A100 nodes (24x4, 214x2, 84x3); Cardinal H100 nodes (32x4)."
+    },
+    {
+      "url": "https://www.osc.edu/resources/technical_support/supercomputers/ascend",
+      "data_found": "Ascend GPU types/memory: 4x A100 80GB (quad GPU nodes) and A100 40GB (dual/triple GPU nodes; 3rd GPU on triple nodes noted as under testing). Also states 776 total GPUs."
+    },
+    {
+      "url": "https://www.osc.edu/book/export/html/6289",
+      "data_found": "Cardinal accelerator spec: NVIDIA H100 GPUs with ~96GB HBM and NVLink; 32 accelerator nodes with 4 GPUs per node; also summarized as 94GB HBM per GPU in the same page."
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/data-center/h100/",
+      "data_found": "H100 memory variants shown as 80GB (SXM) vs 94GB (PCIe), used to classify OSC's 94GB H100s as PCIe-form-factor."
+    },
+    {
+      "url": "https://www.ohio.edu/iea/student-data/enrollment/firstyrenrollmajor",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.ohio.edu/iea/student-data/enrollment/firstyrenrollmajor",
+    "notes": "Found a Fall 2024-labeled Ohio University (IEA) table for '1st Year Student Enrollment by Major - Fall 2018 to Fall 2024'. In that table, the Computer Science row shows 78 for 2024 (i.e., Fall 2024 first-year CS headcount). However, this is ONLY first-year enrollment by major and does not provide total CS undergraduate majors enrolled (all class years), nor does it provide CS graduate enrollment split into MS-only vs PhD-only. I also located an IEA 'Compendium Departmental Profiles' page explicitly labeled 2024-2025 that includes an 'Electrical Engineering & Computer Science' profile link, but the underlying file is hosted on Ohio University's SharePoint and requires sign-in, so I could not access the needed 2024-2025 CS enrollment totals from that source."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.osc.edu/services/cluster_computing",
+    "notes": "Clusters accessible to Ohio University researchers via Ohio Supercomputer Center (OSC) documentation.\n\nPitzer (V100):\n- 32 nodes \u00d7 2 V100/node = 64 V100\n- 42 nodes \u00d7 2 V100/node = 84 V100\n- 4 nodes \u00d7 4 V100/node = 16 V100\nTotal V100 = 64 + 84 + 16 = 164\n\nAscend (A100):\n- 24 nodes \u00d7 4 A100 80GB/node = 96 A100 80GB\n- 214 nodes \u00d7 2 A100 40GB/node = 428 A100 40GB\n- 84 nodes \u00d7 3 A100 40GB/node = 252 A100 40GB (3rd GPU noted as 'under testing' in Ascend page, but still counted in node\u00d7GPU)\nTotal A100 40GB = 428 + 252 = 680\n\nCardinal (H100):\n- 32 nodes \u00d7 4 H100/node = 128 H100\nOSC docs describe these H100s as 94GB/96GB with NVLink; NVIDIA's H100 page associates 94GB with PCIe, so classified as H100 PCIe.\n\nGrand totals:\n- H100 PCIe = 128; H100 SXM = 0\n- A100 80GB = 96\n- A100 40GB = 680\n- V100 = 164\nAll other requested GPU categories not found in the identified OSC cluster specifications pages => 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: All GPU counts set to 0 because the GPUs are part of the Ohio Supercomputer Center (OSC), a shared resource. STUDENT CHANGES: No changes made to student data."
+}

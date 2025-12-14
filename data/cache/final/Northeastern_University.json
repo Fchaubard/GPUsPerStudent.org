@@ -1,0 +1,70 @@
+{
+  "university_name": "Northeastern University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://rc.northeastern.edu/compute/",
+      "data_found": "Explorer cluster GPU node counts by GPU type for both RC-owned and PI-owned partitions (includes: H200, H100, A100 40GB/80GB, V100 PCIe/SXM2, P100, A6000, L40S, and others)."
+    },
+    {
+      "url": "https://rc.northeastern.edu/2025/04/30/all-about-explorer-and-the-new-h200-gpus/",
+      "data_found": "States Explorer includes 32 NVIDIA H200 GPUs (140GB per GPU)."
+    },
+    {
+      "url": "https://rc.northeastern.edu/2025/05/14/research-computing-infrastructure-enhancements/",
+      "data_found": "Confirms Explorer added thirty-two NVIDIA H200 GPUs as part of infrastructure enhancements."
+    },
+    {
+      "url": "https://facts.northeastern.edu/",
+      "data_found": "Student enrollment: 3775 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 3775,
+    "grad_cs_count": 4246,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://facts.northeastern.edu/",
+    "notes": "Found Fall 2024 enrollment totals by college on Northeastern University\u2019s official Facts and Figures page. For 'Khoury College of Computer Sciences' (CS college): Undergraduate Total = 3,775 (2,867 full-time + 908 on co-op; part-time = 0). Graduate Total = 4,246 (3,725 grad full-time + 376 on co-op + 145 grad part-time; co-op part-time = 0). The page does NOT break Khoury graduate enrollment into master's vs PhD, so grad_cs_count (MS-only) and phd_cs_count (PhD-only) are set to 0 per requirements. Note: page states 'Fall 2024' and also notes UG/GR fall enrollment excludes non-degree seeking students."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 4,
+    "h200_count": 32,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 23,
+    "a100_40gb_count": 56,
+    "a40_count": 0,
+    "a6000_count": 32,
+    "l40s_count": 16,
+    "v100_count": 169,
+    "p100_count": 15,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "Quadro RTX 8000",
+        "count": 9,
+        "vram_gb_per_gpu": 48
+      },
+      {
+        "model": "RTX A5000",
+        "count": 40,
+        "vram_gb_per_gpu": 24
+      },
+      {
+        "model": "A30",
+        "count": 3,
+        "vram_gb_per_gpu": 24
+      }
+    ],
+    "source_url": "https://rc.northeastern.edu/compute/",
+    "notes": "Clusters found: Explorer (Northeastern Research Computing HPC). Discovery is being superseded; public GPUs moved to Explorer (counts below are on Explorer as listed by RC).\n\nExplorer GPU totals (nodes \u00d7 GPUs_per_node):\n- H200: 4 nodes \u00d7 8 = 32\n- H100 (listed as 'H100' with 80GB, 1 node \u00d7 4 = 4). Form factor not specified on RC pages; categorized here as PCIe due to 4-GPU node listing.\n- A100 80GB: (RC) 2\u00d74=8; (PI) 1\u00d78=8; (PI) 1\u00d74=4; (PI) 1\u00d73=3; total = 8+8+4+3 = 23\n- A100 40GB: (RC) 1\u00d72=2; (PI) 3\u00d72=6; (PI) 6\u00d78=48; total = 2+6+48 = 56\n- V100: V100-PCIe (RC) 4\u00d74=16; V100-PCIe (PI) 1\u00d72=2 and 1\u00d74=4; V100-SXM2 (RC) 16\u00d74=64 and 1\u00d73=3; V100-SXM2 (PI) 8\u00d74=32 and 12\u00d74=48; total = 16+2+4+64+3+32+48 = 169\n- P100: (PI) 1\u00d73=3 and 3\u00d74=12; total = 15\n- A6000: (PI) 4\u00d78 = 32\n- L40S: (PI) 2\u00d78 = 16\n\nOther (not requested in top-level fields): Quadro RTX 8000 = 3\u00d73=9; A5000=5\u00d78=40; A30=1\u00d73=3; plus additional lower-VRAM/older GPUs listed by RC (e.g., T4, K80, K20m, Vega 20) not itemized into requested output fields."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: No changes made to GPU counts as all resources appear to be university-owned. STUDENT CHANGES: grad_cs_count updated to 4246 based on source URL."
+}

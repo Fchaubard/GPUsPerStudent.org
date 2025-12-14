@@ -1,0 +1,48 @@
+{
+  "university_name": "University of South Florida",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.usf.edu/ai-cybersecurity-computing/images/00_promophotos/snip-temp-by-the-numbers.png",
+      "data_found": "Student enrollment: 2600 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2600,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "AY 2024-25",
+    "source_url": "https://www.usf.edu/ai-cybersecurity-computing/images/00_promophotos/snip-temp-by-the-numbers.png",
+    "notes": "Source is a USF Bellini College of Artificial Intelligence, Cybersecurity and Computing 'Our College by the numbers' graphic that explicitly references AY 2024-25. It reports 'Approximately 2,600 Undergraduate Students' and 'Approximately 400 Graduate Students' (and shows degree-award counts for AY 2024-25). It does NOT break graduate enrollment into MS-only vs PhD-only, so grad_cs_count and phd_cs_count are set to 0 to avoid misreporting. Also, the graphic appears to summarize the computing unit broadly (not strictly the Computer Science major only), so the undergraduate count may include multiple computing programs."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 4,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 2,
+    "l40s_count": 8,
+    "v100_count": 12,
+    "p100_count": 0,
+    "gh200_count": 2,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA TITAN RTX (24GB)",
+        "total": 2,
+        "calculation": "CIRCE chbme_2018: 2 nodes \u00d7 1 GPU/node = 2"
+      }
+    ],
+    "source_url": "https://www.usf.edu/ai-cybersecurity-computing/images/00_promophotos/snip-temp-by-the-numbers.png",
+    "notes": "Clusters included (USF Research Computing): CIRCE + RRA + SC.\n\nCIRCE calculations (nodes \u00d7 GPUs/node):\n- H100: h100_2024 = 1 \u00d7 4 = 4 (counted as H100 PCIe because SXM/PCIe not stated; 4-GPU servers are typically PCIe; set h100_pcie_count += 4).\n- GH200: gracehopper_2024 = 2 \u00d7 1 = 2 (gh200_count += 2).\n- V100: cbcs = 1 \u00d7 4 = 4 (v100_count += 4).\n- RTX A6000: muma_2021 = 1 \u00d7 2 = 2 (a6000_count += 2).\n- L40S: muma_2021 = 4 \u00d7 2 = 8 (l40s_count += 8).\n- Other high-VRAM GPU: TITAN RTX: chbme_2018 = 2 \u00d7 1 = 2.\n\nRRA calculations (nodes \u00d7 GPUs/node):\n- V100: rra_con2020 = 2 \u00d7 4 = 8 (v100_count += 8).\n\nSC calculations:\n- No GPU rows; total GPUs = 0.\n\nGrand totals across all USF clusters found:\n- H100 PCIe: 4; H100 SXM: 0\n- GH200: 2\n- V100: 12\n- RTX A6000: 2\n- L40S: 8\n- A100/H200/P100/A40/B100/B200: not listed in the USF RC hardware tables above, so counted as 0.\n\nNote on 'Sherlock 728 GPUs': search results for 'Sherlock 728 GPUs' refer to Stanford University\u2019s Sherlock cluster, not University of South Florida, so it was excluded from totals. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be university-owned. Student data was kept as is, with grad_cs_count and phd_cs_count at 0 as per the original source's limitations."
+}

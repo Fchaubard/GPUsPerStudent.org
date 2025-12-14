@@ -1,0 +1,46 @@
+{
+  "university_name": "University of Cincinnati",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://news.iu.edu/it/live/news/31706-xsede-personnel-help-university-of-cincinnati",
+      "data_found": "Pilot Advanced Research Computing Cluster (ARCC, ~2019): 'a GPU node with two NVIDIA V100s' (plus 36 compute nodes). => 1 node \u00d7 2 V100 GPUs/node = 2 V100 GPUs."
+    },
+    {
+      "url": "https://uc.edu/content/dam/refresh/provost-62/offices/ir/ucfall2024totalstudentenrollment.pdf",
+      "data_found": "Student enrollment: 774 undergrad, 505 grad, 84 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 774,
+    "grad_cs_count": 505,
+    "phd_cs_count": 84,
+    "year": "Fall 2024",
+    "source_url": "https://uc.edu/content/dam/refresh/provost-62/offices/ir/ucfall2024totalstudentenrollment.pdf",
+    "notes": "Source is UC Office of Institutional Research report titled \"Fall 2024 Census Total Student Enrollment (By Program, Plan, and Degree Level)\" dated 10/28/2024. Undergraduate CS headcount = 774 (Undergraduate \u2192 Engineering and Applied Science \u2192 CEAS Baccalaureate \u2192 Computer Science) shown on page labeled '4 of 16'. Master's-level CS headcount = 505 total, composed of Computer Science - MENG = 419 and Computer Science - MS = 86 (Graduate \u2192 Engineering and Applied Science \u2192 CEAS Master's) shown on page labeled '13 of 16'. Doctoral CS headcount = 84 (Graduate \u2192 Engineering and Applied Science \u2192 CEAS Doctoral \u2192 Computer Science & Engineering) shown on page labeled '12 of 16'."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 2,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://news.iu.edu/it/live/news/31706-xsede-personnel-help-university-of-cincinnati",
+    "notes": "Clusters found with GPU inventory details:\n\n1) ARCC (pilot cluster described Mar 8, 2019):\n- GPU nodes: 1\n- GPUs per node: 2\u00d7 NVIDIA V100\n- Total V100 = 1 \u00d7 2 = 2\n\n2) ARCC2 (current UC research computing cluster):\n- Public evidence found only that a SLURM partition named 'gpu-a100' exists, implying at least one NVIDIA A100 is present.\n- No public sources located in the provided searches that state (nodes \u00d7 GPUs_per_node) for A100 (or H100/H200/etc.).\n- Conservative lower-bound used: assume >=1 A100 GPU exists; VRAM variant not stated, so placed as a100_40gb_count=1 (placeholder) and also recorded in other_high_vram_gpus as 'unknown variant'.\n\nTotals in this JSON therefore reflect: V100=2 (documented) + A100(unknown) lower-bound=1; everything else=0 due to lack of source-confirmed counts."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Removed 1 A100 GPU. The source URL mentions XSEDE, which is a shared resource. Therefore, the A100 is removed. The other_high_vram_gpus entry was also removed since it was based on the same potentially shared resource."
+}

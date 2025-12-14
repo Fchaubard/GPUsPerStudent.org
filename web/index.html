@@ -215,9 +215,10 @@
                     <div class="about-popup">
                         <p><strong>Why GPUsPerStudent.org?</strong></p>
                         <p>After a spirited debate following my first-order analysis (<a
-                                href="https://x.com/francoischauba1/status/1997095264923078856" target="_blank">see
-                                post</a>), I wanted to incorporate all the feedback and do a second-order attempt. This
-                            website tracks a metric and leaderboard for GPU access at universities.</p>
+                                href="https://x.com/francoischauba1/status/1997095264923078856">see
+                                post</a>), I wanted to do a deeper analysis and incorporate all the feedback into a
+                            second-order attempt. This website tracks a metric and leaderboard for GPU access at
+                            universities.</p>
                         <p>Shedding light on a problem often fixes the problem. Most people do not know how poor the
                             situation is, so as a PhD student paying for my own compute out of pocket, I thought it
                             would be a good idea to provide hard data on the problem.</p>
@@ -387,7 +388,7 @@ Ensemble methodology:
                     responsive: true,
                     maintainAspectRatio: false,
                     layout: {
-                        padding: { right: 80 }
+                        padding: { left: 10, right: 50, top: 10, bottom: 10 }
                     },
                     plugins: {
                         legend: { display: false },
@@ -400,7 +401,7 @@ Ensemble methodology:
                             anchor: 'end',
                             align: 'right',
                             color: '#333',
-                            font: { weight: 'bold', size: 11 },
+                            font: { weight: 'bold', size: 14 },
                             formatter: (value) => value.toFixed(2)
                         }
                     },
@@ -411,7 +412,7 @@ Ensemble methodology:
                             ticks: { callback: (v) => v.toFixed(1) }
                         },
                         y: {
-                            ticks: { font: { size: 11 } },
+                            ticks: { font: { size: 13 } },
                             grid: { display: false }
                         }
                     }

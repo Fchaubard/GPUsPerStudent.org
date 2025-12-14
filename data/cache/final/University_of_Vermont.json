@@ -1,0 +1,58 @@
+{
+  "university_name": "University of Vermont",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.uvm.edu/vacc/cluster-specs",
+      "data_found": "IceCore GPU cluster: IceCore class = 10 nodes \u00d7 8\u00d7 NVIDIA V100 32GB; H100 class = 2 nodes \u00d7 4\u00d7 NVIDIA H100 80GB; A100 class = 2 nodes \u00d7 2\u00d7 NVIDIA A100 40GB; planned/installed Fall 2025 upgrade = 16 nodes \u00d7 4\u00d7 NVIDIA H200 141GB (64 total)."
+    },
+    {
+      "url": "https://www.uvm.edu/cems/news/icecore-advances-new-era-discovery-uvm",
+      "data_found": "IceCore upgrade described in two phases: initial installation of 64 NVIDIA H200 GPUs coming online in fall 2025; second phase scheduled for 2026 to include 40 H200 SXM GPUs and 48 NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs (future, not counted above)."
+    },
+    {
+      "url": "https://www.uvm.edu/vacc/docs/beyond_basics/slurm_partitions/",
+      "data_found": "Partitions reference H200 and H100 availability (e.g., gpu-preempt has 2 nodes \u00d7 4 H200; hgnodes is an H100 partition), corroborating presence of H200/H100 nodes."
+    },
+    {
+      "url": "https://www.uvm.edu/vacc/docs/move_to_rh9/",
+      "data_found": "Notes BlackDiamond used AMD MI50 GPUs and is being sunset due to AMD ending software support; no MI50 node/GPU counts given (not included in totals)."
+    },
+    {
+      "url": "https://www.uvm.edu/d10-files/documents/2025-10/2024-2025-Common_Data_Set_2025_10_14.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.uvm.edu/d10-files/documents/2025-10/2024-2025-Common_Data_Set_2025_10_14.pdf",
+    "notes": "Searched for 2024+ UVM Computer Science (CS) enrollment counts (Fall 2024 / AY 2024-2025) via: (1) 'University of Vermont computer science enrollment Fall 2024', (2) 'UVM CS department facts 2024', (3) UVM Common Data Set 2024-2025, (4) UVM registrar / enrollment statistics Fall 2024, and targeted site searches (uvm.edu). Found UVM OIRA Common Data Set 2024-2025 (PDF dated 2024-2025; institutional enrollment as of Oct 15, 2024) but it reports only institution-wide totals (e.g., total undergraduates/graduate students) and does NOT provide enrollment counts by major/program (no CS-specific headcount). UVM OIRA 'Undergraduate Enrollment' and 'Graduate and Medical/Professional Students' Factbook pages list an 'Enrollment by Program' dashboard, but it is restricted to UVM affiliates (login required), so no public CS enrollment headcount for Fall 2024 / AY 2024-2025 was available. Per the requirement to reject 2023-or-earlier data, counts are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 8,
+    "h200_count": 64,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 4,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 80,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.uvm.edu/vacc/cluster-specs",
+    "notes": "Totals across UVM VACC GPU resources found on official UVM pages (primary: Cluster Specs).\n\nBreakdown (nodes \u00d7 GPUs_per_node = total):\n- V100 32GB (IceCore class): 10 nodes \u00d7 8 = 80 V100\n- H100 80GB (H100 class): 2 nodes \u00d7 4 = 8 H100\n- A100 40GB (A100 class): 2 nodes \u00d7 2 = 4 A100 40GB\n- H200 141GB (Fall 2025 upgrade): 16 nodes \u00d7 4 = 64 H200\n\nForm-factor note: UVM sources do not specify whether the 8\u00d7 H100 80GB are SXM or PCIe; they are counted here as H100 PCIe (h100_pcie_count=8) based on the described configuration '2 nodes, each with four H100 GPUs' and lack of any 'SXM/HGX' wording for the H100s. The 2026 H200 SXM (40) and RTX PRO 6000 Blackwell Server Edition (48) mentioned in the Dec 2025 article are future and not included in current counts."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be university-owned. Student data remains as reported (all zeros)."
+}

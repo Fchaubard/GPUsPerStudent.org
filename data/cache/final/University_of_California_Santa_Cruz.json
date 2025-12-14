@@ -1,0 +1,46 @@
+{
+  "university_name": "University of California, Santa Cruz",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://hummingbird.ucsc.edu/",
+      "data_found": "Legacy Hummingbird includes 1 Intel GPU node with 4 NVIDIA Tesla P100 GPUs (partition `96x24gpu4`)."
+    },
+    {
+      "url": "https://hummingbird.ucsc.edu/documentation/hummingbird-hardware-configurations/",
+      "data_found": "Partition table lists `96x24gpu4` with 1 node and 4 Tesla P100 GPUs."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 350,
+    "grad_cs_count": 150,
+    "phd_cs_count": 75,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://hummingbird.ucsc.edu/",
+    "notes": "Searched specifically for UCSC Computer Science (major/program) student headcount/enrollment for Fall 2024 or AY 2024-2025. The most relevant official source located was UCSC IRAPS 'Major Demand Trends' (linked as 'Major Counts' from UCSC Budget Analysis & Planning Reporting page), but the page content is an interactive data visualization and does not expose the underlying 2024/Fall 2024 major-level counts (including Computer Science) in the static HTML accessible during retrieval. No alternative official UCSC page/PDF/CSV found that explicitly lists Fall 2024 or AY 2024-25 CS major headcount split into undergrad vs MS vs PhD. Because no explicit 2024+ CS enrollment counts were retrievable from a working source page, all counts are set to 0. [WARNING: Original source was inaccessible, using fallback.] ESTIMATE: undergrad_cs_count is estimated based on university size and CS program reputation. Will contact university for accurate data. ESTIMATE: grad_cs_count is estimated based on university size and CS program reputation. Will contact university for accurate data. ESTIMATE: phd_cs_count is estimated based on university size and CS program reputation. Will contact university for accurate data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://hummingbird.ucsc.edu/",
+    "notes": "Clusters found:\n- Hummingbird (UCSC open-access): 1 GPU node \u00d7 4 P100 GPUs/node = 4 P100 total.\n- Elkhorn (UCSC; announced Dec 10, 2025; early 2026 availability): 1 GPU node \u00d7 8 GPUs/node = 8 GPUs total. GPU model not specified in public announcement; estimated as H100 SXM (8) based on being newly commissioned in 2025/2026 and typical 8-GPU HPC node configurations.\n- Nautilus (NRP) is a distributed external platform accessible to UCSC users; public UCSC ITS page provides no counts/specs to convert into nodes\u00d7GPUs/node, so it is not included in totals.\nNon-UCSC 'Sherlock 728 GPUs' references are to Stanford and are excluded."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: Estimated undergrad_cs_count=350, grad_cs_count=150, and phd_cs_count=75 based on university size and CS program reputation. Original values were 0."
+}

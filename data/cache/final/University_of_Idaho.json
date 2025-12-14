@@ -1,0 +1,63 @@
+{
+  "university_name": "University of Idaho",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://docs.c3plus3.org/docs/help/Tutorials/Partitions.html",
+      "data_found": "Falcon GPU nodes listed as: node01 (8x RTX A6000 48GB), node02 (7x Quadro RTX 8000 48GB), node03 (4x L40 48GB), node04 (4x RTX A6000 48GB), node05 (3x RTX 4500 Ada 24GB)."
+    },
+    {
+      "url": "https://datascience.uidaho.edu/infrastructure/",
+      "data_found": "U of I RCDS/IIDS infrastructure page states: two Dell R730 servers, each with four Nvidia K80 coprocessors; and standalone server 'Arthur' has 2 NVIDIA P100 cards."
+    },
+    {
+      "url": "https://hpc.uidaho.edu/compute/Hardware/hardware.html",
+      "data_found": "RCDS hardware page reiterates standalone server 'Arthur' has 2 NVIDIA P100 cards."
+    },
+    {
+      "url": "https://content-hub.uidaho.edu/api/public/content/46bd99ff2a9f46c0b6431e12e6963496?v=aaa6341e",
+      "data_found": "Student enrollment: 351 undergrad, 32 grad, 44 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 351,
+    "grad_cs_count": 32,
+    "phd_cs_count": 44,
+    "year": "Fall 2024",
+    "source_url": "https://content-hub.uidaho.edu/api/public/content/46bd99ff2a9f46c0b6431e12e6963496?v=aaa6341e",
+    "notes": "Source is University of Idaho Institutional Effectiveness enrollment report PDF titled \"Enrollment by Department, Level, Degree, Major\" with a column explicitly labeled \"Fall 2024\" (Fall 2024 census date is stated on the Institutional Effectiveness page as 10/15/24). Counts used are the Fall 2024 headcounts for Engineering -> Computer Science department: Bachelors \"B.S.C.S. Computer Science\" = 351 (undergrad_cs_count); Masters \"M.S. Computer Science\" = 32 (grad_cs_count; MS only, excludes PhD and excludes M.S. Cybersecurity); Doctoral \"Ph.D. Computer Science\" = 44 (phd_cs_count)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 2,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX 8000 (48GB)",
+        "count": 0
+      },
+      {
+        "model": "NVIDIA L40 (48GB)",
+        "count": 0
+      }
+    ],
+    "source_url": "https://docs.c3plus3.org/docs/help/Tutorials/Partitions.html",
+    "notes": "Clusters found and node\u00d7GPU calculations: (1) C3+3 Falcon (GPU partitions): node01=1 node\u00d78 RTX A6000=8; node04=1 node\u00d74 RTX A6000=4; RTX A6000 subtotal=12. node02=1\u00d77 Quadro RTX 8000=7. node03=1\u00d74 L40=4. node05=1\u00d73 RTX 4500 Ada=3 (24GB; not counted in requested model fields). (2) U of I on-campus RCDS/IIDS main cluster: 2 Dell R730 servers\u00d74 K80 per server=8 K80 (K80 not represented in requested output fields). (3) U of I standalone server 'Arthur': 1 server\u00d72 P100=2. No publicly listed U of I counts for H100/H200/A100/V100/L40S were found in the sources above."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Removed 12 A6000, 7 Quadro RTX 8000, and 4 L40 GPUs from C3+3 Falcon cluster as it is a shared resource. Only the 2 P100 GPUs on the standalone server 'Arthur' are counted. STUDENT CHANGES: None."
+}

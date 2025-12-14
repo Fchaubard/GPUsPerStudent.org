@@ -1,0 +1,69 @@
+{
+  "university_name": "University of Iowa",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76513466/Argon%2BCluster",
+      "data_found": "Argon GPU machine counts: 21 P100 machines; 14 V100 machines; 7 A100 machines; 2 machines with 4 L40S each; 5 machines with 4 A40 each; plus other GPU types (K80/P40/1080Ti/TitanV/2080Ti/RTX8000)."
+    },
+    {
+      "url": "https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76515038",
+      "data_found": "IDAS GPUs available: NVIDIA L40S quantity 16 (48GB); NVIDIA L4 quantity 12; NVIDIA A30 quantity 12; NVIDIA A10 quantity 4; GeForce RTX 2080 Ti quantity 10."
+    },
+    {
+      "url": "https://iibi.uiowa.edu/core-computing-resources",
+      "data_found": "IIBI nodes with GPUs: C-IIBI004 has 4x NVIDIA Tesla V100; C-IIBI008 has 4x NVIDIA Tesla A100 (40GB); C-IIBI009 has 4x NVIDIA Tesla A100 (80GB); C-IIBI006 and C-IIBI007 each have 2x NVIDIA Quadro RTX 8000."
+    },
+    {
+      "url": "https://research.its.uiowa.edu/news/2023/09/argon-expansion-next-generation-hardware",
+      "data_found": "Argon expansion purchasing options list includes H100 among available GPU options (as an option), but does not state how many H100 GPUs were actually deployed."
+    },
+    {
+      "url": "https://provost.uiowa.edu/sites/provost.uiowa.edu/files/2022-07/Programs_EnrollmentsbyObjPOS.pdf",
+      "data_found": "Student enrollment: 726 undergrad, 49 grad, 52 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 726,
+    "grad_cs_count": 49,
+    "phd_cs_count": 52,
+    "year": "Fall 2024",
+    "source_url": "https://provost.uiowa.edu/sites/provost.uiowa.edu/files/2022-07/Programs_EnrollmentsbyObjPOS.pdf",
+    "notes": "FOUND 2024 DATA (Fall 2024) in the University of Iowa Provost 'Data Digest' PDF titled 'Fall Semester Enrollment by Objective and Program of Study' with columns through 2024. Undergrad CS-related enrollment (Fall 2024) computed as: BA Computer Science = 300 (Bachelor of Arts section), BS Computer Science = 183 (Bachelor of Science section), and BS in Engineering 'Computer Science and Engineering' = 243 (Bachelor of Science in Engineering section). Masters-only CS enrollment (Fall 2024): 'Master of Computer Science' = 47 plus 'Master of Science' -> 'Computer Science' = 2 (total masters = 49). PhD-only CS enrollment (Fall 2024): 'Doctor of Philosophy' -> 'Computer Science' = 52. The PDF does not show a clear 'last updated' date on the extracted text."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 4,
+    "a100_40gb_count": 32,
+    "a40_count": 20,
+    "a6000_count": 0,
+    "l40s_count": 24,
+    "v100_count": 32,
+    "p100_count": 42,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A40 (48GB)",
+        "count": 0,
+        "notes": "From Argon Cluster wiki: 5 machines with 4x A40 each => 20 A40 GPUs"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 8000 (48GB)",
+        "count": 8,
+        "notes": "IIBI page: 2 + 2 RTX 8000 GPUs (nodes C-IIBI006 & C-IIBI007) => 4. Argon Cluster wiki: 1 machine with RTX8000 accelerators; assumed 4 GPUs in that machine for estimate => +4. Total estimated RTX 8000 GPUs = 8."
+      }
+    ],
+    "source_url": "https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76513466/Argon%2BCluster",
+    "notes": "Clusters included: Argon HPC (UIowa), IDAS (interactive service GPUs), IIBI computing nodes (local institute nodes).\n\nARGON (https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76513466/Argon%2BCluster)\n- P100: 21 machines \u00d7 ASSUMED 2 GPUs/machine = 42 P100 GPUs (assumption: typical older GPU nodes often have 2 datacenter GPUs per node; per-node count not explicitly stated on the page).\n- V100: 14 machines \u00d7 ASSUMED 2 GPUs/machine = 28 V100 GPUs (same assumption as above).\n- A100: 7 machines \u00d7 ASSUMED 4 GPUs/machine = 28 A100 GPUs (assumption: common modern GPU node config is 4 GPUs; per-node count not explicitly stated on the page). Categorized as A100 40GB due to lack of model/memory detail in public docs.\n- L40S: 2 machines \u00d7 4 GPUs/machine (explicit in wiki) = 8 L40S GPUs.\n\nIDAS (https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76515038)\n- L40S: quantity 16 => 16 L40S GPUs.\n\nIIBI COMPUTING NODES (https://iibi.uiowa.edu/core-computing-resources)\n- V100: 1 node (C-IIBI004) \u00d7 4 GPUs/node = 4 V100 GPUs.\n- A100 40GB: 1 node (C-IIBI008) \u00d7 4 GPUs/node = 4 A100 40GB GPUs.\n- A100 80GB: 1 node (C-IIBI009) \u00d7 4 GPUs/node = 4 A100 80GB GPUs.\n\nTOTALS (requested fields)\n- P100 total = 42.\n- V100 total = 28 (Argon) + 4 (IIBI) = 32.\n- A100 40GB total = 28 (Argon, assumed 40GB) + 4 (IIBI) = 32.\n- A100 80GB total = 4 (IIBI).\n- L40S total = 8 (Argon) + 16 (IDAS) = 24.\n\nH100/H200/H100 SXM vs PCIe: no public University of Iowa page found that provides deployed H100/H200 counts; therefore set to 0 (not inferred from 'available options' alone)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Set A40 count in gpu_resources.other_high_vram_gpus to 0. It is unclear if the Argon cluster is a shared resource, so erring on the side of caution and removing the A40 GPUs. STUDENT CHANGES: No changes made to student data."
+}

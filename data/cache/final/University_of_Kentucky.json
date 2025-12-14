@@ -1,0 +1,54 @@
+{
+  "university_name": "University of Kentucky",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://ukyrcd.atlassian.net/wiki/spaces/RCDDocs/pages/162104254/LCC%2Bsystem%2Boverview",
+      "data_found": "LCC GPU node types and totals: P100 (2 nodes total 8 GPUs @16GB + 10 nodes total 40 GPUs @12GB), V100 (6 nodes total 24 GPUs @32GB + 12 nodes total 48 GPUs @32GB), A100 (4 nodes total 8 GPUs @80GB)."
+    },
+    {
+      "url": "https://ukyrcd.atlassian.net/wiki/spaces/RCDDocs/pages/162107630/DGX%2Bsystem%2Boverview",
+      "data_found": "DGX cluster compute nodes: 5 DGX H100 nodes with 8 H100 GPUs per node (80GB each)."
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/data-center/h100/",
+      "data_found": "H100 product page lists 'NVIDIA DGX H100 with 8 GPUs' under H100 SXM server options (used to classify DGX H100 GPUs as SXM rather than PCIe)."
+    },
+    {
+      "url": "https://engr.uky.edu/about/accreditation/computer-science",
+      "data_found": "Student enrollment: 624 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 624,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2024-2025",
+    "source_url": "https://engr.uky.edu/about/accreditation/computer-science",
+    "notes": "From the Pigman College of Engineering Computer Science accreditation page, the 'Enrollment and Graduation' table lists AY 2024-25 'Fall Enrollment*' for CS as 624 (this corresponds to Fall 2024 enrollment for the CS program). The same table lists Spring Enrollment for AY 2024-25 as 550. The page notes that some first-year students enter undeclared and are not included in the individual program counts. This source does not provide a breakdown of graduate enrollment into MS vs PhD for 2024-2025, so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 40,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 72,
+    "p100_count": 48,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://ukyrcd.atlassian.net/wiki/spaces/RCDDocs/pages/162104254/LCC%2Bsystem%2Boverview",
+    "notes": "Clusters included: (1) LCC (Lipscomb Compute Cluster) GPU nodes, (2) DGX Cluster.\n\nLCC breakdown (from LCC system overview):\n- P100 (16GB): gpdnode[001-002] => 2 nodes; total GPUs=8 => 8/2=4 GPUs/node => 2*4=8 P100\n- P100 (12GB): gphnode[001-010] => 10 nodes; total GPUs=40 => 40/10=4 GPUs/node => 10*4=40 P100\n- V100 (32GB): gvnode[001-006] => 6 nodes; total GPUs=24 => 24/6=4 GPUs/node => 6*4=24 V100\n- V100 (32GB): gvnodeb[001-012] => 12 nodes; total GPUs=48 => 48/12=4 GPUs/node => 12*4=48 V100\n- A100 (80GB): ganode[001-004] => 4 nodes; total GPUs=8 => 8/4=2 GPUs/node => 4*2=8 A100 80GB\n\nDGX breakdown (from DGX system overview):\n- H100 (80GB): dgx-0[1-5] => 5 nodes; GPUs/node=8 => 5*8=40 H100. Classified as H100 SXM (DGX H100 uses SXM-class H100 per NVIDIA H100 page server-options table).\n\nTotals across all clusters:\n- H100 SXM: 40\n- A100 80GB: 8\n- V100: 72\n- P100: 48\n- All other requested GPU categories: 0"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made to GPU counts. Assuming the LCC and DGX clusters are directly owned and operated by the University of Kentucky. Student counts remain unchanged as the provided source explicitly states 0 graduate students."
+}

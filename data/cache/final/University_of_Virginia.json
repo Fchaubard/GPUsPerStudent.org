@@ -1,0 +1,58 @@
+{
+  "university_name": "University of Virginia",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.rc.virginia.edu/userinfo/hpc/",
+      "data_found": "Afton GPU node counts: A100 40GB (2 nodes, 8 GPU/node), A100 80GB (18 nodes, 8 GPU/node), H200 (1 node, 8 GPU/node), A40 (12 nodes, 8 GPU/node), A6000 (14 nodes, 8 GPU/node), V100 (2 nodes, 4 GPU/node)."
+    },
+    {
+      "url": "https://rc.virginia.edu/userinfo/hpc/basepod/",
+      "data_found": "DGX BasePOD: 18 DGX A100 nodes; 80GB GPU memory per GPU device; (POD docs indicate requesting up to 8 GPUs/node). Also states H200: currently one server available with 8x H200."
+    },
+    {
+      "url": "https://www.rc.virginia.edu/userinfo/ivy/",
+      "data_found": "Rio GPU node counts: H200 (1 node, 8 GPU/node) and L40s (4 nodes, 8 GPU/node)."
+    },
+    {
+      "url": "https://as.virginia.edu/news/uva-awarded-2-million-nih-grant-advance-brain-research-using-ai",
+      "data_found": "NIH grant-funded purchase: 36 NVIDIA Grace Hopper computing nodes (treated as 36 GH200-class nodes; 1 GPU per node assumed since only 'nodes' count is specified)."
+    },
+    {
+      "url": "https://www.engineering.virginia.edu/undergraduate-study/current-undergrads/degree-information/undergraduate-enrollment-and-graduates",
+      "data_found": "Student enrollment: 809 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 809,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.engineering.virginia.edu/undergraduate-study/current-undergrads/degree-information/undergraduate-enrollment-and-graduates",
+    "notes": "Found explicit Fall 2024 enrollment counts on UVA School of Engineering and Applied Science page under the section 'Computer Science (BS)'. It lists: 'Undergraduate Enrollment (Fall 2024) \u2013 809' and 'Graduate Enrollment (Fall 2024) - 248'. The page also states: 'Fall 2024 enrollment data was captured based on census count on January 25, 2025.' This source does NOT break the 248 graduate students into master's vs Ph.D., so grad_cs_count (masters-only) and phd_cs_count are set to 0 to avoid misclassification. (Source: ([engineering.virginia.edu](https://www.engineering.virginia.edu/undergraduate-study/current-undergrads/degree-information/undergraduate-enrollment-and-graduates)))"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 16,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 144,
+    "a100_40gb_count": 16,
+    "a40_count": 96,
+    "a6000_count": 112,
+    "l40s_count": 32,
+    "v100_count": 8,
+    "p100_count": 0,
+    "gh200_count": 36,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.rc.virginia.edu/userinfo/hpc/",
+    "notes": "Afton/Rivanna HPC GPUs (from UVA RC 'Using UVA\u2019s High-Performance Computing Systems'): (1) A100 80GB: 18 nodes \u00d7 8 = 144 (these correspond to the DGX BasePOD nodes; BasePOD page also says 18 DGX A100 nodes). (2) A100 40GB: 2 nodes \u00d7 8 = 16. (3) H200: 1 node \u00d7 8 = 8. (4) A6000: 14 nodes \u00d7 8 = 112. (5) V100: 2 nodes \u00d7 4 = 8. (6) A40: 12 nodes \u00d7 8 = 96. Rio secure HPC GPUs (from Ivy/Rio page): (7) H200: 1 node \u00d7 8 = 8. (8) L40s: 4 nodes \u00d7 8 = 32. Totals: H200=8+8=16; A100_80=144; A100_40=16; A6000=112; V100=8; L40s=32; A40=96. No H100/H100 SXM/PCIe or P100 counts were explicitly listed in the current UVA RC hardware tables. GH200 assumption: 36 Grace Hopper 'nodes' counted as 36 GH200-class GPUs (1 per node) because the announcement does not specify GPUs-per-node."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be university-owned. Student data is unchanged."
+}

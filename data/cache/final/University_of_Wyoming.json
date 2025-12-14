@@ -1,0 +1,65 @@
+{
+  "university_name": "University of Wyoming",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/2103312408",
+      "data_found": "ARCC facilities statement table listing partitions and GPU types/counts incl. mb-h100 (6 nodes, 8 GPUs/node, SXM5 H100), mb-l40s (5 nodes, 8 GPUs/node), mb-a6000 (1 node, 4 GPUs/node), teton-gpu (6 nodes, 2 P100 GPUs/node), V100 DGX (2 nodes, 8 V100 GPUs/node), mb-a30 (8 nodes, 8 A30 GPUs/node), beartooth-gpu (5 nodes, 2 A30 GPUs/node), plus T4 nodes (2 nodes, 3 GPUs/node)."
+    },
+    {
+      "url": "https://news.ucar.edu/132774/new-ncar-wyoming-supercomputer-accelerate-scientific-discovery",
+      "data_found": "NWSC Derecho: 82 GPU nodes with 4x NVIDIA A100 40GiB each; plus 2 login nodes with 2x NVIDIA V100 GPUs each."
+    },
+    {
+      "url": "https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/2027683973",
+      "data_found": "UW ARCC has two NVIDIA Grace Hopper (GH200) boxes; treated as 2 nodes \u00d7 1 GH200 GPU/node."
+    },
+    {
+      "url": "https://www.uwyo.edu/oia/_files/enrollment/dup-majors-2024.pdf",
+      "data_found": "Student enrollment: 196 undergrad, 11 grad, 23 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 196,
+    "grad_cs_count": 11,
+    "phd_cs_count": 23,
+    "year": "Fall 2024",
+    "source_url": "https://www.uwyo.edu/oia/_files/enrollment/dup-majors-2024.pdf",
+    "notes": "Source is UW Office of Institutional Analysis (Student Data) PDF titled \"Day 15 Duplicated* Headcounts by Department\" with columns \"Fall 2020\" through \"Fall 2024\". In the Electrical Engineering & Computer Science section, the \"Fall 2024\" column lists: \"BS in Computer Science\" = 196 (undergrad), \"MS in Computer Science\" = 11 (masters), and \"PhD in Computer Science\" = 23 (doctoral). This is a duplicated headcount report (i.e., may include students counted in multiple majors and includes secondary majors as described in the PDF). No explicit 'last updated' date was found on the PDF pages/visible text."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 48,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 4,
+    "l40s_count": 40,
+    "v100_count": 16,
+    "p100_count": 12,
+    "gh200_count": 2,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 24GB",
+        "count": 74,
+        "where": "UW ARCC (mb-a30 + beartooth-gpu)"
+      },
+      {
+        "model": "NVIDIA Tesla T4 16GB",
+        "count": 6,
+        "where": "UW ARCC (beartooth-gpu)"
+      }
+    ],
+    "source_url": "https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/2103312408",
+    "notes": "UW ARCC (MedicineBow environment + legacy partitions): mb-h100: 6 nodes \u00d7 8 H100 (SXM5) = 48 H100 SXM; mb-l40s: 5 \u00d7 8 = 40 L40S; mb-a6000: 1 \u00d7 4 = 4 A6000; V100 DGX: 2 \u00d7 8 = 16 V100; teton-gpu: 6 \u00d7 2 = 12 P100; GH200 experimental: 2 \u00d7 1 = 2 GH200. Other GPUs (not in top-level fields): A30 total = (mb-a30 8\u00d78=64) + (beartooth-gpu 5\u00d72=10) = 74; T4 total = 2\u00d73=6."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Removed 328 A100 40GB GPUs and 4 V100 GPUs from NWSC Derecho, as it is a shared national resource (NCAR-Wyoming Supercomputing Center)."
+}

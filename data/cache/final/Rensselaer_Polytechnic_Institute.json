@@ -1,0 +1,62 @@
+{
+  "university_name": "Rensselaer Polytechnic Institute",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.cci.rpi.edu/clusters/",
+      "data_found": "CCI documentation list of available systems: AiMOS (DCS) has 16 nodes with 4x V100-16GB and 252 nodes with 6x V100-32GB; NPL has 40 nodes with 8x V100-32GB; NGH has 2 nodes with 1x H100 96GB (GraceHopper) each."
+    },
+    {
+      "url": "https://docs.cci.rpi.edu/clusters/DCS_Supercomputer/",
+      "data_found": "AiMOS (DCS) details: 268 nodes total; 16 nodes have 4x NVIDIA Tesla V100 (16GB); 252 nodes have 6x NVIDIA Tesla V100 (32GB)."
+    },
+    {
+      "url": "https://docs.cci.rpi.edu/clusters/NPL_Cluster/",
+      "data_found": "NPL cluster details: 40 nodes; each node has 8x NVIDIA Tesla V100 (32 GiB)."
+    },
+    {
+      "url": "https://docs.cci.rpi.edu/clusters/NGH_Cluster/",
+      "data_found": "NGH cluster details: 2 nodes; each node has 1x Nvidia Arm GraceHopper Superchip with 1x H100 GPU with 96GB HBM3e."
+    },
+    {
+      "url": "https://idea.rpi.edu/idea-cluster-details",
+      "data_found": "FOCI/IDEA Cluster Details (Jul 2025): overall described as having Nvidia Ampere A100 GPUs; node inventory shows idea-node-06 has 1x GPU and idea-node-07 has 1x GPU (GPU model/memory size not specified per-node)."
+    },
+    {
+      "url": "https://compsci.rpi.edu/programs/bs-computer-science",
+      "data_found": "Student enrollment: 1400 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1400,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2024-2025",
+    "source_url": "https://compsci.rpi.edu/programs/bs-computer-science",
+    "notes": "On the RPI Computer Science B.S. program page, the page explicitly includes the label \"2024 -2025 CS Catalog Information\" and states the CS major \"currently have[s] over 1400 undergraduates.\" Because the figure is phrased as \"over 1400\" (not an exact headcount), undergrad_cs_count is set to 1400 as a lower bound. I did not find any explicit 2024/2024-2025/Fall 2024 headcount numbers for M.S.-only or Ph.D.-only CS students on publicly accessible pages; the department links to a CS Graduate Program Guide hosted on Box, but the Box share page requires JavaScript and could not be accessed in this environment, so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 2,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 1896,
+    "p100_count": 0,
+    "gh200_count": 2,
+    "other_high_vram_gpus": [],
+    "source_url": "https://docs.cci.rpi.edu/clusters/",
+    "notes": "Clusters included:\n\n1) CCI AiMOS (DCS):\n- 16 nodes \u00d7 4 V100 = 64 V100\n- 252 nodes \u00d7 6 V100 = 1512 V100\nAiMOS subtotal V100 = 64 + 1512 = 1576\n\n2) CCI NPL:\n- 40 nodes \u00d7 8 V100 = 320 V100\n\nTotal V100 across CCI (AiMOS + NPL) = 1576 + 320 = 1896 V100\n\n3) CCI NGH (GraceHopper):\n- 2 nodes \u00d7 1 GraceHopper Superchip = 2 GH200-class systems\nCounted as gh200_count=2 (not also counted under h100_sxm_count/h100_pcie_count to avoid double-counting the embedded H100 GPU).\n\n4) FOCI/IDEA Cluster (Jul 2025):\n- idea-node-06: 1 GPU\n- idea-node-07: 1 GPU\nTotal GPUs = 2; cluster described as using Nvidia Ampere A100 GPUs, but memory size is not specified. Assumed A100 40GB for counting purposes: a100_40gb_count += 2.\n\nNo evidence found in these sources for A100 80GB, H100 PCIe/SXM (standalone), H200, A6000, L40S, A40, P100 at the central RPI clusters listed above."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPUs appear to be locally owned. Student data remains as is, with grad/PhD counts at 0 as per source."
+}

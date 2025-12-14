@@ -1,0 +1,111 @@
+{
+  "university_name": "Utah State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://bioinfocore.usu.edu/resources/hardware",
+      "data_found": "USU Bioinformatics Core 'Guru cluster' has one GPU node (chela-g01) with 4\u00d7 NVIDIA Tesla V100"
+    },
+    {
+      "url": "https://www-prod.chpc.utah.edu/newsletter_updates/read.php?article=81ca4&month=06&year=2025",
+      "data_found": "One-U RAI: total of 10 GPU nodes; each node has 8\u00d7 NVIDIA H200 GPUs; 8 nodes in Granite, 2 nodes in Redwood"
+    },
+    {
+      "url": "https://www.chpc.utah.edu/documentation/guides/granite.php",
+      "data_found": "Granite general nodes include 3 GPU nodes: 1 node with H100NVL GPUs and 2 nodes with L40S GPUs (GPUs per node not stated)"
+    },
+    {
+      "url": "https://www.chpc.utah.edu/news/latest_news/2018newshistory/2018_mar/20180314.php",
+      "data_found": "Notchpeak launch highlights: 3 GPU nodes each have 3\u00d7 Nvidia V100 GPUs"
+    },
+    {
+      "url": "https://www.chpc.utah.edu/news/latest_news/2019newshistory/2019_may/20190508-1.php",
+      "data_found": "Notchpeak: notch004 has 2\u00d7 RTX2080Ti + 1\u00d7 P40; notch086-088 each have 4\u00d7 RTX2080Ti; plus 2 new owner GPU nodes each with 4\u00d7 RTX2080Ti"
+    },
+    {
+      "url": "https://www.chpc.utah.edu/documentation/guides/lonepeak.php",
+      "data_found": "Lonepeak: 21 GPU nodes with 8\u00d7 Nvidia 1080 Ti GPUs per node"
+    },
+    {
+      "url": "https://chpc.utah.edu/documentation/guides/redwood.php",
+      "data_found": "Redwood general cluster: 2 GPU nodes, each with 4\u00d7 GTX1080Ti GPUs"
+    },
+    {
+      "url": "https://www.chpc.utah.edu/news/latest_news/2016newshistory/2016_sept/20160913.php",
+      "data_found": "Kingspeak GPU nodes: kp297-298 each have 4\u00d7 Tesla K80 cards (8 GPUs/node); kp299-300 each have 8\u00d7 GeForce TitanX cards"
+    },
+    {
+      "url": "https://engineering.usu.edu/cs/assessment/undergraduate/enrollment-data",
+      "data_found": "Student enrollment: 504 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 504,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://engineering.usu.edu/cs/assessment/undergraduate/enrollment-data",
+    "notes": "Source is USU School of Computing (Computer Science) Undergraduate Program Assessment page titled \"Enrollment Data\". In the Fall 2024 row, it reports official fall-term headcount enrollment as: Full-Time Undergraduates = 416 and Part-Time Undergraduates = 88 (total undergrad CS headcount = 416 + 88 = 504). It also reports Full-Time Graduates = 40 and Part-Time Graduates = 69 (total graduate headcount = 109), but it does NOT break graduate enrollment into master's vs PhD; therefore grad_cs_count (MS-only) and phd_cs_count are set to 0. Page did not display a \"last updated\" date in the visible content."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "gpu": "NVIDIA H100 NVL (96GB)",
+        "total": 0,
+        "vram_gb": 96,
+        "note": "Count inferred (GPUs per node not stated); treated as H100 PCIe-class for this rollup."
+      },
+      {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "total": 0,
+        "vram_gb": 11,
+        "note": "21 Lonepeak GPU nodes \u00d7 8 + 2 Redwood GPU nodes \u00d7 4"
+      },
+      {
+        "gpu": "NVIDIA GeForce GTX TITAN X",
+        "total": 0,
+        "vram_gb": 12,
+        "note": "Kingspeak: 2 nodes \u00d7 8 cards each"
+      },
+      {
+        "gpu": "NVIDIA Tesla K80 (treated as 2 GPUs/card)",
+        "total": 0,
+        "vram_gb": 12,
+        "note": "Kingspeak: 2 nodes \u00d7 (4 K80 cards/node \u00d7 2 GPUs/card) = 16 GPUs"
+      },
+      {
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "total": 0,
+        "vram_gb": 11,
+        "note": "Notchpeak: notch004 has 2; notch086-088 have 3\u00d74=12; plus 2 owner nodes \u00d74=8; total 22"
+      },
+      {
+        "gpu": "NVIDIA Tesla P40",
+        "total": 0,
+        "vram_gb": 24,
+        "note": "Notchpeak: notch004 has 1 P40"
+      }
+    ],
+    "source_url": "https://www-prod.chpc.utah.edu/newsletter_updates/read.php?article=81ca4&month=06&year=2025",
+    "notes": "Clusters found (USU + CHPC resources available to Utah institutions):\n\n1) USU Bioinformatics Core 'Guru' GPU node:\n- 1 node \u00d7 4 V100 = 4 V100\n\n2) CHPC One-U RAI GPU nodes:\n- 10 nodes \u00d7 8 H200 = 80 H200\n\n3) CHPC Granite (general) GPU nodes:\n- 1 node with H100 NVL GPUs: GPUs_per_node not specified; estimated 8 GPUs/node \u21d2 1\u00d78=8 H100 (counted as H100 PCIe-class)\n- 2 nodes with L40S GPUs: GPUs_per_node not specified; estimated 8 GPUs/node \u21d2 2\u00d78=16 L40S\n\n4) CHPC Notchpeak (older documented GPU nodes):\n- 3 nodes \u00d7 3 V100 = 9 V100\n\nA100 estimate (because the Notchpeak user guide indicates A100 exists, but counts per node / number of A100 nodes were not found in the sources above):\n- Assumed 2 additional GPU nodes (beyond the 2018+2019 explicitly enumerated general GPU nodes) each with 4\u00d7 A100 80GB \u21d2 2\u00d74=8 A100 80GB\n\nTotals rolled into requested fields:\n- H200: 80\n- H100 (PCIe-class via H100 NVL estimate): 8\n- L40S: 16 (estimated)\n- A100 80GB: 8 (estimated)\n- V100: 4 (Guru) + 9 (Notchpeak 2018) = 13\n\nGPUs present in sources but not requested as top-level fields are listed under other_high_vram_gpus (e.g., 1080 Ti, Titan X, K80, RTX 2080 Ti, P40)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Removed all GPUs associated with CHPC (University of Utah) as they are a shared resource. Only the 4 V100 GPUs from the USU Bioinformatics Core 'Guru cluster' are counted."
+}

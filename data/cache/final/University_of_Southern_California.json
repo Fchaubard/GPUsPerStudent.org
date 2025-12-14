@@ -1,0 +1,70 @@
+{
+  "university_name": "University of Southern California",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.carc.usc.edu/about/services",
+      "data_found": "CARC Discovery: 'over 180 NVIDIA GPUs available' (no per-model breakdown)."
+    },
+    {
+      "url": "https://www.carc.usc.edu/latest-news/2021-10-20-new-compute-nodes-on-discovery-1.html",
+      "data_found": "Discovery GPU adds (Oct 20, 2021): 12 dual-A100 nodes; 12 dual-A40 nodes."
+    },
+    {
+      "url": "https://www.carc.usc.edu/latest-news/2022-11-22-new-compute-nodes-november.html",
+      "data_found": "Discovery GPU adds (Nov 22, 2022): 12 dual-A100 nodes; 18 dual-A40 nodes."
+    },
+    {
+      "url": "https://www.carc.usc.edu/user-guides/hpc-systems/discovery/resource-overview-discovery",
+      "data_found": "Discovery GPU models present: L40S (3 per node), A100 (2), A40 (2), V100 (2), P100 (2); also documents existence of both A100 40GB and A100 80GB."
+    },
+    {
+      "url": "https://campusevents.cmc.edu/event/SP25_HighComputing_0314",
+      "data_found": "Laguna cluster (managed by USC; launched Oct 2024): 8 GPU nodes, 'dual Nvidia L40S/node'."
+    },
+    {
+      "url": "https://www.cs.usc.edu/wp-content/uploads/2024/10/USC_CS_Onepager_20241009_RGB-1.pdf",
+      "data_found": "Student enrollment: 1660 undergrad, 3502 grad, 429 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1660,
+    "grad_cs_count": 3502,
+    "phd_cs_count": 429,
+    "year": "Fall 2024",
+    "source_url": "https://www.cs.usc.edu/wp-content/uploads/2024/10/USC_CS_Onepager_20241009_RGB-1.pdf",
+    "notes": "USC Thomas Lord Department of Computer Science factsheet (linked as \u201cFactsheet, Fall 2024\u201d) titled \u201c2024 HIGHLIGHTS.\u201d In the \u201cBY THE NUMBERS\u201d section, it lists: 1,660 undergraduate students, 3,502 master's students, and 429 doctoral students. PDF filename includes 20241009 (Oct 9, 2024), consistent with Fall 2024 publication timing."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 24,
+    "a100_40gb_count": 24,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 40,
+    "v100_count": 24,
+    "p100_count": 24,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "gpu_model": "NVIDIA A40 48GB",
+        "count": 60,
+        "clusters": [
+          "CARC Discovery"
+        ]
+      }
+    ],
+    "source_url": "https://www.carc.usc.edu/about/services",
+    "notes": "Clusters included: (1) CARC Discovery (USC), (2) Laguna (SoCal Research Computing & Data Alliance cluster managed by USC). Endeavour condo cluster exists but public pages do not provide a GPU inventory suitable for node\u00d7GPU counts, so it is not summed here.\n\nCARC Discovery (uses 'over 180 NVIDIA GPUs available' as total; treated as 180 for arithmetic):\n- A100 nodes from Oct 20, 2021 news: 12 nodes \u00d7 2 GPUs/node = 24 A100 GPUs.\n- A100 nodes from Nov 22, 2022 news: 12 nodes \u00d7 2 GPUs/node = 24 A100 GPUs.\n  => Discovery A100 total = 48 GPUs. A100 40GB vs 80GB not specified in the node-add announcements; Discovery docs indicate both exist, so estimated split: 24\u00d7A100-80GB + 24\u00d7A100-40GB.\n- A40 nodes from Oct 20, 2021 news: 12 nodes \u00d7 2 GPUs/node = 24 A40 GPUs.\n- A40 nodes from Nov 22, 2022 news: 18 nodes \u00d7 2 GPUs/node = 36 A40 GPUs.\n  => Discovery A40 total = 60 GPUs (reported under other_high_vram_gpus per requested schema).\n- Remaining GPUs on Discovery after known A100 + A40: 180 - 48 - 60 = 72 GPUs.\n  Discovery docs show remaining models include L40S/V100/P100 but do not publish counts, so estimated allocation (to match 72):\n  * L40S: 8 nodes \u00d7 3 GPUs/node = 24 L40S GPUs\n  * V100: 12 nodes \u00d7 2 GPUs/node = 24 V100 GPUs\n  * P100: 12 nodes \u00d7 2 GPUs/node = 24 P100 GPUs\n\nLaguna cluster (managed by USC; configuration in event listing):\n- L40S: 8 GPU nodes \u00d7 2 L40S/node = 16 L40S GPUs.\n\nGrand totals (Discovery + Laguna):\n- L40S = 24 + 16 = 40\n- A100-80GB = 24 (est)\n- A100-40GB = 24 (est)\n- V100 = 24 (est)\n- P100 = 24 (est)\n- A40 = 60 (exact from node-add announcements; placed in other_high_vram_gpus)\n- No public evidence found in sources above for USC CARC-operated H100/H200/B100/B200/GH200 inventories; set to 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Laguna cluster is part of the SoCal Research Computing & Data Alliance, a regional consortium. Therefore, the L40S GPUs from Laguna (16) have been removed. STUDENT CHANGES: No changes made to student data."
+}

@@ -1,0 +1,73 @@
+{
+  "university_name": "Northwestern University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://rcdsdocs.it.northwestern.edu/systems/quest/specs/quest-specs.html",
+      "data_found": "Quest GPU Nodes (General Access details): 24 nodes with 4x 80GB NVIDIA H100 (SXM5); 18 nodes with 4x 80GB NVIDIA A100 (SXM4); 16 nodes with 2x 40GB NVIDIA A100 (PCIe). Also states total Quest GPUs across General+Priority: 308 GPU cards on 100 GPU nodes. (Last updated: 2025-09-16.)"
+    },
+    {
+      "url": "https://ciera.northwestern.edu/high-performance-computing/",
+      "data_found": "CIERA Cluster: 1 GPU node with 1x 40GB Tesla A100; 1 GPU node with 2x L40S. Grail Cluster: 3 nodes with 4x A30 each (12 total A30); 1 node with 4x L40S. Trident Cluster: 6 GPU nodes, 19 GPUs (model not specified)."
+    },
+    {
+      "url": "https://www.mccormick.northwestern.edu/computer-science/research/machines.html",
+      "data_found": "Local CS GPU Servers: VM-based (athena, glamdring, sting) each has 8x NVIDIA Quadro RTX 8000 48GB; SLURM-based (nyx, hemera, erebus) each has 4x NVIDIA Ampere A40 48GB."
+    },
+    {
+      "url": "https://ampl.mech.northwestern.edu/facilities/facilities-comp-resources.html",
+      "data_found": "AMPL Lambda Quad GPU workstations: 2 workstations with 4x Nvidia RTX 8000 each; 1 workstation with 4x Nvidia RTX A6000 each."
+    },
+    {
+      "url": "https://www.it.northwestern.edu/departments/it-services-support/research/computing/quest/specs.html",
+      "data_found": "Alternate Quest specs page that reports '269 GPU cards on 91 GPU nodes' and lists the same General Access H100/A100 node types; conflicts with the RCDS docs total of 308/100."
+    },
+    {
+      "url": "https://www.mccormick.northwestern.edu/computer-science/documents/about/cra-northwesterncs-2025.pdf",
+      "data_found": "Student enrollment: 722 undergrad, 203 grad, 152 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 722,
+    "grad_cs_count": 203,
+    "phd_cs_count": 152,
+    "year": "AY 2024-25",
+    "source_url": "https://www.mccormick.northwestern.edu/computer-science/documents/about/cra-northwesterncs-2025.pdf",
+    "notes": "Source is Northwestern Engineering (McCormick) CS Department '2025 Department Highlights' one-page PDF. In the 'By the Numbers' section it explicitly states: 'Enrollment: 10,212 (AY 2024-25)'; 'Undergraduate Students: 722 majors, 94 minors'; and 'Graduate Students: 203 MS and 152 PhD'. Reported undergrad_cs_count uses the '722 majors' figure (undergraduate CS majors). grad_cs_count uses the '203 MS' figure (masters only). phd_cs_count uses the '152 PhD' figure (doctoral only)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 20,
+    "a40_count": 12,
+    "a6000_count": 4,
+    "l40s_count": 6,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 24GB",
+        "count": 12,
+        "where": "Grail Cluster (CIERA)"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 8000 48GB",
+        "count": 32,
+        "where": "CS local VM-based systems (24) + AMPL workstations (8)"
+      }
+    ],
+    "source_url": "https://rcdsdocs.it.northwestern.edu/systems/quest/specs/quest-specs.html",
+    "notes": "Clusters found and node\u00d7GPU calculations:\n\n1) Quest (Northwestern IT RCDS docs, total GPUs stated = 308):\n- Quest 13 GPU (H100 SXM5 80GB): 24 nodes \u00d7 4 GPUs/node = 96 H100 SXM\n- Quest 12 GPU (A100 SXM4 80GB): 18 nodes \u00d7 4 GPUs/node = 72 A100 80GB\n- Quest 10 GPU (A100 PCIe 40GB): 16 nodes \u00d7 2 GPUs/node = 32 A100 40GB\nSubtotal from explicitly-specified General Access GPUs = 96 + 72 + 32 = 200 GPUs.\nRemaining GPUs on Quest = 308 - 200 = 108 GPUs (Priority Access; model not specified on public pages).\nESTIMATE per instruction: assign remaining 108 GPUs to A100 40GB PCIe (older/PCIe tier) because current public Quest GPU docs only enumerate H100/A100 generations and do not describe any other GPU families.\n=> Quest estimated totals used in final sum: H100 SXM=96; A100 80GB=72; A100 40GB=32+108=140.\n\n2) CIERA Cluster (CIERA page):\n- 1 GPU node \u00d7 1 A100 40GB = 1 A100 40GB\n- 1 GPU node \u00d7 2 L40S = 2 L40S\n\n3) Grail Cluster (CIERA page):\n- 3 GPU nodes \u00d7 4 A30 = 12 A30 (tracked under other_high_vram_gpus)\n- 1 GPU node \u00d7 4 L40S = 4 L40S\n\n4) Trident Cluster (CIERA page):\n- 6 GPU nodes, 19 GPUs total; GPU model not specified.\nESTIMATE per instruction: assign all 19 GPUs to A100 40GB.\n\n5) CS Local GPU Servers (CS Machines page):\n- SLURM-based: 3 systems \u00d7 4 A40 = 12 A40\n- VM-based: 3 systems \u00d7 8 RTX 8000 = 24 RTX 8000 (tracked under other_high_vram_gpus)\n\n6) AMPL workstations (AMPL page):\n- 2 workstations \u00d7 4 RTX 8000 = 8 RTX 8000 (tracked under other_high_vram_gpus)\n- 1 workstation \u00d7 4 RTX A6000 = 4 A6000\n\nFinal aggregated counts:\n- H100 SXM = 96\n- H100 PCIe = 0 (no PCIe H100 count stated on sources)\n- A100 80GB = 72\n- A100 40GB = Quest 140 + CIERA 1 + Trident 19 = 160\n- L40S = CIERA 2 + Grail 4 = 6\n- A40 = 12\n- A6000 = 4\n- V100/P100/H200/etc = 0 (no counts found in the sourced pages)"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Removed all GPUs from Quest cluster as it is a shared resource. A100_40gb count adjusted to reflect only CIERA and Trident clusters (1+19=20). Student data unchanged."
+}

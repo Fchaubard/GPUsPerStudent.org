@@ -1,0 +1,61 @@
+{
+  "university_name": "Oklahoma State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://hpcc.okstate.edu/pete-supercomputer.html",
+      "data_found": "Pete Supercomputer: '10 GPU nodes ... total of 22 NVIDIA Quadro RTX6000 GPUs'."
+    },
+    {
+      "url": "https://hpcc.okstate.edu/faq.html",
+      "data_found": "FAQ ('bullet' queue): '10 nodes ... total of 22 GPUs' (NVIDIA Quadro RTX6000)."
+    },
+    {
+      "url": "https://cas.okstate.edu/physics/about_us/dr_borundas_lab/",
+      "data_found": "Borunda lab GP-GPU cluster: 10 nodes, each with 1x Tesla C2075 + 1x GeForce GTX 660 Ti (2 GPUs/node). Also describes Cowboy 'fat nodes' each with 1x Tesla C2075."
+    },
+    {
+      "url": "https://ira.okstate.edu/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://ira.okstate.edu/",
+    "notes": "I searched for OSU Computer Science student enrollment specifically in AY 2024-2025 / Fall 2024 sources, but could not find any publicly accessible CS-major headcount broken out by level (UG vs MS vs PhD) with an explicit 2024/2024-2025 date.\n\nWhat I checked (and why it failed the 2024 requirement):\n- OSU IRA Common Data Set page includes a 2024-2025 CDS PDF, but it provides institution-level enrollment totals, not Computer Science-major enrollment counts.\n- OSU Cowboy Data Round-Up (CDR) indicates a Student Profile-Fall dashboard exists, but the public Student Profile-Fall page only exposes an archive up through Fall 2017 PDFs (no Fall 2024 PDF).\n- The internal Student Profile-Fall SAS dashboard link from CDR (osuprod.ondemand.sas.com) returns HTTP 403 Forbidden (not publicly accessible), so I could not retrieve Fall 2024 CS major counts from it.\n- The CAS Computer Science site\u2019s prior Enrollment/Degrees page appears to be removed (HTTP 404), so I could not use it; and in any case earlier visible values were Fall 2023/AY 2022-2023, which your instructions require rejecting.\n\nSearch strategy followed (per your order):\n1) 'Oklahoma State University computer science enrollment Fall 2024'\n2) 'Oklahoma State University CS department facts 2024'\n3) 'Oklahoma State University Common Data Set 2024-2025'\n4) 'Oklahoma State University registrar enrollment statistics 2024'\n5) site searches on cas.okstate.edu and cs.okstate.edu for 'enrollment' and 'Fall 2024'\n\nBecause no CS enrollment-by-level numbers with an explicit 2024/2024-2025 date were publicly retrievable, all counts are set to 0 and year is NO_RECENT_DATA_FOUND."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX 6000 (24GB)",
+        "count": 22,
+        "where": "OSU HPCC Pete (GPU nodes / 'bullet' partition)",
+        "notes": "HPCC page states 10 GPU nodes with a total of 22 Quadro RTX6000 GPUs (not RTX A6000)."
+      }
+    ],
+    "source_url": "https://hpcc.okstate.edu/pete-supercomputer.html",
+    "notes": "Clusters found (Oklahoma State University / okstate.edu):\n1) OSU HPCC 'Pete' GPU nodes: 10 GPU nodes and 22 total NVIDIA Quadro RTX6000 GPUs => 10 nodes \u00d7 (22/10)=2.2 GPUs/node = 22 GPUs total. These are not H100/H200/A100/V100/P100/A6000/L40S, so they are recorded under other_high_vram_gpus.\n2) 'Cowboy' (as described on Borunda lab page): 2 fat nodes \u00d7 1 Tesla C2075 GPU each = 2 total Tesla C2075 GPUs (6GB; not counted in requested GPU model fields).\n3) Borunda lab GP-GPU cluster: 10 nodes \u00d7 2 GPUs/node = 20 total GPUs (10x Tesla C2075 + 10x GeForce GTX 660 Ti; not counted in requested GPU model fields).\nNo OSU (Oklahoma State University) HPCC pages found listing H100/H200/A100/V100/P100/L40S/A6000 counts, and no OSU cluster named 'Sherlock' found in the sources above, so no age-based model estimation was applied."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be locally owned. Student data remains as originally retrieved due to lack of recent data."
+}

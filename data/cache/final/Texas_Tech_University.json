@@ -1,0 +1,50 @@
+{
+  "university_name": "Texas Tech University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.depts.ttu.edu/hpcc/operations/equipment.php",
+      "data_found": "RedRaider GPU partitions shown in equipment table: Matador has 20 total nodes, V100 GPUs, 2 GPUs/node, total GPUs=40. Toreador has 11 total nodes, A100 GPUs, 3 GPUs/node, total GPUs=33."
+    },
+    {
+      "url": "https://www.depts.ttu.edu/hpcc/userguides/general_guides/environment-update-2025.php",
+      "data_found": "States the Matador partition has a test partition 'gpu-build' which includes one GPU worker node with an Nvidia V100 GPU device."
+    },
+    {
+      "url": "https://www.depts.ttu.edu/coe/about/facts.php?v=current",
+      "data_found": "Student enrollment: 922 undergrad, 467 grad, 83 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 922,
+    "grad_cs_count": 467,
+    "phd_cs_count": 83,
+    "year": "Fall 2024",
+    "source_url": "https://www.depts.ttu.edu/coe/about/facts.php?v=current",
+    "notes": "SOURCE CHECK: Page explicitly shows \u201cStudent Headcount - Fall 2024\u201d and an \u201cEnrollment by Department and Program\u201d table labeled \u201cFall 2024\u201d; page footer shows last updated Apr 15, 2025. CS-specific counts come from the \u201cEnrollment by Department and Program\u201d \u2192 \u201cFall 2024\u201d table, row \u201cComputer Science\u201d: Foundational=471, Bachelor\u2019s=451, Master\u2019s=467, Doctoral=83, Total=1472. Reported undergrad_cs_count = Foundational + Bachelor\u2019s = 471 + 451 = 922. grad_cs_count is Master\u2019s only (467). phd_cs_count is Doctoral only (83). Note: the department-level row \u201cDepartment of Computer Science\u201d includes Master\u2019s=476 because it also includes Software Engineering (Master\u2019s=9); this JSON uses the program row \u201cComputer Science\u201d only."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 33,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 41,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.depts.ttu.edu/hpcc/operations/equipment.php",
+    "notes": "Clusters/partitions with explicit GPU counts found on TTU HPCC pages:\n- RedRaider / Matador (V100): 20 nodes \u00d7 2 GPUs/node = 40 V100 GPUs.\n- RedRaider / Toreador (A100): 11 nodes \u00d7 3 GPUs/node = 33 A100 GPUs. A100 memory size (40GB vs 80GB) not specified on TTU pages; estimated as A100 40GB based on RedRaider commissioning timeframe (Fall 2020 / production Jan 2021) and typical procurement patterns.\n- RedRaider / gpu-build test partition (V100): 1 node \u00d7 1 GPU/node = 1 V100 GPU (not listed in the main equipment table; may or may not be physically one of the Matador nodes\u2014counted separately because it is described as a distinct test partition).\nTotals:\n- V100 = 40 + 1 = 41\n- A100 (assumed 40GB) = 33\nNo TTU sources found indicating any H100/H200/L40S/A6000/P100/A40 GPUs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be locally owned and operated by Texas Tech University. Student data is complete and accurate."
+}

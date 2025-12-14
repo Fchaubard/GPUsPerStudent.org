@@ -1,0 +1,54 @@
+{
+  "university_name": "Yeshiva University",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://www.1point3acres.com/bbs/thread-1095829-1-1.html",
+      "data_found": "Post describing Yeshiva University CSE 'IntelliSense Laboratory' compute resources: 'eight A100 GPUs available for four PhD students to share' (no VRAM size specified), plus per-student A4000 workstations."
+    },
+    {
+      "url": "https://www.yu.edu/katz/computer-science-engineering",
+      "data_found": "Katz School Graduate Computer Science & Engineering page states the department has 'a high-performance GPU-based server from MIT Cambridge Research' but does not provide GPU model/count."
+    },
+    {
+      "url": "https://www.yu.edu/news/yu/yeshiva-university-launches-two-masters-programs-computer-science",
+      "data_found": "YU news article (Feb 6, 2024) also mentions access to 'a high-performance, GPU-based server from MIT Cambridge Research' without specifications."
+    },
+    {
+      "url": "https://www.yu.edu/sites/default/files/inline-files/YU%20Fall%202024%20official%20student%20enrollment%2003272025.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.yu.edu/sites/default/files/inline-files/YU%20Fall%202024%20official%20student%20enrollment%2003272025.pdf",
+    "notes": "Source is Yeshiva University Office of Institutional Research (Official Enrollment Statistics) PDF for Fall 2024. The PDF explicitly states it is for Fall 2024 and is 'as of October 15 2024' (census date). In the 'Graduate and Professional' section, the row '159. Katz- Computer Science' shows 0 enrolled (all columns are 0), so grad_cs_count=0. The report does NOT provide undergraduate enrollment by major/field (it reports undergraduate headcount by school such as Yeshiva College, Stern College, Syms, etc.), so undergrad_cs_count cannot be extracted for CS from this Fall 2024 document and is set to 0. No Computer Science Ph.D. line appears in the Fall 2024 program list (only, e.g., 'Katz Math - PHD'), so phd_cs_count is set to 0. File name includes '03272025', which appears to indicate a later posting/update date, but the enrollment census date shown in the PDF is October 15, 2024."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.1point3acres.com/bbs/thread-1095829-1-1.html",
+    "notes": "Clusters found with countable GPU specs:\n- IntelliSense Laboratory GPU server (treated as 1 node): 1 node \u00d7 8 GPUs_per_node (A100) = 8 total A100 GPUs.\n\nVRAM/model mapping assumptions:\n- The source does not specify whether the A100s are 40GB vs 80GB (nor SXM vs PCIe). To fit requested buckets, counted all 8 as A100 40GB (a common academic 8\u00d7A100 configuration). If you prefer a different assumption (e.g., A100 80GB), shift 8 from a100_40gb_count to a100_80gb_count.\n\nItems not counted:\n- Mentioned per-student A4000 workstations are not included in requested GPU categories.\n\nNo other public Yeshiva University GPU cluster specifications (nodes/GPUs) were found in the searched sources beyond the above lab/server mentions."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Removed 8 A100 GPUs due to the mention of 'a high-performance, GPU-based server from MIT Cambridge Research' in multiple sources. This suggests the resource is shared with MIT and not solely owned by Yeshiva University. STUDENT CHANGES: No changes made to student data as the provided data indicates 0 enrollment."
+}

@@ -1,166 +1,166 @@
 university,url,undergrad,ms,phd,weighted_students,H100_SXM,H100_PCIe,H200,A100_80GB,A100_40GB,B200,B100,A40,RTX_A6000,L40S,V100,P100,GH200,A10,total_gpu_value,h100_equivalent,gpus_per_student,sources
-Princeton University,http://www.princeton.edu/,406,0,0,182.7,336,48,152,282,65,0,0,0,0,40,4,4,1,0,24535000,701.0,3.8369,7
-Harvard University,http://www.harvard.edu/,471,0,150,347.0,448,0,320,170,258,0,0,8,0,96,96,0,2,0,34820000,994.86,2.8674,9
-University of Wyoming,http://www.uwyo.edu/,196,11,23,116.6,48,0,0,0,0,0,0,0,4,40,16,12,2,0,2164000,61.83,0.5303,4
-Columbia University,http://www.columbia.edu/,1651,419,41,1073.2,144,6,0,0,16,288,0,18,120,0,32,0,0,0,19133000,546.66,0.5094,6
-Duke University,http://www.duke.edu/,0,151,105,200.2,0,0,72,0,0,0,0,0,24,4,10,46,0,0,3136000,89.6,0.4476,8
-University of Virginia,http://www.virginia.edu/,809,0,0,364.1,0,0,16,144,16,0,0,96,112,32,8,0,36,0,5496000,157.03,0.4313,5
-Johns Hopkins University,http://www.jhu.edu/,700,300,200,705.0,64,66,0,168,72,0,0,0,0,108,6,0,0,0,8345000,238.43,0.3382,4
-Massachusetts Institute of Technology,http://www.mit.edu/,661,462,691,1242.8,32,48,96,210,0,0,0,0,0,259,716,0,0,0,14128000,403.66,0.3248,7
-South Dakota State University,http://www.sdstate.edu/,207,0,0,93.2,8,10,0,28,0,0,0,0,0,0,0,0,0,0,1000000,28.57,0.3067,3
-Rensselaer Polytechnic Institute,http://www.rpi.edu/,1400,0,0,630.0,0,0,0,0,2,0,0,0,0,0,1896,0,2,0,6726000,192.17,0.305,6
-Northwestern University,http://www.northwestern.edu/,722,203,152,603.8,96,0,0,72,160,0,0,12,4,6,0,0,0,0,6162000,176.06,0.2916,6
-Mississippi State University,http://www.msstate.edu/,569,0,0,256.1,0,0,0,106,32,0,0,0,0,48,8,0,0,0,2322000,66.34,0.2591,4
-Case Western Reserve University,http://www.cwru.edu/,571,0,0,256.9,0,4,40,32,0,0,0,0,0,1,28,2,0,0,2309000,65.97,0.2567,6
-Southern Methodist University,http://www.smu.edu/,230,227,43,301.1,0,0,0,160,1,0,0,0,0,0,58,36,0,0,2667000,76.2,0.2531,5
-University of Kentucky,http://www.uky.edu/,624,0,0,280.8,40,0,0,8,0,0,0,0,0,0,72,48,0,0,1844000,52.69,0.1876,4
-University of Notre Dame,http://www.nd.edu/,375,0,0,168.8,8,16,0,0,0,0,0,20,0,12,28,32,0,0,1092000,31.2,0.1849,5
-University of South Carolina,http://www.sc.edu/,620,0,0,279.0,4,0,0,36,8,0,0,0,0,4,177,36,0,0,1465500,41.87,0.1501,3
-Boston College,http://www.bc.edu/,533,0,0,239.8,0,2,8,16,12,0,0,0,0,44,12,0,0,0,1134000,32.4,0.1351,5
-University of Nebraska - Lincoln,http://www.unl.edu/,704,0,0,316.8,8,3,0,4,0,0,0,0,24,52,64,6,0,0,1199000,34.26,0.1081,3
-Hofstra University,http://www.hofstra.edu/,402,72,0,231.3,16,4,0,0,16,0,0,0,0,0,0,0,0,0,840000,24.0,0.1038,4
-College of William and Mary,http://www.wm.edu/,292,0,0,131.4,0,5,0,0,1,0,0,42,0,8,2,2,1,0,458000,13.09,0.0996,3
-Michigan State University,http://www.msu.edu/,2352,0,0,1058.4,0,0,40,44,24,0,0,0,0,24,148,0,4,0,3350000,95.71,0.0904,5
-University of Alabama - Birmingham,http://www.uab.edu/,503,409,20,530.6,0,0,0,40,64,0,0,0,0,0,0,72,0,0,1348000,38.51,0.0726,6
-University of Missouri - Kansas City,http://www.umkc.edu/,425,0,0,191.2,0,0,0,0,0,0,0,48,0,0,56,0,0,0,412000,11.77,0.0615,3
-Virginia Commonwealth University,http://www.vcu.edu/,886,0,0,398.7,20,0,0,8,0,0,0,0,0,0,8,2,0,0,851000,24.31,0.061,5
-Dartmouth College,http://www.dartmouth.edu/,251,0,0,113.0,0,0,0,10,0,0,0,0,0,4,16,0,0,0,238000,6.8,0.0602,4
-University of Iowa,http://www.uiowa.edu/,726,49,52,407.8,0,0,0,4,32,0,0,20,0,24,32,42,0,0,837000,23.91,0.0586,5
-Northeastern University,http://www.neu.edu/,3775,0,0,1698.8,0,4,32,23,56,0,0,0,32,16,169,15,0,0,3207000,91.63,0.0539,4
-Montana State University,http://www.montana.edu/,600,120,50,399.0,12,0,0,14,0,0,0,26,0,0,0,0,0,0,747000,21.34,0.0535,6
-University of Central Florida,http://www.ucf.edu/,2736,796,163,1935.1,90,0,0,0,0,0,0,0,0,0,42,0,0,0,3297000,94.2,0.0487,4
-"University of California, Santa Barbara",http://www.ucsb.edu/,739,0,0,332.6,0,0,0,4,24,0,0,8,0,4,53,1,0,0,555000,15.86,0.0477,6
-University of Connecticut,http://www.uconn.edu/,941,0,0,423.4,0,0,0,15,28,0,0,0,0,0,18,0,2,0,638000,18.23,0.043,4
-West Virginia University,http://www.wvu.edu/,435,0,0,195.8,0,0,0,0,18,0,0,19,0,0,4,0,0,0,279500,7.99,0.0408,6
-University of Michigan - Ann Arbor,http://www.umich.edu/,1301,227,275,991.9,0,0,0,8,0,0,0,234,0,0,55,0,0,0,1365500,39.01,0.0393,6
-New Jersey Institute of Technology,http://www.njit.edu/,1700,585,86,1251.9,0,0,0,100,9,0,0,4,0,0,2,14,0,0,1636000,46.74,0.0373,4
-University of New Hampshire,http://www.unh.edu/,432,26,30,239.6,0,4,0,0,15,0,0,0,0,0,1,0,0,0,273500,7.81,0.0326,4
-Oregon State University,http://www.orst.edu/,4692,0,0,2111.4,24,2,8,3,0,0,0,33,0,24,115,0,8,0,2288000,65.37,0.031,5
-Kansas State University,http://www.ksu.edu/,356,0,0,160.2,0,0,0,4,0,0,0,0,2,11,0,4,0,0,164000,4.69,0.0292,3
-Arizona State University,http://www.asu.edu/,5898,1897,275,4229.5,1,0,0,252,0,0,0,0,0,0,64,0,1,0,4074000,116.4,0.0275,6
-American University,http://www.american.edu/,125,17,0,68.2,0,2,0,0,0,0,0,0,0,0,0,0,0,0,60000,1.71,0.0252,4
-University of Mississippi,http://www.olemiss.edu/,415,0,0,186.8,0,0,0,0,0,0,0,0,0,12,12,4,0,0,144000,4.11,0.022,5
-University of Delaware,http://www.udel.edu/,673,100,130,489.9,0,0,0,16,0,0,0,4,0,0,16,18,0,0,341000,9.74,0.0199,4
-Texas Tech University,http://www.ttu.edu/,922,467,83,816.5,0,0,0,0,33,0,0,0,0,0,41,0,0,0,473500,13.53,0.0166,3
-University of Maryland Baltimore County,http://www.umbc.edu/,1846,0,0,830.7,0,4,0,0,0,0,0,0,0,40,0,0,0,0,440000,12.57,0.0151,4
-University of North Dakota,http://www.und.nodak.edu/,218,19,0,111.4,0,0,0,0,0,0,0,0,0,0,16,0,0,0,56000,1.6,0.0144,5
-New Mexico State University,http://www.nmsu.edu/,387,86,59,287.4,0,0,0,0,8,0,0,0,0,0,10,10,0,0,130000,3.71,0.0129,3
-University of Southern California,http://www.usc.edu/,1660,3502,429,3584.5,0,0,0,24,24,0,0,0,0,40,24,24,0,0,1040000,29.71,0.0083,6
-University of South Florida,http://www.usf.edu/,2600,0,0,1170.0,0,4,0,0,0,0,0,0,2,8,12,0,2,0,306000,8.74,0.0075,1
-Drexel University,http://www.drexel.edu/,1607,119,36,838.8,0,0,0,0,0,0,0,3,0,0,48,0,0,0,181500,5.19,0.0062,4
-University of Kansas,http://www.ku.edu/,611,0,0,274.9,0,0,0,0,2,0,0,0,0,2,2,8,0,0,55000,1.57,0.0057,3
-Florida State University,http://www.fsu.edu/,1362,0,0,612.9,0,4,0,0,0,0,0,0,0,0,0,0,0,0,120000,3.43,0.0056,3
-Carnegie Mellon University,http://www.cmu.edu/,1073,1124,763,1956.4,0,0,0,0,0,0,0,29,0,0,0,112,0,0,298500,8.53,0.0044,6
+Harvard University,http://www.harvard.edu/,692,290,254,743.0,448,0,320,170,258,0,0,8,0,0,96,0,2,0,34052000,972.91,1.3094,9
+Princeton University,http://www.princeton.edu/,800,200,188,669.2,336,48,152,282,65,0,0,0,0,40,4,4,1,0,24535000,701.0,1.0475,7
+Yale University,http://www.yale.edu/,534,150,138,469.5,0,128,128,48,8,0,0,60,0,88,20,0,0,0,10804000,308.69,0.6575,8
+University of Florida,http://www.ufl.edu/,2900,516,200,1846.2,0,0,0,1120,0,504,0,0,0,0,0,0,0,0,39480000,1128.0,0.611,5
+Stanford University,http://www.stanford.edu/,1392,691,275,1357.6,512,0,0,304,284,0,0,0,0,32,218,32,0,0,26387000,753.91,0.5553,6
+New York University,http://www.nyu.edu/,2550,1850,310,2721.5,392,0,512,0,36,0,0,0,0,0,76,0,0,0,34826000,995.03,0.3656,7
+University of Vermont,http://www.uvm.edu/,600,45,25,324.0,0,8,64,0,4,0,0,0,0,0,80,0,0,0,3120000,89.14,0.2751,5
+California Institute of Technology,http://www.caltech.edu/,295,150,201,418.6,0,16,72,0,0,0,0,0,0,16,8,200,0,0,3816000,109.03,0.2604,3
+Clemson University,http://www.clemson.edu/,1800,400,130,1207.0,40,4,40,108,100,0,0,0,0,2,1215,135,0,0,10211000,291.74,0.2417,7
+Rensselaer Polytechnic Institute,http://www.rpi.edu/,1400,150,90,816.0,0,0,0,0,2,0,0,0,0,0,1896,0,2,0,6726000,192.17,0.2355,6
+University of Washington,http://www.washington.edu/,2245,785,368,1891.0,0,0,294,0,64,0,0,256,152,144,0,8,0,0,15476000,442.17,0.2338,4
+Johns Hopkins University,http://www.jhu.edu/,756,696,277,1076.7,64,66,0,168,72,0,0,0,0,108,6,0,0,0,8345000,238.43,0.2214,4
+University of Wyoming,http://www.uwyo.edu/,520,26,31,280.1,48,0,0,0,0,0,0,0,4,40,16,12,2,0,2164000,61.83,0.2207,4
+Rice University,http://www.rice.edu/,864,281,120,693.5,64,0,16,80,0,0,0,28,0,48,32,0,0,0,4702000,134.34,0.1937,4
+Southern Methodist University,http://www.smu.edu/,360,380,43,466.7,0,0,0,160,1,0,0,0,0,0,58,36,0,0,2667000,76.2,0.1633,5
+University of Virginia,http://www.virginia.edu/,1620,172,148,982.6,0,0,16,144,16,0,0,96,112,32,8,0,36,0,5496000,157.03,0.1598,5
+Washington University in St. Louis,http://www.wustl.edu/,1180,471,187,1029.0,8,80,0,48,102,0,0,60,0,0,141,0,1,0,5218500,149.1,0.1449,8
+St. Louis University,http://www.slu.edu/,201,50,20,143.4,0,2,0,0,32,0,0,0,0,0,80,0,0,0,660000,18.86,0.1315,5
+Mississippi State University,http://www.msstate.edu/,919,150,83,593.2,0,0,0,106,32,0,0,0,0,48,8,0,0,0,2322000,66.34,0.1118,4
+Case Western Reserve University,http://www.cwru.edu/,571,153,92,446.8,0,0,40,0,0,0,0,0,0,1,28,2,0,0,1709000,48.83,0.1093,6
+University of Utah,http://www.utah.edu/,1624,366,80,1059.0,0,8,80,0,8,0,0,0,0,16,9,8,0,0,3691500,105.47,0.0996,6
+Massachusetts Institute of Technology,http://www.mit.edu/,1300,2538,1200,3441.6,32,48,96,210,0,0,0,0,0,259,24,0,0,0,11706000,334.46,0.0972,7
+University of Louisville,http://www.louisville.edu/,624,150,73,451.5,0,28,16,0,0,0,0,0,0,0,16,0,0,0,1536000,43.89,0.0972,5
+Duke University,http://www.duke.edu/,1384,250,139,922.9,0,0,72,0,0,0,0,0,24,4,10,46,0,0,3136000,89.6,0.0971,8
+University of Kentucky,http://www.uky.edu/,800,180,70,549.0,40,0,0,8,0,0,0,0,0,0,72,48,0,0,1844000,52.69,0.096,4
+University of Pittsburgh,http://www.pitt.edu/,1293,120,101,756.8,0,0,0,16,116,0,0,0,0,88,24,0,0,0,2188000,62.51,0.0826,5
+South Dakota State University,http://www.sdstate.edu/,517,148,20,354.2,8,10,0,28,0,0,0,0,0,0,0,0,0,0,1000000,28.57,0.0807,3
+Boston College,http://www.bc.edu/,839,25,22,414.9,0,2,8,16,12,0,0,0,0,44,12,0,0,0,1134000,32.4,0.0781,5
+University of Oklahoma,http://www.ou.edu/,912,139,68,568.9,8,14,0,22,27,0,0,0,0,28,2,0,0,0,1531000,43.74,0.0769,4
+Hofstra University,http://www.hofstra.edu/,452,150,20,326.4,16,4,0,0,16,0,0,0,0,0,0,0,0,0,840000,24.0,0.0735,4
+Michigan State University,http://www.msu.edu/,2352,250,150,1368.4,0,0,40,44,24,0,0,0,0,24,148,0,4,0,3350000,95.71,0.0699,5
+University of Oregon,http://www.uoregon.edu/,1392,172,65,805.3,8,12,8,47,19,0,0,4,0,4,16,0,0,0,1961000,56.03,0.0696,4
+Boston University,http://www.bu.edu/,2200,285,110,1288.5,0,0,20,20,9,0,0,68,78,114,71,49,0,0,3120000,89.14,0.0692,6
+University of Georgia,http://www.uga.edu/,1800,239,81,1050.2,48,0,0,56,0,0,0,0,0,0,2,3,0,0,2531500,72.33,0.0689,1
+University of New Mexico,http://www.unm.edu/,634,86,70,408.5,0,32,0,0,0,0,0,0,0,0,0,0,0,0,960000,27.43,0.0671,5
+University of Chicago,http://www.uchicago.edu/,1120,635,165,1097.0,0,4,0,100,44,0,0,88,0,0,26,0,0,0,2547000,72.77,0.0663,5
+University of Rhode Island,http://www.uri.edu/,489,100,30,317.1,0,4,0,24,8,0,0,0,0,16,8,0,0,0,716000,20.46,0.0645,6
+Wake Forest University,http://www.wfu.edu/,252,50,20,166.4,0,0,2,8,8,0,0,0,0,4,16,0,0,0,368000,10.51,0.0632,4
+University of Alabama - Birmingham,http://www.uab.edu/,850,409,50,713.8,0,0,0,40,64,0,0,0,0,0,0,72,0,0,1348000,38.51,0.054,6
+University of Notre Dame,http://www.nd.edu/,864,150,100,583.8,8,16,0,0,0,0,0,20,0,12,28,32,0,0,1092000,31.2,0.0534,5
+Vanderbilt University,http://www.vanderbilt.edu/,700,133,80,480.1,0,0,0,16,16,0,0,0,98,0,0,0,0,0,890000,25.43,0.053,4
+University of South Carolina,http://www.sc.edu/,1400,150,72,799.8,4,0,0,36,8,0,0,0,0,4,177,36,0,0,1465500,41.87,0.0524,3
+Montana State University,http://www.montana.edu/,628,120,50,411.6,12,0,0,14,0,0,0,26,0,0,0,0,0,0,747000,21.34,0.0519,6
+Tufts University,http://www.tufts.edu/,979,247,81,686.4,0,3,0,40,46,0,0,0,8,0,13,4,0,0,1241500,35.47,0.0517,5
+Georgia Institute of Technology,http://www.gatech.edu/,4621,16843,614,14422.1,446,0,192,0,32,0,0,0,0,80,0,0,0,0,24250000,692.86,0.048,5
+University of Hawaii - Manoa,http://www.uhm.hawaii.edu/,800,320,41,620.9,0,16,8,0,0,0,0,0,0,0,64,0,0,0,1024000,29.26,0.0471,4
+University of Wisconsin - Madison,http://www.wisc.edu/,3456,582,148,2095.8,8,0,48,38,26,0,0,0,0,16,0,4,0,0,3164000,90.4,0.0431,1
+University of Miami,http://www.miami.edu/,800,200,60,554.0,0,4,0,2,0,0,0,0,0,1,192,0,0,0,830000,23.71,0.0428,4
+University of Iowa,http://www.uiowa.edu/,880,180,60,576.0,0,0,0,4,32,0,0,20,0,24,32,42,0,0,837000,23.91,0.0415,5
+Worcester Polytechnic Institute,http://www.wpi.edu/,1563,226,71,925.4,0,10,8,8,20,0,0,0,0,32,10,0,0,0,1231000,35.17,0.038,5
+Emory University,http://www.emory.edu/,1228,150,80,729.6,8,0,8,0,8,0,0,21,8,8,13,7,0,0,934500,26.7,0.0366,8
+University of Nebraska - Lincoln,http://www.unl.edu/,1400,350,100,965.0,8,3,0,4,0,0,0,0,24,52,64,6,0,0,1199000,34.26,0.0355,3
+Virginia Commonwealth University,http://www.vcu.edu/,1300,150,50,735.0,20,0,0,8,0,0,0,0,0,0,8,2,0,0,851000,24.31,0.0331,5
+College of William and Mary,http://www.wm.edu/,664,80,45,395.3,0,5,0,0,1,0,0,42,0,8,2,2,1,0,458000,13.09,0.0331,3
+Texas Christian University,http://www.tcu.edu/,468,52,10,256.0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,280000,8.0,0.0312,4
+George Mason University,http://www.gmu.edu/,2804,950,206,2112.2,0,4,0,124,16,0,0,0,0,0,24,0,0,0,2224000,63.54,0.0301,4
+Michigan Technological University,http://www.mtu.edu/,978,141,51,584.7,0,0,0,36,0,0,0,0,0,0,20,0,0,0,610000,17.43,0.0298,5
+University of Central Florida,http://www.ucf.edu/,4500,796,250,2807.2,0,90,0,0,0,0,0,0,0,0,42,0,0,0,2847000,81.34,0.029,4
+University of New Hampshire,http://www.unh.edu/,432,70,30,270.4,0,4,0,0,15,0,0,0,0,0,1,0,0,0,273500,7.81,0.0289,4
+Florida Institute of Technology,http://www.fit.edu/,459,107,44,321.1,0,0,0,0,32,0,0,0,0,0,0,0,0,0,320000,9.14,0.0285,3
+Arizona State University,http://www.asu.edu/,6060,1897,308,4332.1,1,0,0,252,0,0,0,0,0,0,64,0,1,0,4074000,116.4,0.0269,6
+Cornell University,http://www.cornell.edu/,2028,400,350,1507.6,0,22,0,38,0,0,0,8,12,0,20,0,0,0,1396000,39.89,0.0265,8
+George Washington University,http://www.gwu.edu/,832,498,89,803.1,0,0,0,16,0,0,0,0,0,0,116,4,2,0,722000,20.63,0.0257,5
+University of Connecticut,http://www.uconn.edu/,1029,200,118,709.2,0,0,0,15,28,0,0,0,0,0,18,0,2,0,638000,18.23,0.0257,4
+Oregon State University,http://www.orst.edu/,4874,428,168,2644.1,24,2,8,3,0,0,0,33,0,24,115,0,8,0,2288000,65.37,0.0247,5
+North Dakota State University,http://www.ndsu.nodak.edu/,600,320,50,539.0,0,8,0,1,10,0,0,12,0,4,0,8,0,0,453000,12.94,0.024,5
+Louisiana Tech University,http://www.latech.edu/,442,93,31,291.9,0,0,6,0,0,0,0,0,0,0,0,0,0,0,240000,6.86,0.0235,2
+Marquette University,http://www.mu.edu/,268,90,30,210.6,0,0,0,0,0,0,0,0,0,0,48,0,0,0,168000,4.8,0.0228,4
+"University of California, Santa Barbara",http://www.ucsb.edu/,739,321,172,712.0,0,0,0,4,24,0,0,8,0,4,53,1,0,0,555000,15.86,0.0223,6
+New Jersey Institute of Technology,http://www.njit.edu/,2244,1200,303,2122.5,0,0,0,100,9,0,0,4,0,0,2,14,0,0,1636000,46.74,0.022,4
+American University,http://www.american.edu/,136,24,0,78.0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,60000,1.71,0.022,4
+Missouri University of Science and Technology,http://www.mst.edu/,765,250,82,593.0,8,0,0,0,0,0,0,0,0,0,50,0,0,0,455000,13.0,0.0219,4
+"University of California, Davis",http://www.ucdavis.edu/,2088,400,200,1399.6,0,4,0,32,40,0,0,0,9,0,4,0,0,0,1059000,30.26,0.0216,7
+University of Michigan - Ann Arbor,http://www.umich.edu/,2546,531,356,1837.8,0,0,0,8,0,0,0,234,0,0,55,0,0,0,1365500,39.01,0.0212,6
+Syracuse University,http://www.syr.edu/,647,1180,82,1191.0,0,0,0,16,0,0,0,8,100,0,0,0,0,0,776000,22.17,0.0186,6
+University of Denver,http://www.du.edu/,330,220,96,388.9,0,0,0,16,0,0,0,0,0,0,2,0,0,0,247000,7.06,0.0181,3
+Northeastern University,http://www.neu.edu/,4646,4246,362,5388.7,0,4,32,23,56,0,0,0,32,16,169,15,0,0,3207000,91.63,0.017,4
+Stevens Institute of Technology,http://www.stevens-tech.edu/,1308,1092,60,1407.0,0,24,0,0,0,0,0,0,0,8,0,0,0,0,784000,22.4,0.0159,3
+University of Mississippi,http://www.olemiss.edu/,415,80,20,260.8,0,0,0,0,0,0,0,0,0,12,12,4,0,0,144000,4.11,0.0158,5
+West Virginia University,http://www.wvu.edu/,800,150,50,510.0,0,0,0,0,18,0,0,19,0,0,4,0,0,0,279500,7.99,0.0157,6
+University of Missouri - Kansas City,http://www.umkc.edu/,588,648,50,763.2,0,0,0,0,0,0,0,48,0,0,56,0,0,0,412000,11.77,0.0154,3
+University of Houston,http://www.uh.edu/,2752,202,137,1503.1,0,0,0,0,0,0,0,0,0,52,96,16,0,0,776000,22.17,0.0148,5
+Dartmouth College,http://www.dartmouth.edu/,848,65,71,491.0,0,0,0,10,0,0,0,0,0,4,16,0,0,0,238000,6.8,0.0138,4
+Northern Illinois University,http://www.niu.edu/,1098,239,25,683.9,0,0,0,0,32,0,0,0,0,0,0,0,0,0,320000,9.14,0.0134,3
+University of Delaware,http://www.udel.edu/,879,318,130,735.1,0,0,0,16,0,0,0,4,0,0,16,18,0,0,341000,9.74,0.0133,4
+"University of California, Berkeley",http://www.berkeley.edu/,3820,479,338,2358.5,0,0,16,22,9,0,0,0,0,0,4,0,0,0,1074000,30.69,0.013,4
+Texas Tech University,http://www.ttu.edu/,1364,476,139,1072.1,0,0,0,0,33,0,0,0,0,0,41,0,0,0,473500,13.53,0.0126,3
+Colorado School of Mines,http://www.mines.edu/,947,172,55,596.1,0,0,0,0,16,0,0,0,0,4,20,0,0,0,262000,7.49,0.0126,3
+"University of California, Riverside",http://www.ucr.edu/,1532,217,159,984.4,0,2,0,24,0,0,0,0,0,0,0,2,0,0,423000,12.09,0.0123,4
+New Mexico State University,http://www.nmsu.edu/,406,97,59,303.7,0,0,0,0,8,0,0,0,0,0,10,10,0,0,130000,3.71,0.0122,3
+University of Arizona,http://www.arizona.edu/,1833,150,75,997.4,0,0,0,4,0,0,0,0,0,0,56,95,0,0,398500,11.39,0.0114,3
+Kansas State University,http://www.ksu.edu/,686,125,54,444.8,0,0,0,4,0,0,0,0,2,11,0,4,0,0,164000,4.69,0.0105,3
+University of Pennsylvania,http://www.upenn.edu/,1152,978,160,1347.0,0,0,0,20,0,0,0,0,0,0,4,80,0,0,434000,12.4,0.0092,5
+University of North Dakota,http://www.und.nodak.edu/,295,38,18,175.5,0,0,0,0,0,0,0,0,0,0,16,0,0,0,56000,1.6,0.0091,5
+University of South Dakota,http://www.usd.edu/,150,120,10,160.5,0,0,0,2,0,0,0,0,0,0,5,2,0,0,50500,1.44,0.009,1
+University of Southern California,http://www.usc.edu/,1697,3502,429,3601.1,0,0,0,24,24,0,0,0,0,40,24,24,0,0,1040000,29.71,0.0083,6
+Northwestern University,http://www.northwestern.edu/,1400,450,180,1107.0,0,0,0,0,20,0,0,12,4,6,0,0,0,0,322000,9.2,0.0083,6
+Temple University,http://www.temple.edu/,2024,200,80,1122.8,0,0,0,18,0,0,0,0,0,0,10,12,0,0,323000,9.23,0.0082,5
+University of Maryland Baltimore County,http://www.umbc.edu/,2427,600,150,1647.2,0,4,0,0,0,0,0,0,0,40,0,0,0,0,440000,12.57,0.0076,4
+Colorado State University,http://www.colostate.edu/,1154,200,100,749.3,0,0,0,6,4,0,0,0,2,5,0,0,0,0,180000,5.14,0.0069,5
+Brandeis University,http://www.brandeis.edu/,612,159,30,413.7,0,0,0,0,0,0,0,0,0,0,24,0,0,0,84000,2.4,0.0058,4
+"University of California, San Diego",http://www.ucsd.edu/,2072,400,400,1572.4,0,0,0,0,4,0,0,4,0,0,64,4,0,0,288000,8.23,0.0052,7
+University of South Florida,http://www.usf.edu/,2600,593,148,1718.3,0,4,0,0,0,0,0,0,2,8,12,0,2,0,306000,8.74,0.0051,1
+"University of California, Santa Cruz",http://www.ucsc.edu/,2632,350,182,1593.2,8,0,0,0,0,0,0,0,0,0,0,4,0,0,286000,8.17,0.0051,2
+"University of California, Irvine",http://www.uci.edu/,3215,558,412,2208.2,0,0,0,8,0,0,0,0,0,8,56,0,0,0,380000,10.86,0.0049,4
 University of Nevada - Reno,http://www.unr.edu/,842,105,65,510.9,0,0,0,0,0,0,0,0,0,0,3,44,0,0,76500,2.19,0.0043,3
-Utah State University,http://www.usu.edu/,504,0,0,226.8,0,0,0,0,0,0,0,0,0,0,4,0,0,0,14000,0.4,0.0018,9
-Baylor University,http://www.baylor.edu/,450,150,22,327.3,0,0,0,0,0,0,0,0,0,0,0,4,0,0,6000,0.17,0.0005,5
-University of Idaho,http://www.uidaho.edu/,351,32,44,220.0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,3000,0.09,0.0004,4
-University of Cincinnati,http://www.uc.edu/,774,505,84,777.4,0,0,0,0,0,0,0,0,0,0,2,0,0,0,7000,0.2,0.0003,2
-University of Pittsburgh,http://www.pitt.edu/,0,0,0,0.0,0,0,0,16,116,0,0,0,0,88,24,0,0,0,2188000,62.51,0,5
-"University of California, San Diego",http://www.ucsd.edu/,0,0,0,0.0,0,0,0,0,4,0,0,4,0,0,64,4,0,0,288000,8.23,0,7
-St. John's University,http://www.stjohns.edu/,71,0,0,31.9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
-Syracuse University,http://www.syr.edu/,0,0,0,0.0,0,0,0,16,0,0,0,8,100,0,0,0,0,0,776000,22.17,0,6
-Oklahoma State University,http://www.okstate.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-DePaul University,http://www.depaul.edu/,845,496,43,766.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,2
-Marquette University,http://www.mu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,168000,4.8,0,4
-Pace University,http://www.pace.edu/,575,0,0,258.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
-University of South Dakota,http://www.usd.edu/,0,0,0,0.0,0,0,0,2,0,0,0,0,0,0,5,2,0,0,50500,1.44,0,1
-"University of California, Riverside",http://www.ucr.edu/,0,0,0,0.0,0,2,0,24,0,0,0,0,0,0,0,2,0,0,423000,12.09,0,4
-Illinois Institute of Technology,http://www.iit.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-"University of California, Davis",http://www.ucdavis.edu/,0,0,0,0.0,0,4,0,32,40,0,0,0,9,0,4,0,0,0,1059000,30.26,0,7
-Rice University,http://www.rice.edu/,0,0,0,0.0,64,0,16,80,0,0,0,28,0,48,32,0,0,0,4702000,134.34,0,4
-Ohio University,http://www.ohiou.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,5
-George Mason University,http://www.gmu.edu/,0,0,0,0.0,0,4,0,124,16,0,0,0,0,0,24,0,0,0,2224000,63.54,0,4
-University of La Verne,http://www.ulaverne.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,7
-Stevens Institute of Technology,http://www.stevens-tech.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,64000,1.83,0,3
-University of Chicago,http://www.uchicago.edu/,0,0,0,0.0,0,4,0,100,44,0,0,88,0,0,26,0,0,0,2547000,72.77,0,5
-Edgewood College,http://www.edgewood.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,5
-Western Michigan University,http://www.wmich.edu/,263,0,0,118.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,6
-George Washington University,http://www.gwu.edu/,0,0,0,0.0,0,0,0,16,0,0,0,0,0,0,116,4,2,0,722000,20.63,0,5
-Yeshiva University,http://www.yu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-Seton Hall University,http://www.shu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-Brown University,http://www.brown.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,8,0,0,0,0,0,40000,1.14,0,3
-Clarkson University,http://www.clarkson.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,14000,0.4,0,4
-University of Dayton,http://www.udayton.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,6000,0.17,0,4
-University of New Mexico,http://www.unm.edu/,0,0,0,0.0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,960000,27.43,0,5
-Brandeis University,http://www.brandeis.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,84000,2.4,0,4
-Colorado State University,http://www.colostate.edu/,0,0,0,0.0,0,0,0,6,4,0,0,0,2,5,0,0,0,0,180000,5.14,0,5
-Azusa Pacific University,http://www.apu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-Adelphi University,http://www.adelphi.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-University of San Francisco,http://www.usfca.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-California Institute of Technology,http://www.caltech.edu/,0,0,0,0.0,0,16,72,0,0,0,0,0,0,16,8,200,0,0,3816000,109.03,0,3
-Andrews University,http://www.andrews.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,3
-Vanderbilt University,http://www.vanderbilt.edu/,0,0,0,0.0,0,0,0,16,16,0,0,0,98,0,0,0,0,0,890000,25.43,0,4
-East Carolina University,http://www.ecu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,4,4,0,0,20000,0.57,0,4
-Georgia Institute of Technology,http://www.gatech.edu/,0,0,0,0.0,446,0,192,0,32,0,0,0,0,80,0,0,0,0,24250000,692.86,0,5
-University of Wisconsin - Madison,http://www.wisc.edu/,0,0,0,0.0,8,0,48,38,26,0,0,0,0,16,0,4,0,0,3164000,90.4,0,1
-University of Arizona,http://www.arizona.edu/,0,0,0,0.0,0,0,0,4,0,0,0,0,0,0,56,95,0,0,398500,11.39,0,3
-The Catholic University of America,http://www.cua.edu/,71,0,0,31.9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
-"University of California, Irvine",http://www.uci.edu/,0,0,0,0.0,0,0,0,8,0,0,0,0,0,8,56,0,0,0,380000,10.86,0,4
-Bowling Green State University,http://www.bgsu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,5
-Widener University,http://www.widener.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,7000,0.2,0,2
-Louisiana Tech University,http://www.latech.edu/,0,0,0,0.0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,240000,6.86,0,2
-University of Georgia,http://www.uga.edu/,0,0,0,0.0,48,0,0,56,0,0,0,0,0,0,2,3,0,0,2531500,72.33,0,1
-Kent State University,http://www.kent.edu/,604,0,0,271.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,6
-Maryville University of St. Louis,http://www.maryvillestl.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,5
-Stanford University,http://www.stanford.edu/,0,0,0,0.0,512,0,0,304,284,0,0,0,0,32,218,32,0,0,26387000,753.91,0,6
-Immaculata University,http://www.immaculata.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-Boston University,http://www.bu.edu/,0,0,0,0.0,0,0,20,20,9,0,0,68,78,114,71,49,0,0,3120000,89.14,0,6
-University of Miami,http://www.miami.edu/,0,0,0,0.0,0,4,0,2,0,0,0,0,0,1,192,0,0,0,830000,23.71,0,4
-Central Michigan University,http://www.cmich.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,3
-University of Rochester,http://www.rochester.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-Temple University,http://www.temple.edu/,0,0,0,0.0,0,0,0,18,0,0,0,0,0,0,0,12,0,0,288000,8.23,0,5
-Duquesne University,http://www.duq.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,5
-Illinois State University,http://www.ilstu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,14000,0.4,0,3
-Texas Christian University,http://www.tcu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-University of Houston,http://www.uh.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,52,96,16,0,0,776000,22.17,0,5
-University of Alabama - Huntsville,http://www.uah.edu/,662,0,0,297.9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
-University of Utah,http://www.utah.edu/,0,0,0,0.0,0,8,80,0,8,0,0,0,0,16,9,8,0,0,3691500,105.47,0,6
-Wake Forest University,http://www.wfu.edu/,0,0,0,0.0,0,0,2,8,8,0,0,0,0,4,16,0,0,0,368000,10.51,0,4
-New York University,http://www.nyu.edu/,0,0,0,0.0,392,0,512,0,36,0,0,0,0,0,76,0,0,0,34826000,995.03,0,7
-Georgetown University,http://www.georgetown.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-Clemson University,http://www.clemson.edu/,0,0,0,0.0,40,4,40,108,100,0,0,0,0,2,1215,135,0,0,10211000,291.74,0,7
-Tufts University,http://www.tufts.edu/,0,0,0,0.0,0,3,0,40,46,0,0,0,8,0,13,4,0,0,1241500,35.47,0,5
-Washington University in St. Louis,http://www.wustl.edu/,0,0,0,0.0,8,80,0,48,102,0,0,60,0,0,141,0,1,0,5218500,149.1,0,8
-University of Denver,http://www.du.edu/,0,0,0,0.0,0,0,0,16,0,0,0,0,0,0,2,0,0,0,247000,7.06,0,3
-Pepperdine University,http://www.pepperdine.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,3
-St. Mary's University of Minnesota,http://www.smumn.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-University of Washington,http://www.washington.edu/,0,0,0,0.0,0,0,294,0,64,0,0,256,152,144,0,8,0,0,15476000,442.17,0,4
-University of Oklahoma,http://www.ou.edu/,779,139,44,487.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
-Yale University,http://www.yale.edu/,0,0,0,0.0,0,128,128,48,8,0,0,60,0,88,20,0,0,0,10804000,308.69,0,8
-Cornell University,http://www.cornell.edu/,0,0,0,0.0,0,22,0,38,0,0,0,8,12,0,20,0,0,0,1396000,39.89,0,8
-Northern Illinois University,http://www.niu.edu/,0,0,0,0.0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,320000,9.14,0,3
-Worcester Polytechnic Institute,http://www.wpi.edu/,0,0,0,0.0,0,10,8,8,20,0,0,0,0,32,10,0,0,0,1231000,35.17,0,5
-Washington State University,http://www.wsu.edu/,0,0,0,0.0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,20000,0.57,0,2
-Clark University,http://www.clarku.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,3
-University of Tulsa,http://www.utulsa.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,2
-University of Rhode Island,http://www.uri.edu/,0,0,0,0.0,0,4,0,24,8,0,0,0,0,16,8,0,0,0,716000,20.46,0,6
-St. Louis University,http://www.slu.edu/,0,0,0,0.0,0,2,0,0,32,0,0,0,0,0,80,0,0,0,660000,18.86,0,5
-University of Texas - Austin,https://www.utexas.edu/,0,0,0,0.0,696,8,0,0,252,0,0,0,0,0,424,6,0,0,28613000,817.51,0,7
-Michigan Technological University,http://www.mtu.edu/,0,0,0,0.0,0,0,0,36,0,0,0,0,0,0,20,0,0,0,610000,17.43,0,5
-Colorado School of Mines,http://www.mines.edu/,0,0,0,0.0,0,0,0,0,16,0,0,0,0,4,20,0,0,0,262000,7.49,0,3
-Missouri University of Science and Technology,http://www.mst.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-University of San Diego,http://www.sandiego.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-Indiana University of Pennsylvania,http://www.iup.edu/,130,0,0,58.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
-University of Hawaii - Manoa,http://www.uhm.hawaii.edu/,0,0,0,0.0,0,16,8,0,0,0,0,0,0,0,64,0,0,0,1024000,29.26,0,4
-Howard University,http://www.howard.edu/,94,3,3,47.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
-Florida Institute of Technology,http://www.fit.edu/,0,0,0,0.0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,320000,9.14,0,3
-University of Louisville,http://www.louisville.edu/,0,0,0,0.0,0,28,16,0,0,0,0,0,0,0,16,0,0,0,1536000,43.89,0,5
-University of the Pacific,http://www.pacific.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,3
-Fordham University,http://www.fordham.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,3
-"Rutgers, The State University of New Jersey - Newark",http://rutgers-newark.rutgers.edu/,0,0,0,0.0,0,0,0,0,4,0,0,0,0,0,6,0,0,0,61000,1.74,0,2
-Auburn University,http://www.auburn.edu/,546,0,0,245.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
-"University of California, Berkeley",http://www.berkeley.edu/,0,0,0,0.0,0,0,16,22,9,0,0,0,0,0,4,0,0,0,1074000,30.69,0,4
-University of Florida,http://www.ufl.edu/,0,0,0,0.0,0,0,0,1120,0,504,0,0,0,0,0,0,0,0,39480000,1128.0,0,5
-North Dakota State University,http://www.ndsu.nodak.edu/,0,0,0,0.0,0,8,0,1,10,0,0,0,0,4,0,8,0,0,399000,11.4,0,5
-Biola University,http://www.biola.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-"University of California, Santa Cruz",http://www.ucsc.edu/,0,0,0,0.0,8,0,0,0,0,0,0,0,0,0,0,4,0,0,286000,8.17,0,2
-University of Vermont,http://www.uvm.edu/,0,0,0,0.0,0,8,64,0,4,0,0,0,0,0,80,0,0,0,3120000,89.14,0,5
-University of Oregon,http://www.uoregon.edu/,0,0,0,0.0,8,12,8,47,19,0,0,4,0,4,16,0,0,0,1961000,56.03,0,4
-University of Montana,http://www.umt.edu/,0,0,0,0.0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,18000,0.51,0,3
-"University of California, Los Angeles",http://www.ucla.edu/,0,0,0,0.0,0,0,0,4,0,0,0,0,2,0,2,0,0,0,77000,2.2,0,3
-University of Pennsylvania,http://www.upenn.edu/,0,0,0,0.0,0,0,0,20,0,0,0,0,0,0,4,80,0,0,434000,12.4,0,5
-St. John Fisher College,http://www.sjfc.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,4
-Ball State University,http://www.bsu.edu/,0,0,0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0,5
-San Diego State University,http://www.sdsu.edu/,0,0,0,0.0,0,0,0,4,0,0,0,0,0,0,9,4,0,0,97500,2.79,0,4
-Emory University,http://www.emory.edu/,0,0,0,0.0,8,0,8,0,8,0,0,21,8,8,13,7,0,0,934500,26.7,0,8
+Drexel University,http://www.drexel.edu/,1607,650,80,1250.1,0,0,0,0,0,0,0,3,0,0,48,0,0,0,181500,5.19,0.0041,4
+Carnegie Mellon University,http://www.cmu.edu/,1073,1518,846,2306.8,0,0,0,0,0,0,0,29,0,0,0,112,0,0,298500,8.53,0.0037,6
+"Rutgers, The State University of New Jersey - Newark",http://rutgers-newark.rutgers.edu/,876,102,45,506.1,0,0,0,0,4,0,0,0,0,0,6,0,0,0,61000,1.74,0.0034,2
+Florida State University,http://www.fsu.edu/,2100,229,70,1168.3,0,4,0,0,0,0,0,0,0,0,0,0,0,0,120000,3.43,0.0029,3
+Widener University,http://www.widener.edu/,100,20,10,68.0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,7000,0.2,0.0029,2
+San Diego State University,http://www.sdsu.edu/,1847,130,48,965.4,0,0,0,4,0,0,0,0,0,0,9,4,0,0,97500,2.79,0.0029,4
+University of Montana,http://www.umt.edu/,350,75,20,228.0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,18000,0.51,0.0023,3
+University of Kansas,http://www.ku.edu/,800,350,120,713.0,0,0,0,0,2,0,0,0,0,2,2,8,0,0,55000,1.57,0.0022,3
+East Carolina University,http://www.ecu.edu/,533,85,0,299.3,0,0,0,0,0,0,0,0,0,0,4,4,0,0,20000,0.57,0.0019,4
+Clarkson University,http://www.clarkson.edu/,256,120,25,221.7,0,0,0,0,0,0,0,0,0,0,4,0,0,0,14000,0.4,0.0018,4
+"University of California, Los Angeles",http://www.ucla.edu/,1859,532,375,1546.5,0,0,0,4,0,0,0,0,2,0,2,0,0,0,77000,2.2,0.0014,3
+Washington State University,http://www.wsu.edu/,895,150,75,575.2,0,0,0,0,2,0,0,0,0,0,0,0,0,0,20000,0.57,0.001,2
+Utah State University,http://www.usu.edu/,837,125,40,500.2,0,0,0,0,0,0,0,0,0,0,4,0,0,0,14000,0.4,0.0008,9
+Illinois State University,http://www.ilstu.edu/,1146,200,0,655.7,0,0,0,0,0,0,0,0,0,0,4,0,0,0,14000,0.4,0.0006,3
+Baylor University,http://www.baylor.edu/,638,150,48,435.3,0,0,0,0,0,0,0,0,0,0,0,4,0,0,6000,0.17,0.0004,5
+University of Dayton,http://www.udayton.edu/,308,463,50,507.7,0,0,0,0,0,0,0,0,0,0,0,4,0,0,6000,0.17,0.0003,4
+University of Idaho,http://www.uidaho.edu/,351,75,44,250.1,0,0,0,0,0,0,0,0,0,0,0,2,0,0,3000,0.09,0.0003,4
+University of Cincinnati,http://www.uc.edu/,1364,1059,150,1490.1,0,0,0,0,0,0,0,0,0,0,2,0,0,0,7000,0.2,0.0001,2
+St. John's University,http://www.stjohns.edu/,450,180,0,328.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
+Oklahoma State University,http://www.okstate.edu/,800,150,50,510.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+DePaul University,http://www.depaul.edu/,1728,496,177,1284.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,2
+Pace University,http://www.pace.edu/,1360,1124,40,1434.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Illinois Institute of Technology,http://www.iit.edu/,686,947,100,1061.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Ohio University,http://www.ohiou.edu/,504,84,30,312.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
+University of La Verne,http://www.ulaverne.edu/,180,166,0,197.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,7
+Edgewood College,http://www.edgewood.edu/,50,20,10,45.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
+Western Michigan University,http://www.wmich.edu/,450,154,38,344.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,6
+Yeshiva University,http://www.yu.edu/,188,250,0,259.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Seton Hall University,http://www.shu.edu/,312,58,10,190.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Brown University,http://www.brown.edu/,1192,224,96,779.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
+Columbia University,http://www.columbia.edu/,1651,800,200,1483.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,6
+Azusa Pacific University,http://www.apu.edu/,120,40,0,82.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Adelphi University,http://www.adelphi.edu/,176,50,10,123.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+University of San Francisco,http://www.usfca.edu/,1151,326,20,764.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Andrews University,http://www.andrews.edu/,76,30,10,64.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
+The Catholic University of America,http://www.cua.edu/,144,80,25,143.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
+Bowling Green State University,http://www.bgsu.edu/,472,94,25,300.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
+Kent State University,http://www.kent.edu/,800,180,33,515.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,6
+Maryville University of St. Louis,http://www.maryvillestl.edu/,500,118,0,307.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
+Immaculata University,http://www.immaculata.edu/,50,20,10,45.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Central Michigan University,http://www.cmich.edu/,409,150,10,298.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
+University of Rochester,http://www.rochester.edu/,836,120,60,514.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Duquesne University,http://www.duq.edu/,150,50,10,111.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
+University of Alabama - Huntsville,http://www.uah.edu/,866,167,49,550.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Georgetown University,http://www.georgetown.edu/,400,107,35,286.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Pepperdine University,http://www.pepperdine.edu/,160,0,0,72.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
+St. Mary's University of Minnesota,http://www.smumn.edu/,52,136,10,127.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Clark University,http://www.clarku.edu/,180,44,10,120.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
+University of Tulsa,http://www.utulsa.edu/,260,72,20,185.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,2
+University of Texas - Austin,https://www.utexas.edu/,2670,1150,250,2231.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,7
+University of San Diego,http://www.sandiego.edu/,224,197,20,256.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Indiana University of Pennsylvania,http://www.iup.edu/,412,30,0,206.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Howard University,http://www.howard.edu/,447,100,31,299.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+University of the Pacific,http://www.pacific.edu/,496,370,10,491.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
+Fordham University,http://www.fordham.edu/,600,200,30,437.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,3
+Auburn University,http://www.auburn.edu/,1800,128,110,998.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
+Biola University,http://www.biola.edu/,128,20,10,80.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+St. John Fisher College,http://www.sjfc.edu/,80,20,10,59.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,4
+Ball State University,http://www.bsu.edu/,556,82,10,316.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,5
