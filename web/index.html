@@ -172,6 +172,7 @@
         .about-link {
             position: relative;
             cursor: pointer;
+            text-decoration: underline;
         }
 
         .about-popup {
@@ -191,7 +192,8 @@
             text-align: left;
         }
 
-        .about-link:hover .about-popup {
+        .about-link:hover .about-popup,
+        .about-link.active .about-popup {
             display: block;
         }
 
@@ -212,7 +214,7 @@
             <div class="logo">GPUsPerStudent.org</div>
             <p class="tagline" style="margin-top: 25px; margin-bottom: 25px;">Our goal is to do the best we can to track
                 the actual amount of GPU compute available to degree program CS students in America.</p>
-            <div class="header-nav">
+            <div class="header-nav" style="display: flex; gap: 40px;">
                 <span class="about-link">About Us
                     <div class="about-popup">
                         <p><strong>Why GPUsPerStudent.org?</strong></p>
@@ -271,6 +273,14 @@
 
                         <p><strong>Final Metric</strong></p>
                         <p>GPUs/Student = H100-Equiv ÷ Weighted Students</p>
+
+                        <p><strong>Disclaimer</strong></p>
+                        <p>We dont claim to be perfect. Not from a strategy perspective nor an execution standpoint. We
+                            accept any and all constructive criticism. If you think we made an error or you believe you
+                            have better data or a better way of doing things we would love to hear about it. You can do
+                            so via the Dispute PR which will bring you to our GitHub. You can submit a PR and we will
+                            review. </p>
+
                     </div>
                 </span>
                 <a href="https://github.com/Fchaubard/GPUsPerStudent.org/pulls" target="_blank">Dispute via PR</a>
@@ -434,7 +444,7 @@ Ensemble methodology:
                     responsive: true,
                     maintainAspectRatio: false,
                     layout: {
-                        padding: { left: 10, right: 50, top: 10, bottom: 10 }
+                        padding: { left: 0, right: 50, top: 10, bottom: 10 }
                     },
                     plugins: {
                         legend: { display: false },
@@ -458,8 +468,14 @@ Ensemble methodology:
                             ticks: { callback: (v) => v.toFixed(1) }
                         },
                         y: {
-                            ticks: { font: { size: 13 } },
-                            grid: { display: false }
+                            ticks: {
+                                font: { size: 12 },
+                                padding: 0
+                            },
+                            grid: { display: false },
+                            afterFit: (scale) => {
+                                scale.width = 200;  // Fixed width for y-axis labels
+                            }
                         }
                     }
                 }
@@ -595,6 +611,26 @@ Ensemble methodology:
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closePopup();
+        });
+
+        // Toggle popups on click for mobile
+        document.querySelectorAll('.about-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.stopPropagation();
+                // Close other popups
+                document.querySelectorAll('.about-link').forEach(other => {
+                    if (other !== link) other.classList.remove('active');
+                });
+                // Toggle this one
+                link.classList.toggle('active');
+            });
+        });
+
+        // Close popups when clicking outside
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.about-link').forEach(link => {
+                link.classList.remove('active');
+            });
         });
 
         loadData();
