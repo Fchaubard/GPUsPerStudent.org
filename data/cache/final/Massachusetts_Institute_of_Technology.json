@@ -50,7 +50,7 @@
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 259,
-    "v100_count": 24,
+    "v100_count": 716,
     "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [
@@ -68,5 +68,5 @@
     "description": "Not searched in this query."
   },
   "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
-  "validation_notes": "GPU CHANGES: Removed 448 V100 GPUs from MGHPCC TX-E1 because MGHPCC is a shared resource. Removed 256 V100 GPUs from Satori because Satori is an IBM Watson AI Lab resource. Only the PSFC GPU cluster V100s are counted."
+  "validation_notes": "V100 GPUs from SuperCloud (TX-E1) and Satori kept because they are available to MIT students without grant applications. SuperCloud (448 V100s) is MIT Lincoln Lab but students can use it. Satori (256 V100s) is IBM-DOE collaboration housed at MIT with student access."
 }

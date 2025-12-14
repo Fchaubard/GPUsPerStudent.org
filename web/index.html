@@ -208,9 +208,11 @@
 <body>
 
     <div class="container">
-        <header>
+        <header style="display: flex; flex-direction: column;">
             <div class="logo">GPUsPerStudent.org</div>
-            <nav>
+            <p class="tagline" style="margin-top: 25px; margin-bottom: 25px;">Our goal is to do the best we can to track
+                the actual amount of GPU compute available to degree program CS students in America.</p>
+            <div class="header-nav">
                 <span class="about-link">About Us
                     <div class="about-popup">
                         <p><strong>Why GPUsPerStudent.org?</strong></p>
@@ -229,13 +231,55 @@
                             tracking.</p>
                     </div>
                 </span>
-                <a href="https://github.com/Fchaubard/GPUsPerStudent.org/pulls" target="_blank">Dispute via GitHub</a>
+                <span class="about-link">Calculation
+                    <div class="about-popup" style="width: 500px;">
+                        <p><strong>Data Collection (3 LLM Ensemble)</strong></p>
+                        <p>Each university is researched by 3 AI models in parallel:</p>
+                        <ul style="margin: 8px 0; padding-left: 20px;">
+                            <li><strong>OpenAI GPT-4o</strong> with web search</li>
+                            <li><strong>Anthropic Claude 3.5</strong> with web search</li>
+                            <li><strong>Google Gemini 2.0</strong> with grounding</li>
+                        </ul>
+                        <p>Results are aggregated using max values to ensure completeness.</p>
+
+                        <p><strong>Validation Pass</strong></p>
+                        <p>A separate Gemini pass filters out shared/national resources:</p>
+                        <ul style="margin: 8px 0; padding-left: 20px;">
+                            <li>OSC (Ohio Supercomputer Center)</li>
+                            <li>NCAR-Wyoming Supercomputing Center</li>
+                            <li>TACC (Texas Advanced Computing Center)</li>
+                            <li>DOE National Labs (NERSC, ORNL, etc.)</li>
+                        </ul>
+
+                        <p><strong>What We Exclude</strong></p>
+                        <ul style="margin: 8px 0; padding-left: 20px;">
+                            <li>Compute behind grant application walls</li>
+                            <li>Resources the university doesn't own/operate</li>
+                            <li>Exception: Free cloud credits available without application</li>
+                        </ul>
+
+                        <p><strong>H100-Equiv. Calculation</strong></p>
+                        <p>Total GPU Value = Σ (GPU count × market price)<br>
+                            H100-Equiv = Total Value ÷ $35,000</p>
+
+                        <p><strong>Student Weighting</strong></p>
+                        <ul style="margin: 8px 0; padding-left: 20px;">
+                            <li>Undergrad CS: 0.45× (basic coursework)</li>
+                            <li>Master's CS: 0.70× (research projects)</li>
+                            <li>PhD CS: 0.90× (heavy research computing)</li>
+                        </ul>
+
+                        <p><strong>Final Metric</strong></p>
+                        <p>GPUs/Student = H100-Equiv ÷ Weighted Students</p>
+                    </div>
+                </span>
+                <a href="https://github.com/Fchaubard/GPUsPerStudent.org/pulls" target="_blank">Dispute via PR</a>
                 <a href="data/master_data.csv" target="_blank">Raw Data</a>
-            </nav>
+            </div>
         </header>
 
         <section>
-            <h2>All Universities (H100-Equivalent GPUs Per Student)</h2>
+            <h2>H100-Equiv. GPUs Per CS Student</h2>
             <div class="chart-wrapper">
                 <div class="chart-container">
                     <canvas id="chart"></canvas>
@@ -245,12 +289,13 @@
 
         <section>
             <h2>Leaderboard</h2>
-            <table class="leaderboard-table" id="leaderboard">
-                <thead>
-                    <tr>
-                        <th class="sortable" data-key="Rank">Rank</th>
-                        <th class="sortable" data-key="university">University</th>
-                        <th class="sortable tooltip-trigger" data-key="weighted_students" data-tooltip="Weighted Student Count = (Undergrad CS × 0.45) + (Master's CS × 0.7) + (PhD CS × 0.9)
+            <div class="table-wrapper">
+                <table class="leaderboard-table" id="leaderboard">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-key="Rank">Rank</th>
+                            <th class="sortable" data-key="university">University</th>
+                            <th class="sortable tooltip-trigger" data-key="weighted_students" data-tooltip="Weighted Student Count = (Undergrad CS × 0.45) + (Master's CS × 0.7) + (PhD CS × 0.9)
 
 Weights reflect GPU usage intensity:
 • Undergrads: 45% - Basic coursework
@@ -258,7 +303,7 @@ Weights reflect GPU usage intensity:
 • PhD: 90% - Heavy research computing
 
 Data from: Department websites, DataUSA, enrollment reports">Weighted CS Students<span class="asterisk">*</span></th>
-                        <th class="sortable tooltip-trigger" data-key="h100_equivalent" data-tooltip="H100-Equivalent = Total GPU Value ÷ $35,000
+                            <th class="sortable tooltip-trigger" data-key="h100_equivalent" data-tooltip="H100-Equivalent = Total GPU Value ÷ $35,000
 
 Normalizes all GPU types to H100 units:
 • H100 SXM: 1.0x ($35,000)
@@ -267,7 +312,7 @@ Normalizes all GPU types to H100 units:
 • V100: 0.10x ($3,500)
 
 Data from: HPC cluster pages, research computing docs">H100-Equiv. Available<span class="asterisk">*</span></th>
-                        <th class="sortable sorted-desc tooltip-trigger" data-key="gpus_per_student" data-tooltip="GPUs Per Student = H100-Equivalent ÷ Weighted Students
+                            <th class="sortable sorted-desc tooltip-trigger" data-key="gpus_per_student" data-tooltip="GPUs Per Student = H100-Equivalent ÷ Weighted Students
 
 Higher = more compute resources per student
 
@@ -275,15 +320,16 @@ Ensemble methodology:
 • 3 AI models (OpenAI, Claude, Gemini) search independently
 • Results aggregated, highest values used
 • All source URLs validated for accessibility">GPUs/Student<span class="asterisk">*</span></th>
-                    </tr>
-                </thead>
-                <tbody id="leaderboard-body">
-                </tbody>
-            </table>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <footer>
-            <p>Data updated monthly by AI Agents. Last update: <span id="last-update">December 2024</span></p>
+            <p>Data updated monthly by AI Agents. Last update: <span id="last-update">December 14 2024</span></p>
         </footer>
     </div>
 
