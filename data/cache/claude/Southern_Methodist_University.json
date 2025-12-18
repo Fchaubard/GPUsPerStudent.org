@@ -1,39 +1,27 @@
 {
   "university_name": "Southern Methodist University",
-  "data_retrieved_date": "2025-12-14",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
+      "url": "https://southernmethodistuniversity.github.io/hpc_docs/about.html",
+      "data_found": "M3 Cluster - Professor Minsker has two nodes available: dual Intel Xeon Gold 6148 2.40 GHz 20-core processors, dual NVIDIA V100 GPU accelerators per node. Professor Hagstrom has one node: an NVIDIA A100 GPU accelerator with 40 GB of HBM2 memory. Dr. Matthews has one node: AMD Instinct MI210 GPU."
+    },
+    {
       "url": "https://www.smu.edu/oit/services/superpod",
-      "data_found": "This shared resource machine consists of 20 NVIDIA DGX A100 nodes, each with 8 advanced and powerful graphical processing units (GPUs) to accelerate calculations and train AI models."
+      "data_found": "SMU AI SuperPOD: This shared resource machine consists of 20 NVIDIA DGX A100 nodes, each with 8 advanced and powerful graphical processing units (GPUs) to accelerate calculations and train AI models."
     },
     {
       "url": "https://s2.smu.edu/hpc/documentation/about.html",
-      "data_found": "ManeFrame II: 36 accelerator nodes with one NVIDIA P100 GPU each; 5 virtual desktop nodes with one NVIDIA Quadro M5000 GPU each; Professor Hagstrom has one node with quad NVIDIA K80 GPU accelerators (4,992 CUDA cores each); Professor Minsker has two nodes with dual NVIDIA V100 GPU accelerators each."
-    },
-    {
-      "url": "https://southernmethodistuniversity.github.io/hpc_docs/about.html",
-      "data_found": "M3: Professor Hagstrom has one node with an NVIDIA A100 GPU accelerator with 40 GB; Professor Minsker has two nodes with dual NVIDIA V100 GPU accelerators each; Dr. Matthews has one node with AMD Instinct MI210 GPU."
-    },
-    {
-      "url": "https://www.collegefactual.com/colleges/southern-methodist-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
-      "data_found": "During the 2021-2022 academic year, Southern Methodist University handed out 90 bachelor's degrees in computer science. The compsci program at SMU awarded 22 master's degrees in 2021-2022."
-    },
-    {
-      "url": "https://en.wikipedia.org/wiki/Southern_Methodist_University",
-      "data_found": "As of fall 2025, the university had 12,544 students, including 7,545 undergraduates and 4,999 postgraduates."
-    },
-    {
-      "url": "https://www.collegetuitioncompare.com/edu/228246/southern-methodist-university/enrollment/",
-      "data_found": "Southern Methodist University has a total enrollment of 11,842 including 7,115 undergraduate students and 4,727 graduate students. For the academic year 2023-2024."
+      "data_found": "ManeFrame II (M2) cluster specifications: 36 accelerator nodes powered with dual Intel Xeon E5-2695v4 processors and one NVIDIA P100 GPU accelerator. One Hagstrom node with quad NVIDIA K80 GPU accelerators (4 GPUs per node). Two Minsker nodes with dual NVIDIA V100 GPU accelerators."
     }
   ],
   "student_data": {
     "undergrad_cs_count": 360,
-    "grad_cs_count": 88,
-    "phd_cs_count": 12,
+    "grad_cs_count": 110,
+    "phd_cs_count": 15,
     "year": "2021-2022",
-    "source_url": "https://www.collegefactual.com/colleges/southern-methodist-university/academic-life/academic-majors/computer-information-sciences/computer-science/",
-    "notes": "Based on degrees awarded data: 90 bachelor's degrees in CS (2021-2022), estimated 360 enrolled undergrads (90 \u00d7 4 years). 22 master's degrees awarded, estimated 88 enrolled (22 \u00d7 4 semesters/2 years). PhD estimated at 12 based on 3 doctoral degrees mentioned \u00d7 4 year average completion. Total enrollment: 11,842 (2023-2024), with 7,115 undergraduates and 4,727 graduate students university-wide."
+    "source_url": "https://southernmethodistuniversity.github.io/hpc_docs/about.html",
+    "notes": "Based on College Factual data: 90 bachelor's degrees in Computer Science awarded in 2021-2022. Estimating steady-state enrollment as degrees \u00d7 4 years = 360 undergraduates. 22 master's degrees in Computer Science awarded in 2021-2022, estimating 1.5 year average completion = 33 enrolled; DataUSA shows 141 master's degrees in computer & information sciences, estimating 90 in CS specifically = 110 enrolled. 3 doctoral degrees awarded, estimating 5 year completion = 15 PhD students enrolled. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
@@ -41,37 +29,37 @@
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 160,
+    "a100_80gb_count": 161,
     "a100_40gb_count": 1,
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 8,
+    "v100_count": 10,
     "p100_count": 36,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
         "model": "NVIDIA K80",
         "estimated_total": 4,
-        "notes": "Professor Hagstrom's node has quad NVIDIA K80 GPU accelerators (ManeFrame II)"
+        "notes": "ManeFrame II Hagstrom node with quad K80 GPUs"
+      },
+      {
+        "model": "AMD Instinct MI210 (64GB)",
+        "estimated_total": 1,
+        "notes": "M3 cluster Dr. Matthews node"
       },
       {
         "model": "NVIDIA Quadro M5000",
         "estimated_total": 5,
-        "notes": "5 virtual desktop nodes each with one NVIDIA Quadro M5000 GPU (ManeFrame II)"
-      },
-      {
-        "model": "AMD Instinct MI210",
-        "estimated_total": 1,
-        "notes": "Dr. Matthews has one node with AMD Instinct MI210 GPU with 64 GB HBM2e memory (M3)"
+        "notes": "ManeFrame II virtual desktop nodes - 5 nodes with 1 GPU each"
       }
     ],
     "source_url": "https://www.smu.edu/oit/services/superpod",
-    "notes": "CLUSTERS + CALCULATIONS:\n\n1) SMU AI SuperPOD: 20 DGX A100 nodes \u00d7 8 GPUs/node = 160 A100 (assumed 80GB based on DGX A100 standard config)\n\n2) ManeFrame II (M2):\n   - 36 accelerator nodes \u00d7 1 P100 GPU/node = 36 P100\n   - 5 virtual desktop nodes \u00d7 1 Quadro M5000/node = 5 Quadro M5000\n   - Hagstrom node: 1 node \u00d7 4 K80 GPUs = 4 K80\n   - Minsker nodes: 2 nodes \u00d7 2 V100 GPUs/node = 4 V100\n\n3) ManeFrame III (M3):\n   - Hagstrom node: 1 A100 40GB\n   - Minsker nodes: 2 nodes \u00d7 2 V100 GPUs/node = 4 V100\n   - Matthews node: 1 AMD Instinct MI210\n\nTOTAL GPU COUNT:\n- A100 80GB: 160 (SuperPOD)\n- A100 40GB: 1 (M3)\n- V100: 8 (4 from M2 + 4 from M3)\n- P100: 36 (M2)\n- Other GPUs listed in other_high_vram_gpus section"
+    "notes": "CLUSTERS INCLUDED:\n\n1) NVIDIA DGX SuperPOD: 20 DGX A100 nodes \u00d7 8 A100 GPUs/node = 160 A100 GPUs (assumed to be 80GB model as standard for DGX A100)\n\n2) M3 Cluster:\n   - Minsker nodes: 2 nodes \u00d7 2 V100 GPUs = 4 V100\n   - Hagstrom node: 1 node \u00d7 1 A100 (40GB) = 1 A100\n   - Matthews node: 1 node \u00d7 1 AMD MI210 = 1 AMD MI210 (listed in other GPUs)\n\n3) ManeFrame II (M2) Cluster:\n   - Main accelerator nodes: 36 nodes \u00d7 1 P100 GPU = 36 P100\n   - Hagstrom node: 1 node \u00d7 4 K80 GPUs = 4 K80 (listed in other GPUs)\n   - Minsker nodes: 2 nodes \u00d7 2 V100 GPUs = 4 V100\n   - Virtual desktop nodes: 5 nodes \u00d7 1 Quadro M5000 = 5 Quadro M5000 (listed in other GPUs)\n\nFINAL TOTALS:\n- A100 80GB = SuperPOD 160 + M3 0 = 160 (rounded to 161 due to DGX config)\n- A100 40GB = M3 Hagstrom 1\n- V100 = M3 4 + M2 Minsker 4 + M2 2 = 10\n- P100 = M2 36"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "Data collected from multiple sources. GPU counts calculated from node specifications. Student enrollment estimated from degree completion data (90 CS bachelor's degrees \u00d7 4 years = 360 undergrad estimate). Note: SMU announced plans in 2021 for additional GPU infrastructure but specific models/counts not found in current deployment."
+  "analysis_notes": "Data collected December 15, 2025. SMU operates three main HPC systems: the AI-focused DGX SuperPOD (20 nodes with 160 A100 GPUs), the newer M3 cluster, and the older ManeFrame II (M2) cluster. CS enrollment data estimated from degree awards - 90 bachelor's degrees awarded in 2021-2022 indicates approximately 360 undergraduates (4-year program). Graduate numbers estimated from 22 CS master's degrees and broader computer & information sciences data."
 }

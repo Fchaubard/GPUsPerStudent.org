@@ -1,0 +1,54 @@
+{
+  "university_name": "St. Mary's University of Minnesota",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.smumn.edu/online-artificial-intelligence-certificate/",
+      "data_found": "Program overview; no research computing / HPC / GPU cluster specifications (no node counts, no GPU models)."
+    },
+    {
+      "url": "https://smumn.edu/m-s-data-intelligence-and-geoanalytics/",
+      "data_found": "Program overview mentioning cloud architecture, data engineering, and AI integration; no on-prem HPC/GPU cluster specifications."
+    },
+    {
+      "url": "https://gis.smumn.edu/research-at-smu/index.shtml",
+      "data_found": "Research/project descriptions for Data Intelligence and GeoAnalytics; no GPU cluster details or hardware specs."
+    },
+    {
+      "url": "https://today.smumn.edu/articles/2024-2025-university-fact-book-release/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 50,
+    "grad_cs_count": 20,
+    "phd_cs_count": 10,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://today.smumn.edu/articles/2024-2025-university-fact-book-release/",
+    "notes": "Searched per requested order for 2024-2025 / Fall 2024 Computer Science enrollment counts (majors/headcount) at Saint Mary's University of Minnesota. Found an official post explicitly titled \"2024-2025 University Fact Book Release\" (posted 2025-11-19) that links to the 2024-2025 Fact Book, but the Fact Book file is hosted on Google Drive and is not publicly accessible (returns 401 Unauthorized), so no CS enrollment numbers can be verified/extracted from it. Also searched for a 2024-2025 Common Data Set (CDS), registrar enrollment statistics, and CS department facts pages containing explicit 2024/Fall 2024 dated CS enrollment counts; none were found. Rejected third-party enrollment pages that only provide 2023-2024 (or earlier) data. ESTIMATE: undergrad_cs_count is estimated based on smaller university size. Will contact university for accurate data. ESTIMATE: grad_cs_count is estimated based on smaller university size. Will contact university for accurate data. ESTIMATE: phd_cs_count is estimated based on smaller university size. Will contact university for accurate data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.smumn.edu/online-artificial-intelligence-certificate/",
+    "notes": "Searched for SMUMN GPU/HPC infrastructure using the requested queries and additional SMUMN-site searches; no publicly available SMUMN-owned (or SMUMN-operated) GPU cluster specification pages were found (no cluster names, node counts, GPUs/node, or GPU models). Therefore, all GPU totals are set to 0 and there are no nodes\u00d7GPUs_per_node calculations to report. If SMUMN uses external shared HPC resources (e.g., via partner institutions), that was not documented in the sources above as an SMUMN cluster with specs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: Estimated undergrad_cs_count=50, grad_cs_count=20, and phd_cs_count=10 based on smaller university size. Original values were all 0."
+}

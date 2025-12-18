@@ -9,6 +9,8 @@ Also checks individual model caches for max student counts if final has zeros.
 import os
 import json
 import csv
+import csv
+import shutil
 from glob import glob
 
 # Load GPU prices from file
@@ -139,6 +141,12 @@ def main():
         # Get university URL
         url = university_urls.get(uni_name, '#')
         
+        # Copy JSON to web/data/ for popup charts (REQUIRED for local file:// usage due to CORS)
+        # Filename format must match getJsonFilename() in index.html: spaces->underscores, - -> _-_
+        web_json_name = uni_name.replace(',', '').replace("'", '').replace('"', '').replace(' ', '_').replace('-', '_-_') + '.json'
+        web_json_path = os.path.join('web', 'data', web_json_name)
+        shutil.copy2(json_file, web_json_path)
+
         # Build result row
         row = {
             'university': uni_name,
@@ -148,6 +156,9 @@ def main():
             'phd': phd,
             'weighted_students': round(weighted_students, 1),
         }
+        # Add notes (sanitized to remove newlines for CSV compatibility)
+        notes = data.get('gpu_resources', {}).get('notes', '') + " " + data.get('student_data', {}).get('notes', '')
+        row['Notes'] = notes.replace('\n', ' ').replace('\r', ' ')
         
         # Add all GPU columns
         for gpu_name in gpu_prices.keys():
@@ -167,6 +178,13 @@ def main():
     # Save to CSV
     output_file = 'data/master_data.csv'
     with open(output_file, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=results[0].keys())
+        writer.writeheader()
+        writer.writerows(results)
+        
+    # Also save to web/data/master_data.csv for local file:// usage
+    web_output_file = 'web/data/master_data.csv'
+    with open(web_output_file, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=results[0].keys())
         writer.writeheader()
         writer.writerows(results)

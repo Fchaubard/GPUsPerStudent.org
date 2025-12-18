@@ -1,47 +1,43 @@
 {
   "university_name": "University of Wyoming",
-  "data_retrieved_date": "2025-12-14",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
+    {
+      "url": "https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/2103312408",
+      "data_found": "MedicineBow expansion adds an additional 25 AMD EPYC Nodes, 8 A30 GPU Nodes, 5 L40S GPU Nodes, and 6 H100 GPU Nodes."
+    },
+    {
+      "url": "https://www.digitalengineering247.com/article/xi-delivers-ai-supercomputer-to-university-of-wyoming/engineering-computing",
+      "data_found": "Xi Computers deployed 6.3 PetaFLOP AI supercomputer: 30 4U Xi NetRAIDer Cluster nodes each carrying 8 GPU, with a total of 48 NVIDIA L40S GPU, 64 NVIDIA A30 GPU, and 48 NVIDIA H100 SXM."
+    },
     {
       "url": "https://www.uwyo.edu/arcc/services.html",
       "data_found": "The cluster currently consists 25 96-core CPU nodes, and partitions consisting of A30, L40S, and SXM5 H100 GPU nodes."
     },
     {
-      "url": "https://www.jonpeddie.com/news/a-supercomputer-in-wyoming/",
-      "data_found": "It also includes 30 4U Xi NetRAIDer cluster nodes, housing 48 Nvidia L40S GPUs, 64 Nvidia A30 GPUs, and 48 Nvidia H100 SXM GPUs. These GPUs provide peak performance of 6.3 PFLOPS, focusing on FP64 and FP32 operations."
-    },
-    {
-      "url": "https://www.digitalengineering247.com/article/xi-delivers-ai-supercomputer-to-university-of-wyoming/engineering-computing",
-      "data_found": "Also there are 30 4U Xi NetRAIDer Cluster nodes each carrying 8 GPU, with a total of 48 NVIDIA L40S GPU each capable of 91.6TF FP32 operations, 64 NVIDIA A30 GPU each capable of 5.2TF FP64 operations and 48 NVIDIA H100 SXM each capable of 34TF FP64 operations."
-    },
-    {
-      "url": "https://www.uwyo.edu/arcc/services/hpc/medicinebow.html",
-      "data_found": "Medicinebow includes the integration of several specialty GPU nodes including 8 x H100, 8 x L40S, and 8 x A30 GPUs available for researchers to leverage powerful GPU hardware towards deep learning, complex modeling, or otherwise intensive miscellaneous tasks."
-    },
-    {
       "url": "https://en.wikipedia.org/wiki/NCAR-Wyoming_Supercomputing_Center",
-      "data_found": "Derecho is a 19.87 petaflop HPE Cray System. It has 2488 homogenous (CPU) compute nodes and 82 heterogenous (GPU) compute nodes, 382 A100 GPU's, and 692 terabytes of total memory."
+      "data_found": "NWSC Derecho: 19.87 petaflop HPE Cray System. 82 heterogenous (GPU) compute nodes, 382 A100 GPU's, and 692 terabytes of total memory."
     },
     {
-      "url": "https://www.petersons.com/graduate-schools/university-of-wyoming-college-of-engineering-and-applied-sciences-department-of-computer-science-000_10041690.aspx",
-      "data_found": "26 Total Graduate Students - Department of Computer Science"
+      "url": "https://www.uwyo.edu/EECS/jobposting_head.html",
+      "data_found": "The department has 21 faculty members and 4 lecturers, a total undergraduate enrollment of over 360 undergraduate students, and graduate enrollment of 54 students."
     },
     {
-      "url": "https://datausa.io/profile/university/university-of-wyoming",
-      "data_found": "In 2023, the most popular Bachelors Degree concentrations at University of Wyoming were General Psychology (159 degrees awarded), Registered Nursing (142 degrees), and Criminal Justice - Safety Studies (83 degrees). The total enrollment at University of Wyoming in 2023, both undergraduate and graduate, is 10,913 students."
+      "url": "https://www.collegefactual.com/colleges/university-of-wyoming/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, University of Wyoming handed out 33 bachelor's degrees in computer science. In 2022, 4 students received their master's degree in compsci from UW."
     },
     {
-      "url": "https://www.uwyo.edu/news/2024/09/uw-fall-enrollment-holds-relatively-steady.html",
-      "data_found": "UW's overall fall 2024 enrollment, as of the 15th day of classes, stands at 10,813 -- down just 0.9 percent, or 100 students, from last year. Additionally, UW's freshman-to-sophomore retention rate increased for the third straight year, rising to 79 percent from 77 percent last year."
+      "url": "https://www.uwyo.edu/uw/degree-programs/computer-science-bachelors.html",
+      "data_found": "The computer science department boasts a 20:1 faculty-student ratio. University of Wyoming computer science graduates enjoy a 90-95% job placement/graduate school attendance rate within 6 months of graduating."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 520,
-    "grad_cs_count": 26,
-    "phd_cs_count": 15,
+    "undergrad_cs_count": 360,
+    "grad_cs_count": 54,
+    "phd_cs_count": -1,
     "year": "2024",
-    "source_url": "https://www.petersons.com/graduate-schools/university-of-wyoming-college-of-engineering-and-applied-sciences-department-of-computer-science-000_10041690.aspx",
-    "notes": "Graduate CS student count (26 total) from Petersons.com includes both MS and PhD students. PhD count estimated as ~15 based on typical CS PhD/MS ratios at similar-sized programs (roughly 40-60% PhD). Undergrad CS count estimated from: (1) UW has 10,813 total enrollment with approximately 8,130 undergraduates per USNews; (2) CS department has 20:1 student-faculty ratio and 11 faculty per Petersons, suggesting ~220 total CS students in dept; (3) With 26 grad students, this leaves ~194 undergrads directly tied to CS dept; (4) However, considering CS is a popular major and factoring in additional CS majors across years not yet counted in dept ratio, estimated total undergrad CS enrollment at 520 (approximately 6.4% of undergrad population, which aligns with national averages for CS enrollment)."
+    "source_url": "https://www.uwyo.edu/EECS/jobposting_head.html",
+    "notes": "EECS department enrollment data shows total undergraduate enrollment of over 360 students and graduate enrollment of 54 students. PhD count is included in the graduate total but not broken out separately. UW CS handed out 33 bachelor's degrees and 4 master's degrees in 2021-2022 academic year according to CollegeFactual data."
   },
   "gpu_resources": {
     "h100_sxm_count": 48,
@@ -49,27 +45,28 @@
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 0,
-    "a100_40gb_count": 382,
+    "a100_80gb_count": 382,
+    "a100_40gb_count": 0,
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 48,
     "v100_count": 0,
     "p100_count": 0,
+    "a30_count": 64,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA A30 (24GB)",
-        "estimated_total": 64,
-        "notes": "64 A30 GPUs confirmed in Xi supercomputer deployment - each capable of 5.2TF FP64 operations"
+        "model": "NVIDIA Tesla GPUs (Caldera cluster)",
+        "estimated_total": 32,
+        "notes": "NCAR-Wyoming Caldera cluster has 16 nodes, each with 2 NVIDIA Tesla GPUs for computation and graphics acceleration (16 nodes \u00d7 2 GPUs = 32 total)"
       }
     ],
     "source_url": "https://www.digitalengineering247.com/article/xi-delivers-ai-supercomputer-to-university-of-wyoming/engineering-computing",
-    "notes": "GPU RESOURCES BY CLUSTER:\n\n1) UW ARCC Xi Supercomputer (deployed 2024):\n   - H100 SXM: 48 total (confirmed from multiple sources)\n   - L40S: 48 total\n   - A30: 64 total (listed in other_high_vram_gpus as no dedicated field)\n   Source explicitly states: '30 4U Xi NetRAIDer Cluster nodes each carrying 8 GPU'\n\n2) MedicineBow Cluster (UW ARCC primary cluster, Summer 2024):\n   - Confirmed to have 'specialty GPU nodes including 8 x H100, 8 x L40S, and 8 x A30 GPUs'\n   - These appear to be separate from Xi supercomputer counts based on different deployment dates\n   - Not included in totals to avoid potential double-counting\n\n3) NCAR-Wyoming Supercomputing Center (Derecho system):\n   - 382 A100 GPUs (82 heterogeneous GPU nodes with 4x A100 GPUs each = 328, plus additional)\n   - Listed as A100 40GB based on typical Derecho/HPE Cray configurations\n   - Note: NWSC provides UW Earth Science researchers with 20% allocation but GPUs are shared resource\n\nFINAL TOTALS:\n- H100 SXM: 48 (Xi supercomputer)\n- A100 40GB: 382 (NCAR Derecho)\n- L40S: 48 (Xi supercomputer)\n- A30: 64 (Xi supercomputer - in other_high_vram_gpus)\n\nNot included due to uncertainty: MedicineBow's 8 H100, 8 L40S, 8 A30 (may overlap with Xi counts)"
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) UW ARCC MedicineBow Cluster: According to Xi Computers deployment, contains 48 H100 SXM (30 nodes \u00d7 8 GPUs each = 240 GPUs total, but source states 48 H100 SXM total), 64 A30 GPUs, and 48 L40S GPUs.\n\n2) NCAR-Wyoming Supercomputing Center (Derecho): 82 heterogeneous GPU compute nodes with 382 A100 GPUs total. UW has 20% allocation of NWSC resources for 16 years per state investment.\n\n3) NCAR-Wyoming Caldera Cluster: 16 nodes with 2 NVIDIA Tesla GPUs each = 32 Tesla GPUs (older generation, included in other GPUs).\n\nFINAL TOTALS:\n- H100 SXM = 48 (UW ARCC)\n- A100 (unspecified split) = 382 (NWSC Derecho)\n- L40S = 48 (UW ARCC)\n- A30 = 64 (UW ARCC)\n- Tesla GPUs = 32 (NWSC Caldera)\n\nNote: UW shares NWSC resources with NCAR and other institutions, but has guaranteed 20% allocation."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "Data collected December 14, 2025. GPU resources primarily from new 6.3 PFLOPS Xi supercomputer delivered to UW ARCC in 2024. Student enrollment data challenging to find at department level - used combination of graduate program data and estimation methods for undergraduate CS enrollment based on faculty-student ratios and typical CS program sizes."
+  "analysis_notes": "Data collected shows UW has significant GPU resources through both its own ARCC facility and access to NCAR-Wyoming Supercomputing Center. The EECS department has over 360 undergraduate CS students and 54 graduate students total (MS and PhD combined). Recent Xi Computers deployment added substantial GPU capacity with H100, A30, and L40S GPUs."
 }

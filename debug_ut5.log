@@ -1,0 +1,55 @@
+Starting Monthly Analysis (Provider: ensemble)...
+DEBUG: Checking CSV 'Princeton University' (len=20) vs Target 'University of Texas - Austin' (len=28) -> Match? False
+DEBUG: Checking CSV 'California Institute of Technology' (len=34) vs Target 'University of Texas - Austin' (len=28) -> Match? False
+DEBUG: Checking CSV 'Dartmouth College' (len=17) vs Target 'University of Texas - Austin' (len=28) -> Match? False
+DEBUG: Checking CSV 'St. Louis University' (len=20) vs Target 'University of Texas - Austin' (len=28) -> Match? False
+DEBUG: Checking CSV 'University of Kansas' (len=20) vs Target 'University of Texas - Austin' (len=28) -> Match? False
+DEBUG: Checking CSV 'Texas Tech University' (len=21) vs Target 'University of Texas - Austin' (len=28) -> Match? False
+DEBUG: Checking CSV 'Texas Christian University' (len=26) vs Target 'University of Texas - Austin' (len=28) -> Match? False
+DEBUG: Checking CSV 'University of Texas - Austin' (len=28) vs Target 'University of Texas - Austin' (len=28) -> Match? True
+[165/166] Processing University of Texas - Austin...
+Processing University of Texas - Austin...
+
+  [Ensemble] Running 3 models in parallel for University of Texas - Austin...
+  [OpenAI gpt-5.2] Query 1/2: Student data for University of Texas - Austin...
+  [Gemini 3 Pro] Querying with web search and thinking for University of Texas - Austin...
+  [Claude Opus 4.5] Querying with web search for University of Texas - Austin...
+Error querying Claude for University of Texas - Austin: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.5-20250514'}, 'request_id': 'req_011CWDHv84S7reNNPXhPHzmN'}
+  [Ensemble] Claude returned 0 students, retrying once...
+  [Claude Opus 4.5] Querying with web search for University of Texas - Austin...
+Error querying Claude for University of Texas - Austin: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-opus-4.5-20250514'}, 'request_id': 'req_011CWDHv8jN62gGQu3rnfuAo'}
+  [Ensemble] ✗ claude failed: No result
+
+Validating sources...
+  [OK] https://tacc.utexas.edu/systems/vista/
+  [OK] https://docs.tacc.utexas.edu/hpc/vista/
+  [OK] https://tacc.utexas.edu/systems/lonestar6/
+  [OK] https://tacc.utexas.edu/systems/frontera/
+  [OK] https://reports.utexas.edu/statistical-handbook
+  [OK] https://cdso.utexas.edu/mscs
+  [Ensemble] ✓ gemini completed
+  [OpenAI gpt-5.2] Query 2/2: GPU data for University of Texas - Austin...
+
+Validating sources...
+  [OK] https://docs.tacc.utexas.edu/hpc/vista/
+  [OK] https://docs.tacc.utexas.edu/hpc/lonestar6/
+  [OK] https://tacc.utexas.edu/systems/longhorn/
+  [OK] https://tacc.utexas.edu/systems/maverick2/
+  [OK] https://www.cs.utexas.edu/about
+  [Ensemble] ✓ openai completed
+  [Ensemble] Got 2/3 results. Aggregating with Gemini 3 Pro...
+
+Validating sources...
+  [OK] https://tacc.utexas.edu/systems/vista/
+  [OK] https://docs.tacc.utexas.edu/hpc/vista/
+  [OK] https://tacc.utexas.edu/systems/lonestar6/
+  [OK] https://docs.tacc.utexas.edu/hpc/lonestar6/
+  [OK] https://tacc.utexas.edu/systems/frontera/
+  [OK] https://tacc.utexas.edu/systems/longhorn/
+  [OK] https://tacc.utexas.edu/systems/maverick2/
+  [OK] https://reports.utexas.edu/statistical-handbook
+  [OK] https://cdso.utexas.edu/mscs
+  [OK] https://www.cs.utexas.edu/about
+  [Ensemble] ✓ Aggregation complete!
+  [Rate Limit] Waiting 5s before next request...
+Successfully saved 1 records to web/data/master_data.csv

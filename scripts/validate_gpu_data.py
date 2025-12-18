@@ -20,8 +20,8 @@ if not GEMINI_API_KEY:
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Directories
-ENSEMBLE_DIR = 'data/cache/ensemble'
-FINAL_DIR = 'data/cache/final'
+ENSEMBLE_DIR = 'data/cache/final'  # Read from final (where ensemble output went)
+FINAL_DIR = 'data/cache/final'     # Write back to final
 PROMPT_FILE = 'prompt_validation.md'
 
 def load_validation_prompt():
@@ -123,6 +123,8 @@ Please validate this data and return the corrected JSON. Remember:
         return data
 
 def main():
+    import sys
+    
     print(f"GPU Data Validation Pipeline")
     print(f"=" * 60)
     print(f"Started at: {datetime.now()}")
@@ -132,8 +134,20 @@ def main():
     prompt_template = load_validation_prompt()
     print(f"Loaded validation prompt from {PROMPT_FILE}")
     
-    # Get all ensemble files
-    ensemble_files = sorted(glob(f'{ENSEMBLE_DIR}/*.json'))
+    # Get files to validate
+    if len(sys.argv) > 1:
+        # User provided specific files/universities
+        targets = sys.argv[1:]
+        all_files = glob(f'{ENSEMBLE_DIR}/*.json')
+        ensemble_files = []
+        for t in targets:
+            # Match partial name or full filename
+            matches = [f for f in all_files if t in f]
+            ensemble_files.extend(matches)
+        ensemble_files = sorted(list(set(ensemble_files))) # Dedupe
+    else:
+        ensemble_files = sorted(glob(f'{ENSEMBLE_DIR}/*.json'))
+    
     print(f"Found {len(ensemble_files)} files to validate")
     print()
     

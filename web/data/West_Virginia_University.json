@@ -1,0 +1,84 @@
+{
+  "university_name": "West Virginia University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://docs.hpc.wvu.edu/text/84.DollySods.html",
+      "data_found": "Dolly Sods GPU distribution: 30 compute nodes with 4x A30; 4 compute nodes with 4x A40; 2 compute nodes with 8x A100 40GB; login node has 3x A40 (total A40=19; total A100=16; total GPUs=155)."
+    },
+    {
+      "url": "https://docs.hpc.wvu.edu/text/83.ThornyFlat.html",
+      "data_found": "Thorny Flat GPU distribution: 7 compute nodes with 3x Quadro P6000 24GB; 3 compute nodes with 8x Quadro RTX 6000 24GB; 1 compute node with 2x A100 40GB (total GPUs=47; A100 40GB count=2)."
+    },
+    {
+      "url": "https://docs.hpc.wvu.edu/",
+      "data_found": "WVU-RC portfolio table lists clusters and accelerator totals, including WVCTSI Secure Cluster with 4x Tesla V100S, and (decommissioned) Spruce Knob with Tesla K20m/K20Xm."
+    },
+    {
+      "url": "https://research.wvu.edu/tools/research-computing/high-performance-computing",
+      "data_found": "Research Office HPC page reiterates Thorny Flat GPU counts and Dolly Sods node breakdown; states WVCTSI cluster has 8 nodes and 4 Nvidia Tesla V100 GPUs; describes Dolly Sods A100 nodes as 'eight SXM A100 GPUs' per node (form-factor wording differs from docs.hpc.wvu.edu, but total A100 count remains 16)."
+    },
+    {
+      "url": "https://docs.hpc.wvu.edu/text/82.Spruce.html",
+      "data_found": "Spruce Knob (decommissioned 2023) page states there were 18 GPUs total but does not specify GPU models or per-node distribution on that page."
+    },
+    {
+      "url": "https://www.statler.wvu.edu/academics/accreditation-and-assessment",
+      "data_found": "Student enrollment: 435 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 435,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.statler.wvu.edu/academics/accreditation-and-assessment",
+    "notes": "Found official program enrollment on the WVU Statler College 'Accreditation and Assessment' page in the 'Enrollment and Graduation' table under 'Accredited Bachelors of Science Programs'. The row 'Computer Science' shows 'Program Enrollment Fall 2024' = 435. I did not find any WVU source that explicitly states 2024/Fall 2024/AY 2024-25 MS (masters-only) and PhD (doctoral-only) enrollment counts specifically for Computer Science; sources that mentioned graduate counts without an explicit 2024/Fall 2024 date were rejected per your requirements, so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 18,
+    "a40_count": 19,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 4,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 24GB",
+        "count": 120,
+        "clusters": [
+          "Dolly Sods"
+        ]
+      },
+      {
+        "model": "NVIDIA Quadro P6000 24GB",
+        "count": 21,
+        "clusters": [
+          "Thorny Flat"
+        ]
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000 24GB",
+        "count": 24,
+        "clusters": [
+          "Thorny Flat"
+        ]
+      }
+    ],
+    "source_url": "https://docs.hpc.wvu.edu/",
+    "notes": "Clusters found and node\u00d7GPU calculations:\n- Dolly Sods: A100 40GB = 2 nodes \u00d7 8 GPUs/node = 16; A40 = (4 nodes \u00d7 4 GPUs/node) + (login node \u00d7 3 GPUs) = 16 + 3 = 19; A30 = 30 nodes \u00d7 4 GPUs/node = 120. (docs.hpc.wvu.edu Dolly Sods page)\n- Thorny Flat: A100 40GB = 1 node \u00d7 2 GPUs/node = 2; Quadro P6000 = 7 nodes \u00d7 3 GPUs/node = 21; Quadro RTX 6000 = 3 nodes \u00d7 8 GPUs/node = 24. (docs.hpc.wvu.edu Thorny Flat page)\n- WVCTSI Secure Cluster: total V100S GPUs reported = 4 across 8 nodes; per-node distribution not provided in sources, so treated as 1 GPU node \u00d7 4 GPUs/node = 4 (assumption noted).\n- Spruce Knob (decommissioned): docs.hpc.wvu.edu Spruce page reports 18 GPUs total but no model; the WVU-RC portfolio table lists Tesla K20m/K20Xm (14 total/5 active at the time of that table). These are not counted in requested output fields.\nTotals in requested categories:\n- A100 40GB: 16 (Dolly Sods) + 2 (Thorny Flat) = 18\n- V100: 4 (WVCTSI)\nNo WVU sources found indicating any H100/H200/B100/B200/GH200/L40S/A6000/P100 GPUs in WVU Research Computing clusters as of the cited pages."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be locally owned. Student data remains as provided in the original JSON."
+}

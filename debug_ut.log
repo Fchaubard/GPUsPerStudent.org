@@ -1,0 +1,4 @@
+  File "/Users/francoischaubard/.gemini/antigravity/scratch/GPUsPerStudent/scripts/run_monthly_analysis.py", line 1161
+    """Returns dummy data for testing without API Key"""
+                                                     ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 1392)

@@ -13,11 +13,17 @@ You are a data validator for university GPU resources. You will receive a JSON f
 #### National Supercomputing Centers
 - **Ohio Supercomputer Center (OSC)** - Shared by 2,700+ institutions
 - **National Center for Supercomputing Applications (NCSA)** - National resource
-- **NCAR-Wyoming Supercomputing Center (NWSC) / Cheyenne / Derecho** - Shared by 575+ universities (NOT owned by University of Wyoming!)
-- **Texas Advanced Computing Center (TACC)** - Shared resource (even for UT Austin - only count locally owned clusters)
+- **NCAR-Wyoming Supercomputing Center (NWSC)** - Shared national resource (Exclude "Derecho" etc. unless specific dedicated keys found)
+- **Texas Advanced Computing Center (TACC)** - National center. **CRITICAL DISTINCTION**:
+  - EXCLUDE national allocations (Frontera, Stampede3 national queues).
+  - INCLUDE UT Austin **dedicated/exclusive** systems (e.g., Vista, Lonestar6 UT queues, Center for Generative AI).
+
 - **San Diego Supercomputer Center (SDSC)** - National resource
 - **Pittsburgh Supercomputing Center (PSC)** - Shared resource
-- **Massachusetts Green High Performance Computing Center (MGHPCC)** - Shared by 5+ universities
+- **Massachusetts Green High Performance Computing Center (MGHPCC)** - Shared facility.
+  - EXCLUDE generic shared partitions.
+  - INCLUDE dedicated university clusters hosted there (e.g., Harvard Cannon, MIT Supercloud, Northeastern Discovery).
+
 - **Indiana University Pervasive Technology Institute** - National resource
 
 #### DOE National Laboratories (NEVER count these)

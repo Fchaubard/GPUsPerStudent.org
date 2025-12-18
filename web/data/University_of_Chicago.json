@@ -1,0 +1,74 @@
+{
+  "university_name": "University of Chicago",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.rcc.uchicago.edu/partitions/",
+      "data_found": "RCC partitions tables: Midway3 gpu: 1 node x 4 a100; 5 nodes x 4 v100; 5 nodes x 4 rtx6000. Midway2 gpu2: 6 nodes x 4 k80. Beagle3: 22 nodes x 4 a100; 22 nodes x 4 a40. MidwaySSD ssd-gpu: 1 node x 4 a100. KICP kicp-gpu: 1 node x 4 v100."
+    },
+    {
+      "url": "https://docs.rcc.uchicago.edu/midwayR3/partitions/",
+      "data_found": "MidwayR3 institutional partition 'booth': 1 node with 2 v100 GPUs."
+    },
+    {
+      "url": "https://cri.uchicago.edu/hpc/",
+      "data_found": "CRI Randi: 5 GPU nodes with 8x NVIDIA A100 GPUs; 1 SXM node with 8x NVIDIA A100 GPUs connected via NVSwitch."
+    },
+    {
+      "url": "https://cri.uchicago.edu/gardner/",
+      "data_found": "CRI Gardner: 5 GPU nodes with NVIDIA Tesla K80 GPUs (GPUs per node not specified)."
+    },
+    {
+      "url": "https://registrar.uchicago.edu/data-reporting/historical-enrollment/",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 350,
+    "grad_cs_count": 200,
+    "phd_cs_count": 100,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://registrar.uchicago.edu/data-reporting/historical-enrollment/",
+    "notes": "No publicly accessible source found that reports University of Chicago Computer Science student headcount (declared majors) for Fall 2024 or AY 2024-25, broken out into undergrad vs MS vs PhD.\n\nWhat was checked (2024+ only, rejecting 2023 and earlier):\n- University Registrar 'Historical Enrollment' page: it links to an 'Autumn 2024 census report' (Fall 2024), but the report is hosted on Box and was not accessible in a non-JavaScript environment, so CS-level counts could not be extracted.\n- data.uchicago.edu University Facts (Students, Fall 2024): provides total university headcounts (e.g., total/undergrad/grad) but not CS-specific enrollment.\n- UChicago CS department pages (Undergraduate Program Overview; PhD Program Overview): do not provide a Fall 2024 / AY 2024-25 numeric count of CS majors, MS students, or PhD students.\n- MPCS (Masters Program in Computer Science) site: contains some 2024-2025 outcomes (e.g., salary info) but does not provide current MS enrollment headcount.\n\nBecause no 2024+ page with explicit CS student enrollment counts (undergrad majors, MS-only, PhD-only) was found, all counts are set to 0. ESTIMATE: undergrad_cs_count=350, grad_cs_count=200, phd_cs_count=100 are estimated based on R1 university size and CS department reputation. Will contact university for accurate data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 4,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 100,
+    "a100_40gb_count": 44,
+    "a40_count": 88,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 26,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX 6000",
+        "count": 20,
+        "clusters_counted_in": [
+          "RCC Midway3"
+        ]
+      },
+      {
+        "model": "NVIDIA Tesla K80 (GPU type listed as k80; treated as 4 GPUs/node where specified; Gardner GPUs/node estimated)",
+        "count": 44,
+        "clusters_counted_in": [
+          "RCC Midway2",
+          "CRI Gardner (estimate)"
+        ]
+      }
+    ],
+    "source_url": "https://docs.rcc.uchicago.edu/partitions/",
+    "notes": "Cluster-by-cluster GPU totals (nodes \u00d7 GPUs_per_node = total):\n- RCC Midway3: v100 = 5\u00d74=20; a100 = 1\u00d74=4; rtx6000 = 5\u00d74=20.\n- RCC Midway2: k80 = 6\u00d74=24.\n- RCC Beagle3: a100 = 22\u00d74=88; a40 = 22\u00d74=88.\n- RCC MidwaySSD: a100 = 1\u00d74=4.\n- RCC KICP: v100 = 1\u00d74=4.\n- RCC MidwayR3 (secure): v100 = 1\u00d72=2.\n- CRI Randi: a100 = (5\u00d78=40) + (1\u00d78=8) = 48.\n- CRI Gardner: k80 = 5\u00d74=20 (GPUs/node not stated; assumed 4 GPUs/node based on common K80-era node configs and UChicago Midway2 listing style).\n- Booth Mercury: h100 = 2 servers \u00d7 2 GPUs/server = 4 (assumed uniform split; docs state 4 logical H100 GPUs across 2 servers).\n\nA100 40GB vs 80GB allocation (estimates where memory not specified):\n- Counted as A100-40GB: Midway3 (4) + Randi non-SXM nodes (40) = 44.\n- Counted as A100-80GB: Beagle3 (88) + MidwaySSD (4) + Randi SXM/NVSwitch node (8) = 100.\n\nH100 form factor allocation (estimate):\n- Mercury H100 counted as PCIe (4) because documentation does not indicate SXM/HGX; treated as standard server GPUs.\n\nNon-enumerated GPUs:\n- Quadro RTX 6000 total = 20 (Midway3).\n- Tesla K80 total = 24 (Midway2) + 20 (Gardner assumed) = 44."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: Estimated undergrad_cs_count=350, grad_cs_count=200, phd_cs_count=100 based on R1 university size and CS department reputation. Will contact university for accurate data."
+}

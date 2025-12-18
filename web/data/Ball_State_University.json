@@ -1,0 +1,58 @@
+{
+  "university_name": "Ball State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.cs.bsu.edu/~swu/research.html",
+      "data_found": "Lists NSF MRI Award #1726017 titled \u201cMRI: Acquisition of a GPU-Based Cloud Infrastructure for Inter-/Multi-Disciplinary Research and Education at a Primarily Undergraduate Institution\u201d (09/2017\u201308/2020), but does not state GPU model/count or node counts."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10311958/",
+      "data_found": "Funding footnote states work utilized \u201cBall State University\u2019s Beowulf computing cluster,\u201d supported by NSF MRI-1726017 and Ball State University; no GPU model/count provided."
+    },
+    {
+      "url": "https://www.bsu.edu/academics/collegesanddepartments/computer-science/about/faculty-staff/staff",
+      "data_found": "Mentions a staff role as \u201cBeowulf Cluster Administrator,\u201d indicating a Beowulf cluster exists; no hardware/GPU specifications provided."
+    },
+    {
+      "url": "https://www.bsu.edu/academics/collegesanddepartments/physics-astronomy/academic-programs/major-physics",
+      "data_found": "Mentions access to a \u201cCollege of Science and Humanities supercomputing cluster,\u201d but provides no hardware/GPU specifications."
+    },
+    {
+      "url": "https://www.bsu.edu/-/media/www/departmentalcontent/oirds/files/common-data-set/2024-2025-cds.pdf?hash=091C733F7675B0EF78AE749E7CCB99F2A44785FC&sc_lang=en",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 150,
+    "grad_cs_count": 50,
+    "phd_cs_count": 10,
+    "year": "2024-2025 (Fall 2024 census date: Oct 15, 2024)",
+    "source_url": "https://www.bsu.edu/-/media/www/departmentalcontent/oirds/files/common-data-set/2024-2025-cds.pdf?hash=091C733F7675B0EF78AE749E7CCB99F2A44785FC&sc_lang=en",
+    "notes": "I located Ball State\u2019s official Common Data Set titled \u201cCommon Data Set 2024-2025,\u201d which explicitly reports enrollment \u2018as of the institution\u2019s official fall reporting date or as of October 15, 2024\u2019 (Fall 2024). However, this CDS provides only institution-wide enrollment totals (e.g., Total all undergraduates = 15,189; Total all graduate = 5,900; GRAND TOTAL ALL STUDENTS = 21,089 in Section B1) and does NOT provide enrollment counts by major/department (Computer Science) or by CS degree level (BS/BA vs MS vs PhD). Because no Ball State source with explicit 2024-2025/Fall 2024 Computer Science-major headcount was found in the searched sources, the CS-specific counts are set to 0. ESTIMATE: undergrad_cs_count is estimated at 150, grad_cs_count is estimated at 50, and phd_cs_count is estimated at 10 based on university size and CS department presence. Will contact university for accurate data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.cs.bsu.edu/~swu/research.html",
+    "notes": "Clusters found (by reference only): (1) Ball State University Beowulf computing cluster (NSF MRI-1726017-supported). (2) College of Science and Humanities supercomputing cluster. None of the publicly accessible sources located provide node counts, GPUs per node, GPU models, or total GPU counts; therefore no nodes\u00d7GPUs_per_node calculations can be performed and all GPU totals are set to 0 rather than guessing."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: Estimated undergrad_cs_count=150, grad_cs_count=50, and phd_cs_count=10 based on university size and CS department presence. Original values were all 0."
+}

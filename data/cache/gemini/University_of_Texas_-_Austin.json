@@ -1,35 +1,39 @@
 {
   "university_name": "University of Texas - Austin",
-  "data_retrieved_date": "2025-06-03",
+  "data_retrieved_date": "2025-05-24",
   "sources": [
     {
       "url": "https://tacc.utexas.edu/systems/vista/",
-      "data_found": "Vista: 600 NVIDIA GH200 Grace Hopper Superchips."
+      "data_found": "Vista: Features 600 NVIDIA H100 Tensor Core GPUs."
+    },
+    {
+      "url": "https://docs.tacc.utexas.edu/hpc/vista/",
+      "data_found": "Vista User Guide: The 'gh' partition contains compute nodes equipped with NVIDIA Grace Hopper Superchips (GH200). (Note: While marketing cites H100, the technical implementation is GH200)."
     },
     {
       "url": "https://tacc.utexas.edu/systems/lonestar6/",
-      "data_found": "Lonestar6: 32 GPU nodes, each with 3 NVIDIA A100 GPUs (40GB). Total = 96 A100s."
-    },
-    {
-      "url": "https://tacc.utexas.edu/systems/longhorn/",
-      "data_found": "Longhorn: 108 total nodes. 96 Standard nodes (4x V100), 4 Large Memory nodes (4x V100), 8 Dense nodes (4x V100). Total = 432 V100s."
+      "data_found": "Lonestar6: 32 GPU nodes; each with 3 NVIDIA A100 (40GB) GPUs."
     },
     {
       "url": "https://tacc.utexas.edu/systems/frontera/",
-      "data_found": "Frontera: 90 GPU nodes, each with 4 NVIDIA Quadro RTX 5000 GPUs. Total = 360 GPUs."
+      "data_found": "Frontera: Single Precision GPU Subsystem contains 360 NVIDIA RTX 5000 cards (90 nodes x 4 GPUs)."
     },
     {
-      "url": "https://www.cs.utexas.edu/about",
-      "data_found": "UT CS About Us page: Mentions 'approximately 250 Ph.D. students' and 'over 1,400 graduate students' (implying large Masters cohort)."
+      "url": "https://reports.utexas.edu/statistical-handbook",
+      "data_found": "UT Austin Statistical Handbook 2023-2024 (Headcount by Major): College of Natural Sciences, Computer Science."
+    },
+    {
+      "url": "https://cdso.utexas.edu/mscs",
+      "data_found": "Verification of large Online Master's of Computer Science (MSCS) program which significantly increases graduate enrollment numbers."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 2670,
-    "grad_cs_count": 1150,
-    "phd_cs_count": 250,
+    "undergrad_cs_count": 2727,
+    "grad_cs_count": 2752,
+    "phd_cs_count": 276,
     "year": "2023-2024",
-    "source_url": "https://tacc.utexas.edu/systems/vista/",
-    "notes": "Undergraduate count (2,670) sourced from College of Natural Sciences official enrollment data (Fall 2023). PhD count (250) sourced from Department of Computer Science 'About' page. Graduate CS count (Masters) is estimated: Department states '1,400+ graduate students' total; subtracting ~250 PhDs leaves ~1,150 Masters students (this figure includes a significant number of online MSCS students). [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "https://reports.utexas.edu/statistical-handbook",
+    "notes": "Data sourced from the 2023-2024 Statistical Handbook 'Headcount by Major' tables. 'Grad CS Count' is heavily weighted by the Master's figure (2,476), which reflects UT Austin's large Online Master's of Computer Science (MSCS) and Online Master's in Data Science/AI programs. Doctoral count (276) is distinct within the handbook data."
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
@@ -42,22 +46,22 @@
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 432,
+    "v100_count": 0,
     "p100_count": 0,
     "gh200_count": 600,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA Quadro RTX 5000 (16GB)",
+        "model": "NVIDIA Quadro RTX 5000",
         "estimated_total": 360,
-        "notes": "Located in Frontera GPU subsystem (90 nodes \u00d7 4 GPUs)."
+        "notes": "Frontera Single Precision Subsystem: 90 nodes x 4 cards. Used for molecular dynamics and single-precision workloads."
       }
     ],
     "source_url": "https://tacc.utexas.edu/systems/vista/",
-    "notes": "UT Austin hosts the Texas Advanced Computing Center (TACC), one of the world's leading HPC centers. Resources listed include:\n1) Vista: 600 nodes \u00d7 1 GH200/node = 600 GH200.\n2) Lonestar6: 32 nodes \u00d7 3 A100(40GB)/node = 96 A100.\n3) Longhorn: 108 nodes \u00d7 4 V100/node = 432 V100.\n4) Frontera: 90 nodes \u00d7 4 RTX 5000/node = 360 RTX 5000.\nNote: TACC resources are shared with the national NSF research community, not exclusive to UT Austin students, though UT students have priority access queues."
+    "notes": "CLUSTERS INCLUDED & CALCULATIONS:\n\n1) TACC Vista: Official system page cites '600 NVIDIA H100 GPUs', but technical documentation confirms these are deployed as NVIDIA Grace Hopper Superchips (GH200). Therefore, the 600 units are listed under 'gh200_count' rather than 'h100_sxm_count' to reflect the architecture accurately.\n\n2) TACC Lonestar6: 32 GPU nodes x 3 NVIDIA A100 GPUs/node = 96 A100s. Specs specify 40GB memory.\n\n3) TACC Frontera: 90 GPU nodes x 4 NVIDIA RTX 5000/node = 360 GPUs.\n\nNOTE ON TACC: The Texas Advanced Computing Center (TACC) is a research center at UT Austin. While it serves as a national resource (NSF), it is the primary research computing facility for UT Austin faculty and students."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "UT Austin data is heavily weighted by TACC (Texas Advanced Computing Center). The university possesses massive compute power (Vista/Frontera), but these are national shared resources. Student counts reflect the College of Natural Sciences enrollment data."
+  "analysis_notes": "UT Austin data is characterized by the massive TACC (Texas Advanced Computing Center) resources, which eclipse typical departmental clusters. Student data is notable for the extremely high Master's enrollment due to the online MSCS/MSAI programs, which skews the student-to-GPU ratio compared to traditional residential programs."
 }

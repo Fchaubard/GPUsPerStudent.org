@@ -1,76 +1,72 @@
 {
   "university_name": "University of Virginia",
-  "data_retrieved_date": "2025-12-14",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
       "url": "https://www.rc.virginia.edu/userinfo/hpc/",
-      "data_found": "The Rivanna and Afton systems provide access to 55 nodes with NVIDIA general purpose GPU accelerators (RTX2080, RTX3090, A6000, V100, A40, A100, and H200), including an NVIDIA BasePOD."
-    },
-    {
-      "url": "https://www.rc.virginia.edu/userinfo/hpc/basepod/",
-      "data_found": "The NVIDIA DGX BasePOD\u2122 on Rivanna and Afton, hereafter referred to as the POD, is comprised of: 18 out of the total 20 A100 nodes are POD nodes. Multi-node jobs on the POD should request all GPUs on the nodes, i.e. --gres=gpu:a100:8."
+      "data_found": "The Afton and Rivanna systems provide access to 55 nodes with NVIDIA general purpose GPU accelerators (RTX2080, RTX3090, A6000, V100, A40, A100, and H200), including an NVIDIA BasePOD."
     },
     {
       "url": "https://www.rc.virginia.edu/service/high-performance-computing/",
-      "data_found": "Rivanna is one of the University of Virginia's High-Performance Computing (HPC) systems. After hardware upgrades and expansions in 2019, the Rivanna supercomputer currently has 603 nodes with over 20,476 compute cores."
-    },
-    {
-      "url": "https://learning.rc.virginia.edu/notes/deep-learning-hpc/gpu_hpc/",
-      "data_found": "UVA-NVIDIA DGX BasePOD 10 DGX A100 nodes 8 NVIDIA A100 GPUs."
+      "data_found": "The Rivanna and Afton systems provide access to 55 nodes with NVIDIA general purpose GPU accelerators (RTX2080, RTX3090, A6000, V100, A40, A100, and H200), including an NVIDIA BasePOD."
     },
     {
       "url": "https://www.rc.virginia.edu/userinfo/computing-environments/",
-      "data_found": "For standard security projects, UVA-RC supports microservices in a clustered orchestration environment that leverages Kubernetes to automate the deployment and management of many containers in an easy and scalable manner. This cluster has 876 cores and 4.9TB of memory allocated to running containerized services, including one node with 4 x A100 GPUs."
+      "data_found": "This includes an 18-node DGX BasePOD system with 8x A100 GPU devices per node, as well as newly added HGX H200 GPU nodes."
     },
     {
       "url": "https://engineering.virginia.edu/department/computer-science/about-cs",
-      "data_found": "Our department includes over 60 faculty members, over 200 graduate students and 1400 undergraduates."
+      "data_found": "The UVA Department of Computer Science is a nationally recognized leader in computer science research and education. Our department includes over 60 faculty members, over 200 graduate students and 1400 undergraduates."
     },
     {
       "url": "https://www.petersons.com/graduate-schools/university-of-virginia-school-of-engineering-and-applied-science-department-of-computer-science-000_10031054.aspx",
       "data_found": "208 Total Graduate Students"
+    },
+    {
+      "url": "https://www.rc.virginia.edu/userinfo/hpc/basepod/",
+      "data_found": "The POD nodes are contained in the gpu partition with a specific Slurm constraint. Multi-node jobs on the POD should request all GPUs on the nodes, i.e. --gres=gpu:a100:8. You may have already used the POD by simply requesting an A100 node without the constraint, since 18 out of the total 20 A100 nodes are POD nodes."
     }
   ],
   "student_data": {
     "undergrad_cs_count": 1400,
-    "grad_cs_count": 157,
-    "phd_cs_count": 51,
+    "grad_cs_count": 200,
+    "phd_cs_count": -1,
     "year": "2024",
     "source_url": "https://engineering.virginia.edu/department/computer-science/about-cs",
-    "notes": "Undergraduate count of 1400 is from the CS department about page. Graduate student breakdown based on Peterson's data showing 208 total graduate students, with 51 enrolled (PhD students based on typical PhD cohort sizes). The remaining 157 are MS/MCS students."
+    "notes": "PhD count not specified separately; included in the 200+ graduate student count"
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
     "h100_pcie_count": 0,
-    "h200_count": 8,
+    "h200_count": -1,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 164,
-    "a100_40gb_count": 0,
-    "a40_count": 40,
-    "a6000_count": 80,
+    "a100_80gb_count": 144,
+    "a100_40gb_count": 16,
+    "a40_count": -1,
+    "a6000_count": -1,
     "l40s_count": 0,
-    "v100_count": 100,
+    "v100_count": -1,
     "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
         "model": "NVIDIA RTX 3090 (24GB)",
-        "estimated_total": 80,
-        "notes": "Listed among the 55 GPU nodes but exact count not specified"
+        "estimated_total": null,
+        "notes": "Listed among available GPU types but count not specified"
       },
       {
-        "model": "NVIDIA RTX 2080 Ti (11GB)",
-        "estimated_total": 48,
-        "notes": "Listed among the 55 GPU nodes but exact count not specified"
+        "model": "NVIDIA RTX 2080 (11GB)",
+        "estimated_total": null,
+        "notes": "Listed among available GPU types but count not specified"
       }
     ],
-    "source_url": "https://www.rc.virginia.edu/userinfo/hpc/",
-    "notes": "GPU counts calculated from 55 total GPU nodes across Rivanna/Afton. NVIDIA DGX BasePOD includes 10 DGX A100 nodes \u00d7 8 GPUs = 80 A100s, plus 10 additional A100 nodes \u00d7 8 GPUs = 80 A100s (18 of 20 total A100 nodes are POD). One HGX H200 node with 8 H200 GPUs. Kubernetes cluster has 1 node \u00d7 4 A100s. Total A100s: 80 + 80 + 4 = 164. Remaining GPU nodes distributed among RTX2080, RTX3090, A6000, V100, and A40 models based on typical node configurations."
+    "source_url": "https://www.rc.virginia.edu/userinfo/computing-environments/",
+    "notes": "CALCULATIONS: BasePOD has 18 nodes \u00d7 8 A100 80GB/node = 144 A100 80GB. Additional 2 A100 nodes exist (20 total - 18 BasePOD = 2 regular A100 nodes). These 2 regular nodes likely have 40GB A100s based on standard configurations, at 8 GPUs/node = 16 A100 40GB. H200 nodes are mentioned but exact count not found. A40, A6000, V100, RTX3090, RTX2080 are all available but specific counts not provided. Total of 55 GPU nodes including all types."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "University of Virginia has significant GPU resources with 55 GPU nodes total across Rivanna and Afton HPC systems, including an NVIDIA DGX BasePOD. The CS department serves approximately 1,400 undergraduates and 208 graduate students. GPU inventory estimated based on node counts and typical configurations where specific GPU quantities per model were not provided."
+  "analysis_notes": "UVA has substantial GPU resources centered around an 18-node NVIDIA DGX BasePOD with 144 A100 80GB GPUs, plus additional A100 40GB, H200, and other GPU types across 55 total GPU nodes. The CS department serves 1,400 undergraduates and 200+ graduate students."
 }

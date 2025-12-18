@@ -1,0 +1,73 @@
+{
+  "university_name": "University of Michigan - Ann Arbor",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://documentation.its.umich.edu/node/4976",
+      "data_found": "Great Lakes configuration: GPU partition has 20 nodes with 2x V100 and 4 nodes with 3x V100; gpu_mig40 has 2 nodes with 4x A100 80GB (MIG40); spgpu has 28 nodes with 8x A40; viz has 4 nodes with 1x P40."
+    },
+    {
+      "url": "https://its.umich.edu/news/article/new-gpu-offering",
+      "data_found": "Great Lakes MIG offering: 'divides our 8 GPUs into 16 multiple isolated instances' (corroborates 8 physical A100 GPUs for MIG)."
+    },
+    {
+      "url": "https://documentation.its.umich.edu/arc-hpc/armis2/configuration",
+      "data_found": "Armis2 GPUs section: '8 total Nvidia TitanV GPUs connected to two nodes' and '3 total Nvidia Tesla V100 GPUs connected to one node.'"
+    },
+    {
+      "url": "https://its.umich.edu/advanced-research-computing/cloud/secure-enclave-services/gpu",
+      "data_found": "SES GPU offering: 5 nodes, each with 2x NVIDIA A40 GPUs (48GB) => 10 A40 total."
+    },
+    {
+      "url": "https://its.umich.edu/advanced-research-computing/facilities-services",
+      "data_found": "Grant-writing page states SES includes '10 A100 GPUs' (conflicts with SES GPU Offering page that specifies A40); Lighthouse described only as 'hundreds of GPUs' without model/count breakdown."
+    },
+    {
+      "url": "https://bulletin.engin.umich.edu/eecs/",
+      "data_found": "Student enrollment: 1301 undergrad, 227 grad, 275 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1301,
+    "grad_cs_count": 227,
+    "phd_cs_count": 275,
+    "year": "Fall 2024",
+    "source_url": "https://bulletin.engin.umich.edu/eecs/",
+    "notes": "Source is the University of Michigan College of Engineering Bulletin page for Electrical Engineering and Computer Science (EECS). In the section \"Enrollment and Graduation Data\" -> \"Computer Science Engineering Enrollment Data\", the table explicitly lists Fall 2024 enrollment counts: Undergraduate = 1301, Masters = 227, Doctoral = 275. Page does not display an obvious 'last updated' date. These figures appear to be for the College of Engineering Computer Science (BSE) / CSE division program reporting (i.e., not necessarily including LSA Computer Science majors)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 0,
+    "a40_count": 234,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 55,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Tesla P40 24GB",
+        "count": 4,
+        "where": "Great Lakes (viz partition)"
+      },
+      {
+        "model": "NVIDIA Titan V 12GB",
+        "count": 8,
+        "where": "Armis2 (GPU TitanV nodes)"
+      }
+    ],
+    "source_url": "https://documentation.its.umich.edu/node/4976",
+    "notes": "Cluster-by-cluster calculations (nodes \u00d7 GPUs_per_node = total):\n\n1) Great Lakes (https://documentation.its.umich.edu/node/4976)\n- gpu (V100): (20\u00d72)=40 V100 + (4\u00d73)=12 V100 => 52 V100\n- gpu_mig40 (A100 80GB): (2\u00d74)=8 A100 80GB (MIG splits each physical GPU into 2\u00d740GB instances; 8 GPUs -> 16 MIG instances, corroborated by https://its.umich.edu/news/article/new-gpu-offering)\n- spgpu (A40 48GB): (28\u00d78)=224 A40\n- viz (P40 24GB): (4\u00d71)=4 P40\n\n2) Armis2 (https://documentation.its.umich.edu/arc-hpc/armis2/configuration)\n- Titan V: (2\u00d74)=8 Titan V (using the explicit '8 total' statement in the GPUs section)\n- V100: (1\u00d73)=3 V100\n\n3) Secure Enclave Services (SES) GPU Offering (https://its.umich.edu/advanced-research-computing/cloud/secure-enclave-services/gpu)\n- A40: (5\u00d72)=10 A40\n\nTotals added across clusters with explicit node\u00d7GPU specs:\n- A100 80GB: 8\n- V100: 52+3=55\n- A40: 224+10=234\n\nConflicts/omissions:\n- Great Lakes page also includes a summary line claiming '4 NVIDIA A100 80GB GPUs connected to 1 node' and '160 NVIDIA A40 GPUs'; these conflict with the per-partition node\u00d7GPU counts and with the MIG news item. Totals above follow the per-partition node\u00d7GPU counts and the MIG news corroboration.\n- SES grant-writing page mentions '10 A100 GPUs' but provides no node\u00d7GPU breakdown and conflicts with the dedicated SES GPU Offering page specifying A40; therefore, no SES A100s were counted.\n- Lighthouse is described only as 'hundreds of GPUs' with no model/count specs; excluded because node\u00d7GPU_per_node cannot be derived from available public docs here."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be locally owned and operated by the university. Student data is complete and from a reliable source."
+}

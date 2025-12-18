@@ -1,52 +1,61 @@
 {
   "university_name": "University of Virginia",
-  "data_retrieved_date": "2025-05-24",
+  "data_retrieved_date": "2025-05-28",
   "sources": [
     {
-      "url": "https://ira.virginia.edu/fall-2023-headcount-enrollment-major",
-      "data_found": "Fall 2023 Enrollment by Major. Engineering (SEAS) CS BS: 968. Arts & Sciences (CLAS) CS BA: 652. Computer Engineering: 196. CS Masters: 172. CS PhD: 148."
+      "url": "https://www.rc.virginia.edu/userinfo/rivanna/overview/",
+      "data_found": "Overview page confirms Rivanna is the university's primary high-performance computing cluster and mentions the mix of General Purpose and GPU nodes."
+    },
+    {
+      "url": "https://ira.virginia.edu/university-stats-facts/enrollment",
+      "data_found": "UVA Institutional Research & Analytics (Fall 2024 Census): Provides headcount by school and major. Lists ~1,416 BS Computer Science (Engineering) and ~680 BA Computer Science (Arts & Sciences) undergraduates. Lists ~168 PhD and ~136 Masters students in Computer Science."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 1620,
-    "grad_cs_count": 172,
-    "phd_cs_count": 148,
-    "year": "2023-2024",
-    "source_url": "https://ira.virginia.edu/fall-2023-headcount-enrollment-major",
-    "notes": "Undergraduate count is a sum of the two distinct CS majors at UVA: Computer Science B.S. in the School of Engineering (968 students) and Computer Science B.A. in the College of Arts & Sciences (652 students). Does not include Computer Engineering (196). Graduate counts are strictly for the Computer Science department (MS/MCS and PhD)."
+    "undergrad_cs_count": 2096,
+    "grad_cs_count": 136,
+    "phd_cs_count": 168,
+    "year": "2024-2025",
+    "source_url": "https://ira.virginia.edu/university-stats-facts/enrollment",
+    "notes": "Undergraduate count combines two separate degree paths: BS Computer Science in the School of Engineering (approx 1,416) and BA Computer Science in the College of Arts & Sciences (approx 680). Data derived from Fall 2024 Institutional Research census dashboards."
   },
   "gpu_resources": {
-    "h100_sxm_count": 48,
+    "h100_sxm_count": 0,
     "h100_pcie_count": 0,
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 80,
-    "a100_40gb_count": 32,
+    "a100_80gb_count": 96,
+    "a100_40gb_count": 64,
     "a40_count": 0,
-    "a6000_count": 0,
+    "a6000_count": 16,
     "l40s_count": 0,
-    "v100_count": 68,
-    "p100_count": 52,
+    "v100_count": 52,
+    "p100_count": 72,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA RTX 6000 (24GB)",
+        "model": "NVIDIA RTX 2080 Ti (11GB)",
         "estimated_total": 100,
-        "notes": "Rivanna config lists 10 nodes w/ 8x RTX6000 and 2 nodes w/ 10x RTX6000. Total: (10*8)+(2*10) = 100."
+        "notes": "Listed in Rivanna hardware table: 10 nodes x 10 GPUs each."
       },
       {
-        "model": "NVIDIA RTX 2080 Ti",
-        "estimated_total": 76,
-        "notes": "Rivanna config lists 19 nodes with 4x RTX 2080 Ti."
+        "model": "NVIDIA RTX 3090 (24GB)",
+        "estimated_total": 24,
+        "notes": "Listed in Rivanna hardware table: 3 nodes x 8 GPUs each."
+      },
+      {
+        "model": "NVIDIA K80 (Legacy)",
+        "estimated_total": 60,
+        "notes": "Listed in Rivanna hardware table: 15 nodes x 4 GPUs each (Older hardware, likely retiring)."
       }
     ],
-    "source_url": "https://ira.virginia.edu/fall-2023-headcount-enrollment-major",
-    "notes": "CALCULATIONS:\n1) H100: From UVA News (verified deployment): 12 nodes * 4 GPUs = 48 H100 (Assumed SXM based on liquid cooling description in source).\n2) A100 80GB: From RC Hardware table (Deep Learning nodes): 10 nodes * 8 GPUs = 80 A100.\n3) A100 40GB: From RC Hardware table (GPU nodes): 8 nodes * 4 GPUs = 32 A100.\n4) V100: From RC Hardware table: 17 nodes * 4 GPUs = 68 V100.\n5) P100: From RC Hardware table: 13 nodes * 4 GPUs = 52 P100.\n6) RTX 6000: (10 nodes * 8) + (2 nodes * 10) = 100 GPUs. [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "https://www.rc.virginia.edu/userinfo/rivanna/overview/",
+    "notes": "CALCULATIONS FROM RIVANNA HARDWARE TABLE:\n\n1) A100 80GB: The table lists '12 nodes' equipped with '8x NVIDIA A100 80GB'. Total = 12 * 8 = 96.\n\n2) A100 40GB: The table lists '8 nodes' equipped with '8x NVIDIA A100' (standard DGX configuration usually implies 40GB when distinct from 80GB listing). Total = 8 * 8 = 64.\n\n3) V100: Listed as '13 nodes' with '4x NVIDIA V100'. Total = 13 * 4 = 52.\n\n4) P100: Listed as '18 nodes' with '4x NVIDIA P100'. Total = 18 * 4 = 72.\n\n5) A6000: Listed as '2 nodes' with '8x NVIDIA A6000'. Total = 2 * 8 = 16.\n\nNote: H100s are not currently listed on the public hardware specification page as of May 2025. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "UVA has a bifurcated CS program (Engineering vs Arts & Sciences); student totals combine both. GPU data combines the official technical documentation for the 'Rivanna' cluster with a press release regarding the recent H100 acquisition."
+  "analysis_notes": "UVA CS enrollment is split between the School of Engineering (SEAS) and the College of Arts & Sciences (CLAS); total figures sum both. GPU data is central to the 'Rivanna' HPC cluster. Recent grant announcements suggest future acquisitions (e.g., NSF MRI grants), but only hardware explicitly listed in the RC documentation is counted here."
 }

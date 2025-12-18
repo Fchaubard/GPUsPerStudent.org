@@ -83,8 +83,9 @@
             color: #333;
             padding: 25px;
             border-radius: 12px;
-            max-width: 700px;
-            max-height: 80%;
+            max-width: 900px;
+            max-height: 90vh;
+            /* Slightly more height */
             overflow: auto;
             z-index: 2000;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
@@ -100,12 +101,33 @@
             padding-bottom: 10px;
         }
 
+        .popup-charts-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .popup-chart-wrapper {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .chart-box {
+            height: 250px;
+            position: relative;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
         .sources-popup ul {
             padding-left: 20px;
         }
 
         .sources-popup li {
             margin-bottom: 8px;
+            word-break: break-all;
         }
 
         .sources-popup a {
@@ -352,6 +374,23 @@ Ensemble methodology:
     <div class="overlay" id="overlay" onclick="closePopup()"></div>
     <div class="sources-popup" id="sources-popup">
         <h3 id="popup-title">Sources</h3>
+
+        <div class="popup-charts-container">
+            <div class="popup-chart-wrapper">
+                <h4>Student Enrollment</h4>
+                <div class="chart-box">
+                    <canvas id="student-chart"></canvas>
+                </div>
+            </div>
+            <div class="popup-chart-wrapper">
+                <h4>GPU Resources</h4>
+                <div class="chart-box">
+                    <canvas id="gpu-chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <h4>Data Sources</h4>
         <ul id="sources-list"></ul>
         <button class="download-btn" id="download-btn">Download Full JSON</button>
     </div>
@@ -557,6 +596,9 @@ Ensemble methodology:
             });
         }
 
+        let studentChartInstance = null;
+        let gpuChartInstance = null;
+
         async function showSources(university) {
             const popup = document.getElementById('sources-popup');
             const list = document.getElementById('sources-list');
@@ -566,12 +608,28 @@ Ensemble methodology:
             title.textContent = university + ' - Sources';
             list.innerHTML = '<li>Loading...</li>';
 
+            // Clear previous charts
+            if (studentChartInstance) {
+                studentChartInstance.destroy();
+                studentChartInstance = null;
+            }
+            if (gpuChartInstance) {
+                gpuChartInstance.destroy();
+                gpuChartInstance = null;
+            }
+
+            // Clear canvases to be safe
+            const studentCanvas = document.getElementById('student-chart');
+            const gpuCanvas = document.getElementById('gpu-chart');
+            // Cloning node to remove old event listeners/Chart.js attachments if destroy failed? 
+            // Usually destroy() is enough.
+
             popup.classList.add('active');
             document.getElementById('overlay').classList.add('active');
 
-            // Try to load JSON - use proper filename format
-            const filename = university.replace(/[,'"]/g, '').replace(/\s+/g, '_');
-            const jsonUrl = `data/cache/final/${filename}.json`;
+            // Try to load JSON - use proper filename format matching Python script
+            const filename = university.replace(/[,'"]/g, '').replace(/\s+/g, '_').replace(/-/g, '_-_');
+            const jsonUrl = `data/${filename}.json`;
 
             try {
                 const response = await fetch(jsonUrl);
@@ -579,6 +637,10 @@ Ensemble methodology:
 
                 const data = await response.json();
                 jsonCache[university] = data;
+
+                // Render Charts
+                renderStudentChart(data.student_data);
+                renderGpuChart(data.gpu_resources);
 
                 const sources = data.sources || [];
                 if (sources.length === 0) {
@@ -598,6 +660,144 @@ Ensemble methodology:
                 list.innerHTML = `<li>Could not load sources. File: ${filename}.json</li>`;
                 downloadBtn.onclick = () => alert('JSON not available');
             }
+        }
+
+        function renderStudentChart(studentData) {
+            const canvas = document.getElementById('student-chart');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            if (!studentData) return;
+
+            const labels = ['Undergrad CS', 'Master\'s CS', 'PhD CS'];
+            const values = [
+                studentData.undergrad_cs_count || 0,
+                studentData.grad_cs_count || 0,
+                studentData.phd_cs_count || 0
+            ];
+
+            studentChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Students',
+                        data: values,
+                        backgroundColor: '#000000',
+                        borderRadius: 4,
+                        barPercentage: 0.6
+                    }]
+                },
+                plugins: [ChartDataLabels],
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: true },
+                        datalabels: {
+                            color: '#FFFFFF',
+                            anchor: 'end',
+                            align: 'start',
+                            offset: 4,
+                            font: { weight: 'bold', size: 11 },
+                            formatter: (value) => value > 0 ? value.toLocaleString() : '',
+                            display: (ctx) => ctx.dataset.data[ctx.dataIndex] > 0
+                        }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, grid: { display: false }, ticks: { display: false } },
+                        y: { grid: { display: false }, ticks: { color: '#333', font: { weight: '500' } } }
+                    }
+                }
+            });
+        }
+
+        function renderGpuChart(gpuData) {
+            const canvas = document.getElementById('gpu-chart');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            if (!gpuData) return;
+
+            // Define GPU types to show
+            const gpuTypes = [
+                { key: 'h100_sxm_count', label: 'H100 SXM' },
+                { key: 'h100_pcie_count', label: 'H100 PCIe' },
+                { key: 'h200_count', label: 'H200' },
+                { key: 'gh200_count', label: 'GH200' },
+                { key: 'b200_count', label: 'B200' },
+                { key: 'b100_count', label: 'B100' },
+                { key: 'a100_80gb_count', label: 'A100 80GB' },
+                { key: 'a100_40gb_count', label: 'A100 40GB' },
+                { key: 'v100_count', label: 'V100' },
+                { key: 'p100_count', label: 'P100' },
+                { key: 'l40s_count', label: 'L40S' },
+                { key: 'a6000_count', label: 'A6000' }
+            ];
+
+            const labels = [];
+            const values = [];
+
+            // Sort by count descending for better viz
+            const activeGpus = [];
+            gpuTypes.forEach(type => {
+                const count = gpuData[type.key] || 0;
+                if (count > 0) {
+                    activeGpus.push({ label: type.label, count: count });
+                }
+            });
+
+            // Sort
+            activeGpus.sort((a, b) => b.count - a.count);
+
+            if (activeGpus.length === 0) {
+                labels.push('No Data');
+                values.push(0);
+            } else {
+                activeGpus.forEach(g => {
+                    labels.push(g.label);
+                    values.push(g.count);
+                });
+            }
+
+            gpuChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Count',
+                        data: values,
+                        backgroundColor: '#000000',
+                        borderRadius: 4,
+                        barPercentage: 0.6
+                    }]
+                },
+                plugins: [ChartDataLabels],
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: true },
+                        datalabels: {
+                            color: '#FFFFFF',
+                            anchor: 'end',
+                            align: 'start',
+                            offset: 4,
+                            font: { weight: 'bold', size: 11 },
+                            formatter: (value) => value > 0 ? value.toLocaleString() : '',
+                            display: (ctx) => ctx.dataset.data[ctx.dataIndex] > 0
+                        }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, grid: { display: false }, ticks: { display: false } },
+                        y: { grid: { display: false }, ticks: { color: '#333', font: { weight: '500' } } }
+                    }
+                }
+            });
         }
 
         function downloadJSON(university, data) {

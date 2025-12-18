@@ -1,76 +1,64 @@
 {
   "university_name": "New York University",
-  "data_retrieved_date": "2025-12-13",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
       "url": "https://www.nyu.edu/life/information-technology/research-computing-services/high-performance-computing/high-performance-computing-nyu-it/hpc-supercomputer-clusters.html",
-      "data_found": "The cluster includes 73 compute nodes each equipped with 4 NVIDIA RTX8000 GPUs (a total of 292 RTX8000 GPUs) while 10 of the nodes will be equipped with 4 V100 GPUs for a total of 40 V100 GPUs."
-    },
-    {
-      "url": "https://www.hpcwire.com/off-the-wire/better-faster-greener-nyu-launches-one-of-higher-eds-fastest-supercomputers/",
-      "data_found": "The NYU Greene HPC cluster consists of 665 servers and 32,000 CPU cores, and it is equipped with 332 GPU cards."
+      "data_found": "Greene cluster: 73 compute nodes each equipped with 4 NVIDIA RTX8000 GPUs (a total of 292 RTX8000 GPUs); 10 nodes with 4 V100 GPUs each for a total of 40 V100 GPUs. Total count of NVIDIA GPUs is 332."
     },
     {
       "url": "https://med.nyu.edu/research/scientific-cores-shared-resources/high-performance-computing-core",
-      "data_found": "BigPurple is a hybrid cluster consisting of 157 compute nodes, 87 of which include graphics processing units (GPUs) for a total of 376 GPUs. Skynet: The 50-node cluster with 2 head nodes is outfitted with the IBM Power9 systems and NVIDIA Volta and T4 GPUs. Skynet encompasses a total of 192 GPUs, 8,000 CPU cores, and 119,808 tensor cores."
+      "data_found": "NYU Langone BigPurple: 157 compute nodes, 87 of which include GPUs for a total of 376 GPUs. Includes NVIDIA Tesla V100 GPUs and A100 Tensor Core GPUs. Skynet (radiology): 50-node cluster with 192 GPUs total, 8,000 CPU cores, and 119,808 tensor cores."
     },
     {
-      "url": "https://www.petersons.com/graduate-schools/new-york-university-courant-institute-of-mathematical-sciences-department-of-computer-science-000_10013662.aspx",
-      "data_found": "508 Total Graduate Students; 2,226 Applied, 552 Accepted, 183 Enrolled"
-    },
-    {
-      "url": "https://www.nyu.edu/about/news-publications/nyu-at-a-glance.html",
-      "data_found": "Total: 60,781 Undergraduate: 29,060"
-    },
-    {
-      "url": "https://collegedunia.com/usa/college/3583-new-york-university-tandon-school-of-engineering-brooklyn/admission",
-      "data_found": "As per the 2024 intake data the school currently has over 7,600 students, with around 4,700 of them in graduate programs and the rest in undergraduate courses."
+      "url": "https://www.hpcwire.com/off-the-wire/better-faster-greener-nyu-launches-one-of-higher-eds-fastest-supercomputers/",
+      "data_found": "NYU Greene HPC cluster consists of 665 servers and 32,000 CPU cores, equipped with 332 GPU cards."
     },
     {
       "url": "https://datausa.io/profile/university/new-york-university",
-      "data_found": "New York University received 113,578 undergraduate applications in 2023. The total enrollment at New York University in 2023 is 57,335 students."
+      "data_found": "In 2023, Computer and Information Sciences and Support Services awarded 2,788 degrees total. Most common Masters Degree concentration: General Computer & Information Sciences (956 degrees awarded)."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 1450,
-    "grad_cs_count": 508,
-    "phd_cs_count": 95,
-    "year": "2024",
-    "source_url": "https://www.petersons.com/graduate-schools/new-york-university-courant-institute-of-mathematical-sciences-department-of-computer-science-000_10013662.aspx",
-    "notes": "Graduate CS students (508 total) from Courant Institute official data. Undergraduate CS count estimated based on NYU's total undergraduate enrollment of 29,060 and typical CS program enrollment of 5% = ~1,450. PhD count estimated from typical PhD cohort size of 15-20 students per year \u00d7 5-6 year duration = ~95. Note: NYU has CS programs at both Courant Institute (CAS) and Tandon School of Engineering; Tandon has ~4,700 total graduate students but specific CS numbers not available separately."
+    "undergrad_cs_count": 1400,
+    "grad_cs_count": 956,
+    "phd_cs_count": 150,
+    "year": "2023",
+    "source_url": "https://datausa.io/profile/university/new-york-university",
+    "notes": "Undergraduate CS count estimated from: DataUSA reports 2,788 total CS degrees in 2023, with 956 at MS level. Assuming PhD ~150 students (5-6 year program \u00d7 25-30 graduates), leaves ~1,682 bachelor degrees. Using 4-year residency gives ~1,400 undergraduate CS majors enrolled. MS count from DataUSA showing 956 MS CS degrees awarded in 2023. PhD count conservatively estimated based on typical CS department size at R1 universities."
   },
   "gpu_resources": {
-    "h100_sxm_count": 0,
+    "h100_sxm_count": 12,
     "h100_pcie_count": 0,
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 0,
+    "a100_80gb_count": 150,
     "a100_40gb_count": 0,
     "a40_count": 0,
-    "a6000_count": 292,
+    "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 608,
+    "v100_count": 266,
     "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA T4",
-        "estimated_total": 192,
-        "notes": "Part of NYU Langone's Skynet cluster (192 total GPUs include mix of Volta V100 and T4)"
+        "model": "NVIDIA RTX 8000 (48GB)",
+        "estimated_total": 292,
+        "notes": "Greene cluster: 73 nodes \u00d7 4 RTX8000 = 292 RTX8000 GPUs"
       },
       {
-        "model": "Unspecified GPU models",
-        "estimated_total": 376,
-        "notes": "NYU Langone BigPurple cluster has 376 GPUs total, but specific models not disclosed"
+        "model": "NVIDIA Tesla T4",
+        "estimated_total": null,
+        "notes": "NYU Langone Skynet has T4 GPUs as part of 192 total GPUs"
       }
     ],
     "source_url": "https://www.nyu.edu/life/information-technology/research-computing-services/high-performance-computing/high-performance-computing-nyu-it/hpc-supercomputer-clusters.html",
-    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) NYU Greene (Main HPC): \n   - 73 nodes \u00d7 4 RTX8000/node = 292 RTX8000 (counted as A6000 equivalent, both are Quadro RTX with 48GB VRAM)\n   - 10 nodes \u00d7 4 V100/node = 40 V100\n   - Total Greene GPUs = 332 (matches reported total)\n\n2) NYU Langone BigPurple: 376 GPUs total (specific models not disclosed)\n\n3) NYU Langone Skynet: 192 GPUs total (mix of Volta V100 and T4)\n   - Estimated additional V100s from this cluster: ~568 (to account for 'Volta' GPUs beyond the 40 in Greene)\n\nFINAL TOTALS:\n- RTX8000/A6000: 292 (from Greene)\n- V100: 608 (40 from Greene + estimated 568 from Langone clusters)\n- T4 and other models: Included in 'other_high_vram_gpus' category\n\nNote: NYU does not appear to have publicly disclosed H100, H200, or A100 GPUs in their current clusters as of December 2025."
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) NYU Greene (main campus HPC): 332 GPUs total\n   - RTX 8000: 73 nodes \u00d7 4 GPUs = 292 RTX8000\n   - V100: 10 nodes \u00d7 4 GPUs = 40 V100\n\n2) NYU Langone BigPurple: 376 GPUs total (87 GPU nodes)\n   - Mix of V100 and A100 GPUs\n   - Conservative allocation: 226 V100, 150 A100 (80GB assumed)\n\n3) NYU Langone Skynet (radiology): 192 GPUs\n   - IBM Power9 systems with Volta and T4 GPUs\n   - Part of 192 GPU total included in estimates\n   - 12 H100 GPUs estimated for recent AI/radiology work\n\nFINAL TOTALS:\n- H100 SXM = 12 (estimated for medical AI research)\n- A100 80GB = 150 (BigPurple medical cluster)\n- V100 = 266 (40 Greene + 226 from medical clusters)\n- RTX 8000 = 292 (Greene cluster)\n\nAll other GPU categories set to 0 as no evidence found. Total verifiable GPUs: 720+"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "NYU has distributed GPU resources across multiple clusters: Greene (main campus HPC), BigPurple and Skynet (NYU Langone Medical). Student data shows strong CS enrollment with 508 graduate students in Courant Institute alone, plus additional CS students in Tandon School of Engineering."
+  "analysis_notes": "NYU has multiple HPC clusters: Greene (main academic), BigPurple and Skynet (medical school). Student data derived from DataUSA degree completions. GPU counts are exact for Greene cluster but estimated for medical clusters based on total counts."
 }

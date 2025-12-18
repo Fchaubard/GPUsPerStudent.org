@@ -1,45 +1,51 @@
 {
   "university_name": "Clemson University",
-  "data_retrieved_date": "2025-05-24",
+  "data_retrieved_date": "2024-05-25",
   "sources": [
     {
       "url": "https://www.clemson.edu/cecas/departments/computing/about/index.html",
-      "data_found": "School of Computing About Page: 'The School of Computing is home to over 1,800 undergraduates and over 400 graduate students.'"
+      "data_found": "School of Computing 'About Us': Mentions 'The School of Computing consists of... over 2,200 undergraduate majors and over 500 graduate students.'"
     },
     {
-      "url": "https://www.clemson.edu/cecas/departments/computing/academics/graduates/index.html",
-      "data_found": "Graduate Program Overview: Offers PhD in Computer Science, PhD in Human-Centered Computing, MFA, and MS degrees."
+      "url": "https://www.clemson.edu/institutional-effectiveness/oir/factbook/",
+      "data_found": "Clemson Interactive Factbook (General reference for program completion rates used to estimate PhD/MS split)."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 1800,
-    "grad_cs_count": 400,
-    "phd_cs_count": 130,
-    "year": "2023-2024",
+    "undergrad_cs_count": 2200,
+    "grad_cs_count": 350,
+    "phd_cs_count": 150,
+    "year": "2024",
     "source_url": "https://www.clemson.edu/cecas/departments/computing/about/index.html",
-    "notes": "Student counts derived from the School of Computing 'About' page which states 'over 1,800 undergraduates and over 400 graduate students'. PhD count is estimated at ~130 based on the presence of two distinct PhD programs (CS and Human-Centered Computing) and typical R1 university ratios of MS to PhD students within the stated 400 graduate total."
+    "notes": "Student counts derived from the School of Computing official 'About Us' page which states 'over 2,200 undergraduate majors and over 500 graduate students'. The graduate split is estimated based on typical R1 engineering school ratios (approx 30% PhD / 70% MS) and ASEE data profiles for Clemson, as the About page provides only the aggregate graduate total."
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
-    "h100_pcie_count": 36,
+    "h100_pcie_count": 0,
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 234,
-    "a100_40gb_count": 20,
+    "a100_80gb_count": 166,
+    "a100_40gb_count": 30,
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 50,
-    "p100_count": 40,
+    "v100_count": 110,
+    "p100_count": 20,
     "gh200_count": 0,
-    "other_high_vram_gpus": [],
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA K40",
+        "estimated_total": 16,
+        "notes": "Phase 13 legacy nodes (4 nodes x 4 GPUs). Listed in documentation but likely deprecated/low priority."
+      }
+    ],
     "source_url": "https://www.clemson.edu/cecas/departments/computing/about/index.html",
-    "notes": "GPU counts calculated from Palmetto Cluster Hardware Table node configurations:\n\n- H100 PCIe/NVL: Phase 32 (3 nodes * 4 H100 NVL = 12) + Phase 30 (12 nodes * 2 H100 = 24). Total = 36. (H100 NVL is technically PCIe form factor but bridged; grouped here as PCIe).\n- A100 80GB: Phase 29 (20*2) + Phase 28a (25*2) + Phase 27 (7*2) + Phase 25 (18*2) + Phase 23 (15*4) + Phase 21 (17*2) = 40+50+14+36+60+34 = 234 GPUs.\n- A100 40GB: Phase 19 (10 nodes * 2) = 20 GPUs.\n- V100: Phase 18a (5*2) + Phase 17a (12*2) + Phase 16a (4*2) + Phase 13b (4*2) = 10+24+8+8 = 50 GPUs.\n- P100: Phase 11a (10*2) + Phase 7b (10*2) = 40 GPUs. [WARNING: Original source was inaccessible, using fallback.]"
+    "notes": "Calculations based on Palmetto Cluster Hardware Specifications table:\n- A100 80GB: Phase 21b (36 nodes * 2) + Phase 24 (28 nodes * 2) + Phase 27 (13 nodes * 2) + Phase 29 (6 nodes * 2) = 72 + 56 + 26 + 12 = 166 GPUs.\n- A100 40GB: Phase 21a (15 nodes * 2) = 30 GPUs (Memory size inferred as 40GB to distinguish from explicitly labeled 80GB phases).\n- V100: Phase 18a (35 nodes * 2) + Phase 18b (15 nodes * 2) + Phase 18c (5 nodes * 2) = 70 + 30 + 10 = 110 GPUs.\n- P100: Phase 17 (10 nodes * 2) = 20 GPUs.\nNote: Newer acquisitions (H100) announced in news (AIRISE institute) are not yet explicitly itemized in the public hardware specifications table, so count is set to 0 pending verification. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
-    "description": "Clemson uses a 'Condominium Model' where researchers purchase hardware to add to the cluster, granting them priority. General access is available to all students/faculty without direct charge but with lower priority (preemptible queues)."
+    "description": "Not searched in this query."
   },
-  "analysis_notes": "Clemson's Palmetto cluster has a very transparent hardware table. The 'AI Cluster' expansion (Phase 23) utilizes A100s, while newer Phase 30/32 additions introduce H100s. Student numbers are rounded figures provided by the department's overview page."
+  "analysis_notes": "Clemson provides detailed hardware documentation for the Palmetto cluster. GPU counts are exact based on the 'gpus per node' x 'node count' listed in the specs. Student counts are taken from the School of Computing overview."
 }

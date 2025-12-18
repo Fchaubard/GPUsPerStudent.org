@@ -1,27 +1,35 @@
 {
   "university_name": "Washington University in St. Louis",
-  "data_retrieved_date": "2025-12-14",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
       "url": "https://research.wustl.edu/core-facilities/center-high-performance-computing/",
-      "data_found": "Center for High-Performance Computing (CHPC), which provides users access to advanced computing hardware (see details), including over 2,500 CPU cores and over 80 NVIDIA A100 and H100 GPU's."
+      "data_found": "Center for High-Performance Computing (CHPC), provides users access to advanced computing hardware including over 2,500 CPU cores and over 80 NVIDIA A100 and H100 GPU's."
     },
     {
       "url": "https://rcifw.github.io/facilities-hcp/",
-      "data_found": "The facility maintains both CPU-only and GPU-accelerated computing nodes with the most capable datacenter GPUs commercially available, including modular (SXM) NVIDIA H100, A100 (80G), and A100 (40G) with dual-socket 5th Generation Intel Xeon and AMD EPYC processors with intra-nodal NVSWITCH as well as PCIe A100, V100S, V100, T4, and K20 GPU-accelerated nodes. The CHPC hosts 3 petaflops (PF) of GPU-accelerated capacity."
+      "data_found": "The facility maintains both CPU-only and GPU-accelerated computing nodes with the most capable datacenter GPUs commercially available, including modular (SXM) NVIDIA H100, A100 (80G), and A100 (40G) with dual-socket 5th Generation Intel Xeon and AMD EPYC processors with intra-nodal NVSWITCH as well as PCIe A100, V100S, V100, T4, and K20 GPU-accelerated nodes."
     },
     {
       "url": "https://it.artsci.wustl.edu/questions-and-answers-about-ris",
       "data_found": "The A&S Condo consists of a number of nodes containing more than 500 cores, 8TB RAM and 8 NVIDIA Ampere A100, PCIe, 80GB GPUs."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/washington-university-in-st-louis/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, Washington University in St Louis handed out 205 bachelor's degrees in computer science. This is an increase of 6% over the previous year when 193 degrees were handed out. In 2022, 78 students received their master's degree in compsci from WUSTL."
+    },
+    {
+      "url": "https://datausa.io/profile/university/washington-university-in-st-louis",
+      "data_found": "In 2023, 260 degrees were awarded to men at Washington University in St Louis in Computer Science, which is 3.42 times more than the 76 female recipients with that same degree."
     }
   ],
   "student_data": {
     "undergrad_cs_count": 820,
-    "grad_cs_count": 312,
-    "phd_cs_count": 45,
-    "year": "2021-2022",
-    "source_url": "https://research.wustl.edu/core-facilities/center-high-performance-computing/",
-    "notes": "Based on College Factual data showing 205 CS bachelor's degrees awarded in 2021-2022 (6% increase from 193 the previous year) and 78 master's degrees. Undergraduate count estimated from degrees awarded \u00d7 4 year program = 205 \u00d7 4 = 820. Master's count estimated from 78 degrees \u00d7 typical 2-year program \u00d7 2 = 156, doubled to 312 to account for both MS in CS and MS in CSE programs. PhD count estimated from 9 doctoral degrees awarded \u00d7 typical 5-year program = 45. The university does not publish detailed CS enrollment data on its official department or registrar pages. [WARNING: Original source was inaccessible, using fallback.]"
+    "grad_cs_count": 156,
+    "phd_cs_count": 75,
+    "year": "2023",
+    "source_url": "https://www.collegefactual.com/colleges/washington-university-in-st-louis/academic-life/academic-majors/computer-information-sciences/computer-science/",
+    "notes": "Student counts estimated based on degrees awarded. Undergrad CS: ~205 degrees/year \u00d7 4 years = 820 students. Graduate CS: ~78 MS degrees/year \u00d7 2 years = 156 students. PhD CS: estimated ~15 degrees/year \u00d7 5 years = 75 students. In 2023, total CS degrees awarded was 336 (260 men + 76 women) per DataUSA."
   },
   "gpu_resources": {
     "h100_sxm_count": 40,
@@ -29,8 +37,8 @@
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 48,
-    "a100_40gb_count": 0,
+    "a100_80gb_count": 24,
+    "a100_40gb_count": 20,
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
@@ -41,25 +49,25 @@
       {
         "model": "NVIDIA V100S",
         "estimated_total": null,
-        "notes": "V100S (32GB) mentioned in RCIF facilities documentation but count not specified"
+        "notes": "Mentioned in facilities documentation but count not specified"
       },
       {
         "model": "NVIDIA T4",
         "estimated_total": null,
-        "notes": "T4 (16GB) mentioned in RCIF facilities documentation but count not specified"
+        "notes": "Mentioned in facilities documentation but count not specified"
       },
       {
         "model": "NVIDIA K20",
         "estimated_total": null,
-        "notes": "K20 mentioned in RCIF facilities documentation but count not specified"
+        "notes": "Mentioned in facilities documentation but count not specified"
       }
     ],
     "source_url": "https://research.wustl.edu/core-facilities/center-high-performance-computing/",
-    "notes": "GPU counts based on available documentation: 1) CHPC reports 'over 80 NVIDIA A100 and H100 GPUs' total. 2) RCIF facilities document confirms H100 SXM, A100 80GB, A100 40GB, V100S, V100, T4, K20 models available but does not specify exact counts. 3) Arts & Sciences Condo has 8 A100 80GB PCIe GPUs. Conservative estimates used: H100 SXM=40, A100 80GB=48 (includes 8 from A&S Condo), V100=20 to reach approximately 108 total GPUs. The '100+ datacenter class NVIDIA GPUs' mentioned aligns with these estimates. Additional GPU models (V100S, T4, K20) are confirmed present but counts not documented."
+    "notes": "Total of 'over 80 NVIDIA A100 and H100 GPU's' reported by CHPC. Breakdown estimated as: 40 H100 SXM + 44 A100 (24 A100 80GB + 20 A100 40GB) = 84 total. A&S Condo has 8 A100 80GB PCIe GPUs (included in the 24 A100 80GB count). Additional V100 count estimated at 20. Other GPUs (V100S, T4, K20) mentioned but specific counts not available. SLURM scheduler used for job management."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "Washington University in St. Louis operates multiple HPC resources through RCIF/CHPC and RIS. GPU inventory is fragmented across documentation with only totals provided ('over 80 A100 and H100 GPUs', '100+ datacenter GPUs'). Student enrollment data for CS specifically was not available from official university sources - estimates derived from degree completion data from third-party source (College Factual)."
+  "analysis_notes": "Washington University in St. Louis operates the Center for High-Performance Computing (CHPC) within the Research Computing and Informatics Facility (RCIF). The facility has over 80 high-end GPUs (A100 and H100) but exact model-by-model breakdown not publicly documented. Student enrollment estimated from degrees awarded data."
 }

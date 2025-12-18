@@ -1,0 +1,58 @@
+{
+  "university_name": "University of Mississippi",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://mcsr.olemiss.edu/supercomputers/magnolia/",
+      "data_found": "Magnolia: 60 total nodes; 6 GPU nodes; each GPU node has dual NVIDIA L40S GPUs (2 GPUs/node)."
+    },
+    {
+      "url": "https://mcsr.olemiss.edu/docs/gpus-on-maple/",
+      "data_found": "Maple GPUs: two nodes with two NVIDIA Tesla P100 (12GB) each; six nodes with two NVIDIA Tesla V100S (32GB) each (12 total V100S)."
+    },
+    {
+      "url": "https://olemiss.edu/departments/it/ms-center-supercomputing-research/index.php",
+      "data_found": "Summary page: Maple has 29 NVIDIA Kepler K20 + 4 NVIDIA Tesla P100 + 12 NVIDIA Tesla V100S; Magnolia has 6 nodes with dual GPUs (model not specified on this page)."
+    },
+    {
+      "url": "https://mcsr.olemiss.edu/supercomputers/maple/",
+      "data_found": "Maple originally consisted of 29 compute nodes each with an NVIDIA Kepler K20 GPU; later upgrades added other GPU nodes."
+    },
+    {
+      "url": "https://www.mississippi.edu/sites/default/files/ihl/files/Fall2024_Enrollment.pdf",
+      "data_found": "Student enrollment: 415 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 415,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.mississippi.edu/sites/default/files/ihl/files/Fall2024_Enrollment.pdf",
+    "notes": "SOURCE VERIFIED AS FALL 2024: The PDF is titled \u201cFALL 2024 Enrollment Fact Book\u201d and states \u201cFall 2024 enrollment figures represent census taken on November 1, 2024.\u201d Undergrad CS-related enrollment: In the table \u201cOn-Campus Undergraduate Headcount Enrollment By Program Category (Fall 2024)\u201d, the row \u201cComputer and Information Sciences and Support Services - 11\u201d shows University of Mississippi (UM) = 415 (this is a two-digit CIP category total, not necessarily the exact \u2018Computer Science\u2019 major only). Graduate CS-related enrollment: In the table \u201cOn-Campus Graduate Headcount Enrollment By Program Category (Fall 2024)\u201d, the same CIP 11 row shows UM = 0. This source does not provide a breakdown of CIP 11 graduate enrollment into MS vs PhD, so grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 12,
+    "v100_count": 12,
+    "p100_count": 4,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://olemiss.edu/departments/it/ms-center-supercomputing-research/index.php",
+    "notes": "Clusters found at University of Mississippi (Ole Miss) MCSR: (1) Magnolia: 6 GPU nodes \u00d7 2 L40S per node = 12 L40S total. (2) Maple: P100 partition: 2 nodes \u00d7 2 P100 per node = 4 P100 total. V100S partition: 6 nodes \u00d7 2 V100S per node = 12 V100 total (counted under v100_count). Maple also has legacy GPUs not represented in requested fields: 29 nodes \u00d7 1 NVIDIA Kepler K20 per node = 29 K20 total. No MCSR pages found indicating any H100 (SXM/PCIe), H200, A100 (40GB/80GB), A6000, or A40 GPUs."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be university-owned. Student data remains as provided."
+}

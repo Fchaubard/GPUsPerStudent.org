@@ -18,7 +18,7 @@ load_dotenv()
 
 # Configuration
 DATA_DIR = "data"
-UNIVERSITIES_FILE = os.path.join(DATA_DIR, "universities.csv")
+UNIVERSITIES_FILE = os.path.join(DATA_DIR, "filtered_national_universities_name_url.csv")
 GPU_PRICES_FILE = os.path.join(DATA_DIR, "gpu_prices.csv")
 CACHE_DIR = os.path.join(DATA_DIR, "cache")
 MASTER_OUTPUT_FILE = os.path.join("web", "data", "master_data.csv")
@@ -501,77 +501,53 @@ def query_openai_deep_research(university_name, prompt_template):
 
     # MULTI-QUERY APPROACH: Separate searches for better coverage
     
-    # Query 1: Student enrollment data - STRICT 2024/2025 REQUIREMENT
+    # Query 1: Student enrollment data - PRIORITIZE 2024/2025
     student_prompt = f"""Find CURRENT CS student enrollment data for {university_name}.
 
-## ABSOLUTE DATE REQUIREMENT - READ CAREFULLY
-
-You MUST find data from academic year 2024-2025 or Fall 2024. 
-**ANY DATA FROM 2023 OR EARLIER IS COMPLETELY UNACCEPTABLE AND MUST BE REJECTED.**
-
-Before using ANY number, verify:
-1. The page explicitly states "2024", "2024-2025", "Fall 2024", or "AY 2024-25"
-2. If the page says "2023-2024", "Fall 2023", or any earlier date - REJECT IT
-3. Check the page's "last updated" date if available
+## DATE REQUIREMENTS
+1. **Best**: 2024-2025, Fall 2024, or AY 2024-25.
+2. **Acceptable Fallback**: 2023-2024, Fall 2023. Explicitly note this as "[2023 DATA]" in the notes.
+3. **Emergency Fallback**: 2022-2023, Fall 2022. Only use if absolutely nothing newer exists. Note as "[2022 DATA]".
 
 ## Search Strategy
-
-Search in this order (stop when you find 2024+ data):
+Search in this order:
 1. "{university_name} computer science enrollment Fall 2024"
-2. "{university_name} CS department facts 2024"
-3. "{university_name} Common Data Set 2024-2025"
-4. "{university_name} registrar enrollment statistics 2024"
-5. site:cs.{university_name.lower().split()[0]}.edu enrollment 2024
+2. "{university_name} computer science enrollment Fall 2023"
+3. "{university_name} Common Data Set 2023-2024" (or 2024-2025)
+4. "{university_name} registrar enrollment statistics"
+5. site:cs.{university_name.lower().split()[0]}.edu enrollment
 
 ## Where to Look
-
-Best sources for CURRENT data:
-- **Common Data Set 2024-2025** - Usually published Fall 2024, look for section on degrees/majors
-- **University Factbook 2024** - Official institutional research pages
-- **CS Department "About" or "At a Glance" pages** - Often updated annually
-- **Graduate program pages** - Usually list current cohort sizes
-- **Registrar Fall 2024 enrollment reports**
+- **Common Data Set** (Section B or J)
+- **University Factbook** / Institutional Research (IR) dashboards
+- **CS Department "About"** pages
+- **Graduate school** admissions statistics
 
 ## Return Format
-
 Return JSON ONLY:
 {{
   "undergrad_cs_count": <number or 0>,
   "grad_cs_count": <MS/Masters students ONLY, number or 0>,
   "phd_cs_count": <PhD students ONLY, number or 0>,
-  "year": "<Prefer '2024-2025' or 'Fall 2024'. If not available, '2023-2024' or 'Fall 2023' is acceptable with warning>",
+  "year": "<e.g. 'Fall 2024', 'Fall 2023'>",
   "source_url": "<URL where you found this data>",
-  "notes": "<explain what specific data you found and where>"
+  "notes": "<explain source and any estimations/assumptions>"
 }}
 
 ## Validation Checklist
+[ ] I prioritized finding 2024 data.
+[ ] If I used 2023, I couldn't find 2024.
+[ ] The source_url is accessible.
+[ ] grad_cs_count excludes PhDs (if possible).
 
-Before returning data, confirm:
-[ ] I checked for 2024 data FIRST
-[ ] If using 2023 data, I noted it as a fallback
-[ ] The source_url is a working page with this data
-[ ] grad_cs_count is MS/Masters only (NOT PhD)
-[ ] phd_cs_count is doctoral/PhD only
+## If You Cannot Find Specific Breakdowns
+- If you only find "Total CS Students", estimate standard breakdowns based on:
+  - Undergraduate: ~70%
+  - MS: ~20%
+  - PhD: ~10%
+  - Note this estimation in the 'notes' field.
+"""
 
-## Data Year Priority
-
-1. **BEST**: 2024-2025, Fall 2024, AY 2024-25
-2. **ACCEPTABLE**: 2023-2024, Fall 2023 (add "[2023 DATA]" prefix to notes)
-3. **NOT ACCEPTABLE**: 2022 or earlier - set counts to 0
-
-## If You Cannot Find Any Recent Data
-
-If after thorough searching you CANNOT find 2023 or 2024 data:
-- Set all counts to 0
-- Set year to "NO_RECENT_DATA_FOUND"
-- In notes, explain what you searched and why data was unavailable
-
-## Reference Numbers (for sanity checking only - find actual data)
-
-These are rough estimates - your actual findings may differ:
-- Princeton CS: ~700-800 undergrads, ~50-70 MS, ~200-250 PhD
-- Stanford CS: ~800-1000 undergrads, ~300-400 MS, ~250-300 PhD  
-- Berkeley EECS: ~2000-2500 undergrads, ~350-450 MS, ~350-450 PhD"""
 
     # Query 2: GPU cluster data
     gpu_prompt = f"""Find GPU cluster specifications for {university_name}.
@@ -581,7 +557,7 @@ Search for:
 - "{university_name} HPC H100 A100 specifications"
 - "{university_name} AI computing infrastructure"
 
-For EACH cluster found, calculate: nodes × GPUs_per_node = total
+For EACH cluster found, calculate: nodes * GPUs_per_node = total
 
 Return JSON ONLY:
 {{
@@ -607,7 +583,7 @@ Return JSON ONLY:
   "notes": "<calculation breakdown>"
 }}
 
-IMPORTANT: Add up ALL clusters. If Sherlock has 728 GPUs and you can't determine model, estimate based on cluster age (older=V100/K80, newer=A100/H100)."""
+IMPORTANT: Add up ALL clusters. If you cannot determine model, estimate based on cluster age (older=V100, newer=A100/H100)."""
 
     try:
         # Execute both queries with gpt-5.2 and reasoning
@@ -764,8 +740,12 @@ def query_claude(university_name, prompt_template):
         response_text = ""
         
         with anthropic_client.messages.stream(
-            model="claude-opus-4-20250514",  # Claude Opus 4.5 with web search
+            model="claude-opus-4.5-20250514",  # Claude Opus 4.5 with web search and thinking
             max_tokens=16000,
+            thinking={
+                "type": "enabled",
+                "budget_tokens": 8000  # Allow extended thinking
+            },
             tools=[{
                 "type": "web_search_20250305",
                 "name": "web_search",
@@ -1391,15 +1371,17 @@ def main(target_university=None, provider="openai"):
         # Add Rank
         df_out['Rank'] = range(1, len(df_out) + 1)
         
-        df_out.to_csv(MASTER_OUTPUT_FILE, index=False)
-        print(f"Successfully saved {len(df_out)} records to {MASTER_OUTPUT_FILE}")
+        pass
+        # WARNING: Disabling direct overwrite to avoid destroying master data with single-entry runs.
+        # df_out.to_csv(MASTER_OUTPUT_FILE, index=False)
+        # print(f"Successfully saved {len(df_out)} records to {MASTER_OUTPUT_FILE}")
     else:
         print("No results generated.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run GPUsPerStudent Analysis")
     parser.add_argument("--university", "-u", type=str, help="Run for a specific university only")
-    parser.add_argument("--provider", "-p", type=str, default="openai", choices=["openai", "gemini", "claude", "ensemble"],
+    parser.add_argument("--provider", "-p", type=str, default="ensemble", choices=["openai", "gemini", "claude", "ensemble"],
                         help="API provider: openai, gemini, claude, or ensemble (all 3 + aggregation)")
     args = parser.parse_args()
     

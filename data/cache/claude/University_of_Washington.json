@@ -1,47 +1,75 @@
 {
   "university_name": "University of Washington",
-  "data_retrieved_date": "2025-12-14",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
-      "url": "https://hyak.uw.edu/tillicum/",
-      "data_found": "Tillicum: NVIDIA H200 GPUs with ultra-fast NVLink 4.0 interconnect and a 400 Gbps InfiniBand network"
+      "url": "https://hyak.uw.edu/",
+      "data_found": "UW's next-generation GPU-accelerated research computing platform is here. Discover UW's On Campus High-Performance Computing Cluster. Dive into the Tillicum GPU cluster with this guided introduction."
+    },
+    {
+      "url": "https://depts.washington.edu/uwrcc/hyak/",
+      "data_found": "Hyak is UW's high performance computing resource. Research Computing Club maintains a large account on Hyak's Klone cluster. This includes standard compute, GPU, and large memory nodes."
     },
     {
       "url": "https://my.environment.uw.edu/esits/esits-policies/hyak-policies/high-performance-computing/",
-      "data_found": "Hyak GPU node options available for purchase: 32-cores, 384GB, 2 x L40 GPUs (w/48GB per card); 16-cores, 192GB, 2 x H50 (w/40GB per card); 32-cores, 384GB, 2 x H100 (w/80GB per card)"
+      "data_found": "32-cores, 384GB, 2 x L40 GPUs (w/48GB per card) for $18,853 (pending order and delivery); 16-cores, 192GB, 2 x H50 (w/40GB per card) $23,125 (pending order and delivery); 32-cores, 384GB, 2 x H100 (w/80GB per card) $46,250 (pending order and delivery)"
     },
     {
-      "url": "https://hyak.uw.edu/blog/page/2/",
-      "data_found": "KLONE cluster launched in spring 2021 with 144 HPC nodes and 192 GPUs. In just a single year, grown to over 384 HPC nodes and 448 GPUs"
+      "url": "https://research-grad-ed.uwmedicine.org/research/hyak/",
+      "data_found": "GPU slices: GPU slices have larger slot fees than the typical HPC (CPU-only) slices due to higher consumption: $1,200 for a L40S GPU slice (1.5 slots), and $1,600 for a large GPU (H200) slice (2 slots). Tillicum is not part of HYAK and is not administered by RGE. Tillicum is the University of Washington's next generation, GPU-accelerated computing platform designed to support cutting-edge research in AI, machine learning, data science, and scientific simulation."
+    },
+    {
+      "url": "https://my.environment.uw.edu/esits/how-to-hyak/",
+      "data_found": "Klone nodes run Rocky 8 Linux and currently hosts over 18,000 compute cores for use by UW researchers."
+    },
+    {
+      "url": "https://www.hpcwire.com/off-the-wire/university-of-washington-research-computing-group-joins-openhpc/",
+      "data_found": "The University of Washington's flagship supercomputer, named HYAK, is a 15,000-core Intel based cluster with over 110 TB of memory and 1 PB of storage. HYAK also includes a heterogeneous accelerator sub-system with Xeon Phi nodes and GPUs."
+    },
+    {
+      "url": "https://hyak.uw.edu/blog/tags/gpu/",
+      "data_found": "We updated the GPU drivers to version 565.57.01 to patch security vulnerabilities CVE-2024-0117 through CVE-2024-0121 and CVE-2024-0126. During the January 12, 2021 mox maintenance period long overdue package updates will be applied. The most user impactful upgrade is the GPU driver from to 418.40.04 to 460.27.04 that will allow for CUDA11 support (up from CUDA10)."
     },
     {
       "url": "https://en.wikipedia.org/wiki/Paul_G._Allen_School_of_Computer_Science_and_Engineering",
-      "data_found": "The size of the undergraduate program has risen rapidly, more than tripling from 558 students in 2012 to 1,996 in 2021. In 2022, the Allen School had a total of 1,930 undergraduates majors"
-    },
-    {
-      "url": "https://datausa.io/profile/university/university-of-washington-seattle-campus",
-      "data_found": "In 2023, Computer Science awarded 495 bachelor's degrees. In 2021, University of Washington-Seattle Campus handed out 494 bachelor's degrees in computer science"
+      "data_found": "The size of the undergraduate program has risen rapidly, more than tripling from 558 students in 2012 to 1,996 in 2021. In 2022, the Allen School had a total of 1,930 undergraduates majors, with an incoming class of 526 students."
     },
     {
       "url": "https://www.petersons.com/graduate-schools/university-of-washington-college-of-engineering-department-of-computer-science-and-engineering-000_10032179.aspx",
-      "data_found": "549 Total Graduate Students; 2,456 Applied, 218 Accepted, 113 Enrolled"
+      "data_found": "549 Total Graduate Students; 2,456 Applied; 218 Accepted; 113 Enrolled; 42% International Breakout"
+    },
+    {
+      "url": "https://www.cs.washington.edu/academics/graduate/phd-program/phd-admissions/",
+      "data_found": "Our Ph.D. program receives applications from approximately 2,500 prospective graduate students, from around the globe each year."
+    },
+    {
+      "url": "https://www.cs.washington.edu/academics/phd/admissions/faq",
+      "data_found": "Admission to the Ph.D. program is extremely competitive. In 2023, we saw over 3,000 applications and send offers to 150 students. The average GPA of admits is 3.8, though GPA is not a major factor in admissions."
     },
     {
       "url": "https://www.cs.washington.edu/academics/graduate/phd-program/",
-      "data_found": "Each year, the Allen School welcomes around 60 new students interested in pursuing advanced academic or industry research careers to our Ph.D. program"
+      "data_found": "the Paul G. Allen School offers our 300 full-time graduate students a collegial and supportive learning environment; Each year, the Allen School welcomes around 60 new students interested in pursuing advanced academic or industry research careers to our Ph.D."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-washington-seattle-campus",
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at University of Washington-Seattle Campus were Other Research & Experimental Psychology (496 degrees awarded), Computer Science (495 degrees), and Information Technology (319 degrees)."
+    },
+    {
+      "url": "https://www.collegefactual.com/colleges/university-of-washington-seattle-campus/academic-life/academic-majors/computer-information-sciences/computer-science/",
+      "data_found": "During the 2021-2022 academic year, University of Washington - Seattle Campus handed out 494 bachelor's degrees in computer science. This is an increase of 18% over the previous year when 417 degrees were handed out. In 2022, 53 students received their master's degree in compsci from UW Seattle."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 1930,
-    "grad_cs_count": 549,
+    "undergrad_cs_count": 1996,
+    "grad_cs_count": 489,
     "phd_cs_count": 300,
-    "year": "2022-2023",
+    "year": "2024-2025",
     "source_url": "https://en.wikipedia.org/wiki/Paul_G._Allen_School_of_Computer_Science_and_Engineering",
-    "notes": "Undergraduate count (1930) from Wikipedia based on 2022 data. Graduate student total (549) from Peterson's includes both MS and PhD students. PhD count estimated at 300 based on the statement that Allen School welcomes 60 new PhD students per year and typical 5-year PhD duration (60 \u00d7 5 = 300)"
+    "notes": "Undergraduate CS enrollment based on Wikipedia article stating 1,996 students in 2021. Graduate CS count estimated from Peterson's data showing 549 total graduate students in CS/Engineering, with ~10% being PhD (based on 113 enrolled from 2,456 applied). PhD count based on Allen School website stating 300 full-time graduate students in Ph.D. program, with ~60 new students admitted annually."
   },
   "gpu_resources": {
-    "h100_sxm_count": 16,
-    "h100_pcie_count": 0,
+    "h100_sxm_count": -1,
+    "h100_pcie_count": -1,
     "h200_count": -1,
     "b100_count": 0,
     "b200_count": 0,
@@ -51,31 +79,31 @@
     "a6000_count": 0,
     "l40s_count": -1,
     "v100_count": -1,
-    "p100_count": -1,
+    "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA L40 (48GB)",
+        "model": "NVIDIA L40 GPUs (48GB)",
         "estimated_total": null,
-        "notes": "Available for purchase as 2x L40 GPU nodes for Hyak"
+        "notes": "Mentioned in Hyak node configurations with 2 x L40 GPUs per node"
       },
       {
-        "model": "NVIDIA H50 (40GB)",
+        "model": "NVIDIA H50 GPUs (40GB)",
         "estimated_total": null,
-        "notes": "Available for purchase as 2x H50 GPU nodes for Hyak"
+        "notes": "Mentioned in Hyak node configurations with 2 x H50 GPUs per node"
       },
       {
-        "model": "Tesla P100",
+        "model": "Various GPUs in Hyak cluster",
         "estimated_total": null,
-        "notes": "Mentioned in Hyak documentation but no total count found"
+        "notes": "HYAK described as having heterogeneous accelerator sub-system with GPUs for machine learning and AI research"
       }
     ],
-    "source_url": "https://hyak.uw.edu/blog/page/2/",
-    "notes": "GPU counts are challenging to determine precisely. The Hyak Klone cluster had 448 GPUs total as of 2022 (grown from 192 in 2021). Specific models available include H100 (available as 2x H100 node configurations), L40, H50, and Tesla P100. Tillicum cluster has H200 GPUs but exact count not specified. The H100 count of 16 represents minimum confirmed (8 nodes \u00d7 2 GPUs based on available purchase configurations). Actual counts across all UW systems are likely significantly higher but not publicly documented with specificity."
+    "source_url": "https://hyak.uw.edu/",
+    "notes": "GPU inventory is not publicly enumerated in detail. Sources indicate: 1) Hyak Klone cluster with 18,000+ CPU cores and GPU nodes including L40, L40S, H50, and H100 GPUs available through node purchases; 2) Tillicum GPU cluster for AI/ML research (separate from Hyak); 3) Research Computing Club maintains GPU nodes on Hyak. Specific GPU counts not found in public documentation - likely requires institutional access for detailed inventory. GPU driver updates indicate support for modern NVIDIA GPUs (CUDA 13 support as of 2025)."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "Data collected via systematic web searches. GPU infrastructure at UW consists of multiple systems: (1) Hyak Klone cluster with 448+ GPUs including H100, L40, H50, and legacy models; (2) New Tillicum cluster with H200 GPUs; (3) Research Computing Club provides GPU access to students. Total GPU counts are underestimated as specific model breakdowns were not publicly available for the full 448+ GPU inventory."
+  "analysis_notes": "University of Washington operates multiple GPU-accelerated computing platforms including Hyak Klone and Tillicum clusters. While specific GPU counts are not publicly available, the infrastructure includes modern GPUs (H100, H200, L40/L40S) available through a condo model where labs purchase nodes. CS enrollment data shows approximately 1,996 undergraduates, 489 graduate students (MS), and 300 PhD students based on multiple sources."
 }

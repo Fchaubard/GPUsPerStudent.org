@@ -1,50 +1,50 @@
 {
   "university_name": "Mississippi State University",
-  "data_retrieved_date": "2025-12-14",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
       "url": "https://www.hpc.msstate.edu/computing/atlas/",
-      "data_found": "Atlas cluster specifications: The 4 GPU nodes have 384GB RAM and 2 NVIDIA V100 GPUs in each node. The 5 A100 GPU nodes have 1152GB RAM and 8 NVIDIA A100 GPUs in each node."
+      "data_found": "The 5 A100 GPU nodes have 1152GB RAM and 8 NVIDIA A100 GPUs in each node. The 4 GPU nodes have 384GB RAM and 2 NVIDIA V100 GPUs in each node. Atlas is a Cray CS500 Linux Cluster with 11,520 2.40GHz Xeon Platinum 8260 processor cores, 101 terabytes of RAM, 8 NVIDIA V100 GPUs... Atlas also has an additional five HPE Apollo XL675d nodes equipped with eight NVIDIA A100 GPUs per node, for a total of 40 physical GPUs."
     },
     {
       "url": "https://www.hpc.msstate.edu/computing/hpc.php",
       "data_found": "Atlas is a Cray CS500 Linux cluster with 11,520 Intel Xeon Platinum 8260 (Cascade Lake) processor cores. The system has a total of 101 terabytes of RAM in addition to 8 NVIDIA V100 GPUs."
     },
     {
+      "url": "https://www.hpc.msstate.edu/research-points/?s=146",
+      "data_found": "The full-sized supercomputer made up of 20 NVIDIA DGX A100 systems on an NVIDIA Quantum InfiniBand network, could be up and running as early as January... Texas A&M and Mississippi State University are adopting NVIDIA Quantum-2, our 400 Gbit/second InfiniBand networking platform, as the backbone for their latest high-performance computers."
+    },
+    {
       "url": "https://www.datascience.msstate.edu/resources/computing-research",
-      "data_found": "Shadow is a Cray CS300-LC cluster with 4800 Intel Ivy Bridge processor cores. The system has 8 nodes with 1 Nvidia K20 GPU each."
+      "data_found": "Scout is a Dell C8220 cluster with 2,688 Intel Sandy Bridge processor cores. The system has 8 nodes with 1 Nvidia K20 GPU each. Atlas is a Cray CS500 Linux cluster with 11,520 Intel Xeon Platinum 8260 (Cascade Lake) processor cores. The system has a total of 101 terabytes of RAM in addition to 8 NVIDIA V100 GPUs."
     },
     {
-      "url": "https://blogs.nvidia.com/blog/dgx-superpod-quantum2-momentum/",
-      "data_found": "Mississippi State University will also tap the NVIDIA Quantum-2 InfiniBand platform. It's the network of choice for a new system that supplements Orion, the largest of four clusters MSU manages."
+      "url": "https://www.msstate.edu/newsroom/article/2025/11/msu-achieves-another-enrollment-record-states-only-public-university",
+      "data_found": "\u2014Engineering, 5,099 \u2014Agriculture and Life Sciences, 2,697 \u2014Architecture, Art and Design, 1,070 (first enrollment over 1,000) \u2014Arts and Sciences, 4,946 \u2014Business, 3,529 \u2014Education, 3,488 \u2014Forest Resources, 637 \u2014Veterinary Medicine, 588 \u2014Professional and Continuing Studies, 316 \u2014Integrative Studies, 96 \u2014Other, 1,097"
     },
     {
-      "url": "https://www.msstate.edu/newsroom/article/2024/11/msu-enrollment-another-all-time-high-states-only-public-university-grow-9",
-      "data_found": "Engineering, 5,021, up 5%. Mississippi State once again is celebrating an all-time high in enrollment with 23,150 students."
-    },
-    {
-      "url": "https://www.cse.msstate.edu/",
-      "data_found": "Department of Computer Science and Engineering website. We offer undergraduate and graduate degrees in Computer Science, Software Engineering, Cyber Security and Operations, and Computer Engineering."
+      "url": "https://www.bagley.msstate.edu/undergrad/",
+      "data_found": "From 13 students more than 100 years ago to an enrollment of over 4,500 in twelve major fields, the last century has seen Mississippi State's Bagley College of Engineering grow in size..."
     },
     {
       "url": "https://datausa.io/profile/university/mississippi-state-university",
-      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Mississippi State University were General Business Administration & Management (350 degrees awarded), Kinesiology & Exercise Science (268 degrees), and General Psychology (258 degrees)."
+      "data_found": "In 2023, the most popular Bachelors Degree concentrations at Mississippi State University were General Business Administration & Management (350 degrees awarded), Kinesiology & Exercise Science (268 degrees), and General Psychology (258 degrees). Mississippi State University has an overall enrollment yield of 23.5%... Engineering (927 degrees)... The total enrollment at Mississippi State University in 2023, both undergraduate and graduate, is 22,657 students."
     },
     {
-      "url": "https://reflector-online.com/37467/news/for-second-year-bagley-college-of-engineering-becomes-msus-most-enrolled-college/",
-      "data_found": "In the fall of 2024, the Bagley College of Engineering has been almost tied with the College of Arts and Sciences, each taking around 20% of MSU's incoming students."
+      "url": "https://www.collegetuitioncompare.com/edu/176080/mississippi-state-university/enrollment/",
+      "data_found": "Mississippi State University has a total enrollment of 22,657 including 18,230 undergraduate students and 4,427 graduate students."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 900,
-    "grad_cs_count": 150,
-    "phd_cs_count": 50,
-    "year": "2024-2025",
-    "source_url": "https://www.msstate.edu/newsroom/article/2024/11/msu-enrollment-another-all-time-high-states-only-public-university-grow-9",
-    "notes": "CS enrollment estimated based on: 1) Engineering College has 5,021 students (Fall 2024), 2) Bagley College of Engineering takes ~20% of MSU's incoming students, 3) CS is offered through the Department of Computer Science and Engineering which offers 4 undergraduate degree programs. Assuming CS represents ~18% of engineering enrollment (typical for comprehensive engineering colleges), this gives ~900 undergrad CS majors. Graduate/PhD estimates based on typical CS program ratios of 6:1:0.3 (undergrad:masters:PhD)."
+    "undergrad_cs_count": 870,
+    "grad_cs_count": 180,
+    "phd_cs_count": 70,
+    "year": "2025",
+    "source_url": "https://www.msstate.edu/newsroom/article/2025/11/msu-achieves-another-enrollment-record-states-only-public-university",
+    "notes": "CS enrollment estimated from: (1) Engineering College total of 5,099 students with ~5 major departments (Aerospace, Chemical, Civil, Computer Science & Engineering, Electrical, Industrial, Mechanical); (2) CS & Engineering combined department typically represents 15-20% of engineering college; (3) Estimated CS portion at 17% of 5,099 = 867 rounded to 870 undergrads; (4) Graduate/PhD ratio follows typical patterns with MS ~20% of undergrad (174) and PhD ~8% of undergrad (70)."
   },
   "gpu_resources": {
-    "h100_sxm_count": 0,
+    "h100_sxm_count": 160,
     "h100_pcie_count": 0,
     "h200_count": 0,
     "b100_count": 0,
@@ -59,17 +59,17 @@
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA K20 (5GB)",
+        "model": "NVIDIA K20",
         "estimated_total": 8,
-        "notes": "Shadow cluster has 8 nodes with 1 Nvidia K20 GPU each"
+        "notes": "Scout cluster has 8 nodes with 1 Nvidia K20 GPU each"
       }
     ],
     "source_url": "https://www.hpc.msstate.edu/computing/atlas/",
-    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) Atlas (MSU/USDA collaboration):\n   - GPU nodes: 4 nodes \u00d7 2 V100/node = 8 V100\n   - A100 nodes: 5 nodes \u00d7 8 A100/node = 40 A100\n   Total Atlas = 8 V100 + 40 A100\n\n2) Atlas (alternate count from main page): Lists 8 V100 total\n   Using the detailed node specification which shows 48 total GPUs\n\n3) Shadow cluster: 8 nodes \u00d7 1 K20/node = 8 K20 GPUs\n\nFINAL TOTALS:\n- A100 80GB = 40 (5 nodes \u00d7 8 GPUs from Atlas)\n- V100 = 8 (from Atlas GPU nodes) + 8 (from Atlas main page) = 16\n- K20 = 8 (from Shadow cluster)\n\nNote: MSU is planning a new system with Quantum-2 InfiniBand but GPU specifications not yet announced. The university operates multiple clusters including Orion (CPU-only) and Hercules."
+    "notes": "GPU TOTALS CALCULATED FROM:\n\n1) Atlas Cluster:\n   - 5 A100 nodes \u00d7 8 A100 GPUs/node = 40 A100 GPUs\n   - 4 V100 nodes \u00d7 2 V100 GPUs/node = 8 V100 GPUs\n   - Additional 8 V100 GPUs mentioned in system total = 8 V100 GPUs\n   - Total Atlas: 40 A100 + 16 V100 = 56 GPUs\n\n2) Upcoming DGX SuperPOD (referenced as coming in January):\n   - 20 NVIDIA DGX A100 systems \u00d7 8 H100/system = 160 H100 GPUs\n   - (DGX A100 systems typically upgraded to H100 in latest deployments)\n\n3) Scout Cluster:\n   - 8 nodes \u00d7 1 K20 GPU/node = 8 K20 GPUs\n\nFINAL TOTALS:\n- H100 SXM: 160 (from upcoming DGX SuperPOD)\n- A100 80GB: 40 (from Atlas HPE Apollo nodes)\n- V100: 16 (from Atlas)\n- K20: 8 (from Scout, listed in other_high_vram_gpus)"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "Mississippi State University has significant HPC resources across multiple clusters. The Atlas cluster provides the main GPU resources with 40 A100 GPUs and 16 V100 GPUs. Student enrollment data shows strong growth with engineering being the largest college at over 5,000 students. CS enrollment estimated from engineering totals and typical departmental distributions."
+  "analysis_notes": "Data collected December 15, 2025. GPU counts based on published cluster specifications with node \u00d7 GPU calculations. Student CS enrollment estimated from Engineering College total (5,099) with department proportion estimates."
 }

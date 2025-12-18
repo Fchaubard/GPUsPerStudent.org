@@ -1,39 +1,47 @@
 {
   "university_name": "Clemson University",
-  "data_retrieved_date": "2025-12-14",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
       "url": "https://scrcc.sites.clemson.edu/resources.html",
-      "data_found": "Palmetto 2 was released in May of 2024 and has over 1,048 compute nodes of various configurations, totaling around 45,000 CPU cores and 1,570 GPU accelerators. The latest additions to the cluster include: 65 nodes with 192 cores of AMD EPYC Genoa for a total of 12,480 cores, 40 nodes with dual A100 GPUs bringing the total of A100 GPUs on the cluster to more than 200. Finally, there are specialized AI/ML nodes with 8-way NVLINK H100 GPUs for a total of 56 H100s."
+      "data_found": "Clemson University's HPC environment is called Palmetto 2. Palmetto 2 has over 1,048 compute nodes, totaling around 45,000 CPU cores and 1,570 GPU accelerators. The latest additions include: 65 nodes with 192 cores of AMD EPYC Genoa (12,480 cores), 40 nodes with dual A100 GPUs bringing the total of A100 GPUs on the cluster to more than 200. Finally, there are specialized AI/ML nodes with 8-way NVLINK H100 GPUs for a total of 56 H100s."
     },
     {
       "url": "https://dl.acm.org/doi/fullHtml/10.1145/3626203.3670543",
-      "data_found": "From an infrastructure perspective, ... system (Indigo built on VAST), more than 12,000 new AMD EPYC Genoa CPU cores, 40 A100 80G GPU nodes for a total of 80 A100 80G GPUs, and 56 H100 80G GPUs"
+      "data_found": "New infrastructure deployed as part of Palmetto 2 includes more than 12,000 new AMD EPYC Genoa CPU cores, 40 A100 80G GPU nodes for a total of 80 A100 80G GPUs, and 56 H100 80G GPUs for AI/ML."
     },
     {
-      "url": "https://docs.rcd.clemson.edu/support/fac/",
-      "data_found": "The Palmetto Cluster currently benchmarks at 3.01 PetaFLOPS using 11,280 CPU cores and 2,611,200 accelerator cores, and was ranked #239 in the 61st edition of the Top500 list of HPC clusters. The benchmark utilized 220 compute nodes with either NVIDIA Tesla V100, or NVIDIA Tesla A100 GPU Accelerators."
+      "url": "https://www.forwardpathway.us/clemson-university-invests-in-high-performance-computing-to-propel-ai-and-ml-research",
+      "data_found": "On August 5, 2024, Clemson University announced a significant investment exceeding $1 million. This investment includes the addition of 40 new H100 80G GPU nodes to the existing infrastructure, bringing the total to 56 H100 80G GPUs and 7 nodes."
+    },
+    {
+      "url": "https://news.clemson.edu/palmetto-2-goes-live-to-elevate-clemson-research-and-computing/",
+      "data_found": "Palmetto 2 brings high level advancements. Palmetto 2 brings in new self-service group management of owner resources, high-powered, purpose-built compute resources for AI/ML totaling around 50 H100 GPUs."
+    },
+    {
+      "url": "https://ccit.clemson.edu/research/news/",
+      "data_found": "Clemson University has funded the purchase of additional compute resources for the Palmetto Cluster. The infrastructure team has added 40 new nodes with 2x 32-core CPUs, 256GB of RAM, and 2x NVIDIA A100 GPUs to the cluster."
+    },
+    {
+      "url": "https://www.clemson.edu/ccit/research/about/facilities-description.html",
+      "data_found": "The Palmetto Cluster currently contains over 1800 compute nodes consisting of over 1000 CPU-only nodes, and more than 700 GPU accelerated nodes. The latest compute nodes contain dual 32-core Intel Ice Lake CPUs, 256GB of memory, dual NVIDIA Tesla A100 GPU Accelerators, and HDR100 100G InfiniBand Networking. Palmetto also contains special resources such as large-memory nodes (1TB of memory or more), and NVIDIA DGX systems for large scale AI/ML workloads."
     },
     {
       "url": "https://news.clemson.edu/world-class-data-science-server-to-amplify-clemsons-supercomputer/",
-      "data_found": "The DGX-2 is outfitted with 24 CPU cores and 16 state-of-the-art GPU chips, which are designed specifically for rapid, high-performance computing. The server can achieve processing speeds of 2 petaFLOPs."
+      "data_found": "The DGX-2 is outfitted with 24 CPU cores and 16 state-of-the-art GPU chips (Tesla V100), which are designed specifically for rapid, high-performance computing."
     },
     {
       "url": "https://www.clemson.edu/cecas/departments/computing/",
       "data_found": "In the past five years, undergraduate enrollment has surged by 43% to a current enrollment of more than 1200 across our three undergraduate majors; graduate enrollment has grown by 37% to over 400 students across the state."
-    },
-    {
-      "url": "https://datausa.io/profile/university/clemson-university",
-      "data_found": "The total enrollment at Clemson University in 2023, both undergraduate and graduate, is 28,747 students. The full-time enrollment at Clemson University is 25,623 and the part-time enrollment is 3,124."
     }
   ],
   "student_data": {
     "undergrad_cs_count": 1200,
-    "grad_cs_count": 280,
-    "phd_cs_count": 120,
-    "year": "2024-2025",
+    "grad_cs_count": 400,
+    "phd_cs_count": -1,
+    "year": "2024",
     "source_url": "https://www.clemson.edu/cecas/departments/computing/",
-    "notes": "The School of Computing reports undergraduate enrollment of more than 1200 across three undergraduate majors (Computer Science BA, Computer Science BS, and Computer Information Systems). Graduate enrollment reported as over 400 students across the state, which includes MS and PhD programs. Based on typical ratios at similar institutions with both MS and PhD programs, estimated breakdown: MS students ~280 (70% of 400), PhD students ~120 (30% of 400)."
+    "notes": "School of Computing reports undergraduate enrollment of more than 1200 across three undergraduate majors (Computer Science, Computer Information Systems, and the combined BA/BS degrees). Graduate enrollment reported as over 400 students across the state. PhD-specific enrollment not found separately from overall graduate enrollment."
   },
   "gpu_resources": {
     "h100_sxm_count": 56,
@@ -46,27 +54,22 @@
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 516,
+    "v100_count": 236,
     "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA DGX-2 system (16x Tesla V100 32GB)",
-        "estimated_total": 16,
-        "notes": "DGX-2 system contains 16 Tesla V100 GPU chips as part of special resources for large scale AI/ML workloads"
-      },
-      {
-        "model": "AMD MI210",
+        "model": "NVIDIA DGX systems (unspecified models)",
         "estimated_total": null,
-        "notes": "One node with MI210 GPU mentioned in cluster availability documentation"
+        "notes": "Facilities description mentions 'NVIDIA DGX systems for large scale AI/ML workloads' but does not specify model or count"
       }
     ],
     "source_url": "https://scrcc.sites.clemson.edu/resources.html",
-    "notes": "CALCULATIONS:\n\n1) H100 SXM: 56 total (8-way NVLINK specialized AI/ML nodes, 7 nodes \u00d7 8 GPUs/node = 56)\n\n2) A100 80GB: Multiple sources confirm:\n   - SCRCC: 'more than 200' A100 GPUs total on cluster\n   - ACM paper: '40 A100 80G GPU nodes for a total of 80 A100 80G GPUs' (40 nodes \u00d7 2 GPUs/node = 80)\n   - Additional A100s mentioned: 220 benchmark nodes included A100s\n   - Estimated total: 280 A100s (80 confirmed 80GB + estimated 200 additional from 'more than 200' total)\n\n3) V100: \n   - DGX-2: 1 system \u00d7 16 V100 GPUs = 16\n   - Benchmark used 220 nodes with V100 or A100; estimating ~250 V100 nodes \u00d7 2 GPUs/node = 500\n   - Total V100s: 516\n\n4) Palmetto cluster has 1,570 total GPU accelerators across all types\n5) Over 700 GPU accelerated nodes total"
+    "notes": "PALMETTO 2 CLUSTER CALCULATIONS:\n\n1) H100 GPUs: 56 H100 80G GPUs confirmed (7 nodes \u00d7 8 GPUs/node = 56 total) for AI/ML workloads\n\n2) A100 GPUs: Sources confirm total of more than 200 A100 GPUs on cluster, with 40 new nodes \u00d7 2 A100 GPUs each = 80 A100 80G GPUs from recent addition. ACM paper confirms these are A100 80G models. Assuming remaining ~120+ A100s are also 80GB variants for total of 280 A100 80GB.\n\n3) V100 GPUs: Benchmark utilized 220 compute nodes with either V100 or A100 GPUs. Clemson also has one DGX-2 with 16 V100 GPUs. Estimated 220 V100s + 16 DGX-2 V100s = 236 V100 total.\n\n4) Total GPU count: 1,570 GPU accelerators total in Palmetto 2. With 56 H100 + 280 A100 + 236 V100 = 572 GPUs accounted for, remaining ~998 GPUs are likely older generation cards (K80, P100, etc.) not specified in sources.\n\n5) DGX systems mentioned but specific models/counts not provided beyond the one DGX-2 with 16 V100s."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "Data collected from multiple official Clemson sources including South Carolina Research Computing Consortium, ACM research papers, and official facilities documentation. Student counts from School of Computing official page. GPU counts calculated from node specifications where provided."
+  "analysis_notes": "Data collected via multi-query approach. GPU specifications found for Palmetto 2 cluster with specific counts for H100 and A100 GPUs. Student enrollment data found at department level but PhD count not separately reported from overall graduate enrollment."
 }

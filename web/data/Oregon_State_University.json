@@ -1,0 +1,83 @@
+{
+  "university_name": "Oregon State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://it.engineering.oregonstate.edu/hpc/about-cluster",
+      "data_found": "COE HPC hardware summary and per-node specs: 3 DGX H100 nodes (8 H100 each), 1 DGX H200 node (8 H200), 5 DGX2 nodes (16 V100 each), cn-w-1 (2 H100), 3 L40S nodes (8 L40S each), multiple A40 nodes (including cn-t-1 with 3 A40; cn-s[1-5] with 2 A40; cn-r[1-6] with 2 A40; sail-gpu0 with 8 A40), plus RTX8000 and RTX6000 nodes, and a cn-p-1 with 1 V100S."
+    },
+    {
+      "url": "https://docs.hpc.oregonstate.edu/cqls/gpu/",
+      "data_found": "CQLS free GPU nodes list: cqls-gpu1 (5x V100 32GB), cqls-gpu3 (4x T4 16GB), cqls-p9-1 (2x V100 16GB), cqls-p9-2 (4x V100 32GB), cqls-p9-3 (4x V100 16GB), cqls-p9-4 (4x V100 16GB), ayaya01 (8x GTX 1080 Ti), ayaya02 (8x GTX 1080 Ti)."
+    },
+    {
+      "url": "https://docs.hpc.oregonstate.edu/hpcman/commands/queue/avail/",
+      "data_found": "Example `hqavail` output shows additional GPU hosts/types: ewg has a100:2(...); yuyuko and youmu show gh200_4...; cqls-gpu1 shows v100:5(...). (VRAM details truncated in the example table.)"
+    },
+    {
+      "url": "https://blogs.oregonstate.edu/cqls/2025/10/17/osu-high-performance-computing-unification/",
+      "data_found": "States Wildwood HPC has ~65 GPUs available across all.q and priority queues (used as the total GPU count baseline for CQLS/CEOAS, with unspecified remainder estimated)."
+    },
+    {
+      "url": "https://institutionalresearch.oregonstate.edu/sites/institutionalresearch.oregonstate.edu/files/2024-11/enroll-fall-2024_v3.pdf",
+      "data_found": "Student enrollment: 4692 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 4692,
+    "grad_cs_count": 428,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://institutionalresearch.oregonstate.edu/sites/institutionalresearch.oregonstate.edu/files/2024-11/enroll-fall-2024_v3.pdf",
+    "notes": "Source is OSU Institutional Research 'Enrollment Summary MAIN Fall Term 2024' (the PDF title/header explicitly says 'Fall Term 2024'; URL path indicates it was posted under 2024-11). In the 'Enrollment by Major' table for the College of Engineering, the row 'Computer Science' shows UNDERGRAD = 4692 and GRAD = 428 (TOTAL = 5120). However, this report does NOT break the CS GRAD headcount into Master's vs PhD/Doctoral for the Computer Science program, so grad_cs_count (MS only) and phd_cs_count (PhD only) are set to 0 to avoid misreporting."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 24,
+    "h100_pcie_count": 2,
+    "h200_count": 8,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 3,
+    "a100_40gb_count": 0,
+    "a40_count": 33,
+    "a6000_count": 0,
+    "l40s_count": 24,
+    "v100_count": 115,
+    "p100_count": 0,
+    "gh200_count": 8,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA Quadro RTX 8000",
+        "count": 24,
+        "vram_gb": 44,
+        "cluster": "OSU College of Engineering HPC"
+      },
+      {
+        "model": "NVIDIA Quadro RTX 6000",
+        "count": 8,
+        "vram_gb": 22,
+        "cluster": "OSU College of Engineering HPC"
+      },
+      {
+        "model": "NVIDIA Tesla T4",
+        "count": 4,
+        "vram_gb": 16,
+        "cluster": "OSU CQLS/CEOAS (Wildwood) HPC"
+      },
+      {
+        "model": "NVIDIA GeForce GTX 1080 Ti",
+        "count": 16,
+        "vram_gb": 11,
+        "cluster": "OSU CQLS/CEOAS (Wildwood) HPC"
+      }
+    ],
+    "source_url": "https://it.engineering.oregonstate.edu/hpc/about-cluster",
+    "notes": "Clusters included: (1) OSU College of Engineering (COE) HPC cluster; (2) OSU CQLS/CEOAS Wildwood HPC (as documented by CQLS GPU page + hpcman `hqavail` example + 65-GPU statement).\n\nCOE HPC calculations (nodes \u00d7 GPUs/node):\n- DGX H100: 3 \u00d7 8 = 24 H100 (counted as H100 SXM, since DGX)\n- DGX H200: 1 \u00d7 8 = 8 H200\n- cn-w-1: 1 \u00d7 2 = 2 H100 (assumed PCIe because it is a Dell R760xa server, not DGX)\n- DGX2: 5 \u00d7 16 = 80 V100\n- cn-p-1: 1 \u00d7 1 = 1 V100S (included in v100_count)\n- L40S nodes: 3 \u00d7 8 = 24 L40S\n- A40 nodes (from per-node section): cn-t-1 (1\u00d73=3) + cn-s[1-5] (5\u00d72=10) + cn-r[5-6] (2\u00d72=4) + cn-r[1-4] (4\u00d72=8) + sail-gpu0 (1\u00d78=8) => 3+10+4+8+8 = 33 A40\n- RTX 8000: cn-gpu[6-7] (2\u00d78=16) + cn-gpu5 (1\u00d78=8) => 24 RTX8000\n- Quadro RTX 6000: optimus (1\u00d78=8) => 8 RTX6000\n\nCQLS/CEOAS (Wildwood) calculations (nodes \u00d7 GPUs/node) from CQLS GPU page:\n- V100: cqls-gpu1 (1\u00d75=5) + cqls-p9-1 (1\u00d72=2) + cqls-p9-2 (1\u00d74=4) + cqls-p9-3 (1\u00d74=4) + cqls-p9-4 (1\u00d74=4) => 19 V100\n- T4: cqls-gpu3 (1\u00d74=4) => 4 T4\n- GTX 1080 Ti: ayaya01 (1\u00d78=8) + ayaya02 (1\u00d78=8) => 16 GTX1080Ti\n\nAdditional Wildwood GPUs inferred from `hqavail` example (counts inferred from truncated strings):\n- A100: host ewg shows a100:2(...) => 2 A100 (VRAM not visible; counted as A100 80GB by 'newer hardware' heuristic)\n- GH200: hosts yuyuko and youmu show gh200_4... => 2 nodes \u00d7 4 = 8 GH200\n\nWildwood total GPUs statement is ~65; explicitly listed+inferred above sums to 19(V100)+4(T4)+16(1080Ti)+2(A100)+8(GH200)=49 GPUs. Remaining 65-49=16 GPUs are not specified in public docs; per instruction, estimated as older-generation V100 => +16 V100.\n\nGrand totals:\n- H100 SXM: 24\n- H100 PCIe: 2\n- H200: 8\n- A100 80GB: 2(inferred from ewg a100:2) + 1(aerosmith A100 80GB mentioned in CQLS blog snippet) = 3\n- V100: 81(COE) + 19(known Wildwood) + 16(estimated Wildwood remainder) = 116; minus 1 because aerosolmith A100 mention overlaps with Wildwood baseline? (No overlap with V100) => reported v100_count=115 because COE V100 total is 80+1=81 and Wildwood V100 total is 19+15=34 (using 65-50=15 remainder after also counting aerosmith A100 80GB as 1 GPU)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: grad_cs_count updated to 428 based on the provided source URL. It represents the total graduate CS enrollment (MS + PhD). phd_cs_count remains 0 as the source does not differentiate between MS and PhD students."
+}

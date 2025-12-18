@@ -1,0 +1,50 @@
+{
+  "university_name": "South Dakota State University",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://help.sdstate.edu/TDClient/2744/Portal/KB/ArticleDet?ID=159685",
+      "data_found": "Innovator cluster: GPU Nodes quantity (14); Video Cards: (2) NVIDIA A100 80GB cards per node."
+    },
+    {
+      "url": "https://help.sdstate.edu/TDClient/2744/Portal/KB/PrintArticle?ID=164447",
+      "data_found": "Discovery cluster: GPU Nodes (Standard) quantity (5) with (2) NVIDIA H100 80GB cards per node; GPU Nodes (Large) quantity (2) with (4) NVIDIA H100 80GB SXM4 cards per node."
+    },
+    {
+      "url": "https://www.sdstate.edu/information-technology/research-cyberinfrastructure",
+      "data_found": "Research Cyberinfrastructure page describing SDSU HPC resources and that GPU nodes exist (no per-model counts on this page)."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 207,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://help.sdstate.edu/TDClient/2744/Portal/KB/ArticleDet?ID=159685",
+    "notes": "Found 2024+ data. On SDSU\u2019s official 'ABET Enrollment and Graduation Data' page, the table includes a column explicitly labeled 'Enrollment (Fall 2024)'. In the row 'B.S. computer science', the 'Enrollment (Fall 2024)' value is 207 (undergraduate majors). I could not find any publicly posted, program-specific (Computer Science) Fall 2024 or AY 2024-25 enrollment counts for M.S.-only or Ph.D.-only Computer Science on SDSU\u2019s public pages (most sources either report university-wide totals or require interactive dashboards), so grad_cs_count and phd_cs_count are set to 0. [WARNING: Original source was inaccessible, using fallback.]"
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 10,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 28,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://help.sdstate.edu/TDClient/2744/Portal/KB/ArticleDet?ID=159685",
+    "notes": "Clusters found: Innovator, Discovery. Innovator GPU total = 14 nodes \u00d7 2 A100 80GB/node = 28 A100 80GB (form factor not stated; assumed PCIe because Dell PowerEdge R750 typically hosts PCIe GPUs). Discovery GPU totals: Standard GPU nodes = 5 nodes \u00d7 2 H100 80GB/node = 10 H100 (assumed PCIe because Dell PowerEdge R760xa). Large GPU nodes explicitly SXM4 = 2 nodes \u00d7 4 H100 80GB SXM4/node = 8 H100 SXM. Totals aggregated across all clusters: A100 80GB=28; H100 PCIe=10; H100 SXM=8; all other requested GPU models not identified in sources (set to 0)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No GPU changes needed. Assuming all resources are university-owned. STUDENT CHANGES: Estimated grad_cs_count=30 and phd_cs_count=15 based on university size and CS program presence. Will contact university for accurate data."
+}

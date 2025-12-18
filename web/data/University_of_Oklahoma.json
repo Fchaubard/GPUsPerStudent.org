@@ -1,0 +1,60 @@
+{
+  "university_name": "University of Oklahoma",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.ou.edu/oscer/resources/hpc",
+      "data_found": "OSCER Supercomputer GPU inventory table: V100=2 (32GB PCIe), RTX 6000 Ada=16 (48GB PCIe), L40S=4 in production + 24 coming (48GB PCIe), A100 40GB PCIe=11, A100 40GB SXM=16, A100 80GB PCIe=18, A100 80GB SXM=4, H100 80GB PCIe=12, H100 80GB SXM=8 coming, H100 NVL 94GB PCIe=2 coming."
+    },
+    {
+      "url": "https://www.ou.edu/disc/resources/cpu-and-gpu-resources-on-the-oscer-supercomputer.html",
+      "data_found": "DISC-funded nodes on OSCER: 1\u00d7 Quad 80GB A100 node; 5\u00d7 Dual 80GB A100 nodes; 2\u00d7 Dual 80GB H100 nodes (subset of OSCER GPU inventory)."
+    },
+    {
+      "url": "https://www.ou.edu/coe/cobre/resources/equipment-listing.html",
+      "data_found": "COBRE listing: 4 Dell Precision 7960 rack workstations deployed at OSCER, each with 2\u00d7 RTX 6000 Ada GPUs (supports the 2-GPU-per-node assumption for RTX 6000 Ada nodes)."
+    },
+    {
+      "url": "https://www.ou.edu/coe/cs/about/enrollment.html",
+      "data_found": "Student enrollment: 779 undergrad, 139 grad, 44 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 779,
+    "grad_cs_count": 139,
+    "phd_cs_count": 44,
+    "year": "Fall 2024",
+    "source_url": "https://www.ou.edu/coe/cs/about/enrollment.html",
+    "notes": "Source is OU School of Computer Science page 'Enrollment & Degrees Granted' (Updated 7/7/2025). It includes a 'CS Undergraduate Enrollment' table showing Fall 2024 = 779. It also includes a 'CS Graduate Enrollment' table with separate rows for MS (Fall 2024 = 138), MS Online (Fall 2024 = 1), and PhD (Fall 2024 = 44). grad_cs_count is Masters-only and is computed as MS + MS Online for Fall 2024 (138 + 1 = 139)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 8,
+    "h100_pcie_count": 14,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 22,
+    "a100_40gb_count": 27,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 28,
+    "v100_count": 2,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA RTX 6000 Ada (48GB)",
+        "count": 16,
+        "interface": "PCIe 4"
+      }
+    ],
+    "source_url": "https://www.ou.edu/oscer/resources/hpc",
+    "notes": "Cluster(s) found: OU OSCER Supercomputer (Schooner/OSCER HPC) GPU inventory.\n\nCounts summed across the OSCER GPU inventory table, including both 'In Production' and 'Quantity Coming' rows.\n\nNode\u00d7GPU breakdown (using explicit node configs where stated; otherwise inferred from common/mentioned configurations):\n- V100 32GB PCIe: assumed 2 nodes \u00d7 1 GPU/node = 2 total.\n- RTX 6000 Ada 48GB PCIe: inferred dual-GPU workstations/nodes (supported by COBRE listing): 8 nodes \u00d7 2 GPUs/node = 16 total.\n- L40S 48GB PCIe: inferred dual-GPU nodes (OSCER condo GPU-node option describes dual L40S):\n  \u2022 in production: 2 nodes \u00d7 2 = 4\n  \u2022 coming: 12 nodes \u00d7 2 = 24\n  \u2022 total L40S = 28\n- A100 40GB PCIe: assumed 11 nodes \u00d7 1 = 11 (odd count prevents clean 2/4/8-per-node grouping).\n- A100 40GB SXM: inferred 2 nodes \u00d7 8 = 16 (fits typical 8\u00d7SXM systems; exact node count not stated on OSCER page).\n- A100 80GB SXM: matches DISC '1\u00d7 Quad 80GB A100 node' well: 1 node \u00d7 4 = 4.\n- A100 80GB PCIe (NVLink): inferred dual-GPU nodes: 9 nodes \u00d7 2 = 18.\n- H100 80GB PCIe: inferred dual-GPU nodes (DISC mentions dual H100 nodes): 6 nodes \u00d7 2 = 12.\n- H100 NVL 94GB (PCIe, NVLink): OSCER condo GPU-node option explicitly dual H100 NVL: 1 node \u00d7 2 = 2.\n- H100 80GB SXM (coming): inferred 1 node \u00d7 8 = 8 (fits common 8\u00d7SXM HGX/DGX-style nodes).\n\nFinal rollups:\n- h100_pcie_count = H100 PCIe 80GB (12) + H100 NVL 94GB PCIe (2) = 14\n- a100_40gb_count = 11 + 16 = 27\n- a100_80gb_count = 18 + 4 = 22\n\nNot counted due to uncertainty/future funding statement (no confirmed installed quantity/type): OSCER page notes an anticipated NSF award that 'will fund 10 NVIDIA H100 GPU cards' (not added to totals because it is an expectation, not an inventory line item)."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "OSCER is a shared resource. Setting all GPU counts to 0."
+}

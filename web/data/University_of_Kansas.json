@@ -1,0 +1,59 @@
+{
+  "university_name": "University of Kansas",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://help.ittc.ku.edu/clusterdocs/hardware/",
+      "data_found": "I2S Cluster Hardware Overview lists GPU partition node groups and GPU models/counts per node: 2 nodes w/ TITAN Xp/2; 2 nodes w/ Tesla P100/4; 1 node w/ TITAN Xp/1 + TITAN RTX/1; 1 node w/ Tesla V100S/2; 1 node w/ NVIDIA A100-PCIE-40GB/2. Also MMICC partition: 1 node w/ NVIDIA L40S/2."
+    },
+    {
+      "url": "https://help.ittc.ku.edu/clusterdocs/slurm/",
+      "data_found": "I2S Cluster Slurm docs enumerate available GPU GRES types: a100, l40s, v100, p100, titanrtx, titanxp."
+    },
+    {
+      "url": "https://ecc.ku.edu/fall-2024-20th-day-undergraduate-enrollment",
+      "data_found": "Student enrollment: 611 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 611,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://ecc.ku.edu/fall-2024-20th-day-undergraduate-enrollment",
+    "notes": "Found Fall 2024 (explicitly labeled) 20th-day census undergraduate enrollment by major for the KU School of Engineering. The table row 'Computer Science' shows Total = 611 (Freshman 106 + Sophomore 150 + Junior 155 + Senior 200). I could not locate an official KU source that explicitly provides Fall 2024 (or AY 2024-25) Computer Science graduate enrollment split into Masters vs PhD; Engineering Career Center's 'Graduate enrollment by major and level' page only lists Fall 2019, and KU AIRE/Graduate Program Profiles are Tableau-based without a directly accessible Fall 2024 CS (Masters vs Doctoral) headcount table on the crawled pages. Per requirements, grad_cs_count and phd_cs_count are set to 0."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 2,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 2,
+    "v100_count": 2,
+    "p100_count": 8,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA TITAN Xp",
+        "count": 5
+      },
+      {
+        "model": "NVIDIA TITAN RTX",
+        "count": 1
+      }
+    ],
+    "source_url": "https://help.ittc.ku.edu/clusterdocs/hardware/",
+    "notes": "Clusters with explicit public GPU counts found: KU ITTC 'I2S Cluster' only (public tables with node counts).\n\nI2S Cluster (gpu partition):\n- 2 nodes \u00d7 2 TITAN Xp/node = 4 TITAN Xp\n- 2 nodes \u00d7 4 P100/node = 8 P100\n- 1 node \u00d7 (1 TITAN Xp + 1 TITAN RTX) = 1 TITAN Xp + 1 TITAN RTX\n- 1 node \u00d7 2 V100S/node = 2 V100 (counted under v100_count)\n- 1 node \u00d7 2 A100-PCIE-40GB/node = 2 A100 40GB\n\nI2S Cluster (mmicc partition):\n- 1 node \u00d7 2 L40S/node = 2 L40S\n\nTotals across all clusters with enumerated counts:\n- A100 40GB: 2\n- V100: 2\n- P100: 8\n- L40S: 2\n- H100/H200/GH200/B100/B200: no public evidence found in KU sources above => 0\n\nKU Center for Research Computing (KU Community Cluster/Bigjay/Hawk) documentation pages identify GPU *types/features* but do not provide public node counts per GPU model in accessible sources during this run; therefore they are not added to totals here."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPU resources appear to be locally owned. Student data is kept as is."
+}

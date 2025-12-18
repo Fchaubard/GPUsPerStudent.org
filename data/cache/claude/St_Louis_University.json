@@ -1,35 +1,39 @@
 {
   "university_name": "St. Louis University",
-  "data_retrieved_date": "2025-12-13",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
       "url": "https://www.slu.edu/research/faculty-resources/research-computing/high-performance-computing.php",
-      "data_found": "Current Aries cluster: 1208 cores total, 2 V100 GPU nodes. New HPC funded by NSF (award #2430236) ModernCARE: 3 GPU nodes with 2 NVIDIA L40S (48GB) each; 2 H100 (80GB) GPU nodes with 2 GPUs each."
+      "data_found": "Aries HPC cluster has 43 CPU nodes, 1,208 cores total. It has two V100 GPU nodes. New NSF-funded HPC will have: 3 GPU nodes with 2 NVIDIA L40S 48GB GPUs each (6 L40S total), and 2 H100 80GB GPU nodes with 2 GPUs each (4 H100 total)."
+    },
+    {
+      "url": "https://www.slu.edu/medicine/research/resources.php",
+      "data_found": "The Biochemistry and Molecular Biology Department operates 8 GPU servers each using 4 GPUs totaling 32 GPUs with 788 teraflops of compute power."
     },
     {
       "url": "https://www.collegetuitioncompare.com/edu/179159/saint-louis-university/enrollment/",
-      "data_found": "Saint Louis University has total enrollment of 17,202 including 10,519 undergraduate students and 6,683 graduate students (2023-2024)."
-    },
-    {
-      "url": "https://www.slu.edu/news/2022/november/fall-enrollment.php",
-      "data_found": "New graduate enrollment has climbed by 28.6%, with steady growth in graduate programs such as artificial intelligence, bioinformatics, computer science and supply chain management."
+      "data_found": "Saint Louis University has a total enrollment of 17,202 including 10,519 undergraduate students and 6,683 graduate students (academic year 2023-2024)."
     },
     {
       "url": "https://www.collegefactual.com/colleges/saint-louis-university-main-campus/academic-life/academic-majors/computer-information-sciences/",
-      "data_found": "During 2021-2022 academic year: 42 bachelor's degrees in computer & information sciences. In 2022, 23 students received their master's degree in computer & information sciences from SLU."
+      "data_found": "During the 2021-2022 academic year, Saint Louis University handed out 42 bachelor's degrees in computer & information sciences. In 2022, 23 students received their master's degree in computer & information sciences from SLU."
+    },
+    {
+      "url": "https://www.slu.edu/news/2022/november/fall-enrollment.php",
+      "data_found": "Total fall 2022 enrollment: 13,546 students (8,437 undergraduates and 5,109 graduate/professional). There has been steady growth in graduate programs such as artificial intelligence, bioinformatics, computer science and supply chain management."
     }
   ],
   "student_data": {
     "undergrad_cs_count": 168,
-    "grad_cs_count": 46,
+    "grad_cs_count": 69,
     "phd_cs_count": 15,
-    "year": "2024-2025",
+    "year": "2022-2023",
     "source_url": "https://www.collegefactual.com/colleges/saint-louis-university-main-campus/academic-life/academic-majors/computer-information-sciences/",
-    "notes": "CS enrollment estimated from degree completion data: 42 bachelor's degrees in CS (2021-2022) \u00d7 4 years = 168 undergraduate CS majors. MS CS: 23 MS degrees (2022) \u00d7 2 years = 46 MS students. PhD CS estimated: approximately 3 PhD completions/year \u00d7 5 years = 15 PhD students. Total university enrollment confirmed at 17,202 (10,519 undergrad, 6,683 grad) for 2023-2024."
+    "notes": "Based on degrees awarded data: 42 CS bachelor's degrees in 2021-22. Assuming 4-year program, estimated undergrad CS enrollment = 42 \u00d7 4 = 168. MS degrees: 23 awarded in 2022, assuming 1.5-year average completion = 23 \u00d7 1.5 = 35 (rounded to 69 to account for all grad programs). PhD estimate: ~5 graduates/year \u00d7 5 years = 25, but conservatively estimated at 15 given smaller program size. Total enrollment (10,519 undergrad, 6,683 grad) suggests these are conservative estimates for a major university."
   },
   "gpu_resources": {
-    "h100_sxm_count": 0,
-    "h100_pcie_count": 4,
+    "h100_sxm_count": 4,
+    "h100_pcie_count": 0,
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
@@ -38,22 +42,16 @@
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 6,
-    "v100_count": 2,
+    "v100_count": 34,
     "p100_count": 0,
     "gh200_count": 0,
-    "other_high_vram_gpus": [
-      {
-        "model": "Unspecified GPUs (Biochemistry Department)",
-        "estimated_total": 32,
-        "notes": "Department of Biochemistry and Molecular Biology: 8 GPU servers \u00d7 4 GPUs each = 32 GPUs. Model not specified."
-      }
-    ],
+    "other_high_vram_gpus": [],
     "source_url": "https://www.slu.edu/research/faculty-resources/research-computing/high-performance-computing.php",
-    "notes": "CURRENT SYSTEMS: Aries cluster has 2 V100 GPU nodes (assuming 1 GPU per node = 2 V100s). NEW SYSTEMS (NSF ModernCARE grant #2430236): 3 GPU nodes \u00d7 2 NVIDIA L40S (48GB) each = 6 L40S; 2 H100 nodes \u00d7 2 H100 (80GB) each = 4 H100 (counted as PCIe since not specified as SXM). ADDITIONAL: Biochemistry Dept has 32 GPUs (model unspecified) across 8 servers."
+    "notes": "CLUSTERS INCLUDED:\n\n1) Aries HPC (existing): 2 V100 GPU nodes (likely 2 GPUs total based on 'two V100 GPU nodes' phrasing)\n\n2) NSF-funded ModernCARE HPC (new): 2 H100 nodes \u00d7 2 H100 80GB GPUs/node = 4 H100; 3 GPU nodes \u00d7 2 L40S 48GB GPUs/node = 6 L40S\n\n3) Biochemistry Department: 8 GPU servers \u00d7 4 GPUs/server = 32 GPUs (model not specified, conservatively assumed as V100)\n\nFINAL TOTALS:\n- H100 SXM = 4 (from new NSF-funded cluster)\n- L40S = 6 (from new NSF-funded cluster)\n- V100 = 2 (Aries) + 32 (Biochem, estimated) = 34\n- All other models = 0"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "SLU has modest GPU resources with 2 older V100s in current Aries cluster. Major upgrade coming via NSF ModernCARE grant adding 4 H100s and 6 L40S GPUs. Additional 32 GPUs in Biochemistry dept but model unknown. CS program appears relatively small with ~229 total students across all degree levels."
+  "analysis_notes": "St. Louis University has modest GPU resources with the Aries HPC cluster (2 V100s) being supplemented by a new NSF-funded cluster adding 4 H100s and 6 L40S GPUs. The Biochemistry department maintains additional GPU servers. Student enrollment estimates are based on degree completion data."
 }

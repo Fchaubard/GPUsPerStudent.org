@@ -1,0 +1,50 @@
+{
+  "university_name": "University of Missouri - Kansas City",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://www.umkc.edu/is/resources/research-computing.html",
+      "data_found": "UMKC SSE Machine Learning Cluster: 7 Teaching nodes with 8\u00d7 16GB Nvidia GPUs each; 6 Research nodes with 8\u00d7 48GB Nvidia GPUs each (GPU models not specified)."
+    },
+    {
+      "url": "https://docs.itrss.umsystem.edu/pub/hpc/start",
+      "data_found": "UM System RSS clusters: The Mill has 8 GPU nodes (6 nodes with 4\u00d7 V100 each; 1 node with 8\u00d7 H100; 1 node with 2\u00d7 V100); The Foundry has 6 GPU nodes with 4\u00d7 V100 32GB each."
+    },
+    {
+      "url": "https://sse.umkc.edu/academics/accreditation.html",
+      "data_found": "Student enrollment: 425 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 425,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "2024 Academic Year",
+    "source_url": "https://sse.umkc.edu/academics/accreditation.html",
+    "notes": "On the UMKC School of Science & Engineering Accreditation page, under the heading \"2024 Academic Year Undergraduate Data\" -> \"Enrollment\", it lists \"Computer Science - 425\" (undergraduate enrollment). This page does not provide 2024/2024-2025 enrollment counts for Computer Science MS (masters-only) or Computer Science PhD students, so grad_cs_count and phd_cs_count are set to 0. No explicit page 'last updated' date was visible on the page."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 48,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 56,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://www.umkc.edu/is/resources/research-computing.html",
+    "notes": "Clusters counted (UMKC + UM System-wide resources):\n\n1) UMKC SSE Machine Learning Cluster (GPU models not stated on UMKC page, estimated by memory/era per instructions)\n- Teaching: 7 nodes \u00d7 8 GPUs/node = 56 GPUs. Assumed NVIDIA V100 16GB => +56 v100_count.\n- Research: 6 nodes \u00d7 8 GPUs/node = 48 GPUs. Assumed NVIDIA A40 48GB => +48 a40_count.\n\n2) UM System Hellbender (from ITRSS Hellbender hardware table)\n- A100 nodes: 17 \u00d7 4 = 68 A100 80GB => +68 a100_80gb_count.\n- H100 nodes: 6 \u00d7 2 = 12 H100 (listed as 94GB; treated as PCIe form factor) => +12 h100_pcie_count.\n- L40S nodes: 6 \u00d7 2 = 12 L40S => +12 l40s_count.\n\n3) UM System The Mill (from ITRSS start page)\n- V100: (6 \u00d7 4) + (1 \u00d7 2) = 24 + 2 = 26 V100 => +26 v100_count.\n- H100: 1 \u00d7 8 = 8 H100 (assumed SXM due to 8-GPU node configuration) => +8 h100_sxm_count.\n\n4) UM System The Foundry (from ITRSS start page)\n- V100: 6 \u00d7 4 = 24 V100 => +24 v100_count.\n\nTotals:\n- H100 SXM: 8\n- H100 PCIe: 12\n- A100 80GB: 68\n- L40S: 12\n- V100: 56 + 26 + 24 = 106\n- A40: 48\n- All other requested GPU categories: 0"
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "GPU CHANGES: Removed 8 H100 SXM, 12 H100 PCIe, 68 A100 80GB, 12 L40S, and 50 V100 GPUs from UM System resources (The Mill, The Foundry, Hellbender) as these are shared resources and not directly owned by UMKC. Only the UMKC SSE Machine Learning Cluster GPUs (56 V100 and 48 A40) are counted. STUDENT CHANGES: No changes made to student data."
+}

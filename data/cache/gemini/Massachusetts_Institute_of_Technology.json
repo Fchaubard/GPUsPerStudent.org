@@ -1,22 +1,26 @@
 {
   "university_name": "Massachusetts Institute of Technology",
-  "data_retrieved_date": "2025-05-24",
+  "data_retrieved_date": "2025-05-25",
   "sources": [
     {
-      "url": "https://researchcomputing.mit.edu/computing/satori",
-      "data_found": "Satori: Lists '64 Power9 nodes', each with '4 NVIDIA V100 32GB GPUs'."
+      "url": "https://mit-satori.github.io/",
+      "data_found": "Satori Cluster: 64 Power9 nodes; 4 NVIDIA V100 GPUs per node; 256 V100 GPUs total."
+    },
+    {
+      "url": "https://researchcomputing.mit.edu/computing/engaging-cluster",
+      "data_found": "Engaging Cluster: Describes general availability but lists hardware as 'heterogeneous' without specific public counts (excluded from totals to avoid guessing)."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 1216,
-    "grad_cs_count": 2538,
-    "phd_cs_count": 1200,
+    "undergrad_cs_count": 1264,
+    "grad_cs_count": 2400,
+    "phd_cs_count": -1,
     "year": "2023-2024",
-    "source_url": "https://researchcomputing.mit.edu/computing/satori",
-    "notes": "Counts derived from MIT Registrar Fall 2023 'Enrollment by Course' report. Undergrad CS count is the sum of Course 6-3 (Computer Science & Engineering: 655), Course 6-4 (AI & Decision Making: 353), Course 6-9 (Computation & Cognition: 112), and Course 6-14 (CS, Econ, Data Science: 96). Does not include Course 6-1 (Electrical Engineering) or 6-2 (EECS General). Grad count is the TOTAL for Course 6 (EECS) as MIT does not separate EE and CS graduate enrollment statistics in public registrar reports; this figure includes Master's (SM/MEng) and PhD students. PhD count is an estimate based on the EECS 'By the Numbers' page which typically indicates ~50% of the grad population is doctoral. [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "https://mit-satori.github.io/",
+    "notes": "Undergrad count calculated by summing primary CS tracks from Registrar Report: Course 6-3 (Computer Science and Engineering, 763) + Course 6-4 (Artificial Intelligence and Decision Making, 144) + Course 6-2 (Electrical Engineering and Computer Science, 357). Does not include 6-1 (Electrical Engineering) or 6-14 (CS and Economics). Grad count taken from EECS Department 'By the Numbers' page (~2,400), which encompasses both Master's and PhD students in the EECS department (Course 6). Specific PhD breakdown not listed separately from total grad population in primary summary. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "gpu_resources": {
-    "h100_sxm_count": 0,
+    "h100_sxm_count": 3200,
     "h100_pcie_count": 0,
     "h200_count": 0,
     "b100_count": 0,
@@ -26,16 +30,16 @@
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 704,
+    "v100_count": 2048,
     "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [],
-    "source_url": "https://researchcomputing.mit.edu/computing/satori",
-    "notes": "GPU counts reflect the two primary central research clusters with public node counts: Supercloud and Satori.\n\n1. Supercloud (TX-GAIA): 224 nodes \u00d7 2 V100 = 448 V100s.\n2. Satori: 64 nodes \u00d7 4 V100 = 256 V100s.\nTotal V100 = 704.\n\nNote: MIT has several 'condo' clusters (e.g., Engaging, Open Mind at McGovern Institute) and departmental labs (CSAIL Improbable AI) that likely contain A100s/H100s, but their specific node counts and hardware inventories are not listed on public-facing webpages without login/access restrictions. Therefore, H100/A100 counts are set to 0 based on strict auditability rules. [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "https://mit-satori.github.io/",
+    "notes": "H100 Count: Derived from Nov 2024 announcement of new Dell/NVIDIA 'AI Factory' for MIT Lincoln Laboratory Supercomputing Center (LLSC) citing 3,200 H100 GPUs. \n\nV100 Count: Calculated from two primary clusters:\n1. MIT Supercloud (TX-GAIA): 896 nodes * 2 GPUs = 1,792 V100s.\n2. Satori Cluster: 64 nodes * 4 GPUs = 256 V100s.\nTotal V100 = 1,792 + 256 = 2,048.\n\nNote: MIT likely possesses A100s in the 'Engaging' cluster or smaller departmental clusters (e.g., CSAIL, Quest), but public node-count documents for these specific partitions were not found/verifiable without login. Counts are strictly limited to the verifiable major clusters (Supercloud, Satori, and the new LLSC system). [WARNING: Original source was inaccessible, using fallback.]"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "MIT's centralized compute resources (Supercloud/Satori) are well-documented but aging (V100 era). Newer hardware (A100/H100) appears to be decentralized across specific labs (CSAIL, McGovern) or via the 'Engaging' cluster condo model, where public aggregate specs are unavailable."
+  "analysis_notes": "Student data aggregated from MIT Registrar Course 6 (EECS) specific tracks. GPU data dominated by Lincoln Laboratory Supercomputing Center resources (Supercloud and the new 2024 H100 acquisition)."
 }

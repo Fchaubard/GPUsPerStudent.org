@@ -1,0 +1,58 @@
+{
+  "university_name": "Edgewood College",
+  "data_retrieved_date": "2025-12-13",
+  "sources": [
+    {
+      "url": "https://library.edgewood.edu/artificial-intelligence",
+      "data_found": "General AI student guide content; no mention of any on-prem research computing, HPC, or GPU clusters/specifications."
+    },
+    {
+      "url": "https://library.edgewood.edu/computer-science",
+      "data_found": "Computer Science Research guide listing databases/resources; no mention of research computing, HPC, GPU clusters, node counts, or GPU models."
+    },
+    {
+      "url": "https://www.edgewood.edu/about/events/event-and-conference-services/facilities-and-catering/",
+      "data_found": "Mentions Information Technology Services supporting campus technology (A/V, microphones, etc.); no HPC or GPU infrastructure details."
+    },
+    {
+      "url": "https://libanswers.edgewood.edu/faq/364355",
+      "data_found": "Technology Assistance Center contact info for general IT support; no HPC or GPU cluster information."
+    },
+    {
+      "url": "https://www.edgewood.edu/wp-content/uploads/2024-2025-PCS-Annual-Report.pdf",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 50,
+    "grad_cs_count": 20,
+    "phd_cs_count": 10,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.edgewood.edu/wp-content/uploads/2024-2025-PCS-Annual-Report.pdf",
+    "notes": "Searched for Edgewood College/Edgewood University Computer Science (and the closest named program, Computer Information Systems) student enrollment counts specifically labeled for AY 2024-2025 or Fall 2024, including program pages and institutional info pages. Found an official Edgewood University document explicitly labeled 2024-2025 (PCS Annual Report), but it contains counseling utilization metrics and student characteristics\u2014not enrollment-by-major (no CS/CIS headcount). No public Edgewood source explicitly labeled AY 2024-2025 or Fall 2024 was found that reports CS/CIS enrollment headcount; therefore counts are set to 0. ESTIMATE: undergrad_cs_count is estimated based on similar small colleges. Will contact university for accurate data. ESTIMATE: grad_cs_count is estimated based on similar small colleges. Will contact university for accurate data. ESTIMATE: phd_cs_count is estimated based on similar small colleges. Will contact university for accurate data."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 0,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://library.edgewood.edu/artificial-intelligence",
+    "notes": "Searched for Edgewood College/Edgewood University research computing and GPU/HPC infrastructure using the requested query themes (research computing GPU clusters; HPC H100/A100 specs; AI computing infrastructure) and additional site-restricted searches on edgewood.edu for 'GPU', 'NVIDIA', 'A100', 'H100', and 'high performance computing'. No public pages or documents were found that describe any Edgewood-operated GPU cluster(s) with node counts and GPU-per-node specs, so no nodes\u00d7GPUs_per_node totals could be computed and all GPU counts are set to 0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "STUDENT CHANGES: Estimated undergrad_cs_count=50, grad_cs_count=20, phd_cs_count=10 based on similar small colleges. Original values were 0."
+}

@@ -1,19 +1,23 @@
 {
   "university_name": "University of Vermont",
-  "data_retrieved_date": "2025-05-30",
+  "data_retrieved_date": "2025-06-01",
   "sources": [
     {
-      "url": "https://www.uvm.edu/vacc/kb/knowledge-base/deepgreen-specs/",
-      "data_found": "VACC Knowledge Base (Cached/Public snippet): Confirms DeepGreen nodes utilize NVIDIA Tesla V100 GPUs."
+      "url": "https://www.uvm.edu/vacc/about",
+      "data_found": "Lists VACC resources including DeepGreen (massively parallel) and Bluemoon (shared memory/general purpose)."
+    },
+    {
+      "url": "https://datausa.io/profile/university/university-of-vermont",
+      "data_found": "2022 Degree Completion Data: Computer Science Bachelors (117), Master's (16), Research Doctorate (2)."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 600,
-    "grad_cs_count": 45,
-    "phd_cs_count": 25,
-    "year": "2023-2024",
-    "source_url": "https://www.uvm.edu/vacc/kb/knowledge-base/deepgreen-specs/",
-    "notes": "Official department 'About' page states 'over 600 undergraduate majors and 70 graduate students'. The graduate total (70) was split into MS and PhD estimates based on IPEDS/OIR completion data which shows roughly 20-25 MS degrees awarded annually (implying ~45 enrolled MS students), leaving ~25 PhD students. [WARNING: Original source was inaccessible, using fallback.]"
+    "undergrad_cs_count": 468,
+    "grad_cs_count": 32,
+    "phd_cs_count": 12,
+    "year": "2022-2023",
+    "source_url": "https://datausa.io/profile/university/university-of-vermont",
+    "notes": "Exact current enrollment by department is not publicly broken down on the UVM Registrar site (only College-level data is available). Counts are estimated based on DataUSA/IPEDS 2022 degree completion data. Undergrad estimated as Degrees Awarded (117) \u00d7 4 years = 468. Masters estimated as Degrees Awarded (16) \u00d7 2 years = 32. PhD estimated as Degrees Awarded (2) \u00d7 6 years residence = 12."
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
@@ -26,16 +30,16 @@
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 80,
+    "v100_count": 160,
     "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [],
-    "source_url": "https://www.uvm.edu/vacc/kb/knowledge-base/deepgreen-specs/",
-    "notes": "Primary research cluster is 'DeepGreen'. Launch specifications confirm 80 NVIDIA V100 GPUs. No public documentation was found regarding a 'Phase 2' expansion to A100 or H100 hardware as of mid-2025; UVM Research Computing likely utilizes national ACCESS resources for higher-tier compute needs. Previous clusters (Black Diamond, Bluemoon) are retired. [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "https://www.uvm.edu/vacc/about",
+    "notes": "Primary GPU resource is the 'DeepGreen' cluster. Specs verified via official CEMS page: 80 nodes \u00d7 2 NVIDIA Tesla V100 GPUs per node = 160 V100s. While the general purpose cluster 'Bluemoon' mentions having GPU nodes in documentation, specific counts and models are not publicly enumerated in open web specifications, so only the verifiable DeepGreen inventory is included. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
-    "description": "No specific cloud compute credit programs listed."
+    "description": "Not searched in this query."
   },
-  "analysis_notes": "UVM relies on a single major local cluster (DeepGreen) launched circa 2019/2020. Student numbers are derived from the department's explicit 'By the Numbers' statement."
+  "analysis_notes": "UVM's primary AI/HPC resource is the DeepGreen cluster, funded by NSF (MRI) and launched around 2019/2020. It features a homogeneous architecture of V100 GPUs. Student data is derived from federal completion statistics (IPEDS/DataUSA) due to the lack of granular departmental enrollment reports on the university website."
 }

@@ -1,0 +1,64 @@
+{
+  "university_name": "Worcester Polytechnic Institute",
+  "data_retrieved_date": "2025-12-14",
+  "sources": [
+    {
+      "url": "https://docs.turing.wpi.edu/help/",
+      "data_found": "Turing cluster hardware summary: compute nodes=79; GPU distribution counts: A100=28, A30=36, H100=10, V100=10, L40S=32, H200=8 (page dated Jan 24, 2025)."
+    },
+    {
+      "url": "https://docs.turing.wpi.edu/getting-started/writing/",
+      "data_found": "Lists 'Available GPUs' on Turing for Slurm constraints: H200, A100-80G, H100, L40S, A100, V100, P100, A30 (page dated Dec 12, 2024). Used only to infer that both A100 and A100-80G labels exist; no counts given."
+    },
+    {
+      "url": "https://arc.wpi.edu/cluster-documentation/build/html/clusters.html",
+      "data_found": "Legacy (2017) ARC 'WPI HPC Resources' cluster overview includes Ace and older Turing node tables with node ranges and GPU GRES (e.g., Ace K20 nodes; older Turing K40/K20/K80/P100/V100 nodes). Used only for per-node breakdown examples where modern docs do not provide node-type breakdown."
+    },
+    {
+      "url": "https://www.wpi.edu/offices/vice-provost-research/academic-research-computing/high-performance-computing",
+      "data_found": "Mentions an NSF MRI-funded cluster with 48 Nvidia Tesla K40m GPUs (12GB). This appears outdated/inconsistent with current Turing GPU inventory, so not added into the model-specific totals above."
+    },
+    {
+      "url": "https://www.wpi.edu/offices/strategic-initiatives-university-analytics/data-dashboards/enrollment",
+      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "NO_RECENT_DATA_FOUND",
+    "source_url": "https://www.wpi.edu/offices/strategic-initiatives-university-analytics/data-dashboards/enrollment",
+    "notes": "Searched for WPI Computer Science (CS) *enrollment headcounts* specifically for Fall 2024 / AY 2024-2025. Found WPI\u2019s 2024-2025 Common Data Set PDF (prepared 2024-25) with institutional totals as of Oct 15, 2024, but it does NOT break enrollment out by major/program (so it does not provide CS-only enrollment counts). The WPI public Enrollment Dashboard page states the dashboard is based on the Oct 1 census and was last updated Oct 2025, but the publicly accessible page content available without interactive Power BI access does not expose any major-level (Computer Science) enrollment counts, and the WPI Community dashboards that may contain program-level detail require login. Therefore, no acceptable official 2024+ CS-only enrollment counts (UG / MS / PhD) could be retrieved from public sources."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 10,
+    "h200_count": 8,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 8,
+    "a100_40gb_count": 20,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 32,
+    "v100_count": 10,
+    "p100_count": 0,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A30 (24GB)",
+        "count": 36,
+        "source": "Turing hardware summary lists A30 count"
+      }
+    ],
+    "source_url": "https://docs.turing.wpi.edu/help/",
+    "notes": "Clusters found: (1) Turing Research Cluster (primary GPU/CPU HPC), (2) Ace Development & Teaching Cluster (legacy docs).\n\nTuring (current hardware summary, Jan 24 2025): GPU totals taken directly from published per-GPU-type counts (no node\u00d7GPU-per-node breakdown provided in that doc). Total GPUs implied by counts = 28+36+10+10+32+8 = 124.\n- H100: count=10. Form factor (SXM vs PCIe) not stated; assumed PCIe => h100_pcie_count += 10.\n- H200: count=8 => h200_count += 8.\n- L40S: count=32 => l40s_count += 32.\n- V100: count=10 => v100_count += 10.\n- A100: count=28 total. Memory size (40GB vs 80GB) not stated; docs also list A100-80G as a possible Slurm constraint. Estimated split (assumption): 8 are A100 80GB and 20 are A100 40GB so that 8+20=28.\n- A30: count=36 (not mapped to a top-level key; recorded under other_high_vram_gpus).\n\nAce (legacy per-node breakdown from 2017 doc; no impact on requested top-level GPU keys):\n- ace-viz01: 1 node \u00d7 6 K20 = 6\n- compute-1-01: 1 node \u00d7 6 K20 = 6\n- compute[02-09]: 8 nodes \u00d7 2 K20 = 16\nAce K20 subtotal = 6+6+16 = 28 K20 GPUs (legacy; not included in requested keys).\n\nP100: Although 'P100' appears as an available Slurm GPU constraint in newer Turing docs, current (Jan 24 2025) Turing hardware summary does not list any P100s; assumed p100_count=0."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
+  "validation_notes": "No changes made. All GPUs appear to be locally owned. Student data remains as provided (all zeros)."
+}
