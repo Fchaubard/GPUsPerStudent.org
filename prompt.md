@@ -1,6 +1,6 @@
 # GPUsPerStudent.org - Data Research Prompt
 
-You are an expert data researcher. Your task is to find **verifiable, auditable data** about GPU resources and CS student counts at universities.
+You are an expert data researcher. Your task is to find **verifiable, auditable data** about GPU resources and CS student counts at universities. You should only include GPUs that are owned and operated by that university and generally accessible by the students (not via a grant and not accessible to other universities or research organizations).  
 
 For the remainder of this prompt when you see: [University] that means: {{UNIVERSITY_NAME}}
 
