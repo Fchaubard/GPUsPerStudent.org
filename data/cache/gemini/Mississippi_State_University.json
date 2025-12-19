@@ -1,14 +1,31 @@
 {
   "university_name": "Mississippi State University",
-  "data_retrieved_date": "2025-05-24",
-  "sources": [],
+  "data_retrieved_date": "2025-12-15",
+  "sources": [
+    {
+      "url": "https://www.hpc.msstate.edu/computing/atlas/",
+      "data_found": "Atlas GPU nodes: 4 V100 GPU nodes with 2x V100 each (8 V100 total); 5 A100 GPU nodes with 8x NVIDIA A100 (80GB) each (40 A100 80GB total); 12 L40S GPU nodes with 4x NVIDIA L40S (48GB) each (48 L40S total)."
+    },
+    {
+      "url": "https://www.arc.msstate.edu/computing/resources/ptolemy/",
+      "data_found": "Ptolemy GPU nodes: ptolemy-gpu-[01-08] are 8 compute nodes with 8x NVIDIA A100 (80GB) each (64 A100 80GB total). Also ptolemy-devel-[1-2] have 1x NVIDIA A100 (80GB) each (2 more A100 80GB)."
+    },
+    {
+      "url": "https://www.msstate.edu/newsroom/article/2025/09/msu-announces-formation-applied-research-collaboratory-focus-advanced",
+      "data_found": "Morrill described as a CPU/GPU cluster with 104 nodes including 32 GPUs; GPU model not stated."
+    },
+    {
+      "url": "https://www.mississippi.edu/sites/default/files/ihl/files/Fall2024_Enrollment.pdf",
+      "data_found": "Student enrollment: 569 undergrad, 0 grad, 0 PhD"
+    }
+  ],
   "student_data": {
-    "undergrad_cs_count": 798,
-    "grad_cs_count": 55,
-    "phd_cs_count": 70,
-    "year": "2023-2024",
-    "source_url": "NO_VALID_SOURCE",
-    "notes": "Undergraduate count is exact from the CSE Department's ABET accreditation disclosure (Fall 2023) for the BS in Computer Science program (excludes the 287 Software Engineering majors). Graduate counts are estimated based on Mississippi State's typical college-level ratios and IPEDS degree completion data (approx 20 MS and 10-12 PhD degrees awarded annually in CS, multiplied by program duration factors of 2.5x and 5.5x respectively). [WARNING: Original source was inaccessible, using fallback.]"
+    "undergrad_cs_count": 569,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "Fall 2024",
+    "source_url": "https://www.mississippi.edu/sites/default/files/ihl/files/Fall2024_Enrollment.pdf",
+    "notes": "Source is the IHL (Mississippi Institutions of Higher Learning) 'FALL 2024 Enrollment Fact Book' (census taken on November 1, 2024). In the table 'On-Campus Undergraduate Headcount Enrollment By Program Category (Fall 2024)', Mississippi State University shows 569 students in the two-digit CIP category 'Computer and Information Sciences and Support Services - 11'. In the table 'On-Campus Graduate Headcount Enrollment By Program Category (Fall 2024)', MSU shows 173 graduate students in the same CIP category, but it does NOT break graduate enrollment into Master's vs PhD; therefore grad_cs_count and phd_cs_count are set to 0 (unable to separate MS vs PhD from this Fall 2024 source). Also note: CIP category 11 is broader than 'Computer Science' and may include multiple computing-related majors."
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
@@ -16,21 +33,21 @@
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 120,
+    "a100_80gb_count": 138,
     "a100_40gb_count": 0,
     "a40_count": 0,
     "a6000_count": 0,
-    "l40s_count": 0,
-    "v100_count": 32,
+    "l40s_count": 48,
+    "v100_count": 8,
     "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [],
-    "source_url": "NO_VALID_SOURCE",
-    "notes": "1) Hercules Cluster: 30 compute nodes x 4 NVIDIA A100 80GB = 120 A100s (HPC site clarifies 30 compute nodes vs 32 total nodes mentioned in press release). 2) DGX-2 Systems: 2 systems x 16 V100 = 32 V100 GPUs. 3) Orion Cluster: Primary HPC system (Top500 ranked) is CPU-based (Xeon Phi/Skylake) with no significant GPU partition listed in public specs. [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "https://www.hpc.msstate.edu/computing/atlas/",
+    "notes": "Clusters counted:\n- Atlas (HPC2):\n  - V100: 4 nodes \u00d7 2 GPUs/node = 8 V100\n  - A100 (80GB): 5 nodes \u00d7 8 GPUs/node = 40 A100 80GB\n  - L40S (48GB): 12 nodes \u00d7 4 GPUs/node = 48 L40S\n- Ptolemy (ARC):\n  - A100 (80GB) compute: 8 nodes \u00d7 8 GPUs/node = 64 A100 80GB\n  - A100 (80GB) development: 2 nodes \u00d7 1 GPU/node = 2 A100 80GB\n  - Ptolemy A100 80GB subtotal = 66\n- Morrill (MSU Research Computing Services / ARC context):\n  - Source states 32 GPUs total, but GPU model not provided.\n  - Estimate (based on 2024-era campus GPU cluster and MSU\u2019s documented contemporary GPU deployments being A100 80GB): treat as 4 nodes \u00d7 8 GPUs/node = 32 A100 80GB (ESTIMATED).\n\nTotals across all clusters:\n- A100 80GB = Atlas 40 + Ptolemy 66 + Morrill 32 (estimated) = 138\n- V100 = 8\n- L40S = 48\n- All other requested GPU categories: 0"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "MSU (HPC2) has significant compute resources (Orion is a large CPU cluster), but GPU resources are concentrated in the newer 'Hercules' system (A100s) and the specific DGX-2 nodes. No H100s found in public specifications as of May 2025."
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
 }

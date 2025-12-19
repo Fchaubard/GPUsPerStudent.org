@@ -3,52 +3,24 @@
   "data_retrieved_date": "2025-12-15",
   "sources": [
     {
-      "url": "https://www.arch.jhu.edu/systems/rockfish",
-      "data_found": "Rockfish Cluster Hardware Overview."
-    },
-    {
-      "url": "https://www.cs.jhu.edu/about/",
-      "data_found": "CS Department 'About' page generic stats."
-    },
-    {
-      "url": "https://jhpce.jhu.edu/",
-      "data_found": "JHPCE cluster info claiming 23-37 Nvidia GPUs."
-    },
-    {
-      "url": "https://jhpce.jhu.edu/aboutus/model/",
-      "data_found": "Cluster specs: 84 compute nodes, 37 Nvidia GPUs."
-    },
-    {
-      "url": "https://www.arch.jhu.edu/support/faq/",
-      "data_found": "Rockfish FAQ detailing A100 nodes."
-    },
-    {
-      "url": "https://support.access-ci.org/affinity-groups/rockfish",
-      "data_found": "ACCESS-CI specs for Rockfish."
-    },
-    {
-      "url": "https://www.hopkinsmedicine.org/som/education-programs/graduate-programs/johns-hopkins-medical-physics-program/facilities",
-      "data_found": "Medical Physics cluster specs (Tesla K40m, Quadro, etc)."
-    },
-    {
-      "url": "https://nvidianews.nvidia.com/news/nvidia-hopper-gpus-expand-reach-as-demand-for-ai-grows",
-      "data_found": "APL usage of DGX H100."
-    },
-    {
       "url": "https://docs.arch.jhu.edu/en/latest/1_Clusters/Rockfish/1_Resources/Hardware.html",
-      "data_found": "Detailed Rockfish GPU node breakdown (A100s, L40S)."
+      "data_found": "Rockfish GPU nodes: 18 nodes with 4\u00d7 A100 40GB; 10 nodes with 4\u00d7 A100 80GB; 4 nodes with 8\u00d7 L40S 48GB"
     },
     {
       "url": "https://docs.arch.jhu.edu/en/latest/1_Clusters/DSAI/1_Resources/Hardware.html",
-      "data_found": "DSAI cluster breakdown (High count of H100s and A100s)."
+      "data_found": "DSAI GPU nodes: 15 nodes with 8\u00d7 A100 80GB; 16 nodes with 4\u00d7 H100 80GB; 16 nodes with 4\u00d7 H100-NVL 96GB; 8 nodes with 8\u00d7 L40S 48GB"
     },
     {
       "url": "https://jhpce.jhu.edu/gpu/gpu-info/",
-      "data_found": "JHPCE specific node breakdown (V100, A100, H100, L40S)."
+      "data_found": "JHPCE GPU nodes (as of Nov 2024): compute-117 has 2\u00d7 V100 32GB (+1\u00d7 Titan V 11GB); compute-123 has 4\u00d7 V100 32GB; compute-126 has 4\u00d7 A100 80GB; compute-128 has 4\u00d7 A100 80GB; compute-170 has 2\u00d7 H100 96GB; compute-171..173 are 3 nodes with 4\u00d7 L40S each (12 total)"
+    },
+    {
+      "url": "https://jhpce.jhu.edu/aboutus/GrantAndAckBlurbs/",
+      "data_found": "JHPCE grant blurb (Sep 13, 2024) claims '7 GPU nodes with 23 Nvidia H100, V100, and A100 GPUs' (no per-model breakdown)"
     },
     {
       "url": "https://www.cs.jhu.edu/about/message-from-dept-head/",
-      "data_found": "Department Head message with 2024-2025 student counts."
+      "data_found": "Student enrollment: 700 undergrad, 300 grad, 200 PhD"
     }
   ],
   "student_data": {
@@ -57,50 +29,29 @@
     "phd_cs_count": 200,
     "year": "2024-2025",
     "source_url": "https://www.cs.jhu.edu/about/message-from-dept-head/",
-    "notes": "Counts sourced from the Department Head's message for the 2024-2025 academic year. The source states 'more than 700 undergraduate majors, 300 master\u2019s students, 200 PhD students'. These figures are higher and more recent than those found in older annual reports or College Factual estimates."
+    "notes": "Source explicitly references 'The 2024\u20132025 academic year' and states: 'Our community includes more than 700 undergraduate majors, 300 master\u2019s students, 200 PhD students...' Undergrad count is a lower bound because the page says 'more than 700' (not an exact integer). Masters and PhD counts are stated as 300 and 200, respectively."
   },
   "gpu_resources": {
-    "h100_sxm_count": 0,
-    "h100_pcie_count": 0,
+    "h100_sxm_count": 64,
+    "h100_pcie_count": 66,
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 0,
-    "a100_40gb_count": 0,
+    "a100_80gb_count": 168,
+    "a100_40gb_count": 72,
     "a40_count": 0,
     "a6000_count": 0,
-    "l40s_count": 0,
-    "v100_count": 0,
+    "l40s_count": 108,
+    "v100_count": 6,
     "p100_count": 0,
     "gh200_count": 0,
-    "other_high_vram_gpus": [
-      {
-        "model": "Tesla K40m",
-        "estimated_total": 0,
-        "notes": "Medical Physics cluster (12 GB RAM)"
-      },
-      {
-        "model": "Quadro P5000",
-        "estimated_total": 0,
-        "notes": "Medical Physics cluster"
-      },
-      {
-        "model": "Tesla C1060",
-        "estimated_total": 0,
-        "notes": "Medical Physics cluster (4 GB RAM)"
-      },
-      {
-        "model": "NVIDIA RTX / V100 (CLSP Grid)",
-        "estimated_total": null,
-        "notes": "The Center for Language and Speech Processing (CLSP) operates 'The Grid' with over 60 GPU nodes, exact breakdown unknown."
-      }
-    ],
-    "notes": "Aggregated counts from Rockfish, DSAI, and JHPCE clusters. \n1. H100 Counts: DSAI provides 16 nodes with 4x H100 80GB (64 SXM assumed) and 16 nodes with 4x H100-NVL 96GB (64 PCIe/NVL). JHPCE adds 2 H100 96GB (Total PCIe: 66). \n2. A100 Counts: High 80GB count (168) primarily from DSAI (15x8=120) plus Rockfish (40) and JHPCE (8). High 40GB count (76) from Rockfish (19 nodes x 4 GPUs). \n3. L40S: Significant presence in DSAI and Rockfish clusters (Total 108). \n4. V100: 8 found in JHPCE cluster."
+    "other_high_vram_gpus": [],
+    "source_url": "https://docs.arch.jhu.edu/en/latest/1_Clusters/Rockfish/1_Resources/Hardware.html",
+    "notes": "Rockfish (ARCH): A100_40GB = 18\u00d74=72; A100_80GB = 10\u00d74=40; L40S = 4\u00d78=32. DSAI (ARCH): A100_80GB = 15\u00d78=120; H100_80GB = 16\u00d74=64; H100-NVL_96GB = 16\u00d74=64; L40S = 8\u00d78=64. JHPCE: V100 = (compute-117 2) + (compute-123 4) = 6; A100_80GB = (compute-126 4) + (compute-128 4) = 8; H100_96GB = (compute-170 2)=2; L40S = (compute-171..173: 3 nodes \u00d74)=12. Totals across all clusters: A100_40GB=72; A100_80GB=40+120+8=168; L40S=32+64+12=108; V100=6. H100 form-factor assumption: DSAI 'H100 80GB' counted as H100 SXM (64). DSAI 'H100-NVL 96GB' plus JHPCE 'H100 96GB' counted as H100 PCIe (64+2=66)."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "Ensemble result aggregated from OpenAI, Claude, and Gemini models. Student data reflects the most current 2024-2025 academic year figures. GPU data combines the distinct 'DSAI' and 'Rockfish' clusters documented by ARCH, alongside the 'JHPCE' cluster and Medical Physics resources. Discrepancy in A100 40GB counts (76 vs 72) resolved by using the higher node count reported by Gemini.",
-  "validation_notes": "GPU CHANGES: All GPU counts set to 0. Rockfish and DSAI are part of the ACCESS-CI program (previously XSEDE), making them shared national resources. JHPCE is also likely a shared resource. The medical physics cluster is also removed due to lack of clear ownership. It is better to undercount than overcount."
+  "analysis_notes": "Ensemble result aggregated from OpenAI, Claude, and Gemini models."
 }

@@ -18,7 +18,9 @@ You are a data validator for university GPU resources. You will receive a JSON f
   - EXCLUDE national allocations (Frontera, Stampede3 national queues).
   - INCLUDE UT Austin **dedicated/exclusive** systems (e.g., Vista, Lonestar6 UT queues, Center for Generative AI).
 
-- **San Diego Supercomputer Center (SDSC)** - National resource
+- **San Diego Supercomputer Center (SDSC)** - **External/Shared Clouds**: EXCLUDE public cloud allocations (AWS/GCP/Azure credits) unless they are dedicated hardware purchasing agreements. EXCLUDE "National Labs" (Oak Ridge, Argonne, LBNL, NERSC) unless the text explicitly states the hardware is *owned* by the university and just *housed* there.
+- **ACCESS-CI / XSEDE**: DO NOT exclude a cluster just because it is accessible via ACCESS-CI (formerly XSEDE). Many universities (like JHU Rockfish, Purdue Bell, etc.) own their clusters but allocate time via ACCESS. Only exclude if it is explicitly a "National Service" not owned by the university.
+- **Remote/Departmental Clusters**: DO NOT exclude clusters described as "remote" or "departmental" (e.g., Statistics Dept "Remote Cluster") if they are clearly for the university's researchers. Only exclude if "remote" means a generic third-party cloud.
 - **Pittsburgh Supercomputing Center (PSC)** - Shared resource
 - **Massachusetts Green High Performance Computing Center (MGHPCC)** - Shared facility.
   - EXCLUDE generic shared partitions.

@@ -1,51 +1,57 @@
 {
   "university_name": "Johns Hopkins University",
-  "data_retrieved_date": "2025-06-02",
+  "data_retrieved_date": "2025-12-15",
   "sources": [
     {
-      "url": "https://www.arch.jhu.edu/systems/rockfish",
-      "data_found": "Rockfish Cluster Hardware Overview: Lists general cluster composition, including GPU partitions."
+      "url": "https://docs.arch.jhu.edu/en/latest/1_Clusters/Rockfish/1_Resources/Hardware.html",
+      "data_found": "Rockfish GPU nodes: 18 nodes with 4\u00d7 A100 40GB; 10 nodes with 4\u00d7 A100 80GB; 4 nodes with 8\u00d7 L40S 48GB"
     },
     {
-      "url": "https://www.cs.jhu.edu/about/",
-      "data_found": "CS Department 'About' page: Lists '600+ undergraduate majors', '250+ MSE students', and '140+ PhD students'."
+      "url": "https://docs.arch.jhu.edu/en/latest/1_Clusters/DSAI/1_Resources/Hardware.html",
+      "data_found": "DSAI GPU nodes: 15 nodes with 8\u00d7 A100 80GB; 16 nodes with 4\u00d7 H100 80GB; 16 nodes with 4\u00d7 H100-NVL 96GB; 8 nodes with 8\u00d7 L40S 48GB"
+    },
+    {
+      "url": "https://jhpce.jhu.edu/gpu/gpu-info/",
+      "data_found": "JHPCE GPU nodes (as of Nov 2024): compute-117 has 2\u00d7 V100 32GB (+1\u00d7 Titan V 11GB); compute-123 has 4\u00d7 V100 32GB; compute-126 has 4\u00d7 A100 80GB; compute-128 has 4\u00d7 A100 80GB; compute-170 has 2\u00d7 H100 96GB; compute-171..173 are 3 nodes with 4\u00d7 L40S each (12 total)"
+    },
+    {
+      "url": "https://jhpce.jhu.edu/aboutus/GrantAndAckBlurbs/",
+      "data_found": "JHPCE grant blurb (Sep 13, 2024) claims '7 GPU nodes with 23 Nvidia H100, V100, and A100 GPUs' (no per-model breakdown)"
+    },
+    {
+      "url": "https://www.cs.jhu.edu/about/message-from-dept-head/",
+      "data_found": "Student enrollment: 700 undergrad, 300 grad, 200 PhD"
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 600,
-    "grad_cs_count": 250,
-    "phd_cs_count": 140,
-    "year": "2024",
-    "source_url": "https://www.cs.jhu.edu/about/",
-    "notes": "Counts derived from the Official CS Department 'About' page which states '600+ undergraduate majors, 250+ MSE students, and 140+ PhD students'. These are likely conservative estimates; total engineering enrollment suggests these numbers are consistent with the CS department being the largest major."
+    "undergrad_cs_count": 700,
+    "grad_cs_count": 300,
+    "phd_cs_count": 200,
+    "year": "2024-2025",
+    "source_url": "https://www.cs.jhu.edu/about/message-from-dept-head/",
+    "notes": "Source explicitly references 'The 2024\u20132025 academic year' and states: 'Our community includes more than 700 undergraduate majors, 300 master\u2019s students, 200 PhD students...' Undergrad count is a lower bound because the page says 'more than 700' (not an exact integer). Masters and PhD counts are stated as 300 and 200, respectively."
   },
   "gpu_resources": {
-    "h100_sxm_count": 0,
-    "h100_pcie_count": 0,
+    "h100_sxm_count": 64,
+    "h100_pcie_count": 66,
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 16,
-    "a100_40gb_count": 76,
+    "a100_80gb_count": 168,
+    "a100_40gb_count": 72,
     "a40_count": 0,
     "a6000_count": 0,
-    "l40s_count": 0,
-    "v100_count": 0,
+    "l40s_count": 108,
+    "v100_count": 6,
     "p100_count": 0,
     "gh200_count": 0,
-    "other_high_vram_gpus": [
-      {
-        "model": "NVIDIA RTX / V100 (CLSP Grid)",
-        "estimated_total": null,
-        "notes": "The Center for Language and Speech Processing (CLSP) operates 'The Grid' with stated 'over 60 GPU nodes'. Exact breakdown of V100 vs RTX vs A100 is not publicly auditable on the open web, so they are excluded from the main fields to prevent double-counting or estimation errors."
-      }
-    ],
-    "source_url": "https://www.arch.jhu.edu/systems/rockfish",
-    "notes": "Calculations based on Rockfish cluster documentation (ARCH):\n1. Partition 'gpua100': 19 nodes \u00d7 4 A100 (40GB) = 76 GPUs.\n2. Partition 'gpua100_80': 4 nodes \u00d7 4 A100 (80GB) = 16 GPUs.\n\nTotal A100s = 92.\nNote: Older clusters (Bluecrab) utilizing P100s have been retired. CLSP resources are significant but exact specs are not public. [WARNING: Original source was inaccessible, using fallback.]"
+    "other_high_vram_gpus": [],
+    "source_url": "https://docs.arch.jhu.edu/en/latest/1_Clusters/Rockfish/1_Resources/Hardware.html",
+    "notes": "Rockfish (ARCH): A100_40GB = 18\u00d74=72; A100_80GB = 10\u00d74=40; L40S = 4\u00d78=32.\nDSAI (ARCH): A100_80GB = 15\u00d78=120; H100_80GB = 16\u00d74=64; H100-NVL_96GB = 16\u00d74=64; L40S = 8\u00d78=64.\nJHPCE: V100 = (compute-117 2) + (compute-123 4) = 6; A100_80GB = (compute-126 4) + (compute-128 4) = 8; H100_96GB = (compute-170 2)=2; L40S = (compute-171..173: 3 nodes \u00d74)=12. (Titan V 11GB on compute-117 exists but is not included in requested output keys.)\nTotals across all clusters: A100_40GB=72; A100_80GB=40+120+8=168; L40S=32+64+12=108; V100=6.\nH100 form-factor assumption for this JSON: DSAI 'H100 80GB' counted as H100 SXM (64). DSAI 'H100-NVL 96GB' plus JHPCE 'H100 96GB' counted as H100 PCIe (64+2=66)."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "JHU centralized research computing (ARCH) is transparent about the Rockfish cluster specifications. The CS department provides approximate enrollment floors ('600+', '250+') rather than exact registrar counts for the current semester, but these numbers are consistent with IPEDS degree completion data."
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
 }

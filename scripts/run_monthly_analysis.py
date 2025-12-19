@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Configuration
+# --- Configuration ---
 DATA_DIR = "data"
 UNIVERSITIES_FILE = os.path.join(DATA_DIR, "filtered_national_universities_name_url.csv")
 GPU_PRICES_FILE = os.path.join(DATA_DIR, "gpu_prices.csv")
@@ -38,7 +38,7 @@ if GEMINI_API_KEY:
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai_client = None
 if OPENAI_API_KEY:
-    openai_client = OpenAI(api_key=OPENAI_API_KEY, timeout=3600)
+    openai_client = OpenAI(api_key=OPENAI_API_KEY, timeout=1200)
 
 # API Setup - Claude/Anthropic
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
@@ -46,7 +46,7 @@ anthropic_client = None
 try:
     import anthropic
     if ANTHROPIC_API_KEY:
-        anthropic_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+        anthropic_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY, timeout=1200)
 except ImportError:
     print("[Warning] anthropic package not installed. Run: pip install anthropic")
 
@@ -587,20 +587,27 @@ IMPORTANT: Add up ALL clusters. If you cannot determine model, estimate based on
 
     try:
         # Execute both queries with gpt-5.2 and reasoning
+        # Execute both queries with gpt-5.2 and reasoning
         print(f"  [OpenAI gpt-5.2] Query 1/2: Student data for {university_name}...")
-        student_response = openai_client.responses.create(
+        student_response = openai_client.chat.completions.create(
             model="gpt-5.2",
-            input=student_prompt,
-            tools=[{"type": "web_search_preview"}],
-            reasoning={"effort": "medium"},  # Enable thinking
+            messages=[
+                {"role": "system", "content": "You are a specialized data extractor. Return JSON only."},
+                {"role": "user", "content": student_prompt}
+            ],
+            response_format={"type": "json_object"},
+            timeout=1200
         )
         
         print(f"  [OpenAI gpt-5.2] Query 2/2: GPU data for {university_name}...")
-        gpu_response = openai_client.responses.create(
-            model="gpt-5.2",
-            input=gpu_prompt,
-            tools=[{"type": "web_search_preview"}],
-            reasoning={"effort": "medium"},  # Enable thinking
+        gpu_response = openai_client.chat.completions.create(
+            model="gpt-5.2", # Next-gen model
+            messages=[
+                {"role": "system", "content": "You are a specialized data extractor. Return JSON only."},
+                {"role": "user", "content": gpu_prompt}
+            ],
+            response_format={"type": "json_object"},
+            timeout=1200 # 20 minutes for thinking/search
         )
         
         # Parse responses
@@ -609,7 +616,7 @@ IMPORTANT: Add up ALL clusters. If you cannot determine model, estimate based on
         sources = []
         
         # Parse student data
-        student_text = student_response.output_text or ""
+        student_text = student_response.choices[0].message.content or ""
         student_match = re.search(r'\{[\s\S]*\}', student_text)
         if student_match:
             try:
@@ -618,7 +625,7 @@ IMPORTANT: Add up ALL clusters. If you cannot determine model, estimate based on
                 print(f"  [Warning] Could not parse student data JSON")
         
         # Parse GPU data
-        gpu_text = gpu_response.output_text or ""
+        gpu_text = gpu_response.choices[0].message.content or ""
         gpu_match = re.search(r'\{[\s\S]*\}', gpu_text)
         if gpu_match:
             try:
