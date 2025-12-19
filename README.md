@@ -31,25 +31,21 @@ Three key metrics:
 2. **H100-equivalent GPU Count**: University-owned GPUs accessible to students
    - Converted to H100 equivalents using market prices
    - Example: 10 A100-80GB at $15k each = 4.3 H100-equivalents (H100 = $35k)
-   - Excludes: National labs, shared consortiums, grant-based allocations
-   - Excludes: Private GPUs not accessible to students (e.g., Lincoln Labs)
 
 3. **GPUs per Student**: H100-equivalent count / Weighted student count
 
-## What We Exclude (Important!)
+## Exclusion Criteria (Important!)
 
-These shared/national resources are NOT counted for any university:
-- Ohio Supercomputer Center (OSC) - shared by 2,700 institutions
-- NCAR-Wyoming Supercomputing Center - shared by 575 universities
-- Texas Advanced Computing Center (TACC)
-- San Diego Supercomputer Center (SDSC)
-- Massachusetts Green HPC Center (MGHPCC)
-- DOE Labs (Oak Ridge, Argonne, LBNL/NERSC, etc)
-- MIT Lincoln Labs
-- Cloud allocations (AWS, GCP, Azure)
-- XSEDE/ACCESS allocations
+We define "University GPUs" as hardware **owned and operated** by the university for its students. We exclude resources that are shared nationally or restricted by external grant walls.
 
-Only resources the university directly owns and operates count.
+| Resource Type | Status | Reason for Exclusion |
+|:--- |:--- |:--- |
+| **National Supercomputing Centers** (OSC, NCSA, etc.) | **Excluded** | These are shared utilities used by thousands of researchers from hundreds of universities. Counting them would double-count resources across every member institution. |
+| **DOE National Labs** (Oak Ridge, Argonne, NERSC) | **Excluded** | These are federal government facilities, not university assets. Access is by competitive grant, not student enrollment. |
+| **TACC (Frontera/Stampede3)** | **Excluded** | These specific systems are NSF-funded national resources open to all US researchers via ACCESS-CI (grant wall). <br> *Exception: UT Austin-owned systems hosted at TACC (e.g., Vista, Lonestar6 UT queues) ARE included.* |
+| **Cloud Allocations** (AWS, Azure, GCP) | **Excluded** | Temporary, grant-based credits are not permanent infrastructure. They expire and vary wildly year-to-year. |
+| **Consortium/Shared Clusters** (MGHPCC, SDSC) | **Partially Excluded** | We exclude the "general shared" partitions used by external partners. We **include** the dedicated partitions owned specifically by the university (e.g., Harvard's Cannon cluster at MGHPCC). |
+| **MIT Lincoln Labs** | **Excluded** | Restricted-access government/defense facility. Most MIT students cannot access these GPUs. |
 
 ## Project Structure
 
@@ -60,7 +56,6 @@ GPUsPerStudent/
 │   ├── gpu_prices.csv                               # GPU market prices
 │   ├── master_data.csv                              # Generated output
 │   └── cache/
-│       ├── ensemble/                                # Raw LLM ensemble results
 │       └── final/                                   # Validated JSON files
 ├── web/
 │   ├── index.html                                   # Main website
@@ -81,7 +76,7 @@ GPUsPerStudent/
    - Queries 3 LLMs (OpenAI, Claude, Gemini) for each university
    - Each LLM searches for student enrollment and GPU resources
    - Results aggregated using highest values with source validation
-   - Output: JSON files in `data/cache/ensemble/`
+   - Output: JSON files in `data/cache/ensemble/` (internal cache)
 
 2. **Validation** (`scripts/validate_gpu_data.py`)
    - Gemini reviews each JSON to filter shared resources
@@ -97,54 +92,3 @@ GPUsPerStudent/
    - Static HTML/JS that reads master_data.csv
    - Sortable leaderboard with sources
    - Horizontal bar chart of all universities
-
-## Local Development
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Set API keys
-export GEMINI_API_KEY="your_key"
-export OPENAI_API_KEY="your_key"  
-export ANTHROPIC_API_KEY="your_key"
-
-# Run full ensemble (takes hours)
-python run_monthly_analysis.py --provider ensemble
-
-# Or just regenerate CSV from existing data
-python scripts/generate_master_data.py
-cp data/master_data.csv web/data/
-
-# Run local server
-cd web && python -m http.server 8080
-```
-
-## Deployment
-
-### Netlify Drop (Easiest)
-1. Run `python scripts/generate_master_data.py`
-2. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
-3. Drag the `web` folder onto the page
-4. Done!
-
-## Data Files
-
-Each university has a JSON file in `data/cache/final/` containing:
-- Student counts (undergrad, grad, PhD)
-- GPU counts by type (H100, A100, V100, etc)
-- Source URLs for verification
-- Validation notes explaining any adjustments
-
-## Contributing
-
-PRs welcome! If your university's data is wrong:
-1. Check the JSON file in `data/cache/final/YourUniversity.json`
-2. Submit a PR with corrected data and sources
-3. I will review and merge if valid
-
-## License
-
-MIT License - Copyright (c) 2025 Francois Chaubard
-
-See LICENSE file for details.
