@@ -3,3 +3,6 @@ venv/
 __pycache__/
 logs/
 .env
+*.log
+logs/
+data/cache/*.json
