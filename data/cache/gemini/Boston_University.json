@@ -1,67 +1,55 @@
 {
   "university_name": "Boston University",
-  "data_retrieved_date": "2025-06-03",
+  "data_retrieved_date": "2025-05-24",
   "sources": [
     {
-      "url": "https://www.bu.edu/tech/support/research/computing-resources/scc/technical-summary/",
-      "data_found": "SCC Technical Summary: 'Over 600 GPUs' total. Lists GPU types: NVIDIA V100, A100, A40, A6000."
+      "url": "https://www.bu.edu/tech/support/research/computing-resources/tech-summary/",
+      "data_found": "Shared Computing Cluster (SCC) Technical Summary: '315 GPU nodes with over 800 GPUs. These include NVIDIA H100, A100, A6000, A40, V100, P100, RTX 6000, RTX 5000'."
     },
     {
-      "url": "https://www.bu.edu/tech/support/research/system-administration/hardware-resources/gpu-computing/",
-      "data_found": "GPU Computing Resources: Details specific GPU models available in the Shared Computing Cluster (SCC). Lists: Ampere A100 (40GB & 80GB), Ampere A6000, Ampere A40, Volta V100 (16GB & 32GB), and legacy P100/K80 support."
+      "url": "https://www.bu.edu/tech/support/research/software-and-programming/gpu-computing/",
+      "data_found": "GPU Computing documentation: Lists supported CUDA compute capabilities corresponding to available hardware (Capability 9.0=H100, 8.0=A100/A40/A6000, 7.0=V100, 6.0=P100)."
     },
     {
-      "url": "https://www.bu.edu/tech/support/research/computing-resources/scc/",
-      "data_found": "SCC Overview: States the cluster has 'over 1,000 nodes' and 'over 600 GPUs' with 4.4 PB of storage."
-    },
-    {
-      "url": "https://www.bu.edu/cs/about/",
-      "data_found": "Department Overview: 'The Department of Computer Science... is home to... over 2,200 undergraduate majors and 350 graduate students.'"
-    },
-    {
-      "url": "https://www.bu.edu/cas/academics/undergraduate-education/majors-minors/",
-      "data_found": "CAS Majors: Confirms Computer Science is the largest major in the College of Arts & Sciences."
-    },
-    {
-      "url": "https://www.bu.edu/tech/support/research/computing-resources/buy-in/",
-      "data_found": "Buy-In Program: Indicates that researchers can purchase dedicated nodes. Recent hardware options typically correspond to the highest tier listed in technical summaries (A100/H100)."
+      "url": "https://nces.ed.gov/collegenavigator/?q=Boston+University&s=all&id=164988",
+      "data_found": "NCES College Navigator (IPEDS 2023 Data): Awards conferred in Computer and Information Sciences (Bachelor's: 489, Master's: 326, Doctorates: 17)."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 2200,
-    "grad_cs_count": 240,
-    "phd_cs_count": 110,
-    "year": "2024-2025",
-    "source_url": "https://www.bu.edu/cs/about/",
-    "notes": "Undergraduate count from BU CS Department 'About' page stating 'over 2,200 undergraduate majors'. Graduate count (350 total) split into MS and PhD based on typical department ratios and available program data (approx 240 MS / 110 PhD). DataUSA confirms ~500 CS Bachelor degrees awarded annually, supporting the ~2,200 total enrollment figure (approx 4-5 years)."
+    "undergrad_cs_count": 1956,
+    "grad_cs_count": 652,
+    "phd_cs_count": 94,
+    "year": "2023-2024",
+    "source_url": "https://nces.ed.gov/collegenavigator/?q=Boston+University&s=all&id=164988",
+    "notes": "Official exact enrollment counts by major are not centrally published on the BU CS website. Counts are calculated estimates based on the most recent verified NCES/IPEDS 'degrees awarded' data (2023). Undergrad estimate: 489 degrees \u00d7 4 years = 1,956 (consistent with department claims of being the largest CAS major). Grad (MS) estimate: 326 degrees \u00d7 2 years = 652. PhD estimate: 17 degrees \u00d7 5.5 years = ~94."
   },
   "gpu_resources": {
-    "h100_sxm_count": 0,
+    "h100_sxm_count": 16,
     "h100_pcie_count": 0,
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 80,
-    "a100_40gb_count": 120,
-    "a40_count": 48,
-    "a6000_count": 60,
+    "a100_80gb_count": 100,
+    "a100_40gb_count": 50,
+    "a40_count": 100,
+    "a6000_count": 100,
     "l40s_count": 0,
     "v100_count": 200,
-    "p100_count": 92,
+    "p100_count": 150,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA RTX 6000 / 2080 Ti",
-        "estimated_total": 40,
-        "notes": "Mentioned in various queue configurations for visualization and lower-tier compute."
+        "model": "NVIDIA RTX 6000 / RTX 5000",
+        "estimated_total": 84,
+        "notes": "Listed in technical summary as part of the 800+ total; typically used for visualization or lighter compute nodes."
       }
     ],
-    "source_url": "https://www.bu.edu/tech/support/research/computing-resources/scc/technical-summary/",
-    "notes": "BU Research Computing Services (RCS) reports 'Over 600 GPUs' in the Shared Computing Cluster (SCC). Exact inventory per model is not public, so counts are estimated to sum to ~600-640 based on the listed supported models and typical cluster age distribution.\n\nEstimates:\n- A100 (40GB/80GB): Major recent buy-ins (~200 total).\n- V100: Previous generation workhorse (~200 total).\n- P100: Legacy nodes still in operation (~92 total).\n- A6000/A40: Visualization and high-memory single precision nodes (~100 combined).\n- H100: Not explicitly listed on the public technical summary as of mid-2024, though likely available via private buy-in options (set to 0 for verifiable public count)."
+    "source_url": "https://www.bu.edu/tech/support/research/computing-resources/tech-summary/",
+    "notes": "Total GPU count (800+) and model list (H100, A100, A6000, A40, V100, P100) are explicitly verified via the BU Technical Summary. However, the exact quantity per model is not public. The breakdown provided in this JSON is a calculated estimate to sum to the verified total (800), distributed based on the cluster's age profile (heavy weighting on V100/P100 legacy nodes, significant A100/A6000 presence, and smaller/newer H100 deployment)."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
-    "description": "BU RCS operates on a 'Shared' vs 'Buy-in' model. Basic usage of the SCC is free for researchers (Shared entitlement), while the Buy-in program allows researchers to purchase dedicated hardware that they have priority on. There is no public 'compute credit' dollar value assigned to students."
+    "description": "The Shared Computing Cluster (SCC) operates on a 'Buy-in' model for guaranteed access and a 'Shared' model for free access to idle resources. Specific annual credit values are not applicable in this model."
   },
-  "analysis_notes": "Student data is strong, directly from the department's 2024/2025 about page. GPU data is aggregated; BU publishes the *total* count (600+) and the *models* available, but not the specific quantity of each model. The distribution in the JSON is an estimate to match the 600+ total based on the hardware generations listed on the RCS technical summary page."
+  "analysis_notes": "BU consolidates research computing into the SCC (Shared Computing Cluster) located at the MGHPCC. The total count (800+) is verified, but specific node-by-node inventories are internal. Student counts derived from federal IPEDS data to ensure accuracy over potentially outdated departmental 'About' pages."
 }

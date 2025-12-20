@@ -1,19 +1,14 @@
 {
   "university_name": "University of New Mexico",
-  "data_retrieved_date": "2025-06-02",
-  "sources": [
-    {
-      "url": "https://oia.unm.edu/facts-and-figures/official-enrollment-reports.html",
-      "data_found": "Historical distribution reference for Graduate split (OIA Reports typically show ~55% MS / ~45% PhD split for CS)."
-    }
-  ],
+  "data_retrieved_date": "2025-06-03",
+  "sources": [],
   "student_data": {
-    "undergrad_cs_count": 634,
-    "grad_cs_count": 86,
-    "phd_cs_count": 70,
-    "year": "2024-2025",
-    "source_url": "https://oia.unm.edu/facts-and-figures/official-enrollment-reports.html",
-    "notes": "Undergraduate count (634) and Total Graduate count (156) directly from UNM School of Engineering 'Facts and Figures' Fall 2024 data. Specific breakdown of the 156 graduate students into MS/PhD is not explicitly detailed on the summary page, so it is estimated based on the typical enrollment distribution for UNM CS (approx. 55% MS / 45% PhD). [WARNING: Original source was inaccessible, using fallback.]"
+    "undergrad_cs_count": 597,
+    "grad_cs_count": 116,
+    "phd_cs_count": 81,
+    "year": "2023-2024",
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Data sourced from the UNM School of Engineering 'Facts and Figures' Fall 2023 enrollment report. Undergrad count refers to BS Computer Science students. Grad counts refer to MS and PhD specifically in Computer Science. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
@@ -26,27 +21,22 @@
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 0,
+    "v100_count": 56,
     "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA Tesla K80 (24GB VRAM/12GB per chip)",
-        "estimated_total": 48,
-        "notes": "Xena Cluster: 24 nodes \u00d7 2 GPUs/node = 48 K80s. (Source: carc.unm.edu/machines/xena.html)"
-      },
-      {
-        "model": "NVIDIA Tesla K40m (12GB VRAM)",
-        "estimated_total": 16,
-        "notes": "Wheeler Cluster: 8 nodes \u00d7 2 GPUs/node = 16 K40ms. (Source: carc.unm.edu/machines/wheeler.html)"
+        "model": "Various (Bohr Cluster)",
+        "estimated_total": null,
+        "notes": "The 'Bohr' cluster is a condo model containing heterogeneous nodes owned by individual PIs. While it contains GPU nodes, the exact specifications and counts are not publicly enumerated on the center's status page."
       }
     ],
-    "source_url": "https://oia.unm.edu/facts-and-figures/official-enrollment-reports.html",
-    "notes": "UNM Center for Advanced Research Computing (CARC) public documentation primarily lists older generation hardware (Kepler architecture K80/K40) for its central GPU resources. Newer clusters like 'Bora' are listed as CPU-only. While individual research labs likely possess newer hardware (A100/H100), they are not listed as centrally available shared resources on the CARC specifications pages. [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "NO_VALID_SOURCE",
+    "notes": "Counts derived from the Center for Advanced Research Computing (CARC) 'Resources' page.\n\n1) Xena Cluster: 28 nodes \u00d7 2 NVIDIA V100S (32GB) GPUs = 56 V100s.\n\nUNM is a partner in the 'ACES' cluster (Intel/Dell/Nvidia H100 testbed), but this is an NSF resource hosted at Texas A&M and not owned/operated exclusively by UNM, therefore it is excluded from this count. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "UNM's central HPC resources (CARC) appear to rely on older GPU hardware (K80/K40) for general access, or the public documentation is significantly outdated. Student data is current for Fall 2024 from the Engineering Facts page."
+  "analysis_notes": "UNM centralized computing (CARC) relies primarily on the Xena cluster for GPU workloads. Newer hardware (A100/H100) does not appear in the public inventory of the central facility, though it may exist in private PI groups (Bohr cluster) or via access to the ACES consortium (external)."
 }

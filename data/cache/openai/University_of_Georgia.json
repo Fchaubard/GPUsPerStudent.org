@@ -1,37 +1,32 @@
 {
   "university_name": "University of Georgia",
-  "data_retrieved_date": "2025-12-14",
-  "sources": [
-    {
-      "url": "https://csci.franklin.uga.edu/sites/default/files/CS%20Data-Enrollement%20and%20degrees%20confered.pdf",
-      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
-    }
-  ],
+  "data_retrieved_date": "2025-12-20",
+  "sources": [],
   "student_data": {
     "undergrad_cs_count": 0,
     "grad_cs_count": 0,
     "phd_cs_count": 0,
-    "year": "NO_RECENT_DATA_FOUND",
-    "source_url": "https://csci.franklin.uga.edu/sites/default/files/CS%20Data-Enrollement%20and%20degrees%20confered.pdf",
-    "notes": "Searched for University of Georgia CS enrollment numbers specifically labeled Fall 2024 or AY 2024-2025 (per your requirement). The only directly published, program-specific CS enrollment figure I could locate is an ABET-linked PDF titled \"Bachelor of Science in Computer Science (BS-CS) Enrollment and Graduation Statistics\". However, it only lists enrollment through Academic Year 2023-2024 (e.g., 2023-2024: 1572 full-time enrolled students) and does NOT contain any Fall 2024 or AY 2024-2025 enrollment values. Per your rules, I rejected this source-year and set all counts to 0. I was also unable to find any public 2024-2025 / Fall 2024 MS-only and PhD-only CS headcount breakdowns for UGA (separately) from accessible official sources."
+    "year": "",
+    "source_url": "",
+    "notes": "I can\u2019t retrieve CURRENT University of Georgia CS enrollment counts because this environment has no live web browsing access, so I cannot follow your specified search strategy or validate an accessible source URL. If you enable browsing or provide links (UGA Factbook/IR dashboard, CDS 2024-25 or 2023-24, registrar enrollment stats, or CS department \u2018About\u2019 page), I can extract Fall 2024 (preferred) or fall back to Fall 2023 with a [2023 DATA] note per your requirements."
   },
   "gpu_resources": {
-    "h100_sxm_count": 48,
-    "h100_pcie_count": 0,
-    "h200_count": 0,
+    "h100_sxm_count": null,
+    "h100_pcie_count": null,
+    "h200_count": null,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 56,
-    "a100_40gb_count": 0,
+    "a100_80gb_count": null,
+    "a100_40gb_count": null,
     "a40_count": 0,
-    "a6000_count": 0,
-    "l40s_count": 0,
-    "v100_count": 2,
-    "p100_count": 3,
+    "a6000_count": null,
+    "l40s_count": null,
+    "v100_count": null,
+    "p100_count": null,
     "gh200_count": 0,
     "other_high_vram_gpus": [],
-    "source_url": "https://csci.franklin.uga.edu/sites/default/files/CS%20Data-Enrollement%20and%20degrees%20confered.pdf",
-    "notes": "Clusters counted: (1) Sapelo2 (GACRC) and (2) Teaching cluster (GACRC). Sapelo2: H100 = 12 nodes \u00d7 4 GPUs/node = 48 (counted as H100 SXM due to 6 NVLinks shown between GPUs on-node); A100 80GB (explicitly A100-SXM-80GB) = 14 \u00d7 4 = 56; V100S = 2 \u00d7 1 = 2 (included in v100_count); P100 = 2 \u00d7 1 = 2. Teaching cluster: P100 = 1 \u00d7 1 = 1. Totals: H100 SXM=48; A100 80GB=56; V100=2; P100=3. Buy-in GPU node counts (including any L40S/V100/etc.) are not enumerated in the public pages above, so they are not added (left as 0/unknown rather than guessing quantities). [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": null,
+    "notes": "I do not have web-browsing access in this environment, so I cannot perform the requested searches or cite/aggregate University of Georgia GPU cluster specifications from live sources. If you paste URLs (or the relevant page text/spec tables) for UGA Research Computing/HPC GPU clusters, I can extract node counts, GPUs per node, calculate totals (nodes * GPUs_per_node), and return the filled JSON with citations and a calculation breakdown."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
