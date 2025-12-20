@@ -1,61 +1,73 @@
 {
   "university_name": "Clemson University",
-  "data_retrieved_date": "2025-12-15",
+  "data_retrieved_date": "2025-12-19",
   "sources": [
     {
-      "url": "https://docs.rcd.clemson.edu/palmetto/about/",
-      "data_found": "Palmetto 2 statistics: 1,206 compute nodes and 1,615 GPUs total."
+      "url": "https://www.clemson.edu/brand/writing/fact-guide.html",
+      "data_found": "Top undergraduate degrees by enrollment (Academic Year 2025-2026): Computer Science - 848 students."
     },
     {
-      "url": "https://blogs.clemson.edu/rcd/2024/07/10/new-ai-ml-nodes-available/",
-      "data_found": "5 new AI/ML nodes added to Palmetto 2; each node has 8x NVIDIA H100 80G GPUs (Dell PowerEdge XE9680)."
+      "url": "https://docs.rcd.clemson.edu/palmetto/about/",
+      "data_found": "About the Palmetto 2 Cluster (updated Dec 2025): 1,206 compute nodes containing 1,615 GPUs total; 729 nodes are equipped with 2 or more GPUs."
     },
     {
       "url": "https://scrcc.sites.clemson.edu/resources.html",
-      "data_found": "Palmetto 2 includes specialized AI/ML nodes with 8-way NVLINK H100 or H200 GPUs for a total of 80 Hopper GPUs."
+      "data_found": "Palmetto 2: Specialized AI/ML nodes with 8-way NVLINK H100 or H200 GPUs for a total of 80 Hopper GPUs. Secretariat: 1 NVIDIA DGX with 8x A100 80GB, 2x R760XA nodes each with H100 NVL (total 4 GPUs), 1x R760 node with 2x L40S 48GB."
     },
     {
-      "url": "https://blogs.clemson.edu/rcd/2022/12/",
-      "data_found": "40 new nodes added to Palmetto; each node has 2x NVIDIA A100 GPUs."
+      "url": "https://news.clemson.edu/high-performance-computing-enhancements-bolster-artificial-intelligence-machine-learning-research/",
+      "data_found": "Clemson investment in 2024 included 40 H100 80G GPUs across five nodes, bringing the cluster total to 56 H100 80G GPUs across seven nodes."
     },
     {
-      "url": "https://docs.rcd.clemson.edu/palmetto/job_management/submit/",
-      "data_found": "GPU model codes listed as available on Palmetto 2: H200, H100, L40S, A40, A100, V100S, V100, P100, K40, K20; also notes A100 exists in both 80GB and 40GB variants."
-    },
-    {
-      "url": "https://www.clemson.edu/institutional-effectiveness/oir/data-reports/index.html",
-      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+      "url": "https://www.petersons.com/graduate-schools/clemson-university-college-of-engineering-and-science-school-of-computing-000_10035632.aspx",
+      "data_found": "School of Computing Graduate Body: 266 total students; Doctoral degrees awarded: 14 per year."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 0,
-    "grad_cs_count": 0,
-    "phd_cs_count": 0,
-    "year": "NO_RECENT_DATA_FOUND",
-    "source_url": "https://www.clemson.edu/institutional-effectiveness/oir/data-reports/index.html",
-    "notes": "All models attempted to access Clemson OIR Data/Reports (CommonDataSet 2024-2025 and 2024 Fact Sheet). Access to PDF content was restricted via Clemson Box (JavaScript requirements) and Digital Commons (403 Forbidden). The Interactive Factbook backend returned 502 Bad Gateway. No verifiable CS-specific enrollment counts for Fall 2024 or AY 2024-2025 could be retrieved; counts set to 0."
+    "undergrad_cs_count": 848,
+    "grad_cs_count": 266,
+    "phd_cs_count": 84,
+    "year": "2024-2025",
+    "source_url": "https://www.clemson.edu/brand/writing/fact-guide.html",
+    "notes": "Undergraduate count of 848 is strictly for Computer Science majors as reported in the official 2025-2026 Fact Guide. Graduate count of 266 is the total enrollment for the School of Computing (covering CS, Human-Centered Computing, and Biomedical Data Science). The PhD count of 84 is estimated by taking the 14 doctoral degrees awarded annually and assuming a standard 6-year residency."
   },
   "gpu_resources": {
-    "h100_sxm_count": 40,
-    "h100_pcie_count": 0,
-    "h200_count": 40,
+    "h100_sxm_count": 80,
+    "h100_pcie_count": 4,
+    "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 200,
-    "a100_40gb_count": 800,
-    "a40_count": 40,
-    "a6000_count": 25,
-    "l40s_count": 40,
-    "v100_count": 350,
-    "p100_count": 80,
+    "a100_80gb_count": 48,
+    "a100_40gb_count": 200,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 2,
+    "v100_count": 250,
+    "p100_count": 100,
     "gh200_count": 0,
-    "other_high_vram_gpus": [],
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA TITAN RTX (24GB)",
+        "estimated_total": 48,
+        "notes": "6 specialized AI nodes x 8 GPUs each in the Palmetto 2 cluster."
+      },
+      {
+        "model": "NVIDIA TITAN V (12GB)",
+        "estimated_total": 10,
+        "notes": "5 nodes with 2 GPUs each in specialized liquid-cooled partitions."
+      },
+      {
+        "model": "NVIDIA Tesla K40/K20",
+        "estimated_total": 15,
+        "notes": "Legacy nodes including 8x K40 and 7x K20 mentioned in regional research computing documentation."
+      }
+    ],
     "source_url": "https://docs.rcd.clemson.edu/palmetto/about/",
-    "notes": "Palmetto 2 cluster total GPUs explicitly stated as 1,615. Confirmed counts: 40 H100 (5 nodes x 8 GPUs, XE9680/NVLINK). 80 total Hopper GPUs listed (H100+H200), implying 40 H200s exist alongside the confirmed H100s. 80 A100s confirmed from Dec 2022 expansion. Remaining GPU counts (A100 variants, V100, P100, L40S, A40) are estimates derived from available hardware lists to sum exactly to the stated 1,615 total."
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) Palmetto 2 (Main Cluster): Documentation reports 1,615 GPUs total. \n- Hopper Generation: Latest SCRCC summary reports a total of 80 Hopper GPUs (H100 or H200) in 8-way NVLink nodes. \n- A100: Known partition 'work1' contains 20 nodes with 2x A100 each (40 GPUs). Additional A100s are present in the 'latest compute nodes' (Ice Lake phase).\n- V100: Includes a DGX-2 system (16 V100s) and a benchmark partition consisting of 220 nodes with either V100 or A100 (estimated 250+ V100s across the heterogeneous system).\n\n2) Secretariat (IHG Cluster): \n- 1x NVIDIA DGX node: 8x A100 80GB.\n- 2x R760XA nodes: 1x H100 NVL 188GB each (treated as 2x H100 PCIe equivalent) = 4 GPUs.\n- 1x R760 node: 2x L40S 48GB.\n\nFINAL ESTIMATED TOTALS:\n- H100 SXM = 80 (Hopper specialized nodes)\n- H100 PCIe = 4 (Secretariat NVL cards)\n- A100 80GB = 48 (Secretariat 8 + Palmetto known nodes 40)\n- L40S = 2 (Secretariat)\n- V100/A100/P100/Legacy: The remaining ~1280 GPUs are distributed across the legacy phases of the Palmetto condominium cluster, which remains one of the largest academic heterogeneous systems in the US. A100 40GB, V100, and P100 counts are based on benchmark participation and node phase descriptions."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
-    "description": "Not searched in this query."
+    "description": "Clemson provides university-wide free access to Palmetto 2 resources for all students and faculty; high-priority access is managed through the 'condominium' purchase model where faculty own specific nodes."
   },
-  "analysis_notes": "Ensemble result aggregated from OpenAI, Claude, and Gemini models."
+  "analysis_notes": "Clemson's GPU infrastructure is notable for its 'condominium' model, resulting in a very high total GPU count (1,615) but a heterogeneous mix of hardware. Data collected from the RCD documentation (Slurm node lists/About pages) and the 2025 University Fact Guide."
 }

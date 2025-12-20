@@ -1,0 +1,49 @@
+{
+  "university_name": "University of Illinois Urbana-Champaign",
+  "data_retrieved_date": "2025-12-20",
+  "sources": [
+    {
+      "url": "https://campuscluster.illinois.edu/resources/hardware/",
+      "data_found": "Campus Cluster (ICC): Lists availability of 'gpu_v100' and 'gpu_a100_80' queues. Note: This is a condo cluster where specific node counts fluctuate based on investor purchases and are not publicly totaled on the specs page. Included here for reference of architecture, but counts set to 0 to avoid fabrication."
+    },
+    {
+      "url": "https://cs.illinois.edu/about/statistics",
+      "data_found": "CS Department Statistics (Fall 2023): 2,878 Undergraduate Majors; 2,639 Graduate Students. (Note: Graduate count is high due to large Online MCS program)."
+    },
+    {
+      "url": "https://cs.illinois.edu/academics/graduate/phd-program",
+      "data_found": "PhD Program overview: Mentions 'community of over 500 PhD students'."
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 2878,
+    "grad_cs_count": 2639,
+    "phd_cs_count": 500,
+    "year": "2023-2024",
+    "source_url": "https://cs.illinois.edu/about/statistics",
+    "notes": "Student counts taken from official CS Department statistics page (Fall 2023 data). Graduate count includes a very large Online MCS population. PhD count estimated from program 'About' page stating 'over 500 PhD students'."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
+    "a6000_count": 0,
+    "l40s_count": 0,
+    "v100_count": 88,
+    "p100_count": 12,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": "https://campuscluster.illinois.edu/resources/hardware/",
+    "notes": "Calculations: HAL Cluster (16 nodes * 4 V100 = 64 V100) + C3SR Cluster (Ernst: 8 V100 + Rylai: 16 V100 = 24 V100). Total V100 = 88. C3SR Cluster also contains 12 P100s (Wei: 3 nodes * 4). IMPORTANT EXCLUSION: UIUC hosts the NCSA 'Delta' (A100/A40) and 'DeltaAI' (H100) supercomputers. These are excluded from this count because they are NSF-funded national resources (ACCESS-CI) available to external researchers, fitting the exclusion criteria for 'accessible to other universities'. Campus Cluster A100/A40 counts are not publicly enumerated on the specs page."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Ensemble result aggregated from OpenAI and Gemini models. OpenAI was unable to browse; data relies on Gemini's findings. NCSA Delta/DeltaAI resources are excluded as they are national shared resources, resulting in lower local GPU counts."
+}
