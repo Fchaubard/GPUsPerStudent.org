@@ -327,6 +327,10 @@
 
         <section>
             <h2>Leaderboard</h2>
+            <div class="search-container" style="margin-bottom: 1rem;">
+                <input type="text" id="search-input" placeholder="Search university (e.g. UIUC, MIT)..."
+                    style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
             <div class="table-wrapper">
                 <table class="leaderboard-table" id="leaderboard">
                     <thead>
@@ -433,6 +437,7 @@ Ensemble methodology:
             renderChart(allData);  // Show ALL universities
             renderLeaderboard(allData);
             setupSorting();
+            setupSearch();
         }
 
         function getFaviconUrl(url) {
@@ -559,6 +564,27 @@ Ensemble methodology:
             });
         }
 
+        function setupSearch() {
+            const searchInput = document.getElementById('search-input');
+            if (!searchInput) return;
+
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                filterTable(term);
+            });
+        }
+
+        function filterTable(term) {
+            const filteredData = allData.filter(d => {
+                const name = (d.university || '').toLowerCase();
+                const notes = (d.Notes || '').toLowerCase(); // Notes contain acronyms like UIUC
+                return name.includes(term) || notes.includes(term);
+            });
+            renderLeaderboard(filteredData);
+            // Don't re-render chart to keep it stable, or re-render it? 
+            // Better to only filter table to avoid chart chaos.
+        }
+
         function setupSorting() {
             const headers = document.querySelectorAll('th.sortable');
             headers.forEach(th => {
@@ -575,6 +601,7 @@ Ensemble methodology:
                     headers.forEach(h => h.classList.remove('sorted-asc', 'sorted-desc'));
                     th.classList.add(currentSort.desc ? 'sorted-desc' : 'sorted-asc');
 
+                    // Sort the global data
                     allData.sort((a, b) => {
                         let aVal = a[key];
                         let bVal = b[key];
@@ -589,9 +616,16 @@ Ensemble methodology:
                         return currentSort.desc ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
                     });
 
-                    // Update both leaderboard AND chart
-                    renderLeaderboard(allData);
-                    renderChart(allData);  // Show ALL universities
+                    // Re-apply current search filter if any
+                    const searchInput = document.getElementById('search-input');
+                    const term = searchInput ? searchInput.value.toLowerCase() : '';
+
+                    if (term) {
+                        filterTable(term);
+                    } else {
+                        renderLeaderboard(allData);
+                    }
+                    renderChart(allData);
                 };
             });
         }

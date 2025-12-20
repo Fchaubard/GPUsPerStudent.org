@@ -1,0 +1,36 @@
+{
+  "university_name": "University of Illinois Urbana-Champaign",
+  "data_retrieved_date": "2025-12-20",
+  "sources": [],
+  "student_data": {
+    "undergrad_cs_count": 0,
+    "grad_cs_count": 0,
+    "phd_cs_count": 0,
+    "year": "",
+    "source_url": "",
+    "notes": "I cannot complete the requested web search from this environment (no browsing access), so I cannot retrieve a current, verifiable UIUC CS enrollment figure with an accessible source_url. If you provide a link to UIUC Factbook/IR enrollment dashboards, Common Data Set (2024-25 or 2023-24), or a CS department 'About' page that lists student counts, I can extract the undergrad/MS/PhD counts and return the JSON in the required format. Validation checklist (status): [ ] prioritized 2024 data (unable to search) [ ] used 2023 because 2024 not found (not applicable) [ ] source_url accessible (none) [ ] grad_cs_count excludes PhDs (not applicable)."
+  },
+  "gpu_resources": {
+    "h100_sxm_count": null,
+    "h100_pcie_count": null,
+    "h200_count": null,
+    "b100_count": 0,
+    "b200_count": 0,
+    "a100_80gb_count": null,
+    "a100_40gb_count": null,
+    "a40_count": 0,
+    "a6000_count": null,
+    "l40s_count": null,
+    "v100_count": null,
+    "p100_count": null,
+    "gh200_count": 0,
+    "other_high_vram_gpus": [],
+    "source_url": null,
+    "notes": "I don\u2019t have web-browsing access in this environment, so I cannot perform the requested searches or verify UIUC GPU cluster specifications from authoritative URLs. Because the prompt requires adding up ALL clusters and returning a main source URL + per-source excerpts, any attempt to estimate would be ungrounded. If you provide URLs (or paste the relevant sections from UIUC/NCSA/Illinois RCD pages), I can extract the cluster specs, compute totals (nodes * GPUs_per_node), and return the completed JSON."
+  },
+  "compute_credits": {
+    "total_annual_value_usd": 0.0,
+    "description": "Not searched in this query."
+  },
+  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches."
+}
