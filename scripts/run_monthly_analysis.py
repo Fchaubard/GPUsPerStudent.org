@@ -1360,15 +1360,15 @@ def main(target_university=None, provider="openai"):
                 print("  [Rate Limit] Waiting 5s before next request...")
                 time.sleep(5)
         
-        # Incremental Save every 5 records to prevent data loss
-        if len(results) > 0 and i % 5 == 0:
-            df_temp = pd.DataFrame(results)
-            # Sort by GPUs Per Student Descending
-            if "Gpus_Per_Student" in df_temp.columns:
-                df_temp = df_temp.sort_values(by="Gpus_Per_Student", ascending=False)
-            df_temp['Rank'] = range(1, len(df_temp) + 1)
-            df_temp.to_csv(MASTER_OUTPUT_FILE, index=False)
-            print(f"Saved {len(df_temp)} records (Checkpoint)...")
+        # Incremental Save every 5 records to prevent data loss - DISABLED (Use generate_master_data.py)
+        # if len(results) > 0 and i % 5 == 0:
+        #     df_temp = pd.DataFrame(results)
+        #     # Sort by GPUs Per Student Descending
+        #     if "Gpus_Per_Student" in df_temp.columns:
+        #         df_temp = df_temp.sort_values(by="Gpus_Per_Student", ascending=False)
+        #     df_temp['Rank'] = range(1, len(df_temp) + 1)
+        #     # df_temp.to_csv(MASTER_OUTPUT_FILE, index=False)
+        #     print(f"Saved {len(df_temp)} records (Checkpoint)...")
 
     # Save
     if results:
