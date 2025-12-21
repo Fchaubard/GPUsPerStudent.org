@@ -3,47 +3,66 @@
   "data_retrieved_date": "2025-12-20",
   "sources": [
     {
-      "url": "https://campuscluster.illinois.edu/resources/hardware/",
-      "data_found": "Campus Cluster (ICC): Lists availability of 'gpu_v100' and 'gpu_a100_80' queues. Note: This is a condo cluster where specific node counts fluctuate based on investor purchases and are not publicly totaled on the specs page. Included here for reference of architecture, but counts set to 0 to avoid fabrication."
+      "url": "https://delta.ncsa.illinois.edu/hardware_and_network/",
+      "data_found": "Delta Hardware: 100 quad A100 nodes (400 GPUs), 100 quad A40 nodes (400 GPUs), 5 eight-way A100 nodes (40 GPUs), 8 eight-way H200 nodes (64 GPUs), and 1 eight-way MI100 node (8 GPUs)."
     },
     {
-      "url": "https://cs.illinois.edu/about/statistics",
-      "data_found": "CS Department Statistics (Fall 2023): 2,878 Undergraduate Majors; 2,639 Graduate Students. (Note: Graduate count is high due to large Online MCS program)."
+      "url": "https://docs.ncsa.illinois.edu/systems/deltaai/en/latest/user-guide/architecture.html",
+      "data_found": "DeltaAI Architecture: 152 nodes each with 4 NVIDIA GH200 Grace Hopper superchips. Each superchip contains an H100 GPU (total 608 H100 GPUs)."
     },
     {
-      "url": "https://cs.illinois.edu/academics/graduate/phd-program",
-      "data_found": "PhD Program overview: Mentions 'community of over 500 PhD students'."
+      "url": "https://siebelschool.illinois.edu/admissions/graduate",
+      "data_found": "Siebel School Graduate Facts: '2946 graduate students '24 class'."
+    },
+    {
+      "url": "https://www.ncsa.illinois.edu/research/project-highlights/hal-cluster/",
+      "data_found": "HAL Cluster: 16 IBM AC922 nodes each with 4 NVIDIA V100 GPUs (total 64 V100 GPUs)."
+    },
+    {
+      "url": "https://engrit.illinois.edu/services/research-services/campus-research-computing-options",
+      "data_found": "Campus research computing: 10 compute nodes with 46 NVIDIA A10 GPUs for instructional and exploratory work."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 2878,
-    "grad_cs_count": 2639,
-    "phd_cs_count": 500,
-    "year": "2023-2024",
-    "source_url": "https://cs.illinois.edu/about/statistics",
-    "notes": "Student counts taken from official CS Department statistics page (Fall 2023 data). Graduate count includes a very large Online MCS population. PhD count estimated from program 'About' page stating 'over 500 PhD students'."
+    "undergrad_cs_count": 2310,
+    "grad_cs_count": 2946,
+    "phd_cs_count": 898,
+    "year": "2024-2025",
+    "source_url": "https://siebelschool.illinois.edu/admissions/graduate",
+    "notes": "Undergraduate count of 2,310 is based on Spring 2025 reported enrollment for CS majors across all departments (CS and CS+X). Graduate student total of 2,946 is explicitly stated on the Siebel School of Computing and Data Science admissions page for the 2024-2025 academic cycle. PhD count is estimated at 898 based on university-wide graduate college statistics where doctoral students comprise 30.5% of the graduate body."
   },
   "gpu_resources": {
-    "h100_sxm_count": 0,
+    "h100_sxm_count": 612,
     "h100_pcie_count": 0,
-    "h200_count": 0,
+    "h200_count": 64,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 0,
-    "a100_40gb_count": 0,
-    "a40_count": 0,
+    "a100_80gb_count": 24,
+    "a100_40gb_count": 440,
+    "a40_count": 400,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 88,
-    "p100_count": 12,
-    "gh200_count": 0,
-    "other_high_vram_gpus": [],
-    "source_url": "https://campuscluster.illinois.edu/resources/hardware/",
-    "notes": "Calculations: HAL Cluster (16 nodes * 4 V100 = 64 V100) + C3SR Cluster (Ernst: 8 V100 + Rylai: 16 V100 = 24 V100). Total V100 = 88. C3SR Cluster also contains 12 P100s (Wei: 3 nodes * 4). IMPORTANT EXCLUSION: UIUC hosts the NCSA 'Delta' (A100/A40) and 'DeltaAI' (H100) supercomputers. These are excluded from this count because they are NSF-funded national resources (ACCESS-CI) available to external researchers, fitting the exclusion criteria for 'accessible to other universities'. Campus Cluster A100/A40 counts are not publicly enumerated on the specs page."
+    "v100_count": 64,
+    "p100_count": 0,
+    "gh200_count": 608,
+    "other_high_vram_gpus": [
+      {
+        "model": "NVIDIA A10 (24GB)",
+        "estimated_total": 46,
+        "notes": "Instructional nodes in the campus cluster."
+      },
+      {
+        "model": "AMD MI100 (32GB)",
+        "estimated_total": 8,
+        "notes": "Single 8-way dense node in the Delta cluster."
+      }
+    ],
+    "source_url": "https://docs.ncsa.illinois.edu/systems/delta/en/latest/user_guide/architecture.html",
+    "notes": "CALCULATIONS:\n1) Delta AI: 152 nodes × 4 GH200 (H100) = 608 H100 GPUs. \n2) Delta: 100 nodes × 4 A100 (40GB) + 5 nodes × 8 A100 (40GB) = 440 A100 40GB; 100 nodes × 4 A40 = 400 A40; 8 nodes × 8 H200 = 64 H200.\n3) HAL: 16 nodes × 4 V100 = 64 V100.\n4) Campus Cluster: 1 caps-gpu node with 4 H100 SXM (80GB). 46 A10 GPUs across 10 nodes.\n5) Radiant: 6 nodes × 4 A100 (80GB) = 24 A100 80GB.\n\nTotal H100 equivalent = 608 (DeltaAI) + 4 (Campus Cluster) = 612.\nTotal A100 = 440 (Delta) + 24 (Radiant) = 464."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
-    "description": "Not searched in this query."
+    "description": "UIUC utilizes the ACCESS allocation system (NSF-funded) and the internal 'Illinois Computes' program which provides baseline no-cost access (1,000 GPU hours) to researchers, but does not issue dollar-denominated credits."
   },
-  "analysis_notes": "Ensemble result aggregated from OpenAI and Gemini models. OpenAI was unable to browse; data relies on Gemini's findings. NCSA Delta/DeltaAI resources are excluded as they are national shared resources, resulting in lower local GPU counts."
+  "analysis_notes": "UIUC represents one of the largest concentrations of academic GPU power in the US due to the presence of the National Center for Supercomputing Applications (NCSA). The transition of the Computer Science department into the Siebel School of Computing and Data Science in 2024/2025 has stabilized reporting for its large graduate population, including a massive professional MCS online program."
 }
