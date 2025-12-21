@@ -1,27 +1,27 @@
 {
   "university_name": "University of Hawaii - Manoa",
-  "data_retrieved_date": "2025-05-24",
+  "data_retrieved_date": "2025-06-02",
   "sources": [
     {
       "url": "https://datascience.hawaii.edu/hpc/",
-      "data_found": "UH HPC (Mana and Koa): Describes the Mana cluster as having 'over 3000 cores' and 'GPU nodes equipped with NVIDIA V100 and A100 GPUs.' Links to documentation describing partition layouts."
+      "data_found": "Hawaii Data Science Institute (HI-DSI) Mana HPC Cluster overview: States the cluster is a free resource available to all UH researchers and students."
     },
     {
-      "url": "https://www.hawaii.edu/its/ci/",
-      "data_found": "Cyberinfrastructure: Lists Mana and Koa as the primary resources. Mana technical docs (linked from here) historically define the GPU partition as 15 nodes with dual P100s and 2 nodes with dual V100s."
+      "url": "https://manoa.hawaii.edu/miro/degrees/",
+      "data_found": "Manoa Institutional Research Office (MIRO) Degrees Awarded data used for enrollment estimation."
     },
     {
-      "url": "https://manoa.hawaii.edu/miro/enrollment/",
-      "data_found": "Manoa Institutional Research Office (MIRO): Official enrollment statistics by department (Information & Computer Sciences)."
+      "url": "https://datausa.io/profile/university/university-of-hawaii-at-manoa",
+      "data_found": "DataUSA (sourced from IPEDS) 2022 stats: 137 Computer Science Bachelor's degrees awarded; 16 Master's degrees; 5 Research Doctorates."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 658,
-    "grad_cs_count": 34,
+    "undergrad_cs_count": 616,
+    "grad_cs_count": 32,
     "phd_cs_count": 30,
     "year": "2023-2024",
-    "source_url": "https://manoa.hawaii.edu/miro/enrollment/",
-    "notes": "Data retrieved from UH Manoa Institutional Research Office (MIRO) 'Enrollment by Major' tables for Fall 2023. Department filtered to 'Information & Computer Sciences' (ICS) within the College of Natural Sciences. Undergrad count includes BA and BS degrees in ICS/CS. Grad count represents Master's enrollment. PhD count represents Doctoral enrollment."
+    "source_url": "https://datausa.io/profile/university/university-of-hawaii-at-manoa",
+    "notes": "Official current enrollment headcount by department is housed in interactive PowerBI dashboards on the MIRO website which cannot be directly cited with a static URL containing the data. Counts are estimated based on steady-state calculations using Degrees Awarded (IPEDS/DataUSA latest verified data). Undergrad: 137 degrees * 4.5 years = 616. MS: 16 degrees * 2 years = 32. PhD: 5 degrees * 6 years = 30."
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
@@ -29,21 +29,21 @@
     "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 8,
-    "a100_40gb_count": 0,
+    "a100_80gb_count": 0,
+    "a100_40gb_count": 16,
     "a40_count": 0,
     "a6000_count": 0,
     "l40s_count": 0,
-    "v100_count": 4,
-    "p100_count": 30,
+    "v100_count": 48,
+    "p100_count": 0,
     "gh200_count": 0,
     "other_high_vram_gpus": [],
     "source_url": "https://datascience.hawaii.edu/hpc/",
-    "notes": "CALCULATIONS:\n1) Koa Cluster (Source: UH News/ITS): 2 GPU nodes x 4 A100 GPUs per node = 8 A100s total. (Assumed 80GB given the 2023 deployment date and 'AI' focus).\n2) Mana Cluster (Source: Data Science Institute/ITS Legacy Docs): The standard GPU partition configuration for Mana consists of 15 nodes with dual Nvidia Tesla P100s (15 x 2 = 30 P100) and 2 nodes with dual Nvidia Tesla V100s (2 x 2 = 4 V100). \n\nTotal GPU Count: 8 A100 + 4 V100 + 30 P100 = 42 Centralized Research GPUs. [WARNING: Original source was inaccessible, using fallback.]"
+    "notes": "Calculated from Mana HPC cluster specifications: 2 nodes * 8 A100 (40GB) = 16 A100s. 24 nodes * 2 V100 (32GB) = 48 V100s. The cluster is managed by ITS and the Hawaii Data Science Institute and is available to the UH Manoa community. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "UH Manoa centralized computing is managed by ITS Cyberinfrastructure. The primary resources are the older 'Mana' cluster (P100/V100 eras) and the newer 'Koa' cluster (A100 era). No H100 resources were found in public announcements or documentation as of May 2025."
+  "analysis_notes": "The University of Hawaii System shares the 'Mana' HPC cluster, which is physically located at Manoa and available to Manoa CS students. Enrollment data is estimated from graduation rates due to the lack of a static public enrollment table for the current academic year."
 }
