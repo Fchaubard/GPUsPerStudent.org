@@ -182,12 +182,11 @@ def main():
         writer.writeheader()
         writer.writerows(results)
         
-    # Also save to web/data/master_data.csv for local file:// usage
+    # Sync to web directory
     web_output_file = 'web/data/master_data.csv'
-    with open(web_output_file, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=results[0].keys())
-        writer.writeheader()
-        writer.writerows(results)
+    os.makedirs(os.path.dirname(web_output_file), exist_ok=True)
+    shutil.copy2(output_file, web_output_file)
+    print(f"✅ Synced to {web_output_file}")
     
     print(f"\n✅ Generated {output_file} with {len(results)} universities")
     print(f"📊 Fixed student data for {student_fixes} universities using model cache max values")
