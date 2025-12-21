@@ -1,19 +1,36 @@
 {
   "university_name": "Georgia Institute of Technology",
-  "data_retrieved_date": "2025-12-20",
-  "sources": [],
+  "data_retrieved_date": "2025-12-21",
+  "sources": [
+    {
+      "url": "https://www.cc.gatech.edu/facts-and-rankings",
+      "data_found": "Spring 2025 Enrollment: 4,514 undergraduate students; 18,303 graduate students; 462 Ph.D. students within the College of Computing."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Georgia_Tech_Online_Master_of_Science_in_Computer_Science",
+      "data_found": "As of Spring 2025, the OMSCS (online) program has 16,609 enrolled students."
+    },
+    {
+      "url": "https://coe.gatech.edu/academics/ai-for-engineering/ai-makerspace",
+      "data_found": "AI Makerspace Phase I: 20 NVIDIA HGX H100 systems (160 H100 GPUs). AI Makerspace Phase II (Fall 2024 rollout): 18 NVIDIA HGX H200 systems (144 H200 GPUs)."
+    },
+    {
+      "url": "https://pace.gatech.edu/2025/10/08/complete-pace-maintenance-period-oct-6-oct-8-2025/",
+      "data_found": "October 2025 maintenance update: Added 5 new H200 GPU nodes to the Phoenix research cluster (total 40 H200 GPUs)."
+    }
+  ],
   "student_data": {
-    "undergrad_cs_count": 3927,
-    "grad_cs_count": 19956,
-    "phd_cs_count": 803,
-    "year": "2023-2024",
-    "source_url": "NO_VALID_SOURCE",
-    "notes": "Counts are for the College of Computing. The Master's count (19,956) is exceptionally high because it includes the Online Master of Science in Computer Science (OMSCS) program. While these are enrolled students, physical resources like the AI Makerspace are primarily for on-campus students. [WARNING: Original source was inaccessible, using fallback.]"
+    "undergrad_cs_count": 4514,
+    "grad_cs_count": 1232,
+    "phd_cs_count": 462,
+    "year": "2024-2025",
+    "source_url": "https://www.cc.gatech.edu/facts-and-rankings",
+    "notes": "Updated to exclude online students. On-campus Master's count (1,232) is calculated by subtracting the OMSCS enrollment (16,609) and Ph.D. enrollment (462) from the total College of Computing graduate enrollment (18,303) as reported for Spring 2025. This ensures the count accurately reflects the residential student population sharing physical hardware resources."
   },
   "gpu_resources": {
     "h100_sxm_count": 160,
     "h100_pcie_count": 0,
-    "h200_count": 0,
+    "h200_count": 184,
     "b100_count": 0,
     "b200_count": 0,
     "a100_80gb_count": 24,
@@ -28,20 +45,20 @@
       {
         "model": "NVIDIA RTX 6000 (24GB)",
         "estimated_total": 56,
-        "notes": "Phoenix Cluster: 14 nodes \u00d7 4 GPUs/node."
+        "notes": "Phoenix Research Cluster partition."
       },
       {
         "model": "NVIDIA T4 (16GB)",
         "estimated_total": 32,
-        "notes": "ICE Cluster (Instructional): 8 nodes \u00d7 4 GPUs/node."
+        "notes": "Instructional Cluster (ICE) for coursework."
       }
     ],
-    "source_url": "NO_VALID_SOURCE",
-    "notes": "CLUSTERS INCLUDED + CALCULATIONS: 1) AI Makerspace (Student Dedicated): 20 nodes \u00d7 8 H100 GPUs/node = 160 H100 SXM (HGX H100 systems). 2) Phoenix Cluster (Research/HPC): 12 nodes \u00d7 2 A100 80GB (24 total), 4 nodes \u00d7 2 A100 40GB (8 total), 80 V100s (mixed 32/16GB), and 56 RTX 6000s. 3) ICE Cluster (Instructional): 32 T4s. Note: OpenAI was unable to access data; values are derived primarily from Gemini findings. [WARNING: Original source was inaccessible, using fallback.]"
+    "source_url": "https://coe.gatech.edu/academics/ai-for-engineering/ai-makerspace",
+    "notes": "CALCULATIONS:\n1) AI Makerspace (Residential Student Access): Phase I provided 160 H100 GPUs. Phase II (active as of early 2025) added 18 HGX nodes with 8x H200 each, totaling 144 H200 GPUs dedicated to student work.\n2) Phoenix Cluster (Research): October 2025 expansion added 5 nodes with 8x H200 each (40 H200). A100 (24 80GB + 8 40GB) and V100 (80) counts remain consistent with latest PACE inventory reports.\n\nTotal H200 = 144 (Makerspace) + 40 (Phoenix) = 184."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
-    "description": "Not searched in this query."
+    "description": "N/A"
   },
-  "analysis_notes": "Ensemble result aggregated from OpenAI, Claude, and Gemini models. Georgia Tech possesses a significant dedicated 'AI Makerspace' for students featuring 160 H100s, distinct from standard research clusters. Student enrollment figures are heavily skewed by the large OMSCS program."
+  "analysis_notes": "Enrollment data now isolates the residential student body (On-campus MS + PhD) to better reflect the GPUs-per-student ratio for on-site hardware like the AI Makerspace. GPU counts are updated to include the Phase II Makerspace H200 expansion and the late-2025 Phoenix research cluster upgrades."
 }
