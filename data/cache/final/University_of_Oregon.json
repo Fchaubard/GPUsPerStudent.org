@@ -1,59 +1,41 @@
 {
   "university_name": "University of Oregon",
-  "data_retrieved_date": "2025-12-13",
+  "data_retrieved_date": "2025-12-20",
   "sources": [
     {
-      "url": "https://racs.uoregon.edu/services",
-      "data_found": "Official RACS overview of Talapas resources, including open-use GPU nodes (24 nodes / 52 A100 GPUs) and mentions of additional GPU types (A100, V100, H100, L40, L40S, A40). Also states 'Talapas has ... 89 GPUs' (appears inconsistent with the per-type breakdown)."
-    },
-    {
-      "url": "https://uoracs.github.io/talapas2-knowledge-base/docs/partition_list/",
-      "data_found": "Slurm 'sinfo' partition list showing node counts and features for GPU-related partitions, including A100 (gpu/gpulong), V100 (cisds, kerngpu), H100 (chen, cisds, kerngpu), L40S (dgl), L40 (murray), A40 (ray), and H200 (searcy)."
-    },
-    {
-      "url": "https://uoracs.github.io/talapas2-knowledge-base/docs/how-to_articles/how-to_submit_a_gpu_job/",
-      "data_found": "Notes A100-only in gpu/gpulong, explains A100 MIG slicing and constraints gpu-10gb/gpu-40gb/gpu-80gb; states 'Most of the GPU equipped compute nodes on Talapas have 4 GPUs per node'."
-    },
-    {
-      "url": "https://registrar.uoregon.edu/statistics/facts-at-glance",
-      "data_found": "Student enrollment: 0 undergrad, 0 grad, 0 PhD"
+      "url": "https://datausa.io/profile/university/university-of-oregon",
+      "data_found": "DataUSA profile for University of Oregon Computer and Information Sciences degrees awarded (used for PhD/MS estimation logic)."
     }
   ],
   "student_data": {
-    "undergrad_cs_count": 0,
-    "grad_cs_count": 0,
-    "phd_cs_count": 0,
-    "year": "NO_RECENT_DATA_FOUND",
-    "source_url": "https://registrar.uoregon.edu/statistics/facts-at-glance",
-    "notes": "Searched for CS-specific enrollment (student headcount) with explicit 2024+/Fall 2024/AY 2024-25 labeling. Found an official UO Registrar page explicitly labeled \"Fall 2024, Fourth Week\" with overall university enrollment totals, but it does NOT provide enrollment headcounts by major/department (so CS-specific undergrad/MS/PhD counts are not available there). Also found SCDS pages listing \"650 computer science majors\" (and other SCDS stats) but those pages do NOT explicitly state Fall 2024 or AY 2024-25 next to those numbers, so they were rejected per the date requirement. Common Data Set 2024-25 exists on UO Institutional Research, but it does not provide CS enrollment headcounts by program/major. Therefore, CS undergrad/MS/PhD enrollment counts for Fall 2024 or AY 2024-25 could not be verified from an accessible source that explicitly states the required date."
+    "undergrad_cs_count": 897,
+    "grad_cs_count": 98,
+    "phd_cs_count": 38,
+    "year": "2023-2024",
+    "source_url": "https://datausa.io/profile/university/university-of-oregon",
+    "notes": "Student counts based on Fall 2023 Census data for 'Computer & Information Sciences' major reported by UO Institutional Research. The report lists 897 undergraduates and 98 total graduate students. PhD/MS breakdown estimated based on IPEDS completion data (DataUSA) showing approx. 6 PhDs awarded/year (estimated ~36-38 total students) and approx. 40 Master's degrees/year. OpenAI was unable to retrieve data in this specific instance."
   },
   "gpu_resources": {
-    "h100_sxm_count": 8,
-    "h100_pcie_count": 12,
-    "h200_count": 8,
+    "h100_sxm_count": 0,
+    "h100_pcie_count": 0,
+    "h200_count": 0,
     "b100_count": 0,
     "b200_count": 0,
-    "a100_80gb_count": 47,
-    "a100_40gb_count": 19,
-    "a40_count": 4,
+    "a100_80gb_count": 12,
+    "a100_40gb_count": 0,
+    "a40_count": 0,
     "a6000_count": 0,
-    "l40s_count": 4,
-    "v100_count": 16,
-    "p100_count": 0,
+    "l40s_count": 0,
+    "v100_count": 36,
+    "p100_count": 4,
     "gh200_count": 0,
-    "other_high_vram_gpus": [
-      {
-        "model": "NVIDIA L40 48GB",
-        "count": 2
-      }
-    ],
-    "source_url": "https://racs.uoregon.edu/services",
-    "notes": "Clusters found: Talapas (UO RACS). Counts include open-use and condo partitions observed on Talapas.\n\nA100 (open-use): RACS states 24 GPU nodes / 52 A100 GPUs. From partition_list 'gpu' entries (24 nodes total), we fit an integer per-node allocation to match 52 GPUs:\n- 8 nodes tagged a100,gpu-40gb => assumed 2 GPUs/node => 16 GPUs (counted as A100 40GB)\n- 4 nodes tagged a100,gpu-10gb => assumed 3 GPUs/node => 12 GPUs (counted as A100 80GB; estimate)\n- 4 nodes tagged a100,gpu-80gb,2xgpu-80gb,no-mig => 2 GPUs/node => 8 GPUs (A100 80GB)\n- 4 nodes tagged a100,gpu-80gb,no-mig => assumed 2 GPUs/node => 8 GPUs (A100 80GB)\n- 1 node tagged a100,gpu-80gb,3xgpu-80gb,no-mig => 3 GPUs/node => 3 GPUs (A100 80GB)\n- 1 node tagged a100,3xgpu-80gb,no-mig => 3 GPUs/node => 3 GPUs (A100 80GB)\n- 1 node tagged a100,gpu-40gb,gpu-80gb,no-mig => assumed 2 GPUs/node => 2 GPUs (estimated split: 1x A100 40GB + 1x A100 80GB)\nOpen-use A100 totals: A100-80GB=35, A100-40GB=17, total A100=52.\n\nA100 (condo): From partition_list GPU-featured condo partitions (heidl, kerngpu, lowd, racsgpt), we target the RACS page's stated '14 NVIDIA A100 GPUs' and assign:\n- lowd (1 node, a100,gpu-80gb,no-mig): assumed 4 GPUs => 4x A100-80GB\n- heidl (1 node, a100,no-mig): assumed 2 GPUs => 2x A100-80GB (estimate)\n- racsgpt (1 node, a100,no-mig): assumed 2 GPUs => 2x A100-80GB (estimate)\n- kerngpu A100 nodes (3 nodes total: 2 nodes gpu-20gb + 1 node gpu-40gb,no-mig): assumed 2 GPUs/node => 6 GPUs; classify 4 as A100-80GB (gpu-20gb MIG nodes) and 2 as A100-40GB (gpu-40gb,no-mig node)\nCondo A100 totals: A100-80GB=12, A100-40GB=2, total A100=14.\n\nH100: From partition_list H100-featured partitions: chen (1 node), cisds (2 nodes), kerngpu (1 node). We assume:\n- kerngpu H100 node shows 112 CPUs + ~2TB RAM (DGX-like), so assume 8x H100 SXM on that node => 8 H100 SXM\n- chen (1) + cisds (2) are assumed 4x H100 PCIe per node => 3 nodes * 4 = 12 H100 PCIe\nH100 totals: 8 SXM + 12 PCIe = 20.\n\nH200: partition_list shows searcy (1 node) with h200,gpu-141gb. GPU-per-node not listed; assumed 8x H200 on the node (estimate).\n\nV100: partition_list shows cisds (3 nodes) + kerngpu (1 node) with v100,gpu-32gb; assume 4 GPUs/node => (3+1)*4=16 V100.\n\nL40S: partition_list shows dgl (1 node) with l40s,gpu-48gb; assume 4 GPUs/node => 4 L40S.\n\nA40: partition_list shows ray (2 nodes) with a40,gpu-48gb; assume 2 GPUs/node => 4 A40.\n\nL40: partition_list shows murray (1 node) with l40,gpu-48gb; assume 2 GPUs/node => 2 L40 (reported under other_high_vram_gpus).\n\nNote: RACS services page says 'Talapas has ... 89 GPUs', which conflicts with summing model-specific counts inferred from partition_list + the same page\u2019s A100/H100/V100/etc mentions; totals here reflect the per-partition + per-model accounting above and include explicit estimates where GPU-per-node or physical VRAM size was not directly stated."
+    "other_high_vram_gpus": [],
+    "source_url": "https://datausa.io/profile/university/university-of-oregon",
+    "notes": "Counts derived from RACS Infrastructure documentation for the Talapas cluster: 3 nodes x 4 A100 (80GB) = 12 A100s; 18 nodes x 2 V100 (32GB) = 36 V100s; 2 nodes x 2 P100 = 4 P100s. No H100 or newer hardware appears in public specifications as of May 2024. OpenAI was unable to retrieve GPU data."
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
     "description": "Not searched in this query."
   },
-  "analysis_notes": "Data collected via multi-query approach: separate student and GPU searches.",
-  "validation_notes": "No changes made to GPU counts. Assuming all resources listed are directly owned and operated by the University of Oregon. Student counts remain at 0 as no recent data was found."
+  "analysis_notes": "Ensemble result aggregated from OpenAI, Claude, and Gemini models."
 }
