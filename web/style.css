@@ -87,47 +87,66 @@ header {
 
     /* Mobile table styles */
     .table-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        /* Disable horizontal scroll if we fit */
+        width: 100%;
+    }
+
+    .leaderboard-table {
+        table-layout: fixed;
+        width: 100%;
     }
 
     .leaderboard-table th,
     .leaderboard-table td {
-        padding: 6px 4px;
-        font-size: 11px;
-        white-space: nowrap;
+        padding: 4px 2px;
+        /* Squeeze horizontal spacing */
+        font-size: 10px;
+        /* Smaller font */
+        white-space: normal;
+        /* Allow wrapping */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .leaderboard-table th {
-        font-size: 10px;
+        font-size: 9px;
+        vertical-align: bottom;
     }
 
-    /* Compact column widths */
+    /* Compact column widths - Percentages for fixed layout */
+    /* Rank */
     .leaderboard-table th:nth-child(1),
     .leaderboard-table td:nth-child(1) {
-        width: 30px;
-        min-width: 30px;
+        width: 8%;
     }
 
+    /* University - Main content */
     .leaderboard-table th:nth-child(2),
     .leaderboard-table td:nth-child(2) {
-        width: 100px;
-        min-width: 100px;
+        width: 37%;
+        font-weight: 600;
     }
 
+    /* Weighted Students */
     .leaderboard-table th:nth-child(3),
-    .leaderboard-table td:nth-child(3),
+    .leaderboard-table td:nth-child(3) {
+        width: 15%;
+        text-align: center;
+    }
+
+    /* H100 */
     .leaderboard-table th:nth-child(4),
     .leaderboard-table td:nth-child(4) {
-        width: 50px;
-        min-width: 50px;
+        width: 15%;
+        text-align: center;
     }
 
-    /* Last column (GPUs/Student) gets more space */
+    /* GPUs/Student */
     .leaderboard-table th:last-child,
     .leaderboard-table td:last-child {
-        width: auto;
-        min-width: 80px;
+        width: 25%;
+        text-align: center;
     }
 
     .container {
