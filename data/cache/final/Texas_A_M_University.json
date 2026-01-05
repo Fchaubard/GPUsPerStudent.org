@@ -1,0 +1,45 @@
+{
+  "university_name": "Texas A&M University",
+  "data_retrieved_date": "2026-01-05",
+  "sources": [
+    {
+      "url": "https://hprc.tamu.edu/kb/User-Guides/Grace/Hardware/",
+      "data_found": "Grace Cluster: 200 A100 40GB, 18 RTX 6000, 32 T4, 30 A40"
+    },
+    {
+      "url": "https://hprc.tamu.edu/kb/User-Guides/FASTER/Hardware/",
+      "data_found": "FASTER Cluster: 40 A100 40GB, 200 T4, 8 A10, 4 A30, 8 A40"
+    },
+    {
+      "url": "https://hprc.tamu.edu/resources/comparison.html",
+      "data_found": "ACES Cluster: 30 H100 PCIe, 4 A30, 1 GH200. ViDaL 2.0: 8 H100 NVL."
+    },
+    {
+      "url": "https://engineering.tamu.edu/news/2025/02/ai-for-aggieland.html",
+      "data_found": "DGX SuperPOD: 760 H200."
+    },
+    {
+      "url": "https://engineering.tamu.edu/cse/about/facts.html",
+      "data_found": "Fall 2025 Enrollment: 1,790 Undergrad, 395 Master's, 179 PhD"
+    }
+  ],
+  "student_data": {
+    "undergrad_cs_count": 1790,
+    "grad_cs_count": 395,
+    "phd_cs_count": 179,
+    "year": "Fall 2025",
+    "source_url": "https://engineering.tamu.edu/cse/about/facts.html",
+    "notes": "Fall 2025 CS Enrollment Data."
+  },
+  "gpu_resources": {
+    "h200_count": 760,
+    "h100_pcie_count": 38,
+    "gh200_count": 1,
+    "a100_40gb_count": 240,
+    "a10_count": 8,
+    "a40_count": 38,
+    "source_url": "https://hprc.tamu.edu/resources/comparison.html",
+    "notes": "Includes DGX SuperPOD (760 H200), Grace (200 A100 40GB, 30 A40), FASTER (40 A100 40GB, 8 A40, 8 A10), ACES (30 H100 PCIe, 1 GH200), ViDaL 2.0 (8 H100 PCIe/NVL). Excluded T4s, RTX 6000s, A30s, and Ponte Vecchios."
+  },
+  "analysis_notes": "Manually corrected with specific cluster data including new DGX SuperPOD."
+}
