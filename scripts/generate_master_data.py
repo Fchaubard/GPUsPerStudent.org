@@ -47,6 +47,7 @@ JSON_FIELD_MAP = {
     'V100': 'v100_count',
     'P100': 'p100_count',
     'GH200': 'gh200_count',
+    'Rubin': 'rubin_count',
     'A10': 'a10_count',
 }
 

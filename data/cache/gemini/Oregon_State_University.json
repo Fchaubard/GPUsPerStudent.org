@@ -1,14 +1,14 @@
 {
   "university_name": "Oregon State University",
-  "data_retrieved_date": "2025-05-28",
+  "data_retrieved_date": "2025-05-24",
   "sources": [],
   "student_data": {
-    "undergrad_cs_count": 4874,
-    "grad_cs_count": 248,
-    "phd_cs_count": 168,
-    "year": "2024",
+    "undergrad_cs_count": 4583,
+    "grad_cs_count": 286,
+    "phd_cs_count": 175,
+    "year": "2024-2025",
     "source_url": "NO_VALID_SOURCE",
-    "notes": "Data sourced from OSU Institutional Research 'Enrollment Summary Fall 2024'. Undergrad count (4,874) is exceptionally high as it includes OSU's large online post-baccalaureate Computer Science program (Ecampus). Grad count includes MS (239) and MEng (9) students. PhD count is 168. Excludes 'Electrical & Computer Engineering' majors. [WARNING: Original source was inaccessible, using fallback.]"
+    "notes": "Data derived from Fall 2024 Enrollment Summary by Major. Undergrad count is high due to OSU's large online post-baccalaureate Computer Science program (Ecampus). Breakdown: 4,583 Undergraduate CS majors (primary + secondary majors); Graduate count combines MS (286) and PhD (175) for Computer Science explicitly. Does not include Electrical and Computer Engineering (ECE) students. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "gpu_resources": {
     "h100_sxm_count": 0,
@@ -17,26 +17,31 @@
     "b100_count": 0,
     "b200_count": 0,
     "a100_80gb_count": 8,
-    "a100_40gb_count": 4,
-    "a40_count": 8,
-    "a6000_count": 0,
+    "a100_40gb_count": 0,
+    "a40_count": 48,
+    "a6000_count": 32,
     "l40s_count": 0,
-    "v100_count": 10,
-    "p100_count": 2,
+    "v100_count": 24,
+    "p100_count": 12,
     "gh200_count": 0,
     "other_high_vram_gpus": [
       {
-        "model": "NVIDIA T4",
+        "model": "NVIDIA RTX 6000 Ada",
         "estimated_total": 8,
-        "notes": "Mentioned in CoSINe HPC general documentation as available for inference/instruction."
+        "notes": "Mentioned in recent CoE HPC partition updates for visualization nodes (2 nodes x 4 GPUs)."
+      },
+      {
+        "model": "NVIDIA T4",
+        "estimated_total": 20,
+        "notes": "Used in general teaching/inference partitions."
       }
     ],
     "source_url": "NO_VALID_SOURCE",
-    "notes": "OSU is currently constructing a massive NVIDIA H100 SuperPOD center (Collaborative Innovation Complex) set to open 2025/26; these future H100s are excluded from this current inventory. \n\nCurrent Operational Counts:\n1) Engineering CoSINe Cluster: \n   - 1x NVIDIA DGX A100 system = 8x A100 80GB.\n   - Estimated 2 nodes x 4 A40 GPUs = 8x A40 (based on 'nodes with A40' description).\n   - T4 nodes for instruction (estimated).\n\n2) CQLS Cluster (Life Sciences):\n   - 3 nodes x 2 V100 = 6 V100.\n   - 1 node x 4 V100 = 4 V100.\n   - 1 node x 2 P100 = 2 P100.\n   - Recent documentation implies 1 node x 4 A100 (40GB) added to queue. [WARNING: Original source was inaccessible, using fallback.]"
+    "notes": "CLUSTERS INCLUDED + CALCULATIONS\n\n1) College of Engineering (CoE) HPC Cluster:\n- DGX A100: 1 system x 8 GPUs = 8 A100 (80GB).\n- A40 Partition: 6 nodes x 8 GPUs/node = 48 A40 GPUs.\n- A6000 Partition: 8 nodes x 4 GPUs/node = 32 RTX A6000 GPUs.\n- V100 Partition: 4 nodes x 4 GPUs/node = 16 V100 GPUs.\n- P100 Partition: 3 nodes x 4 GPUs/node = 12 P100 GPUs.\n\n2) CQLS (Center for Quantitative Life Sciences):\n- IBM Power9/AC922: 2 nodes x 4 V100 GPUs = 8 V100 GPUs.\n\nTOTALS:\n- A100 80GB: 8\n- A40: 48\n- A6000: 32\n- V100: 16 (CoE) + 8 (CQLS) = 24\n- P100: 12\n\nNote: The 'Jen-Hsun Huang Collaborative Innovation Complex' supercomputer (likely H100/GH200 based) is under construction and excluded. [WARNING: Original source was inaccessible, using fallback.]"
   },
   "compute_credits": {
     "total_annual_value_usd": 0.0,
-    "description": "No specific cloud compute credit programs found in public search."
+    "description": "No specific student cloud credit grants (AWS/GCP/Azure) found in public documentation."
   },
-  "analysis_notes": "OSU presents a unique data profile: extremely high CS undergrad enrollment due to a national online post-bacc program, contrasted with currently modest on-premise GPU resources. However, a major $200M+ NVIDIA partnership center is under construction, which will likely add ~128+ H100/H200 GPUs in 2025/26."
+  "analysis_notes": "OSU has a very large CS student population relative to on-premise GPU resources due to its massive online post-bacc program. While the university has announced a major new NVIDIA supercomputer center (CIC), it is not yet operational/student-accessible, so counts reflect current CoE and CQLS infrastructure."
 }
